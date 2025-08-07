@@ -299,26 +299,10 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            {/* Service Card 4 */}
-            <Card className="bg-gray-50 hover:shadow-xl transition-all duration-500 text-center transform hover:-translate-y-2 opacity-0 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
-              <CardHeader>
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 transform transition-transform duration-300 hover:scale-110 hover:rotate-12">
-                  <Heart className="w-8 h-8 text-white" />
-                </div>
-                <CardTitle className="text-xl">의료관광 플랫폼</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600 mb-6">
-                  상생 브랜드를 통한 의료관광 플랫폼 운영 및 글로벌 환자 유치 서비스입니다.
-                </CardDescription>
-                <Link href="/brand/sangsaeng" className="text-primary font-semibold hover:underline inline-flex items-center group">
-                  자세히 보기 <ArrowRight className="ml-1 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </CardContent>
-            </Card>
+            
 
             {/* Service Card 5 */}
-            <Card className="bg-gray-50 hover:shadow-xl transition-all duration-500 text-center transform hover:-translate-y-2 opacity-0 animate-fade-in-up md:col-span-2 lg:col-span-1" style={{animationDelay: '0.6s'}}>
+            <Card className="bg-gray-50 hover:shadow-xl transition-all duration-500 text-center transform hover:-translate-y-2 opacity-0 animate-fade-in-up md:col-span-2 lg:col-span-1" style={{animationDelay: '0.5s'}}>
               <CardHeader>
                 <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6 transform transition-transform duration-300 hover:scale-110 hover:rotate-12">
                   <Smartphone className="w-8 h-8 text-white" />
