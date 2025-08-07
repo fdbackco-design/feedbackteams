@@ -4,6 +4,7 @@ import { Eye, Target, Users, Globe, TrendingUp, ShoppingCart, Building2, Award, 
 import organizationChart from "@assets/organizationChart_1754563135776.png";
 import warehouseImage from "@assets/futuristic-warehouse-with-blue-neon-lights-connected-data_1754566796044.jpg";
 import partnershipImage from "@assets/5f76e132-877a-4d9e-8c9c-de9ff84cb5dd_1754568024377.jpg";
+import networkImage from "@assets/5068978_1754568223986.jpg";
 
 // SVG 컴포넌트들
 const HeroBackgroundSVG = () => (
@@ -253,15 +254,19 @@ export default function About() {
           <div className="mb-20">
             <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
               <div className="lg:w-1/2">
-                <div className="bg-gradient-to-br from-accent to-primary p-8 rounded-2xl text-white text-center">
-                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Zap className="w-10 h-10" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4">통합 실행력으로</h3>
-                  <p className="text-lg font-semibold">브랜드와 시장을 연결합니다</p>
+                <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src={networkImage}
+                    alt="네트워크와 연결"
+                    className="w-full h-80 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                 </div>
               </div>
               <div className="lg:w-1/2 text-center lg:text-left">
+                <h3 className="text-2xl font-bold text-foreground mb-6">
+                  통합 실행력으로 브랜드와 시장을 연결합니다
+                </h3>
                 <p className="text-lg text-foreground leading-relaxed">
                   단순 유통을 넘어 상품 기획, 브랜딩, 마케팅, 유통 채널을 유기적으로 연결합니다.<br />
                   고유한 OEM 역량과 자체 브랜드 경험을 결합하여,<br />
