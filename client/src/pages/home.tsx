@@ -182,9 +182,9 @@ export default function Home() {
             opacity: Math.max(0, 1 - scrollY / 500)
           }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in-up">
-            유통에서 브랜드까지<br />
-            <span className="text-accent bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">한국의 가치를 세계로 연결합니다</span>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in-up text-white">
+            브랜드와 시장을 연결하는<br />
+            <span className="text-white">유통 플랫폼, 피드백</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
             유통 · 브랜드 · 마케팅 · 제조가 하나로 연결되는 상생 플랫폼
