@@ -35,9 +35,13 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 transform hover:scale-105 transition-transform duration-200">
-              <span className={`text-2xl font-bold text-primary transition-all duration-300 ${
-                isScrolled ? 'text-xl' : 'text-2xl'
-              }`}>FeedBack</span>
+              <img 
+                src="/attached_assets/feddback_logo_1754559528597.png" 
+                alt="FeedBack" 
+                className={`transition-all duration-300 ${
+                  isScrolled ? 'h-8' : 'h-10'
+                }`}
+              />
             </Link>
           </div>
           

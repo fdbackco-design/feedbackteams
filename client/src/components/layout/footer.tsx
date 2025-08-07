@@ -9,12 +9,16 @@ export default function Footer() {
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="mb-6">
-              <span className="text-3xl font-bold text-primary">FeedBack</span>
-              <p className="text-gray-300 mt-2 text-lg">아시아의 브랜드와 의료를 세계와 연결합니다</p>
+              <img 
+                src="/attached_assets/feddback_logo_1754559528597.png" 
+                alt="FeedBack" 
+                className="h-12 mb-4 filter brightness-0 invert"
+              />
+              <p className="text-gray-300 mt-2 text-lg">유통에서 브랜드까지 한국의 가치를 세계로 연결합니다</p>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              유통, 브랜드 플랫폼, 글로벌 마케팅을 통해 아시아 기업들의 
-              성공적인 해외 진출을 지원하는 전문 기업입니다.
+              유통, 브랜드 제조, 마케팅, 의료관광 플랫폼을 통해 
+              상생의 가치로 글로벌 시장에 진출하는 종합 서비스 기업입니다.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover:bg-primary hover:text-white transition-colors">
@@ -36,10 +40,11 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">서비스</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><Link href="/service" className="hover:text-white transition-colors">의료관광 중개</Link></li>
-              <li><Link href="/service" className="hover:text-white transition-colors">다국어 앱 개발</Link></li>
-              <li><Link href="/service" className="hover:text-white transition-colors">브랜드 유통</Link></li>
-              <li><Link href="/service" className="hover:text-white transition-colors">마케팅 컨설팅</Link></li>
+              <li><Link href="/service" className="hover:text-white transition-colors">유통/수출입 중개</Link></li>
+              <li><Link href="/service" className="hover:text-white transition-colors">자체 브랜드 제조</Link></li>
+              <li><Link href="/service" className="hover:text-white transition-colors">글로벌 마케팅</Link></li>
+              <li><Link href="/service" className="hover:text-white transition-colors">의료관광 플랫폼</Link></li>
+              <li><Link href="/service" className="hover:text-white transition-colors">앱 개발</Link></li>
             </ul>
           </div>
           
@@ -47,9 +52,10 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">브랜드</h4>
             <ul className="space-y-2 text-gray-400 mb-6">
-              <li><Link href="/brand" className="hover:text-white transition-colors">Hoid</Link></li>
-              <li><Link href="/brand" className="hover:text-white transition-colors">Medifeed</Link></li>
-              <li><Link href="/brand" className="hover:text-white transition-colors">InYourHeart</Link></li>
+              <li><Link href="/brand/hoid" className="hover:text-white transition-colors">Hoid</Link></li>
+              <li><Link href="/brand/medifeed" className="hover:text-white transition-colors">Medifeed</Link></li>
+              <li><Link href="/brand/inyourheart" className="hover:text-white transition-colors">InYourHeart</Link></li>
+              <li><Link href="/brand/sangsaeng" className="hover:text-white transition-colors">상생</Link></li>
             </ul>
             
             <h4 className="text-lg font-semibold mb-4">회사</h4>
