@@ -6,38 +6,54 @@ const brands = [
   {
     id: "hoid",
     name: "Hoid",
-    category: "디자인 가전",
-    logo: "Hoid",
-    description: "Hoid는 혁신적인 디자인과 첨단 기술을 결합한 프리미엄 가전 브랜드입니다. 청소기, 공기청정기 등 생활 필수 가전제품을 통해 더 나은 라이프스타일을 제안합니다. 미니멀한 디자인과 우수한 성능으로 현대인의 삶의 질을 향상시킵니다.",
-    products: ["무선 청소기", "공기청정기", "스마트 가전"],
-    bgColor: "bg-gray-50",
-    buttonColor: "bg-primary hover:bg-blue-700",
-    badgeColor: "bg-primary",
-    image: "https://pixabay.com/get/g86a1ee4370935648b7ef6b550573b59f114cc5617acb1dce7ba26bbb75815624a98b8a0586d3ff79c31168c3c349e496a418fd9281bc3525bbbe67c7ebee27ac_1280.jpg"
+    category: "미니멀 가전 브랜드",
+    slogan: "공기 속까지 바꾸는 디자인",
+    logo: "HOID",
+    description: "공기청정기, 제습기 등 미니멀한 디자인과 첨단 기술이 만나 일상의 공기질을 혁신하는 스마트 가전 브랜드입니다. 홈쇼핑과 해외진출을 통해 글로벌 시장에서 인정받고 있습니다.",
+    products: ["공기청정기", "제습기", "3-in-1 기술", "HEPA14 필터"],
+    bgColor: "bg-blue-50",
+    buttonColor: "bg-blue-600 hover:bg-blue-700",
+    badgeColor: "bg-blue-600",
+    image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
   },
   {
     id: "medifeed",
     name: "Medifeed",
-    category: "건강기능식품",
+    category: "기능성 영양제 브랜드",
+    slogan: "매일을 지키는 작은 습관",
     logo: "MF",
-    description: "Medifeed는 과학적 연구를 바탕으로 한 프리미엄 건강기능식품 브랜드입니다. 의료진과의 협업을 통해 개발된 제품들로 고객의 건강한 삶을 지원합니다. 엄격한 품질 관리와 임상 시험을 거친 안전하고 효과적인 제품을 제공합니다.",
-    products: ["프로바이오틱스", "오메가-3", "종합 비타민"],
+    description: "잇몸과 눈 건강을 중심으로 한 기능성 영양제 브랜드로, 실용성과 안전성을 바탕으로 누구나 쉽게 선택할 수 있는 건강 솔루션을 제공합니다.",
+    products: ["잇몸 건강", "눈 건강", "기능성 영양제", "GMP 인증"],
     bgColor: "bg-green-50",
-    buttonColor: "bg-secondary hover:bg-green-700",
-    badgeColor: "bg-secondary",
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+    buttonColor: "bg-green-600 hover:bg-green-700",
+    badgeColor: "bg-green-600",
+    image: "https://images.unsplash.com/photo-1584362917165-526a968579e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
   },
   {
     id: "inyourheart",
     name: "InYourHeart",
-    category: "저자극 스킨케어",
-    logo: "IYH",
-    description: "InYourHeart는 민감한 피부를 위한 저자극 스킨케어 브랜드입니다. 자연에서 얻은 순한 성분만을 사용하여 피부에 부담을 주지 않는 화장품을 개발합니다. 모든 피부 타입이 안심하고 사용할 수 있는 순한 제품으로 건강한 아름다움을 추구합니다.",
-    products: ["세안제", "토너", "수분크림"],
-    bgColor: "bg-yellow-50",
-    buttonColor: "bg-accent hover:bg-yellow-600",
-    badgeColor: "bg-accent",
-    image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+    category: "감성 스킨케어 브랜드",
+    slogan: "피부에 감성을 입히다",
+    logo: "♥",
+    description: "클린뷰티 철학과 감성적인 패키지 디자인으로 글로벌 K-뷰티 시장을 선도하는 프리미엄 스킨케어 브랜드입니다.",
+    products: ["클린 포뮬러", "감성 패키지", "글로벌 K-뷰티", "세라마이드"],
+    bgColor: "bg-pink-50",
+    buttonColor: "bg-pink-600 hover:bg-pink-700",
+    badgeColor: "bg-pink-600",
+    image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+  },
+  {
+    id: "sangsaeng",
+    name: "상생 (Sangsaeng)",
+    category: "의료관광 플랫폼",
+    slogan: "WE CONNECT KOREAN MEDICAL SERVICES TO THE WORLD",
+    logo: "상생",
+    description: "메디컬 투어리즘부터 글로벌 헬스케어 플랫폼까지, 한국의 우수한 의료 서비스를 전 세계에 연결하는 종합 의료 플랫폼입니다. 태국, 베트남을 시작으로 아시아 전역에 서비스를 확장하고 있습니다.",
+    products: ["의료관광", "헬스케어 플랫폼", "다국어 앱", "병원 네트워크"],
+    bgColor: "bg-blue-50",
+    buttonColor: "bg-blue-600 hover:bg-blue-700",
+    badgeColor: "bg-blue-600",
+    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
   }
 ];
 
@@ -65,6 +81,7 @@ export default function Brand() {
                     <div>
                       <h2 className="text-4xl font-bold text-gray-900">{brand.name}</h2>
                       <p className="text-gray-500 text-lg">{brand.category}</p>
+                      <p className="text-blue-600 font-medium italic">{brand.slogan}</p>
                     </div>
                   </div>
                   <p className="text-lg text-gray-700 mb-8 leading-relaxed">
@@ -77,9 +94,11 @@ export default function Brand() {
                       </Badge>
                     ))}
                   </div>
-                  <Button className={`${brand.buttonColor} text-white px-8 py-4 text-lg font-semibold transition-colors`}>
-                    {brand.name} 브랜드 자세히 보기
-                  </Button>
+                  <Link href={`/brand/${brand.id}`}>
+                    <Button className={`${brand.buttonColor} text-white px-8 py-4 text-lg font-semibold transition-colors`}>
+                      {brand.name} 브랜드 자세히 보기
+                    </Button>
+                  </Link>
                 </div>
                 <div className={index % 2 === 1 ? 'lg:col-start-1' : 'lg:order-last'}>
                   <img 

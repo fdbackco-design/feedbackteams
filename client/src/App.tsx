@@ -11,6 +11,10 @@ import Service from "@/pages/service";
 import Brand from "@/pages/brand";
 import News from "@/pages/news";
 import Contact from "@/pages/contact";
+import Hoid from "@/pages/brand/hoid";
+import Medifeed from "@/pages/brand/medifeed";
+import InYourHeart from "@/pages/brand/inyourheart";
+import Sangsaeng from "@/pages/brand/sangsaeng";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -20,6 +24,10 @@ function Router() {
       <Route path="/about" component={About} />
       <Route path="/service" component={Service} />
       <Route path="/brand" component={Brand} />
+      <Route path="/brand/hoid" component={Hoid} />
+      <Route path="/brand/medifeed" component={Medifeed} />
+      <Route path="/brand/inyourheart" component={InYourHeart} />
+      <Route path="/brand/sangsaeng" component={Sangsaeng} />
       <Route path="/news" component={News} />
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />

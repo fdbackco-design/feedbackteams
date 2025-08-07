@@ -6,36 +6,44 @@ import { Link } from "wouter";
 
 const services = [
   {
-    icon: Hospital,
-    title: "🏥 의료관광 중개",
-    description: "베트남, 태국 등 아시아 주요 국가의 우수한 병원들과 제휴하여 안전하고 신뢰할 수 있는 의료관광 서비스를 제공합니다. 성형외과, 치과, 건강검진 등 다양한 의료 서비스를 합리적인 비용으로 이용하실 수 있습니다.",
-    features: ["베트남·태국 주요 병원 제휴", "통역 및 동행 서비스", "사후관리 및 A/S"],
-    buttonText: "자세히 알아보기",
-    buttonColor: "bg-red-600 hover:bg-red-700"
-  },
-  {
-    icon: Smartphone,
-    title: "📱 다국어 여정 앱",
-    description: "의료관광 고객들을 위한 전용 모바일 애플리케이션을 통해 예약부터 사후관리까지 원스톱 서비스를 제공합니다. 한국어, 영어, 베트남어, 태국어 등 다국어를 지원합니다.",
-    features: ["실시간 예약 및 상담", "다국어 지원 (4개국)", "GPS 연동 병원 찾기"],
-    buttonText: "앱 다운로드",
+    icon: ShoppingCart,
+    title: "🛒 유통 / 수출입 중개",
+    description: "아시아 전역의 유통망을 통해 효율적인 수출입 및 중개 서비스를 제공합니다. 다양한 제품군에 대한 전문적인 수출입 컨설팅과 물류 솔루션을 함께 제공하여 글로벌 비즈니스를 지원합니다.",
+    features: ["아시아 유통망 구축", "수출입 통관 대행", "물류 최적화 솔루션"],
+    buttonText: "서비스 문의",
     buttonColor: "bg-blue-600 hover:bg-blue-700"
   },
   {
-    icon: ShoppingCart,
-    title: "🛒 자체 브랜드 제품 유통",
-    description: "Hoid, Medifeed, InYourHeart 등 자체 개발 브랜드 제품들을 온라인과 오프라인을 통해 유통하고 있습니다. 품질 관리부터 고객 서비스까지 전 과정을 책임집니다.",
-    features: ["3개 자체 브랜드 운영", "온라인 쇼핑몰 연동", "전국 배송 및 A/S"],
-    buttonText: "제품 둘러보기",
+    icon: TrendingUp,
+    title: "🏭 자체 브랜드 제조 (OEM)",
+    description: "Hoid, Medifeed, InYourHeart, 상생 등 4개 자체 브랜드의 제조 및 OEM 생산을 통해 브랜드 성장을 지원합니다. 품질 관리부터 제품 개발까지 전 과정을 책임집니다.",
+    features: ["4개 자체 브랜드 운영", "OEM/ODM 제조", "품질관리 시스템"],
+    buttonText: "브랜드 보기",
     buttonColor: "bg-green-600 hover:bg-green-700"
   },
   {
     icon: TrendingUp,
-    title: "📈 브랜딩·마케팅 컨설팅",
-    description: "브랜드 기획부터 마케팅 전략까지, 기업의 브랜딩 성공을 위한 종합적인 컨설팅 서비스를 제공합니다. 홈쇼핑, 디지털 마케팅, 글로벌 진출 전략을 함께 수립합니다.",
-    features: ["브랜드 아이덴티티 개발", "홈쇼핑 연계 마케팅", "글로벌 시장 진출 전략"],
-    buttonText: "상담 신청하기",
-    buttonColor: "bg-yellow-600 hover:bg-yellow-700"
+    title: "🌐 글로벌 마케팅/브랜딩",
+    description: "홈쇼핑 연계와 디지털 마케팅을 통한 글로벌 브랜딩 솔루션을 제공합니다. 브랜드 아이덴티티 개발부터 글로벌 시장 진출 전략까지 종합적인 마케팅 서비스를 지원합니다.",
+    features: ["홈쇼핑 연계 마케팅", "디지털 마케팅", "글로벌 진출 전략"],
+    buttonText: "상담 신청",
+    buttonColor: "bg-purple-600 hover:bg-purple-700"
+  },
+  {
+    icon: Hospital,
+    title: "🏥 의료관광 플랫폼",
+    description: "상생 브랜드를 통한 의료관광 플랫폼 운영으로 한국의 우수한 의료 서비스를 전 세계에 연결합니다. 태국, 베트남을 시작으로 아시아 전역으로 서비스를 확장하고 있습니다.",
+    features: ["메디컬 투어리즘", "병원 네트워크", "다국어 플랫폼"],
+    buttonText: "상생 브랜드 보기",
+    buttonColor: "bg-red-600 hover:bg-red-700"
+  },
+  {
+    icon: Smartphone,
+    title: "📱 앱 개발",
+    description: "의료/케어 통합 앱 개발로 디지털 헬스케어 솔루션을 제공합니다. 다국어 지원과 실시간 상담 기능을 통해 글로벌 사용자들에게 편리한 서비스를 제공합니다.",
+    features: ["의료/케어 통합 앱", "다국어 지원", "실시간 상담"],
+    buttonText: "앱 정보 보기",
+    buttonColor: "bg-indigo-600 hover:bg-indigo-700"
   }
 ];
 
@@ -51,7 +59,7 @@ export default function Service() {
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow">
               <CardContent className="p-8">

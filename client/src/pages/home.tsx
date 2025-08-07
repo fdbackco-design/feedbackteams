@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Truck, Tags, Globe, ArrowRight, Play, ChevronDown, ChevronUp } from "lucide-react";
+import { Truck, Tags, Globe, ArrowRight, Play, ChevronDown, ChevronUp, Heart, Smartphone } from "lucide-react";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -183,12 +183,11 @@ export default function Home() {
           }}
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in-up">
-            아시아의 브랜드와 의료를<br />
-            <span className="text-secondary bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">세계와 연결합니다</span>
+            유통에서 브랜드까지<br />
+            <span className="text-secondary bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">한국의 가치를 세계로 연결합니다</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-            FeedBack은 유통, 브랜드 플랫폼, 글로벌 마케팅을 통해<br />
-            아시아를 넘어 세계로 진출합니다
+            유통 · 브랜드 · 마케팅 · 제조가 하나로 연결되는 상생 플랫폼
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{animationDelay: '0.6s'}}>
             <Button asChild size="lg" className="text-lg px-8 py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl">
@@ -245,18 +244,18 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Service Card 1 */}
             <Card className="bg-gray-50 hover:shadow-xl transition-all duration-500 text-center transform hover:-translate-y-2 opacity-0 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
               <CardHeader>
                 <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 transform transition-transform duration-300 hover:scale-110 hover:rotate-12">
                   <Truck className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-2xl">유통 및 수출입</CardTitle>
+                <CardTitle className="text-xl">유통 / 수출입 중개</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600 mb-6">
-                  아시아 전역의 유통망을 통해 효율적인 수출입 서비스를 제공합니다.
+                  아시아 전역의 유통망을 통해 효율적인 수출입 및 중개 서비스를 제공합니다.
                 </CardDescription>
                 <Link href="/service" className="text-primary font-semibold hover:underline inline-flex items-center group">
                   자세히 보기 <ArrowRight className="ml-1 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
@@ -265,16 +264,16 @@ export default function Home() {
             </Card>
             
             {/* Service Card 2 */}
-            <Card className="bg-gray-50 hover:shadow-xl transition-all duration-500 text-center transform hover:-translate-y-2 opacity-0 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+            <Card className="bg-gray-50 hover:shadow-xl transition-all duration-500 text-center transform hover:-translate-y-2 opacity-0 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
               <CardHeader>
                 <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6 transform transition-transform duration-300 hover:scale-110 hover:rotate-12">
                   <Tags className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-2xl">브랜드/OEM 운영</CardTitle>
+                <CardTitle className="text-xl">자체 브랜드 제조</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600 mb-6">
-                  자체 브랜드 개발부터 OEM 생산까지 브랜드 성장을 위한 종합 솔루션을 제공합니다.
+                  OEM 생산 및 Hoid 등 자체 브랜드 개발로 브랜드 성장을 지원합니다.
                 </CardDescription>
                 <Link href="/brand" className="text-primary font-semibold hover:underline inline-flex items-center group">
                   자세히 보기 <ArrowRight className="ml-1 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
@@ -283,16 +282,52 @@ export default function Home() {
             </Card>
             
             {/* Service Card 3 */}
-            <Card className="bg-gray-50 hover:shadow-xl transition-all duration-500 text-center transform hover:-translate-y-2 opacity-0 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
+            <Card className="bg-gray-50 hover:shadow-xl transition-all duration-500 text-center transform hover:-translate-y-2 opacity-0 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
               <CardHeader>
                 <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6 transform transition-transform duration-300 hover:scale-110 hover:rotate-12">
                   <Globe className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-2xl">글로벌 마케팅</CardTitle>
+                <CardTitle className="text-xl">글로벌 마케팅/브랜딩</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600 mb-6">
-                  홈쇼핑 연계와 디지털 마케팅을 통한 글로벌 시장 진출을 지원합니다.
+                  홈쇼핑 연계와 디지털 마케팅을 통한 글로벌 브랜딩 솔루션을 제공합니다.
+                </CardDescription>
+                <Link href="/service" className="text-primary font-semibold hover:underline inline-flex items-center group">
+                  자세히 보기 <ArrowRight className="ml-1 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Service Card 4 */}
+            <Card className="bg-gray-50 hover:shadow-xl transition-all duration-500 text-center transform hover:-translate-y-2 opacity-0 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
+              <CardHeader>
+                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 transform transition-transform duration-300 hover:scale-110 hover:rotate-12">
+                  <Heart className="w-8 h-8 text-white" />
+                </div>
+                <CardTitle className="text-xl">의료관광 플랫폼</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-600 mb-6">
+                  상생 브랜드를 통한 의료관광 플랫폼 운영 및 글로벌 환자 유치 서비스입니다.
+                </CardDescription>
+                <Link href="/brand/sangsaeng" className="text-primary font-semibold hover:underline inline-flex items-center group">
+                  자세히 보기 <ArrowRight className="ml-1 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </CardContent>
+            </Card>
+
+            {/* Service Card 5 */}
+            <Card className="bg-gray-50 hover:shadow-xl transition-all duration-500 text-center transform hover:-translate-y-2 opacity-0 animate-fade-in-up md:col-span-2 lg:col-span-1" style={{animationDelay: '0.6s'}}>
+              <CardHeader>
+                <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6 transform transition-transform duration-300 hover:scale-110 hover:rotate-12">
+                  <Smartphone className="w-8 h-8 text-white" />
+                </div>
+                <CardTitle className="text-xl">앱 개발</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-600 mb-6">
+                  의료/케어 통합 앱 개발로 디지털 헬스케어 솔루션을 제공합니다.
                 </CardDescription>
                 <Link href="/service" className="text-primary font-semibold hover:underline inline-flex items-center group">
                   자세히 보기 <ArrowRight className="ml-1 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
@@ -312,69 +347,74 @@ export default function Home() {
             <p className="text-xl text-gray-600">혁신적인 브랜드를 통해 고객에게 최고의 가치를 전달합니다</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Brand 1: Hoid */}
-            <div className="group opacity-0 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-              <Card className="shadow-lg hover:shadow-2xl transition-all duration-500 text-center transform group-hover:-translate-y-4 group-hover:scale-105 cursor-pointer relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <Link href="/brand/hoid" className="group opacity-0 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+              <Card className="shadow-lg hover:shadow-2xl transition-all duration-500 text-center transform group-hover:-translate-y-4 group-hover:scale-105 cursor-pointer relative overflow-hidden h-full">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-100 to-blue-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardHeader className="relative z-10">
-                  <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 transform group-hover:rotate-12 transition-transform duration-300">
-                    <span className="text-white font-bold text-lg">Hoid</span>
+                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 transform group-hover:rotate-12 transition-transform duration-300">
+                    <span className="text-white font-bold text-sm">HOID</span>
                   </div>
-                  <CardTitle className="text-2xl group-hover:text-primary transition-colors">Hoid</CardTitle>
+                  <CardTitle className="text-xl group-hover:text-blue-600 transition-colors">Hoid</CardTitle>
                 </CardHeader>
                 <CardContent className="relative z-10">
-                  <CardDescription className="text-gray-600 mb-6">
-                    디자인 가전 브랜드로 청소기, 공기청정기 등 혁신적인 생활가전을 선보입니다.
-                  </CardDescription>
-                  <Button className="w-full transform group-hover:scale-105 transition-transform duration-300">
-                    브랜드 자세히 보기
-                  </Button>
+                  <p className="text-gray-600 text-sm mb-4">공기 속까지 바꾸는 디자인</p>
+                  <p className="text-xs text-gray-500">공기청정기, 제습기 등 미니멀 가전</p>
                 </CardContent>
               </Card>
-            </div>
+            </Link>
             
             {/* Brand 2: Medifeed */}
-            <div className="group opacity-0 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
-              <Card className="shadow-lg hover:shadow-2xl transition-all duration-500 text-center transform group-hover:-translate-y-4 group-hover:scale-105 cursor-pointer relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-secondary/10 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <Link href="/brand/medifeed" className="group opacity-0 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+              <Card className="shadow-lg hover:shadow-2xl transition-all duration-500 text-center transform group-hover:-translate-y-4 group-hover:scale-105 cursor-pointer relative overflow-hidden h-full">
+                <div className="absolute inset-0 bg-gradient-to-r from-green-100 to-green-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardHeader className="relative z-10">
-                  <div className="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6 transform group-hover:rotate-12 transition-transform duration-300">
-                    <span className="text-white font-bold text-lg">MF</span>
+                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4 transform group-hover:rotate-12 transition-transform duration-300">
+                    <span className="text-white font-bold text-xs">MF</span>
                   </div>
-                  <CardTitle className="text-2xl group-hover:text-secondary transition-colors">Medifeed</CardTitle>
+                  <CardTitle className="text-xl group-hover:text-green-600 transition-colors">Medifeed</CardTitle>
                 </CardHeader>
                 <CardContent className="relative z-10">
-                  <CardDescription className="text-gray-600 mb-6">
-                    건강기능식품 전문 브랜드로 과학적 연구를 바탕으로 한 제품을 제공합니다.
-                  </CardDescription>
-                  <Button className="w-full bg-secondary hover:bg-secondary/90 transform group-hover:scale-105 transition-transform duration-300">
-                    브랜드 자세히 보기
-                  </Button>
+                  <p className="text-gray-600 text-sm mb-4">매일을 지키는 작은 습관</p>
+                  <p className="text-xs text-gray-500">잇몸, 눈 건강 중심 기능성 영양제</p>
                 </CardContent>
               </Card>
-            </div>
+            </Link>
             
             {/* Brand 3: InYourHeart */}
-            <div className="group opacity-0 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
-              <Card className="shadow-lg hover:shadow-2xl transition-all duration-500 text-center transform group-hover:-translate-y-4 group-hover:scale-105 cursor-pointer relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-accent/10 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <Link href="/brand/inyourheart" className="group opacity-0 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+              <Card className="shadow-lg hover:shadow-2xl transition-all duration-500 text-center transform group-hover:-translate-y-4 group-hover:scale-105 cursor-pointer relative overflow-hidden h-full">
+                <div className="absolute inset-0 bg-gradient-to-r from-pink-100 to-pink-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardHeader className="relative z-10">
-                  <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center mx-auto mb-6 transform group-hover:rotate-12 transition-transform duration-300">
-                    <span className="text-white font-bold text-lg">IYH</span>
+                  <div className="w-16 h-16 bg-pink-600 rounded-full flex items-center justify-center mx-auto mb-4 transform group-hover:rotate-12 transition-transform duration-300">
+                    <Heart className="w-6 h-6 text-white" />
                   </div>
-                  <CardTitle className="text-2xl group-hover:text-accent transition-colors">InYourHeart</CardTitle>
+                  <CardTitle className="text-xl group-hover:text-pink-600 transition-colors">InYourHeart</CardTitle>
                 </CardHeader>
                 <CardContent className="relative z-10">
-                  <CardDescription className="text-gray-600 mb-6">
-                    저자극 스킨케어 브랜드로 민감한 피부를 위한 순한 화장품을 개발합니다.
-                  </CardDescription>
-                  <Button className="w-full bg-accent hover:bg-accent/90 transform group-hover:scale-105 transition-transform duration-300">
-                    브랜드 자세히 보기
-                  </Button>
+                  <p className="text-gray-600 text-sm mb-4">피부에 감성을 입히다</p>
+                  <p className="text-xs text-gray-500">감성 스킨케어, 클린 포뮬러</p>
                 </CardContent>
               </Card>
-            </div>
+            </Link>
+
+            {/* Brand 4: Sangsaeng */}
+            <Link href="/brand/sangsaeng" className="group opacity-0 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
+              <Card className="shadow-lg hover:shadow-2xl transition-all duration-500 text-center transform group-hover:-translate-y-4 group-hover:scale-105 cursor-pointer relative overflow-hidden h-full">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-100 to-teal-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <CardHeader className="relative z-10">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4 transform group-hover:rotate-12 transition-transform duration-300">
+                    <span className="text-white font-bold text-xs">상생</span>
+                  </div>
+                  <CardTitle className="text-xl group-hover:text-blue-600 transition-colors">상생</CardTitle>
+                </CardHeader>
+                <CardContent className="relative z-10">
+                  <p className="text-gray-600 text-sm mb-4">WE CONNECT KOREAN MEDICAL</p>
+                  <p className="text-xs text-gray-500">의료관광, 헬스케어 플랫폼</p>
+                </CardContent>
+              </Card>
+            </Link>
           </div>
         </div>
       </section>

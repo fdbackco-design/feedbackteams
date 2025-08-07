@@ -11,8 +11,8 @@ export default function About() {
         <div className="text-center mb-20">
           <h1 className="text-5xl font-bold text-gray-900 mb-8">회사 소개</h1>
           <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            피드백은 <span className="font-semibold text-primary">브랜드·의료·기술</span>을 연결해<br />
-            아시아를 넘어 세계로 진출합니다.
+            FeedBack은 <span className="font-semibold text-primary">유통·브랜드·의료·마케팅</span>이 하나로 연결되는<br />
+            상생 플랫폼으로 한국의 가치를 세계로 전달합니다.
           </p>
         </div>
         
@@ -23,7 +23,7 @@ export default function About() {
             <div className="text-gray-600">설립년도</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-secondary mb-2">3</div>
+            <div className="text-4xl font-bold text-secondary mb-2">4</div>
             <div className="text-gray-600">자체 브랜드</div>
           </div>
           <div className="text-center">
