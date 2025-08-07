@@ -109,7 +109,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* Company Story Section - 쿠쿠 스타일 스토리텔링 */}
       <section className="py-20 bg-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -144,7 +143,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* Center Banner with Business Value */}
       <section className="py-16 bg-gradient-to-r from-primary/10 to-accent/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -165,7 +163,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* Value Proposition */}
       <section className="py-20 bg-background text-center">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -176,7 +173,6 @@ export default function About() {
           </h2>
         </div>
       </section>
-
       {/* 경영철학 - 쿠쿠 스타일의 4개 핵심 가치 */}
       <section className="py-20 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -287,13 +283,12 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* Timeline - 이미지 스타일 레이아웃 */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center mb-16">
             <div className="w-4 h-4 bg-blue-400 rounded-full mr-6"></div>
-            <h2 className="text-5xl font-bold text-blue-300">~Present</h2>
+            <h2 className="text-5xl font-bold text-blue-300">연혁</h2>
           </div>
           
           <div className="relative ml-2">
@@ -339,7 +334,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* CEO Message - 쿠쿠 스타일 대형 메시지 */}
       <section className="py-20 bg-gradient-to-br from-muted to-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -399,7 +393,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* Organization Chart */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
