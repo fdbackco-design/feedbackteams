@@ -78,6 +78,69 @@ const TechnologySVG = () => (
   </svg>
 );
 
+// 새로운 브랜드 메시지 배너 SVG
+const BrandMessageBannerSVG = () => (
+  <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-gray-50 to-white shadow-2xl">
+    {/* 배경 패턴 */}
+    <div className="absolute inset-0">
+      <svg viewBox="0 0 1200 400" className="w-full h-full object-cover">
+        {/* 깔끔한 기하학적 배경 */}
+        <defs>
+          <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#f8fafc" />
+            <stop offset="50%" stopColor="#ffffff" />
+            <stop offset="100%" stopColor="#f1f5f9" />
+          </linearGradient>
+          <pattern id="gridPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e2e8f0" strokeWidth="0.5" opacity="0.3"/>
+          </pattern>
+        </defs>
+        
+        {/* 배경 */}
+        <rect width="100%" height="100%" fill="url(#bgGradient)" />
+        <rect width="100%" height="100%" fill="url(#gridPattern)" />
+        
+        {/* 미니멀한 기하학적 요소들 */}
+        <circle cx="150" cy="80" r="60" fill="#0F4C82" opacity="0.1" />
+        <circle cx="1050" cy="320" r="80" fill="#0F4C82" opacity="0.08" />
+        
+        {/* 연결선들 - 유통 플로우를 상징 */}
+        <path d="M 100 200 Q 300 150 500 200 T 900 200" stroke="#0F4C82" strokeWidth="2" fill="none" opacity="0.3" />
+        <path d="M 200 300 Q 400 250 600 300 T 1000 300" stroke="#0F4C82" strokeWidth="2" fill="none" opacity="0.2" />
+        
+        {/* 작은 장식 요소들 */}
+        <rect x="80" y="300" width="8" height="8" fill="#0F4C82" opacity="0.4" transform="rotate(45 84 304)" />
+        <rect x="1100" y="100" width="6" height="6" fill="#0F4C82" opacity="0.4" transform="rotate(45 1103 103)" />
+        <rect x="500" y="80" width="4" height="4" fill="#0F4C82" opacity="0.5" transform="rotate(45 502 82)" />
+        
+        {/* 유통 네트워크를 상징하는 노드들 */}
+        <circle cx="300" cy="180" r="4" fill="#0F4C82" opacity="0.6" />
+        <circle cx="500" cy="200" r="4" fill="#0F4C82" opacity="0.6" />
+        <circle cx="700" cy="220" r="4" fill="#0F4C82" opacity="0.6" />
+        <circle cx="900" cy="200" r="4" fill="#0F4C82" opacity="0.6" />
+      </svg>
+    </div>
+    
+    {/* 메인 텍스트 */}
+    <div className="relative z-10 flex items-center justify-center h-96 px-8">
+      <div className="text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-4">
+          피드백은 브랜드의 성장을<br />
+          <span className="text-primary">유통으로 설계합니다</span>
+        </h2>
+        <div className="w-24 h-1 bg-primary mx-auto mt-6 rounded-full"></div>
+      </div>
+    </div>
+    
+    {/* 오른쪽 하단 장식 요소 */}
+    <div className="absolute bottom-4 right-4 opacity-20">
+      <svg width="60" height="60" viewBox="0 0 60 60">
+        <path d="M 10 30 Q 30 10 50 30 Q 30 50 10 30" fill="#0F4C82" />
+      </svg>
+    </div>
+  </div>
+);
+
 export default function About() {
   const timelineData = [
     { year: "2025.09", description: "Hoid 2세대 공기청정기 국내외 동시 론칭 (홈쇼핑 입점 확장)", type: "확장" },
@@ -109,6 +172,14 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* 브랜드 메시지 배너 */}
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <BrandMessageBannerSVG />
+        </div>
+      </section>
+
       {/* Company Story Section - 쿠쿠 스타일 스토리텔링 */}
       <section className="py-20 bg-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
