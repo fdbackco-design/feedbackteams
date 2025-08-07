@@ -6,6 +6,7 @@ import warehouseImage from "@assets/futuristic-warehouse-with-blue-neon-lights-c
 import partnershipImage from "@assets/5f76e132-877a-4d9e-8c9c-de9ff84cb5dd_1754568024377.jpg";
 import networkImage from "@assets/5068978_1754568223986.jpg";
 import globalImage from "@assets/13730_1754568375896.jpg";
+import trustImage from "@assets/30758_1754568467742.jpg";
 
 // SVG 컴포넌트들
 const HeroBackgroundSVG = () => (
@@ -312,15 +313,19 @@ export default function About() {
           <div className="mb-20">
             <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
               <div className="lg:w-1/2">
-                <div className="bg-gradient-to-br from-accent to-primary p-8 rounded-2xl text-white text-center">
-                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Shield className="w-10 h-10" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4">신뢰를 통한</h3>
-                  <p className="text-lg font-semibold">장기 파트너십 구축</p>
+                <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src={trustImage}
+                    alt="신뢰와 파트너십"
+                    className="w-full h-80 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                 </div>
               </div>
               <div className="lg:w-1/2 text-center lg:text-left">
+                <h3 className="text-2xl font-bold text-foreground mb-6">
+                  신뢰를 통한 장기 파트너십 구축
+                </h3>
                 <p className="text-lg text-foreground leading-relaxed">
                   FeedBack의 존재 이유는 파트너와 고객의 신뢰입니다.<br /><br />
                   <span className="font-semibold text-primary">검증된 품질과 안정적인 공급, 투명한 유통 프로세스,<br />
