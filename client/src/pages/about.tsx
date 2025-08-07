@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Eye, Target, Users, Globe, TrendingUp, ShoppingCart, Building2, Award } from "lucide-react";
 import organizationChart from "@assets/organizationChart_1754563135776.png";
+import warehouseImage from "@assets/futuristic-warehouse-with-blue-neon-lights-connected-data_1754566796044.jpg";
 
 // SVG 컴포넌트들
 const HeroBackgroundSVG = () => (
@@ -78,64 +79,60 @@ const TechnologySVG = () => (
   </svg>
 );
 
-// 새로운 브랜드 메시지 배너 SVG
+// 새로운 브랜드 메시지 배너 - 미래형 창고 배경
 const BrandMessageBannerSVG = () => (
-  <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-gray-50 to-white shadow-2xl">
-    {/* 배경 패턴 */}
+  <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+    {/* 배경 이미지 */}
     <div className="absolute inset-0">
-      <svg viewBox="0 0 1200 400" className="w-full h-full object-cover">
-        {/* 깔끔한 기하학적 배경 */}
-        <defs>
-          <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#f8fafc" />
-            <stop offset="50%" stopColor="#ffffff" />
-            <stop offset="100%" stopColor="#f1f5f9" />
-          </linearGradient>
-          <pattern id="gridPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e2e8f0" strokeWidth="0.5" opacity="0.3"/>
-          </pattern>
-        </defs>
-        
-        {/* 배경 */}
-        <rect width="100%" height="100%" fill="url(#bgGradient)" />
-        <rect width="100%" height="100%" fill="url(#gridPattern)" />
-        
-        {/* 미니멀한 기하학적 요소들 */}
-        <circle cx="150" cy="80" r="60" fill="#0F4C82" opacity="0.1" />
-        <circle cx="1050" cy="320" r="80" fill="#0F4C82" opacity="0.08" />
-        
-        {/* 연결선들 - 유통 플로우를 상징 */}
-        <path d="M 100 200 Q 300 150 500 200 T 900 200" stroke="#0F4C82" strokeWidth="2" fill="none" opacity="0.3" />
-        <path d="M 200 300 Q 400 250 600 300 T 1000 300" stroke="#0F4C82" strokeWidth="2" fill="none" opacity="0.2" />
-        
-        {/* 작은 장식 요소들 */}
-        <rect x="80" y="300" width="8" height="8" fill="#0F4C82" opacity="0.4" transform="rotate(45 84 304)" />
-        <rect x="1100" y="100" width="6" height="6" fill="#0F4C82" opacity="0.4" transform="rotate(45 1103 103)" />
-        <rect x="500" y="80" width="4" height="4" fill="#0F4C82" opacity="0.5" transform="rotate(45 502 82)" />
-        
-        {/* 유통 네트워크를 상징하는 노드들 */}
-        <circle cx="300" cy="180" r="4" fill="#0F4C82" opacity="0.6" />
-        <circle cx="500" cy="200" r="4" fill="#0F4C82" opacity="0.6" />
-        <circle cx="700" cy="220" r="4" fill="#0F4C82" opacity="0.6" />
-        <circle cx="900" cy="200" r="4" fill="#0F4C82" opacity="0.6" />
-      </svg>
+      <img 
+        src={warehouseImage}
+        alt="미래형 유통 창고"
+        className="w-full h-full object-cover"
+      />
+      {/* 어둡게 하는 오버레이 */}
+      <div className="absolute inset-0 bg-black/40"></div>
+      {/* 블루 그라디언트 오버레이 */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/30 via-transparent to-blue-900/30"></div>
     </div>
     
     {/* 메인 텍스트 */}
     <div className="relative z-10 flex items-center justify-center h-96 px-8">
       <div className="text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-4">
-          피드백은 브랜드의 성장을<br />
-          <span className="text-primary">유통으로 설계합니다</span>
-        </h2>
-        <div className="w-24 h-1 bg-primary mx-auto mt-6 rounded-full"></div>
+        {/* 텍스트 배경 */}
+        <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+          <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-4 drop-shadow-lg">
+            피드백은 브랜드의 성장을<br />
+            <span className="text-blue-300">유통으로 설계합니다</span>
+          </h2>
+          <div className="w-24 h-1 bg-blue-300 mx-auto mt-6 rounded-full shadow-lg"></div>
+        </div>
       </div>
     </div>
     
-    {/* 오른쪽 하단 장식 요소 */}
-    <div className="absolute bottom-4 right-4 opacity-20">
-      <svg width="60" height="60" viewBox="0 0 60 60">
-        <path d="M 10 30 Q 30 10 50 30 Q 30 50 10 30" fill="#0F4C82" />
+    {/* 네온 스타일 장식 요소들 */}
+    <div className="absolute top-4 left-4 opacity-60">
+      <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+    </div>
+    <div className="absolute top-8 right-8 opacity-60">
+      <div className="w-2 h-2 bg-cyan-300 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+    </div>
+    <div className="absolute bottom-6 left-6 opacity-60">
+      <div className="w-2 h-2 bg-blue-300 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+    </div>
+    
+    {/* 연결선 그래픽 요소 */}
+    <div className="absolute bottom-4 right-4 opacity-40">
+      <svg width="80" height="60" viewBox="0 0 80 60" className="text-blue-300">
+        <path 
+          d="M 10 30 Q 25 10 40 30 Q 55 50 70 30" 
+          stroke="currentColor" 
+          strokeWidth="2" 
+          fill="none"
+          className="drop-shadow-lg"
+        />
+        <circle cx="10" cy="30" r="2" fill="currentColor" />
+        <circle cx="40" cy="30" r="2" fill="currentColor" />
+        <circle cx="70" cy="30" r="2" fill="currentColor" />
       </svg>
     </div>
   </div>
