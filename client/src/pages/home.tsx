@@ -301,23 +301,7 @@ export default function Home() {
 
             
 
-            {/* Service Card 5 */}
-            <Card className="bg-gray-50 hover:shadow-xl transition-all duration-500 text-center transform hover:-translate-y-2 opacity-0 animate-fade-in-up md:col-span-2 lg:col-span-1" style={{animationDelay: '0.5s'}}>
-              <CardHeader>
-                <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6 transform transition-transform duration-300 hover:scale-110 hover:rotate-12">
-                  <Smartphone className="w-8 h-8 text-white" />
-                </div>
-                <CardTitle className="text-xl">앱 개발</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600 mb-6">
-                  의료/케어 통합 앱 개발로 디지털 헬스케어 솔루션을 제공합니다.
-                </CardDescription>
-                <Link href="/service" className="text-primary font-semibold hover:underline inline-flex items-center group">
-                  자세히 보기 <ArrowRight className="ml-1 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </CardContent>
-            </Card>
+            
           </div>
         </div>
       </section>
