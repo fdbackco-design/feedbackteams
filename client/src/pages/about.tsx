@@ -5,6 +5,7 @@ import organizationChart from "@assets/organizationChart_1754563135776.png";
 import warehouseImage from "@assets/futuristic-warehouse-with-blue-neon-lights-connected-data_1754566796044.jpg";
 import partnershipImage from "@assets/5f76e132-877a-4d9e-8c9c-de9ff84cb5dd_1754568024377.jpg";
 import networkImage from "@assets/5068978_1754568223986.jpg";
+import globalImage from "@assets/13730_1754568375896.jpg";
 
 // SVG 컴포넌트들
 const HeroBackgroundSVG = () => (
@@ -282,15 +283,19 @@ export default function About() {
           <div className="mb-20">
             <div className="flex flex-col lg:flex-row items-center gap-12">
               <div className="lg:w-1/2">
-                <div className="bg-gradient-to-br from-primary to-accent p-8 rounded-2xl text-white text-center">
-                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Globe className="w-10 h-10" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4">글로벌 시장에서</h3>
-                  <p className="text-lg font-semibold">경쟁력을 만드는 실행 중심 기업</p>
+                <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src={globalImage}
+                    alt="글로벌 네트워크"
+                    className="w-full h-80 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                 </div>
               </div>
               <div className="lg:w-1/2 text-center lg:text-left">
+                <h3 className="text-2xl font-bold text-foreground mb-6">
+                  글로벌 시장에서 경쟁력을 만드는 실행 중심 기업
+                </h3>
                 <p className="text-lg text-foreground leading-relaxed">
                   아시아를 기반으로 성장해 온 브랜드에게<br />
                   글로벌 시장 진출 기회를 제공합니다.<br /><br />
