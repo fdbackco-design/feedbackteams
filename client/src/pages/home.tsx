@@ -2,11 +2,22 @@ import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Truck, Tags, Globe, ArrowRight, Play, ChevronDown } from "lucide-react";
+import { Truck, Tags, Globe, ArrowRight, Play, ChevronDown, ChevronUp } from "lucide-react";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [currentSection, setCurrentSection] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+
+  const sections = [
+    { id: 'hero', name: '홈' },
+    { id: 'services', name: '서비스' },
+    { id: 'brands', name: '브랜드' },
+    { id: 'stats', name: '실적' },
+    { id: 'cta', name: '문의' }
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -14,14 +25,146 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleWheel = (e: WheelEvent) => {
+      e.preventDefault();
+      const direction = e.deltaY > 0 ? 1 : -1;
+      const newSection = Math.max(0, Math.min(sections.length - 1, currentSection + direction));
+      
+      if (newSection !== currentSection) {
+        setCurrentSection(newSection);
+        const targetElement = document.getElementById(sections[newSection].id);
+        targetElement?.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+        e.preventDefault();
+        scrollToNextSection();
+      } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+        e.preventDefault();
+        scrollToPrevSection();
+      } else if (e.key === 'Home') {
+        e.preventDefault();
+        scrollToSection(0);
+      } else if (e.key === 'End') {
+        e.preventDefault();
+        scrollToSection(sections.length - 1);
+      }
+    };
+
+    window.addEventListener('wheel', handleWheel, { passive: false });
+    window.addEventListener('keydown', handleKeyDown);
+    
+    return () => {
+      window.removeEventListener('wheel', handleWheel);
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [currentSection, sections]);
+
+  // Touch gestures for mobile
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientY);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientY);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      scrollToNextSection();
+    }
+    if (isRightSwipe) {
+      scrollToPrevSection();
+    }
+  };
+
+  const scrollToSection = (index: number) => {
+    setCurrentSection(index);
+    const targetElement = document.getElementById(sections[index].id);
+    targetElement?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const scrollToNextSection = () => {
-    window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+    const nextSection = Math.min(sections.length - 1, currentSection + 1);
+    scrollToSection(nextSection);
+  };
+
+  const scrollToPrevSection = () => {
+    const prevSection = Math.max(0, currentSection - 1);
+    scrollToSection(prevSection);
   };
 
   return (
-    <div>
-      {/* Hero Section with Parallax */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <div className="fullpage-container hide-scrollbar"
+         style={{ scrollSnapType: 'y mandatory', height: '100vh', overflowY: 'scroll' }}
+         onTouchStart={handleTouchStart}
+         onTouchMove={handleTouchMove}
+         onTouchEnd={handleTouchEnd}>
+      {/* Section Navigation Dots */}
+      <div className="fixed right-4 md:right-8 top-1/2 transform -translate-y-1/2 z-50 space-y-3">
+        {sections.map((section, index) => (
+          <div key={section.id} className="relative group">
+            <button
+              onClick={() => scrollToSection(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                currentSection === index 
+                  ? 'bg-primary scale-125' 
+                  : 'bg-gray-400 hover:bg-gray-600'
+              }`}
+              title={section.name}
+            />
+            <div className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-black text-white px-2 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+              {section.name}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Section Counter */}
+      <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 bg-black bg-opacity-70 text-white px-4 py-2 rounded-full text-sm">
+        {currentSection + 1} / {sections.length}
+      </div>
+
+      {/* Navigation Arrows */}
+      <div className="fixed left-4 md:left-8 top-1/2 transform -translate-y-1/2 z-50 space-y-4">
+        <button
+          onClick={scrollToPrevSection}
+          disabled={currentSection === 0}
+          className={`p-2 md:p-3 rounded-full transition-all duration-300 ${
+            currentSection === 0 
+              ? 'bg-gray-300 text-gray-400 cursor-not-allowed' 
+              : 'bg-white shadow-lg hover:shadow-xl text-primary hover:bg-primary hover:text-white'
+          }`}
+          title="이전 섹션"
+        >
+          <ChevronUp className="w-4 h-4 md:w-6 md:h-6" />
+        </button>
+        <button
+          onClick={scrollToNextSection}
+          disabled={currentSection === sections.length - 1}
+          className={`p-2 md:p-3 rounded-full transition-all duration-300 ${
+            currentSection === sections.length - 1 
+              ? 'bg-gray-300 text-gray-400 cursor-not-allowed' 
+              : 'bg-white shadow-lg hover:shadow-xl text-primary hover:bg-primary hover:text-white'
+          }`}
+          title="다음 섹션"
+        >
+          <ChevronDown className="w-4 h-4 md:w-6 md:h-6" />
+        </button>
+      </div>
+
+      {/* Hero Section */}
+      <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden" 
+               style={{ scrollSnapAlign: 'start' }}>
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-75"
           style={{
@@ -69,7 +212,7 @@ export default function Home() {
           onClick={scrollToNextSection}
         >
           <div className="flex flex-col items-center">
-            <span className="text-sm mb-2">스크롤</span>
+            <span className="text-sm mb-2">다음 섹션</span>
             <ChevronDown className="w-6 h-6" />
           </div>
         </div>
@@ -91,8 +234,9 @@ export default function Home() {
         )}
       </section>
       
-      {/* Services Summary Cards with Intersection Observer */}
-      <section className="py-20 bg-white" id="services">
+      {/* Services Section */}
+      <section id="services" className="h-screen flex items-center justify-center bg-white"
+               style={{ scrollSnapAlign: 'start' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 opacity-0 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">핵심 서비스</h2>
@@ -159,8 +303,9 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Interactive Brand Showcase */}
-      <section className="py-20 bg-gray-100" id="brands">
+      {/* Brands Section */}
+      <section id="brands" className="h-screen flex items-center justify-center bg-gray-100"
+               style={{ scrollSnapAlign: 'start' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 opacity-0 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">우리의 브랜드</h2>
@@ -234,8 +379,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Interactive Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white relative overflow-hidden">
+      {/* Stats Section */}
+      <section id="stats" className="h-screen flex items-center justify-center bg-gradient-to-r from-primary to-secondary text-white relative overflow-hidden"
+               style={{ scrollSnapAlign: 'start' }}>
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-4 gap-8 text-center">
@@ -259,8 +405,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Interactive CTA Section */}
-      <section className="py-20 bg-white relative overflow-hidden">
+      {/* CTA Section */}
+      <section id="cta" className="h-screen flex items-center justify-center bg-white relative overflow-hidden"
+               style={{ scrollSnapAlign: 'start' }}>
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <div className="opacity-0 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
