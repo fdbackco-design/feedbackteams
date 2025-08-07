@@ -56,7 +56,7 @@ export default function Header() {
                   className={`px-3 py-2 text-sm font-medium transition-all duration-300 transform hover:scale-105 hover:-translate-y-0.5 ${
                     location === item.href
                       ? "text-primary border-b-2 border-primary"
-                      : "text-gray-600 hover:text-primary"
+                      : "text-muted-foreground hover:text-primary"
                   }`}
                 >
                   {item.name}
@@ -67,7 +67,7 @@ export default function Header() {
           
           {/* Language Selector */}
           <div className="hidden md:block">
-            <select className="bg-transparent border border-gray-300 rounded px-3 py-1 text-sm">
+            <select className="bg-transparent border border-border rounded px-3 py-1 text-sm text-foreground">
               <option value="ko">KOR</option>
               <option value="en">ENG</option>
             </select>

@@ -184,7 +184,7 @@ export default function Home() {
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in-up">
             유통에서 브랜드까지<br />
-            <span className="text-secondary bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">한국의 가치를 세계로 연결합니다</span>
+            <span className="text-accent bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">한국의 가치를 세계로 연결합니다</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
             유통 · 브랜드 · 마케팅 · 제조가 하나로 연결되는 상생 플랫폼
@@ -339,28 +339,28 @@ export default function Home() {
       </section>
       
       {/* Brands Section */}
-      <section id="brands" className="h-screen flex items-center justify-center bg-gray-100"
+      <section id="brands" className="h-screen flex items-center justify-center bg-muted"
                style={{ scrollSnapAlign: 'start' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 opacity-0 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">우리의 브랜드</h2>
-            <p className="text-xl text-gray-600">혁신적인 브랜드를 통해 고객에게 최고의 가치를 전달합니다</p>
+            <h2 className="text-4xl font-bold text-foreground mb-4">우리의 브랜드</h2>
+            <p className="text-xl text-muted-foreground">혁신적인 브랜드를 통해 고객에게 최고의 가치를 전달합니다</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Brand 1: Hoid */}
             <Link href="/brand/hoid" className="group opacity-0 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
               <Card className="shadow-lg hover:shadow-2xl transition-all duration-500 text-center transform group-hover:-translate-y-4 group-hover:scale-105 cursor-pointer relative overflow-hidden h-full">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-100 to-blue-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-50 to-gray-25 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardHeader className="relative z-10">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 transform group-hover:rotate-12 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 transform group-hover:rotate-12 transition-transform duration-300">
                     <span className="text-white font-bold text-sm">HOID</span>
                   </div>
-                  <CardTitle className="text-xl group-hover:text-blue-600 transition-colors">Hoid</CardTitle>
+                  <CardTitle className="text-xl group-hover:text-accent transition-colors">Hoid</CardTitle>
                 </CardHeader>
                 <CardContent className="relative z-10">
-                  <p className="text-gray-600 text-sm mb-4">공기 속까지 바꾸는 디자인</p>
-                  <p className="text-xs text-gray-500">공기청정기, 제습기 등 미니멀 가전</p>
+                  <p className="text-foreground text-sm mb-4">공기 속까지 바꾸는 디자인</p>
+                  <p className="text-xs text-muted-foreground">공기청정기, 제습기 등 미니멀 가전</p>
                 </CardContent>
               </Card>
             </Link>
@@ -368,16 +368,16 @@ export default function Home() {
             {/* Brand 2: Medifeed */}
             <Link href="/brand/medifeed" className="group opacity-0 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
               <Card className="shadow-lg hover:shadow-2xl transition-all duration-500 text-center transform group-hover:-translate-y-4 group-hover:scale-105 cursor-pointer relative overflow-hidden h-full">
-                <div className="absolute inset-0 bg-gradient-to-r from-green-100 to-green-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-50 to-gray-25 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardHeader className="relative z-10">
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4 transform group-hover:rotate-12 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 transform group-hover:rotate-12 transition-transform duration-300">
                     <span className="text-white font-bold text-xs">MF</span>
                   </div>
-                  <CardTitle className="text-xl group-hover:text-green-600 transition-colors">Medifeed</CardTitle>
+                  <CardTitle className="text-xl group-hover:text-primary transition-colors">Medifeed</CardTitle>
                 </CardHeader>
                 <CardContent className="relative z-10">
-                  <p className="text-gray-600 text-sm mb-4">매일을 지키는 작은 습관</p>
-                  <p className="text-xs text-gray-500">잇몸, 눈 건강 중심 기능성 영양제</p>
+                  <p className="text-foreground text-sm mb-4">매일을 지키는 작은 습관</p>
+                  <p className="text-xs text-muted-foreground">잇몸, 눈 건강 중심 기능성 영양제</p>
                 </CardContent>
               </Card>
             </Link>
@@ -385,16 +385,16 @@ export default function Home() {
             {/* Brand 3: InYourHeart */}
             <Link href="/brand/inyourheart" className="group opacity-0 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
               <Card className="shadow-lg hover:shadow-2xl transition-all duration-500 text-center transform group-hover:-translate-y-4 group-hover:scale-105 cursor-pointer relative overflow-hidden h-full">
-                <div className="absolute inset-0 bg-gradient-to-r from-pink-100 to-pink-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-50 to-gray-25 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardHeader className="relative z-10">
-                  <div className="w-16 h-16 bg-pink-600 rounded-full flex items-center justify-center mx-auto mb-4 transform group-hover:rotate-12 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 transform group-hover:rotate-12 transition-transform duration-300">
                     <Heart className="w-6 h-6 text-white" />
                   </div>
-                  <CardTitle className="text-xl group-hover:text-pink-600 transition-colors">InYourHeart</CardTitle>
+                  <CardTitle className="text-xl group-hover:text-accent transition-colors">InYourHeart</CardTitle>
                 </CardHeader>
                 <CardContent className="relative z-10">
-                  <p className="text-gray-600 text-sm mb-4">피부에 감성을 입히다</p>
-                  <p className="text-xs text-gray-500">감성 스킨케어, 클린 포뮬러</p>
+                  <p className="text-foreground text-sm mb-4">피부에 감성을 입히다</p>
+                  <p className="text-xs text-muted-foreground">감성 스킨케어, 클린 포뮬러</p>
                 </CardContent>
               </Card>
             </Link>
@@ -402,16 +402,16 @@ export default function Home() {
             {/* Brand 4: Sangsaeng */}
             <Link href="/brand/sangsaeng" className="group opacity-0 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
               <Card className="shadow-lg hover:shadow-2xl transition-all duration-500 text-center transform group-hover:-translate-y-4 group-hover:scale-105 cursor-pointer relative overflow-hidden h-full">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-100 to-teal-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-50 to-gray-25 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardHeader className="relative z-10">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4 transform group-hover:rotate-12 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 transform group-hover:rotate-12 transition-transform duration-300">
                     <span className="text-white font-bold text-xs">상생</span>
                   </div>
-                  <CardTitle className="text-xl group-hover:text-blue-600 transition-colors">상생</CardTitle>
+                  <CardTitle className="text-xl group-hover:text-primary transition-colors">상생</CardTitle>
                 </CardHeader>
                 <CardContent className="relative z-10">
-                  <p className="text-gray-600 text-sm mb-4">WE CONNECT KOREAN MEDICAL</p>
-                  <p className="text-xs text-gray-500">의료관광, 헬스케어 플랫폼</p>
+                  <p className="text-foreground text-sm mb-4">WE CONNECT KOREAN MEDICAL</p>
+                  <p className="text-xs text-muted-foreground">의료관광, 헬스케어 플랫폼</p>
                 </CardContent>
               </Card>
             </Link>
