@@ -240,7 +240,8 @@ export default function Home() {
           <div className="text-center mb-16 opacity-0 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">핵심 서비스</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              유통부터 브랜딩까지, FeedBack의 통합 솔루션으로 글로벌 시장에 진출하세요
+              기획부터 제조, 유통, 브랜딩까지.<br />
+              FeedBack은 브랜드 성장의 전 과정을 함께합니다.
             </p>
           </div>
           
