@@ -1,7 +1,82 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Eye, Target, Users, Globe } from "lucide-react";
+import { Eye, Target, Users, Globe, TrendingUp, ShoppingCart, Building2, Award } from "lucide-react";
 import organizationChart from "@assets/organizationChart_1754563135776.png";
+
+// SVG 컴포넌트들
+const HeroBackgroundSVG = () => (
+  <svg className="absolute inset-0 w-full h-full object-cover" viewBox="0 0 1200 600" fill="none">
+    <defs>
+      <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style={{stopColor:'#0F4C82', stopOpacity:0.1}} />
+        <stop offset="100%" style={{stopColor:'#000000', stopOpacity:0.05}} />
+      </linearGradient>
+    </defs>
+    <rect width="1200" height="600" fill="url(#heroGradient)" />
+    <circle cx="200" cy="100" r="80" fill="#0F4C82" opacity="0.1" />
+    <circle cx="1000" cy="500" r="120" fill="#000000" opacity="0.05" />
+    <path d="M300 200 L500 250 L700 200 L900 300" stroke="#0F4C82" strokeWidth="2" opacity="0.3" fill="none" />
+  </svg>
+);
+
+const BusinessValueSVG = () => (
+  <svg width="400" height="300" viewBox="0 0 400 300" className="w-full h-auto">
+    <defs>
+      <linearGradient id="businessGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style={{stopColor:'#0F4C82'}} />
+        <stop offset="100%" style={{stopColor:'#000000'}} />
+      </linearGradient>
+    </defs>
+    <rect x="50" y="50" width="80" height="60" rx="10" fill="url(#businessGradient)" opacity="0.8" />
+    <rect x="170" y="30" width="80" height="80" rx="10" fill="url(#businessGradient)" opacity="0.9" />
+    <rect x="290" y="70" width="80" height="60" rx="10" fill="url(#businessGradient)" opacity="0.7" />
+    <text x="90" y="85" textAnchor="middle" fill="white" fontSize="12" fontWeight="bold">B2B</text>
+    <text x="210" y="75" textAnchor="middle" fill="white" fontSize="12" fontWeight="bold">Platform</text>
+    <text x="330" y="105" textAnchor="middle" fill="white" fontSize="12" fontWeight="bold">B2C</text>
+    <path d="M130 80 L170 70" stroke="#0F4C82" strokeWidth="3" markerEnd="url(#arrowhead)" />
+    <path d="M250 70 L290 85" stroke="#0F4C82" strokeWidth="3" markerEnd="url(#arrowhead)" />
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#0F4C82" />
+      </marker>
+    </defs>
+  </svg>
+);
+
+const GlobalNetworkSVG = () => (
+  <svg width="400" height="300" viewBox="0 0 400 300" className="w-full h-auto">
+    <circle cx="200" cy="150" r="100" fill="none" stroke="#0F4C82" strokeWidth="2" opacity="0.3" />
+    <circle cx="200" cy="150" r="60" fill="none" stroke="#000000" strokeWidth="2" opacity="0.2" />
+    <circle cx="200" cy="150" r="5" fill="#0F4C82" />
+    <circle cx="120" cy="100" r="3" fill="#000000" />
+    <circle cx="280" cy="100" r="3" fill="#000000" />
+    <circle cx="120" cy="200" r="3" fill="#000000" />
+    <circle cx="280" cy="200" r="3" fill="#000000" />
+    <path d="M200 150 L120 100" stroke="#0F4C82" strokeWidth="1" opacity="0.6" />
+    <path d="M200 150 L280 100" stroke="#0F4C82" strokeWidth="1" opacity="0.6" />
+    <path d="M200 150 L120 200" stroke="#0F4C82" strokeWidth="1" opacity="0.6" />
+    <path d="M200 150 L280 200" stroke="#0F4C82" strokeWidth="1" opacity="0.6" />
+    <text x="100" y="95" fontSize="10" fill="#000000">중국</text>
+    <text x="270" y="95" fontSize="10" fill="#000000">동남아</text>
+    <text x="100" y="215" fontSize="10" fill="#000000">한국</text>
+    <text x="270" y="215" fontSize="10" fill="#000000">Global</text>
+  </svg>
+);
+
+const TechnologySVG = () => (
+  <svg width="400" height="300" viewBox="0 0 400 300" className="w-full h-auto">
+    <rect x="100" y="100" width="200" height="100" rx="20" fill="none" stroke="#0F4C82" strokeWidth="2" />
+    <rect x="120" y="120" width="50" height="30" rx="5" fill="#0F4C82" opacity="0.7" />
+    <rect x="180" y="120" width="50" height="30" rx="5" fill="#000000" opacity="0.7" />
+    <rect x="240" y="120" width="50" height="30" rx="5" fill="#0F4C82" opacity="0.5" />
+    <rect x="120" y="160" width="80" height="20" rx="3" fill="#0F4C82" opacity="0.3" />
+    <rect x="210" y="160" width="80" height="20" rx="3" fill="#000000" opacity="0.3" />
+    <text x="200" y="90" textAnchor="middle" fontSize="14" fontWeight="bold" fill="#0F4C82">FeedBack Platform</text>
+    <text x="145" y="140" textAnchor="middle" fontSize="8" fill="white" fontWeight="bold">OEM</text>
+    <text x="205" y="140" textAnchor="middle" fontSize="8" fill="white" fontWeight="bold">Brand</text>
+    <text x="265" y="140" textAnchor="middle" fontSize="8" fill="white" fontWeight="bold">Trade</text>
+  </svg>
+);
 
 export default function About() {
   const timelineData = [
@@ -14,235 +89,316 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header Section */}
+      {/* Hero Section - 쿠쿠 스타일의 대형 히어로 */}
+      <section className="relative py-32 bg-gradient-to-br from-primary/5 to-accent/5 overflow-hidden">
+        <HeroBackgroundSVG />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-6xl font-bold text-foreground mb-8 leading-tight">
+            종합 커머스 기업 <br />
+            <span className="text-primary">FeedBack</span>으로
+          </h1>
+          <p className="text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
+            언제나 곁에서 함께 하겠습니다.
+          </p>
+          <div className="text-lg text-foreground max-w-5xl mx-auto leading-relaxed space-y-6">
+            <p className="font-semibold text-xl">
+              FeedBack은 지난 2024년 첫발을 내딛은 이래<br />
+              <span className="text-primary">브랜드와 시장을 연결하는 플랫폼</span>으로 성장해온<br />
+              종합 커머스 기업입니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Company Story Section - 쿠쿠 스타일 스토리텔링 */}
       <section className="py-20 bg-background">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="text-lg text-foreground leading-relaxed space-y-8 max-w-4xl mx-auto">
+              <p className="text-2xl font-semibold">
+                2024년 자체 브랜드 <span className="text-primary">Hoid, Medifeed, InYourHeart</span>를 동시 론칭하며<br />
+                많은 분들의 사랑으로 <span className="text-accent">신뢰받는 브랜드 플랫폼</span>으로 자리매김했으며,<br />
+                현재까지 다양한 채널에서 꾸준히 성장하며 사랑받고 있습니다.
+              </p>
+              
+              <p className="text-xl">
+                늘 혁신적인 기술력과 브랜딩으로 국내시장을 이끌어온 FeedBack은 대한민국을 넘어 세계에서 사랑받는<br />
+                <span className="text-primary font-semibold">글로벌 종합 커머스 기업</span>으로 거듭날 것입니다.
+              </p>
+              
+              <p className="text-lg">
+                고객의 삶 속에 스며든 FeedBack의 브랜드 하나하나가 고객 여러분의 하루를<br />
+                더욱 편리하고 행복하게 만들 수 있도록 언제나 노력하는 FeedBack이 되겠습니다.
+              </p>
+            </div>
+          </div>
+
+          {/* 제품 영역 소개 */}
+          <div className="mt-16 text-center">
+            <p className="text-xl text-foreground leading-relaxed max-w-4xl mx-auto">
+              FeedBack은 <span className="text-primary font-semibold">공기청정기, 무선청소기, 건강기능식품, 의료관광</span> 등<br />
+              유통, 제조, 브랜딩, 마케팅을 꾸준히 연구 개발하며,<br /><br />
+              많은 분들이 생활 전반에서 FeedBack의 <span className="text-accent font-semibold">'혁신 테크놀로지'</span>를 더욱 크게 누릴 수 있도록<br />
+              최선을 다하고 있습니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Center Banner with Business Value */}
+      <section className="py-16 bg-gradient-to-r from-primary/10 to-accent/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="lg:w-1/2">
+              <BusinessValueSVG />
+            </div>
+            <div className="lg:w-1/2 text-center lg:text-left">
+              <h3 className="text-3xl font-bold text-foreground mb-6">
+                고객님의 <span className="text-primary">'생활 속 행복'</span>을 목표로<br />
+                열정 넘치는 이들이 모인 FeedBack은
+              </h3>
+              <p className="text-lg text-foreground leading-relaxed">
+                최고의 제품을 안겨드리기 위해 기술혁신에 끊임없이 노력을 기울이고 있으며,<br />
+                이를 위한 연구개발투자 또한 지속적으로 이루어지고 있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Value Proposition */}
+      <section className="py-20 bg-background text-center">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-foreground mb-8 leading-tight">
+            고객의 삶 속에 스며든 FeedBack의 브랜드 하나하나가<br /><br />
+            <span className="text-primary">여러분의 하루를</span><br />
+            <span className="text-accent">더욱 편리하고 행복하게 만들어 드립니다.</span>
+          </h2>
+        </div>
+      </section>
+
+      {/* 경영철학 - 쿠쿠 스타일의 4개 핵심 가치 */}
+      <section className="py-20 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-foreground mb-8">회사 소개</h1>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              유통에서 브랜드까지, 한국의 가치를 세계로 연결합니다
+            <h2 className="text-4xl font-bold text-foreground mb-8">경영철학</h2>
+            <p className="text-xl text-foreground leading-relaxed max-w-4xl mx-auto">
+              FeedBack은 대한민국 대표브랜드로서 커머스 전반의 가치를 끌어올리고<br />
+              고객님의 생활에 행복한 감동을 선사하는 종합 커머스 기업이 되고자 노력하고 있습니다.
             </p>
           </div>
-        </div>
-      </section>
 
-      {/* Company Overview */}
-      <section className="py-16 bg-muted">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-foreground mb-8">회사개요</h2>
-          <div className="text-lg text-foreground leading-relaxed space-y-6">
-            <p>
-              (주)피드백(FeedBack)은 유통을 중심축으로 브랜드 마케팅, OEM(전자기기·건강기능식품), 무역 수출입까지 아우르는 종합 커머스 기업입니다.
-            </p>
-            <p>
-              단순한 유통 중개를 넘어 브랜드의 탄생부터 글로벌 확장까지 전 과정을 함께 설계하고 실행합니다.
-            </p>
-            <p>
-              저희는 자체 브랜드를 보유하고 직접 제조 및 유통하며, 동시에 국내외 파트너 브랜드와의 협업을 통해 B2B·B2C 전 채널에서 성과를 창출하고 있습니다.
-            </p>
-            <p className="text-accent font-semibold">
-              FeedBack은 소매처에게는 신뢰할 수 있는 제품 공급처, 브랜드에게는 판매 채널과 마케팅을 제공하는 파트너입니다.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Business Areas */}
-      <section className="py-16 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-foreground mb-12">주요 사업영역</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-xl">B2B 유통</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">홈쇼핑, 쇼핑몰, 도매망, 셀러 공급</p>
-              </CardContent>
-            </Card>
-            
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-xl">B2C 유통</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">브랜드 자사몰, 네이버, 오픈마켓, SNS 마케팅</p>
-              </CardContent>
-            </Card>
-            
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-xl">OEM/ODM 사업</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">전자기기, 헬스케어, 뷰티 제품 전문 제조</p>
-              </CardContent>
-            </Card>
-            
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-xl">수출입 무역</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">중국·동남아 제조사와의 독점 계약 및 수입</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="md:col-span-2">
-              <CardHeader>
-                <CardTitle className="text-xl">브랜드 개발 및 마케팅</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">콘텐츠, 광고, 크리에이터 연계까지 자체 인력 운영</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Vision & Mission */}
-      <section className="py-16 bg-muted">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12">
-            <Card className="bg-primary text-primary-foreground">
-              <CardHeader>
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
-                  <Eye className="w-8 h-8" />
-                </div>
-                <CardTitle className="text-3xl">Vision</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-lg font-semibold mb-4">유통에서 브랜드까지, 한국의 가치를 세계로 연결합니다</p>
-                <p className="leading-relaxed">
-                  우리는 단순한 공급자나 수요자를 넘어, 브랜드와 시장을 연결하는 '플랫폼 기업'으로 성장하고자 합니다.
-                  피드백은 아시아에서 성장한 브랜드가 세계에서 경쟁력을 가질 수 있도록 상품력 + 브랜딩 + 유통 채널을 결합한 솔루션을 제공합니다.
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-accent text-accent-foreground">
-              <CardHeader>
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-6">
-                  <Target className="w-8 h-8" />
-                </div>
-                <CardTitle className="text-3xl">Mission</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-lg font-semibold mb-4">브랜드, 제조사, 소매처가 함께 성장하는 구조를 만듭니다</p>
-                <p className="leading-relaxed">
-                  브랜드에는 글로벌 시장 진출 기회 제공, 소매처에는 검증된 제품의 안정적 공급, 
-                  파트너 모두가 신뢰와 이익을 함께 나누는 유통 생태계 구축
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline */}
-      <section className="py-16 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-foreground text-center mb-16">연혁</h2>
-          
-          <div className="relative">
-            {timelineData.map((item, index) => (
-              <div key={index} className="flex items-center mb-8">
-                <div className="flex-shrink-0 w-4 h-4 bg-primary rounded-full"></div>
-                <div className="flex-1 ml-8 bg-muted rounded-lg p-6">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                    <div>
-                      <h3 className="text-xl font-bold text-foreground mb-2">{item.year}</h3>
-                      <p className="text-muted-foreground">{item.description}</p>
-                    </div>
-                    <div className="mt-4 md:mt-0">
-                      <Badge variant={item.type === "창립" ? "default" : item.type === "확장" ? "secondary" : "outline"}>
-                        {item.type}
-                      </Badge>
-                    </div>
+          {/* 첫 번째 가치 - 고객 사랑과 신뢰 */}
+          <div className="mb-20">
+            <div className="flex flex-col lg:flex-row items-center gap-12">
+              <div className="lg:w-1/2">
+                <div className="bg-gradient-to-br from-primary to-accent p-8 rounded-2xl text-white text-center">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Users className="w-10 h-10" />
                   </div>
+                  <h3 className="text-2xl font-bold mb-4">FeedBack은</h3>
+                  <p className="text-lg font-semibold">고객의 사랑과 신뢰를 최우선으로 생각합니다.</p>
                 </div>
               </div>
+              <div className="lg:w-1/2 text-center lg:text-left">
+                <p className="text-lg text-foreground leading-relaxed">
+                  FeedBack은 고객님의 행복을 위해 항상 노력하고 있습니다.<br /><br />
+                  <span className="font-semibold text-primary">'고객의 웃음이 곧 FeedBack의 행복'</span>이라는 믿음으로,<br />
+                  고객을 먼저 생각하고 고객의 입장에서 고민하는 기업이 되기 위해<br />
+                  언제나 고객의 목소리에 귀 기울이고 있습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* 두 번째 가치 - 기술 혁신 */}
+          <div className="mb-20">
+            <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
+              <div className="lg:w-1/2">
+                <div className="bg-gradient-to-br from-accent to-primary p-8 rounded-2xl text-white text-center">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <TrendingUp className="w-10 h-10" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">FeedBack은</h3>
+                  <p className="text-lg font-semibold">고객 감동 테크놀로지를 위해 끊임없이 연구 개발합니다.</p>
+                </div>
+              </div>
+              <div className="lg:w-1/2 text-center lg:text-left">
+                <div className="mb-8">
+                  <TechnologySVG />
+                </div>
+                <p className="text-lg text-foreground leading-relaxed">
+                  FeedBack은 혁신적이고 창의적인 생각으로 종합 커머스 시장을 이끌어 온 대한민국 대표브랜드로서,<br />
+                  고객님께 감동을 주는 테크놀로지 개발에 최선을 다하고 있습니다.<br /><br />
+                  이를 위해 끊임없이 기술 개발에 투자하고 있으며, 고객 여러분께 최고의 행복을 전하고자<br />
+                  연구원 모두가 첨단기술개발에 몰두하고 있습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* 세 번째 가치 - 글로벌 확장 */}
+          <div className="mb-20">
+            <div className="flex flex-col lg:flex-row items-center gap-12">
+              <div className="lg:w-1/2">
+                <div className="bg-gradient-to-br from-primary to-accent p-8 rounded-2xl text-white text-center">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Globe className="w-10 h-10" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">FeedBack은</h3>
+                  <p className="text-lg font-semibold">세계인의 마음을 사로잡기 위해 더 넓은 곳으로 나아갑니다.</p>
+                </div>
+              </div>
+              <div className="lg:w-1/2 text-center lg:text-left">
+                <div className="mb-8">
+                  <GlobalNetworkSVG />
+                </div>
+                <p className="text-lg text-foreground leading-relaxed">
+                  FeedBack은 고객님의 사랑이 키운 국내 성장 브랜드로서 최고의 기술력으로<br />
+                  세계시장에 당당히 맞서기 위해 항상 노력하고 있습니다.<br /><br />
+                  아시아, 미국, 유럽 시장을 비롯해 세계 각국에서 FeedBack을<br />
+                  사랑해주시는 고객이 늘고 있습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* 네 번째 가치 - 사회공헌 */}
+          <div className="mb-20">
+            <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
+              <div className="lg:w-1/2">
+                <div className="bg-gradient-to-br from-accent to-primary p-8 rounded-2xl text-white text-center">
+                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Award className="w-10 h-10" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">FeedBack은</h3>
+                  <p className="text-lg font-semibold">우리사회의 이웃들과 상생 가치를 실천하고 있습니다.</p>
+                </div>
+              </div>
+              <div className="lg:w-1/2 text-center lg:text-left">
+                <p className="text-lg text-foreground leading-relaxed">
+                  FeedBack은 고객님께 받은 큰 사랑을 소외된 우리 이웃들과 나누기 위해<br />
+                  다양한 사회공헌 활동을 실천하고 있습니다.<br /><br />
+                  앞으로도 사회공헌에 대한 기본적인 철학을 바탕으로<br />
+                  기업시민으로서의 역할을 다해 나가겠습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline - 쿠쿠 스타일 간소화 */}
+      <section className="py-20 bg-background">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-foreground mb-16">연혁</h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {timelineData.map((item, index) => (
+              <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
+                <CardContent className="pt-6">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-lg">{item.year.slice(-2)}</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground mb-2">{item.year}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+                  <Badge className="mt-4" variant={item.type === "창립" ? "default" : item.type === "확장" ? "secondary" : "outline"}>
+                    {item.type}
+                  </Badge>
+                </CardContent>
+              </Card>
             ))}
-            
-            {/* Timeline Line */}
-            <div className="absolute left-2 top-2 bottom-0 w-0.5 bg-border -ml-0.5"></div>
           </div>
           
-          <div className="mt-12 p-6 bg-muted rounded-lg">
-            <p className="text-foreground leading-relaxed">
-              피드백은 제품 출시와 동시에 국내외 홈쇼핑, 이커머스, 도매 채널과의 연계를 통해 빠르게 시장을 확장하고 있습니다.
+          <div className="bg-gradient-to-r from-primary/10 to-accent/10 p-8 rounded-2xl">
+            <p className="text-lg text-foreground leading-relaxed font-medium">
+              피드백은 제품 출시와 동시에 국내외 홈쇼핑, 이커머스, 도매 채널과의 연계를 통해<br />
+              빠르게 시장을 확장하고 있습니다.
             </p>
           </div>
         </div>
       </section>
 
-      {/* CEO Message */}
-      <section className="py-16 bg-muted">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-foreground text-center mb-12">CEO 인사말</h2>
+      {/* CEO Message - 쿠쿠 스타일 대형 메시지 */}
+      <section className="py-20 bg-gradient-to-br from-muted to-background">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <blockquote className="text-3xl font-bold text-primary mb-8">
+              "고객의 행복과 글로벌 파트너십을 최우선으로 생각합니다."
+            </blockquote>
+            <h2 className="text-4xl font-bold text-foreground mb-8">CEO 인사말</h2>
+          </div>
           
-          <Card className="max-w-4xl mx-auto">
-            <CardContent className="p-8">
-              <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
-                {/* CEO Image Placeholder */}
-                <div className="flex-shrink-0">
-                  <div className="w-32 h-32 bg-primary rounded-full flex items-center justify-center">
-                    <Users className="w-16 h-16 text-primary-foreground" />
-                  </div>
-                  <div className="text-center mt-4">
-                    <p className="font-semibold text-foreground">송해민</p>
-                    <p className="text-sm text-muted-foreground">(주)피드백 대표</p>
-                  </div>
+          <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
+            <div className="flex flex-col lg:flex-row">
+              {/* CEO 프로필 영역 */}
+              <div className="lg:w-1/3 bg-gradient-to-br from-primary to-accent p-12 text-white text-center">
+                <div className="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Users className="w-16 h-16" />
                 </div>
-                
-                {/* CEO Message */}
-                <div className="flex-1">
-                  <blockquote className="text-xl font-semibold text-accent mb-6 text-center md:text-left">
-                    "고객의 행복과 글로벌 파트너십을 최우선으로 생각합니다."
-                  </blockquote>
+                <h3 className="text-2xl font-bold mb-2">송해민</h3>
+                <p className="text-lg opacity-90">(주)피드백 대표</p>
+                <div className="mt-8 pt-8 border-t border-white/20">
+                  <p className="text-sm opacity-80">
+                    "브랜드와 시장을 연결하는<br />플랫폼 기업으로 성장"
+                  </p>
+                </div>
+              </div>
+              
+              {/* 메시지 영역 */}
+              <div className="lg:w-2/3 p-12">
+                <div className="space-y-6 text-foreground leading-relaxed">
+                  <p className="text-lg">
+                    안녕하세요. (주)피드백 대표 송해민입니다.
+                  </p>
                   
-                  <div className="space-y-4 text-foreground leading-relaxed">
-                    <p>안녕하세요. (주)피드백 대표 송해민입니다.</p>
-                    
-                    <p>
-                      저희 피드백은 빠르게 변화하는 글로벌 유통 시장 속에서, 브랜드와 시장의 연결자이자 실행자로서 새로운 유통 구조를 제시하고 있습니다.
-                    </p>
-                    
-                    <p>
-                      단순히 '물건을 파는 회사'가 아닌, 브랜드를 함께 키우고 시장에 안착시키는 파트너로서 
-                      제조사, 유통사, 소비자 모두가 만족하는 구조를 만들기 위해 노력하고 있습니다.
-                    </p>
-                    
-                    <p className="font-semibold text-accent">
+                  <p className="text-lg">
+                    저희 피드백은 빠르게 변화하는 글로벌 유통 시장 속에서, 브랜드와 시장의 연결자이자 실행자로서 새로운 유통 구조를 제시하고 있습니다.
+                  </p>
+                  
+                  <p className="text-lg">
+                    단순히 '물건을 파는 회사'가 아닌, 브랜드를 함께 키우고 시장에 안착시키는 파트너로서 
+                    제조사, 유통사, 소비자 모두가 만족하는 구조를 만들기 위해 노력하고 있습니다.
+                  </p>
+                  
+                  <div className="bg-primary/5 p-6 rounded-xl border-l-4 border-primary">
+                    <p className="text-lg font-semibold text-primary">
                       제품력에 브랜딩을 더하고, 브랜딩에 유통망을 연결하며, 유통에 콘텐츠와 경험을 심는 것. 
                       이것이 피드백의 방식입니다.
                     </p>
-                    
-                    <p>
-                      앞으로도 국내외 파트너 여러분과 함께 더 크고 넓은 시장에서 기회를 창출하는 기업이 되겠습니다. 
-                      감사합니다.
-                    </p>
                   </div>
+                  
+                  <p className="text-lg">
+                    앞으로도 국내외 파트너 여러분과 함께 더 크고 넓은 시장에서 기회를 창출하는 기업이 되겠습니다. 
+                    감사합니다.
+                  </p>
                 </div>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Organization Chart */}
-      <section className="py-16 bg-background">
+      <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-foreground text-center mb-12">조직도</h2>
+          <h2 className="text-4xl font-bold text-foreground text-center mb-16">조직도</h2>
           
           <div className="flex justify-center">
-            <div className="bg-white p-8 rounded-lg shadow-lg max-w-full overflow-x-auto">
+            <div className="bg-white p-8 rounded-2xl shadow-xl max-w-full overflow-x-auto border border-border">
               <img 
                 src={organizationChart} 
                 alt="피드백 조직도" 
-                className="max-w-full h-auto"
+                className="max-w-full h-auto rounded-lg"
               />
             </div>
+          </div>
+          
+          <div className="text-center mt-12">
+            <p className="text-lg text-muted-foreground">
+              체계적인 조직 구성을 통해 각 분야의 전문성을 바탕으로<br />
+              고객에게 최고의 서비스를 제공하고 있습니다.
+            </p>
           </div>
         </div>
       </section>
