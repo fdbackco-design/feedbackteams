@@ -98,14 +98,11 @@ const BrandMessageBannerSVG = () => (
     {/* 메인 텍스트 */}
     <div className="relative z-10 flex items-center justify-center h-96 px-8">
       <div className="text-center">
-        {/* 텍스트 배경 */}
-        <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-          <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-4 drop-shadow-lg">
-            피드백은 브랜드의 성장을<br />
-            <span className="text-blue-300">유통으로 설계합니다</span>
-          </h2>
-          <div className="w-24 h-1 bg-blue-300 mx-auto mt-6 rounded-full shadow-lg"></div>
-        </div>
+        <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-4 drop-shadow-2xl" style={{textShadow: '2px 2px 8px rgba(0,0,0,0.8)'}}>
+          피드백은 브랜드의 성장을<br />
+          <span className="text-blue-300">유통으로 설계합니다</span>
+        </h2>
+        <div className="w-24 h-1 bg-blue-300 mx-auto mt-6 rounded-full shadow-lg drop-shadow-lg"></div>
       </div>
     </div>
     
