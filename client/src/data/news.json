@@ -1,0 +1,50 @@
+[
+  {
+    "date": "2025.07.10",
+    "title": "베트남 병원과 의료관광 제휴 체결",
+    "summary": "FeedBack이 베트남 호치민시의 주요 병원들과 의료관광 서비스 제휴를 체결했습니다. 이번 협력을 통해 한국 고객들에게 더욱 안전하고 신뢰할 수 있는 의료 서비스를 제공하게 됩니다.",
+    "category": "보도자료",
+    "link": "https://example.com/news/1",
+    "thumbnail": "https://pixabay.com/get/g28a9d46b7539fa8167a570f28ac36d4ee6df9048c2ef140b79aa56508b8b0f27db5282e5afad1c71d85e16f593788046db1da8b5ad95769d376123ad58b93c6a_1280.jpg"
+  },
+  {
+    "date": "2025.06.15",
+    "title": "Hoid 브랜드, 일본 시장 정식 진출",
+    "summary": "디자인 가전 브랜드 Hoid가 일본 시장에 정식 진출합니다. 도쿄와 오사카의 주요 가전매장에서 Hoid 제품을 만나보실 수 있습니다.",
+    "category": "브랜드뉴스",
+    "link": "https://example.com/news/2",
+    "thumbnail": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400"
+  },
+  {
+    "date": "2025.05.20",
+    "title": "다국어 의료예약 앱 베타 버전 출시",
+    "summary": "의료관광 고객을 위한 전용 모바일 앱의 베타 버전이 출시되었습니다. 한국어, 영어, 베트남어, 태국어를 지원하며 실시간 예약이 가능합니다.",
+    "category": "기업소식",
+    "link": "https://example.com/news/3",
+    "thumbnail": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400"
+  },
+  {
+    "date": "2025.04.30",
+    "title": "시리즈 A 투자 유치 성공",
+    "summary": "FeedBack이 시리즈 A 라운드에서 성공적으로 투자를 유치했습니다. 이번 투자로 동남아시아 시장 확장과 서비스 고도화를 가속화할 예정입니다.",
+    "category": "기업소식",
+    "link": "https://example.com/news/4",
+    "thumbnail": "https://images.unsplash.com/photo-1551135049-8a33b5883817?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400"
+  },
+  {
+    "date": "2025.03.15",
+    "title": "Medifeed 건강기능식품 라인 정식 출시",
+    "summary": "의료진과 공동 개발한 프리미엄 건강기능식품 브랜드 Medifeed가 정식 출시되었습니다. 첫 제품군으로 프로바이오틱스와 오메가-3 제품을 선보입니다.",
+    "category": "브랜드뉴스",
+    "link": "https://example.com/news/5",
+    "thumbnail": "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400"
+  },
+  {
+    "date": "2025.02.28",
+    "title": "InYourHeart 저자극 스킨케어 런칭",
+    "summary": "민감한 피부를 위한 저자극 스킨케어 브랜드 InYourHeart가 런칭되었습니다. 자연 유래 성분만을 사용한 순한 제품으로 화장품 시장에 새로운 바람을 일으킬 것으로 기대됩니다.",
+    "category": "브랜드뉴스",
+    "link": "https://example.com/news/6",
+    "thumbnail": "https://images.unsplash.com/photo-1556228720-195a672e8a03?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400"
+  }
+]
