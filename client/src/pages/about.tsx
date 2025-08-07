@@ -6,7 +6,7 @@ import warehouseImage from "@assets/futuristic-warehouse-with-blue-neon-lights-c
 import partnershipImage from "@assets/5f76e132-877a-4d9e-8c9c-de9ff84cb5dd_1754568024377.jpg";
 import networkImage from "@assets/5068978_1754568223986.jpg";
 import globalImage from "@assets/13730_1754568375896.jpg";
-import trustImage from "@assets/image_1754568603036.png";
+import trustImage from "@assets/hands_1754568922347.png";
 
 // SVG 컴포넌트들
 const HeroBackgroundSVG = () => (
