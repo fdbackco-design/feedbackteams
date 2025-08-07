@@ -210,16 +210,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      {/* Value Proposition */}
-      <section className="py-20 bg-background text-center">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-foreground mb-8 leading-tight">
-            고객의 삶 속에 스며든 FeedBack의 브랜드 하나하나가<br /><br />
-            <span className="text-primary">여러분의 하루를</span><br />
-            <span className="text-accent">더욱 편리하고 행복하게 만들어 드립니다.</span>
-          </h2>
-        </div>
-      </section>
+      
       {/* 경영철학 - 쿠쿠 스타일의 4개 핵심 가치 */}
       <section className="py-20 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
