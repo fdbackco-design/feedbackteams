@@ -80,11 +80,11 @@ const TechnologySVG = () => (
 
 export default function About() {
   const timelineData = [
-    { year: "2024", description: "자체 브랜드 Hoid, Medifeed, InYourHeart 동시 론칭", type: "창립" },
-    { year: "2025.01", description: "자회사 상생메디컬 설립 및 통합 플랫폼 개발 개시", type: "확장" },
-    { year: "2025.04", description: "Hoid 1세대 공기청정기 출시 (3-in-1 살균 기술 탑재)", type: "제품출시" },
+    { year: "2025.09", description: "Hoid 2세대 공기청정기 국내외 동시 론칭 (홈쇼핑 입점 확장)", type: "확장" },
     { year: "2025.08", description: "Hoid 무선 청소기 출시", type: "제품출시" },
-    { year: "2025.09", description: "Hoid 2세대 공기청정기 국내외 동시 론칭 (홈쇼핑 입점 확장)", type: "확장" }
+    { year: "2025.04", description: "Hoid 1세대 공기청정기 출시 (3-in-1 살균 기술 탑재)", type: "제품출시" },
+    { year: "2025.01", description: "자회사 상생메디컬 설립 및 통합 플랫폼 개발 개시", type: "확장" },
+    { year: "2024", description: "자체 브랜드 Hoid, Medifeed, InYourHeart 동시 론칭", type: "창립" }
   ];
 
   return (
@@ -288,29 +288,51 @@ export default function About() {
         </div>
       </section>
 
-      {/* Timeline - 쿠쿠 스타일 간소화 */}
+      {/* Timeline - 수직 타임라인 레이아웃 */}
       <section className="py-20 bg-background">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-foreground mb-16">연혁</h2>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-foreground text-center mb-16">연혁</h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="relative">
+            {/* 타임라인 라인 */}
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary/30"></div>
+            
             {timelineData.map((item, index) => (
-              <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
-                <CardContent className="pt-6">
-                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold text-lg">{item.year.slice(-2)}</span>
-                  </div>
-                  <h3 className="text-lg font-bold text-foreground mb-2">{item.year}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
-                  <Badge className="mt-4" variant={item.type === "창립" ? "default" : item.type === "확장" ? "secondary" : "outline"}>
-                    {item.type}
-                  </Badge>
-                </CardContent>
-              </Card>
+              <div key={index} className="relative flex items-start mb-12 last:mb-0">
+                {/* 타임라인 도트 */}
+                <div className="absolute left-8 transform -translate-x-1/2">
+                  <div className="w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg"></div>
+                </div>
+                
+                {/* 콘텐츠 카드 */}
+                <div className="ml-20 flex-1">
+                  <Card className="hover:shadow-lg transition-all duration-300 border-l-4 border-l-primary">
+                    <CardContent className="p-6">
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                        <div>
+                          <h3 className="text-2xl font-bold text-foreground mb-2">{item.year}</h3>
+                          <Badge 
+                            className="mb-3"
+                            variant={item.type === "창립" ? "default" : item.type === "확장" ? "secondary" : "outline"}
+                          >
+                            {item.type}
+                          </Badge>
+                        </div>
+                        {index === 0 && (
+                          <div className="hidden sm:block">
+                            <Badge variant="destructive" className="animate-pulse">최신</Badge>
+                          </div>
+                        )}
+                      </div>
+                      <p className="text-lg text-foreground leading-relaxed">{item.description}</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
             ))}
           </div>
           
-          <div className="bg-gradient-to-r from-primary/10 to-accent/10 p-8 rounded-2xl">
+          <div className="mt-16 bg-gradient-to-r from-primary/10 to-accent/10 p-8 rounded-2xl text-center">
             <p className="text-lg text-foreground leading-relaxed font-medium">
               피드백은 제품 출시와 동시에 국내외 홈쇼핑, 이커머스, 도매 채널과의 연계를 통해<br />
               빠르게 시장을 확장하고 있습니다.
