@@ -152,26 +152,7 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section - 쿠쿠 스타일의 대형 히어로 */}
-      <section className="relative py-32 bg-gradient-to-br from-primary/5 to-accent/5 overflow-hidden">
-        <HeroBackgroundSVG />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-6xl font-bold text-foreground mb-8 leading-tight">
-            종합 커머스 기업 <br />
-            <span className="text-primary">FeedBack</span>으로
-          </h1>
-          <p className="text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
-            언제나 곁에서 함께 하겠습니다.
-          </p>
-          <div className="text-lg text-foreground max-w-5xl mx-auto leading-relaxed space-y-6">
-            <p className="font-semibold text-xl">
-              FeedBack은 지난 2024년 첫발을 내딛은 이래<br />
-              <span className="text-primary">브랜드와 시장을 연결하는 플랫폼</span>으로 성장해온<br />
-              종합 커머스 기업입니다.
-            </p>
-          </div>
-        </div>
-      </section>
+      
 
       {/* 브랜드 메시지 배너 */}
       <section className="py-20 bg-background">
