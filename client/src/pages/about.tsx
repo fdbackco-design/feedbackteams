@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Eye, Target, Users, Globe, TrendingUp, ShoppingCart, Building2, Award } from "lucide-react";
+import { Eye, Target, Users, Globe, TrendingUp, ShoppingCart, Building2, Award, Handshake, Zap, Shield } from "lucide-react";
 import organizationChart from "@assets/organizationChart_1754563135776.png";
 import warehouseImage from "@assets/futuristic-warehouse-with-blue-neon-lights-connected-data_1754566796044.jpg";
 
@@ -225,61 +225,59 @@ export default function About() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-8">경영철학</h2>
             <p className="text-xl text-foreground leading-relaxed max-w-4xl mx-auto">
-              FeedBack은 대한민국 대표브랜드로서 커머스 전반의 가치를 끌어올리고<br />
-              고객님의 생활에 행복한 감동을 선사하는 종합 커머스 기업이 되고자 노력하고 있습니다.
+              FeedBack은 브랜드와 시장을 연결하는 실행 중심의 유통 플랫폼으로서<br />
+              모든 파트너와 함께 성장하는 상생의 생태계를 구축하고 있습니다.
             </p>
           </div>
 
-          {/* 첫 번째 가치 - 고객 사랑과 신뢰 */}
+          {/* 첫 번째 가치 - 고객·파트너 중심 */}
           <div className="mb-20">
             <div className="flex flex-col lg:flex-row items-center gap-12">
               <div className="lg:w-1/2">
                 <div className="bg-gradient-to-br from-primary to-accent p-8 rounded-2xl text-white text-center">
                   <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Users className="w-10 h-10" />
+                    <Handshake className="w-10 h-10" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4">FeedBack은</h3>
-                  <p className="text-lg font-semibold">고객의 사랑과 신뢰를 최우선으로 생각합니다.</p>
+                  <h3 className="text-xl font-bold mb-4">고객·파트너 중심:</h3>
+                  <p className="text-lg font-semibold">'공생'의 유통 모델을 실현합니다</p>
                 </div>
               </div>
               <div className="lg:w-1/2 text-center lg:text-left">
                 <p className="text-lg text-foreground leading-relaxed">
-                  FeedBack은 고객님의 행복을 위해 항상 노력하고 있습니다.<br /><br />
-                  <span className="font-semibold text-primary">'고객의 웃음이 곧 FeedBack의 행복'</span>이라는 믿음으로,<br />
-                  고객을 먼저 생각하고 고객의 입장에서 고민하는 기업이 되기 위해<br />
-                  언제나 고객의 목소리에 귀 기울이고 있습니다.
+                  FeedBack은 단순히 물건을 사고파는 곳이 아닌,<br />
+                  제조사·브랜드·소매처가 함께 성장할 수 있는 유통 생태계를 구축합니다.<br /><br />
+                  고객사와 파트너의 신뢰를 기반으로 장기 협력과 함께 발전하는 구조를 설계하며,<br />
+                  <span className="font-semibold text-primary">모두가 지속 가능한 이익을 나누는 상생 플랫폼</span>을 지향합니다.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* 두 번째 가치 - 기술 혁신 */}
+          {/* 두 번째 가치 - 통합 실행력 */}
           <div className="mb-20">
             <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
               <div className="lg:w-1/2">
                 <div className="bg-gradient-to-br from-accent to-primary p-8 rounded-2xl text-white text-center">
                   <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <TrendingUp className="w-10 h-10" />
+                    <Zap className="w-10 h-10" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4">FeedBack은</h3>
-                  <p className="text-lg font-semibold">고객 감동 테크놀로지를 위해 끊임없이 연구 개발합니다.</p>
+                  <h3 className="text-xl font-bold mb-4">통합 실행력으로</h3>
+                  <p className="text-lg font-semibold">브랜드와 시장을 연결합니다</p>
                 </div>
               </div>
               <div className="lg:w-1/2 text-center lg:text-left">
-                <div className="mb-8">
-                  <TechnologySVG />
-                </div>
                 <p className="text-lg text-foreground leading-relaxed">
-                  FeedBack은 혁신적이고 창의적인 생각으로 종합 커머스 시장을 이끌어 온 대한민국 대표브랜드로서,<br />
-                  고객님께 감동을 주는 테크놀로지 개발에 최선을 다하고 있습니다.<br /><br />
-                  이를 위해 끊임없이 기술 개발에 투자하고 있으며, 고객 여러분께 최고의 행복을 전하고자<br />
-                  연구원 모두가 첨단기술개발에 몰두하고 있습니다.
+                  단순 유통을 넘어 상품 기획, 브랜딩, 마케팅, 유통 채널을 유기적으로 연결합니다.<br />
+                  고유한 OEM 역량과 자체 브랜드 경험을 결합하여,<br />
+                  브랜드가 시장에서 자리 잡도록 실행 가능한 솔루션을 제공합니다.<br /><br />
+                  <span className="font-semibold text-primary">제품력에 브랜딩을 입히고, 브랜딩에 유통을 결합하며,<br />
+                  유통에 경험과 콘텐츠를 심는 방식이 FeedBack의 방식</span>입니다.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* 세 번째 가치 - 글로벌 확장 */}
+          {/* 세 번째 가치 - 글로벌 경쟁력 */}
           <div className="mb-20">
             <div className="flex flex-col lg:flex-row items-center gap-12">
               <div className="lg:w-1/2">
@@ -287,42 +285,41 @@ export default function About() {
                   <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Globe className="w-10 h-10" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4">FeedBack은</h3>
-                  <p className="text-lg font-semibold">세계인의 마음을 사로잡기 위해 더 넓은 곳으로 나아갑니다.</p>
+                  <h3 className="text-xl font-bold mb-4">글로벌 시장에서</h3>
+                  <p className="text-lg font-semibold">경쟁력을 만드는 실행 중심 기업</p>
                 </div>
               </div>
               <div className="lg:w-1/2 text-center lg:text-left">
-                <div className="mb-8">
-                  <GlobalNetworkSVG />
-                </div>
                 <p className="text-lg text-foreground leading-relaxed">
-                  FeedBack은 고객님의 사랑이 키운 국내 성장 브랜드로서 최고의 기술력으로<br />
-                  세계시장에 당당히 맞서기 위해 항상 노력하고 있습니다.<br /><br />
-                  아시아, 미국, 유럽 시장을 비롯해 세계 각국에서 FeedBack을<br />
-                  사랑해주시는 고객이 늘고 있습니다.
+                  아시아를 기반으로 성장해 온 브랜드에게<br />
+                  글로벌 시장 진출 기회를 제공합니다.<br /><br />
+                  <span className="font-semibold text-primary">전략적 진출 설계 + 제휴 기반 실행력</span>을 통해<br />
+                  브랜드의 세계화를 지원하고,<br />
+                  국내외 파트너와의 협업을 통해<br />
+                  더 크고 넓은 시장에서 기회를 창출합니다.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* 네 번째 가치 - 사회공헌 */}
+          {/* 네 번째 가치 - 신뢰 기반 파트너십 */}
           <div className="mb-20">
             <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
               <div className="lg:w-1/2">
                 <div className="bg-gradient-to-br from-accent to-primary p-8 rounded-2xl text-white text-center">
                   <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Award className="w-10 h-10" />
+                    <Shield className="w-10 h-10" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4">FeedBack은</h3>
-                  <p className="text-lg font-semibold">우리사회의 이웃들과 상생 가치를 실천하고 있습니다.</p>
+                  <h3 className="text-xl font-bold mb-4">신뢰를 통한</h3>
+                  <p className="text-lg font-semibold">장기 파트너십 구축</p>
                 </div>
               </div>
               <div className="lg:w-1/2 text-center lg:text-left">
                 <p className="text-lg text-foreground leading-relaxed">
-                  FeedBack은 고객님께 받은 큰 사랑을 소외된 우리 이웃들과 나누기 위해<br />
-                  다양한 사회공헌 활동을 실천하고 있습니다.<br /><br />
-                  앞으로도 사회공헌에 대한 기본적인 철학을 바탕으로<br />
-                  기업시민으로서의 역할을 다해 나가겠습니다.
+                  FeedBack의 존재 이유는 파트너와 고객의 신뢰입니다.<br /><br />
+                  <span className="font-semibold text-primary">검증된 품질과 안정적인 공급, 투명한 유통 프로세스,<br />
+                  정직한 사후 서비스 체계</span>를 통해<br />
+                  파트너가 오래 함께할 수 있는 신뢰 기반을 만듭니다.
                 </p>
               </div>
             </div>
