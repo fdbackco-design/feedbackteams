@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Eye, Target, Users, Globe, TrendingUp, ShoppingCart, Building2, Award, Handshake, Zap, Shield } from "lucide-react";
 import organizationChart from "@assets/organizationChart_1754563135776.png";
 import warehouseImage from "@assets/futuristic-warehouse-with-blue-neon-lights-connected-data_1754566796044.jpg";
+import partnershipImage from "@assets/5f76e132-877a-4d9e-8c9c-de9ff84cb5dd_1754568024377.jpg";
 
 // SVG 컴포넌트들
 const HeroBackgroundSVG = () => (
@@ -234,15 +235,19 @@ export default function About() {
           <div className="mb-20">
             <div className="flex flex-col lg:flex-row items-center gap-12">
               <div className="lg:w-1/2">
-                <div className="bg-gradient-to-br from-primary to-accent p-8 rounded-2xl text-white text-center">
-                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Handshake className="w-10 h-10" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4">고객·파트너 중심:</h3>
-                  <p className="text-lg font-semibold">'공생'의 유통 모델을 실현합니다</p>
+                <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src={partnershipImage}
+                    alt="파트너십과 협력"
+                    className="w-full h-80 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                 </div>
               </div>
               <div className="lg:w-1/2 text-center lg:text-left">
+                <h3 className="text-2xl font-bold text-foreground mb-6">
+                  고객·파트너 중심: '공생'의 유통 모델을 실현합니다
+                </h3>
                 <p className="text-lg text-foreground leading-relaxed">
                   FeedBack은 단순히 물건을 사고파는 곳이 아닌,<br />
                   제조사·브랜드·소매처가 함께 성장할 수 있는 유통 생태계를 구축합니다.<br /><br />
