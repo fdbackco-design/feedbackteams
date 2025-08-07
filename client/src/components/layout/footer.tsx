@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Facebook, Twitter, Linkedin, Youtube } from "lucide-react";
+import feedbackLogo from "@assets/feddback_logo_1754559528597.png";
 
 export default function Footer() {
   return (
@@ -10,7 +11,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="mb-6">
               <img 
-                src="/attached_assets/feddback_logo_1754559528597.png" 
+                src={feedbackLogo} 
                 alt="FeedBack" 
                 className="h-12 mb-4 filter brightness-0 invert"
               />

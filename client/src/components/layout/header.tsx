@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import feedbackLogo from "@assets/feddback_logo_1754559528597.png";
 
 const navigation = [
   { name: "홈", href: "/" },
@@ -36,7 +37,7 @@ export default function Header() {
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 transform hover:scale-105 transition-transform duration-200">
               <img 
-                src="/attached_assets/feddback_logo_1754559528597.png" 
+                src={feedbackLogo} 
                 alt="FeedBack" 
                 className={`transition-all duration-300 ${
                   isScrolled ? 'h-8' : 'h-10'
