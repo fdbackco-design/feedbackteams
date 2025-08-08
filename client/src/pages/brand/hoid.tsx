@@ -16,21 +16,39 @@ export default function Hoid() {
         </Link>
       </div>
 
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 py-12">
-        <div className="text-center mb-12">
-          <div className="mb-8">
-            <img 
-              src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
-              alt="Hoid 브랜드 로고" 
-              className="mx-auto h-24 w-auto mb-6"
-            />
+      {/* Hero Section with Video Background */}
+      <section className="relative h-[80vh] min-h-[600px] overflow-hidden">
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full">
+          <iframe
+            src="https://player.vimeo.com/video/1074153050?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&dnt=1&controls=0"
+            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto transform -translate-x-1/2 -translate-y-1/2"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+            title="HOID Brand Video"
+          ></iframe>
+        </div>
+        
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/30"></div>
+        
+        {/* Content over video */}
+        <div className="relative z-10 h-full flex items-center justify-center">
+          <div className="container mx-auto px-4 text-center text-white">
+            <div className="mb-8">
+              <img 
+                src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
+                alt="Hoid 브랜드 로고" 
+                className="mx-auto h-24 w-auto mb-6 filter brightness-0 invert"
+              />
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">HOID</h1>
+            <p className="text-2xl md:text-3xl font-medium mb-6 text-blue-200 drop-shadow-lg">공기 속까지 바꾸는 디자인</p>
+            <p className="text-lg md:text-xl max-w-2xl mx-auto drop-shadow-lg opacity-90">
+              미니멀한 디자인과 첨단 기술이 만나 일상의 공기질을 혁신하는 스마트 가전 브랜드입니다.
+            </p>
           </div>
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">HOID</h1>
-          <p className="text-2xl text-blue-600 font-medium mb-6">공기 속까지 바꾸는 디자인</p>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            미니멀한 디자인과 첨단 기술이 만나 일상의 공기질을 혁신하는 스마트 가전 브랜드입니다.
-          </p>
         </div>
       </section>
 
