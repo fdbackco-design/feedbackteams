@@ -12,7 +12,8 @@ const services = [
     description: "아시아 전역의 유통망을 통해 효율적인 수출입 및 중개 서비스를 제공합니다. 다양한 제품군에 대한 전문적인 수출입 컨설팅과 물류 솔루션을 함께 제공하여 글로벌 비즈니스를 지원합니다.",
     features: ["아시아 유통망 구축", "수출입 통관 대행", "물류 최적화 솔루션"],
     buttonText: "서비스 문의",
-    buttonColor: "bg-blue-600 hover:bg-blue-700"
+    buttonColor: "bg-blue-600 hover:bg-blue-700",
+    imageUrl: ""
   },
   {
     icon: TrendingUp,
@@ -20,7 +21,8 @@ const services = [
     description: "Hoid, Medifeed, InYourHeart, 상생 등 4개 자체 브랜드의 제조 및 OEM 생산을 통해 브랜드 성장을 지원합니다. 품질 관리부터 제품 개발까지 전 과정을 책임집니다.",
     features: ["4개 자체 브랜드 운영", "OEM/ODM 제조", "품질관리 시스템"],
     buttonText: "브랜드 보기",
-    buttonColor: "bg-green-600 hover:bg-green-700"
+    buttonColor: "bg-green-600 hover:bg-green-700",
+    imageUrl: ""
   },
   {
     icon: TrendingUp,
@@ -28,7 +30,8 @@ const services = [
     description: "홈쇼핑 연계와 디지털 마케팅을 통한 글로벌 브랜딩 솔루션을 제공합니다. 브랜드 아이덴티티 개발부터 글로벌 시장 진출 전략까지 종합적인 마케팅 서비스를 지원합니다.",
     features: ["홈쇼핑 연계 마케팅", "디지털 마케팅", "글로벌 진출 전략"],
     buttonText: "상담 신청",
-    buttonColor: "bg-purple-600 hover:bg-purple-700"
+    buttonColor: "bg-purple-600 hover:bg-purple-700",
+    imageUrl: ""
   },
   {
     icon: Hospital,
@@ -36,7 +39,8 @@ const services = [
     description: "상생 브랜드를 통한 의료관광 플랫폼 운영으로 한국의 우수한 의료 서비스를 전 세계에 연결합니다. 태국, 베트남을 시작으로 아시아 전역으로 서비스를 확장하고 있습니다.",
     features: ["메디컬 투어리즘", "병원 네트워크", "다국어 플랫폼"],
     buttonText: "상생 브랜드 보기",
-    buttonColor: "bg-red-600 hover:bg-red-700"
+    buttonColor: "bg-red-600 hover:bg-red-700",
+    imageUrl: ""
   },
   {
     icon: Smartphone,
@@ -44,7 +48,8 @@ const services = [
     description: "의료/케어 통합 앱 개발로 디지털 헬스케어 솔루션을 제공합니다. 다국어 지원과 실시간 상담 기능을 통해 글로벌 사용자들에게 편리한 서비스를 제공합니다.",
     features: ["의료/케어 통합 앱", "다국어 지원", "실시간 상담"],
     buttonText: "앱 정보 보기",
-    buttonColor: "bg-indigo-600 hover:bg-indigo-700"
+    buttonColor: "bg-indigo-600 hover:bg-indigo-700",
+    imageUrl: ""
   }
 ];
 
@@ -124,30 +129,43 @@ export default function Service() {
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {services.map((service, index) => (
-              <Card key={index} className="flex-shrink-0 w-96 shadow-lg hover:shadow-xl transition-shadow">
-                <CardContent className="p-8">
-                  <div className="flex flex-col">
-                    <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0 mb-6">
-                      <service.icon className="w-8 h-8 text-gray-600" />
-                    </div>
-                    <div className="flex-1">
-                      <CardTitle className="text-2xl font-bold text-gray-900 mb-4">
-                        {service.title}
-                      </CardTitle>
-                      <CardDescription className="text-gray-600 mb-6 leading-relaxed">
-                        {service.description}
-                      </CardDescription>
-                      <div className="mb-6 space-y-2">
-                        {service.features.map((feature, featureIndex) => (
-                          <div key={featureIndex} className="text-sm text-gray-500">
-                            • {feature}
-                          </div>
-                        ))}
+              <Card key={index} className="flex-shrink-0 w-96 shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
+                {/* Image Section */}
+                <div className="relative h-48 bg-gradient-to-br from-gray-100 to-gray-200">
+                  {service.imageUrl ? (
+                    <img 
+                      src={service.imageUrl} 
+                      alt={service.title}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <div className="w-16 h-16 bg-white/80 rounded-full flex items-center justify-center">
+                        <service.icon className="w-8 h-8 text-gray-600" />
                       </div>
-                      <Button className={`${service.buttonColor} text-white transition-colors`}>
-                        {service.buttonText}
-                      </Button>
                     </div>
+                  )}
+                  <div className="absolute inset-0 bg-black/5"></div>
+                </div>
+                
+                <CardContent className="p-6">
+                  <div className="flex flex-col">
+                    <CardTitle className="text-xl font-bold text-gray-900 mb-3">
+                      {service.title}
+                    </CardTitle>
+                    <CardDescription className="text-gray-600 mb-4 leading-relaxed text-sm">
+                      {service.description}
+                    </CardDescription>
+                    <div className="mb-4 space-y-1">
+                      {service.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="text-xs text-gray-500">
+                          • {feature}
+                        </div>
+                      ))}
+                    </div>
+                    <Button className={`${service.buttonColor} text-white transition-colors text-sm`}>
+                      {service.buttonText}
+                    </Button>
                   </div>
                 </CardContent>
               </Card>
