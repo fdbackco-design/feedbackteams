@@ -459,7 +459,7 @@ export default function Home() {
         </div>
         
         {/* Black overlay with 25% transparency */}
-        <div className="absolute inset-0 bg-black/25"></div>
+        <div className="absolute inset-0 bg-[#0000005e]"></div>
         
         {/* Content over video */}
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
