@@ -11,6 +11,7 @@ import { ArrowLeft, CheckCircle, Globe, ShoppingCart, Zap } from "lucide-react";
 import HoidLogo from "@/components/HoidLogo";
 
 import flow_2025_04_17_193718625_1754623144595 from "@assets/flow_2025-04-17_193718625_1754623144595.png";
+import homeshoppingImage from "@assets/homeshopping_1754639787939.png";
 
 export default function Hoid() {
   return (
@@ -138,6 +139,41 @@ export default function Hoid() {
               </div>
             </Card>
           </div>
+        </div>
+      </section>
+      {/* Home Shopping Launch */}
+      <section className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            호이드, 홈쇼핑 진출!
+          </h2>
+          <Card className="overflow-hidden">
+            <div className="md:flex">
+              <div className="md:w-1/2">
+                <img
+                  src={homeshoppingImage}
+                  alt="호이드 홈쇼핑 방송 현장"
+                  className="w-full h-64 md:h-full object-cover"
+                />
+              </div>
+              <div className="md:w-1/2 p-6">
+                <CardHeader className="px-0 pt-0">
+                  <CardTitle className="text-xl">
+                    프리미엄 디자인 가전, 이제 집에서 만나보세요.
+                  </CardTitle>
+                  <CardDescription>2025년 8월</CardDescription>
+                </CardHeader>
+                <CardContent className="px-0">
+                  <p className="text-gray-600 mb-4">
+                    프리미엄 디자인 가전 브랜드 호이드가 드디어 홈쇼핑을 통해 여러분을 찾아갑니다.
+                    세련된 디자인과 뛰어난 성능, 그리고 생활을 바꾸는 혁신적인 기술을 이제 TV 속에서 직접 확인하세요.
+                    첫 방송 특별 혜택과 한정 구성으로 더욱 합리적인 기회를 놓치지 마세요.
+                  </p>
+                  <Button>자세히 보기</Button>
+                </CardContent>
+              </div>
+            </div>
+          </Card>
         </div>
       </section>
       {/* Distribution Channels */}
