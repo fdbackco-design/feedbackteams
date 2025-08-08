@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Link } from "wouter";
 import { ArrowLeft, Heart, Shield, Star, Users } from "lucide-react";
 import MedifeedLogo from "@/components/MedifeedLogo";
-import medifeedBannerImage from "@assets/medifeed_2_1754640478083.jpg";
+import medifeedVideo from "@assets/medifeed_1754647409969.mp4";
 
 export default function Medifeed() {
   return (
@@ -20,15 +20,18 @@ export default function Medifeed() {
 
       {/* Hero Section */}
       <section className="relative h-screen w-full overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${medifeedBannerImage})` }}
-        >
-          <div className="absolute inset-0 bg-black/40"></div>
-        </div>
+        {/* Background Video */}
+        <video 
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+          src={medifeedVideo}
+        />
+        <div className="absolute inset-0 bg-black/40"></div>
         
-        {/* Content over image */}
+        {/* Content over video */}
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="container mx-auto px-4 text-center text-white">
             <div className="mb-4">
