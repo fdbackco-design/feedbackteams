@@ -21,6 +21,8 @@ import globalImage from "@assets/13730_1754568375896.jpg";
 import trustImage from "@assets/hands_1754568922347.png";
 import cleanRoomImage from "@assets/hoid4_1754618227868.jpg";
 
+import _______ from "@assets/조직도.png";
+
 // SVG 컴포넌트들
 const HeroBackgroundSVG = () => (
   <svg
@@ -405,7 +407,6 @@ export default function About() {
           <BrandMessageBannerSVG />
         </div>
       </section>
-
       {/* Company Story Section - 쿠쿠 스타일 스토리텔링 */}
       <section className="py-20 bg-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -466,7 +467,6 @@ export default function About() {
           </p>
         </div>
       </section>
-
       {/* 경영철학 - 쿠쿠 스타일의 4개 핵심 가치 */}
       <section className="py-20 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -761,7 +761,7 @@ export default function About() {
           <div className="flex justify-center">
             <div className="bg-white p-8 rounded-2xl shadow-xl max-w-full overflow-x-auto border border-border">
               <img
-                src={organizationChart}
+                src={_______}
                 alt="피드백 조직도"
                 className="max-w-full h-auto rounded-lg"
               />
