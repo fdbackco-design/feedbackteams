@@ -29,7 +29,7 @@ export default function Medifeed() {
         </div>
         
         {/* Content over image */}
-        <div className="relative z-10 h-full flex items-center justify-center">
+        <div className="relative z-10 h-full flex items-start justify-center pt-24">
           <div className="container mx-auto px-4 text-center text-white">
             <div className="mb-4">
               <MedifeedLogo className="h-16 md:h-20 mx-auto" />
