@@ -4,6 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import newsData from "@/data/news.json";
 
+import flow_2025_04_17_193718625 from "@assets/flow_2025-04-17_193718625.png";
+
 const categoryColors: Record<string, string> = {
   "보도자료": "bg-secondary text-white",
   "브랜드뉴스": "bg-primary text-white", 
@@ -56,13 +58,12 @@ export default function Article() {
           </h1>
         </div>
       </div>
-      
       {/* Article Content */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Featured Image */}
         <div className="mb-8">
           <img 
-            src={article.thumbnail}
+            src={flow_2025_04_17_193718625}
             alt={article.title}
             className="w-full rounded-lg shadow-lg"
           />
