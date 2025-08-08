@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Truck, Tags, Globe, ArrowRight, Play, ChevronDown, ChevronUp, Heart, Smartphone, ChevronLeft, ChevronRight } from "lucide-react";
+import { Truck, Tags, Globe, ArrowRight, Play, ChevronDown, ChevronUp, Heart, Smartphone, ChevronLeft, ChevronRight, Pause, PlayCircle } from "lucide-react";
 import { useCountUp } from "@/hooks/useCountUp";
 import HoidLogo from "@/components/HoidLogo";
 import shipVideo from "@assets/ship_section_1754640786186.mp4";
@@ -12,6 +12,10 @@ import factoryImage from "@assets/factory_1754649106831.png";
 import homeshoppingImage from "@assets/homeshopping_1754649174036.png";
 import hospitalImage from "@assets/Whisk_8652b62135_1754649198457.jpg";
 import uiDesignImage from "@assets/UI_1754650048438.png";
+import hoidImg from "@/assets/brand/hoidintro.jpg";
+import medifeedImg from "@assets/medifeed_1_1754636614100.jpg";
+import inyourheartImg from "@assets/in_your_1754636664888.jpg";
+import sangsaengImg from "@assets/sangsaeng_1_1754636754183.jpg";
 
 const services = [
   {
@@ -46,6 +50,49 @@ const services = [
   }
 ];
 
+const brands = [
+  {
+    id: "hoid",
+    name: "Hoid",
+    category: "미니멀 가전 브랜드",
+    slogan: "공기 속까지 바꾸는 디자인",
+    description: "공기청정기, 제습기 등 미니멀한 디자인과 첨단 기술이 만나 일상의 공기질을 혁신하는 스마트 가전 브랜드입니다.",
+    products: ["공기청정기", "제습기", "3-in-1 기술", "HEPA14 필터"],
+    image: hoidImg,
+    color: "from-gray-400 to-gray-600"
+  },
+  {
+    id: "medifeed",
+    name: "Medifeed",
+    category: "기능성 영양제 브랜드",
+    slogan: "매일을 지키는 작은 습관",
+    description: "잇몸과 눈 건강을 중심으로 한 기능성 영양제 브랜드로, 실용성과 안전성을 바탕으로 건강 솔루션을 제공합니다.",
+    products: ["잇몸 건강", "눈 건강", "기능성 영양제", "GMP 인증"],
+    image: medifeedImg,
+    color: "from-blue-500 to-blue-700"
+  },
+  {
+    id: "inyourheart",
+    name: "InYourHeart",
+    category: "감성 스킨케어 브랜드",
+    slogan: "피부에 감성을 입히다",
+    description: "클린뷰티 철학과 감성적인 패키지 디자인으로 글로벌 K-뷰티 시장을 선도하는 프리미엄 스킨케어 브랜드입니다.",
+    products: ["클린 포뮬러", "감성 패키지", "글로벌 K-뷰티", "세라마이드"],
+    image: inyourheartImg,
+    color: "from-pink-500 to-pink-700"
+  },
+  {
+    id: "sangsaeng",
+    name: "상생 (Sangsaeng)",
+    category: "의료관광 플랫폼",
+    slogan: "WE CONNECT KOREAN MEDICAL SERVICES TO THE WORLD",
+    description: "메디컬 투어리즘부터 글로벌 헬스케어 플랫폼까지, 한국의 우수한 의료 서비스를 전 세계에 연결하는 종합 의료 플랫폼입니다.",
+    products: ["의료관광", "헬스케어 플랫폼", "다국어 앱", "병원 네트워크"],
+    image: sangsaengImg,
+    color: "from-green-500 to-green-700"
+  }
+];
+
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
@@ -56,6 +103,8 @@ export default function Home() {
   const statsRef = useRef<HTMLDivElement>(null);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const serviceCarouselRef = useRef<HTMLDivElement>(null);
+  const [currentBrandIndex, setCurrentBrandIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   const sections = [
     { id: 'hero', name: '홈' },
@@ -156,6 +205,16 @@ export default function Home() {
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [currentSection, sections]);
+
+  // Auto-slide for brands carousel
+  useEffect(() => {
+    if (!isPaused) {
+      const interval = setInterval(() => {
+        setCurrentBrandIndex((prev) => (prev + 1) % brands.length);
+      }, 4000);
+      return () => clearInterval(interval);
+    }
+  }, [isPaused]);
 
   // Touch gestures for mobile
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -409,82 +468,101 @@ export default function Home() {
         </div>
       </section>
       {/* Brands Section */}
-      <section id="brands" className="h-screen flex items-center justify-center bg-muted"
+      <section id="brands" className="h-screen flex items-center justify-center bg-white relative overflow-hidden"
                style={{ scrollSnapAlign: 'start' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 opacity-0 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-            <h2 className="text-4xl font-bold text-foreground mb-4">우리의 브랜드</h2>
-            <p className="text-xl text-muted-foreground">혁신적인 브랜드를 통해 고객에게 최고의 가치를 전달합니다</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Brand 1: Hoid */}
-            <Link href="/brand/hoid" className="group opacity-0 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-              <Card className="shadow-lg hover:shadow-2xl transition-all duration-500 text-center transform group-hover:-translate-y-4 group-hover:scale-105 cursor-pointer relative overflow-hidden h-full">
-                <div className="absolute inset-0 bg-gradient-to-r from-gray-50 to-gray-25 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <CardHeader className="relative z-10">
-                  <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 transform group-hover:rotate-12 transition-transform duration-300">
-                    <HoidLogo className="w-10 h-auto" fill="white" />
-                  </div>
-                  <CardTitle className="text-xl group-hover:text-accent transition-colors">Hoid</CardTitle>
-                </CardHeader>
-                <CardContent className="relative z-10">
-                  <p className="text-foreground text-sm mb-4">공기 속까지 바꾸는 디자인</p>
-                  <p className="text-xs text-muted-foreground">공기청정기, 제습기 등 미니멀 가전</p>
-                </CardContent>
-              </Card>
-            </Link>
+        <div className="absolute inset-0">
+          <img 
+            src={brands[currentBrandIndex].image} 
+            alt={brands[currentBrandIndex].name}
+            className="w-full h-full object-cover transition-all duration-1000"
+          />
+          <div className={`absolute inset-0 bg-gradient-to-r ${brands[currentBrandIndex].color} opacity-80 transition-all duration-1000`}></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Content Section */}
+            <div className="text-white space-y-6">
+              <div className="space-y-2">
+                <div className="text-sm font-semibold uppercase tracking-wide opacity-90">
+                  {brands[currentBrandIndex].category}
+                </div>
+                <h2 className="text-5xl md:text-6xl font-bold mb-4">
+                  {brands[currentBrandIndex].name}
+                </h2>
+                <p className="text-2xl md:text-3xl font-light mb-6 opacity-90">
+                  {brands[currentBrandIndex].slogan}
+                </p>
+              </div>
+              
+              <p className="text-lg leading-relaxed opacity-90 max-w-xl">
+                {brands[currentBrandIndex].description}
+              </p>
+              
+              <div className="flex flex-wrap gap-3 mt-6">
+                {brands[currentBrandIndex].products.map((product, index) => (
+                  <span key={index} className="px-4 py-2 bg-white bg-opacity-20 rounded-full text-sm font-medium backdrop-blur-sm">
+                    {product}
+                  </span>
+                ))}
+              </div>
+              
+              <div className="flex items-center space-x-4 mt-8">
+                <Button asChild size="lg" className="bg-white text-gray-900 hover:bg-gray-100">
+                  <Link href={`/brand/${brands[currentBrandIndex].id}`}>브랜드 자세히 보기</Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-gray-900">
+                  <Link href="/brand">모든 브랜드 보기</Link>
+                </Button>
+              </div>
+            </div>
             
-            {/* Brand 2: Medifeed */}
-            <Link href="/brand/medifeed" className="group opacity-0 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-              <Card className="shadow-lg hover:shadow-2xl transition-all duration-500 text-center transform group-hover:-translate-y-4 group-hover:scale-105 cursor-pointer relative overflow-hidden h-full">
-                <div className="absolute inset-0 bg-gradient-to-r from-gray-50 to-gray-25 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <CardHeader className="relative z-10">
-                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 transform group-hover:rotate-12 transition-transform duration-300">
-                    <span className="text-white font-bold text-xs">MF</span>
-                  </div>
-                  <CardTitle className="text-xl group-hover:text-primary transition-colors">Medifeed</CardTitle>
-                </CardHeader>
-                <CardContent className="relative z-10">
-                  <p className="text-foreground text-sm mb-4">매일을 지키는 작은 습관</p>
-                  <p className="text-xs text-muted-foreground">잇몸, 눈 건강 중심 기능성 영양제</p>
-                </CardContent>
-              </Card>
-            </Link>
-            
-            {/* Brand 3: InYourHeart */}
-            <Link href="/brand/inyourheart" className="group opacity-0 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
-              <Card className="shadow-lg hover:shadow-2xl transition-all duration-500 text-center transform group-hover:-translate-y-4 group-hover:scale-105 cursor-pointer relative overflow-hidden h-full">
-                <div className="absolute inset-0 bg-gradient-to-r from-gray-50 to-gray-25 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <CardHeader className="relative z-10">
-                  <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 transform group-hover:rotate-12 transition-transform duration-300">
-                    <Heart className="w-6 h-6 text-white" />
-                  </div>
-                  <CardTitle className="text-xl group-hover:text-accent transition-colors">InYourHeart</CardTitle>
-                </CardHeader>
-                <CardContent className="relative z-10">
-                  <p className="text-foreground text-sm mb-4">피부에 감성을 입히다</p>
-                  <p className="text-xs text-muted-foreground">감성 스킨케어, 클린 포뮬러</p>
-                </CardContent>
-              </Card>
-            </Link>
-
-            {/* Brand 4: Sangsaeng */}
-            <Link href="/brand/sangsaeng" className="group opacity-0 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
-              <Card className="shadow-lg hover:shadow-2xl transition-all duration-500 text-center transform group-hover:-translate-y-4 group-hover:scale-105 cursor-pointer relative overflow-hidden h-full">
-                <div className="absolute inset-0 bg-gradient-to-r from-gray-50 to-gray-25 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <CardHeader className="relative z-10">
-                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 transform group-hover:rotate-12 transition-transform duration-300">
-                    <span className="text-white font-bold text-xs">상생</span>
-                  </div>
-                  <CardTitle className="text-xl group-hover:text-primary transition-colors">상생</CardTitle>
-                </CardHeader>
-                <CardContent className="relative z-10">
-                  <p className="text-foreground text-sm mb-4">WE CONNECT KOREAN MEDICAL</p>
-                  <p className="text-xs text-muted-foreground">의료관광, 헬스케어 플랫폼</p>
-                </CardContent>
-              </Card>
-            </Link>
+            {/* Navigation Section */}
+            <div className="flex flex-col items-end space-y-6">
+              {/* Play/Pause Button */}
+              <button
+                onClick={() => setIsPaused(!isPaused)}
+                className="p-3 bg-white bg-opacity-20 rounded-full backdrop-blur-sm hover:bg-opacity-30 transition-all"
+              >
+                {isPaused ? <PlayCircle className="w-6 h-6 text-white" /> : <Pause className="w-6 h-6 text-white" />}
+              </button>
+              
+              {/* Manual Navigation */}
+              <div className="flex space-x-2">
+                <button
+                  onClick={() => setCurrentBrandIndex(currentBrandIndex === 0 ? brands.length - 1 : currentBrandIndex - 1)}
+                  className="p-3 bg-white bg-opacity-20 rounded-full backdrop-blur-sm hover:bg-opacity-30 transition-all"
+                >
+                  <ChevronLeft className="w-6 h-6 text-white" />
+                </button>
+                <button
+                  onClick={() => setCurrentBrandIndex((currentBrandIndex + 1) % brands.length)}
+                  className="p-3 bg-white bg-opacity-20 rounded-full backdrop-blur-sm hover:bg-opacity-30 transition-all"
+                >
+                  <ChevronRight className="w-6 h-6 text-white" />
+                </button>
+              </div>
+              
+              {/* Dot Indicators */}
+              <div className="flex space-x-3">
+                {brands.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentBrandIndex(index)}
+                    className={`w-4 h-4 rounded-full transition-all duration-300 ${
+                      index === currentBrandIndex 
+                        ? 'bg-white scale-125' 
+                        : 'bg-white bg-opacity-50 hover:bg-opacity-75'
+                    }`}
+                  />
+                ))}
+              </div>
+              
+              {/* Brand Counter */}
+              <div className="text-white text-sm font-semibold">
+                {String(currentBrandIndex + 1).padStart(2, '0')} / {String(brands.length).padStart(2, '0')}
+              </div>
+            </div>
           </div>
         </div>
       </section>
