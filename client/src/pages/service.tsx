@@ -8,6 +8,7 @@ import cargoShipImage from "@assets/bada-leul-hanghae-haneun-hwamulseon_17546489
 import factoryImage from "@assets/factory_1754649106831.png";
 import homeshoppingImage from "@assets/homeshopping_1754649174036.png";
 import hospitalImage from "@assets/Whisk_8652b62135_1754649198457.jpg";
+import appDevImage from "@assets/representation-user-experience-interface-design_1754649277467.jpg";
 
 const services = [
   {
@@ -53,7 +54,7 @@ const services = [
     features: ["의료/케어 통합 앱", "다국어 지원", "실시간 상담"],
     buttonText: "앱 정보 보기",
     buttonColor: "bg-indigo-600 hover:bg-indigo-700",
-    imageUrl: ""
+    imageUrl: appDevImage
   }
 ];
 
