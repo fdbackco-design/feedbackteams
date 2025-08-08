@@ -467,7 +467,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
               글로벌 진출을 꿈꾸시나요?
             </h2>
-            <p className="text-xl text-white/90 mb-12 max-w-3xl mx-auto drop-shadow-lg">
+            <p className="text-xl text-white/90 mb-12 max-w-3xl mx-auto drop-shadow-lg font-semibold">
               FeedBack과 함께 아시아를 넘어 세계 시장으로 나아가세요.<br />
               전문 컨설턴트가 맞춤형 솔루션을 제안해드립니다.
             </p>
