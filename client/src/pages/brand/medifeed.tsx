@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 import { ArrowLeft, Heart, Shield, Star, Users } from "lucide-react";
+import HoidLogo from "@/components/HoidLogo";
 
 export default function Medifeed() {
   return (
@@ -26,7 +27,9 @@ export default function Medifeed() {
               className="mx-auto h-24 w-auto mb-6"
             />
           </div>
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">MEDIFEED</h1>
+          <div className="mb-4">
+            <HoidLogo className="h-16 mx-auto" fill="#059669" />
+          </div>
           <p className="text-2xl text-green-600 font-medium mb-6">매일을 지키는 작은 습관</p>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             잇몸과 눈 건강을 중심으로 한 기능성 영양제 브랜드로, 실용성과 안전성을 바탕으로 
