@@ -17,21 +17,29 @@ export default function InYourHeart() {
       </div>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-12">
-        <div className="text-center mb-12">
-          <div className="mb-8">
-            <img 
-              src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
-              alt="InYourHeart 브랜드 로고" 
-              className="mx-auto h-24 w-auto mb-6"
-            />
+      <section className="relative h-screen w-full overflow-hidden">
+        {/* Background Video */}
+        <video 
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/attached_assets/imyour_banner_1754643247969.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/40"></div>
+        
+        {/* Content over video */}
+        <div className="relative z-10 h-full flex items-center justify-center">
+          <div className="container mx-auto px-4 text-center text-white">
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">IN YOUR HEART</h1>
+            <p className="text-2xl md:text-3xl font-medium mb-6 text-pink-200 drop-shadow-lg">피부에 감성을 입히다</p>
+            <p className="text-lg md:text-xl max-w-2xl mx-auto drop-shadow-lg opacity-90">
+              클린뷰티 철학과 감성적인 패키지 디자인으로 글로벌 K-뷰티 시장을 선도하는 
+              프리미엄 스킨케어 브랜드입니다.
+            </p>
           </div>
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">IN YOUR HEART</h1>
-          <p className="text-2xl text-pink-600 font-medium mb-6">피부에 감성을 입히다</p>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            클린뷰티 철학과 감성적인 패키지 디자인으로 글로벌 K-뷰티 시장을 선도하는 
-            프리미엄 스킨케어 브랜드입니다.
-          </p>
         </div>
       </section>
 
