@@ -168,9 +168,15 @@ export default function Service() {
                         </div>
                       ))}
                     </div>
-                    <Button className={`${service.buttonColor} text-white transition-colors text-sm`}>
-                      {service.buttonText}
-                    </Button>
+                    {service.buttonText === "브랜드 보기" ? (
+                      <Button asChild className={`${service.buttonColor} text-white transition-colors text-sm`}>
+                        <Link href="/brand">{service.buttonText}</Link>
+                      </Button>
+                    ) : (
+                      <Button className={`${service.buttonColor} text-white transition-colors text-sm`}>
+                        {service.buttonText}
+                      </Button>
+                    )}
                   </div>
                 </CardContent>
               </Card>
