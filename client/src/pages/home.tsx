@@ -498,13 +498,7 @@ export default function Home() {
                 {brands[currentBrandIndex].description}
               </p>
               
-              <div className="flex flex-wrap gap-3 mt-6">
-                {brands[currentBrandIndex].products.map((product, index) => (
-                  <span key={index} className="px-4 py-2 bg-white bg-opacity-80 rounded-full text-sm font-medium text-gray-900 backdrop-blur-sm">
-                    {product}
-                  </span>
-                ))}
-              </div>
+              
               
               <div className="flex items-center space-x-4 mt-8">
                 <Button asChild size="lg" className="bg-white text-gray-900 hover:bg-gray-100">
