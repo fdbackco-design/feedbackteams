@@ -49,7 +49,7 @@ export default function Home() {
   const yearCount = useCountUp({
     start: 2000,
     end: 2024,
-    duration: 2000,
+    duration: 1500,
     trigger: statsInView
   });
 
@@ -63,14 +63,14 @@ export default function Home() {
   const partnerCount = useCountUp({
     start: 0,
     end: 5,
-    duration: 1800,
+    duration: 1500,
     trigger: statsInView
   });
 
   const hospitalCount = useCountUp({
     start: 0,
     end: 10,
-    duration: 2200,
+    duration: 1500,
     trigger: statsInView
   });
 
