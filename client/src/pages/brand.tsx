@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
-import hoidImg from "@/assets/brand/hoid.jpeg";
+import hoidImg from "@/assets/brand/hoid.jpg";
 
 const brands = [
   {
