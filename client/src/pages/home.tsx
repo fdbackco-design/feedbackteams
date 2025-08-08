@@ -440,15 +440,32 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* CTA Section */}
-      <section id="cta" className="h-screen flex items-center justify-center bg-white relative overflow-hidden"
+      {/* CTA Section with Video Background */}
+      <section id="cta" className="h-screen flex items-center justify-center relative overflow-hidden"
                style={{ scrollSnapAlign: 'start' }}>
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full">
+          <video 
+            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto transform -translate-x-1/2 -translate-y-1/2 object-cover"
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+          >
+            <source src="/attached_assets/Sequence 01_1754638082624.mp4" type="video/mp4" />
+          </video>
+        </div>
+        
+        {/* Black overlay with 25% transparency */}
+        <div className="absolute inset-0 bg-black/25"></div>
+        
+        {/* Content over video */}
+        <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <div className="opacity-0 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
               글로벌 진출을 꿈꾸시나요?
             </h2>
-            <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-white/90 mb-12 max-w-3xl mx-auto drop-shadow-lg">
               FeedBack과 함께 아시아를 넘어 세계 시장으로 나아가세요.<br />
               전문 컨설턴트가 맞춤형 솔루션을 제안해드립니다.
             </p>
@@ -456,7 +473,7 @@ export default function Home() {
               <Button 
                 asChild 
                 size="lg" 
-                className="text-lg px-10 py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl animate-floating"
+                className="text-lg px-10 py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl animate-floating bg-white text-blue-600 hover:bg-gray-100"
                 style={{animationDelay: '1s'}}
               >
                 <Link href="/contact">무료 상담 신청</Link>
@@ -465,7 +482,7 @@ export default function Home() {
                 asChild 
                 variant="outline" 
                 size="lg" 
-                className="text-lg px-10 py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl animate-floating"
+                className="text-lg px-10 py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl animate-floating border-white text-white hover:bg-white hover:text-blue-600"
                 style={{animationDelay: '1.5s'}}
               >
                 <Link href="/service">서비스 자세히 보기</Link>
@@ -473,12 +490,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
-        {/* Floating Background Elements */}
-        <div className="absolute top-10 left-10 w-20 h-20 bg-primary/10 rounded-full animate-floating"></div>
-        <div className="absolute top-20 right-10 w-16 h-16 bg-secondary/10 rounded-full animate-floating" style={{animationDelay: '1s'}}></div>
-        <div className="absolute bottom-10 left-1/4 w-12 h-12 bg-accent/10 rounded-full animate-floating" style={{animationDelay: '2s'}}></div>
-        <div className="absolute bottom-20 right-1/4 w-24 h-24 bg-primary/5 rounded-full animate-floating" style={{animationDelay: '0.5s'}}></div>
       </section>
     </div>
   );
