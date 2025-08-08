@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Truck, Tags, Globe, ArrowRight, Play, ChevronDown, ChevronUp, Heart, Smartphone } from "lucide-react";
 import { useCountUp } from "@/hooks/useCountUp";
 import HoidLogo from "@/components/HoidLogo";
-import shipVideo from "@assets/ship-video.mp4";
+import shipVideo from "@assets/ship_section_1754640786186.mp4";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -454,7 +454,7 @@ export default function Home() {
             loop 
             playsInline
           >
-            <source src="/ship-video.mp4" type="video/mp4" />
+            <source src={shipVideo} type="video/mp4" />
           </video>
         </div>
         
