@@ -1,8 +1,32 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Truck, Tags, Globe, ArrowRight, Play, ChevronDown, ChevronUp, Heart, Smartphone, ChevronLeft, ChevronRight, Pause, PlayCircle, Newspaper, TrendingUp, Award, Calendar } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Truck,
+  Tags,
+  Globe,
+  ArrowRight,
+  Play,
+  ChevronDown,
+  ChevronUp,
+  Heart,
+  Smartphone,
+  ChevronLeft,
+  ChevronRight,
+  Pause,
+  PlayCircle,
+  Newspaper,
+  TrendingUp,
+  Award,
+  Calendar,
+} from "lucide-react";
 import { useCountUp } from "@/hooks/useCountUp";
 import HoidLogo from "@/components/HoidLogo";
 import shipVideo from "@assets/ship_section_1754640786186.mp4";
@@ -20,34 +44,39 @@ import sangsaengImg from "@assets/sangsaeng_1_1754636754183.jpg";
 const services = [
   {
     title: "유통 / 수출입 중개",
-    description: "아시아 전역의 유통망을 통해 효율적인 수출입 및 중개 서비스를 제공합니다. 다양한 제품군에 대한 전문적인 수출입 컨설팅과 물류 솔루션을 함께 제공하여 글로벌 비즈니스를 지원합니다.",
+    description:
+      "아시아 전역의 유통망을 통해 효율적인 수출입 및 중개 서비스를 제공합니다. 다양한 제품군에 대한 전문적인 수출입 컨설팅과 물류 솔루션을 함께 제공하여 글로벌 비즈니스를 지원합니다.",
     features: ["아시아 유통망 구축", "수출입 통관 대행", "물류 최적화 솔루션"],
-    imageUrl: cargoShipImage
+    imageUrl: cargoShipImage,
   },
   {
     title: "자체 브랜드 제조 (OEM)",
-    description: "Hoid, Medifeed, InYourHeart, 상생 등 4개 자체 브랜드의 제조 및 OEM 생산을 통해 브랜드 성장을 지원합니다. 품질 관리부터 제품 개발까지 전 과정을 책임집니다.",
+    description:
+      "Hoid, Medifeed, InYourHeart, 상생 등 4개 자체 브랜드의 제조 및 OEM 생산을 통해 브랜드 성장을 지원합니다. 품질 관리부터 제품 개발까지 전 과정을 책임집니다.",
     features: ["4개 자체 브랜드 운영", "OEM/ODM 제조", "품질관리 시스템"],
-    imageUrl: factoryImage
+    imageUrl: factoryImage,
   },
   {
     title: "글로벌 마케팅/브랜딩",
-    description: "홈쇼핑 연계와 디지털 마케팅을 통한 글로벌 브랜딩 솔루션을 제공합니다. 브랜드 아이덴티티 개발부터 글로벌 시장 진출 전략까지 종합적인 마케팅 서비스를 지원합니다.",
+    description:
+      "홈쇼핑 연계와 디지털 마케팅을 통한 글로벌 브랜딩 솔루션을 제공합니다. 브랜드 아이덴티티 개발부터 글로벌 시장 진출 전략까지 종합적인 마케팅 서비스를 지원합니다.",
     features: ["홈쇼핑 연계 마케팅", "디지털 마케팅", "글로벌 진출 전략"],
-    imageUrl: homeshoppingImage
+    imageUrl: homeshoppingImage,
   },
   {
     title: "의료관광 플랫폼",
-    description: "상생 브랜드를 통한 의료관광 플랫폼 운영으로 한국의 우수한 의료 서비스를 전 세계에 연결합니다. 태국, 베트남을 시작으로 아시아 전역으로 서비스를 확장하고 있습니다.",
+    description:
+      "상생 브랜드를 통한 의료관광 플랫폼 운영으로 한국의 우수한 의료 서비스를 전 세계에 연결합니다. 태국, 베트남을 시작으로 아시아 전역으로 서비스를 확장하고 있습니다.",
     features: ["메디컬 투어리즘", "병원 네트워크", "다국어 플랫폼"],
-    imageUrl: hospitalImage
+    imageUrl: hospitalImage,
   },
   {
     title: "앱 개발",
-    description: "의료/케어 통합 앱 개발로 디지털 헬스케어 솔루션을 제공합니다. 다국어 지원과 실시간 상담 기능을 통해 글로벌 사용자들에게 편리한 서비스를 제공합니다.",
+    description:
+      "의료/케어 통합 앱 개발로 디지털 헬스케어 솔루션을 제공합니다. 다국어 지원과 실시간 상담 기능을 통해 글로벌 사용자들에게 편리한 서비스를 제공합니다.",
     features: ["의료/케어 통합 앱", "다국어 지원", "실시간 상담"],
-    imageUrl: uiDesignImage
-  }
+    imageUrl: uiDesignImage,
+  },
 ];
 
 const brands = [
@@ -56,41 +85,45 @@ const brands = [
     name: "Hoid",
     category: "미니멀 가전 브랜드",
     slogan: "공기 속까지 바꾸는 디자인",
-    description: "공기청정기, 제습기 등 미니멀한 디자인과 첨단 기술이 만나 일상의 공기질을 혁신하는 스마트 가전 브랜드입니다.",
+    description:
+      "공기청정기, 제습기 등 미니멀한 디자인과 첨단 기술이 만나 일상의 공기질을 혁신하는 스마트 가전 브랜드입니다.",
     products: ["공기청정기", "제습기", "3-in-1 기술", "HEPA14 필터"],
     image: hoidImg,
-    color: "from-gray-400 to-gray-600"
+    color: "from-gray-400 to-gray-600",
   },
   {
     id: "medifeed",
     name: "Medifeed",
     category: "기능성 영양제 브랜드",
     slogan: "매일을 지키는 작은 습관",
-    description: "잇몸과 눈 건강을 중심으로 한 기능성 영양제 브랜드로, 실용성과 안전성을 바탕으로 건강 솔루션을 제공합니다.",
+    description:
+      "잇몸과 눈 건강을 중심으로 한 기능성 영양제 브랜드로, 실용성과 안전성을 바탕으로 건강 솔루션을 제공합니다.",
     products: ["잇몸 건강", "눈 건강", "기능성 영양제", "GMP 인증"],
     image: medifeedImg,
-    color: "from-blue-500 to-blue-700"
+    color: "from-blue-500 to-blue-700",
   },
   {
     id: "inyourheart",
     name: "InYourHeart",
     category: "감성 스킨케어 브랜드",
     slogan: "피부에 감성을 입히다",
-    description: "클린뷰티 철학과 감성적인 패키지 디자인으로 글로벌 K-뷰티 시장을 선도하는 프리미엄 스킨케어 브랜드입니다.",
+    description:
+      "클린뷰티 철학과 감성적인 패키지 디자인으로 글로벌 K-뷰티 시장을 선도하는 프리미엄 스킨케어 브랜드입니다.",
     products: ["클린 포뮬러", "감성 패키지", "글로벌 K-뷰티", "세라마이드"],
     image: inyourheartImg,
-    color: "from-pink-500 to-pink-700"
+    color: "from-pink-500 to-pink-700",
   },
   {
     id: "sangsaeng",
     name: "상생 (Sangsaeng)",
     category: "의료관광 플랫폼",
     slogan: "WE CONNECT KOREAN MEDICAL SERVICES TO THE WORLD",
-    description: "메디컬 투어리즘부터 글로벌 헬스케어 플랫폼까지, 한국의 우수한 의료 서비스를 전 세계에 연결하는 종합 의료 플랫폼입니다.",
+    description:
+      "메디컬 투어리즘부터 글로벌 헬스케어 플랫폼까지, 한국의 우수한 의료 서비스를 전 세계에 연결하는 종합 의료 플랫폼입니다.",
     products: ["의료관광", "헬스케어 플랫폼", "다국어 앱", "병원 네트워크"],
     image: sangsaengImg,
-    color: "from-green-500 to-green-700"
-  }
+    color: "from-green-500 to-green-700",
+  },
 ];
 
 export default function Home() {
@@ -107,18 +140,18 @@ export default function Home() {
   const [isPaused, setIsPaused] = useState(false);
 
   const sections = [
-    { id: 'hero', name: '홈' },
-    { id: 'services', name: '서비스' },
-    { id: 'brands', name: '브랜드' },
-    { id: 'news', name: '최신뉴스' },
-    { id: 'stats', name: '실적' },
-    { id: 'cta', name: '문의' }
+    { id: "hero", name: "홈" },
+    { id: "services", name: "서비스" },
+    { id: "brands", name: "브랜드" },
+    { id: "news", name: "최신뉴스" },
+    { id: "stats", name: "실적" },
+    { id: "cta", name: "문의" },
   ];
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Intersection Observer for stats animation
@@ -131,7 +164,7 @@ export default function Home() {
           setStatsInView(false);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
 
     if (statsRef.current) {
@@ -145,65 +178,68 @@ export default function Home() {
     start: 2000,
     end: 2024,
     duration: 2000,
-    trigger: statsInView
+    trigger: statsInView,
   });
 
   const brandCount = useCountUp({
     start: 0,
     end: 4,
     duration: 1800,
-    trigger: statsInView
+    trigger: statsInView,
   });
 
   const partnerCount = useCountUp({
     start: 0,
     end: 5,
     duration: 2200,
-    trigger: statsInView
+    trigger: statsInView,
   });
 
   const hospitalCount = useCountUp({
     start: 0,
     end: 10,
     duration: 2500,
-    trigger: statsInView
+    trigger: statsInView,
   });
 
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
       e.preventDefault();
       const direction = e.deltaY > 0 ? 1 : -1;
-      const newSection = Math.max(0, Math.min(sections.length - 1, currentSection + direction));
-      
+      const newSection = Math.max(
+        0,
+        Math.min(sections.length - 1, currentSection + direction),
+      );
+
       if (newSection !== currentSection) {
         setCurrentSection(newSection);
         const targetElement = document.getElementById(sections[newSection].id);
-        targetElement?.scrollIntoView({ behavior: 'smooth' });
+        targetElement?.scrollIntoView({ behavior: "smooth" });
       }
     };
 
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+      if (e.key === "ArrowDown" || e.key === "PageDown") {
         e.preventDefault();
         scrollToNextSection();
-      } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+      } else if (e.key === "ArrowUp" || e.key === "PageUp") {
         e.preventDefault();
         scrollToPrevSection();
-      } else if (e.key === 'Home') {
+      } else if (e.key === "Home") {
         e.preventDefault();
         scrollToSection(0);
-      } else if (e.key === 'End') {
+      } else if (e.key === "End") {
         e.preventDefault();
         scrollToSection(sections.length - 1);
       }
     };
 
-    window.addEventListener('wheel', handleWheel, { passive: false });
-    window.addEventListener('keydown', handleKeyDown);
-    
+    window.addEventListener("wheel", handleWheel, { passive: false });
+    window.addEventListener("keydown", handleKeyDown);
+
     return () => {
-      window.removeEventListener('wheel', handleWheel);
-      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener("wheel", handleWheel);
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, [currentSection, sections]);
 
@@ -228,7 +264,7 @@ export default function Home() {
 
   const handleTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
-    
+
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > 50;
     const isRightSwipe = distance < -50;
@@ -244,7 +280,7 @@ export default function Home() {
   const scrollToSection = (index: number) => {
     setCurrentSection(index);
     const targetElement = document.getElementById(sections[index].id);
-    targetElement?.scrollIntoView({ behavior: 'smooth' });
+    targetElement?.scrollIntoView({ behavior: "smooth" });
   };
 
   const scrollToNextSection = () => {
@@ -258,10 +294,12 @@ export default function Home() {
   };
 
   return (
-    <div className="fullpage-container hide-scrollbar"
-         onTouchStart={handleTouchStart}
-         onTouchMove={handleTouchMove}
-         onTouchEnd={handleTouchEnd}>
+    <div
+      className="fullpage-container hide-scrollbar"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       {/* Section Navigation Dots */}
       <div className="fixed right-4 md:right-8 top-1/2 transform -translate-y-1/2 z-50 space-y-3">
         {sections.map((section, index) => (
@@ -269,7 +307,7 @@ export default function Home() {
             <button
               onClick={() => scrollToSection(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 hover:bg-gray-600 ${
-                currentSection === index ? 'bg-[#0E9AFF]' : 'bg-[#ccc]'
+                currentSection === index ? "bg-[#0E9AFF]" : "bg-[#ccc]"
               }`}
               title={section.name}
             />
@@ -296,10 +334,13 @@ export default function Home() {
         </div>
       )}
       {/* Hero Section */}
-      <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden" 
-               style={{ scrollSnapAlign: 'start' }}>
+      <section
+        id="hero"
+        className="relative h-screen flex items-center justify-center overflow-hidden"
+        style={{ scrollSnapAlign: "start" }}
+      >
         <div className="absolute inset-0">
-          <video 
+          <video
             className="absolute inset-0 w-full h-full object-cover"
             autoPlay
             loop
@@ -309,28 +350,41 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         </div>
-        
-        <div 
+
+        <div
           className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 transform transition-all duration-1000"
           style={{
             transform: `translateY(${scrollY * 0.3}px)`,
-            opacity: Math.max(0, 1 - scrollY / 500)
+            opacity: Math.max(0, 1 - scrollY / 500),
           }}
         >
           <h1 className="text-5xl md:text-7xl font-light mb-6 leading-tight animate-fade-in-up text-white">
-            <span className="font-bold">브랜드</span>와 <span className="font-bold">시장</span>을 <span className="font-bold">연결</span>하는<br />
+            <span className="font-bold">브랜드</span>와{" "}
+            <span className="font-bold">시장</span>을{" "}
+            <span className="font-bold">연결</span>하는
+            <br />
             유통 플랫폼, <span className="font-bold">FEEDBACK</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-90 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+          <p
+            className="text-xl md:text-2xl mb-8 opacity-90 animate-fade-in-up"
+            style={{ animationDelay: "0.3s" }}
+          >
             유통 · 브랜드 · 마케팅 · 제조가 하나로 연결되는 상생 플랫폼
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{animationDelay: '0.6s'}}>
-            <Button asChild size="lg" className="text-lg px-8 py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl">
+          <div
+            className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up"
+            style={{ animationDelay: "0.6s" }}
+          >
+            <Button
+              asChild
+              size="lg"
+              className="text-lg px-8 py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+            >
               <Link href="/service">서비스 둘러보기</Link>
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
+            <Button
+              variant="outline"
+              size="lg"
               className="text-lg px-8 py-6 border-white bg-white text-black hover:bg-gray-100 hover:text-black transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
               onClick={() => setIsVideoPlaying(true)}
             >
@@ -341,7 +395,7 @@ export default function Home() {
         </div>
 
         {/* Scroll Indicator */}
-        <div 
+        <div
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white cursor-pointer animate-bounce"
           onClick={scrollToNextSection}
         >
@@ -353,7 +407,7 @@ export default function Home() {
 
         {/* Video Modal */}
         {isVideoPlaying && (
-          <div 
+          <div
             className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4"
             onClick={() => setIsVideoPlaying(false)}
           >
@@ -368,32 +422,46 @@ export default function Home() {
         )}
       </section>
       {/* Services Section */}
-      <section id="services" className="h-screen flex items-center justify-center bg-white"
-               style={{ scrollSnapAlign: 'start' }}>
+      <section
+        id="services"
+        className="h-screen flex items-center justify-center bg-white"
+        style={{ scrollSnapAlign: "start" }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 opacity-0 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-            <div className="text-sm text-primary font-semibold tracking-wide uppercase mb-2">SERVICE</div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">핵심 서비스</h2>
+          <div
+            className="text-center mb-12 opacity-0 animate-fade-in-up"
+            style={{ animationDelay: "0.1s" }}
+          >
+            <div className="text-sm text-primary font-semibold tracking-wide uppercase mb-2">
+              SERVICE
+            </div>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              핵심 서비스
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              기획부터 제조, 유통, 브랜딩까지.<br />
+              기획부터 제조, 유통, 브랜딩까지.
+              <br />
               FeedBack은 브랜드 성장의 전 과정을 함께합니다.
             </p>
           </div>
-          
+
           {/* Service Carousel */}
           <div className="relative max-w-6xl mx-auto">
             {/* Navigation Arrows */}
-            <button 
+            <button
               onClick={() => {
-                const newIndex = currentServiceIndex === 0 ? services.length - 1 : currentServiceIndex - 1;
+                const newIndex =
+                  currentServiceIndex === 0
+                    ? services.length - 1
+                    : currentServiceIndex - 1;
                 setCurrentServiceIndex(newIndex);
               }}
               className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
             >
               <ChevronLeft className="w-6 h-6 text-gray-600" />
             </button>
-            
-            <button 
+
+            <button
               onClick={() => {
                 const newIndex = (currentServiceIndex + 1) % services.length;
                 setCurrentServiceIndex(newIndex);
@@ -402,22 +470,22 @@ export default function Home() {
             >
               <ChevronRight className="w-6 h-6 text-gray-600" />
             </button>
-            
+
             {/* Service Card */}
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
               <div className="grid lg:grid-cols-2 gap-0">
                 {/* Image Section */}
                 <div className="relative h-96 lg:h-auto">
                   {services[currentServiceIndex] && (
-                    <img 
-                      src={services[currentServiceIndex].imageUrl} 
+                    <img
+                      src={services[currentServiceIndex].imageUrl}
                       alt={services[currentServiceIndex].title}
                       className="w-full h-full object-cover"
                     />
                   )}
                   <div className="absolute inset-0 bg-black/10"></div>
                 </div>
-                
+
                 {/* Content Section */}
                 <div className="p-8 lg:p-12 flex flex-col justify-center">
                   {services[currentServiceIndex] && (
@@ -432,12 +500,17 @@ export default function Home() {
                         {services[currentServiceIndex].description}
                       </p>
                       <div className="space-y-2 mb-8">
-                        {services[currentServiceIndex].features.map((feature, index) => (
-                          <div key={index} className="flex items-center text-sm text-gray-500">
-                            <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
-                            {feature}
-                          </div>
-                        ))}
+                        {services[currentServiceIndex].features.map(
+                          (feature, index) => (
+                            <div
+                              key={index}
+                              className="flex items-center text-sm text-gray-500"
+                            >
+                              <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
+                              {feature}
+                            </div>
+                          ),
+                        )}
                       </div>
                     </>
                   )}
@@ -450,7 +523,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            
+
             {/* Dot Indicators */}
             <div className="flex justify-center mt-8 space-x-2">
               {services.map((_, index) => (
@@ -458,9 +531,9 @@ export default function Home() {
                   key={index}
                   onClick={() => setCurrentServiceIndex(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentServiceIndex 
-                      ? 'bg-primary' 
-                      : 'bg-gray-300 hover:bg-gray-400'
+                    index === currentServiceIndex
+                      ? "bg-primary"
+                      : "bg-gray-300 hover:bg-gray-400"
                   }`}
                 />
               ))}
@@ -469,16 +542,19 @@ export default function Home() {
         </div>
       </section>
       {/* Brands Section */}
-      <section id="brands" className="h-screen flex items-center justify-center bg-white relative overflow-hidden"
-               style={{ scrollSnapAlign: 'start' }}>
+      <section
+        id="brands"
+        className="h-screen flex items-center justify-center bg-white relative overflow-hidden"
+        style={{ scrollSnapAlign: "start" }}
+      >
         <div className="absolute inset-0">
-          <img 
-            src={brands[currentBrandIndex].image} 
+          <img
+            src={brands[currentBrandIndex].image}
             alt={brands[currentBrandIndex].name}
             className="w-full h-full object-cover transition-all duration-1000"
           />
         </div>
-        
+
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content Section */}
@@ -494,26 +570,35 @@ export default function Home() {
                   {brands[currentBrandIndex].slogan}
                 </p>
               </div>
-              
+
               <p className="text-lg leading-relaxed opacity-90 max-w-sm">
                 {brands[currentBrandIndex].description}
               </p>
-              
+
               <div className="flex flex-wrap gap-3 mt-6">
                 {brands[currentBrandIndex].products.map((product, index) => (
-                  <span key={index} className="px-4 py-2 bg-white bg-opacity-80 rounded-full text-sm font-medium text-gray-900 backdrop-blur-sm">
+                  <span
+                    key={index}
+                    className="px-4 py-2 bg-white bg-opacity-80 rounded-full text-sm font-medium text-gray-900 backdrop-blur-sm"
+                  >
                     {product}
                   </span>
                 ))}
               </div>
-              
+
               <div className="flex items-center space-x-4 mt-8">
-                <Button asChild size="lg" className="bg-white text-gray-900 hover:bg-gray-100">
-                  <Link href={`/brand/${brands[currentBrandIndex].id}`}>브랜드 자세히 보기</Link>
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-white text-gray-900 hover:bg-gray-100"
+                >
+                  <Link href={`/brand/${brands[currentBrandIndex].id}`}>
+                    브랜드 자세히 보기
+                  </Link>
                 </Button>
               </div>
             </div>
-            
+
             {/* Navigation Section */}
             <div className="flex flex-col items-end space-y-6">
               {/* Play/Pause Button */}
@@ -521,29 +606,44 @@ export default function Home() {
                 onClick={() => setIsPaused(!isPaused)}
                 className="p-3 bg-white bg-opacity-20 rounded-full backdrop-blur-sm hover:bg-opacity-30 transition-all"
               >
-                {isPaused ? <PlayCircle className="w-6 h-6 text-gray-900" /> : <Pause className="w-6 h-6 text-gray-900" />}
+                {isPaused ? (
+                  <PlayCircle className="w-6 h-6 text-gray-900" />
+                ) : (
+                  <Pause className="w-6 h-6 text-gray-900" />
+                )}
               </button>
-              
+
               {/* Manual Navigation */}
               <div className="flex space-x-2">
                 <button
-                  onClick={() => setCurrentBrandIndex(currentBrandIndex === 0 ? brands.length - 1 : currentBrandIndex - 1)}
+                  onClick={() =>
+                    setCurrentBrandIndex(
+                      currentBrandIndex === 0
+                        ? brands.length - 1
+                        : currentBrandIndex - 1,
+                    )
+                  }
                   className="p-3 bg-white bg-opacity-20 rounded-full backdrop-blur-sm hover:bg-opacity-30 transition-all"
                 >
                   <ChevronLeft className="w-6 h-6 text-gray-900" />
                 </button>
                 <button
-                  onClick={() => setCurrentBrandIndex((currentBrandIndex + 1) % brands.length)}
+                  onClick={() =>
+                    setCurrentBrandIndex(
+                      (currentBrandIndex + 1) % brands.length,
+                    )
+                  }
                   className="p-3 bg-white bg-opacity-20 rounded-full backdrop-blur-sm hover:bg-opacity-30 transition-all"
                 >
                   <ChevronRight className="w-6 h-6 text-gray-900" />
                 </button>
               </div>
-              
+
               {/* Brand Counter and Progress */}
               <div className="text-right space-y-2">
                 <div className="text-sm text-gray-900 font-semibold">
-                  {String(currentBrandIndex + 1).padStart(2, '0')} / {String(brands.length).padStart(2, '0')}
+                  {String(currentBrandIndex + 1).padStart(2, "0")} /{" "}
+                  {String(brands.length).padStart(2, "0")}
                 </div>
               </div>
             </div>
@@ -551,60 +651,82 @@ export default function Home() {
         </div>
       </section>
       {/* News Section */}
-      <section id="news" className="h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white relative overflow-hidden"
-               style={{ scrollSnapAlign: 'start' }}>
+      <section
+        id="news"
+        className="h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white relative overflow-hidden"
+        style={{ scrollSnapAlign: "start" }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content Section */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <div className="text-sm text-primary font-semibold tracking-wide uppercase mb-2">LATEST NEWS</div>
+                <div className="text-sm text-primary font-semibold tracking-wide uppercase mb-2">
+                  LATEST NEWS
+                </div>
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                  성장하는 FeedBack의<br />
+                  성장하는 FeedBack의
+                  <br />
                   <span className="text-primary">주요 소식과 성과</span>
                 </h2>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  글로벌 비즈니스 파트너로서 FeedBack의 다양한 성과와 
-                  브랜드 확장, 투자 유치 등의 최신 소식을 확인해보세요.
+                  글로벌 비즈니스 파트너로서 FeedBack의 다양한 성과와 브랜드
+                  확장, 투자 유치 등의 최신 소식을 확인해보세요.
                 </p>
               </div>
-              
+
               <div className="grid sm:grid-cols-2 gap-6">
                 <div className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <Globe className="w-6 h-6 text-blue-600" />
                   </div>
                   <h3 className="font-bold text-lg mb-2">Hoid 일본 진출</h3>
-                  <p className="text-gray-600 text-sm">디자인 가전 브랜드 Hoid가 일본 시장에 정식 진출하여 도쿄와 오사카 주요 매장에서 만나보실 수 있습니다.</p>
+                  <p className="text-gray-600 text-sm">
+                    디자인 가전 브랜드 Hoid가 일본 시장에 정식 진출하여 도쿄와
+                    오사카 주요 매장에서 만나보실 수 있습니다.
+                  </p>
                 </div>
-                
+
                 <div className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                     <TrendingUp className="w-6 h-6 text-green-600" />
                   </div>
                   <h3 className="font-bold text-lg mb-2">시리즈 A 투자 유치</h3>
-                  <p className="text-gray-600 text-sm">성공적인 투자 유치로 동남아시아 시장 확장과 서비스 고도화를 가속화할 예정입니다.</p>
+                  <p className="text-gray-600 text-sm">
+                    성공적인 투자 유치로 동남아시아 시장 확장과 서비스 고도화를
+                    가속화할 예정입니다.
+                  </p>
                 </div>
-                
+
                 <div className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                     <Smartphone className="w-6 h-6 text-purple-600" />
                   </div>
-                  <h3 className="font-bold text-lg mb-2">다국어 앰 출시</h3>
-                  <p className="text-gray-600 text-sm">의료관광 고객을 위한 전용 모바일 앰의 베타 버전이 출시되어 4개 국어를 지원합니다.</p>
+                  <h3 className="font-bold text-lg mb-2">다국어 앱 출시</h3>
+                  <p className="text-gray-600 text-sm">
+                    의료관광 고객을 위한 전용 모바일 앱의 베타 버전이 출시되어
+                    4개 국어를 지원합니다.
+                  </p>
                 </div>
-                
+
                 <div className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
                     <Award className="w-6 h-6 text-red-600" />
                   </div>
                   <h3 className="font-bold text-lg mb-2">중국 공장 MOU</h3>
-                  <p className="text-gray-600 text-sm">중국 최대 규모 공기청정기 제조 공장과 MOU 체결로 3-in-1 기술을 국내 독점 도입했습니다.</p>
+                  <p className="text-gray-600 text-sm">
+                    중국 최대 규모 공기청정기 제조 공장과 MOU 체결로 3-in-1
+                    기술을 국내 독점 도입했습니다.
+                  </p>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-4">
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-white"
+                >
                   <Link href="/news">모든 뉴스 보기</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
@@ -612,35 +734,45 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            
+
             {/* Visual Section */}
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-3xl transform rotate-3 opacity-10"></div>
               <div className="relative bg-white rounded-3xl shadow-2xl p-8 transform -rotate-1">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-2">2025.08</div>
+                    <div className="text-3xl font-bold text-primary mb-2">
+                      2025.08
+                    </div>
                     <div className="text-sm text-gray-600">최신 보도</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-2">6+</div>
+                    <div className="text-3xl font-bold text-primary mb-2">
+                      6+
+                    </div>
                     <div className="text-sm text-gray-600">주요 뉴스</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-2">3</div>
+                    <div className="text-3xl font-bold text-primary mb-2">
+                      3
+                    </div>
                     <div className="text-sm text-gray-600">브랜드 런칭</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-2">2</div>
+                    <div className="text-3xl font-bold text-primary mb-2">
+                      2
+                    </div>
                     <div className="text-sm text-gray-600">글로벌 진출</div>
                   </div>
                 </div>
-                
+
                 <div className="mt-6 pt-6 border-t border-gray-200">
                   <blockquote className="text-center italic text-gray-700">
                     "혁신과 성장으로 미래를 만들어 갑니다"
                   </blockquote>
-                  <div className="text-center text-sm text-gray-500 mt-2">- FeedBack 보도자료</div>
+                  <div className="text-center text-sm text-gray-500 mt-2">
+                    - FeedBack 보도자료
+                  </div>
                 </div>
               </div>
             </div>
@@ -648,74 +780,93 @@ export default function Home() {
         </div>
       </section>
       {/* Stats Section */}
-      <section id="stats" ref={statsRef} className="h-screen flex items-center justify-center bg-gradient-to-r from-primary to-secondary text-white relative overflow-hidden"
-               style={{ scrollSnapAlign: 'start' }}>
+      <section
+        id="stats"
+        ref={statsRef}
+        className="h-screen flex items-center justify-center bg-gradient-to-r from-primary to-secondary text-white relative overflow-hidden"
+        style={{ scrollSnapAlign: "start" }}
+      >
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="transform hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="text-5xl font-bold mb-2 tabular-nums min-w-[120px]">{yearCount}</div>
+              <div className="text-5xl font-bold mb-2 tabular-nums min-w-[120px]">
+                {yearCount}
+              </div>
               <div className="text-xl opacity-90">설립년도</div>
             </div>
             <div className="transform hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="text-5xl font-bold mb-2 tabular-nums min-w-[80px]">{brandCount}+</div>
+              <div className="text-5xl font-bold mb-2 tabular-nums min-w-[80px]">
+                {brandCount}+
+              </div>
               <div className="text-xl opacity-90">자체 브랜드</div>
             </div>
             <div className="transform hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="text-5xl font-bold mb-2 tabular-nums min-w-[80px]">{partnerCount}+</div>
+              <div className="text-5xl font-bold mb-2 tabular-nums min-w-[80px]">
+                {partnerCount}+
+              </div>
               <div className="text-xl opacity-90">파트너 국가</div>
             </div>
             <div className="transform hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="text-5xl font-bold mb-2 tabular-nums min-w-[100px]">{hospitalCount}+</div>
+              <div className="text-5xl font-bold mb-2 tabular-nums min-w-[100px]">
+                {hospitalCount}+
+              </div>
               <div className="text-xl opacity-90">병원 제휴</div>
             </div>
           </div>
         </div>
       </section>
       {/* CTA Section with Video Background */}
-      <section id="cta" className="h-screen flex items-center justify-center relative overflow-hidden"
-               style={{ scrollSnapAlign: 'start' }}>
+      <section
+        id="cta"
+        className="h-screen flex items-center justify-center relative overflow-hidden"
+        style={{ scrollSnapAlign: "start" }}
+      >
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full">
-          <video 
+          <video
             className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto transform -translate-x-1/2 -translate-y-1/2 object-cover"
-            autoPlay 
-            muted 
-            loop 
+            autoPlay
+            muted
+            loop
             playsInline
           >
             <source src={shipVideo} type="video/mp4" />
           </video>
         </div>
-        
+
         {/* Black overlay with 25% transparency */}
         <div className="absolute inset-0 bg-[#0000005e]"></div>
-        
+
         {/* Content over video */}
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
-          <div className="ml-[10%] max-w-2xl opacity-0 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+          <div
+            className="ml-[10%] max-w-2xl opacity-0 animate-fade-in-up"
+            style={{ animationDelay: "0.1s" }}
+          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
               글로벌 진출을 꿈꾸시나요?
             </h2>
             <p className="text-xl text-white/90 mb-12 drop-shadow-lg font-semibold">
-              FeedBack과 함께 아시아를 넘어 세계 시장으로 나아가세요.<br />
+              FeedBack과 함께 아시아를 넘어 세계 시장으로 나아가세요.
+              <br />
               전문 컨설턴트가 맞춤형 솔루션을 제안해드립니다.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 items-start">
-              <Button 
-                asChild 
-                size="lg" 
+              <Button
+                asChild
+                size="lg"
                 className="text-lg px-10 py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl animate-floating bg-white text-blue-600 hover:bg-gray-100"
-                style={{animationDelay: '1s'}}
+                style={{ animationDelay: "1s" }}
               >
                 <Link href="/contact">무료 상담 신청</Link>
               </Button>
-              <Button 
+              <Button
                 asChild
-                variant="outline" 
-                size="lg" 
+                variant="outline"
+                size="lg"
                 className="text-lg px-10 py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl animate-floating border-white bg-white text-blue-600 hover:bg-gray-100"
-                style={{animationDelay: '1.5s'}}
+                style={{ animationDelay: "1.5s" }}
               >
                 <Link href="/service">사업 제안서 보기</Link>
               </Button>
