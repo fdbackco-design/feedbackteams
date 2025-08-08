@@ -6,6 +6,7 @@ import { Hospital, Smartphone, ShoppingCart, TrendingUp, ChevronLeft, ChevronRig
 import { Link } from "wouter";
 import cargoShipImage from "@assets/bada-leul-hanghae-haneun-hwamulseon_1754648981305.jpg";
 import factoryImage from "@assets/factory_1754649106831.png";
+import homeshoppingImage from "@assets/homeshopping_1754649174036.png";
 
 const services = [
   {
@@ -33,7 +34,7 @@ const services = [
     features: ["홈쇼핑 연계 마케팅", "디지털 마케팅", "글로벌 진출 전략"],
     buttonText: "상담 신청",
     buttonColor: "bg-purple-600 hover:bg-purple-700",
-    imageUrl: ""
+    imageUrl: homeshoppingImage
   },
   {
     icon: Hospital,
