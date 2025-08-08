@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
+import HoidLogo from "@/components/HoidLogo";
 import hoidImg from "@/assets/brand/hoidintro.jpg";
 import medifeedImg from "@assets/medifeed_1_1754636614100.jpg";
 import inyourheartImg from "@assets/in_your_1754636664888.jpg";
@@ -12,7 +13,7 @@ const brands = [
     name: "Hoid",
     category: "미니멀 가전 브랜드",
     slogan: "공기 속까지 바꾸는 디자인",
-    logo: "HOID",
+    logo: "svg",
     description:
       "공기청정기, 제습기 등 미니멀한 디자인과 첨단 기술이 만나 일상의 공기질을 혁신하는 스마트 가전 브랜드입니다. 홈쇼핑과 해외진출을 통해 글로벌 시장에서 인정받고 있습니다.",
     products: ["공기청정기", "제습기", "3-in-1 기술", "HEPA14 필터"],
@@ -90,9 +91,13 @@ export default function Brand() {
                     <div
                       className={`w-20 h-20 ${brand.badgeColor} rounded-full flex items-center justify-center mr-6`}
                     >
-                      <span className="text-white font-bold text-2xl">
-                        {brand.logo}
-                      </span>
+                      {brand.id === 'hoid' ? (
+                        <HoidLogo className="w-12 h-auto" fill="white" />
+                      ) : (
+                        <span className="text-white font-bold text-2xl">
+                          {brand.logo}
+                        </span>
+                      )}
                     </div>
                     <div>
                       <h2 className="text-4xl font-bold text-gray-900">

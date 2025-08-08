@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Link } from "wouter";
 import { ArrowLeft, CheckCircle, Globe, ShoppingCart, Zap } from "lucide-react";
+import HoidLogo from "@/components/HoidLogo";
 
 import flow_2025_04_17_193718625_1754623144595 from "@assets/flow_2025-04-17_193718625_1754623144595.png";
 
@@ -44,9 +45,9 @@ export default function Hoid() {
         {/* Content over video */}
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="container mx-auto px-4 text-center text-white">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
-              HOID
-            </h1>
+            <div className="mb-4">
+              <HoidLogo className="h-16 md:h-20 mx-auto" fill="white" />
+            </div>
             <p className="text-2xl md:text-3xl font-medium mb-6 text-blue-200 drop-shadow-lg">
               공기 속까지 바꾸는 디자인
             </p>

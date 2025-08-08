@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Truck, Tags, Globe, ArrowRight, Play, ChevronDown, ChevronUp, Heart, Smartphone } from "lucide-react";
 import { useCountUp } from "@/hooks/useCountUp";
+import HoidLogo from "@/components/HoidLogo";
 import shipVideo from "@assets/ship-video.mp4";
 
 export default function Home() {
@@ -352,7 +353,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-r from-gray-50 to-gray-25 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <CardHeader className="relative z-10">
                   <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 transform group-hover:rotate-12 transition-transform duration-300">
-                    <span className="text-white font-bold text-sm">HOID</span>
+                    <HoidLogo className="w-10 h-auto" fill="white" />
                   </div>
                   <CardTitle className="text-xl group-hover:text-accent transition-colors">Hoid</CardTitle>
                 </CardHeader>
