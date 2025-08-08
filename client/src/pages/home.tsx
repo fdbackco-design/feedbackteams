@@ -48,7 +48,7 @@ export default function Home() {
 
   const yearCount = useCountUp({
     start: 2000,
-    end: 2023,
+    end: 2024,
     duration: 2000,
     trigger: statsInView
   });
