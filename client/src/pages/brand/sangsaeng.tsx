@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Link } from "wouter";
 import { ArrowLeft, Heart, Globe, Smartphone, Building2, Users, MapPin } from "lucide-react";
 import SangsaengLogo from "@/components/SangsaengLogo";
+import sangsaengBannerImage from "@assets/Whisk_13273bb9d1_1754641826671.jpg";
 
 export default function Sangsaeng() {
   return (
@@ -18,23 +19,29 @@ export default function Sangsaeng() {
       </div>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-12">
-        <div className="text-center mb-12">
-          <div className="mb-8">
-            <img 
-              src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
-              alt="상생 브랜드 로고" 
-              className="mx-auto h-24 w-auto mb-6"
-            />
+      <section className="relative h-screen w-full overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${sangsaengBannerImage})` }}
+        >
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
+        
+        {/* Content over image */}
+        <div className="relative z-10 h-full flex items-center justify-center">
+          <div className="container mx-auto px-4 text-center text-white">
+            <div className="mb-4">
+              <SangsaengLogo className="h-16 md:h-20 mx-auto" fill="white" />
+            </div>
+            <p className="text-2xl md:text-3xl font-medium mb-6 text-blue-200 drop-shadow-lg">
+              WE CONNECT KOREAN MEDICAL SERVICES TO THE WORLD
+            </p>
+            <p className="text-lg md:text-xl max-w-3xl mx-auto drop-shadow-lg opacity-90">
+              메디컬 투어리즘부터 글로벌 헬스케어 플랫폼까지, 한국의 우수한 의료 서비스를 
+              전 세계에 연결하는 종합 의료 플랫폼입니다.
+            </p>
           </div>
-          <div className="mb-4">
-            <SangsaengLogo className="h-16 mx-auto" />
-          </div>
-          <p className="text-2xl text-blue-600 font-medium mb-6">WE CONNECT KOREAN MEDICAL SERVICES TO THE WORLD</p>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            메디컬 투어리즘부터 글로벌 헬스케어 플랫폼까지, 한국의 우수한 의료 서비스를 
-            전 세계에 연결하는 종합 의료 플랫폼입니다.
-          </p>
         </div>
       </section>
 
