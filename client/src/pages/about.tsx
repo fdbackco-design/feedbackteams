@@ -7,7 +7,7 @@ import partnershipImage from "@assets/5f76e132-877a-4d9e-8c9c-de9ff84cb5dd_17545
 import networkImage from "@assets/5068978_1754568223986.jpg";
 import globalImage from "@assets/13730_1754568375896.jpg";
 import trustImage from "@assets/hands_1754568922347.png";
-import cleanRoomImage from "@assets/hoid4_1754617901047.jpg";
+import cleanRoomImage from "@assets/hoid4_1754618227868.jpg";
 
 // SVG 컴포넌트들
 const HeroBackgroundSVG = () => (
@@ -194,31 +194,30 @@ export default function About() {
           </div>
         </div>
       </section>
-      {/* Center Banner with Business Value */}
-      <section className="py-16 bg-gradient-to-r from-primary/10 to-accent/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="lg:w-1/2">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                <img 
-                  src={cleanRoomImage}
-                  alt="깨끗하고 현대적인 공간"
-                  className="w-full h-80 object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-              </div>
-            </div>
-            <div className="lg:w-1/2 text-center lg:text-left">
-              <h3 className="text-3xl font-bold text-foreground mb-6">
-                고객님의 <span className="text-primary">'생활 속 행복'</span>을 목표로<br />
-                열정 넘치는 이들이 모인 FeedBack은
-              </h3>
-              <p className="text-lg text-foreground leading-relaxed">
-                최고의 제품을 안겨드리기 위해 기술혁신에 끊임없이 노력을 기울이고 있으며,<br />
-                이를 위한 연구개발투자 또한 지속적으로 이루어지고 있습니다.
-              </p>
-            </div>
-          </div>
+      {/* Full Bleed Background Image + Parallax Scroll */}
+      <section 
+        className="relative min-h-[80vh] flex items-center justify-center overflow-hidden"
+        style={{
+          backgroundImage: `url(${cleanRoomImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/40"></div>
+        
+        {/* Content overlay */}
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h3 className="text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight">
+            고객님의 <span className="text-blue-300">'생활 속 행복'</span>을 목표로<br />
+            열정 넘치는 이들이 모인 FeedBack은
+          </h3>
+          <p className="text-xl lg:text-2xl text-gray-200 leading-relaxed max-w-3xl mx-auto">
+            최고의 제품을 안겨드리기 위해 기술혁신에 끊임없이 노력을 기울이고 있으며,<br />
+            이를 위한 연구개발투자 또한 지속적으로 이루어지고 있습니다.
+          </p>
         </div>
       </section>
       
