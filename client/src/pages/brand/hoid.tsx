@@ -15,7 +15,7 @@ import homeshoppingImage from "@assets/homeshopping_1754639787939.png";
 
 export default function Hoid() {
   return (
-    <div className="min-h-screen">
+    <div>
       {/* Hero Section with Video Background - Full Screen */}
       <section className="relative h-screen w-full overflow-hidden">
         {/* Video Background */}

@@ -7,7 +7,7 @@ import medifeedBannerImage from "@assets/medifeed_2_1754640478083.jpg";
 
 export default function Medifeed() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+    <div className="bg-gradient-to-b from-green-50 to-white">
       {/* Back Navigation */}
       <div className="container mx-auto px-4 py-6">
         <Link href="/brand">

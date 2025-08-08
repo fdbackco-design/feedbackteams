@@ -7,7 +7,7 @@ import sangsaengBannerImage from "@assets/Whisk_13273bb9d1_1754641826671.jpg";
 
 export default function Sangsaeng() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="bg-gradient-to-b from-blue-50 to-white">
       {/* Back Navigation */}
       <div className="container mx-auto px-4 py-6">
         <Link href="/brand">

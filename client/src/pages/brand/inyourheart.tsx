@@ -5,7 +5,7 @@ import { ArrowLeft, Heart, Leaf, Sparkles, Globe2 } from "lucide-react";
 
 export default function InYourHeart() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-50 to-white">
+    <div className="bg-gradient-to-b from-pink-50 to-white">
       {/* Back Navigation */}
       <div className="container mx-auto px-4 py-6">
         <Link href="/brand">
