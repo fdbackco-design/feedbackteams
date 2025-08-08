@@ -30,11 +30,11 @@ export function useCountUp({ start, end, duration, trigger }: UseCountUpOptions)
       const elapsed = currentTime - startTimeRef.current;
       const progress = Math.min(elapsed / duration, 1);
       
-      // Easing function for smooth animation
-      const easeOutCubic = 1 - Math.pow(1 - progress, 3);
-      const currentCount = start + (end - start) * easeOutCubic;
+      // Easing function for smooth animation - ease-out-quart for more natural ending
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      const currentCount = start + (end - start) * easeOutQuart;
       
-      setCount(Math.floor(currentCount));
+      setCount(Math.round(currentCount));
 
       if (progress < 1) {
         frameRef.current = requestAnimationFrame(animate);
