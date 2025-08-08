@@ -48,6 +48,10 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <header className={`sticky top-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -57,7 +61,7 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0">
+            <Link href="/" className="flex-shrink-0" onClick={scrollToTop}>
               <FeedBackLogo 
                 className={`transition-all duration-300 fill-foreground ${
                   isScrolled ? 'h-6' : 'h-7'
@@ -78,6 +82,7 @@ export default function Header() {
                       ? "text-primary border-b-2 border-primary"
                       : "text-muted-foreground hover:text-primary"
                   }`}
+                  onClick={scrollToTop}
                 >
                   {item.name}
                 </Link>
@@ -122,7 +127,10 @@ export default function Header() {
                       ? "text-primary font-medium"
                       : "text-gray-600"
                   }`}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    scrollToTop();
+                  }}
                 >
                   {item.name}
                 </Link>
