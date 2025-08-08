@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
+import { ArrowRight } from "lucide-react";
 import HoidLogo from "@/components/HoidLogo";
 import hoidImg from "@/assets/brand/hoidintro.jpg";
 import medifeedImg from "@assets/medifeed_1_1754636614100.jpg";
@@ -127,6 +128,7 @@ export default function Brand() {
                       className={`${brand.buttonColor} text-white px-8 py-4 text-lg font-semibold transition-colors`}
                     >
                       {brand.name} 브랜드 자세히 보기
+                      <ArrowRight className="ml-2 w-5 h-5" />
                     </Button>
                   </Link>
                 </div>
