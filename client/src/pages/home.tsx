@@ -16,6 +16,8 @@ import hoidImg from "@/assets/brand/hoidintro.jpg";
 import medifeedImg from "@assets/medifeed_1_1754636614100.jpg";
 import inyourheartImg from "@assets/in_your_1754636664888.jpg";
 import sangsaengImg from "@assets/sangsaeng_1_1754636754183.jpg";
+import newsData from "@/data/news.json";
+import { resolveNewsThumbnail, FALLBACK } from "@/assets/news";
 
 const services = [
   {
@@ -110,6 +112,7 @@ export default function Home() {
     { id: 'hero', name: '홈' },
     { id: 'services', name: '서비스' },
     { id: 'brands', name: '브랜드' },
+    { id: 'news', name: '뉴스' },
     { id: 'stats', name: '실적' },
     { id: 'cta', name: '문의' }
   ];
@@ -559,6 +562,81 @@ export default function Home() {
                 {String(currentBrandIndex + 1).padStart(2, '0')} / {String(brands.length).padStart(2, '0')}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      {/* News Section */}
+      <section id="news" className="h-screen flex items-center justify-center bg-gray-50"
+               style={{ scrollSnapAlign: 'start' }}>
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="text-sm text-primary font-semibold tracking-wide uppercase mb-2">NEWS</div>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">회사 소식</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              FeedBack의 최신 소식과 주요 성과를 확인해보세요
+            </p>
+          </div>
+          
+          {/* News Grid */}
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {newsData.slice(0, 3).map((news, index) => {
+              const src = resolveNewsThumbnail(news.thumbnail);
+              return (
+                <Card
+                  key={index}
+                  className="shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 bg-white"
+                >
+                  <div className="aspect-video bg-gray-200 relative overflow-hidden">
+                    <img
+                      src={src}
+                      alt={news.title}
+                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                      onError={(e) => {
+                        (e.currentTarget as HTMLImageElement).src = FALLBACK;
+                      }}
+                    />
+                  </div>
+                  <CardHeader className="p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <Badge className={
+                        news.category === '보도자료' ? 'bg-secondary text-white' :
+                        news.category === '기업소식' ? 'bg-accent text-white' :
+                        news.category === '브랜드뉴스' ? 'bg-primary text-white' :
+                        'bg-gray-500 text-white'
+                      }>
+                        {news.category}
+                      </Badge>
+                      <time className="text-gray-500 text-sm">{news.date}</time>
+                    </div>
+                    <CardTitle className="text-xl font-bold text-gray-900 line-clamp-2 mb-3">
+                      {news.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="px-6 pb-6">
+                    <CardDescription className="text-gray-600 mb-4 line-clamp-3">
+                      {news.summary}
+                    </CardDescription>
+                    <Link
+                      href={news.link}
+                      className="inline-flex items-center text-primary font-semibold hover:text-primary/80 transition-colors"
+                    >
+                      자세히 보기
+                      <ArrowRight className="ml-1 w-4 h-4" />
+                    </Link>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+          
+          {/* View All News Button */}
+          <div className="text-center mt-12">
+            <Button asChild size="lg" className="px-8 py-6 text-lg">
+              <Link href="/news">
+                모든 뉴스 보기
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
