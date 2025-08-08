@@ -1,7 +1,8 @@
+import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Hospital, Smartphone, ShoppingCart, TrendingUp } from "lucide-react";
+import { Hospital, Smartphone, ShoppingCart, TrendingUp, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "wouter";
 
 const services = [
@@ -48,6 +49,46 @@ const services = [
 ];
 
 export default function Service() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const carouselRef = useRef<HTMLDivElement>(null);
+  
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % services.length);
+    if (carouselRef.current) {
+      const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
+      const gap = 24; // gap-6 = 24px
+      carouselRef.current.scrollTo({
+        left: ((currentIndex + 1) % services.length) * (cardWidth + gap),
+        behavior: 'smooth'
+      });
+    }
+  };
+  
+  const prevSlide = () => {
+    const newIndex = currentIndex === 0 ? services.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+    if (carouselRef.current) {
+      const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
+      const gap = 24; // gap-6 = 24px
+      carouselRef.current.scrollTo({
+        left: newIndex * (cardWidth + gap),
+        behavior: 'smooth'
+      });
+    }
+  };
+  
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+    if (carouselRef.current) {
+      const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
+      const gap = 24; // gap-6 = 24px
+      carouselRef.current.scrollTo({
+        left: index * (cardWidth + gap),
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,36 +100,74 @@ export default function Service() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-8">
-                <div className="flex items-start">
-                  <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <service.icon className="w-8 h-8 text-gray-600" />
-                  </div>
-                  <div className="ml-6 flex-1">
-                    <CardTitle className="text-2xl font-bold text-gray-900 mb-4">
-                      {service.title}
-                    </CardTitle>
-                    <CardDescription className="text-gray-600 mb-6 leading-relaxed">
-                      {service.description}
-                    </CardDescription>
-                    <div className="mb-6 space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="text-sm text-gray-500">
-                          • {feature}
-                        </div>
-                      ))}
+        {/* Carousel Container */}
+        <div className="relative">
+          {/* Navigation Arrows */}
+          <button 
+            onClick={prevSlide}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
+          >
+            <ChevronLeft className="w-6 h-6 text-gray-600" />
+          </button>
+          
+          <button 
+            onClick={nextSlide}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
+          >
+            <ChevronRight className="w-6 h-6 text-gray-600" />
+          </button>
+          
+          {/* Carousel Track */}
+          <div 
+            ref={carouselRef}
+            className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth px-12"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            {services.map((service, index) => (
+              <Card key={index} className="flex-shrink-0 w-96 shadow-lg hover:shadow-xl transition-shadow">
+                <CardContent className="p-8">
+                  <div className="flex flex-col">
+                    <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0 mb-6">
+                      <service.icon className="w-8 h-8 text-gray-600" />
                     </div>
-                    <Button className={`${service.buttonColor} text-white transition-colors`}>
-                      {service.buttonText}
-                    </Button>
+                    <div className="flex-1">
+                      <CardTitle className="text-2xl font-bold text-gray-900 mb-4">
+                        {service.title}
+                      </CardTitle>
+                      <CardDescription className="text-gray-600 mb-6 leading-relaxed">
+                        {service.description}
+                      </CardDescription>
+                      <div className="mb-6 space-y-2">
+                        {service.features.map((feature, featureIndex) => (
+                          <div key={featureIndex} className="text-sm text-gray-500">
+                            • {feature}
+                          </div>
+                        ))}
+                      </div>
+                      <Button className={`${service.buttonColor} text-white transition-colors`}>
+                        {service.buttonText}
+                      </Button>
+                    </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          
+          {/* Dot Indicators */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {services.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full transition-colors ${
+                  index === currentIndex 
+                    ? 'bg-primary' 
+                    : 'bg-gray-300 hover:bg-gray-400'
+                }`}
+              />
+            ))}
+          </div>
         </div>
         
         {/* CTA Section */}
