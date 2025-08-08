@@ -2,11 +2,49 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Truck, Tags, Globe, ArrowRight, Play, ChevronDown, ChevronUp, Heart, Smartphone } from "lucide-react";
+import { Truck, Tags, Globe, ArrowRight, Play, ChevronDown, ChevronUp, Heart, Smartphone, ChevronLeft, ChevronRight } from "lucide-react";
 import { useCountUp } from "@/hooks/useCountUp";
 import HoidLogo from "@/components/HoidLogo";
 import shipVideo from "@assets/ship_section_1754640786186.mp4";
 import mainBannerVideo from "@assets/main_banner_last_1754645135592.mp4";
+import cargoShipImage from "@assets/bada-leul-hanghae-haneun-hwamulseon_1754648981305.jpg";
+import factoryImage from "@assets/factory_1754649106831.png";
+import homeshoppingImage from "@assets/homeshopping_1754649174036.png";
+import hospitalImage from "@assets/Whisk_8652b62135_1754649198457.jpg";
+import appDevImage from "@assets/representation-user-experience-interface-design_1754649277467.jpg";
+
+const services = [
+  {
+    title: "유통 / 수출입 중개",
+    description: "아시아 전역의 유통망을 통해 효율적인 수출입 및 중개 서비스를 제공합니다. 다양한 제품군에 대한 전문적인 수출입 컨설팅과 물류 솔루션을 함께 제공하여 글로벌 비즈니스를 지원합니다.",
+    features: ["아시아 유통망 구축", "수출입 통관 대행", "물류 최적화 솔루션"],
+    imageUrl: cargoShipImage
+  },
+  {
+    title: "자체 브랜드 제조 (OEM)",
+    description: "Hoid, Medifeed, InYourHeart, 상생 등 4개 자체 브랜드의 제조 및 OEM 생산을 통해 브랜드 성장을 지원합니다. 품질 관리부터 제품 개발까지 전 과정을 책임집니다.",
+    features: ["4개 자체 브랜드 운영", "OEM/ODM 제조", "품질관리 시스템"],
+    imageUrl: factoryImage
+  },
+  {
+    title: "글로벌 마케팅/브랜딩",
+    description: "홈쇼핑 연계와 디지털 마케팅을 통한 글로벌 브랜딩 솔루션을 제공합니다. 브랜드 아이덴티티 개발부터 글로벌 시장 진출 전략까지 종합적인 마케팅 서비스를 지원합니다.",
+    features: ["홈쇼핑 연계 마케팅", "디지털 마케팅", "글로벌 진출 전략"],
+    imageUrl: homeshoppingImage
+  },
+  {
+    title: "의료관광 플랫폼",
+    description: "상생 브랜드를 통한 의료관광 플랫폼 운영으로 한국의 우수한 의료 서비스를 전 세계에 연결합니다. 태국, 베트남을 시작으로 아시아 전역으로 서비스를 확장하고 있습니다.",
+    features: ["메디컬 투어리즘", "병원 네트워크", "다국어 플랫폼"],
+    imageUrl: hospitalImage
+  },
+  {
+    title: "앱 개발",
+    description: "의료/케어 통합 앱 개발로 디지털 헬스케어 솔루션을 제공합니다. 다국어 지원과 실시간 상담 기능을 통해 글로벌 사용자들에게 편리한 서비스를 제공합니다.",
+    features: ["의료/케어 통합 앱", "다국어 지원", "실시간 상담"],
+    imageUrl: appDevImage
+  }
+];
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -16,6 +54,8 @@ export default function Home() {
   const [touchEnd, setTouchEnd] = useState(0);
   const [statsInView, setStatsInView] = useState(false);
   const statsRef = useRef<HTMLDivElement>(null);
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
+  const serviceCarouselRef = useRef<HTMLDivElement>(null);
 
   const sections = [
     { id: 'hero', name: '홈' },
@@ -271,7 +311,8 @@ export default function Home() {
       <section id="services" className="h-screen flex items-center justify-center bg-white"
                style={{ scrollSnapAlign: 'start' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 opacity-0 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+          <div className="text-center mb-12 opacity-0 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+            <div className="text-sm text-primary font-semibold tracking-wide uppercase mb-2">SERVICE</div>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">핵심 서비스</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               기획부터 제조, 유통, 브랜딩까지.<br />
@@ -279,64 +320,91 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Service Card 1 */}
-            <Card className="bg-gray-50 hover:shadow-xl transition-all duration-500 text-center transform hover:-translate-y-2 opacity-0 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-              <CardHeader>
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 transform transition-transform duration-300 hover:scale-110 hover:rotate-12">
-                  <Truck className="w-8 h-8 text-white" />
+          {/* Service Carousel */}
+          <div className="relative max-w-6xl mx-auto">
+            {/* Navigation Arrows */}
+            <button 
+              onClick={() => {
+                const newIndex = currentServiceIndex === 0 ? services.length - 1 : currentServiceIndex - 1;
+                setCurrentServiceIndex(newIndex);
+              }}
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
+            >
+              <ChevronLeft className="w-6 h-6 text-gray-600" />
+            </button>
+            
+            <button 
+              onClick={() => {
+                const newIndex = (currentServiceIndex + 1) % services.length;
+                setCurrentServiceIndex(newIndex);
+              }}
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
+            >
+              <ChevronRight className="w-6 h-6 text-gray-600" />
+            </button>
+            
+            {/* Service Card */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+              <div className="grid lg:grid-cols-2 gap-0">
+                {/* Image Section */}
+                <div className="relative h-96 lg:h-auto">
+                  {services[currentServiceIndex] && (
+                    <img 
+                      src={services[currentServiceIndex].imageUrl} 
+                      alt={services[currentServiceIndex].title}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-black/10"></div>
                 </div>
-                <CardTitle className="text-xl">유통 / 수출입 중개</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600 mb-6">
-                  아시아 전역의 유통망을 통해 효율적인 수출입 및 중개 서비스를 제공합니다.
-                </CardDescription>
-                <Link href="/service" className="text-primary font-semibold hover:underline inline-flex items-center group">
-                  자세히 보기 <ArrowRight className="ml-1 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </CardContent>
-            </Card>
-            
-            {/* Service Card 2 */}
-            <Card className="bg-gray-50 hover:shadow-xl transition-all duration-500 text-center transform hover:-translate-y-2 opacity-0 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-              <CardHeader>
-                <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6 transform transition-transform duration-300 hover:scale-110 hover:rotate-12">
-                  <Tags className="w-8 h-8 text-white" />
+                
+                {/* Content Section */}
+                <div className="p-8 lg:p-12 flex flex-col justify-center">
+                  {services[currentServiceIndex] && (
+                    <>
+                      <div className="text-sm text-primary font-semibold mb-4">
+                        0{currentServiceIndex + 1}/0{services.length}
+                      </div>
+                      <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
+                        {services[currentServiceIndex].title}
+                      </h3>
+                      <p className="text-gray-600 mb-6 leading-relaxed">
+                        {services[currentServiceIndex].description}
+                      </p>
+                      <div className="space-y-2 mb-8">
+                        {services[currentServiceIndex].features.map((feature, index) => (
+                          <div key={index} className="flex items-center text-sm text-gray-500">
+                            <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
+                            {feature}
+                          </div>
+                        ))}
+                      </div>
+                    </>
+                  )}
+                  <Link href="/service">
+                    <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-semibold inline-flex items-center group">
+                      자세히 보기
+                      <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
                 </div>
-                <CardTitle className="text-xl">자체 브랜드 제조</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600 mb-6">
-                  OEM 생산 및 Hoid 등 자체 브랜드 개발로 브랜드 성장을 지원합니다.
-                </CardDescription>
-                <Link href="/brand" className="text-primary font-semibold hover:underline inline-flex items-center group">
-                  자세히 보기 <ArrowRight className="ml-1 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
             
-            {/* Service Card 3 */}
-            <Card className="bg-gray-50 hover:shadow-xl transition-all duration-500 text-center transform hover:-translate-y-2 opacity-0 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
-              <CardHeader>
-                <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6 transform transition-transform duration-300 hover:scale-110 hover:rotate-12">
-                  <Globe className="w-8 h-8 text-white" />
-                </div>
-                <CardTitle className="text-xl">글로벌 마케팅/브랜딩</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600 mb-6">
-                  홈쇼핑 연계와 디지털 마케팅을 통한 글로벌 브랜딩 솔루션을 제공합니다.
-                </CardDescription>
-                <Link href="/service" className="text-primary font-semibold hover:underline inline-flex items-center group">
-                  자세히 보기 <ArrowRight className="ml-1 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </CardContent>
-            </Card>
-
-            
-
-            
+            {/* Dot Indicators */}
+            <div className="flex justify-center mt-8 space-x-2">
+              {services.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentServiceIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-colors ${
+                    index === currentServiceIndex 
+                      ? 'bg-primary' 
+                      : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
