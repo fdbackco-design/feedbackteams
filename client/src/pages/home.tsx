@@ -136,16 +136,20 @@ export default function Home() {
       {/* Navigation Arrows */}
       <div className="fixed right-4 md:right-8 bottom-4 md:bottom-8 z-50">
         <button
-          onClick={scrollToNextSection}
+          onClick={currentSection === 0 ? scrollToNextSection : () => scrollToSection(0)}
           disabled={currentSection === sections.length - 1}
           className={`p-2 md:p-3 rounded-full transition-all duration-300 ${
             currentSection === sections.length - 1 
               ? 'bg-gray-300 text-gray-400 cursor-not-allowed' 
               : 'bg-white shadow-lg hover:shadow-xl text-primary hover:bg-primary hover:text-white'
           }`}
-          title="다음 섹션"
+          title={currentSection === 0 ? "다음 섹션" : "첫 번째 섹션으로"}
         >
-          <ChevronDown className="w-4 h-4 md:w-6 md:h-6" />
+          {currentSection === 0 ? (
+            <ChevronDown className="w-4 h-4 md:w-6 md:h-6" />
+          ) : (
+            <ChevronUp className="w-4 h-4 md:w-6 md:h-6" />
+          )}
         </button>
       </div>
 
