@@ -228,7 +228,7 @@ export default function Home() {
             <Button 
               variant="outline" 
               size="lg" 
-              className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-gray-900 transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+              className="text-lg px-8 py-6 border-white bg-white text-black hover:bg-gray-100 hover:text-black transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
               onClick={() => setIsVideoPlaying(true)}
             >
               <Play className="mr-2 w-5 h-5" />
