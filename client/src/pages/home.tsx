@@ -127,12 +127,10 @@ export default function Home() {
           </div>
         ))}
       </div>
-
       {/* Section Counter */}
       <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 bg-black bg-opacity-70 text-white px-4 py-2 rounded-full text-sm">
         {currentSection + 1} / {sections.length}
       </div>
-
       {/* Navigation Arrows */}
       {currentSection > 0 && (
         <div className="fixed right-4 md:right-8 bottom-4 md:bottom-8 z-50">
@@ -145,7 +143,6 @@ export default function Home() {
           </button>
         </div>
       )}
-
       {/* Hero Section */}
       <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden" 
                style={{ scrollSnapAlign: 'start' }}>
@@ -195,7 +192,7 @@ export default function Home() {
           onClick={scrollToNextSection}
         >
           <div className="flex flex-col items-center">
-            <span className="text-sm mb-2">다음 섹션</span>
+            <span className="text-sm mb-2">MORE</span>
             <ChevronDown className="w-6 h-6" />
           </div>
         </div>
@@ -216,7 +213,6 @@ export default function Home() {
           </div>
         )}
       </section>
-      
       {/* Services Section */}
       <section id="services" className="h-screen flex items-center justify-center bg-white"
                style={{ scrollSnapAlign: 'start' }}>
@@ -290,7 +286,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
       {/* Brands Section */}
       <section id="brands" className="h-screen flex items-center justify-center bg-muted"
                style={{ scrollSnapAlign: 'start' }}>
@@ -371,7 +366,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section id="stats" className="h-screen flex items-center justify-center bg-gradient-to-r from-primary to-secondary text-white relative overflow-hidden"
                style={{ scrollSnapAlign: 'start' }}>
@@ -397,7 +391,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section id="cta" className="h-screen flex items-center justify-center bg-white relative overflow-hidden"
                style={{ scrollSnapAlign: 'start' }}>
