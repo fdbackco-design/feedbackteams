@@ -462,16 +462,16 @@ export default function Home() {
         <div className="absolute inset-0 bg-[#0000005e]"></div>
         
         {/* Content over video */}
-        <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <div className="opacity-0 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
+          <div className="ml-[20%] max-w-2xl opacity-0 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
               글로벌 진출을 꿈꾸시나요?
             </h2>
-            <p className="text-xl text-white/90 mb-12 max-w-3xl mx-auto drop-shadow-lg font-semibold">
+            <p className="text-xl text-white/90 mb-12 drop-shadow-lg font-semibold">
               FeedBack과 함께 아시아를 넘어 세계 시장으로 나아가세요.<br />
               전문 컨설턴트가 맞춤형 솔루션을 제안해드립니다.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-6 items-start">
               <Button 
                 asChild 
                 size="lg" 
