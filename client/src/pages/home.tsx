@@ -11,7 +11,7 @@ import cargoShipImage from "@assets/bada-leul-hanghae-haneun-hwamulseon_17546489
 import factoryImage from "@assets/factory_1754649106831.png";
 import homeshoppingImage from "@assets/homeshopping_1754649174036.png";
 import hospitalImage from "@assets/Whisk_8652b62135_1754649198457.jpg";
-import appDevImage from "@assets/representation-user-experience-interface-design_1754649277467.jpg";
+import uiDesignImage from "@assets/UI_1754650048438.png";
 
 const services = [
   {
@@ -42,7 +42,7 @@ const services = [
     title: "앱 개발",
     description: "의료/케어 통합 앱 개발로 디지털 헬스케어 솔루션을 제공합니다. 다국어 지원과 실시간 상담 기능을 통해 글로벌 사용자들에게 편리한 서비스를 제공합니다.",
     features: ["의료/케어 통합 앱", "다국어 지원", "실시간 상담"],
-    imageUrl: appDevImage
+    imageUrl: uiDesignImage
   }
 ];
 
