@@ -138,7 +138,7 @@ export default function Home() {
         <button
           onClick={scrollToPrevSection}
           disabled={currentSection === 0}
-          className={`p-2 md:p-3 rounded-full transition-all duration-300 ${
+          className={`hidden p-2 md:p-3 rounded-full transition-all duration-300 ${
             currentSection === 0 
               ? 'bg-gray-300 text-gray-400 cursor-not-allowed' 
               : 'bg-white shadow-lg hover:shadow-xl text-primary hover:bg-primary hover:text-white'
