@@ -347,7 +347,7 @@ export default function Home() {
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
               <div className="grid lg:grid-cols-2 gap-0">
                 {/* Image Section */}
-                <div className="relative h-96 lg:h-auto">
+                <div className="relative h-96 lg:h-80">
                   {services[currentServiceIndex] && (
                     <img 
                       src={services[currentServiceIndex].imageUrl} 
