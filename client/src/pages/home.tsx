@@ -484,10 +484,10 @@ export default function Home() {
                 asChild
                 variant="outline" 
                 size="lg" 
-                className="text-lg px-10 py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl animate-floating border-white !text-white hover:bg-white hover:!text-blue-600"
-                style={{animationDelay: '1.5s', color: 'white'}}
+                className="text-lg px-10 py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl animate-floating border-white bg-white text-blue-600 hover:bg-gray-100"
+                style={{animationDelay: '1.5s'}}
               >
-                <Link href="/service" className="text-white hover:text-blue-600">사업 제안서 보기</Link>
+                <Link href="/service">사업 제안서 보기</Link>
               </Button>
             </div>
           </div>
