@@ -7,6 +7,7 @@ import partnershipImage from "@assets/5f76e132-877a-4d9e-8c9c-de9ff84cb5dd_17545
 import networkImage from "@assets/5068978_1754568223986.jpg";
 import globalImage from "@assets/13730_1754568375896.jpg";
 import trustImage from "@assets/hands_1754568922347.png";
+import cleanRoomImage from "@assets/hoid4_1754617901047.jpg";
 
 // SVG 컴포넌트들
 const HeroBackgroundSVG = () => (
@@ -198,7 +199,14 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2">
-              <BusinessValueSVG />
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                <img 
+                  src={cleanRoomImage}
+                  alt="깨끗하고 현대적인 공간"
+                  className="w-full h-80 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+              </div>
             </div>
             <div className="lg:w-1/2 text-center lg:text-left">
               <h3 className="text-3xl font-bold text-foreground mb-6">
