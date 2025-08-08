@@ -13,7 +13,7 @@ import {
   Zap,
   Shield,
 } from "lucide-react";
-import organizationChart from "@assets/조직도_1754635494622.png";
+import organizationChart from "@assets/organizationChart_1754563135776.png";
 import warehouseImage from "@assets/futuristic-warehouse-with-blue-neon-lights-connected-data_1754566796044.jpg";
 import partnershipImage from "@assets/5f76e132-877a-4d9e-8c9c-de9ff84cb5dd_1754568024377.jpg";
 import networkImage from "@assets/5068978_1754568223986.jpg";
