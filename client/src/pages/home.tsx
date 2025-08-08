@@ -511,9 +511,6 @@ export default function Home() {
                 <Button asChild size="lg" className="bg-white text-gray-900 hover:bg-gray-100">
                   <Link href={`/brand/${brands[currentBrandIndex].id}`}>브랜드 자세히 보기</Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-gray-900">
-                  <Link href="/brand">모든 브랜드 보기</Link>
-                </Button>
               </div>
             </div>
             
