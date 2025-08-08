@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 import { ArrowLeft, Heart, Leaf, Sparkles, Globe2 } from "lucide-react";
+import inyourHeartVideo from "@assets/imyour_banner_1754643247969.mp4";
 
 export default function InYourHeart() {
   return (
@@ -25,9 +26,8 @@ export default function InYourHeart() {
           loop
           muted
           playsInline
-        >
-          <source src="/attached_assets/imyour_banner_1754643247969.mp4" type="video/mp4" />
-        </video>
+          src={inyourHeartVideo}
+        />
         <div className="absolute inset-0 bg-black/40"></div>
         
         {/* Content over video */}
