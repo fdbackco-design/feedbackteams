@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 import { ArrowLeft, Heart, Globe, Smartphone, Building2, Users, MapPin } from "lucide-react";
+import SangsaengLogo from "@/components/SangsaengLogo";
 
 export default function Sangsaeng() {
   return (
@@ -26,7 +27,9 @@ export default function Sangsaeng() {
               className="mx-auto h-24 w-auto mb-6"
             />
           </div>
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">상생 (SANGSAENG)</h1>
+          <div className="mb-4">
+            <SangsaengLogo className="h-16 mx-auto" />
+          </div>
           <p className="text-2xl text-blue-600 font-medium mb-6">WE CONNECT KOREAN MEDICAL SERVICES TO THE WORLD</p>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             메디컬 투어리즘부터 글로벌 헬스케어 플랫폼까지, 한국의 우수한 의료 서비스를 
