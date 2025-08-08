@@ -33,7 +33,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="mb-6">
               <FeedBackLogo 
-                className="h-12 mb-4 fill-white"
+                className="h-7 mb-4 fill-white"
               />
               <p className="text-white/80 mt-2 text-lg">유통에서 브랜드까지 한국의 가치를 세계로 연결합니다</p>
             </div>
