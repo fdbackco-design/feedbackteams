@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Link } from "wouter";
 import { ArrowLeft, Heart, Globe, Smartphone, Building2, Users, MapPin } from "lucide-react";
 import SangsaengLogo from "@/components/SangsaengLogo";
-import sangsaengBannerImage from "@assets/Whisk_13273bb9d1_1754641826671.jpg";
+import medicalVideo from "@assets/medical_1754647118451.mp4";
 
 export default function Sangsaeng() {
   return (
@@ -20,15 +20,18 @@ export default function Sangsaeng() {
 
       {/* Hero Section */}
       <section className="relative h-screen w-full overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${sangsaengBannerImage})` }}
-        >
-          <div className="absolute inset-0 bg-black/40"></div>
-        </div>
+        {/* Background Video */}
+        <video 
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+          src={medicalVideo}
+        />
+        <div className="absolute inset-0 bg-black/40"></div>
         
-        {/* Content over image */}
+        {/* Content over video */}
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="container mx-auto px-4 text-center text-white">
             <div className="mb-4">
