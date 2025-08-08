@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Truck, Tags, Globe, ArrowRight, Play, ChevronDown, ChevronUp, Heart, Smartphone, ChevronLeft, ChevronRight, Pause, PlayCircle } from "lucide-react";
+import { Truck, Tags, Globe, ArrowRight, Play, ChevronDown, ChevronUp, Heart, Smartphone, ChevronLeft, ChevronRight, Pause, PlayCircle, Newspaper, TrendingUp, Award, Calendar } from "lucide-react";
 import { useCountUp } from "@/hooks/useCountUp";
 import HoidLogo from "@/components/HoidLogo";
 import shipVideo from "@assets/ship_section_1754640786186.mp4";
@@ -110,7 +110,7 @@ export default function Home() {
     { id: 'hero', name: '홈' },
     { id: 'services', name: '서비스' },
     { id: 'brands', name: '브랜드' },
-    { id: 'about', name: '회사소개' },
+    { id: 'news', name: '최신뉴스' },
     { id: 'stats', name: '실적' },
     { id: 'cta', name: '문의' }
   ];
@@ -550,23 +550,22 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* About Section */}
-      <section id="about" className="h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white relative overflow-hidden"
+      {/* News Section */}
+      <section id="news" className="h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white relative overflow-hidden"
                style={{ scrollSnapAlign: 'start' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content Section */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <div className="text-sm text-primary font-semibold tracking-wide uppercase mb-2">ABOUT US</div>
+                <div className="text-sm text-primary font-semibold tracking-wide uppercase mb-2">LATEST NEWS</div>
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                  아시아 시장을 선도하는<br />
-                  <span className="text-primary">글로벌 비즈니스 파트너</span>
+                  성장하는 FeedBack의<br />
+                  <span className="text-primary">주요 소식과 성과</span>
                 </h2>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  FeedBack은 2024년 설립된 종합 비즈니스 솔루션 기업으로, 
-                  유통부터 브랜드 제조, 마케팅, 의료관광까지 다양한 분야에서 
-                  전문성을 발휘하며 고객의 성공적인 글로벌 진출을 지원합니다.
+                  글로벌 비즈니스 파트너로서 FeedBack의 다양한 성과와 
+                  브랜드 확장, 투자 유치 등의 최신 소식을 확인해보세요.
                 </p>
               </div>
               
@@ -575,41 +574,41 @@ export default function Home() {
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <Globe className="w-6 h-6 text-blue-600" />
                   </div>
-                  <h3 className="font-bold text-lg mb-2">글로벌 네트워크</h3>
-                  <p className="text-gray-600 text-sm">아시아 5개국 이상의 파트너십을 통한 글로벌 비즈니스 네트워크 구축</p>
+                  <h3 className="font-bold text-lg mb-2">Hoid 일본 진출</h3>
+                  <p className="text-gray-600 text-sm">디자인 가전 브랜드 Hoid가 일본 시장에 정식 진출하여 도쿄와 오사카 주요 매장에서 만나보실 수 있습니다.</p>
                 </div>
                 
                 <div className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                    <Heart className="w-6 h-6 text-green-600" />
+                    <TrendingUp className="w-6 h-6 text-green-600" />
                   </div>
-                  <h3 className="font-bold text-lg mb-2">상생 경영</h3>
-                  <p className="text-gray-600 text-sm">고객, 파트너, 지역사회와 함께 성장하는 지속가능한 비즈니스 생태계</p>
+                  <h3 className="font-bold text-lg mb-2">시리즈 A 투자 유치</h3>
+                  <p className="text-gray-600 text-sm">성공적인 투자 유치로 동남아시아 시장 확장과 서비스 고도화를 가속화할 예정입니다.</p>
                 </div>
                 
                 <div className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                     <Smartphone className="w-6 h-6 text-purple-600" />
                   </div>
-                  <h3 className="font-bold text-lg mb-2">혁신 기술</h3>
-                  <p className="text-gray-600 text-sm">AI 기반 분석과 디지털 플랫폼을 통한 효율적인 비즈니스 솔루션 제공</p>
+                  <h3 className="font-bold text-lg mb-2">다국어 앰 출시</h3>
+                  <p className="text-gray-600 text-sm">의료관광 고객을 위한 전용 모바일 앰의 베타 버전이 출시되어 4개 국어를 지원합니다.</p>
                 </div>
                 
                 <div className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                    <Tags className="w-6 h-6 text-red-600" />
+                    <Award className="w-6 h-6 text-red-600" />
                   </div>
-                  <h3 className="font-bold text-lg mb-2">통합 솔루션</h3>
-                  <p className="text-gray-600 text-sm">제조부터 유통, 마케팅까지 원스톱 서비스로 비즈니스 효율성 극대화</p>
+                  <h3 className="font-bold text-lg mb-2">중국 공장 MOU</h3>
+                  <p className="text-gray-600 text-sm">중국 최대 규모 공기청정기 제조 공장과 MOU 체결로 3-in-1 기술을 국내 독점 도입했습니다.</p>
                 </div>
               </div>
               
               <div className="flex items-center space-x-4">
                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white">
-                  <Link href="/about">회사소개 자세히 보기</Link>
+                  <Link href="/news">모든 뉴스 보기</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <Link href="/contact">파트너십 문의</Link>
+                  <Link href="/contact">보도자료 문의</Link>
                 </Button>
               </div>
             </div>
@@ -620,28 +619,28 @@ export default function Home() {
               <div className="relative bg-white rounded-3xl shadow-2xl p-8 transform -rotate-1">
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-2">2024</div>
-                    <div className="text-sm text-gray-600">설립년도</div>
+                    <div className="text-3xl font-bold text-primary mb-2">2025.08</div>
+                    <div className="text-sm text-gray-600">최신 보도</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-2">4+</div>
-                    <div className="text-sm text-gray-600">자체 브랜드</div>
+                    <div className="text-3xl font-bold text-primary mb-2">6+</div>
+                    <div className="text-sm text-gray-600">주요 뉴스</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-2">5+</div>
-                    <div className="text-sm text-gray-600">파트너 국가</div>
+                    <div className="text-3xl font-bold text-primary mb-2">3</div>
+                    <div className="text-sm text-gray-600">브랜드 런칭</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-2">10+</div>
-                    <div className="text-sm text-gray-600">병원 제휴</div>
+                    <div className="text-3xl font-bold text-primary mb-2">2</div>
+                    <div className="text-sm text-gray-600">글로벌 진출</div>
                   </div>
                 </div>
                 
                 <div className="mt-6 pt-6 border-t border-gray-200">
                   <blockquote className="text-center italic text-gray-700">
-                    "고객의 성공이 곧 우리의 성공입니다"
+                    "혁신과 성장으로 미래를 만들어 갑니다"
                   </blockquote>
-                  <div className="text-center text-sm text-gray-500 mt-2">- FeedBack 경영진</div>
+                  <div className="text-center text-sm text-gray-500 mt-2">- FeedBack 보도자료</div>
                 </div>
               </div>
             </div>
