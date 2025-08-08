@@ -8,6 +8,16 @@ import medifeedBannerImage from "@assets/medifeed_2_1754640478083.jpg";
 export default function Medifeed() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+      {/* Back Navigation */}
+      <div className="container mx-auto px-4 py-6">
+        <Link href="/brand">
+          <Button variant="ghost" className="mb-6">
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            브랜드 목록으로 돌아가기
+          </Button>
+        </Link>
+      </div>
+
       {/* Hero Section */}
       <section className="relative h-screen w-full overflow-hidden">
         {/* Background Image */}
