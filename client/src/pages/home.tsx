@@ -105,7 +105,6 @@ export default function Home() {
 
   return (
     <div className="fullpage-container hide-scrollbar"
-         style={{ scrollSnapType: 'y mandatory', height: '100vh', overflowY: 'scroll' }}
          onTouchStart={handleTouchStart}
          onTouchMove={handleTouchMove}
          onTouchEnd={handleTouchEnd}>
