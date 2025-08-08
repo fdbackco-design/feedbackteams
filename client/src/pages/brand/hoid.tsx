@@ -79,7 +79,7 @@ export default function Hoid() {
               <div className="md:flex">
                 <div className="md:w-1/2">
                   <img 
-                    src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                    src="/attached_assets/flow_2025-04-17_193718625_1754623144595.png" 
                     alt="MOU 체결 현장" 
                     className="w-full h-64 md:h-full object-cover"
                   />

@@ -11,6 +11,7 @@ import Service from "@/pages/service";
 import Brand from "@/pages/brand";
 import News from "@/pages/news";
 import Contact from "@/pages/contact";
+import Article from "@/pages/article";
 import Hoid from "@/pages/brand/hoid";
 import Medifeed from "@/pages/brand/medifeed";
 import InYourHeart from "@/pages/brand/inyourheart";
@@ -29,6 +30,7 @@ function Router() {
       <Route path="/brand/inyourheart" component={InYourHeart} />
       <Route path="/brand/sangsaeng" component={Sangsaeng} />
       <Route path="/news" component={News} />
+      <Route path="/article/:id" component={Article} />
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>

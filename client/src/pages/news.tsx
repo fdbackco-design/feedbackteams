@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -85,14 +86,9 @@ export default function News() {
                 <CardDescription className="text-gray-600 mb-4 line-clamp-3">
                   {news.summary}
                 </CardDescription>
-                <a 
-                  href={news.link} 
-                  className="text-primary font-semibold hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <Link href={news.link} className="text-primary font-semibold hover:underline">
                   전체 기사 읽기 →
-                </a>
+                </Link>
               </CardContent>
             </Card>
           ))}
