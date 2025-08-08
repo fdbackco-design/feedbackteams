@@ -134,19 +134,7 @@ export default function Home() {
       </div>
 
       {/* Navigation Arrows */}
-      <div className="fixed left-4 md:left-8 top-1/2 transform -translate-y-1/2 z-50 space-y-4">
-        <button
-          onClick={scrollToPrevSection}
-          disabled={currentSection === 0}
-          className={`hidden p-2 md:p-3 rounded-full transition-all duration-300 ${
-            currentSection === 0 
-              ? 'bg-gray-300 text-gray-400 cursor-not-allowed' 
-              : 'bg-white shadow-lg hover:shadow-xl text-primary hover:bg-primary hover:text-white'
-          }`}
-          title="이전 섹션"
-        >
-          <ChevronUp className="w-4 h-4 md:w-6 md:h-6" />
-        </button>
+      <div className="fixed right-4 md:right-8 bottom-4 md:bottom-8 z-50">
         <button
           onClick={scrollToNextSection}
           disabled={currentSection === sections.length - 1}
