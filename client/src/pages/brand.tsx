@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
 import hoidImg from "@/assets/brand/hoidintro.jpg";
 import medifeedImg from "@assets/medifeed_1_1754636614100.jpg";
+import inyourheartImg from "@assets/in_your_1754636664888.jpg";
 
 const brands = [
   {
@@ -45,8 +46,7 @@ const brands = [
     bgColor: "bg-gray-50",
     buttonColor: "bg-accent hover:bg-accent/90",
     badgeColor: "bg-accent",
-    image:
-      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: inyourheartImg,
   },
   {
     id: "sangsaeng",
