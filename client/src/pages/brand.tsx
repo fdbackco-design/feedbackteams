@@ -30,8 +30,7 @@ const brands = [
     bgColor: "bg-gray-50",
     buttonColor: "bg-primary hover:bg-primary/90",
     badgeColor: "bg-primary",
-    image:
-      "https://images.unsplash.com/photo-1584362917165-526a968579e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "/attached_assets/%EB%A9%94%EB%94%94%ED%94%BC%EB%93%9C1_1754636454275.jpg",
   },
   {
     id: "inyourheart",
