@@ -217,7 +217,7 @@ export default function Home() {
             opacity: Math.max(0, 1 - scrollY / 500)
           }}
         >
-          <h1 className="text-5xl md:text-7xl font-normal mb-6 leading-tight animate-fade-in-up text-white">
+          <h1 className="text-5xl md:text-7xl font-light mb-6 leading-tight animate-fade-in-up text-white">
             <span className="font-bold">브랜드</span>와 <span className="font-bold">시장</span>을 <span className="font-bold">연결</span>하는<br />
             유통 플랫폼, <span className="font-bold">피드백</span>
           </h1>
