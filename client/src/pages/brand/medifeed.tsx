@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Link } from "wouter";
 import { ArrowLeft, Heart, Shield, Star, Users } from "lucide-react";
 import MedifeedLogo from "@/components/MedifeedLogo";
+import medifeedBannerImage from "@assets/medifeed_2_1754640478083.jpg";
 
 export default function Medifeed() {
   return (
@@ -18,23 +19,29 @@ export default function Medifeed() {
       </div>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-12">
-        <div className="text-center mb-12">
-          <div className="mb-8">
-            <img 
-              src="https://images.unsplash.com/photo-1584362917165-526a968579e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
-              alt="Medifeed 브랜드 로고" 
-              className="mx-auto h-24 w-auto mb-6"
-            />
+      <section className="relative h-screen w-full overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${medifeedBannerImage})` }}
+        >
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
+        
+        {/* Content over image */}
+        <div className="relative z-10 h-full flex items-center justify-center">
+          <div className="container mx-auto px-4 text-center text-white">
+            <div className="mb-4">
+              <MedifeedLogo className="h-16 md:h-20 mx-auto" />
+            </div>
+            <p className="text-2xl md:text-3xl font-medium mb-6 text-green-200 drop-shadow-lg">
+              매일을 지키는 작은 습관
+            </p>
+            <p className="text-lg md:text-xl max-w-2xl mx-auto drop-shadow-lg opacity-90">
+              잇몸과 눈 건강을 중심으로 한 기능성 영양제 브랜드로, 실용성과 안전성을 바탕으로 
+              누구나 쉽게 선택할 수 있는 건강 솔루션을 제공합니다.
+            </p>
           </div>
-          <div className="mb-4">
-            <MedifeedLogo className="h-16 mx-auto" />
-          </div>
-          <p className="text-2xl text-green-600 font-medium mb-6">매일을 지키는 작은 습관</p>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            잇몸과 눈 건강을 중심으로 한 기능성 영양제 브랜드로, 실용성과 안전성을 바탕으로 
-            누구나 쉽게 선택할 수 있는 건강 솔루션을 제공합니다.
-          </p>
         </div>
       </section>
 
