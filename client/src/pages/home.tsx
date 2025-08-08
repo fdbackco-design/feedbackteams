@@ -480,15 +480,16 @@ export default function Home() {
               >
                 <Link href="/contact">무료 상담 신청</Link>
               </Button>
-              <Button 
-                asChild 
-                variant="outline" 
-                size="lg" 
-                className="text-lg px-10 py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl animate-floating border-white text-white hover:bg-white hover:text-blue-600"
-                style={{animationDelay: '1.5s'}}
-              >
-                <Link href="/service">사업 제안서 보기</Link>
-              </Button>
+              <Link href="/service">
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="text-lg px-10 py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl animate-floating border-white text-white hover:bg-white hover:text-blue-600"
+                  style={{animationDelay: '1.5s'}}
+                >
+                  사업 제안서 보기
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
