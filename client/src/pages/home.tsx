@@ -60,6 +60,20 @@ export default function Home() {
     trigger: statsInView
   });
 
+  const partnerCount = useCountUp({
+    start: 0,
+    end: 5,
+    duration: 1800,
+    trigger: statsInView
+  });
+
+  const hospitalCount = useCountUp({
+    start: 0,
+    end: 10,
+    duration: 2200,
+    trigger: statsInView
+  });
+
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
       e.preventDefault();
@@ -416,11 +430,11 @@ export default function Home() {
               <div className="text-xl opacity-90">자체 브랜드</div>
             </div>
             <div className="transform hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="text-5xl font-bold mb-2 animate-pulse">5+</div>
+              <div className="text-5xl font-bold mb-2">{partnerCount}+</div>
               <div className="text-xl opacity-90">파트너 국가</div>
             </div>
             <div className="transform hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="text-5xl font-bold mb-2 animate-pulse">10+</div>
+              <div className="text-5xl font-bold mb-2">{hospitalCount}+</div>
               <div className="text-xl opacity-90">병원 제휴</div>
             </div>
           </div>
