@@ -34,6 +34,8 @@ export default function Home() {
       ([entry]) => {
         if (entry.isIntersecting) {
           setStatsInView(true);
+        } else {
+          setStatsInView(false);
         }
       },
       { threshold: 0.5 }

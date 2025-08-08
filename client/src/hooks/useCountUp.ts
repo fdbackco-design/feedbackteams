@@ -15,6 +15,10 @@ export function useCountUp({ start, end, duration, trigger }: UseCountUpOptions)
   useEffect(() => {
     if (!trigger) {
       setCount(start);
+      if (frameRef.current) {
+        cancelAnimationFrame(frameRef.current);
+      }
+      startTimeRef.current = undefined;
       return;
     }
 
