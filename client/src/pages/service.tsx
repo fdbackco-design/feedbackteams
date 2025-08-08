@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Hospital, Smartphone, ShoppingCart, TrendingUp, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "wouter";
+import cargoShipImage from "@assets/bada-leul-hanghae-haneun-hwamulseon_1754648981305.jpg";
 
 const services = [
   {
@@ -13,7 +14,7 @@ const services = [
     features: ["아시아 유통망 구축", "수출입 통관 대행", "물류 최적화 솔루션"],
     buttonText: "서비스 문의",
     buttonColor: "bg-blue-600 hover:bg-blue-700",
-    imageUrl: ""
+    imageUrl: cargoShipImage
   },
   {
     icon: TrendingUp,
