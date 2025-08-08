@@ -7,6 +7,7 @@ import { Link } from "wouter";
 import cargoShipImage from "@assets/bada-leul-hanghae-haneun-hwamulseon_1754648981305.jpg";
 import factoryImage from "@assets/factory_1754649106831.png";
 import homeshoppingImage from "@assets/homeshopping_1754649174036.png";
+import hospitalImage from "@assets/Whisk_8652b62135_1754649198457.jpg";
 
 const services = [
   {
@@ -43,7 +44,7 @@ const services = [
     features: ["메디컬 투어리즘", "병원 네트워크", "다국어 플랫폼"],
     buttonText: "상생 브랜드 보기",
     buttonColor: "bg-red-600 hover:bg-red-700",
-    imageUrl: ""
+    imageUrl: hospitalImage
   },
   {
     icon: Smartphone,
