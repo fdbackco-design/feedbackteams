@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Truck, Tags, Globe, ArrowRight, Play, ChevronDown, ChevronUp, Heart, Smartphone } from "lucide-react";
+import { useCountUp } from "@/hooks/useCountUp";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -10,6 +11,8 @@ export default function Home() {
   const [currentSection, setCurrentSection] = useState(0);
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
+  const [statsInView, setStatsInView] = useState(false);
+  const statsRef = useRef<HTMLDivElement>(null);
 
   const sections = [
     { id: 'hero', name: '홈' },
@@ -24,6 +27,31 @@ export default function Home() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Intersection Observer for stats animation
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStatsInView(true);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const yearCount = useCountUp({
+    start: 2000,
+    end: 2023,
+    duration: 2000,
+    trigger: statsInView
+  });
 
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
@@ -367,13 +395,13 @@ export default function Home() {
         </div>
       </section>
       {/* Stats Section */}
-      <section id="stats" className="h-screen flex items-center justify-center bg-gradient-to-r from-primary to-secondary text-white relative overflow-hidden"
+      <section id="stats" ref={statsRef} className="h-screen flex items-center justify-center bg-gradient-to-r from-primary to-secondary text-white relative overflow-hidden"
                style={{ scrollSnapAlign: 'start' }}>
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="transform hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="text-5xl font-bold mb-2 animate-pulse">2023</div>
+              <div className="text-5xl font-bold mb-2">{yearCount}</div>
               <div className="text-xl opacity-90">설립년도</div>
             </div>
             <div className="transform hover:scale-110 transition-transform duration-300 cursor-pointer">

@@ -8,6 +8,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Linkedin, Youtube } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import GoogleMap from "@/components/GoogleMap";
+
+const CENTER = { lat: 37.380236, lng: 126.665423 };
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -266,12 +269,8 @@ export default function Contact() {
         {/* Map Section */}
         <div className="mt-20">
           <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">오시는 길</h3>
-          <div className="bg-gray-100 rounded-xl h-96 flex items-center justify-center">
-            <div className="text-center text-gray-500">
-              <MapPin className="w-16 h-16 mx-auto mb-4" />
-              <p className="text-lg">지도가 여기에 표시됩니다</p>
-              <p className="text-sm">Google Maps API 연동 필요</p>
-            </div>
+          <div className="rounded-xl h-96 overflow-hidden shadow-lg">
+            <GoogleMap center={CENTER} className="rounded-xl" />
           </div>
         </div>
       </div>
