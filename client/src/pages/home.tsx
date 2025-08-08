@@ -6,6 +6,7 @@ import { Truck, Tags, Globe, ArrowRight, Play, ChevronDown, ChevronUp, Heart, Sm
 import { useCountUp } from "@/hooks/useCountUp";
 import HoidLogo from "@/components/HoidLogo";
 import shipVideo from "@assets/ship_section_1754640786186.mp4";
+import mainBannerVideo from "@assets/main_banner_last_1754644869252.mp4";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
@@ -197,13 +198,15 @@ export default function Home() {
       {/* Hero Section */}
       <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden" 
                style={{ scrollSnapAlign: 'start' }}>
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-75"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080')",
-            transform: `translateY(${scrollY * 0.5}px)`
-          }}
-        >
+        <div className="absolute inset-0">
+          <video 
+            className="absolute inset-0 w-full h-full object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+            src={mainBannerVideo}
+          />
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         </div>
         
