@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 import { ArrowLeft, Heart, Shield, Star, Users } from "lucide-react";
-import HoidLogo from "@/components/HoidLogo";
+import MedifeedLogo from "@/components/MedifeedLogo";
 
 export default function Medifeed() {
   return (
@@ -28,7 +28,7 @@ export default function Medifeed() {
             />
           </div>
           <div className="mb-4">
-            <HoidLogo className="h-16 mx-auto" fill="#059669" />
+            <MedifeedLogo className="h-16 mx-auto" />
           </div>
           <p className="text-2xl text-green-600 font-medium mb-6">매일을 지키는 작은 습관</p>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">

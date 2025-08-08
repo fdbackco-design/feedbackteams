@@ -1,0 +1,54 @@
+interface MedifeedLogoProps {
+  className?: string;
+}
+
+export default function MedifeedLogo({ className = "" }: MedifeedLogoProps) {
+  return (
+    <svg 
+      id="Layer_1" 
+      xmlns="http://www.w3.org/2000/svg" 
+      xmlnsXlink="http://www.w3.org/1999/xlink" 
+      version="1.1" 
+      viewBox="0 0 140 24"
+      className={className}
+    >
+      <defs>
+        <style>
+          {`
+            .st0 {
+              fill: none;
+            }
+            .st1 {
+              fill: url(#linear-gradient);
+            }
+            .st2 {
+              clip-path: url(#clippath);
+            }
+          `}
+        </style>
+        <clipPath id="clippath">
+          <rect className="st0" y="0" width="140" height="23.9"/>
+        </clipPath>
+        <linearGradient id="linear-gradient" x1="0" y1="11.9" x2="24.6" y2="11.9" gradientTransform="translate(0 23.9) scale(1 -1)" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stopColor="#d6ab7a"/>
+          <stop offset=".5" stopColor="#d7ba94"/>
+          <stop offset="1" stopColor="#d4a369"/>
+        </linearGradient>
+      </defs>
+      <g className="st2">
+        <g>
+          <path className="st1" d="M24.6.2v5.8l-4.6,6-1.8,2.4-3.3,4.4-2.6,3.8-3-3.8-4.7-6.4v11.1H0V.2l4.6,5.9,7.7,9,7.7-9.4L24.6.2Z"/>
+          <path d="M20,16.4l4.6-6.2v13.5h-4.6v-7.3Z"/>
+          <path d="M71.5,6.8h-4v17.1h4V6.8Z"/>
+          <path d="M45.1,16.8c.1-.5.2-1.1.2-1.7,0-4.8-4.1-8.8-9.1-8.8s-9.1,3.9-9.1,8.8,4.1,8.8,9.1,8.8,5.1-1.1,6.7-2.8l-4.1-1.8c-.8.4-1.6.7-2.6.7-2.2,0-4-1.3-4.7-3.2h13.7,0ZM36.1,10.3c2.2,0,4,1.3,4.7,3.2h-9.5c.7-1.9,2.6-3.2,4.7-3.2h0Z"/>
+          <path d="M100.3,16.8c.1-.5.2-1.1.2-1.7,0-4.8-4.1-8.8-9.1-8.8s-9.1,3.9-9.1,8.8,4.1,8.8,9.1,8.8,5.1-1.1,6.7-2.8l-4.1-1.8c-.8.4-1.6.7-2.6.7-2.2,0-4-1.3-4.7-3.2h13.7,0ZM91.3,10.3c2.2,0,4,1.3,4.7,3.2h-9.5c.7-1.9,2.6-3.2,4.7-3.2h0Z"/>
+          <path d="M120,16.8c.1-.5.2-1.1.2-1.7,0-4.8-4.1-8.8-9.1-8.8s-9.1,3.9-9.1,8.8,4.1,8.8,9.1,8.8,5.1-1.1,6.7-2.8l-4.1-1.8c-.8.4-1.6.7-2.6.7-2.2,0-4-1.3-4.7-3.2h13.7,0ZM111,10.3c2.2,0,4,1.3,4.7,3.2h-9.5c.7-1.9,2.6-3.2,4.7-3.2h0Z"/>
+          <path d="M71.5,6.6h-4v17.1h4V6.6Z"/>
+          <path d="M82,3.9V0c-3.9.4-7,3.1-7.9,6.6-.2.7-.3,1.4-.3,2.1v15h4v-11.8h3.5v-3.9h-3.4c.3-2.1,2-3.8,4.1-4.1h0Z"/>
+          <path d="M61.1.2v8c-1.5-1-3.3-1.6-5.2-1.6-5,0-9.1,3.9-9.1,8.7s4.1,8.7,9.1,8.7,1.7-.1,2.5-.3v-4c-.7.4-1.6.6-2.5.6-2.8,0-5.2-2.2-5.2-4.9s2.3-4.9,5.2-4.9,5.2,2.2,5.2,4.9h0v8.7h3.9V.2h-3.9Z"/>
+          <path d="M136.1.2v8c-1.5-1-3.3-1.6-5.2-1.6-5,0-9.1,3.9-9.1,8.7s4.1,8.7,9.1,8.7,1.7-.1,2.5-.3v-4c-.7.4-1.6.6-2.5.6-2.8,0-5.2-2.2-5.2-4.9s2.3-4.9,5.2-4.9,5.2,2.2,5.2,4.9h0v8.7h3.9V.2h-3.9Z"/>
+        </g>
+      </g>
+    </svg>
+  );
+}
