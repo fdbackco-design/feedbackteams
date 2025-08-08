@@ -481,7 +481,7 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content Section */}
-            <div className="text-white space-y-6">
+            <div className="text-gray-900 space-y-6">
               <div className="space-y-2">
                 <div className="text-sm font-semibold uppercase tracking-wide opacity-90">
                   {brands[currentBrandIndex].category}
@@ -500,7 +500,7 @@ export default function Home() {
               
               <div className="flex flex-wrap gap-3 mt-6">
                 {brands[currentBrandIndex].products.map((product, index) => (
-                  <span key={index} className="px-4 py-2 bg-white bg-opacity-20 rounded-full text-sm font-medium backdrop-blur-sm">
+                  <span key={index} className="px-4 py-2 bg-white bg-opacity-80 rounded-full text-sm font-medium text-gray-900 backdrop-blur-sm">
                     {product}
                   </span>
                 ))}
@@ -520,7 +520,7 @@ export default function Home() {
                 onClick={() => setIsPaused(!isPaused)}
                 className="p-3 bg-white bg-opacity-20 rounded-full backdrop-blur-sm hover:bg-opacity-30 transition-all"
               >
-                {isPaused ? <PlayCircle className="w-6 h-6 text-white" /> : <Pause className="w-6 h-6 text-white" />}
+                {isPaused ? <PlayCircle className="w-6 h-6 text-gray-900" /> : <Pause className="w-6 h-6 text-gray-900" />}
               </button>
               
               {/* Manual Navigation */}
@@ -529,13 +529,13 @@ export default function Home() {
                   onClick={() => setCurrentBrandIndex(currentBrandIndex === 0 ? brands.length - 1 : currentBrandIndex - 1)}
                   className="p-3 bg-white bg-opacity-20 rounded-full backdrop-blur-sm hover:bg-opacity-30 transition-all"
                 >
-                  <ChevronLeft className="w-6 h-6 text-white" />
+                  <ChevronLeft className="w-6 h-6 text-gray-900" />
                 </button>
                 <button
                   onClick={() => setCurrentBrandIndex((currentBrandIndex + 1) % brands.length)}
                   className="p-3 bg-white bg-opacity-20 rounded-full backdrop-blur-sm hover:bg-opacity-30 transition-all"
                 >
-                  <ChevronRight className="w-6 h-6 text-white" />
+                  <ChevronRight className="w-6 h-6 text-gray-900" />
                 </button>
               </div>
               
@@ -547,15 +547,15 @@ export default function Home() {
                     onClick={() => setCurrentBrandIndex(index)}
                     className={`w-4 h-4 rounded-full transition-all duration-300 ${
                       index === currentBrandIndex 
-                        ? 'bg-white scale-125' 
-                        : 'bg-white bg-opacity-50 hover:bg-opacity-75'
+                        ? 'bg-gray-900 scale-125' 
+                        : 'bg-gray-900 bg-opacity-50 hover:bg-opacity-75'
                     }`}
                   />
                 ))}
               </div>
               
               {/* Brand Counter */}
-              <div className="text-white text-sm font-semibold">
+              <div className="text-gray-900 text-sm font-semibold">
                 {String(currentBrandIndex + 1).padStart(2, '0')} / {String(brands.length).padStart(2, '0')}
               </div>
             </div>
