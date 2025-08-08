@@ -494,7 +494,7 @@ export default function Home() {
                 </p>
               </div>
               
-              <p className="text-lg leading-relaxed opacity-90 max-w-xl">
+              <p className="text-lg leading-relaxed opacity-90 max-w-sm">
                 {brands[currentBrandIndex].description}
               </p>
               
