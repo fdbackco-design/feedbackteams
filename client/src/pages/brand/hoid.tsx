@@ -22,12 +22,17 @@ export default function Hoid() {
         <div className="absolute inset-0 w-full h-full">
           <iframe
             src="https://player.vimeo.com/video/1074153050?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&dnt=1&controls=0"
-            className="absolute inset-0 w-full h-full border-0"
+            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto transform -translate-x-1/2 -translate-y-1/2 border-0"
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
             title="HOID Brand Video"
-            style={{ width: '100%', height: '100%' }}
+            style={{ 
+              width: '177.78vh',
+              height: '56.25vw',
+              minWidth: '100%',
+              minHeight: '100%'
+            }}
           ></iframe>
         </div>
 
