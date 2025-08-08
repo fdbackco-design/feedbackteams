@@ -405,7 +405,7 @@ export default function Home() {
               <div className="text-xl opacity-90">설립년도</div>
             </div>
             <div className="transform hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="text-5xl font-bold mb-2 animate-pulse">3+</div>
+              <div className="text-5xl font-bold mb-2 animate-pulse">4+</div>
               <div className="text-xl opacity-90">자체 브랜드</div>
             </div>
             <div className="transform hover:scale-110 transition-transform duration-300 cursor-pointer">
