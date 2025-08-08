@@ -13,18 +13,9 @@ import flow_2025_04_17_193718625_1754623144595 from "@assets/flow_2025-04-17_193
 
 export default function Hoid() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
-      {/* Back Navigation */}
-      <div className="container mx-auto px-4 py-6">
-        <Link href="/brand">
-          <Button variant="ghost" className="mb-6">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            브랜드 목록으로 돌아가기
-          </Button>
-        </Link>
-      </div>
-      {/* Hero Section with Video Background */}
-      <section className="relative h-[80vh] min-h-[600px] overflow-hidden">
+    <div className="min-h-screen">
+      {/* Hero Section with Video Background - Full Screen */}
+      <section className="relative h-screen w-full overflow-hidden">
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full">
           <iframe
@@ -40,16 +31,19 @@ export default function Hoid() {
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-black/30"></div>
 
+        {/* Back Navigation - Positioned over video */}
+        <div className="absolute top-6 left-6 z-20">
+          <Link href="/brand">
+            <Button variant="outline" className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              브랜드 목록으로 돌아가기
+            </Button>
+          </Link>
+        </div>
+
         {/* Content over video */}
         <div className="relative z-10 h-full flex items-center justify-center">
           <div className="container mx-auto px-4 text-center text-white">
-            {/* <div className="mb-8">
-              <img 
-                src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400" 
-                alt="Hoid 브랜드 로고" 
-                className="mx-auto h-24 w-auto mb-6 filter brightness-0 invert"
-              />
-            </div> */}
             <h1 className="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
               HOID
             </h1>
@@ -63,6 +57,9 @@ export default function Hoid() {
           </div>
         </div>
       </section>
+
+      {/* Rest of the content with background */}
+      <div className="bg-gradient-to-b from-blue-50 to-white">
       {/* Product Features */}
       <section className="container mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-center mb-12">주요 제품 특징</h2>
@@ -194,6 +191,7 @@ export default function Hoid() {
           </div>
         </div>
       </section>
+      </div>
     </div>
   );
 }
