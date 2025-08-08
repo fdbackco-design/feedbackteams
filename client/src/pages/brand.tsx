@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
 import hoidImg from "@/assets/brand/hoidintro.jpg";
+import medifeedImg from "@assets/medifeed_1_1754636614100.jpg";
 
 const brands = [
   {
@@ -30,7 +31,7 @@ const brands = [
     bgColor: "bg-gray-50",
     buttonColor: "bg-primary hover:bg-primary/90",
     badgeColor: "bg-primary",
-    image: "/attached_assets/%EB%A9%94%EB%94%94%ED%94%BC%EB%93%9C1_1754636454275.jpg",
+    image: medifeedImg,
   },
   {
     id: "inyourheart",
