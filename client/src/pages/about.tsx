@@ -19,7 +19,7 @@ import partnershipImage from "@assets/5f76e132-877a-4d9e-8c9c-de9ff84cb5dd_17545
 import networkImage from "@assets/5068978_1754568223986.jpg";
 import globalImage from "@assets/13730_1754568375896.jpg";
 import trustImage from "@assets/hands_1754568922347.png";
-import cleanRoomImage from "@assets/hoid4_1754618227868.jpg";
+import peopleImage from "@assets/people_1754639134434.jpg";
 
 import _______ from "@assets/조직도.png";
 
@@ -441,7 +441,7 @@ export default function About() {
       <section
         className="relative min-h-[80vh] flex items-center justify-center overflow-hidden"
         style={{
-          backgroundImage: `url(${cleanRoomImage})`,
+          backgroundImage: `url(${peopleImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
