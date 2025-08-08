@@ -476,7 +476,6 @@ export default function Home() {
             alt={brands[currentBrandIndex].name}
             className="w-full h-full object-cover transition-all duration-1000"
           />
-          <div className={`absolute inset-0 bg-gradient-to-r ${brands[currentBrandIndex].color} opacity-80 transition-all duration-1000`}></div>
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
