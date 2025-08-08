@@ -402,9 +402,7 @@ export default function About() {
             <div className="flex flex-col lg:flex-row">
               {/* CEO 프로필 영역 */}
               <div className="lg:w-1/3 bg-gradient-to-br from-primary to-accent p-12 text-white text-center">
-                <div className="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Users className="w-16 h-16" />
-                </div>
+                
                 <h3 className="text-2xl font-bold mb-2">송해민</h3>
                 <p className="text-lg opacity-90">(주)피드백 대표</p>
                 <div className="mt-8 pt-8 border-t border-white/20">
