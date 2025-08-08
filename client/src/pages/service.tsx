@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Hospital, Smartphone, ShoppingCart, TrendingUp, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "wouter";
 import cargoShipImage from "@assets/bada-leul-hanghae-haneun-hwamulseon_1754648981305.jpg";
+import factoryImage from "@assets/factory_1754649106831.png";
 
 const services = [
   {
@@ -23,7 +24,7 @@ const services = [
     features: ["4개 자체 브랜드 운영", "OEM/ODM 제조", "품질관리 시스템"],
     buttonText: "브랜드 보기",
     buttonColor: "bg-green-600 hover:bg-green-700",
-    imageUrl: ""
+    imageUrl: factoryImage
   },
   {
     icon: TrendingUp,
