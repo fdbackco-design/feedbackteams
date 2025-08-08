@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import hoidImg from "@/assets/brand/hoidintro.jpg";
 import medifeedImg from "@assets/medifeed_1_1754636614100.jpg";
 import inyourheartImg from "@assets/in_your_1754636664888.jpg";
+import sangsaengImg from "@assets/sangsaeng_1_1754636754183.jpg";
 
 const brands = [
   {
@@ -60,8 +61,7 @@ const brands = [
     bgColor: "bg-gray-50",
     buttonColor: "bg-primary hover:bg-primary/90",
     badgeColor: "bg-primary",
-    image:
-      "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: sangsaengImg,
   },
 ];
 
