@@ -6,7 +6,7 @@ import { Truck, Tags, Globe, ArrowRight, Play, ChevronDown, ChevronUp, Heart, Sm
 import { useCountUp } from "@/hooks/useCountUp";
 import HoidLogo from "@/components/HoidLogo";
 import shipVideo from "@assets/ship_section_1754640786186.mp4";
-import mainBannerVideo from "@assets/main_banner_last_1754644869252.mp4";
+import mainBannerVideo from "@assets/main_banner_last_1754645135592.mp4";
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
