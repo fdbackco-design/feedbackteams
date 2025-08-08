@@ -422,19 +422,19 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="transform hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="text-5xl font-bold mb-2">{yearCount}</div>
+              <div className="text-5xl font-bold mb-2 tabular-nums min-w-[120px]">{yearCount}</div>
               <div className="text-xl opacity-90">설립년도</div>
             </div>
             <div className="transform hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="text-5xl font-bold mb-2">{brandCount}+</div>
+              <div className="text-5xl font-bold mb-2 tabular-nums min-w-[80px]">{brandCount}+</div>
               <div className="text-xl opacity-90">자체 브랜드</div>
             </div>
             <div className="transform hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="text-5xl font-bold mb-2">{partnerCount}+</div>
+              <div className="text-5xl font-bold mb-2 tabular-nums min-w-[80px]">{partnerCount}+</div>
               <div className="text-xl opacity-90">파트너 국가</div>
             </div>
             <div className="transform hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="text-5xl font-bold mb-2">{hospitalCount}+</div>
+              <div className="text-5xl font-bold mb-2 tabular-nums min-w-[100px]">{hospitalCount}+</div>
               <div className="text-xl opacity-90">병원 제휴</div>
             </div>
           </div>
