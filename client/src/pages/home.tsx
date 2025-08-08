@@ -487,7 +487,7 @@ export default function Home() {
                 className="text-lg px-10 py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl animate-floating border-white text-white hover:bg-white hover:text-blue-600"
                 style={{animationDelay: '1.5s'}}
               >
-                <Link href="/service">서비스 자세히 보기</Link>
+                <Link href="/service">사업 제안서 보기</Link>
               </Button>
             </div>
           </div>
