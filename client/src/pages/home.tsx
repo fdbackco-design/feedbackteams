@@ -463,7 +463,7 @@ export default function Home() {
         
         {/* Content over video */}
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
-          <div className="ml-[20%] max-w-2xl opacity-0 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+          <div className="ml-[10%] max-w-2xl opacity-0 animate-fade-in-up" style={{animationDelay: '0.1s'}}>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
               글로벌 진출을 꿈꾸시나요?
             </h2>
