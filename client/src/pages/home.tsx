@@ -56,6 +56,9 @@ export default function Home() {
   const statsRef = useRef<HTMLDivElement>(null);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const serviceCarouselRef = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
   const sections = [
     { id: 'hero', name: '홈' },
@@ -320,90 +323,103 @@ export default function Home() {
             </p>
           </div>
           
-          {/* Service Carousel */}
-          <div className="relative max-w-6xl mx-auto">
-            {/* Navigation Arrows */}
-            <button 
-              onClick={() => {
-                const newIndex = currentServiceIndex === 0 ? services.length - 1 : currentServiceIndex - 1;
-                setCurrentServiceIndex(newIndex);
+          {/* Horizontal Scroll Service Cards */}
+          <div className="relative">
+            <div 
+              ref={serviceCarouselRef}
+              className="flex gap-6 overflow-x-auto pb-4 cursor-grab active:cursor-grabbing scrollbar-hide scroll-smooth"
+              style={{ 
+                scrollbarWidth: 'none', 
+                msOverflowStyle: 'none',
+                scrollBehavior: 'smooth'
               }}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
-            >
-              <ChevronLeft className="w-6 h-6 text-gray-600" />
-            </button>
-            
-            <button 
-              onClick={() => {
-                const newIndex = (currentServiceIndex + 1) % services.length;
-                setCurrentServiceIndex(newIndex);
+              onMouseDown={(e) => {
+                setIsDragging(true);
+                setStartX(e.pageX - (serviceCarouselRef.current?.offsetLeft || 0));
+                setScrollLeft(serviceCarouselRef.current?.scrollLeft || 0);
               }}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
+              onMouseLeave={() => setIsDragging(false)}
+              onMouseUp={() => setIsDragging(false)}
+              onMouseMove={(e) => {
+                if (!isDragging) return;
+                e.preventDefault();
+                const x = e.pageX - (serviceCarouselRef.current?.offsetLeft || 0);
+                const walk = (x - startX) * 2;
+                if (serviceCarouselRef.current) {
+                  serviceCarouselRef.current.scrollLeft = scrollLeft - walk;
+                }
+              }}
+              onTouchStart={(e) => {
+                setIsDragging(true);
+                setStartX(e.touches[0].pageX - (serviceCarouselRef.current?.offsetLeft || 0));
+                setScrollLeft(serviceCarouselRef.current?.scrollLeft || 0);
+              }}
+              onTouchMove={(e) => {
+                if (!isDragging) return;
+                const x = e.touches[0].pageX - (serviceCarouselRef.current?.offsetLeft || 0);
+                const walk = (x - startX) * 2;
+                if (serviceCarouselRef.current) {
+                  serviceCarouselRef.current.scrollLeft = scrollLeft - walk;
+                }
+              }}
+              onTouchEnd={() => setIsDragging(false)}
             >
-              <ChevronRight className="w-6 h-6 text-gray-600" />
-            </button>
-            
-            {/* Service Card */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-              <div className="grid lg:grid-cols-2 gap-0">
-                {/* Image Section */}
-                <div className="relative h-96 lg:h-auto">
-                  {services[currentServiceIndex] && (
+              {services.map((service, index) => (
+                <div 
+                  key={index}
+                  className="flex-shrink-0 w-80 bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+                >
+                  {/* Image Section */}
+                  <div className="relative h-48">
                     <img 
-                      src={services[currentServiceIndex].imageUrl} 
-                      alt={services[currentServiceIndex].title}
+                      src={service.imageUrl} 
+                      alt={service.title}
                       className="w-full h-full object-cover"
+                      draggable={false}
                     />
-                  )}
-                  <div className="absolute inset-0 bg-black/10"></div>
+                    <div className="absolute inset-0 bg-black/10"></div>
+                  </div>
+                  
+                  {/* Content Section */}
+                  <div className="p-6">
+                    <div className="text-sm text-primary font-semibold mb-3">
+                      SERVICE 0{index + 1}
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4 text-sm leading-relaxed line-clamp-3">
+                      {service.description}
+                    </p>
+                    <div className="space-y-1 mb-4">
+                      {service.features.slice(0, 3).map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center text-xs text-gray-500">
+                          <div className="w-1 h-1 bg-primary rounded-full mr-2"></div>
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                    <Link href="/service">
+                      <Button className="w-full bg-primary hover:bg-primary/90 text-white py-2 rounded-lg font-semibold inline-flex items-center justify-center group text-sm">
+                        자세히 보기
+                        <ArrowRight className="ml-2 w-3 h-3 transform group-hover:translate-x-1 transition-transform" />
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
-                
-                {/* Content Section */}
-                <div className="p-8 lg:p-12 flex flex-col justify-center">
-                  {services[currentServiceIndex] && (
-                    <>
-                      <div className="text-sm text-primary font-semibold mb-4">
-                        0{currentServiceIndex + 1}/0{services.length}
-                      </div>
-                      <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
-                        {services[currentServiceIndex].title}
-                      </h3>
-                      <p className="text-gray-600 mb-6 leading-relaxed">
-                        {services[currentServiceIndex].description}
-                      </p>
-                      <div className="space-y-2 mb-8">
-                        {services[currentServiceIndex].features.map((feature, index) => (
-                          <div key={index} className="flex items-center text-sm text-gray-500">
-                            <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
-                            {feature}
-                          </div>
-                        ))}
-                      </div>
-                    </>
-                  )}
-                  <Link href="/service">
-                    <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-semibold inline-flex items-center group">
-                      자세히 보기
-                      <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </Link>
-                </div>
-              </div>
+              ))}
             </div>
             
-            {/* Dot Indicators */}
-            <div className="flex justify-center mt-8 space-x-2">
-              {services.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentServiceIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentServiceIndex 
-                      ? 'bg-primary' 
-                      : 'bg-gray-300 hover:bg-gray-400'
-                  }`}
-                />
-              ))}
+            {/* Scroll Hint */}
+            <div className="flex justify-center mt-6">
+              <div className="flex items-center space-x-2 text-sm text-gray-500">
+                <span>드래그하여 스크롤</span>
+                <div className="flex space-x-1">
+                  <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: '0s' }}></div>
+                  <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                  <div className="w-2 h-2 bg-primary rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
