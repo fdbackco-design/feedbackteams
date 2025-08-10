@@ -36,6 +36,7 @@ import factoryImage from "@assets/factory_1754649106831.png";
 import homeshoppingImage from "@assets/homeshopping_1754649174036.png";
 import hospitalImage from "@assets/Whisk_8652b62135_1754649198457.jpg";
 import uiDesignImage from "@assets/UI_1754650048438.png";
+import newsBackgroundImage from "@assets/representation-user-experience-interface-design_1754649277467.jpg";
 import hoidImg from "@/assets/brand/hoidintro.jpg";
 import medifeedImg from "@assets/medifeed_1_1754636614100.jpg";
 import inyourheartImg from "@assets/in_your_1754636664888.jpg";
@@ -721,10 +722,18 @@ export default function Home() {
       {/* News Section */}
       <section
         id="news"
-        className="h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white relative overflow-hidden"
-        style={{ scrollSnapAlign: "start" }}
+        className="h-screen flex items-center justify-center relative overflow-hidden"
+        style={{ 
+          scrollSnapAlign: "start",
+          backgroundImage: `url(${newsBackgroundImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* 블러 오버레이 */}
+        <div className="absolute inset-0 bg-white/75 backdrop-blur-sm"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content Section */}
             <div className="space-y-8">
