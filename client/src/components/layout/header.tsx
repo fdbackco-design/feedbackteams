@@ -64,8 +64,15 @@ export default function Header() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // 섹션에 따른 텍스트 색상 결정
+  // 홈페이지인지 확인
+  const isHomePage = location === '/';
+
+  // 섹션에 따른 텍스트 색상 결정 (홈페이지에서만)
   const getTextColor = () => {
+    if (!isHomePage) {
+      return 'text-gray-900'; // 서브페이지에서는 기본 어두운 색상
+    }
+    
     switch (currentSection) {
       case 'service': // 2번째 섹션
       case 'news':    // 4번째 섹션
@@ -79,6 +86,10 @@ export default function Header() {
   };
 
   const getHoverColor = () => {
+    if (!isHomePage) {
+      return 'text-gray-600 hover:text-gray-900'; // 서브페이지에서는 기본 색상
+    }
+    
     switch (currentSection) {
       case 'service': // 2번째 섹션
       case 'news':    // 4번째 섹션
@@ -91,11 +102,20 @@ export default function Header() {
     }
   };
 
+  // 헤더 배경 스타일 결정
+  const getHeaderStyle = () => {
+    if (!isHomePage) {
+      return 'bg-white/95 backdrop-blur-md shadow-lg'; // 서브페이지에서는 배경 있음
+    }
+    return ''; // 홈페이지에서는 투명
+  };
+
   const textColor = getTextColor();
   const hoverColor = getHoverColor();
+  const headerStyle = getHeaderStyle();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header className={`fixed top-0 left-0 right-0 z-50 ${headerStyle}`}>
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -172,7 +192,9 @@ export default function Header() {
               variant="ghost"
               size="sm"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`transition-colors duration-300 ${textColor} hover:bg-black/10`}
+              className={`transition-colors duration-300 ${textColor} ${
+                isHomePage ? 'hover:bg-black/10' : 'hover:bg-gray-100'
+              }`}
             >
               {isMobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -193,8 +215,8 @@ export default function Header() {
                   href={item.href}
                   className={`block px-3 py-2 text-sm font-medium tracking-wide ${
                     location === item.href
-                      ? "text-black"
-                      : "text-black/70"
+                      ? "text-gray-900"
+                      : "text-gray-600"
                   }`}
                   onClick={() => {
                     setIsMobileMenuOpen(false);
