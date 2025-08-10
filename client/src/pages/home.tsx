@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
+import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -944,6 +945,7 @@ export default function Home() {
         </div>
       </section>
     </div>
+    <Footer />
     </>
   );
 }
