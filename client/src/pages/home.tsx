@@ -140,6 +140,7 @@ export default function Home() {
   const [isPaused, setIsPaused] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(true);
   const [nextBrandIndex, setNextBrandIndex] = useState(0);
+  const [isScrolling, setIsScrolling] = useState(false);
 
   const sections = [
     { id: "hero", name: "홈" },
@@ -205,8 +206,14 @@ export default function Home() {
   });
 
   useEffect(() => {
+    let wheelTimeout: NodeJS.Timeout;
+    
     const handleWheel = (e: WheelEvent) => {
       e.preventDefault();
+      
+      // Skip if already scrolling
+      if (isScrolling) return;
+      
       const direction = e.deltaY > 0 ? 1 : -1;
       const newSection = Math.max(
         0,
@@ -214,9 +221,18 @@ export default function Home() {
       );
 
       if (newSection !== currentSection) {
+        setIsScrolling(true);
         setCurrentSection(newSection);
         const targetElement = document.getElementById(sections[newSection].id);
-        targetElement?.scrollIntoView({ behavior: "smooth" });
+        targetElement?.scrollIntoView({ 
+          behavior: "smooth",
+          block: "start"
+        });
+        
+        // Reset scrolling state after animation
+        setTimeout(() => {
+          setIsScrolling(false);
+        }, 1000);
       }
     };
 
@@ -291,9 +307,19 @@ export default function Home() {
   };
 
   const scrollToSection = (index: number) => {
+    if (isScrolling) return;
+    
+    setIsScrolling(true);
     setCurrentSection(index);
     const targetElement = document.getElementById(sections[index].id);
-    targetElement?.scrollIntoView({ behavior: "smooth" });
+    targetElement?.scrollIntoView({ 
+      behavior: "smooth",
+      block: "start"
+    });
+    
+    setTimeout(() => {
+      setIsScrolling(false);
+    }, 1000);
   };
 
   const scrollToNextSection = () => {

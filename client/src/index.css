@@ -3,6 +3,27 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Smooth scrolling for fullpage sections */
+.fullpage-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.fullpage-container section {
+  scroll-snap-align: start;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Enhanced smooth scrolling */
+* {
+  scroll-behavior: smooth;
+}
+
 :root {
   --background: hsl(0 0% 100%);
   --foreground: hsl(0 0% 0%);
