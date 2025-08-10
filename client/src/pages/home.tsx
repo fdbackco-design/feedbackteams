@@ -37,6 +37,7 @@ import homeshoppingImage from "@assets/homeshopping_1754649174036.png";
 import hospitalImage from "@assets/Whisk_8652b62135_1754649198457.jpg";
 import uiDesignImage from "@assets/UI_1754650048438.png";
 import newsBackgroundImage from "@assets/representation-user-experience-interface-design_1754649277467.jpg";
+import serviceBackgroundImage from "@assets/futuristic-warehouse-with-blue-neon-lights-connected-data_1754566796044.jpg";
 import hoidImg from "@/assets/brand/hoidintro.jpg";
 import medifeedImg from "@assets/medifeed_1_1754636614100.jpg";
 import inyourheartImg from "@assets/in_your_1754636664888.jpg";
@@ -478,10 +479,18 @@ export default function Home() {
       {/* Services Section */}
       <section
         id="services"
-        className="h-screen flex items-center justify-center bg-white"
-        style={{ scrollSnapAlign: "start" }}
+        className="h-screen flex items-center justify-center relative overflow-hidden"
+        style={{ 
+          scrollSnapAlign: "start",
+          backgroundImage: `url(${serviceBackgroundImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* 블러 오버레이 */}
+        <div className="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div
             className="text-center mb-12 opacity-0 animate-fade-in-up"
             style={{ animationDelay: "0.1s" }}
