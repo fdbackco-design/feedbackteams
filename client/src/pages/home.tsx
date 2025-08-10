@@ -138,6 +138,8 @@ export default function Home() {
   const serviceCarouselRef = useRef<HTMLDivElement>(null);
   const [currentBrandIndex, setCurrentBrandIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(true);
+  const [nextBrandIndex, setNextBrandIndex] = useState(0);
 
   const sections = [
     { id: "hero", name: "홈" },
@@ -243,11 +245,22 @@ export default function Home() {
     };
   }, [currentSection, sections]);
 
-  // Auto-slide for brands carousel
+  // Preload next image for smoother transitions
+  useEffect(() => {
+    const nextIndex = (currentBrandIndex + 1) % brands.length;
+    const img = new Image();
+    img.src = brands[nextIndex].image;
+  }, [currentBrandIndex]);
+
+  // Auto-slide for brands carousel with fade effect
   useEffect(() => {
     if (!isPaused) {
       const interval = setInterval(() => {
-        setCurrentBrandIndex((prev) => (prev + 1) % brands.length);
+        setImageLoaded(false);
+        setTimeout(() => {
+          setCurrentBrandIndex((prev) => (prev + 1) % brands.length);
+          setTimeout(() => setImageLoaded(true), 50); // Small delay for smoother transition
+        }, 300); // 300ms fade out duration
       }, 4000);
       return () => clearInterval(interval);
     }
@@ -551,14 +564,19 @@ export default function Home() {
           <img
             src={brands[currentBrandIndex].image}
             alt={brands[currentBrandIndex].name}
-            className="w-full h-full object-cover transition-all duration-1000"
+            className={`w-full h-full object-cover transition-all duration-500 ${
+              imageLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
+            onLoad={() => setImageLoaded(true)}
           />
         </div>
 
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content Section */}
-            <div className="text-gray-900 space-y-6">
+            <div className={`text-gray-900 space-y-6 transition-all duration-500 ${
+              imageLoaded ? 'opacity-100 transform translate-x-0' : 'opacity-0 transform translate-x-4'
+            }`}>
               <div className="space-y-2">
                 <div className="text-sm font-semibold uppercase tracking-wide opacity-90">
                   {brands[currentBrandIndex].category}
@@ -616,23 +634,31 @@ export default function Home() {
               {/* Manual Navigation */}
               <div className="flex space-x-2">
                 <button
-                  onClick={() =>
-                    setCurrentBrandIndex(
-                      currentBrandIndex === 0
-                        ? brands.length - 1
-                        : currentBrandIndex - 1,
-                    )
-                  }
+                  onClick={() => {
+                    setImageLoaded(false);
+                    setTimeout(() => {
+                      setCurrentBrandIndex(
+                        currentBrandIndex === 0
+                          ? brands.length - 1
+                          : currentBrandIndex - 1,
+                      );
+                      setTimeout(() => setImageLoaded(true), 50);
+                    }, 300);
+                  }}
                   className="p-3 bg-white bg-opacity-20 rounded-full backdrop-blur-sm hover:bg-opacity-30 transition-all"
                 >
                   <ChevronLeft className="w-6 h-6 text-gray-900" />
                 </button>
                 <button
-                  onClick={() =>
-                    setCurrentBrandIndex(
-                      (currentBrandIndex + 1) % brands.length,
-                    )
-                  }
+                  onClick={() => {
+                    setImageLoaded(false);
+                    setTimeout(() => {
+                      setCurrentBrandIndex(
+                        (currentBrandIndex + 1) % brands.length,
+                      );
+                      setTimeout(() => setImageLoaded(true), 50);
+                    }, 300);
+                  }}
                   className="p-3 bg-white bg-opacity-20 rounded-full backdrop-blur-sm hover:bg-opacity-30 transition-all"
                 >
                   <ChevronRight className="w-6 h-6 text-gray-900" />
