@@ -13,14 +13,30 @@ const navigation = [
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [currentSection, setCurrentSection] = useState('hero');
   const [location] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      
+      // 각 섹션의 위치를 기반으로 현재 섹션 감지
+      if (scrollY < windowHeight * 0.5) {
+        setCurrentSection('hero');
+      } else if (scrollY < windowHeight * 1.5) {
+        setCurrentSection('service');
+      } else if (scrollY < windowHeight * 2.5) {
+        setCurrentSection('brand');
+      } else if (scrollY < windowHeight * 3.5) {
+        setCurrentSection('news');
+      } else {
+        setCurrentSection('stats');
+      }
     };
+    
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // 초기 실행
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -28,14 +44,48 @@ export default function Header() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  // 섹션에 따른 텍스트 색상 결정
+  const getTextColor = () => {
+    switch (currentSection) {
+      case 'hero':
+      case 'brand':
+      case 'stats':
+        return 'text-white';
+      case 'service':
+      case 'news':
+        return 'text-black';
+      default:
+        return 'text-white';
+    }
+  };
+
+  const getHoverColor = () => {
+    switch (currentSection) {
+      case 'hero':
+      case 'brand':
+      case 'stats':
+        return 'text-white/70 hover:text-white';
+      case 'service':
+      case 'news':
+        return 'text-black/70 hover:text-black';
+      default:
+        return 'text-white/70 hover:text-white';
+    }
+  };
+
+  const textColor = getTextColor();
+  const hoverColor = getHoverColor();
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm">
+    <header className="fixed top-0 left-0 right-0 z-50">
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0" onClick={scrollToTop}>
-              <span className="text-white text-2xl font-bold tracking-wider">FeedBack</span>
+              <span className={`text-2xl font-bold tracking-wider transition-colors duration-300 ${textColor}`}>
+                FeedBack
+              </span>
             </Link>
           </div>
           
@@ -46,10 +96,10 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`text-sm font-medium tracking-wide transition-colors duration-200 ${
+                  className={`text-sm font-medium tracking-wide transition-colors duration-300 ${
                     location === item.href
-                      ? "text-white"
-                      : "text-white/70 hover:text-white"
+                      ? textColor
+                      : hoverColor
                   }`}
                   onClick={scrollToTop}
                 >
@@ -61,7 +111,7 @@ export default function Header() {
           
           {/* Language Selector */}
           <div className="hidden md:flex items-center">
-            <button className="flex items-center text-white text-sm font-medium tracking-wide">
+            <button className={`flex items-center text-sm font-medium tracking-wide transition-colors duration-300 ${textColor}`}>
               KR
               <ChevronDown className="ml-1 h-4 w-4" />
             </button>
@@ -73,7 +123,7 @@ export default function Header() {
               variant="ghost"
               size="sm"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-white hover:bg-white/10"
+              className={`transition-colors duration-300 ${textColor} hover:bg-black/10`}
             >
               {isMobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -87,15 +137,15 @@ export default function Header() {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-black/90 border-t border-white/20">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-sm border-t border-gray-200">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   className={`block px-3 py-2 text-sm font-medium tracking-wide ${
                     location === item.href
-                      ? "text-white"
-                      : "text-white/70"
+                      ? "text-black"
+                      : "text-black/70"
                   }`}
                   onClick={() => {
                     setIsMobileMenuOpen(false);
