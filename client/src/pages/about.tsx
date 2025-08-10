@@ -704,7 +704,11 @@ export default function About() {
               >
                 {/* 타임라인 도트 */}
                 <div className="absolute left-0 transform -translate-x-1/2">
-                  <div className="w-3 h-3 bg-blue-400 rounded-full border-2 border-blue-400"></div>
+                  <div className={`w-3 h-3 bg-white rounded-full border-2 border-blue-400 transition-all duration-700 ease-out ${
+                    timelineVisible[index] 
+                      ? 'scale-100 bg-blue-400' 
+                      : 'scale-0 bg-white'
+                  }`}></div>
                 </div>
 
                 {/* 연도와 내용 */}
