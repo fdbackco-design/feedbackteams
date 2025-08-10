@@ -684,11 +684,11 @@ export default function About() {
         }}
       >
         {/* 화이트 오버레이 */}
-        <div className="absolute inset-0 bg-white/85 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-white/40"></div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-          <div className="flex items-center mb-16">
+          <div className="flex items-center mb-16 bg-white/70 p-4 rounded-xl backdrop-blur-sm">
             <div className="w-4 h-4 bg-blue-600 rounded-full mr-6"></div>
-            <h2 className="text-5xl font-bold text-slate-800">연혁</h2>
+            <h2 className="text-5xl font-bold text-slate-900">연혁</h2>
           </div>
 
           <div className="relative ml-2">
@@ -723,15 +723,15 @@ export default function About() {
                 </div>
 
                 {/* 연도와 내용 */}
-                <div className={`ml-8 transition-all duration-1000 ease-out ${
+                <div className={`ml-8 bg-white/70 p-6 rounded-xl backdrop-blur-sm shadow-sm transition-all duration-1000 ease-out ${
                   timelineVisible[index] 
                     ? 'opacity-100 translate-y-0' 
                     : 'opacity-0 translate-y-8'
                 }`}>
-                  <h3 className="text-3xl font-bold text-slate-800 mb-4">
+                  <h3 className="text-3xl font-bold text-slate-900 mb-4">
                     {item.year}
                   </h3>
-                  <div className="text-slate-600 leading-relaxed">
+                  <div className="text-slate-700 leading-relaxed">
                     <p className="text-lg flex items-start">
                       <span className="text-blue-600 mr-2 mt-1">•</span>
                       {item.description}
@@ -746,7 +746,7 @@ export default function About() {
                                 ? "secondary"
                                 : "outline"
                           }
-                          className={`bg-blue-100 text-blue-700 border-blue-300 transition-all duration-1000 ease-out ${
+                          className={`bg-blue-100 text-blue-800 border-blue-300 transition-all duration-1000 ease-out ${
                             timelineVisible[index] 
                               ? 'opacity-100 scale-100' 
                               : 'opacity-0 scale-75'
@@ -762,8 +762,8 @@ export default function About() {
             ))}
           </div>
 
-          <div className="mt-16 bg-white/80 border border-slate-200 p-8 rounded-2xl text-center shadow-lg backdrop-blur-sm">
-            <p className="text-lg text-slate-700 leading-relaxed font-medium">
+          <div className="mt-16 bg-white/75 border border-slate-200 p-8 rounded-2xl text-center shadow-lg backdrop-blur-sm">
+            <p className="text-lg text-slate-800 leading-relaxed font-medium">
               피드백은 제품 출시와 동시에 국내외 홈쇼핑, 이커머스, 도매 채널과의
               연계를 통해
               <br />
