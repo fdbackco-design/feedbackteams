@@ -21,24 +21,31 @@ export default function Header() {
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
       
+      let newSection = 'hero';
+      
       // 각 섹션의 위치를 기반으로 현재 섹션 감지
-      if (scrollY < windowHeight * 0.5) {
-        setCurrentSection('hero');
-      } else if (scrollY < windowHeight * 1.5) {
-        setCurrentSection('service');
-      } else if (scrollY < windowHeight * 2.5) {
-        setCurrentSection('brand');
-      } else if (scrollY < windowHeight * 3.5) {
-        setCurrentSection('news');
+      if (scrollY < windowHeight * 0.8) {
+        newSection = 'hero';     // 1번째 섹션 - 흰색
+      } else if (scrollY < windowHeight * 1.8) {
+        newSection = 'service';  // 2번째 섹션 - 검은색
+      } else if (scrollY < windowHeight * 2.8) {
+        newSection = 'brand';    // 3번째 섹션 - 흰색
+      } else if (scrollY < windowHeight * 3.8) {
+        newSection = 'news';     // 4번째 섹션 - 검은색
       } else {
-        setCurrentSection('stats');
+        newSection = 'stats';    // 5번째 섹션 - 흰색
+      }
+      
+      if (newSection !== currentSection) {
+        setCurrentSection(newSection);
+        console.log('Section changed to:', newSection); // 디버깅용
       }
     };
     
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // 초기 실행
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [currentSection]);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -76,6 +83,10 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
+      {/* 디버깅용 섹션 표시 */}
+      <div className="absolute top-16 left-4 text-xs font-mono bg-black/50 text-white p-2 rounded">
+        Current Section: {currentSection}
+      </div>
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
