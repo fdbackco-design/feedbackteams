@@ -569,6 +569,8 @@ export default function Home() {
             }`}
             onLoad={() => setImageLoaded(true)}
           />
+          {/* Black gradient overlay from left to right */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent"></div>
         </div>
 
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
