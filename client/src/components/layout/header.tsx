@@ -4,9 +4,11 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navigation = [
-  { name: "ABOUT", href: "/about" },
-  { name: "WORKS", href: "/service" },
-  { name: "NEWSROOM", href: "/news" },
+  { name: "회사소개", href: "/about" },
+  { name: "서비스", href: "/service" },
+  { name: "브랜드", href: "/brand" },
+  { name: "뉴스", href: "/news" },
+  { name: "연락처", href: "/contact" },
 ];
 
 export default function Header() {
@@ -33,7 +35,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0" onClick={scrollToTop}>
-              <span className="text-white text-2xl font-bold tracking-wider">SLL</span>
+              <span className="text-white text-2xl font-bold tracking-wider">FeedBack</span>
             </Link>
           </div>
           
