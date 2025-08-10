@@ -21,6 +21,7 @@ import networkImage from "@assets/5068978_1754568223986.jpg";
 import globalImage from "@assets/13730_1754568375896.jpg";
 import trustImage from "@assets/hands_1754568922347.png";
 import peopleImage from "@assets/people_1754639134434.jpg";
+import mapImage from "@assets/map_1754832577677.png";
 
 import _______ from "@assets/조직도.png";
 
@@ -673,19 +674,29 @@ export default function About() {
         </div>
       </section>
       {/* Timeline - 이미지 스타일 레이아웃 */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="py-20 relative overflow-hidden bg-white text-slate-800"
+        style={{
+          backgroundImage: `url(${mapImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* 화이트 오버레이 */}
+        <div className="absolute inset-0 bg-white/85 backdrop-blur-sm"></div>
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="flex items-center mb-16">
-            <div className="w-4 h-4 bg-blue-400 rounded-full mr-6"></div>
-            <h2 className="text-5xl font-bold text-blue-300">연혁</h2>
+            <div className="w-4 h-4 bg-blue-600 rounded-full mr-6"></div>
+            <h2 className="text-5xl font-bold text-slate-800">연혁</h2>
           </div>
 
           <div className="relative ml-2">
             {/* 수직 라인 */}
-            <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-blue-400/30"></div>
+            <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-slate-300"></div>
             {/* 애니메이션 라인 */}
             <div 
-              className="absolute left-0 top-0 w-0.5 bg-gradient-to-b from-blue-400 to-blue-300 transition-all duration-2000 ease-out"
+              className="absolute left-0 top-0 w-0.5 bg-gradient-to-b from-blue-600 to-blue-500 transition-all duration-2000 ease-out"
               style={{
                 height: timelineVisible.filter(v => v).length > 0 ? `${(timelineVisible.filter(v => v).length / timelineData.length) * 100}%` : '0%'
               }}
@@ -704,9 +715,9 @@ export default function About() {
               >
                 {/* 타임라인 도트 */}
                 <div className="absolute left-0 transform -translate-x-1/2">
-                  <div className={`w-3 h-3 bg-white rounded-full border-2 border-blue-400 transition-all duration-700 ease-out ${
+                  <div className={`w-3 h-3 bg-white rounded-full border-2 border-blue-600 transition-all duration-700 ease-out ${
                     timelineVisible[index] 
-                      ? 'scale-100 bg-blue-400' 
+                      ? 'scale-100 bg-blue-600' 
                       : 'scale-0 bg-white'
                   }`}></div>
                 </div>
@@ -717,12 +728,12 @@ export default function About() {
                     ? 'opacity-100 translate-y-0' 
                     : 'opacity-0 translate-y-8'
                 }`}>
-                  <h3 className="text-3xl font-bold text-white mb-4">
+                  <h3 className="text-3xl font-bold text-slate-800 mb-4">
                     {item.year}
                   </h3>
-                  <div className="text-gray-300 leading-relaxed">
+                  <div className="text-slate-600 leading-relaxed">
                     <p className="text-lg flex items-start">
-                      <span className="text-blue-400 mr-2 mt-1">•</span>
+                      <span className="text-blue-600 mr-2 mt-1">•</span>
                       {item.description}
                     </p>
                     {item.type && (
@@ -735,7 +746,7 @@ export default function About() {
                                 ? "secondary"
                                 : "outline"
                           }
-                          className={`bg-blue-500/20 text-blue-300 border-blue-400 transition-all duration-1000 ease-out ${
+                          className={`bg-blue-100 text-blue-700 border-blue-300 transition-all duration-1000 ease-out ${
                             timelineVisible[index] 
                               ? 'opacity-100 scale-100' 
                               : 'opacity-0 scale-75'
@@ -751,8 +762,8 @@ export default function About() {
             ))}
           </div>
 
-          <div className="mt-16 bg-blue-500/10 border border-blue-400/30 p-8 rounded-2xl text-center">
-            <p className="text-lg text-blue-100 leading-relaxed font-medium">
+          <div className="mt-16 bg-white/80 border border-slate-200 p-8 rounded-2xl text-center shadow-lg backdrop-blur-sm">
+            <p className="text-lg text-slate-700 leading-relaxed font-medium">
               피드백은 제품 출시와 동시에 국내외 홈쇼핑, 이커머스, 도매 채널과의
               연계를 통해
               <br />
