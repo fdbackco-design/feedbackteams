@@ -317,17 +317,33 @@ export default function Home() {
       <div className="fixed right-4 md:right-8 top-1/2 transform -translate-y-1/2 z-50">
         <div className="relative h-48">
           {/* Background line */}
-          <div className="absolute right-0 top-0 w-0.5 h-full bg-gray-300"></div>
+          <div className={`absolute right-0 top-0 w-0.5 h-full transition-all duration-500 ${
+            currentSection === 0 || currentSection === 4 || currentSection === 5 
+              ? 'bg-gray-300' 
+              : 'bg-gray-500'
+          }`}></div>
           {/* Progress line */}
           <div 
-            className="absolute right-0 top-0 w-0.5 bg-white transition-all duration-500"
+            className={`absolute right-0 top-0 w-0.5 transition-all duration-500 ${
+              currentSection === 0 || currentSection === 4 || currentSection === 5 
+                ? 'bg-white' 
+                : 'bg-primary'
+            }`}
             style={{ height: `${((currentSection + 1) / sections.length) * 100}%` }}
           ></div>
           {/* Section numbers */}
-          <div className="absolute right-3 top-0 text-white text-sm font-medium">
+          <div className={`absolute right-3 top-0 text-sm font-medium transition-all duration-500 ${
+            currentSection === 0 || currentSection === 4 || currentSection === 5 
+              ? 'text-white' 
+              : 'text-gray-900'
+          }`}>
             {String(currentSection + 1).padStart(2, '0')}
           </div>
-          <div className="absolute right-3 bottom-0 text-gray-400 text-sm font-medium">
+          <div className={`absolute right-3 bottom-0 text-sm font-medium transition-all duration-500 ${
+            currentSection === 0 || currentSection === 4 || currentSection === 5 
+              ? 'text-gray-400' 
+              : 'text-gray-600'
+          }`}>
             {String(sections.length).padStart(2, '0')}
           </div>
         </div>
