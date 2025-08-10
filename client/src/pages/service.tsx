@@ -61,6 +61,9 @@ const services = [
 export default function Service() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
   
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % services.length);
@@ -99,6 +102,46 @@ export default function Service() {
     }
   };
 
+  // 드래그 이벤트 핸들러들
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!carouselRef.current) return;
+    setIsDragging(true);
+    setStartX(e.pageX - carouselRef.current.offsetLeft);
+    setScrollLeft(carouselRef.current.scrollLeft);
+    carouselRef.current.style.cursor = 'grabbing';
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+    if (carouselRef.current) {
+      carouselRef.current.style.cursor = 'grab';
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+    if (carouselRef.current) {
+      carouselRef.current.style.cursor = 'grab';
+      // 드래그 후 가장 가까운 슬라이드로 스냅
+      const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
+      const gap = 24;
+      const slideWidth = cardWidth + gap;
+      const currentScroll = carouselRef.current.scrollLeft;
+      const newIndex = Math.round(currentScroll / slideWidth);
+      const clampedIndex = Math.max(0, Math.min(newIndex, services.length - 1));
+      setCurrentIndex(clampedIndex);
+      goToSlide(clampedIndex);
+    }
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !carouselRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - carouselRef.current.offsetLeft;
+    const walk = (x - startX) * 2; // 드래그 속도 조절
+    carouselRef.current.scrollLeft = scrollLeft - walk;
+  };
+
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -130,8 +173,12 @@ export default function Service() {
           {/* Carousel Track */}
           <div 
             ref={carouselRef}
-            className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth px-12"
+            className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth px-12 cursor-grab select-none"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            onMouseDown={handleMouseDown}
+            onMouseLeave={handleMouseLeave}
+            onMouseUp={handleMouseUp}
+            onMouseMove={handleMouseMove}
           >
             {services.map((service, index) => (
               <Card key={index} className="flex-shrink-0 w-96 shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
