@@ -40,7 +40,6 @@ export default function Header() {
       
       if (newSection !== currentSection) {
         setCurrentSection(newSection);
-        console.log('Section changed to:', newSection); // 디버깅용
       }
     };
     
@@ -97,10 +96,6 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      {/* 디버깅용 섹션 표시 */}
-      <div className="absolute top-16 left-4 text-xs font-mono bg-black/50 text-white p-2 rounded">
-        Current Section: {currentSection}
-      </div>
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
