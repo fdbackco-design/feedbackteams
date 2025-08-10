@@ -535,11 +535,11 @@ export default function Home() {
             </button>
 
             {/* Service Card */}
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden max-w-4xl mx-auto h-[400px]">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden max-w-4xl mx-auto">
               {services[currentServiceIndex] && (
-                <div className="grid lg:grid-cols-2 gap-0 h-full">
+                <div className="grid lg:grid-cols-2 gap-0">
                   {/* Image Section */}
-                  <div className="relative h-full">
+                  <div className="relative h-64 lg:h-auto">
                     <img
                       src={services[currentServiceIndex].imageUrl}
                       alt={services[currentServiceIndex].title}
@@ -549,7 +549,7 @@ export default function Home() {
                   </div>
                   
                   {/* Content Section */}
-                  <div className="p-8 lg:p-12 flex flex-col justify-center h-full">
+                  <div className="p-8 lg:p-12 flex flex-col justify-center">
                     <div className="text-sm text-primary font-semibold mb-4">
                       0{currentServiceIndex + 1}/0{services.length}
                     </div>
