@@ -727,17 +727,9 @@ export default function Home() {
       {/* News Section */}
       <section
         id="news"
-        className="h-screen flex items-center justify-center relative overflow-hidden"
-        style={{ 
-          scrollSnapAlign: "start",
-          backgroundImage: `url(${newsBackgroundImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
+        className="h-screen flex items-center justify-center bg-white"
+        style={{ scrollSnapAlign: "start" }}
       >
-        {/* 어두운 오버레이 */}
-        <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content Section */}
