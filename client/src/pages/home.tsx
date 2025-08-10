@@ -535,10 +535,21 @@ export default function Home() {
             </button>
 
             {/* Service Card */}
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden max-w-2xl mx-auto">
-              <div className="p-8 lg:p-12 flex flex-col justify-center">
-                {services[currentServiceIndex] && (
-                  <>
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden max-w-4xl mx-auto">
+              {services[currentServiceIndex] && (
+                <div className="grid lg:grid-cols-2 gap-0">
+                  {/* Image Section */}
+                  <div className="relative h-64 lg:h-auto">
+                    <img
+                      src={services[currentServiceIndex].imageUrl}
+                      alt={services[currentServiceIndex].title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+                  </div>
+                  
+                  {/* Content Section */}
+                  <div className="p-8 lg:p-12 flex flex-col justify-center">
                     <div className="text-sm text-primary font-semibold mb-4">
                       0{currentServiceIndex + 1}/0{services.length}
                     </div>
@@ -561,15 +572,15 @@ export default function Home() {
                         ),
                       )}
                     </div>
-                  </>
-                )}
-                <Link href="/service">
-                  <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-semibold inline-flex items-center group">
-                    자세히 보기
-                    <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
-              </div>
+                    <Link href="/service">
+                      <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-semibold inline-flex items-center group">
+                        자세히 보기
+                        <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Dot Indicators */}
