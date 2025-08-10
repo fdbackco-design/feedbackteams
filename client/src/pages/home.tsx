@@ -336,7 +336,7 @@ export default function Home() {
   return (
     <>
     <div
-      className="fullpage-container hide-scrollbar"
+      className="overflow-y-auto"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -392,7 +392,6 @@ export default function Home() {
       <section
         id="hero"
         className="relative h-screen flex items-center justify-center overflow-hidden"
-        style={{ scrollSnapAlign: "start" }}
       >
         <div className="absolute inset-0">
           <video
@@ -480,7 +479,6 @@ export default function Home() {
       <section
         id="services"
         className="h-screen flex items-center justify-center bg-white"
-        style={{ scrollSnapAlign: "start" }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
@@ -600,7 +598,6 @@ export default function Home() {
       <section
         id="brands"
         className="h-screen flex items-center justify-center bg-white relative overflow-hidden"
-        style={{ scrollSnapAlign: "start" }}
       >
         <div className="absolute inset-0">
           <img
@@ -724,7 +721,6 @@ export default function Home() {
       <section
         id="news"
         className="h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white relative overflow-hidden"
-        style={{ scrollSnapAlign: "start" }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -854,7 +850,6 @@ export default function Home() {
         id="stats"
         ref={statsRef}
         className="h-screen flex items-center justify-center bg-gradient-to-r from-primary to-secondary text-white relative overflow-hidden"
-        style={{ scrollSnapAlign: "start" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -890,7 +885,6 @@ export default function Home() {
       <section
         id="cta"
         className="h-screen flex items-center justify-center relative overflow-hidden"
-        style={{ scrollSnapAlign: "start" }}
       >
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full">
