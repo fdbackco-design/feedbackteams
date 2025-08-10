@@ -41,9 +41,9 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <div className="min-h-screen flex flex-col">
+        <div className="min-h-screen">
           <Header />
-          <main className="flex-1">
+          <main>
             <Router />
           </main>
           <Footer />

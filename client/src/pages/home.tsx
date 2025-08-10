@@ -333,6 +333,7 @@ export default function Home() {
   };
 
   return (
+    <>
     <div
       className="fullpage-container hide-scrollbar"
       onTouchStart={handleTouchStart}
@@ -943,5 +944,6 @@ export default function Home() {
         </div>
       </section>
     </div>
+    </>
   );
 }

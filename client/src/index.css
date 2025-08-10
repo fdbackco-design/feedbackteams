@@ -281,8 +281,8 @@ html {
   /* Fullpage scroll styles */
   .fullpage-container {
     scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
+    overflow-y: auto;
+    min-height: 100vh;
   }
 
   .fullpage-container section {
