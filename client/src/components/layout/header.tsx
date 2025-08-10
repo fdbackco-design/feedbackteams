@@ -100,7 +100,7 @@ export default function Header() {
           
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="flex items-center space-x-12">
+            <div className="flex items-center space-x-12 font-medium">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
