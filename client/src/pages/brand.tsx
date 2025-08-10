@@ -102,13 +102,7 @@ export default function Brand() {
                     </div>
                     <div>
                       <h2 className="text-4xl font-bold text-gray-900">
-                        {brand.name === "상생 (Sangsaeng)" ? (
-                          <>
-                            상생 <span className="text-2xl font-light">(Sangsaeng)</span>
-                          </>
-                        ) : (
-                          brand.name
-                        )}
+                        {brand.name}
                       </h2>
                       <p className="text-gray-500 text-lg">{brand.category}</p>
                       <p className="text-blue-600 font-medium italic">

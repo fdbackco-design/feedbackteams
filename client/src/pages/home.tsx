@@ -140,8 +140,6 @@ export default function Home() {
   const [isPaused, setIsPaused] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(true);
   const [nextBrandIndex, setNextBrandIndex] = useState(0);
-  const [isScrolling, setIsScrolling] = useState(false);
-  const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const sections = [
     { id: "hero", name: "홈" },
@@ -207,46 +205,22 @@ export default function Home() {
   });
 
   useEffect(() => {
-    let wheelTimeout: NodeJS.Timeout;
-    
     const handleWheel = (e: WheelEvent) => {
       e.preventDefault();
-      
-      // Debounce wheel events
-      clearTimeout(wheelTimeout);
-      wheelTimeout = setTimeout(() => {
-        // Prevent scroll if already scrolling
-        if (isScrolling) return;
-        
-        const direction = e.deltaY > 0 ? 1 : -1;
-        const newSection = Math.max(
-          0,
-          Math.min(sections.length - 1, currentSection + direction),
-        );
+      const direction = e.deltaY > 0 ? 1 : -1;
+      const newSection = Math.max(
+        0,
+        Math.min(sections.length - 1, currentSection + direction),
+      );
 
-        if (newSection !== currentSection) {
-          setIsScrolling(true);
-          setCurrentSection(newSection);
-          const targetElement = document.getElementById(sections[newSection].id);
-          targetElement?.scrollIntoView({ 
-            behavior: "smooth",
-            block: "start"
-          });
-          
-          // Reset scrolling state
-          if (scrollTimeoutRef.current) {
-            clearTimeout(scrollTimeoutRef.current);
-          }
-          scrollTimeoutRef.current = setTimeout(() => {
-            setIsScrolling(false);
-          }, 800);
-        }
-      }, 50); // 50ms debounce
+      if (newSection !== currentSection) {
+        setCurrentSection(newSection);
+        const targetElement = document.getElementById(sections[newSection].id);
+        targetElement?.scrollIntoView({ behavior: "smooth" });
+      }
     };
 
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (isScrolling) return;
-      
       if (e.key === "ArrowDown" || e.key === "PageDown") {
         e.preventDefault();
         scrollToNextSection();
@@ -266,12 +240,8 @@ export default function Home() {
     window.addEventListener("keydown", handleKeyDown);
 
     return () => {
-      clearTimeout(wheelTimeout);
       window.removeEventListener("wheel", handleWheel);
       window.removeEventListener("keydown", handleKeyDown);
-      if (scrollTimeoutRef.current) {
-        clearTimeout(scrollTimeoutRef.current);
-      }
     };
   }, [currentSection, sections]);
 
@@ -296,17 +266,6 @@ export default function Home() {
     }
   }, [isPaused]);
 
-  // Safety reset for scroll state - prevents infinite scroll lock
-  useEffect(() => {
-    const safetyReset = setInterval(() => {
-      if (isScrolling) {
-        setIsScrolling(false);
-      }
-    }, 2000); // Reset every 2 seconds if stuck
-
-    return () => clearInterval(safetyReset);
-  }, [isScrolling]);
-
   // Touch gestures for mobile
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStart(e.targetTouches[0].clientY);
@@ -317,54 +276,34 @@ export default function Home() {
   };
 
   const handleTouchEnd = () => {
-    if (!touchStart || !touchEnd || isScrolling) return;
+    if (!touchStart || !touchEnd) return;
 
     const distance = touchStart - touchEnd;
-    const isDownSwipe = distance > 50;
-    const isUpSwipe = distance < -50;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
 
-    if (isDownSwipe) {
+    if (isLeftSwipe) {
       scrollToNextSection();
     }
-    if (isUpSwipe) {
+    if (isRightSwipe) {
       scrollToPrevSection();
     }
   };
 
   const scrollToSection = (index: number) => {
-    if (isScrolling) return;
-    
-    setIsScrolling(true);
     setCurrentSection(index);
     const targetElement = document.getElementById(sections[index].id);
-    targetElement?.scrollIntoView({ 
-      behavior: "smooth",
-      block: "start"
-    });
-    
-    // Clear any existing timeout
-    if (scrollTimeoutRef.current) {
-      clearTimeout(scrollTimeoutRef.current);
-    }
-    
-    // Reset scrolling state after animation completes
-    scrollTimeoutRef.current = setTimeout(() => {
-      setIsScrolling(false);
-    }, 800);
+    targetElement?.scrollIntoView({ behavior: "smooth" });
   };
 
   const scrollToNextSection = () => {
     const nextSection = Math.min(sections.length - 1, currentSection + 1);
-    if (nextSection !== currentSection) {
-      scrollToSection(nextSection);
-    }
+    scrollToSection(nextSection);
   };
 
   const scrollToPrevSection = () => {
     const prevSection = Math.max(0, currentSection - 1);
-    if (prevSection !== currentSection) {
-      scrollToSection(prevSection);
-    }
+    scrollToSection(prevSection);
   };
 
   return (
@@ -379,11 +318,10 @@ export default function Home() {
         {sections.map((section, index) => (
           <div key={section.id} className="relative group">
             <button
-              onClick={() => !isScrolling && scrollToSection(index)}
-              disabled={isScrolling}
+              onClick={() => scrollToSection(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 hover:bg-gray-600 ${
                 currentSection === index ? "bg-[#0E9AFF]" : "bg-[#ccc]"
-              } ${isScrolling ? "opacity-50 cursor-not-allowed" : ""}`}
+              }`}
               title={section.name}
             />
             <div className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-black text-white px-2 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
@@ -400,11 +338,8 @@ export default function Home() {
       {currentSection > 0 && (
         <div className="fixed right-4 md:right-8 bottom-4 md:bottom-8 z-50">
           <button
-            onClick={() => !isScrolling && scrollToSection(0)}
-            disabled={isScrolling}
-            className={`p-2 md:p-3 rounded-full transition-all duration-300 bg-white shadow-lg hover:shadow-xl text-primary hover:bg-primary hover:text-white ${
-              isScrolling ? "opacity-50 cursor-not-allowed" : ""
-            }`}
+            onClick={() => scrollToSection(0)}
+            className="p-2 md:p-3 rounded-full transition-all duration-300 bg-white shadow-lg hover:shadow-xl text-primary hover:bg-primary hover:text-white"
             title="첫 번째 섹션으로"
           >
             <ChevronUp className="w-4 h-4 md:w-6 md:h-6" />
