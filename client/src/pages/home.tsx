@@ -736,8 +736,8 @@ export default function Home() {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        {/* 블러 오버레이 */}
-        <div className="absolute inset-0 bg-white/75 backdrop-blur-sm"></div>
+        {/* 어두운 오버레이 */}
+        <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content Section */}
