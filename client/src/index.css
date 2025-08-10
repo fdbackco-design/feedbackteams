@@ -230,11 +230,13 @@
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
+    scroll-padding-top: 0;
   }
 
   .fullpage-container section {
     scroll-snap-align: start;
     scroll-snap-stop: always;
+    will-change: transform;
   }
 
   /* Hide scrollbar for cleaner look */
@@ -250,6 +252,24 @@
   /* Section transitions */
   .section-transition {
     transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  /* Smooth scroll easing */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    .fullpage-container {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* Enhanced section styling for smooth transitions */
+  .fullpage-container section {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   }
 
   /* Navigation dots styles */
