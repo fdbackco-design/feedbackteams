@@ -619,10 +619,10 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent"></div>
         </div>
 
-        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Content Section */}
-            <div className={`text-white space-y-6 transition-all duration-500 ${
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 h-full flex flex-col">
+          {/* Content Section */}
+          <div className="flex-1 flex items-center">
+            <div className={`text-white space-y-6 transition-all duration-500 max-w-2xl ${
               imageLoaded ? 'opacity-100 transform translate-x-0' : 'opacity-0 transform translate-x-4'
             }`}>
               <div className="space-y-2">
@@ -664,62 +664,63 @@ export default function Home() {
                 </Button>
               </div>
             </div>
+          </div>
 
-            {/* Navigation Section */}
-            <div className="flex flex-col items-end space-y-6">
-              {/* Play/Pause Button */}
+          {/* Navigation Section - Bottom Center */}
+          <div className="flex items-center justify-center space-x-8 pb-8">
+            {/* Play/Pause Button */}
+            <button
+              onClick={() => setIsPaused(!isPaused)}
+              className="p-4 bg-black bg-opacity-40 rounded-full backdrop-blur-sm hover:bg-opacity-60 transition-all"
+            >
+              {isPaused ? (
+                <PlayCircle className="w-6 h-6 text-white" />
+              ) : (
+                <Pause className="w-6 h-6 text-white" />
+              )}
+            </button>
+
+            {/* Manual Navigation */}
+            <div className="flex items-center space-x-4">
               <button
-                onClick={() => setIsPaused(!isPaused)}
-                className="p-3 bg-white bg-opacity-20 rounded-full backdrop-blur-sm hover:bg-opacity-30 transition-all"
+                onClick={() => {
+                  setImageLoaded(false);
+                  setTimeout(() => {
+                    setCurrentBrandIndex(
+                      currentBrandIndex === 0
+                        ? brands.length - 1
+                        : currentBrandIndex - 1,
+                    );
+                    setTimeout(() => setImageLoaded(true), 50);
+                  }, 300);
+                }}
+                className="p-4 bg-black bg-opacity-40 rounded-full backdrop-blur-sm hover:bg-opacity-60 transition-all"
               >
-                {isPaused ? (
-                  <PlayCircle className="w-6 h-6 text-white" />
-                ) : (
-                  <Pause className="w-6 h-6 text-white" />
-                )}
+                <ChevronLeft className="w-6 h-6 text-white" />
               </button>
-
-              {/* Manual Navigation */}
-              <div className="flex space-x-2">
-                <button
-                  onClick={() => {
-                    setImageLoaded(false);
-                    setTimeout(() => {
-                      setCurrentBrandIndex(
-                        currentBrandIndex === 0
-                          ? brands.length - 1
-                          : currentBrandIndex - 1,
-                      );
-                      setTimeout(() => setImageLoaded(true), 50);
-                    }, 300);
-                  }}
-                  className="p-3 bg-white bg-opacity-20 rounded-full backdrop-blur-sm hover:bg-opacity-30 transition-all"
-                >
-                  <ChevronLeft className="w-6 h-6 text-white" />
-                </button>
-                <button
-                  onClick={() => {
-                    setImageLoaded(false);
-                    setTimeout(() => {
-                      setCurrentBrandIndex(
-                        (currentBrandIndex + 1) % brands.length,
-                      );
-                      setTimeout(() => setImageLoaded(true), 50);
-                    }, 300);
-                  }}
-                  className="p-3 bg-white bg-opacity-20 rounded-full backdrop-blur-sm hover:bg-opacity-30 transition-all"
-                >
-                  <ChevronRight className="w-6 h-6 text-white" />
-                </button>
-              </div>
-
-              {/* Brand Counter and Progress */}
-              <div className="text-right space-y-2">
-                <div className="text-sm text-white font-semibold">
+              
+              {/* Brand Counter */}
+              <div className="px-6 py-3 bg-black bg-opacity-40 rounded-full backdrop-blur-sm">
+                <div className="text-lg text-white font-bold">
                   {String(currentBrandIndex + 1).padStart(2, "0")} /{" "}
                   {String(brands.length).padStart(2, "0")}
                 </div>
               </div>
+              
+              <button
+                onClick={() => {
+                  setImageLoaded(false);
+                  setTimeout(() => {
+                    setCurrentBrandIndex(
+                      (currentBrandIndex + 1) % brands.length,
+                    );
+                    setTimeout(() => setImageLoaded(true), 50);
+                  }, 300);
+                }}
+                className="p-4 bg-black bg-opacity-40 rounded-full backdrop-blur-sm hover:bg-opacity-60 transition-all"
+              >
+                <ChevronRight className="w-6 h-6 text-white" />
+              </button>
             </div>
           </div>
         </div>
