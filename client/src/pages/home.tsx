@@ -210,8 +210,18 @@ export default function Home() {
     const handleWheel = (e: WheelEvent) => {
       e.preventDefault();
       
+      console.log('Wheel event triggered', { 
+        isScrolling, 
+        currentSection, 
+        deltaY: e.deltaY,
+        sectionsLength: sections.length 
+      });
+      
       // Prevent scroll if already scrolling
-      if (isScrolling) return;
+      if (isScrolling) {
+        console.log('Scroll blocked - already scrolling');
+        return;
+      }
       
       // Clear any existing timeout
       if (scrollTimeoutRef.current) {
@@ -224,10 +234,14 @@ export default function Home() {
         Math.min(sections.length - 1, currentSection + direction),
       );
 
+      console.log('Scroll calculation', { direction, currentSection, newSection });
+
       if (newSection !== currentSection) {
+        console.log('Scrolling to section', newSection);
         setIsScrolling(true);
         setCurrentSection(newSection);
         const targetElement = document.getElementById(sections[newSection].id);
+        console.log('Target element found:', !!targetElement);
         targetElement?.scrollIntoView({ 
           behavior: "smooth",
           block: "start"
@@ -235,6 +249,7 @@ export default function Home() {
         
         // Reset scrolling state after animation completes
         scrollTimeoutRef.current = setTimeout(() => {
+          console.log('Scroll state reset');
           setIsScrolling(false);
         }, 800); // Smooth scroll duration + buffer
       }
