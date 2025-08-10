@@ -13,6 +13,8 @@ const navigation = [
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
+  const [currentLanguage, setCurrentLanguage] = useState('KR');
   const [currentSection, setCurrentSection] = useState('hero');
   const [location] = useLocation();
 
@@ -46,6 +48,18 @@ export default function Header() {
     handleScroll(); // 초기 실행
     return () => window.removeEventListener('scroll', handleScroll);
   }, [currentSection]);
+
+  // 언어 드롭다운 바깥 클릭 시 닫기
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (isLanguageMenuOpen) {
+        setIsLanguageMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, [isLanguageMenuOpen]);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -119,11 +133,42 @@ export default function Header() {
           </div>
           
           {/* Language Selector */}
-          <div className="hidden md:flex items-center">
-            <button className={`flex items-center text-sm font-medium tracking-wide transition-colors duration-300 ${textColor}`}>
-              KR
+          <div className="hidden md:flex items-center relative">
+            <button 
+              onClick={() => setIsLanguageMenuOpen(!isLanguageMenuOpen)}
+              className={`flex items-center text-sm font-medium tracking-wide transition-colors duration-300 ${textColor}`}
+            >
+              {currentLanguage}
               <ChevronDown className="ml-1 h-4 w-4" />
             </button>
+            
+            {/* Language Dropdown */}
+            {isLanguageMenuOpen && (
+              <div className="absolute top-full right-0 mt-2 bg-white border border-gray-200 rounded-md shadow-lg z-50">
+                <button
+                  onClick={() => {
+                    setCurrentLanguage('KR');
+                    setIsLanguageMenuOpen(false);
+                  }}
+                  className={`block w-full px-4 py-2 text-sm text-left hover:bg-gray-100 ${
+                    currentLanguage === 'KR' ? 'bg-gray-50 font-medium' : ''
+                  }`}
+                >
+                  한국어 (KR)
+                </button>
+                <button
+                  onClick={() => {
+                    setCurrentLanguage('EN');
+                    setIsLanguageMenuOpen(false);
+                  }}
+                  className={`block w-full px-4 py-2 text-sm text-left hover:bg-gray-100 ${
+                    currentLanguage === 'EN' ? 'bg-gray-50 font-medium' : ''
+                  }`}
+                >
+                  English (EN)
+                </button>
+              </div>
+            )}
           </div>
           
           {/* Mobile menu button */}
