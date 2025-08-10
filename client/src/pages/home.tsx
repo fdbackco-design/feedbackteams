@@ -576,7 +576,7 @@ export default function Home() {
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Content Section */}
-            <div className={`text-gray-900 space-y-6 transition-all duration-500 ${
+            <div className={`text-white space-y-6 transition-all duration-500 ${
               imageLoaded ? 'opacity-100 transform translate-x-0' : 'opacity-0 transform translate-x-4'
             }`}>
               <div className="space-y-2">
@@ -627,9 +627,9 @@ export default function Home() {
                 className="p-3 bg-white bg-opacity-20 rounded-full backdrop-blur-sm hover:bg-opacity-30 transition-all"
               >
                 {isPaused ? (
-                  <PlayCircle className="w-6 h-6 text-gray-900" />
+                  <PlayCircle className="w-6 h-6 text-white" />
                 ) : (
-                  <Pause className="w-6 h-6 text-gray-900" />
+                  <Pause className="w-6 h-6 text-white" />
                 )}
               </button>
 
@@ -649,7 +649,7 @@ export default function Home() {
                   }}
                   className="p-3 bg-white bg-opacity-20 rounded-full backdrop-blur-sm hover:bg-opacity-30 transition-all"
                 >
-                  <ChevronLeft className="w-6 h-6 text-gray-900" />
+                  <ChevronLeft className="w-6 h-6 text-white" />
                 </button>
                 <button
                   onClick={() => {
@@ -663,13 +663,13 @@ export default function Home() {
                   }}
                   className="p-3 bg-white bg-opacity-20 rounded-full backdrop-blur-sm hover:bg-opacity-30 transition-all"
                 >
-                  <ChevronRight className="w-6 h-6 text-gray-900" />
+                  <ChevronRight className="w-6 h-6 text-white" />
                 </button>
               </div>
 
               {/* Brand Counter and Progress */}
               <div className="text-right space-y-2">
-                <div className="text-sm text-gray-900 font-semibold">
+                <div className="text-sm text-white font-semibold">
                   {String(currentBrandIndex + 1).padStart(2, "0")} /{" "}
                   {String(brands.length).padStart(2, "0")}
                 </div>
