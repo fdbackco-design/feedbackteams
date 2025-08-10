@@ -47,13 +47,12 @@ export default function Header() {
   // 섹션에 따른 텍스트 색상 결정
   const getTextColor = () => {
     switch (currentSection) {
-      case 'hero':
-      case 'brand':
-      case 'stats':
-        return 'text-white';
-      case 'service':
-      case 'news':
+      case 'service': // 2번째 섹션
+      case 'news':    // 4번째 섹션
         return 'text-black';
+      case 'hero':    // 1번째 섹션
+      case 'brand':   // 3번째 섹션
+      case 'stats':   // 5번째 섹션
       default:
         return 'text-white';
     }
@@ -61,13 +60,12 @@ export default function Header() {
 
   const getHoverColor = () => {
     switch (currentSection) {
-      case 'hero':
-      case 'brand':
-      case 'stats':
-        return 'text-white/70 hover:text-white';
-      case 'service':
-      case 'news':
+      case 'service': // 2번째 섹션
+      case 'news':    // 4번째 섹션
         return 'text-black/70 hover:text-black';
+      case 'hero':    // 1번째 섹션
+      case 'brand':   // 3번째 섹션
+      case 'stats':   // 5번째 섹션
       default:
         return 'text-white/70 hover:text-white';
     }
