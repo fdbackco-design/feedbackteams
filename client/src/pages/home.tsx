@@ -207,52 +207,41 @@ export default function Home() {
   });
 
   useEffect(() => {
+    let wheelTimeout: NodeJS.Timeout;
+    
     const handleWheel = (e: WheelEvent) => {
       e.preventDefault();
       
-      console.log('Wheel event triggered', { 
-        isScrolling, 
-        currentSection, 
-        deltaY: e.deltaY,
-        sectionsLength: sections.length 
-      });
-      
-      // Prevent scroll if already scrolling
-      if (isScrolling) {
-        console.log('Scroll blocked - already scrolling');
-        return;
-      }
-      
-      // Clear any existing timeout
-      if (scrollTimeoutRef.current) {
-        clearTimeout(scrollTimeoutRef.current);
-      }
-      
-      const direction = e.deltaY > 0 ? 1 : -1;
-      const newSection = Math.max(
-        0,
-        Math.min(sections.length - 1, currentSection + direction),
-      );
-
-      console.log('Scroll calculation', { direction, currentSection, newSection });
-
-      if (newSection !== currentSection) {
-        console.log('Scrolling to section', newSection);
-        setIsScrolling(true);
-        setCurrentSection(newSection);
-        const targetElement = document.getElementById(sections[newSection].id);
-        console.log('Target element found:', !!targetElement);
-        targetElement?.scrollIntoView({ 
-          behavior: "smooth",
-          block: "start"
-        });
+      // Debounce wheel events
+      clearTimeout(wheelTimeout);
+      wheelTimeout = setTimeout(() => {
+        // Prevent scroll if already scrolling
+        if (isScrolling) return;
         
-        // Reset scrolling state after animation completes
-        scrollTimeoutRef.current = setTimeout(() => {
-          console.log('Scroll state reset');
-          setIsScrolling(false);
-        }, 800); // Smooth scroll duration + buffer
-      }
+        const direction = e.deltaY > 0 ? 1 : -1;
+        const newSection = Math.max(
+          0,
+          Math.min(sections.length - 1, currentSection + direction),
+        );
+
+        if (newSection !== currentSection) {
+          setIsScrolling(true);
+          setCurrentSection(newSection);
+          const targetElement = document.getElementById(sections[newSection].id);
+          targetElement?.scrollIntoView({ 
+            behavior: "smooth",
+            block: "start"
+          });
+          
+          // Reset scrolling state
+          if (scrollTimeoutRef.current) {
+            clearTimeout(scrollTimeoutRef.current);
+          }
+          scrollTimeoutRef.current = setTimeout(() => {
+            setIsScrolling(false);
+          }, 800);
+        }
+      }, 50); // 50ms debounce
     };
 
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -277,6 +266,7 @@ export default function Home() {
     window.addEventListener("keydown", handleKeyDown);
 
     return () => {
+      clearTimeout(wheelTimeout);
       window.removeEventListener("wheel", handleWheel);
       window.removeEventListener("keydown", handleKeyDown);
       if (scrollTimeoutRef.current) {
@@ -305,6 +295,17 @@ export default function Home() {
       return () => clearInterval(interval);
     }
   }, [isPaused]);
+
+  // Safety reset for scroll state - prevents infinite scroll lock
+  useEffect(() => {
+    const safetyReset = setInterval(() => {
+      if (isScrolling) {
+        setIsScrolling(false);
+      }
+    }, 2000); // Reset every 2 seconds if stuck
+
+    return () => clearInterval(safetyReset);
+  }, [isScrolling]);
 
   // Touch gestures for mobile
   const handleTouchStart = (e: React.TouchEvent) => {
