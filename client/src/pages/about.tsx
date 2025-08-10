@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -375,6 +376,9 @@ const BrandMessageBannerSVG = () => (
 );
 
 export default function About() {
+  const [timelineVisible, setTimelineVisible] = useState<boolean[]>([]);
+  const timelineRefs = useRef<(HTMLDivElement | null)[]>([]);
+
   const timelineData = [
     {
       year: "2025.09",
@@ -398,6 +402,48 @@ export default function About() {
       type: "창립",
     },
   ];
+
+  // 타임라인 애니메이션 초기화
+  useEffect(() => {
+    setTimelineVisible(new Array(timelineData.length).fill(false));
+  }, [timelineData.length]);
+
+  // Intersection Observer를 사용한 스크롤 애니메이션
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = Number(entry.target.getAttribute('data-index'));
+            if (index >= 0) {
+              // 순차적으로 나타나도록 딜레이 적용
+              setTimeout(() => {
+                setTimelineVisible(prev => {
+                  const newVisible = [...prev];
+                  newVisible[index] = true;
+                  return newVisible;
+                });
+              }, index * 300); // 300ms씩 순차적으로 나타남
+            }
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+        rootMargin: '0px 0px -50px 0px'
+      }
+    );
+
+    timelineRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => {
+      timelineRefs.current.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">
@@ -636,17 +682,41 @@ export default function About() {
 
           <div className="relative ml-2">
             {/* 수직 라인 */}
-            <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-blue-400"></div>
+            <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-blue-400/30"></div>
+            {/* 애니메이션 라인 */}
+            <div 
+              className="absolute left-0 top-0 w-0.5 bg-gradient-to-b from-blue-400 to-blue-300 transition-all duration-2000 ease-out"
+              style={{
+                height: timelineVisible.filter(v => v).length > 0 ? `${(timelineVisible.filter(v => v).length / timelineData.length) * 100}%` : '0%'
+              }}
+            ></div>
 
             {timelineData.map((item, index) => (
-              <div key={index} className="relative mb-16 last:mb-0">
+              <div 
+                key={index} 
+                ref={(el) => (timelineRefs.current[index] = el)}
+                data-index={index}
+                className={`relative mb-16 last:mb-0 transition-all duration-1000 ease-out ${
+                  timelineVisible[index] 
+                    ? 'opacity-100 translate-x-0' 
+                    : 'opacity-0 translate-x-[-50px]'
+                }`}
+              >
                 {/* 타임라인 도트 */}
                 <div className="absolute left-0 transform -translate-x-1/2">
-                  <div className="w-3 h-3 bg-white rounded-full border-2 border-blue-400"></div>
+                  <div className={`w-3 h-3 bg-white rounded-full border-2 border-blue-400 transition-all duration-700 ease-out ${
+                    timelineVisible[index] 
+                      ? 'scale-100 bg-blue-400' 
+                      : 'scale-0 bg-white'
+                  }`}></div>
                 </div>
 
                 {/* 연도와 내용 */}
-                <div className="ml-8">
+                <div className={`ml-8 transition-all duration-1000 ease-out ${
+                  timelineVisible[index] 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-8'
+                }`}>
                   <h3 className="text-3xl font-bold text-white mb-4">
                     {item.year}
                   </h3>
@@ -665,7 +735,11 @@ export default function About() {
                                 ? "secondary"
                                 : "outline"
                           }
-                          className="bg-blue-500/20 text-blue-300 border-blue-400"
+                          className={`bg-blue-500/20 text-blue-300 border-blue-400 transition-all duration-1000 ease-out ${
+                            timelineVisible[index] 
+                              ? 'opacity-100 scale-100' 
+                              : 'opacity-0 scale-75'
+                          }`}
                         >
                           {item.type}
                         </Badge>
