@@ -313,26 +313,24 @@ export default function Home() {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Section Navigation Dots */}
-      <div className="fixed right-4 md:right-8 top-1/2 transform -translate-y-1/2 z-50 space-y-3">
-        {sections.map((section, index) => (
-          <div key={section.id} className="relative group">
-            <button
-              onClick={() => scrollToSection(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 hover:bg-gray-600 ${
-                currentSection === index ? "bg-[#0E9AFF]" : "bg-[#ccc]"
-              }`}
-              title={section.name}
-            />
-            <div className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-black text-white px-2 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
-              {section.name}
-            </div>
+      {/* Section Navigation Line */}
+      <div className="fixed right-4 md:right-8 top-1/2 transform -translate-y-1/2 z-50">
+        <div className="relative h-48">
+          {/* Background line */}
+          <div className="absolute right-0 top-0 w-0.5 h-full bg-gray-300"></div>
+          {/* Progress line */}
+          <div 
+            className="absolute right-0 top-0 w-0.5 bg-white transition-all duration-500"
+            style={{ height: `${((currentSection + 1) / sections.length) * 100}%` }}
+          ></div>
+          {/* Section numbers */}
+          <div className="absolute right-3 top-0 text-white text-sm font-medium">
+            {String(currentSection + 1).padStart(2, '0')}
           </div>
-        ))}
-      </div>
-      {/* Section Counter */}
-      <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50 bg-black bg-opacity-70 text-white px-4 py-2 rounded-full text-sm">
-        {currentSection + 1} / {sections.length}
+          <div className="absolute right-3 bottom-0 text-gray-400 text-sm font-medium">
+            {String(sections.length).padStart(2, '0')}
+          </div>
+        </div>
       </div>
       {/* Navigation Arrows */}
       {currentSection > 0 && (
