@@ -50,7 +50,7 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!formData.privacyAgree) {
       toast({
         title: t("contact.form.privacy.error.title"),
@@ -93,7 +93,8 @@ export default function Contact() {
       if (result.ok) {
         toast({
           title: t("contact.form.success.title"),
-          description: "문의가 성공적으로 전송되었습니다. 빠른 시일 내에 답변드리겠습니다.",
+          description:
+            "문의가 성공적으로 전송되었습니다. 빠른 시일 내에 답변드리겠습니다.",
         });
 
         // Reset form
@@ -113,9 +114,9 @@ export default function Contact() {
             description: (
               <div>
                 <p>Gmail API 인증이 필요합니다.</p>
-                <a 
-                  href="/api/auth/gmail" 
-                  target="_blank" 
+                <a
+                  href="/api/auth/gmail"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 underline"
                 >
@@ -133,7 +134,9 @@ export default function Contact() {
       console.error("이메일 발송 오류:", error);
       toast({
         title: "발송 실패",
-        description: error.message || "이메일 발송 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.",
+        description:
+          error.message ||
+          "이메일 발송 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.",
         variant: "destructive",
       });
     } finally {
@@ -169,10 +172,10 @@ export default function Contact() {
   ];
 
   const departments = [
-    { dept: t("contact.departments.medical"), email: "fdbackco@gmail.com" },
-    { dept: t("contact.departments.brand"), email: "fdbackco@gmail.com" },
-    { dept: t("contact.departments.marketing"), email: "fdbackco@gmail.com" },
-    { dept: t("contact.departments.partnership"), email: "fdbackco@gmail.com" },
+    { dept: t("마케팅부"), email: "fdbackco@gmail.com" },
+    { dept: t("영업부"), email: "fdbackco@gmail.com" },
+    { dept: t("개발부"), email: "fdbackco@gmail.com" },
+    { dept: t("경영지원부"), email: "fdbackco@gmail.com" },
   ];
 
   return (
@@ -183,12 +186,14 @@ export default function Contact() {
             {t("contact.title")}
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {t("contact.description").split('\n').map((line, index) => (
-              <span key={index}>
-                {line}
-                {index === 0 && <br />}
-              </span>
-            ))}
+            {t("문의를 남여주세요")
+              .split("\n")
+              .map((line, index) => (
+                <span key={index}>
+                  {line}
+                  {index === 0 && <br />}
+                </span>
+              ))}
           </p>
         </div>
 
@@ -223,7 +228,7 @@ export default function Contact() {
             {/* Department Contacts */}
             <Card className="bg-gray-50 mb-8">
               <CardHeader>
-                <CardTitle className="text-xl">{t("contact.departments.title")}</CardTitle>
+                <CardTitle className="text-xl">{t("관련부서")}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -273,7 +278,9 @@ export default function Contact() {
 
           {/* Contact Form */}
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">{t("contact.form.title")}</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">
+              {t("contact.form.title")}
+            </h2>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name */}
@@ -336,30 +343,23 @@ export default function Contact() {
 
               {/* Inquiry Type */}
               <div>
-                <Label htmlFor="inquiry-type">{t("contact.form.inquiry")} *</Label>
+                <Label htmlFor="inquiry-type">문의 유형 *</Label>
                 <Select
+                  // 선택된 라벨 그대로 상태에 저장: "사업 문의" | "브랜드 문의" | "파트너 제안"
                   value={formData.inquiryType}
                   onValueChange={(value) =>
-                    setFormData({ ...formData, inquiryType: value })
+                    setFormData((prev) => ({ ...prev, inquiryType: value }))
                   }
                   required
                 >
-                  <SelectTrigger>
-                    <SelectValue placeholder={t("contact.form.inquiry.placeholder")} />
+                  <SelectTrigger aria-label="문의 유형">
+                    <SelectValue placeholder="문의 유형" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="medical-tourism">
-                      {t("contact.form.inquiry.medical")}
-                    </SelectItem>
-                    <SelectItem value="brand-partnership">
-                      {t("contact.form.inquiry.brand")}
-                    </SelectItem>
-                    <SelectItem value="distribution">
-                      {t("contact.form.inquiry.distribution")}
-                    </SelectItem>
-                    <SelectItem value="marketing">{t("contact.form.inquiry.marketing")}</SelectItem>
-                    <SelectItem value="investment">{t("contact.form.inquiry.investment")}</SelectItem>
-                    <SelectItem value="other">{t("contact.form.inquiry.other")}</SelectItem>
+                    {/* value를 라벨과 동일하게 두면 그대로 전송/표시됩니다 */}
+                    <SelectItem value="사업 문의">사업 문의</SelectItem>
+                    <SelectItem value="브랜드 문의">브랜드 문의</SelectItem>
+                    <SelectItem value="파트너 제안">파트너 제안</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
