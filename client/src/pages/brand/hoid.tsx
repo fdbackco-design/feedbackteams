@@ -271,10 +271,7 @@ export default function Hoid() {
                 </p>
               </div>
 
-              <Button className="bg-[#0F4C82] text-white hover:bg-[#0d4070] px-8 py-4 text-lg font-semibold">
-                방송 일정 알림 신청
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
+              
             </div>
             <div>
               <div className="relative">
