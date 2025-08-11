@@ -115,6 +115,10 @@ export default function News() {
                   <Link
                     href={news.link}
                     className="text-primary font-semibold hover:underline self-start"
+                    onClick={() => {
+                      // Scroll to top when navigating to external link
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
                   >
                     전체 기사 읽기 →
                   </Link>

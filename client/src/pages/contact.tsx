@@ -279,7 +279,7 @@ export default function Contact() {
           {/* Contact Form */}
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-8">
-              {t("contact.form.title")}
+              {t("문의 남기기")}
             </h2>
 
             <form onSubmit={handleSubmit} className="space-y-6">
