@@ -100,51 +100,34 @@ const B2B2C_Hub = () => {
 
                 {/* Animated spreading effect */}
                 <div className="absolute inset-0 rounded-2xl overflow-hidden">
-                  {/* Pulse wave from center */}
+                  {/* Gentle pulse from center */}
                   <motion.div
                     className="absolute inset-0"
                     style={{
-                      background: "radial-gradient(circle at center, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.2) 30%, transparent 60%)",
+                      background: "radial-gradient(circle at center, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.08) 40%, transparent 70%)",
                     }}
                     animate={{
-                      scale: [0.5, 2.5, 0.5],
-                      opacity: [1, 0, 1],
+                      scale: [0.8, 1.8, 0.8],
+                      opacity: [0.7, 0.2, 0.7],
                     }}
                     transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "easeOut",
-                    }}
-                  />
-                  {/* Secondary pulse */}
-                  <motion.div
-                    className="absolute inset-0"
-                    style={{
-                      background: "radial-gradient(circle at center, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 40%, transparent 70%)",
-                    }}
-                    animate={{
-                      scale: [0.3, 3, 0.3],
-                      opacity: [0.8, 0, 0.8],
-                    }}
-                    transition={{
-                      duration: 2.5,
-                      repeat: Infinity,
-                      ease: "easeOut",
-                      delay: 0.6,
-                    }}
-                  />
-                  {/* Horizontal spreading effect */}
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
-                    animate={{
-                      scaleX: [0.2, 2, 0.2],
-                      opacity: [0, 0.8, 0],
-                    }}
-                    transition={{
-                      duration: 1.8,
+                      duration: 3.5,
                       repeat: Infinity,
                       ease: "easeInOut",
-                      delay: 0.3,
+                    }}
+                  />
+                  {/* Subtle horizontal flow */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/12 to-transparent"
+                    animate={{
+                      scaleX: [0.5, 1.5, 0.5],
+                      opacity: [0.3, 0.6, 0.3],
+                    }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 1,
                     }}
                   />
                 </div>
