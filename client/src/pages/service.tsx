@@ -181,17 +181,17 @@ export default function Service() {
             onMouseMove={handleMouseMove}
           >
             {services.map((service, index) => (
-              <Card key={index} className="flex-shrink-0 w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] max-w-[800px] shadow-lg overflow-hidden bg-white rounded-2xl flex flex-col">
+              <Card key={index} className="flex-shrink-0 w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] max-w-[800px] overflow-hidden bg-white flex flex-col border-0 shadow-none">
                 {/* Image Section - Clean, no overlays */}
-                <div className="h-[240px] lg:h-[280px] overflow-hidden rounded-t-2xl">
+                <div className="h-[240px] lg:h-[280px] overflow-hidden">
                   {service.imageUrl ? (
                     <img 
                       src={service.imageUrl} 
                       alt={service.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover rounded-2xl"
                     />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300">
+                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl">
                       <service.icon className="w-20 h-20 text-gray-400" />
                     </div>
                   )}
