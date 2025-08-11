@@ -91,6 +91,100 @@ html {
   --spacing: 0.25rem;
 }
 
+/* Standardized Typography Classes */
+/* Main Section Titles */
+.section-title-primary {
+  @apply text-4xl md:text-5xl font-bold text-gray-900;
+}
+
+.section-title-primary-white {
+  @apply text-4xl md:text-5xl font-bold text-white;
+}
+
+/* Section Subtitles/Taglines */
+.section-subtitle {
+  @apply text-sm text-primary font-semibold tracking-wide uppercase;
+}
+
+.section-subtitle-light {
+  @apply text-sm text-blue-300 font-semibold tracking-wide uppercase;
+}
+
+/* Section Descriptions */
+.section-description {
+  @apply text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed;
+}
+
+.section-description-white {
+  @apply text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed;
+}
+
+/* Hero Titles */
+.hero-title {
+  @apply text-5xl md:text-7xl font-light leading-tight text-white;
+}
+
+.hero-subtitle {
+  @apply font-bold;
+}
+
+.hero-description {
+  @apply text-xl md:text-2xl opacity-90;
+}
+
+/* Brand Section Titles */
+.brand-title {
+  @apply text-4xl md:text-5xl font-bold leading-tight;
+}
+
+.brand-description {
+  @apply text-lg leading-relaxed opacity-90 max-w-sm;
+}
+
+/* CTA Section Titles */
+.cta-title {
+  @apply text-4xl md:text-5xl font-bold drop-shadow-2xl;
+}
+
+.cta-description {
+  @apply text-xl font-semibold leading-relaxed drop-shadow-2xl;
+}
+
+/* News Section Title */
+.news-title {
+  @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900;
+}
+
+/* Service Card Titles */
+.service-card-title {
+  @apply text-2xl lg:text-3xl font-bold text-gray-900;
+}
+
+.service-card-description {
+  @apply text-gray-600 leading-relaxed;
+}
+
+/* B2B2C Section Titles */
+.b2b2c-main-title {
+  @apply text-4xl lg:text-5xl text-white font-bold;
+}
+
+.b2b2c-card-title {
+  @apply text-xl font-bold;
+}
+
+.b2b2c-card-description {
+  @apply text-sm;
+}
+
+.b2b2c-summary-title {
+  @apply text-2xl font-bold text-white;
+}
+
+.b2b2c-summary-description {
+  @apply text-gray-200 leading-relaxed;
+}
+
 .dark {
   --background: hsl(0 0% 0%);
   --foreground: hsl(0 0% 100%);

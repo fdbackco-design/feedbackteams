@@ -577,13 +577,13 @@ export default function Home() {
             opacity: Math.max(0, 1 - scrollY / 500),
           }}
         >
-          <h1 className="text-5xl md:text-7xl font-light mb-6 leading-tight animate-fade-in-up text-white">
+          <h1 className="hero-title mb-6 animate-fade-in-up">
             {t("hero.title")}
             <br />
-            <span className="font-bold">{t("hero.subtitle")}</span>
+            <span className="hero-subtitle">{t("hero.subtitle")}</span>
           </h1>
           <p
-            className="text-xl md:text-2xl mb-8 opacity-90 animate-fade-in-up"
+            className="hero-description mb-8 animate-fade-in-up"
             style={{ animationDelay: "0.3s" }}
           >
             {t("hero.description")}
@@ -684,13 +684,13 @@ export default function Home() {
             className="text-center mb-12 opacity-0 animate-fade-in-up"
             style={{ animationDelay: "0.1s" }}
           >
-            <div className="text-sm text-primary font-semibold tracking-wide uppercase mb-2">
+            <div className="section-subtitle mb-2">
               SERVICE
             </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="section-title-primary mb-4">
               {t("services.title")}
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="section-description">
               {t("hero.description")}
             </p>
           </div>
@@ -740,10 +740,10 @@ export default function Home() {
                     <div className="text-sm text-primary font-semibold mb-4">
                       0{currentServiceIndex + 1}/0{services.length}
                     </div>
-                    <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
+                    <h3 className="service-card-title mb-6">
                       {services[currentServiceIndex].title}
                     </h3>
-                    <p className="text-gray-600 mb-6 leading-relaxed">
+                    <p className="service-card-description mb-6">
                       {services[currentServiceIndex].description}
                     </p>
                     <div className="space-y-2 mb-8">
@@ -816,7 +816,7 @@ export default function Home() {
                 <div className="text-sm font-semibold uppercase tracking-wide opacity-90">
                   {brands[currentBrandIndex].category}
                 </div>
-                <h2 className="text-5xl md:text-6xl font-bold mb-4">
+                <h2 className="brand-title text-5xl md:text-6xl mb-4">
                   {brands[currentBrandIndex].name}
                 </h2>
                 <p className="text-2xl md:text-3xl font-light mb-6 opacity-90">
@@ -824,7 +824,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <p className="text-lg leading-relaxed opacity-90 max-w-sm">
+              <p className="brand-description">
                 {brands[currentBrandIndex].description}
               </p>
 
@@ -931,7 +931,7 @@ export default function Home() {
         <div className="relative w-full z-10">
           {/* Section Header - Aligned with Navigation */}
           <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
+            <h2 className="news-title">
               {t("news.title")} <span className="text-gray-400 text-lg sm:text-xl md:text-2xl lg:text-3xl">↗</span>
             </h2>
           </div>
@@ -1050,13 +1050,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <div className="text-sm text-blue-300 font-semibold tracking-wide uppercase mb-4">
+            <div className="section-subtitle-light mb-4">
               {t("stats.subtitle")}
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="section-title-primary-white mb-6">
               {t("stats.title")} <span className="text-blue-400">FeedBack</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="section-description-white">
               {t("stats.description")}
             </p>
           </div>
@@ -1121,10 +1121,10 @@ export default function Home() {
             className="ml-[10%] max-w-2xl opacity-0 animate-fade-in-up"
             style={{ animationDelay: "0.1s" }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-2xl">
+            <h2 className="cta-title text-white mb-6">
               {t("cta.title")}
             </h2>
-            <p className="text-xl text-white mb-12 drop-shadow-2xl font-semibold leading-relaxed">
+            <p className="cta-description text-white mb-12">
               {t("cta.description").split('\n').map((line, index) => (
                 <span key={index}>
                   {line}

@@ -22,7 +22,7 @@ const B2B2C_Hub = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl text-white font-bold mt-[12px] mb-[12px]" style={{ lineHeight: '1.2' }}>
+          <h2 className="b2b2c-main-title mt-[12px] mb-[12px]" style={{ lineHeight: '1.2' }}>
             <span className="font-normal">제조사부터 소비자까지</span>, <br />
             완전한 유통 생태계를 구축합니다.
           </h2>
@@ -45,8 +45,8 @@ const B2B2C_Hub = () => {
                   <Factory className="w-8 h-8 text-[#0F4C82]" />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-xl font-bold text-black mb-4">B2B 제조사</h3>
-                  <p className="text-gray-600 text-sm mb-6">
+                  <h3 className="b2b2c-card-title text-black mb-4">B2B 제조사</h3>
+                  <p className="b2b2c-card-description text-gray-600 mb-6">
                     품질 높은 제품을 생산하는 제조사와 전략적 파트너십을 구축합니다
                   </p>
                   
@@ -95,8 +95,8 @@ const B2B2C_Hub = () => {
                   <Truck className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-xl font-bold mb-4">FeedBack 유통 허브</h3>
-                  <p className="text-white/80 text-sm mb-6">
+                  <h3 className="b2b2c-card-title mb-4">FeedBack 유통 허브</h3>
+                  <p className="b2b2c-card-description text-white/80 mb-6">
                     전국·글로벌 유통망을 통해 제품을 소비자에게 전달합니다
                   </p>
                   
@@ -179,8 +179,8 @@ const B2B2C_Hub = () => {
                   <ShoppingBag className="w-8 h-8 text-[#0F4C82]" />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-xl font-bold text-black mb-4">B2C 소비자</h3>
-                  <p className="text-gray-600 text-sm mb-6">
+                  <h3 className="b2b2c-card-title text-black mb-4">B2C 소비자</h3>
+                  <p className="b2b2c-card-description text-gray-600 mb-6">
                     다양한 채널을 통해 소비자에게 최고의 제품과 서비스를 제공합니다
                   </p>
                   
@@ -218,10 +218,10 @@ const B2B2C_Hub = () => {
                     <Factory className="w-6 h-6 text-[#0F4C82]" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-black">B2B 제조사</h3>
+                    <h3 className="b2b2c-card-title text-lg text-black">B2B 제조사</h3>
                   </div>
                 </div>
-                <p className="text-gray-600 text-sm mb-4">
+                <p className="b2b2c-card-description text-gray-600 mb-4">
                   품질 높은 제품을 생산하는 제조사와 전략적 파트너십을 구축합니다
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -250,10 +250,10 @@ const B2B2C_Hub = () => {
                     <Truck className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold">FeedBack 유통 허브</h3>
+                    <h3 className="b2b2c-card-title text-lg">FeedBack 유통 허브</h3>
                   </div>
                 </div>
-                <p className="text-white/80 text-sm mb-4">
+                <p className="b2b2c-card-description text-white/80 mb-4">
                   전국·글로벌 유통망을 통해 제품을 소비자에게 전달합니다
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -282,10 +282,10 @@ const B2B2C_Hub = () => {
                     <ShoppingBag className="w-6 h-6 text-[#0F4C82]" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-black">B2C 소비자</h3>
+                    <h3 className="b2b2c-card-title text-lg text-black">B2C 소비자</h3>
                   </div>
                 </div>
-                <p className="text-gray-600 text-sm mb-4">
+                <p className="b2b2c-card-description text-gray-600 mb-4">
                   다양한 채널을 통해 소비자에게 최고의 제품과 서비스를 제공합니다
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -307,10 +307,10 @@ const B2B2C_Hub = () => {
           viewport={{ once: true }}
         >
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">
+            <h3 className="b2b2c-summary-title mb-4">
               "완전한 유통 생태계, 피드백"
             </h3>
-            <p className="text-gray-200 leading-relaxed">
+            <p className="b2b2c-summary-description">
               제조사의 우수한 제품이 소비자에게 성공적으로 전달될 수 있도록,<br />
               피드백은 전체 유통 과정을 설계하고 최적화합니다.
             </p>
