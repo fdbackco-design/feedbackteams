@@ -151,7 +151,7 @@ export default function Header() {
                 data-name="Layer 1" 
                 xmlns="http://www.w3.org/2000/svg" 
                 viewBox="0 0 204.75 27.91"
-                className="h-8 transition-colors duration-300"
+                className="h-6 transition-colors duration-300"
                 style={{
                   fill: isHomePage 
                     ? (currentSection === 'service' || currentSection === 'news' ? '#000000' : '#ffffff')
