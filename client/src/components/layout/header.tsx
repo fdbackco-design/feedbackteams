@@ -28,7 +28,11 @@ type SectionKey =
   | "cta"
   | "footer";
 
-export default function Header() {
+type HeaderProps = {
+  currentSlide?: number; // 0-based; 2,4,5면 검정
+};
+
+export default function Header({ currentSlide }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState<"KR" | "EN">("KR");
@@ -77,7 +81,10 @@ export default function Header() {
 
   // ✅ 텍스트/아이콘/로고 컬러만 토글
   const isBlackSection =
-    isHomePage && (currentSection === "service" || currentSection === "news");
+    isHomePage &&
+    ((typeof currentSlide === "number" && [2, 4, 5].includes(currentSlide)) ||
+      (currentSlide === undefined &&
+        (currentSection === "service" || currentSection === "news")));
 
   // 헤더 배경 (서브는 고정 배경)
   const headerBgClass = isHomePage
