@@ -1,4 +1,8 @@
 import { useState, useEffect, useRef } from "react";
+// @ts-ignore
+import * as THREE from 'three';
+// @ts-ignore  
+import NET from 'vanta/dist/vanta.net.min';
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import {
@@ -144,6 +148,8 @@ export default function Home() {
   const [imageLoaded, setImageLoaded] = useState(true);
   const [nextBrandIndex, setNextBrandIndex] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
+  const vantaRef = useRef<HTMLDivElement>(null);
+  const [vantaEffect, setVantaEffect] = useState<any>(null);
 
   const sections = [
     { id: "hero", name: "홈" },
@@ -178,6 +184,35 @@ export default function Home() {
     }
 
     return () => observer.disconnect();
+  }, []);
+
+  // Vanta.js NET 효과 초기화
+  useEffect(() => {
+    if (vantaRef.current && !vantaEffect) {
+      const effect = NET({
+        el: vantaRef.current,
+        THREE: THREE,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x3b82f6, // 파란색
+        backgroundColor: 0x1e3a8a, // 진한 파란색
+        points: 10.00,
+        maxDistance: 20.00,
+        spacing: 15.00
+      });
+      setVantaEffect(effect);
+    }
+    return () => {
+      if (vantaEffect) {
+        vantaEffect.destroy();
+        setVantaEffect(null);
+      }
+    };
   }, []);
 
   const yearCount = useCountUp({
@@ -859,10 +894,12 @@ export default function Home() {
       <section
         id="stats"
         ref={statsRef}
-        className="h-screen flex items-center justify-center bg-gradient-to-r from-primary to-secondary text-white relative overflow-hidden"
+        className="h-screen flex items-center justify-center text-white relative overflow-hidden"
         style={{ scrollSnapAlign: "start" }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+        {/* Vanta.js NET 배경 */}
+        <div ref={vantaRef} className="absolute inset-0 w-full h-full"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="transform hover:scale-110 transition-transform duration-300 cursor-pointer">
