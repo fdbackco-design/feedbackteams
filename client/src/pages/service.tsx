@@ -82,25 +82,17 @@ export default function Service() {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
-  const [isButtonClick, setIsButtonClick] = useState(false);
 
   const nextSlide = () => {
-    setIsButtonClick(true);
     const newIndex = (currentIndex + 1) % services.length;
     setCurrentIndex(newIndex);
     goToSlide(newIndex);
-    // 버튼 클릭 플래그를 잠시 후 해제
-    setTimeout(() => setIsButtonClick(false), 500);
   };
 
   const prevSlide = () => {
-    setIsButtonClick(true);
-    const newIndex =
-      currentIndex === 0 ? services.length - 1 : currentIndex - 1;
+    const newIndex = currentIndex === 0 ? services.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
     goToSlide(newIndex);
-    // 버튼 클릭 플래그를 잠시 후 해제
-    setTimeout(() => setIsButtonClick(false), 500);
   };
 
   const goToSlide = (index: number) => {
@@ -152,24 +144,6 @@ export default function Service() {
     setIsDragging(false);
     if (carouselRef.current) {
       carouselRef.current.style.cursor = "grab";
-      // 드래그 후 가장 가까운 슬라이드로 스냅
-      const firstChild = carouselRef.current.children[0] as HTMLElement;
-      const cardWidth = firstChild.clientWidth;
-      const gap = 24;
-      const slideWidth = cardWidth + gap;
-      const currentScroll = carouselRef.current.scrollLeft;
-      const containerWidth = carouselRef.current.clientWidth;
-
-      // 현재 스크롤 위치에서 가장 가까운 카드 중심 찾기
-      const centerOffsetFromLeft = currentScroll + containerWidth / 2;
-      const nearestIndex = Math.round(centerOffsetFromLeft / slideWidth);
-      const clampedIndex = Math.max(
-        0,
-        Math.min(nearestIndex, services.length - 1),
-      );
-
-      setCurrentIndex(clampedIndex);
-      goToSlide(clampedIndex);
     }
   };
 
@@ -181,101 +155,13 @@ export default function Service() {
     carouselRef.current.scrollLeft = scrollLeft - walk;
   };
 
-  // 스크롤 이벤트를 감지하여 페이저 업데이트
-  const handleScroll = () => {
-    if (!carouselRef.current || isButtonClick) return;
-    
-    const container = carouselRef.current;
-    const cards = Array.from(container.children) as HTMLElement[];
-    const containerRect = container.getBoundingClientRect();
-    const containerCenter = containerRect.left + containerRect.width / 2;
-    
-    let closestIndex = 0;
-    let closestDistance = Infinity;
-    
-    cards.forEach((card, index) => {
-      const cardRect = card.getBoundingClientRect();
-      const cardCenter = cardRect.left + cardRect.width / 2;
-      const distance = Math.abs(cardCenter - containerCenter);
-      
-      if (distance < closestDistance) {
-        closestDistance = distance;
-        closestIndex = index;
-      }
-    });
-    
-    if (closestIndex !== currentIndex) {
-      setCurrentIndex(closestIndex);
-    }
-  };
-
-  // 스크롤 종료 감지를 위한 디바운스
-  const [scrollTimeout, setScrollTimeout] = useState<NodeJS.Timeout | null>(null);
-  
-  const handleScrollEnd = () => {
-    if (!carouselRef.current || isButtonClick) return;
-    
-    const container = carouselRef.current;
-    const cards = Array.from(container.children) as HTMLElement[];
-    const containerRect = container.getBoundingClientRect();
-    const containerCenter = containerRect.left + containerRect.width / 2;
-    
-    let closestIndex = 0;
-    let closestDistance = Infinity;
-    
-    cards.forEach((card, index) => {
-      const cardRect = card.getBoundingClientRect();
-      const cardCenter = cardRect.left + cardRect.width / 2;
-      const distance = Math.abs(cardCenter - containerCenter);
-      
-      if (distance < closestDistance) {
-        closestDistance = distance;
-        closestIndex = index;
-      }
-    });
-    
-    // 가장 가까운 카드로 스냅
-    if (closestIndex !== currentIndex) {
-      setCurrentIndex(closestIndex);
-      goToSlide(closestIndex);
-    }
-  };
-
-  // 스크롤 이벤트 처리 개선
-  const handleScrollWithSnap = () => {
-    handleScroll();
-    
-    // 기존 타이머 클리어
-    if (scrollTimeout) {
-      clearTimeout(scrollTimeout);
-    }
-    
-    // 스크롤 종료 후 스냅 처리
-    const timeout = setTimeout(handleScrollEnd, 150);
-    setScrollTimeout(timeout);
-  };
-
-  // 초기 로드 시 첫 번째 카드를 중앙에 위치시키고 스크롤 이벤트 등록
+  // 초기 로드 시 첫 번째 카드를 중앙에 위치
   useEffect(() => {
     const timer = setTimeout(() => {
       goToSlide(0);
     }, 100);
-    
-    const carousel = carouselRef.current;
-    if (carousel) {
-      carousel.addEventListener('scroll', handleScrollWithSnap);
-    }
-    
-    return () => {
-      clearTimeout(timer);
-      if (scrollTimeout) {
-        clearTimeout(scrollTimeout);
-      }
-      if (carousel) {
-        carousel.removeEventListener('scroll', handleScrollWithSnap);
-      }
-    };
-  }, [currentIndex, scrollTimeout, isButtonClick]);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <section className="min-h-screen py-20 bg-gray-50">
