@@ -65,7 +65,6 @@ export default function Hoid() {
           </div>
         </div>
       </section>
-
       {/* Rest of the content with background */}
       <div className="bg-gradient-to-b from-blue-50 to-white">
       {/* Product Features */}
@@ -214,7 +213,7 @@ export default function Hoid() {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="bg-blue-600 text-white py-16">
+      <section className="text-white py-16 bg-[#0f4780]">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">깨끗한 공기, 새로운 일상</h2>
           <p className="text-xl mb-8 opacity-90">
