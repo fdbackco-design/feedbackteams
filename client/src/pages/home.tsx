@@ -913,7 +913,7 @@ export default function Home() {
                 return (
                   <div 
                     key={index}
-                    className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] lg:w-[380px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300" 
+                    className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] lg:w-[420px] xl:w-[480px] 2xl:w-[520px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300" 
                     style={{ scrollSnapAlign: 'start' }}
                   >
                     <div className="aspect-[4/3] bg-gray-200 relative">
