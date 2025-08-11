@@ -147,25 +147,25 @@ export default function Contact() {
   const contactInfo = [
     {
       icon: MapPin,
-      title: t("contact.info.address.title"),
-      content: t("contact.info.address.content"),
+      title: t("본사 주소"),
+      content: t("인천 연수구 송도과학로 80, 송도 AIT센터 1302호"),
       color: "bg-primary",
     },
     {
       icon: Phone,
-      title: t("contact.info.phone.title"),
+      title: t("대표전화"),
       content: "070-8211-1761",
       color: "bg-secondary",
     },
     {
       icon: Mail,
-      title: t("contact.info.email.title"),
+      title: t("이메일"),
       content: "fdbackco@gmail.com",
       color: "bg-accent",
     },
     {
       icon: Clock,
-      title: t("contact.info.hours.title"),
+      title: t("운영시간"),
       content: t("contact.info.hours.content"),
       color: "bg-gray-600",
     },
@@ -201,7 +201,7 @@ export default function Contact() {
           {/* Contact Information */}
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-8">
-              {t("contact.info.title")}
+              {t("연락처")}
             </h2>
 
             {/* Company Info Cards */}
