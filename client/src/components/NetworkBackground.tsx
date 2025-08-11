@@ -6,6 +6,8 @@ interface Node {
   vx: number;
   vy: number;
   size: number;
+  baseX: number;
+  baseY: number;
 }
 
 interface NetworkBackgroundProps {
@@ -17,6 +19,7 @@ const NetworkBackground: React.FC<NetworkBackgroundProps> = ({ className = "" })
   const animationRef = useRef<number>();
   const nodesRef = useRef<Node[]>([]);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+  const mouseRef = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -36,15 +39,32 @@ const NetworkBackground: React.FC<NetworkBackgroundProps> = ({ className = "" })
     updateDimensions();
     window.addEventListener("resize", updateDimensions);
 
+    // Mouse tracking for interactive effects
+    const handleMouseMove = (e: MouseEvent) => {
+      const rect = canvas.getBoundingClientRect();
+      mouseRef.current = {
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top,
+      };
+    };
+
+    canvas.addEventListener("mousemove", handleMouseMove);
+
     // Initialize nodes with higher density
     const nodeCount = Math.floor((dimensions.width * dimensions.height) / 8000) + 50;
-    nodesRef.current = Array.from({ length: nodeCount }, () => ({
-      x: Math.random() * dimensions.width,
-      y: Math.random() * dimensions.height,
-      vx: (Math.random() - 0.5) * 0.2,
-      vy: (Math.random() - 0.5) * 0.2,
-      size: Math.random() * 2 + 1,
-    }));
+    nodesRef.current = Array.from({ length: nodeCount }, () => {
+      const baseX = Math.random() * dimensions.width;
+      const baseY = Math.random() * dimensions.height;
+      return {
+        x: baseX,
+        y: baseY,
+        baseX,
+        baseY,
+        vx: (Math.random() - 0.5) * 0.2,
+        vy: (Math.random() - 0.5) * 0.2,
+        size: Math.random() * 2 + 1,
+      };
+    });
 
     const animate = () => {
       if (!canvas || !ctx) return;
@@ -54,16 +74,42 @@ const NetworkBackground: React.FC<NetworkBackgroundProps> = ({ className = "" })
       const nodes = nodesRef.current;
       const maxDistance = 150;
 
-      // Update node positions
+      // Update node positions with mouse interaction
+      const mouse = mouseRef.current;
+      
       nodes.forEach((node) => {
-        node.x += node.vx;
-        node.y += node.vy;
-
-        // Bounce off edges
-        if (node.x <= 0 || node.x >= dimensions.width) node.vx *= -1;
-        if (node.y <= 0 || node.y >= dimensions.height) node.vy *= -1;
-
-        // Keep nodes in bounds
+        // Calculate distance to mouse
+        const mouseDx = mouse.x - node.baseX;
+        const mouseDy = mouse.y - node.baseY;
+        const mouseDistance = Math.sqrt(mouseDx * mouseDx + mouseDy * mouseDy);
+        
+        // Mouse influence effect
+        const maxInfluence = 200;
+        const influence = Math.max(0, (maxInfluence - mouseDistance) / maxInfluence);
+        
+        // Apply mouse attraction/repulsion effect
+        const mouseForce = influence * 30;
+        const mouseInfluenceX = (mouseDx / mouseDistance || 0) * mouseForce;
+        const mouseInfluenceY = (mouseDy / mouseDistance || 0) * mouseForce;
+        
+        // Update position with gentle drift + mouse influence
+        node.x = node.baseX + node.vx + mouseInfluenceX * 0.3;
+        node.y = node.baseY + node.vy + mouseInfluenceY * 0.3;
+        
+        // Gentle drift from base position
+        node.vx += (Math.random() - 0.5) * 0.02;
+        node.vy += (Math.random() - 0.5) * 0.02;
+        
+        // Return to base position slowly
+        const returnForce = 0.02;
+        node.vx += (node.baseX - node.x) * returnForce;
+        node.vy += (node.baseY - node.y) * returnForce;
+        
+        // Limit velocity
+        node.vx = Math.max(-2, Math.min(2, node.vx));
+        node.vy = Math.max(-2, Math.min(2, node.vy));
+        
+        // Keep nodes within bounds
         node.x = Math.max(0, Math.min(dimensions.width, node.x));
         node.y = Math.max(0, Math.min(dimensions.height, node.y));
       });
@@ -146,6 +192,7 @@ const NetworkBackground: React.FC<NetworkBackgroundProps> = ({ className = "" })
 
     return () => {
       window.removeEventListener("resize", updateDimensions);
+      canvas.removeEventListener("mousemove", handleMouseMove);
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
