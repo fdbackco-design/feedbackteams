@@ -77,6 +77,7 @@ export default function Footer() {
                 <Link
                   href="/service"
                   className="hover:text-white transition-colors"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
                   유통/수출입 중개
                 </Link>
@@ -85,6 +86,7 @@ export default function Footer() {
                 <Link
                   href="/service"
                   className="hover:text-white transition-colors"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
                   자체 브랜드 제조
                 </Link>
@@ -93,6 +95,7 @@ export default function Footer() {
                 <Link
                   href="/service"
                   className="hover:text-white transition-colors"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
                   글로벌 마케팅
                 </Link>
@@ -101,6 +104,7 @@ export default function Footer() {
                 <Link
                   href="/service"
                   className="hover:text-white transition-colors"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
                   의료관광 플랫폼
                 </Link>
@@ -109,6 +113,7 @@ export default function Footer() {
                 <Link
                   href="/service"
                   className="hover:text-white transition-colors"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
                   앱 개발
                 </Link>
