@@ -597,7 +597,7 @@ export default function Home() {
               size="lg"
               className="text-lg px-8 py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
             >
-              <Link href="/contact">{t("hero.cta.consultation")}</Link>
+              <Link href="/service">{t("hero.cta.consultation")}</Link>
             </Button>
             <Button
               variant="outline"

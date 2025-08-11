@@ -271,7 +271,7 @@ export default function Hoid() {
                 </p>
               </div>
 
-              
+
             </div>
             <div>
               <div className="relative">
@@ -311,7 +311,7 @@ export default function Hoid() {
                   홈쇼핑
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-lg">
-                  TV 홈쇼핑 채널을 통한 직접 판매
+                  홈쇼핑 채널을 통한 직접 판매
                 </p>
               </div>
             </div>

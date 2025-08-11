@@ -170,7 +170,7 @@ export default function InYourHeart() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button
                 size="lg"
-                className="text-[#ffffff] bg-[#000000] hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-semibold"
+                className="hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-semibold text-[#ffffff] bg-[#000000]"
               >
                 제품 체험하기
                 <ArrowRight className="ml-2 w-5 h-5" />
