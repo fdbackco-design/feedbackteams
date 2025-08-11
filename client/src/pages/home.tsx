@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 import {
   Card,
   CardContent,
@@ -48,11 +49,10 @@ import sangsaengImg from "@assets/sangsaeng_1_1754636754183.jpg";
 import newsData from "@/data/news.json";
 import { resolveNewsThumbnail, FALLBACK } from "@/assets/news";
 
-const services = [
+const getServices = (t: (key: string) => string) => [
   {
-    title: "유통 / 수출입 중개",
-    description:
-      "아시아 전역의 유통망을 통해 효율적인 수출입 및 중개 서비스를 제공합니다. 다양한 제품군에 대한 전문적인 수출입 컨설팅과 물류 솔루션을 함께 제공하여 글로벌 비즈니스를 지원합니다.",
+    title: t("services.medical.title"),
+    description: t("services.medical.description"),
     features: ["아시아 유통망 구축", "수출입 통관 대행", "물류 최적화 솔루션"],
     imageUrl: cargoShipImage,
   },
@@ -134,6 +134,7 @@ const brands = [
 ];
 
 export default function Home() {
+  const { t } = useLanguage();
   const [scrollY, setScrollY] = useState(0);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [currentSection, setCurrentSection] = useState(0);
@@ -143,6 +144,8 @@ export default function Home() {
   const statsRef = useRef<HTMLDivElement>(null);
   const newsScrollRef = useRef<HTMLDivElement>(null);
   const [newsScrollProgress, setNewsScrollProgress] = useState(0);
+  
+  const services = getServices(t);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const serviceCarouselRef = useRef<HTMLDivElement>(null);
   const [currentBrandIndex, setCurrentBrandIndex] = useState(0);
@@ -529,17 +532,15 @@ export default function Home() {
           }}
         >
           <h1 className="text-5xl md:text-7xl font-light mb-6 leading-tight animate-fade-in-up text-white">
-            <span className="font-bold">브랜드</span>와{" "}
-            <span className="font-bold">시장</span>을{" "}
-            <span className="font-bold">연결</span>하는
+            {t("hero.title")}
             <br />
-            유통 플랫폼, <span className="font-bold">FEEDBACK</span>
+            <span className="font-bold">{t("hero.subtitle")}</span>
           </h1>
           <p
             className="text-xl md:text-2xl mb-8 opacity-90 animate-fade-in-up"
             style={{ animationDelay: "0.3s" }}
           >
-            유통 · 브랜드 · 마케팅 · 제조가 하나로 연결되는 상생 플랫폼
+            {t("hero.description")}
           </p>
           <div
             className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up"
@@ -550,7 +551,7 @@ export default function Home() {
               size="lg"
               className="text-lg px-8 py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
             >
-              <Link href="/service">서비스 둘러보기</Link>
+              <Link href="/contact">{t("hero.cta.consultation")}</Link>
             </Button>
             <Button
               variant="outline"
@@ -559,7 +560,7 @@ export default function Home() {
               onClick={() => setIsVideoPlaying(true)}
             >
               <Play className="mr-2 w-5 h-5" />
-              소개 영상 보기
+              {t("hero.cta.proposal")}
             </Button>
           </div>
         </div>
@@ -614,12 +615,10 @@ export default function Home() {
               SERVICE
             </div>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              핵심 서비스
+              {t("services.title")}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              기획부터 제조, 유통, 브랜딩까지.
-              <br />
-              FeedBack은 브랜드 성장의 전 과정을 함께합니다.
+              {t("hero.description")}
             </p>
           </div>
 
@@ -860,7 +859,7 @@ export default function Home() {
           {/* Section Header - Aligned with Navigation */}
           <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
-              NEWS <span className="text-gray-400 text-lg sm:text-xl md:text-2xl lg:text-3xl">↗</span>
+              {t("news.title")} <span className="text-gray-400 text-lg sm:text-xl md:text-2xl lg:text-3xl">↗</span>
             </h2>
           </div>
 
@@ -940,13 +939,13 @@ export default function Home() {
           {/* Section Header */}
           <div className="text-center mb-16">
             <div className="text-sm text-blue-300 font-semibold tracking-wide uppercase mb-4">
-              OUR ACHIEVEMENTS
+              {t("stats.subtitle")}
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              성장하는 <span className="text-blue-400">FeedBack</span>
+              {t("stats.title")} <span className="text-blue-400">FeedBack</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              글로벌 비즈니스 파트너로서 꾸준히 성장하고 있는 FeedBack의 주요 성과를 확인해보세요.
+              {t("stats.description")}
             </p>
           </div>
 
@@ -955,29 +954,29 @@ export default function Home() {
               <div className="text-6xl font-bold mb-4 tabular-nums text-white drop-shadow-lg">
                 {yearCount}
               </div>
-              <div className="text-xl text-blue-300 font-medium">설립년도</div>
-              <div className="text-sm text-gray-300 mt-2">Since</div>
+              <div className="text-xl text-blue-300 font-medium">{t("stats.since")}</div>
+              <div className="text-sm text-gray-300 mt-2">{t("stats.since.sub")}</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/15">
               <div className="text-6xl font-bold mb-4 tabular-nums text-white drop-shadow-lg">
                 {brandCount}+
               </div>
-              <div className="text-xl text-blue-300 font-medium">자체 브랜드</div>
-              <div className="text-sm text-gray-300 mt-2">Own Brands</div>
+              <div className="text-xl text-blue-300 font-medium">{t("stats.brands")}</div>
+              <div className="text-sm text-gray-300 mt-2">{t("stats.brands.sub")}</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/15">
               <div className="text-6xl font-bold mb-4 tabular-nums text-white drop-shadow-lg">
                 {partnerCount}+
               </div>
-              <div className="text-xl text-blue-300 font-medium">파트너 국가</div>
-              <div className="text-sm text-gray-300 mt-2">Countries</div>
+              <div className="text-xl text-blue-300 font-medium">{t("stats.countries")}</div>
+              <div className="text-sm text-gray-300 mt-2">{t("stats.countries.sub")}</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/15">
               <div className="text-6xl font-bold mb-4 tabular-nums text-white drop-shadow-lg">
                 {hospitalCount}+
               </div>
-              <div className="text-xl text-blue-300 font-medium">병원 제휴</div>
-              <div className="text-sm text-gray-300 mt-2">Hospitals</div>
+              <div className="text-xl text-blue-300 font-medium">{t("stats.hospitals")}</div>
+              <div className="text-sm text-gray-300 mt-2">{t("stats.hospitals.sub")}</div>
             </div>
           </div>
         </div>
@@ -1011,12 +1010,15 @@ export default function Home() {
             style={{ animationDelay: "0.1s" }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-2xl">
-              글로벌 진출을 꿈꾸시나요?
+              {t("cta.title")}
             </h2>
             <p className="text-xl text-white mb-12 drop-shadow-2xl font-semibold leading-relaxed">
-              FeedBack과 함께 아시아를 넘어 세계 시장으로 나아가세요.
-              <br />
-              전문 컨설턴트가 맞춤형 솔루션을 제안해드립니다.
+              {t("cta.description").split('\n').map((line, index) => (
+                <span key={index}>
+                  {line}
+                  {index === 0 && <br />}
+                </span>
+              ))}
             </p>
             <div className="flex flex-col sm:flex-row gap-6 items-start">
               <Button
@@ -1025,7 +1027,7 @@ export default function Home() {
                 className="text-lg px-10 py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl animate-floating bg-white text-blue-600 hover:bg-gray-100"
                 style={{ animationDelay: "1s" }}
               >
-                <Link href="/contact">무료 상담 신청</Link>
+                <Link href="/contact">{t("cta.consultation")}</Link>
               </Button>
               <Button
                 asChild
@@ -1034,7 +1036,7 @@ export default function Home() {
                 className="text-lg px-10 py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl animate-floating border-white bg-white text-blue-600 hover:bg-gray-100"
                 style={{ animationDelay: "1.5s" }}
               >
-                <Link href="/service">사업 제안서 보기</Link>
+                <Link href="/service">{t("cta.proposal")}</Link>
               </Button>
             </div>
           </div>

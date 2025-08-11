@@ -2,22 +2,15 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // 네비게이션
-const navigationKR = [
-  { name: "회사소개", href: "/about" },
-  { name: "서비스", href: "/service" },
-  { name: "브랜드", href: "/brand" },
-  { name: "뉴스", href: "/news" },
-  { name: "연락처", href: "/contact" },
-];
-
-const navigationEN = [
-  { name: "About", href: "/about" },
-  { name: "Services", href: "/service" },
-  { name: "Brands", href: "/brand" },
-  { name: "News", href: "/news" },
-  { name: "Contact", href: "/contact" },
+const getNavigation = (t: (key: string) => string) => [
+  { name: t("nav.home"), href: "/about" },
+  { name: t("nav.services"), href: "/service" },
+  { name: t("nav.brands"), href: "/brand" },
+  { name: t("nav.news"), href: "/news" },
+  { name: t("nav.contact"), href: "/contact" },
 ];
 
 // Home에서 prop을 주더라도 이제 색 결정에는 사용하지 않습니다(요구사항: 섹션 id 기준)
@@ -28,14 +21,14 @@ type HeaderProps = {
 export default function Header(_props: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState<"KR" | "EN">("KR");
+  const { currentLanguage, setCurrentLanguage, t } = useLanguage();
 
   // 현재 뷰포트 중앙에 들어온 section id
   const [activeSectionId, setActiveSectionId] = useState<string>("hero");
 
   const [location] = useLocation();
   const isHomePage = location === "/";
-  const navigation = currentLanguage === "KR" ? navigationKR : navigationEN;
+  const navigation = getNavigation(t);
 
   // 뷰포트 중앙선 기준으로 가장 "가까운(or 포함하는)" 섹션 id 계산
   useEffect(() => {

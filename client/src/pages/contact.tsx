@@ -30,10 +30,12 @@ import {
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import GoogleMap from "@/components/GoogleMap";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const CENTER = { lat: 37.380236, lng: 126.665423 };
 
 export default function Contact() {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     company: "",
@@ -49,8 +51,8 @@ export default function Contact() {
     e.preventDefault();
     if (!formData.privacyAgree) {
       toast({
-        title: "개인정보 동의 필요",
-        description: "개인정보 수집 및 이용에 동의해주세요.",
+        title: t("contact.form.privacy.error.title"),
+        description: t("contact.form.privacy.error.description"),
         variant: "destructive",
       });
       return;
@@ -58,8 +60,8 @@ export default function Contact() {
 
     // Handle form submission
     toast({
-      title: "문의가 전송되었습니다",
-      description: "빠른 시일 내에 답변드리겠습니다.",
+      title: t("contact.form.success.title"),
+      description: t("contact.form.success.description"),
     });
 
     // Reset form
@@ -77,36 +79,35 @@ export default function Contact() {
   const contactInfo = [
     {
       icon: MapPin,
-      title: "본사 주소",
-      content: "인천 연수구 송도과학로80, 송도 AIT센터 1302호",
+      title: t("contact.info.address.title"),
+      content: t("contact.info.address.content"),
       color: "bg-primary",
     },
     {
       icon: Phone,
-      title: "대표 전화",
+      title: t("contact.info.phone.title"),
       content: "070-8211-1761",
       color: "bg-secondary",
     },
     {
       icon: Mail,
-      title: "이메일",
+      title: t("contact.info.email.title"),
       content: "fdbackco@gmail.com",
       color: "bg-accent",
     },
     {
       icon: Clock,
-      title: "운영시간",
-      content:
-        "평일 10:00 - 19:00\n토요일 09:00 - 13:00\n일요일 및 공휴일 휴무",
+      title: t("contact.info.hours.title"),
+      content: t("contact.info.hours.content"),
       color: "bg-gray-600",
     },
   ];
 
   const departments = [
-    { dept: "의료관광 사업부", email: "fdbackco@gmail.com" },
-    { dept: "브랜드 사업부", email: "fdbackco@gmail.com" },
-    { dept: "마케팅/PR", email: "fdbackco@gmail.com" },
-    { dept: "파트너십", email: "fdbackco@gmail.com" },
+    { dept: t("contact.departments.medical"), email: "fdbackco@gmail.com" },
+    { dept: t("contact.departments.brand"), email: "fdbackco@gmail.com" },
+    { dept: t("contact.departments.marketing"), email: "fdbackco@gmail.com" },
+    { dept: t("contact.departments.partnership"), email: "fdbackco@gmail.com" },
   ];
 
   return (
@@ -114,12 +115,15 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h1 className="text-5xl font-bold text-gray-900 mb-8">
-            연락처 & 문의
+            {t("contact.title")}
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            FeedBack과 함께 새로운 비즈니스 기회를 만들어보세요.
-            <br />
-            언제든지 문의해 주시면 신속하고 정확한 답변을 드리겠습니다.
+            {t("contact.description").split('\n').map((line, index) => (
+              <span key={index}>
+                {line}
+                {index === 0 && <br />}
+              </span>
+            ))}
           </p>
         </div>
 
@@ -127,7 +131,7 @@ export default function Contact() {
           {/* Contact Information */}
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-8">
-              연락처 정보
+              {t("contact.info.title")}
             </h2>
 
             {/* Company Info Cards */}
@@ -154,7 +158,7 @@ export default function Contact() {
             {/* Department Contacts */}
             <Card className="bg-gray-50 mb-8">
               <CardHeader>
-                <CardTitle className="text-xl">부서별 연락처</CardTitle>
+                <CardTitle className="text-xl">{t("contact.departments.title")}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -171,7 +175,7 @@ export default function Contact() {
             {/* Social Media */}
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">
-                소셜 미디어
+                {t("contact.social.title")}
               </h3>
               <div className="flex space-x-4">
                 <a
@@ -204,12 +208,12 @@ export default function Contact() {
 
           {/* Contact Form */}
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">문의하기</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">{t("contact.form.title")}</h2>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name */}
               <div>
-                <Label htmlFor="name">이름 *</Label>
+                <Label htmlFor="name">{t("contact.form.name")} *</Label>
                 <Input
                   id="name"
                   type="text"
@@ -218,13 +222,13 @@ export default function Contact() {
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
-                  placeholder="이름을 입력해주세요"
+                  placeholder={t("contact.form.name.placeholder")}
                 />
               </div>
 
               {/* Company */}
               <div>
-                <Label htmlFor="company">회사명</Label>
+                <Label htmlFor="company">{t("contact.form.company")}</Label>
                 <Input
                   id="company"
                   type="text"
@@ -232,13 +236,13 @@ export default function Contact() {
                   onChange={(e) =>
                     setFormData({ ...formData, company: e.target.value })
                   }
-                  placeholder="회사명을 입력해주세요"
+                  placeholder={t("contact.form.company.placeholder")}
                 />
               </div>
 
               {/* Email */}
               <div>
-                <Label htmlFor="email">이메일 *</Label>
+                <Label htmlFor="email">{t("contact.form.email")} *</Label>
                 <Input
                   id="email"
                   type="email"
@@ -247,13 +251,13 @@ export default function Contact() {
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                  placeholder="이메일을 입력해주세요"
+                  placeholder={t("contact.form.email.placeholder")}
                 />
               </div>
 
               {/* Phone */}
               <div>
-                <Label htmlFor="phone">전화번호</Label>
+                <Label htmlFor="phone">{t("contact.form.phone")}</Label>
                 <Input
                   id="phone"
                   type="tel"
@@ -261,13 +265,13 @@ export default function Contact() {
                   onChange={(e) =>
                     setFormData({ ...formData, phone: e.target.value })
                   }
-                  placeholder="전화번호를 입력해주세요"
+                  placeholder={t("contact.form.phone.placeholder")}
                 />
               </div>
 
               {/* Inquiry Type */}
               <div>
-                <Label htmlFor="inquiry-type">문의 유형 *</Label>
+                <Label htmlFor="inquiry-type">{t("contact.form.inquiry")} *</Label>
                 <Select
                   value={formData.inquiryType}
                   onValueChange={(value) =>
@@ -276,28 +280,28 @@ export default function Contact() {
                   required
                 >
                   <SelectTrigger>
-                    <SelectValue placeholder="문의 유형을 선택해주세요" />
+                    <SelectValue placeholder={t("contact.form.inquiry.placeholder")} />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="medical-tourism">
-                      의료관광 문의
+                      {t("contact.form.inquiry.medical")}
                     </SelectItem>
                     <SelectItem value="brand-partnership">
-                      브랜드 파트너십
+                      {t("contact.form.inquiry.brand")}
                     </SelectItem>
                     <SelectItem value="distribution">
-                      유통/수출입 문의
+                      {t("contact.form.inquiry.distribution")}
                     </SelectItem>
-                    <SelectItem value="marketing">마케팅 컨설팅</SelectItem>
-                    <SelectItem value="investment">투자 문의</SelectItem>
-                    <SelectItem value="other">기타</SelectItem>
+                    <SelectItem value="marketing">{t("contact.form.inquiry.marketing")}</SelectItem>
+                    <SelectItem value="investment">{t("contact.form.inquiry.investment")}</SelectItem>
+                    <SelectItem value="other">{t("contact.form.inquiry.other")}</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
 
               {/* Message */}
               <div>
-                <Label htmlFor="message">문의 내용 *</Label>
+                <Label htmlFor="message">{t("contact.form.message")} *</Label>
                 <Textarea
                   id="message"
                   required
@@ -306,7 +310,7 @@ export default function Contact() {
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
-                  placeholder="문의하실 내용을 자세히 작성해주세요"
+                  placeholder={t("contact.form.message.placeholder")}
                 />
               </div>
 
@@ -326,9 +330,9 @@ export default function Contact() {
                   htmlFor="privacy-agree"
                   className="text-sm text-gray-600"
                 >
-                  개인정보 수집 및 이용에 동의합니다.
+                  {t("contact.form.privacy")}
                   <a href="#" className="text-primary hover:underline ml-1">
-                    개인정보처리방침 보기
+                    {t("contact.form.privacy.link")}
                   </a>
                 </Label>
               </div>
@@ -338,7 +342,7 @@ export default function Contact() {
                 type="submit"
                 className="w-full py-4 text-lg font-semibold"
               >
-                문의 보내기
+                {t("contact.form.submit")}
               </Button>
             </form>
           </div>
@@ -347,7 +351,7 @@ export default function Contact() {
         {/* Map Section */}
         <div className="mt-20">
           <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
-            오시는 길
+            {t("contact.map.title")}
           </h3>
           <div className="rounded-xl h-96 overflow-hidden shadow-lg">
             <GoogleMap center={CENTER} className="rounded-xl" />
