@@ -78,7 +78,7 @@ export default function News() {
             return (
               <Card
                 key={index}
-                className="shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                className="shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col h-full"
               >
                 <div className="aspect-[4/3] bg-gray-200 relative overflow-hidden">
                   <img
@@ -92,7 +92,7 @@ export default function News() {
                     }}
                   />
                 </div>
-                <CardHeader>
+                <CardHeader className="pb-3">
                   <div className="flex items-center justify-between mb-3">
                     <Badge
                       className={
@@ -104,17 +104,17 @@ export default function News() {
                     </Badge>
                     <time className="text-gray-500 text-sm">{news.date}</time>
                   </div>
-                  <CardTitle className="text-xl font-bold text-gray-900 line-clamp-2">
+                  <CardTitle className="text-xl font-bold text-gray-900 line-clamp-2 h-[3.5rem] leading-tight">
                     {news.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-gray-600 mb-4 line-clamp-3">
+                <CardContent className="flex-1 flex flex-col justify-between pt-0">
+                  <CardDescription className="text-gray-600 mb-6 line-clamp-3 h-[4.5rem] leading-relaxed">
                     {news.summary}
                   </CardDescription>
                   <Link
                     href={news.link}
-                    className="text-primary font-semibold hover:underline"
+                    className="text-primary font-semibold hover:underline self-start"
                   >
                     전체 기사 읽기 →
                   </Link>
