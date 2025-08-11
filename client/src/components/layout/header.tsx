@@ -20,33 +20,37 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
+      // 홈페이지가 아니면 섹션 감지 안함
+      if (location !== '/') return;
+      
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
-      
       let newSection = 'hero';
       
-      // 각 섹션의 위치를 기반으로 현재 섹션 감지
+      // 간단한 스크롤 위치 기반 섹션 감지
       if (scrollY < windowHeight * 0.8) {
-        newSection = 'hero';     // 1번째 섹션 - 흰색
+        newSection = 'hero';     // 메인 섹션 (동영상 배경)
       } else if (scrollY < windowHeight * 1.8) {
-        newSection = 'service';  // 2번째 섹션 - 검은색
+        newSection = 'service';  // 서비스 섹션 (흰색 배경) - 검은 텍스트
       } else if (scrollY < windowHeight * 2.8) {
-        newSection = 'brand';    // 3번째 섹션 - 흰색
+        newSection = 'brand';    // 브랜드 섹션 (어두운 배경)
       } else if (scrollY < windowHeight * 3.8) {
-        newSection = 'news';     // 4번째 섹션 - 검은색
+        newSection = 'news';     // 뉴스 섹션 (흰색 배경) - 검은 텍스트
       } else {
-        newSection = 'stats';    // 5번째 섹션 - 흰색
+        newSection = 'stats';    // 통계 섹션 (파란 배경)
       }
       
       if (newSection !== currentSection) {
         setCurrentSection(newSection);
+        // 디버깅용 로그 (임시)
+        console.log('Section changed to:', newSection, 'at scroll:', scrollY);
       }
     };
     
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // 초기 실행
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [currentSection]);
+  }, [currentSection, location]);
 
   // 언어 드롭다운 바깥 클릭 시 닫기
   useEffect(() => {
@@ -116,6 +120,12 @@ export default function Header() {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 ${headerStyle}`}>
+      {/* 디버깅용 현재 섹션 표시 (임시) */}
+      {isHomePage && (
+        <div className="fixed top-20 left-4 z-50 bg-black/70 text-white px-3 py-1 rounded text-sm font-mono">
+          Section: {currentSection}
+        </div>
+      )}
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
