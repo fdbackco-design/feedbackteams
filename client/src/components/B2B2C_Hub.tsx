@@ -8,9 +8,6 @@ const B2B2C_Hub = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">제조사부터 소비자까지, 완전한 유통 생태계를 구축합니다.</h2>
-          <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
-            제조사부터 소비자까지, 완전한 유통 생태계를 구축합니다
-          </p>
         </div>
 
         {/* Flow Layout */}
