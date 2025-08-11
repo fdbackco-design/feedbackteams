@@ -104,12 +104,7 @@ export default function Header(_props: HeaderProps) {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 ${headerBgClass}`}>
-      {/* 디버그 박스(원하면 제거) */}
-      {isHomePage && (
-        <div className="fixed top-20 left-4 z-50 bg-black/70 text-white px-3 py-1 rounded text-sm font-mono">
-          <div>ActiveSection: {activeSectionId}</div>
-        </div>
-      )}
+      
 
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
         <div
