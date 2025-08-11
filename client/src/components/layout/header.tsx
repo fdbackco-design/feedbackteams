@@ -52,12 +52,12 @@ export default function Header({ currentSlide }: HeaderProps) {
       setScrollY(y);
 
       let s: SectionKey = "hero";
-      if (y < 600) s = "hero";
-      else if (y < 1400) s = "service";
-      else if (y < 2200) s = "brand";
-      else if (y < 3000) s = "news";
-      else if (y < 3800) s = "stats";
-      else if (y < 4600) s = "cta";
+      if (y < 800) s = "hero";        // 슬라이드 0
+      else if (y < 1600) s = "service";   // 슬라이드 1
+      else if (y < 2400) s = "brand";     // 슬라이드 2 - 검은색
+      else if (y < 3200) s = "news";      // 슬라이드 3
+      else if (y < 4000) s = "stats";     // 슬라이드 4 - 검은색
+      else if (y < 4800) s = "cta";       // 슬라이드 5 - 검은색
       else s = "footer";
 
       if (s !== currentSection) setCurrentSection(s);
@@ -79,12 +79,12 @@ export default function Header({ currentSlide }: HeaderProps) {
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
-  // ✅ 텍스트/아이콘/로고 컬러만 토글
+  // ✅ 2, 4, 5 슬라이드에서만 검은색 헤더 (brands, news, stats)
   const isBlackSection =
     isHomePage &&
     ((typeof currentSlide === "number" && [2, 4, 5].includes(currentSlide)) ||
       (currentSlide === undefined &&
-        (currentSection === "service" || currentSection === "news")));
+        (currentSection === "brand" || currentSection === "news" || currentSection === "stats")));
 
   // 헤더 배경 (서브는 고정 배경)
   const headerBgClass = isHomePage
