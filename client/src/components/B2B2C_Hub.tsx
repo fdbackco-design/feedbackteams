@@ -22,8 +22,10 @@ const B2B2C_Hub = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl text-white font-bold mt-[12px] mb-[12px]">제조사부터 소비자까지
-          완전한 유통 생태계를 구축합니다.</h2>
+          <h2 className="text-4xl lg:text-5xl text-white font-bold mt-[12px] mb-[12px] leading-relaxed">
+            <span className="font-normal">제조사부터 소비자까지</span>, <br />
+            완전한 유통 생태계를 구축합니다.
+          </h2>
         </div>
 
         {/* Flow Layout */}
