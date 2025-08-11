@@ -875,7 +875,7 @@ export default function Home() {
         className="h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white relative overflow-hidden"
         style={{ scrollSnapAlign: "start" }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
         
         {/* Dynamic Network Background */}
         <NetworkBackground className="opacity-50" />
