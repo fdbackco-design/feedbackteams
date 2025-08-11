@@ -51,83 +51,115 @@ import { resolveNewsThumbnail, FALLBACK } from "@/assets/news";
 
 const getServices = (t: (key: string) => string) => [
   {
-    title: t("services.medical.title"),
-    description: t("services.medical.description"),
-    features: ["아시아 유통망 구축", "수출입 통관 대행", "물류 최적화 솔루션"],
+    title: t("services.distribution.title"),
+    description: t("services.distribution.description"),
+    features: [
+      t("services.distribution.features.0"),
+      t("services.distribution.features.1"),
+      t("services.distribution.features.2")
+    ],
     imageUrl: cargoShipImage,
   },
   {
-    title: "자체 브랜드 제조 (OEM)",
-    description:
-      "Hoid, Medifeed, InYourHeart, 상생 등 4개 자체 브랜드의 제조 및 OEM 생산을 통해 브랜드 성장을 지원합니다. 품질 관리부터 제품 개발까지 전 과정을 책임집니다.",
-    features: ["4개 자체 브랜드 운영", "OEM/ODM 제조", "품질관리 시스템"],
+    title: t("services.manufacturing.title"),
+    description: t("services.manufacturing.description"),
+    features: [
+      t("services.manufacturing.features.0"),
+      t("services.manufacturing.features.1"),
+      t("services.manufacturing.features.2")
+    ],
     imageUrl: factoryImage,
   },
   {
-    title: "글로벌 마케팅/브랜딩",
-    description:
-      "홈쇼핑 연계와 디지털 마케팅을 통한 글로벌 브랜딩 솔루션을 제공합니다. 브랜드 아이덴티티 개발부터 글로벌 시장 진출 전략까지 종합적인 마케팅 서비스를 지원합니다.",
-    features: ["홈쇼핑 연계 마케팅", "디지털 마케팅", "글로벌 진출 전략"],
+    title: t("services.marketing.title"),
+    description: t("services.marketing.description"),
+    features: [
+      t("services.marketing.features.0"),
+      t("services.marketing.features.1"),
+      t("services.marketing.features.2")
+    ],
     imageUrl: homeshoppingImage,
   },
   {
-    title: "의료관광 플랫폼",
-    description:
-      "상생 브랜드를 통한 의료관광 플랫폼 운영으로 한국의 우수한 의료 서비스를 전 세계에 연결합니다. 태국, 베트남을 시작으로 아시아 전역으로 서비스를 확장하고 있습니다.",
-    features: ["메디컬 투어리즘", "병원 네트워크", "다국어 플랫폼"],
+    title: t("services.medical.title"),
+    description: t("services.medical.description"),
+    features: [
+      t("services.medical.features.0"),
+      t("services.medical.features.1"),
+      t("services.medical.features.2")
+    ],
     imageUrl: hospitalImage,
   },
   {
-    title: "앱 개발",
-    description:
-      "의료/케어 통합 앱 개발로 디지털 헬스케어 솔루션을 제공합니다. 다국어 지원과 실시간 상담 기능을 통해 글로벌 사용자들에게 편리한 서비스를 제공합니다.",
-    features: ["의료/케어 통합 앱", "다국어 지원", "실시간 상담"],
+    title: t("services.app.title"),
+    description: t("services.app.description"),
+    features: [
+      t("services.app.features.0"),
+      t("services.app.features.1"),
+      t("services.app.features.2")
+    ],
     imageUrl: uiDesignImage,
   },
 ];
 
-const brands = [
+const getBrands = (t: (key: string) => string) => [
   {
     id: "hoid",
     name: "Hoid",
-    category: "미니멀 가전 브랜드",
-    slogan: "공기 속까지 바꾸는 디자인",
-    description:
-      "공기청정기, 제습기 등 미니멀한 디자인과 첨단 기술이 만나 일상의 공기질을 혁신하는 스마트 가전 브랜드입니다.",
-    products: ["공기청정기", "제습기", "3-in-1 기술", "HEPA14 필터"],
+    category: t("brands.hoid.category"),
+    slogan: t("brands.hoid.slogan"),
+    description: t("brands.hoid.description"),
+    products: [
+      t("brands.hoid.products.0"),
+      t("brands.hoid.products.1"),
+      t("brands.hoid.products.2"),
+      t("brands.hoid.products.3")
+    ],
     image: hoidImg,
     color: "from-gray-400 to-gray-600",
   },
   {
     id: "medifeed",
     name: "Medifeed",
-    category: "기능성 영양제 브랜드",
-    slogan: "매일을 지키는 작은 습관",
-    description:
-      "잇몸과 눈 건강을 중심으로 한 기능성 영양제 브랜드로, 실용성과 안전성을 바탕으로 건강 솔루션을 제공합니다.",
-    products: ["잇몸 건강", "눈 건강", "기능성 영양제", "GMP 인증"],
+    category: t("brands.medifeed.category"),
+    slogan: t("brands.medifeed.slogan"),
+    description: t("brands.medifeed.description"),
+    products: [
+      t("brands.medifeed.products.0"),
+      t("brands.medifeed.products.1"),
+      t("brands.medifeed.products.2"),
+      t("brands.medifeed.products.3")
+    ],
     image: medifeedImg,
     color: "from-blue-500 to-blue-700",
   },
   {
     id: "inyourheart",
     name: "InYourHeart",
-    category: "감성 스킨케어 브랜드",
-    slogan: "피부에 감성을 입히다",
-    description:
-      "클린뷰티 철학과 감성적인 패키지 디자인으로 글로벌 K-뷰티 시장을 선도하는 프리미엄 스킨케어 브랜드입니다.",
-    products: ["클린 포뮬러", "감성 패키지", "글로벌 K-뷰티", "세라마이드"],
+    category: t("brands.inyourheart.category"),
+    slogan: t("brands.inyourheart.slogan"),
+    description: t("brands.inyourheart.description"),
+    products: [
+      t("brands.inyourheart.products.0"),
+      t("brands.inyourheart.products.1"),
+      t("brands.inyourheart.products.2"),
+      t("brands.inyourheart.products.3")
+    ],
     image: inyourheartImg,
     color: "from-pink-500 to-pink-700",
   },
   {
     id: "sangsaeng",
     name: "상생 (Sangsaeng)",
-    category: "의료관광 플랫폼",
-    slogan: "WE CONNECT KOREAN MEDICAL SERVICES TO THE WORLD",
-    description:
-      "메디컬 투어리즘부터 글로벌 헬스케어 플랫폼까지, 한국의 우수한 의료 서비스를 전 세계에 연결하는 종합 의료 플랫폼입니다.",
-    products: ["의료관광", "헬스케어 플랫폼", "다국어 앱", "병원 네트워크"],
+    category: t("brands.sangsaeng.category"),
+    slogan: t("brands.sangsaeng.slogan"),
+    description: t("brands.sangsaeng.description"),
+    products: [
+      t("brands.sangsaeng.products.0"),
+      t("brands.sangsaeng.products.1"),
+      t("brands.sangsaeng.products.2"),
+      t("brands.sangsaeng.products.3")
+    ],
     image: sangsaengImg,
     color: "from-green-500 to-green-700",
   },
@@ -135,6 +167,8 @@ const brands = [
 
 export default function Home() {
   const { t } = useLanguage();
+  const services = getServices(t);
+  const brands = getBrands(t);
   const [scrollY, setScrollY] = useState(0);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [currentSection, setCurrentSection] = useState(0);
@@ -144,8 +178,6 @@ export default function Home() {
   const statsRef = useRef<HTMLDivElement>(null);
   const newsScrollRef = useRef<HTMLDivElement>(null);
   const [newsScrollProgress, setNewsScrollProgress] = useState(0);
-  
-  const services = getServices(t);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const serviceCarouselRef = useRef<HTMLDivElement>(null);
   const [currentBrandIndex, setCurrentBrandIndex] = useState(0);
