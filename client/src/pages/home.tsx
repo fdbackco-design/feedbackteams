@@ -746,80 +746,80 @@ export default function Home() {
         style={{ scrollSnapAlign: "start" }}
       >
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              NEWS <span className="text-gray-400">↗</span>
+          {/* Section Header - Left Aligned */}
+          <div className="mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              NEWS <span className="text-gray-400 text-2xl">↗</span>
             </h2>
           </div>
 
           {/* News Cards - 4 cards horizontally */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {/* Card 1 */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="aspect-video bg-gray-200 relative">
+            <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div className="aspect-[4/3] bg-gray-200 relative">
                 <img
                   src={newsBackgroundImage}
                   alt="영업팀장 상생, 중국 공기청정기 제조 공장 글로벌 영업팀장"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-4">
-                <h3 className="font-bold text-sm mb-2 text-gray-900 leading-tight">
+              <div className="p-3">
+                <h3 className="font-medium text-sm mb-2 text-gray-900 leading-tight line-clamp-2">
                   영업팀장 상생, 중국 공기청정기 제조 공장 글로벌 영업팀장
                 </h3>
-                <div className="text-xs text-gray-500">2023.05.10</div>
+                <div className="text-xs text-gray-400">2023.05.10</div>
               </div>
             </div>
 
             {/* Card 2 */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="aspect-video bg-gray-200 relative">
+            <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div className="aspect-[4/3] bg-gray-200 relative">
                 <img
                   src={serviceBackgroundImage}
                   alt="상생, 중국, 중국 공기청정기 제조 공장 글로벌 영업팀장"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-4">
-                <h3 className="font-bold text-sm mb-2 text-gray-900 leading-tight">
+              <div className="p-3">
+                <h3 className="font-medium text-sm mb-2 text-gray-900 leading-tight line-clamp-2">
                   상생, 중국, 중국 공기청정기 제조 공장 글로벌 영업팀장
                 </h3>
-                <div className="text-xs text-gray-500">2023.05.10</div>
+                <div className="text-xs text-gray-400">2023.05.10</div>
               </div>
             </div>
 
             {/* Card 3 */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="aspect-video bg-gray-200 relative">
+            <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div className="aspect-[4/3] bg-gray-200 relative">
                 <img
                   src={hoidImg}
                   alt="상생, 중국, 중국 공기청정기 제조 공장 글로벌"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-4">
-                <h3 className="font-bold text-sm mb-2 text-gray-900 leading-tight">
+              <div className="p-3">
+                <h3 className="font-medium text-sm mb-2 text-gray-900 leading-tight line-clamp-2">
                   상생, 중국, 중국 공기청정기 제조 공장 글로벌
                 </h3>
-                <div className="text-xs text-gray-500">2023.05.10</div>
+                <div className="text-xs text-gray-400">2023.05.10</div>
               </div>
             </div>
 
             {/* Card 4 */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="aspect-video bg-gray-200 relative">
+            <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div className="aspect-[4/3] bg-gray-200 relative">
                 <img
                   src={medifeedImg}
                   alt="상생, 중국, 중국 공기청정기 제조 공장 글로벌"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-4">
-                <h3 className="font-bold text-sm mb-2 text-gray-900 leading-tight">
+              <div className="p-3">
+                <h3 className="font-medium text-sm mb-2 text-gray-900 leading-tight line-clamp-2">
                   상생, 중국, 중국 공기청정기 제조 공장 글로벌
                 </h3>
-                <div className="text-xs text-gray-500">2023.05.10</div>
+                <div className="text-xs text-gray-400">2023.05.10</div>
               </div>
             </div>
           </div>
