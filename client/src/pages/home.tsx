@@ -31,6 +31,7 @@ import { useCountUp } from "@/hooks/useCountUp";
 import HoidLogo from "@/components/HoidLogo";
 import Footer from "@/components/layout/footer";
 import B2B2C_Hub from "@/components/B2B2C_Hub";
+import NetworkBackground from "@/components/NetworkBackground";
 import shipVideo from "@assets/ship_section_1754640786186.mp4";
 import mainBannerVideo from "@assets/main_banner_last_1754645135592.mp4";
 import cargoShipImage from "@assets/bada-leul-hanghae-haneun-hwamulseon_1754648981305.jpg";
@@ -874,16 +875,10 @@ export default function Home() {
         className="h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white relative overflow-hidden"
         style={{ scrollSnapAlign: "start" }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         
-        {/* Background pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 25% 25%, white 2px, transparent 2px),
-                             radial-gradient(circle at 75% 75%, white 2px, transparent 2px)`,
-            backgroundSize: '50px 50px'
-          }}></div>
-        </div>
+        {/* Dynamic Network Background */}
+        <NetworkBackground className="opacity-30" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Header */}
