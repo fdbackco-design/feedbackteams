@@ -181,29 +181,9 @@ export default function Service() {
             onMouseMove={handleMouseMove}
           >
             {services.map((service, index) => (
-              <Card key={index} className="flex-shrink-0 w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] max-w-[800px] shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-[1.02] flex flex-col">
-                {/* Image Section */}
-                <div className="relative h-[240px] lg:h-[280px]">
-                  {/* Service Number - Top Left */}
-                  <div className="absolute top-4 left-4 z-10">
-                    <span className="text-3xl lg:text-4xl font-bold text-blue-500">
-                      {String(index + 1).padStart(2, '0')}
-                    </span>
-                  </div>
-                  
-                  {/* Action Button - Top Right */}
-                  <div className="absolute top-4 right-4 z-10">
-                    {service.buttonText === "브랜드 보기" ? (
-                      <Button asChild size="sm" className="bg-white/90 text-gray-800 hover:bg-white rounded-full px-3 py-1 text-xs font-medium">
-                        <Link href="/brand">프로젝트 문의</Link>
-                      </Button>
-                    ) : (
-                      <Button size="sm" className="bg-white/90 text-gray-800 hover:bg-white rounded-full px-3 py-1 text-xs font-medium">
-                        프로젝트 문의
-                      </Button>
-                    )}
-                  </div>
-                  
+              <Card key={index} className="flex-shrink-0 w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] max-w-[800px] shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-[1.02] bg-white rounded-2xl">
+                {/* Image Section with overlay content */}
+                <div className="relative h-[240px] lg:h-[280px] overflow-hidden rounded-t-2xl">
                   {service.imageUrl ? (
                     <img 
                       src={service.imageUrl} 
@@ -215,22 +195,38 @@ export default function Service() {
                       <service.icon className="w-20 h-20 text-gray-400" />
                     </div>
                   )}
+                  
+                  {/* Bottom overlay for better text readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  
+                  {/* Content positioned at bottom of image */}
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    {/* Large number and title */}
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-4xl lg:text-5xl font-bold text-blue-400">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                      <Button size="sm" className="bg-white/20 backdrop-blur-sm text-white border-white/30 hover:bg-white/30 rounded-full px-4 py-2 text-xs">
+                        프로젝트 문의
+                      </Button>
+                    </div>
+                    <h3 className="text-xl lg:text-2xl font-bold text-white mb-2">
+                      {service.title}
+                    </h3>
+                  </div>
                 </div>
                 
-                {/* Content Section */}
-                <div className="p-6 lg:p-8 flex-1 bg-white">
-                  <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed text-sm lg:text-base">
+                {/* Content Section - Clean white background */}
+                <div className="p-6 lg:p-8 bg-white">
+                  <p className="text-gray-700 mb-4 leading-relaxed text-sm lg:text-base">
                     {service.description}
                   </p>
                   
-                  {/* Features */}
+                  {/* Features list */}
                   <div className="space-y-2">
                     {service.features.slice(0, 3).map((feature, featureIndex) => (
-                      <div key={featureIndex} className="text-xs lg:text-sm text-gray-500 flex items-center">
-                        <span className="w-1 h-1 bg-gray-400 rounded-full mr-2 flex-shrink-0"></span>
+                      <div key={featureIndex} className="text-xs lg:text-sm text-gray-600 flex items-start">
+                        <span className="w-1 h-1 bg-gray-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
                         {feature}
                       </div>
                     ))}
