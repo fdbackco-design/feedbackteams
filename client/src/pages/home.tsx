@@ -141,6 +141,7 @@ export default function Home() {
   const [touchEnd, setTouchEnd] = useState(0);
   const [statsInView, setStatsInView] = useState(false);
   const statsRef = useRef<HTMLDivElement>(null);
+  const newsScrollRef = useRef<HTMLDivElement>(null);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const serviceCarouselRef = useRef<HTMLDivElement>(null);
   const [currentBrandIndex, setCurrentBrandIndex] = useState(0);
@@ -212,6 +213,53 @@ export default function Home() {
     duration: 2500,
     trigger: statsInView,
   });
+
+  // Mouse drag scroll for news section
+  useEffect(() => {
+    const newsContainer = newsScrollRef.current;
+    if (!newsContainer) return;
+
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+
+    const handleMouseDown = (e: MouseEvent) => {
+      isDown = true;
+      newsContainer.classList.add('active:cursor-grabbing');
+      startX = e.pageX - newsContainer.offsetLeft;
+      scrollLeft = newsContainer.scrollLeft;
+    };
+
+    const handleMouseLeave = () => {
+      isDown = false;
+      newsContainer.classList.remove('active:cursor-grabbing');
+    };
+
+    const handleMouseUp = () => {
+      isDown = false;
+      newsContainer.classList.remove('active:cursor-grabbing');
+    };
+
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - newsContainer.offsetLeft;
+      const walk = (x - startX) * 2; // Scroll speed multiplier
+      newsContainer.scrollLeft = scrollLeft - walk;
+    };
+
+    newsContainer.addEventListener('mousedown', handleMouseDown);
+    newsContainer.addEventListener('mouseleave', handleMouseLeave);
+    newsContainer.addEventListener('mouseup', handleMouseUp);
+    newsContainer.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      newsContainer.removeEventListener('mousedown', handleMouseDown);
+      newsContainer.removeEventListener('mouseleave', handleMouseLeave);
+      newsContainer.removeEventListener('mouseup', handleMouseUp);
+      newsContainer.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
 
   useEffect(() => {
     let wheelTimeout: NodeJS.Timeout;
@@ -758,6 +806,7 @@ export default function Home() {
           {/* News Cards - Horizontal Scrollable */}
           <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
             <div 
+              ref={newsScrollRef}
               className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto pb-6 scrollbar-hide cursor-grab active:cursor-grabbing"
               style={{ 
                 scrollSnapType: 'x mandatory',
