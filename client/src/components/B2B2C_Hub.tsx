@@ -16,15 +16,14 @@ const B2B2C_Hub = () => {
           <source src="/b2b_1754900204090.mp4" type="video/mp4" />
         </video>
       </div>
-      
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-30"></div>
-      
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">제조사부터 소비자까지, 완전한 유통 생태계를 구축합니다.</h2>
+          <h2 className="text-4xl lg:text-5xl text-white font-bold mt-[12px] mb-[12px]">제조사부터 소비자까지
+          완전한 유통 생태계를 구축합니다.</h2>
         </div>
 
         {/* Flow Layout */}
