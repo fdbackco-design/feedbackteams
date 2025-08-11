@@ -248,8 +248,10 @@ export default function Service() {
             ))}
           </div>
         </div>
-        
-        {/* CTA Section */}
+      </div>
+      
+      {/* CTA Section - Separate container with max-width */}
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         <div className="mt-16 text-center bg-primary rounded-2xl p-8 lg:p-12 text-white">
           <h3 className="text-3xl font-bold mb-4">더 자세한 상담이 필요하신가요?</h3>
           <p className="text-xl mb-8">전문 컨설턴트가 귀하의 비즈니스에 맞는 최적의 솔루션을 제안해드립니다.</p>
