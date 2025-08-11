@@ -208,7 +208,7 @@ export default function Service() {
                     <img 
                       src={service.imageUrl} 
                       alt={service.title}
-                      className="w-full h-full object-cover object-top rounded-2xl"
+                      className="w-full h-full object-cover rounded-2xl"
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl">
