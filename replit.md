@@ -6,6 +6,18 @@ FeedBack is a full-stack web application that serves as a corporate website for 
 
 Preferred communication style: Simple, everyday language.
 
+## Design System
+- **Primary Black**: #000000 - Used for main text, headers, titles, and core information. Conveys strong trust and refined luxury.
+- **Accent Deep Blue**: #0F4C82 - Used for buttons, links, highlights, and brand identity. Represents smartness, professionalism, and modernity.
+- **Background White**: #FFFFFF - Used for overall backgrounds, cards, forms, and layout structure. Creates clean appearance, spacing, and luxurious minimalism.
+
+## UI Guidelines
+- Clean, modern layouts with consistent spacing (max-w-7xl mx-auto px-6 lg:px-8)
+- Shadow usage: shadow-lg for cards, shadow-xl for featured content
+- Border radius: rounded-xl for cards, rounded-full for icons
+- Typography: line-height 1.2 maintained for optimal text spacing
+- Interactive elements use hover:scale-105 for subtle animation effects
+
 # System Architecture
 
 ## Frontend Architecture
