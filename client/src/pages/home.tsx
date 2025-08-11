@@ -202,6 +202,20 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // ESC key to close video modal
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && isVideoPlaying) {
+        setIsVideoPlaying(false);
+      }
+    };
+
+    if (isVideoPlaying) {
+      window.addEventListener('keydown', handleKeyDown);
+      return () => window.removeEventListener('keydown', handleKeyDown);
+    }
+  }, [isVideoPlaying]);
+
   // Intersection Observer for stats animation
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -611,14 +625,41 @@ export default function Home() {
         {/* Video Modal */}
         {isVideoPlaying && (
           <div
-            className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4"
-            onClick={() => setIsVideoPlaying(false)}
+            className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+            onClick={(e) => {
+              if (e.target === e.currentTarget) {
+                setIsVideoPlaying(false);
+              }
+            }}
           >
-            <div className="relative max-w-4xl w-full aspect-video bg-gray-900 rounded-lg flex items-center justify-center">
-              <div className="text-white text-center">
-                <Play className="w-16 h-16 mx-auto mb-4" />
-                <p className="text-xl">소개 영상이 여기에 표시됩니다</p>
-                <p className="text-sm text-gray-300 mt-2">클릭하여 닫기</p>
+            <div className="relative max-w-5xl w-full aspect-video">
+              {/* Close Button */}
+              <button
+                onClick={() => setIsVideoPlaying(false)}
+                className="absolute -top-12 right-0 text-white hover:text-gray-300 z-10"
+                aria-label="Close video"
+              >
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+              
+              {/* Video Player */}
+              <video
+                className="w-full h-full object-contain rounded-lg"
+                controls
+                autoPlay
+                playsInline
+                onClick={(e) => e.stopPropagation()}
+              >
+                <source src="/attached_assets/main_banner_last_1754902140577.mp4" type="video/mp4" />
+                비디오를 재생할 수 없습니다. 브라우저가 이 비디오 형식을 지원하지 않습니다.
+              </video>
+              
+              {/* Video Info */}
+              <div className="absolute -bottom-16 left-0 text-white">
+                <p className="text-lg font-semibold">FeedBack 소개 영상</p>
+                <p className="text-sm text-gray-300">ESC 키 또는 X 버튼으로 닫을 수 있습니다</p>
               </div>
             </div>
           </div>
