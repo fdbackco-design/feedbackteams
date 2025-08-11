@@ -74,11 +74,16 @@ const NetworkBackground: React.FC<NetworkBackgroundProps> = ({ className = "" })
       const nodes = nodesRef.current;
       const maxDistance = 150;
 
-      // Update node positions with mouse interaction
+      // Update node positions with continuous animation + mouse interaction
       const mouse = mouseRef.current;
+      const time = Date.now() * 0.001;
       
-      nodes.forEach((node) => {
-        // Calculate distance to mouse
+      nodes.forEach((node, index) => {
+        // Basic floating animation - always active
+        const floatX = Math.sin(time * 0.5 + index * 0.1) * 20;
+        const floatY = Math.cos(time * 0.3 + index * 0.15) * 15;
+        
+        // Calculate distance to mouse for interaction
         const mouseDx = mouse.x - node.baseX;
         const mouseDy = mouse.y - node.baseY;
         const mouseDistance = Math.sqrt(mouseDx * mouseDx + mouseDy * mouseDy);
@@ -86,32 +91,17 @@ const NetworkBackground: React.FC<NetworkBackgroundProps> = ({ className = "" })
         // Mouse influence effect
         const maxInfluence = 200;
         const influence = Math.max(0, (maxInfluence - mouseDistance) / maxInfluence);
-        
-        // Apply mouse attraction/repulsion effect
-        const mouseForce = influence * 30;
+        const mouseForce = influence * 40;
         const mouseInfluenceX = (mouseDx / mouseDistance || 0) * mouseForce;
         const mouseInfluenceY = (mouseDy / mouseDistance || 0) * mouseForce;
         
-        // Update position with gentle drift + mouse influence
-        node.x = node.baseX + node.vx + mouseInfluenceX * 0.3;
-        node.y = node.baseY + node.vy + mouseInfluenceY * 0.3;
-        
-        // Gentle drift from base position
-        node.vx += (Math.random() - 0.5) * 0.02;
-        node.vy += (Math.random() - 0.5) * 0.02;
-        
-        // Return to base position slowly
-        const returnForce = 0.02;
-        node.vx += (node.baseX - node.x) * returnForce;
-        node.vy += (node.baseY - node.y) * returnForce;
-        
-        // Limit velocity
-        node.vx = Math.max(-2, Math.min(2, node.vx));
-        node.vy = Math.max(-2, Math.min(2, node.vy));
+        // Combine floating animation with mouse interaction
+        node.x = node.baseX + floatX + mouseInfluenceX * 0.4;
+        node.y = node.baseY + floatY + mouseInfluenceY * 0.4;
         
         // Keep nodes within bounds
-        node.x = Math.max(0, Math.min(dimensions.width, node.x));
-        node.y = Math.max(0, Math.min(dimensions.height, node.y));
+        node.x = Math.max(10, Math.min(dimensions.width - 10, node.x));
+        node.y = Math.max(10, Math.min(dimensions.height - 10, node.y));
       });
 
       // Draw connections with enhanced visibility
