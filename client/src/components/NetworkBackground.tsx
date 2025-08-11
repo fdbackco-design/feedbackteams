@@ -36,14 +36,14 @@ const NetworkBackground: React.FC<NetworkBackgroundProps> = ({ className = "" })
     updateDimensions();
     window.addEventListener("resize", updateDimensions);
 
-    // Initialize nodes
-    const nodeCount = Math.floor((dimensions.width * dimensions.height) / 12000) + 30;
+    // Initialize nodes with higher density
+    const nodeCount = Math.floor((dimensions.width * dimensions.height) / 8000) + 50;
     nodesRef.current = Array.from({ length: nodeCount }, () => ({
       x: Math.random() * dimensions.width,
       y: Math.random() * dimensions.height,
-      vx: (Math.random() - 0.5) * 0.3,
-      vy: (Math.random() - 0.5) * 0.3,
-      size: Math.random() * 1.5 + 0.5,
+      vx: (Math.random() - 0.5) * 0.2,
+      vy: (Math.random() - 0.5) * 0.2,
+      size: Math.random() * 2 + 1,
     }));
 
     const animate = () => {
@@ -52,7 +52,7 @@ const NetworkBackground: React.FC<NetworkBackgroundProps> = ({ className = "" })
       ctx.clearRect(0, 0, dimensions.width, dimensions.height);
 
       const nodes = nodesRef.current;
-      const maxDistance = 120;
+      const maxDistance = 150;
 
       // Update node positions
       nodes.forEach((node) => {
@@ -68,7 +68,7 @@ const NetworkBackground: React.FC<NetworkBackgroundProps> = ({ className = "" })
         node.y = Math.max(0, Math.min(dimensions.height, node.y));
       });
 
-      // Draw connections with gradient effect
+      // Draw connections with enhanced visibility
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
           const dx = nodes[i].x - nodes[j].x;
@@ -78,14 +78,21 @@ const NetworkBackground: React.FC<NetworkBackgroundProps> = ({ className = "" })
           if (distance < maxDistance) {
             const opacity = (maxDistance - distance) / maxDistance;
             
-            // Create gradient line
+            // Main connection line with stronger visibility
+            ctx.strokeStyle = `rgba(34, 211, 238, ${opacity * 0.8})`;
+            ctx.lineWidth = opacity * 2;
+            ctx.beginPath();
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.stroke();
+            
+            // Add subtle gradient overlay for depth
             const gradient = ctx.createLinearGradient(nodes[i].x, nodes[i].y, nodes[j].x, nodes[j].y);
-            gradient.addColorStop(0, `rgba(34, 211, 238, ${opacity * 0.4})`); // Cyan
-            gradient.addColorStop(0.5, `rgba(59, 130, 246, ${opacity * 0.6})`); // Blue
-            gradient.addColorStop(1, `rgba(147, 51, 234, ${opacity * 0.3})`); // Purple
+            gradient.addColorStop(0, `rgba(59, 130, 246, ${opacity * 0.4})`);
+            gradient.addColorStop(1, `rgba(34, 211, 238, ${opacity * 0.4})`);
             
             ctx.strokeStyle = gradient;
-            ctx.lineWidth = opacity * 1.5;
+            ctx.lineWidth = opacity * 1;
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
@@ -94,32 +101,42 @@ const NetworkBackground: React.FC<NetworkBackgroundProps> = ({ className = "" })
         }
       }
 
-      // Draw nodes with enhanced glow
+      // Draw nodes with enhanced visibility like the reference image
       nodes.forEach((node, index) => {
         const time = Date.now() * 0.001;
-        const pulse = Math.sin(time + index * 0.1) * 0.3 + 0.7;
+        const pulse = Math.sin(time + index * 0.15) * 0.2 + 0.8;
         
-        // Outer glow
-        ctx.shadowColor = "rgba(34, 211, 238, 0.8)";
-        ctx.shadowBlur = 8 * pulse;
-        ctx.fillStyle = `rgba(34, 211, 238, ${0.4 * pulse})`;
+        // Large outer glow for better visibility
+        ctx.shadowColor = "rgba(34, 211, 238, 1)";
+        ctx.shadowBlur = 15;
+        ctx.fillStyle = `rgba(34, 211, 238, ${0.3})`;
         ctx.beginPath();
-        ctx.arc(node.x, node.y, node.size * 2 * pulse, 0, Math.PI * 2);
+        ctx.arc(node.x, node.y, node.size * 3, 0, Math.PI * 2);
         ctx.fill();
         
-        // Main node
-        ctx.shadowBlur = 4;
-        ctx.fillStyle = `rgba(59, 130, 246, ${0.8 * pulse})`;
+        // Medium glow ring
+        ctx.shadowBlur = 10;
+        ctx.fillStyle = `rgba(59, 130, 246, ${0.6})`;
         ctx.beginPath();
-        ctx.arc(node.x, node.y, node.size * 1.2, 0, Math.PI * 2);
+        ctx.arc(node.x, node.y, node.size * 2, 0, Math.PI * 2);
+        ctx.fill();
+        
+        // Main bright node
+        ctx.shadowBlur = 5;
+        ctx.fillStyle = `rgba(34, 211, 238, ${0.9 * pulse})`;
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, node.size * 1.5, 0, Math.PI * 2);
         ctx.fill();
 
-        // Inner core
-        ctx.shadowBlur = 0;
-        ctx.fillStyle = `rgba(255, 255, 255, ${0.9 * pulse})`;
+        // Bright white core
+        ctx.shadowBlur = 2;
+        ctx.fillStyle = `rgba(255, 255, 255, ${pulse})`;
         ctx.beginPath();
-        ctx.arc(node.x, node.y, node.size * 0.6, 0, Math.PI * 2);
+        ctx.arc(node.x, node.y, node.size * 0.8, 0, Math.PI * 2);
         ctx.fill();
+        
+        // Reset shadow
+        ctx.shadowBlur = 0;
       });
 
       animationRef.current = requestAnimationFrame(animate);

@@ -878,7 +878,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         
         {/* Dynamic Network Background */}
-        <NetworkBackground className="opacity-30" />
+        <NetworkBackground className="opacity-50" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Header */}
