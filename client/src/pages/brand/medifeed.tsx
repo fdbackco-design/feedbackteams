@@ -214,10 +214,10 @@ export default function Medifeed() {
             매일의 작은 관심이 평생 건강의 큰 차이를 만듭니다
           </p>
           <div className="space-x-4">
-            <Button variant="secondary" size="lg">
+            <Button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-[#000000] text-primary-foreground shadow hover:bg-[#000000]/90 h-11 rounded-md px-8" size="lg">
               제품 구매하기
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-green-600">
+            <Button size="lg" className="border border-white text-white bg-[#000000] hover:bg-white hover:text-green-600">
               건강 상담받기
             </Button>
           </div>
