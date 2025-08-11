@@ -243,10 +243,16 @@ export default function Service() {
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     <Button
+                      asChild
                       size="sm"
                       className="bg-gray-100 text-gray-800 hover:bg-gray-200 rounded-full px-4 py-2 text-xs"
                     >
-                      프로젝트 문의
+                      <Link 
+                        href="/contact"
+                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                      >
+                        프로젝트 문의
+                      </Link>
                     </Button>
                   </div>
 
