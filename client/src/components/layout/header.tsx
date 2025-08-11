@@ -22,62 +22,67 @@ const navigationEN = [
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState<'KR' | 'EN'>('KR');
-  const [currentSection, setCurrentSection] = useState<
-    'hero' | 'service' | 'brand' | 'news' | 'stats' | 'cta' | 'footer'
-  >('hero');
+  const [currentLanguage, setCurrentLanguage] = useState('KR');
+  const [currentSection, setCurrentSection] = useState('hero');
   const [scrollY, setScrollY] = useState(0);
   const [location] = useLocation();
 
-  // 현재 언어에 따른 네비게이션
+  // 현재 언어에 따른 네비게이션 선택
   const navigation = currentLanguage === 'KR' ? navigationKR : navigationEN;
 
   useEffect(() => {
     const handleScroll = () => {
       // 홈페이지가 아니면 섹션 감지 안함
       if (location !== '/') return;
-
+      
       const currentScrollY = window.scrollY;
       const windowHeight = window.innerHeight;
-      let newSection: typeof currentSection = 'hero';
-
+      let newSection = 'hero';
+      
+      // 스크롤 값 업데이트
       setScrollY(currentScrollY);
-
-      // 픽셀 기반 섹션 감지
+      
+      // 픽셀 기반 섹션 감지 (더 정확)
       if (currentScrollY < 600) {
-        newSection = 'hero';
+        newSection = 'hero';     // 메인 섹션 (동영상 배경)
       } else if (currentScrollY < 1400) {
-        newSection = 'service';
+        newSection = 'service';  // 서비스 섹션 (흰색 배경) - 검은 텍스트
       } else if (currentScrollY < 2200) {
-        newSection = 'brand';
+        newSection = 'brand';    // 브랜드 섹션 (어두운 배경)
       } else if (currentScrollY < 3000) {
-        newSection = 'news';
+        newSection = 'news';     // 뉴스 섹션 (흰색 배경) - 검은 텍스트
       } else if (currentScrollY < 3800) {
-        newSection = 'stats';
+        newSection = 'stats';    // 통계 섹션 (파란 배경)
       } else if (currentScrollY < 4600) {
-        newSection = 'cta';
+        newSection = 'cta';      // CTA 섹션 (동영상 배경)
       } else {
-        newSection = 'footer';
+        newSection = 'footer';   // 푸터 섹션 (어두운 배경)
       }
-
+      
       if (newSection !== currentSection) {
         setCurrentSection(newSection);
-        // 디버깅 로그
+        // 디버깅용 로그
         console.log('Section changed to:', newSection, 'at scroll:', currentScrollY, 'windowHeight:', windowHeight);
       }
     };
-
+    
+    // 스크롤 이벤트 리스너 추가
     window.addEventListener('scroll', handleScroll, { passive: true });
-    setTimeout(handleScroll, 100); // 초기 1회 실행
-
+    
+    // 초기 실행 (약간의 지연을 두어 DOM이 완전히 로드된 후 실행)
+    setTimeout(handleScroll, 100);
+    
     return () => window.removeEventListener('scroll', handleScroll);
   }, [currentSection, location]);
 
-  // 언어 드롭다운 바깥 클릭 시 닫기 (간단 처리: 아무 곳 클릭 시 닫힘)
+  // 언어 드롭다운 바깥 클릭 시 닫기
   useEffect(() => {
-    const handleClickOutside = () => {
-      if (isLanguageMenuOpen) setIsLanguageMenuOpen(false);
+    const handleClickOutside = (event: MouseEvent) => {
+      if (isLanguageMenuOpen) {
+        setIsLanguageMenuOpen(false);
+      }
     };
+
     document.addEventListener('click', handleClickOutside);
     return () => document.removeEventListener('click', handleClickOutside);
   }, [isLanguageMenuOpen]);
@@ -86,37 +91,59 @@ export default function Header() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // 홈페이지 여부
+  // 홈페이지인지 확인
   const isHomePage = location === '/';
 
-  // ★ 블랙 컬러 섹션(2번째 service, 4번째 news) 판단
-  const isBlackSection = isHomePage && (currentSection === 'service' || currentSection === 'news');
+  // 섹션에 따른 텍스트 색상 결정 (홈페이지에서만)
+  const getTextColor = () => {
+    if (!isHomePage) {
+      return 'text-gray-900 font-semibold'; // 서브페이지에서는 기본 어두운 색상
+    }
+    
+    switch (currentSection) {
+      case 'service': // 2번째 섹션 - 서비스 (흰색 배경)
+      case 'news':    // 4번째 섹션 - 뉴스 (흰색 배경)
+        return '!text-black font-bold'; // !important로 강제 적용
+      case 'hero':    // 1번째 섹션 - 메인
+      case 'brand':   // 3번째 섹션 - 브랜드
+      case 'stats':   // 5번째 섹션 - 통계
+      default:
+        return '!text-white font-semibold'; // !important로 강제 적용
+    }
+  };
 
-  // 헤더 배경 스타일 (서브페이지는 고정 배경)
+  const getHoverColor = () => {
+    if (!isHomePage) {
+      return 'text-gray-600 hover:!text-gray-900 font-medium';
+    }
+    
+    switch (currentSection) {
+      case 'service': // 2번째 섹션 - 서비스 (흰색 배경)
+      case 'news':    // 4번째 섹션 - 뉴스 (흰색 배경)
+        return '!text-gray-700 hover:!text-black font-medium';
+      case 'hero':    // 1번째 섹션 - 메인
+      case 'brand':   // 3번째 섹션 - 브랜드
+      case 'stats':   // 5번째 섹션 - 통계
+      default:
+        return '!text-white/80 hover:!text-white font-medium';
+    }
+  };
+
+  // 헤더 배경 스타일 결정
   const getHeaderStyle = () => {
-    if (!isHomePage) return 'bg-white/95 backdrop-blur-md shadow-lg';
-    return ''; // 홈은 기본 투명
+    if (!isHomePage) {
+      return 'bg-white/95 backdrop-blur-md shadow-lg'; // 서브페이지에서는 배경 있음
+    }
+    return ''; // 홈페이지에서는 투명
   };
 
-  // 로고 색상
-  const logoFillColor = isHomePage ? (isBlackSection ? '#000000' : '#ffffff') : '#1f2937';
-
-  // 데스크탑 링크 색상
-  const linkColor = (href: string) => {
-    if (!isHomePage) return location === href ? '#1f2937' : '#6b7280';
-    return isBlackSection
-      ? '#000000' // 블랙 구간에서는 항상 블랙
-      : (location === href ? '#ffffff' : 'rgba(255,255,255,0.8)'); // 그 외 섹션은 화이트 톤
-  };
-
-  // 언어 버튼 색상
-  const languageButtonColor = isHomePage ? (isBlackSection ? '#000000' : '#ffffff') : '#1f2937';
-
+  const textColor = getTextColor();
+  const hoverColor = getHoverColor();
   const headerStyle = getHeaderStyle();
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 ${headerStyle}`}>
-      {/* 디버깅용 표시(필요 없으면 삭제) */}
+      {/* 디버깅용 현재 섹션 표시 (임시) */}
       {isHomePage && (
         <div className="fixed top-20 left-4 z-50 bg-black/70 text-white px-3 py-1 rounded text-sm font-mono space-y-1">
           <div>Section: {currentSection}</div>
@@ -125,19 +152,22 @@ export default function Header() {
           <div>IsHome: {isHomePage ? 'Yes' : 'No'}</div>
         </div>
       )}
-
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0" onClick={scrollToTop}>
-              <svg
-                id="Layer_1"
-                data-name="Layer 1"
-                xmlns="http://www.w3.org/2000/svg"
+              <svg 
+                id="Layer_1" 
+                data-name="Layer 1" 
+                xmlns="http://www.w3.org/2000/svg" 
                 viewBox="0 0 204.75 27.91"
                 className="h-6 transition-colors duration-300"
-                style={{ fill: logoFillColor }}
+                style={{
+                  fill: isHomePage 
+                    ? (currentSection === 'service' || currentSection === 'news' ? '#000000' : '#ffffff')
+                    : '#1f2937'
+                }}
               >
                 <g>
                   <path d="M3.91,3.58v8.03h15.15v3.58H3.91v12.72H0V0h21.61v3.58H3.91Z"/>
@@ -154,104 +184,55 @@ export default function Header() {
               </svg>
             </Link>
           </div>
-
+          
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="flex items-center space-x-8">
+            <div className="flex items-center space-x-12 font-medium">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="transition-colors duration-200 font-medium"
-                  style={{ color: linkColor(item.href) }}
+                  className="text-sm font-medium tracking-wide transition-colors duration-300"
+                  style={{
+                    color: isHomePage 
+                      ? (currentSection === 'service' || currentSection === 'news' ? 
+                          (location === item.href ? '#000000' : '#4b5563') : 
+                          (location === item.href ? '#ffffff' : 'rgba(255,255,255,0.8)'))
+                      : (location === item.href ? '#1f2937' : '#6b7280')
+                  }}
+                  onClick={scrollToTop}
                 >
                   {item.name}
                 </Link>
               ))}
-
-              {/* Language Switcher */}
-              <div className="relative">
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setIsLanguageMenuOpen(!isLanguageMenuOpen);
-                  }}
-                  className="flex items-center space-x-1 transition-colors duration-200 font-medium"
-                  style={{ color: languageButtonColor }}
-                >
-                  <span>{currentLanguage}</span>
-                  <ChevronDown className="h-4 w-4" />
-                </button>
-
-                {isLanguageMenuOpen && (
-                  <div className="absolute right-0 top-full mt-2 bg-white border border-gray-200 rounded-md shadow-lg z-50">
-                    <button
-                      onClick={() => {
-                        setCurrentLanguage('KR');
-                        setIsLanguageMenuOpen(false);
-                      }}
-                      className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
-                    >
-                      한국어 (KR)
-                    </button>
-                    <button
-                      onClick={() => {
-                        setCurrentLanguage('EN');
-                        setIsLanguageMenuOpen(false);
-                      }}
-                      className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
-                    >
-                      English (EN)
-                    </button>
-                  </div>
-                )}
-              </div>
             </div>
           </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2"
-              style={{ color: languageButtonColor }}
+          
+          {/* Language Selector */}
+          <div className="hidden md:flex items-center relative">
+            <button 
+              onClick={() => setIsLanguageMenuOpen(!isLanguageMenuOpen)}
+              className="flex items-center text-sm font-medium tracking-wide transition-colors duration-300"
+              style={{
+                color: isHomePage 
+                  ? (currentSection === 'service' || currentSection === 'news' ? '#000000' : '#ffffff')
+                  : '#1f2937'
+              }}
             >
-              {isMobileMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
-            </Button>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-200">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-
-              {/* Mobile Language Switcher */}
-              <div className="px-3 py-2 border-t border-gray-200 mt-2">
-                <div className="text-sm font-medium text-gray-900 mb-2">Language</div>
+              {currentLanguage}
+              <ChevronDown className="ml-1 h-4 w-4" />
+            </button>
+            
+            {/* Language Dropdown */}
+            {isLanguageMenuOpen && (
+              <div className="absolute top-full right-0 mt-2 bg-white border border-gray-200 rounded-md shadow-lg z-50">
                 <button
                   onClick={() => {
                     setCurrentLanguage('KR');
                     setIsLanguageMenuOpen(false);
                   }}
-                  className={`block w-full text-left px-2 py-1 text-sm rounded ${
-                    currentLanguage === 'KR' ? 'bg-gray-100 text-gray-900' : 'text-gray-700'
+                  className={`block w-full px-4 py-2 text-sm text-left hover:bg-gray-100 ${
+                    currentLanguage === 'KR' ? 'bg-gray-50 font-medium' : ''
                   }`}
                 >
                   한국어 (KR)
@@ -261,13 +242,61 @@ export default function Header() {
                     setCurrentLanguage('EN');
                     setIsLanguageMenuOpen(false);
                   }}
-                  className={`block w-full text-left px-2 py-1 text-sm rounded ${
-                    currentLanguage === 'EN' ? 'bg-gray-100 text-gray-900' : 'text-gray-700'
+                  className={`block w-full px-4 py-2 text-sm text-left hover:bg-gray-100 ${
+                    currentLanguage === 'EN' ? 'bg-gray-50 font-medium' : ''
                   }`}
                 >
                   English (EN)
                 </button>
               </div>
+            )}
+          </div>
+          
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className={`transition-colors duration-300 ${
+                isHomePage ? 'hover:bg-black/10' : 'hover:bg-gray-100'
+              }`}
+              style={{
+                color: isHomePage 
+                  ? (currentSection === 'service' || currentSection === 'news' ? '#000000' : '#ffffff')
+                  : '#1f2937'
+              }}
+            >
+              {isMobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </Button>
+          </div>
+        </div>
+        
+        {/* Mobile Navigation */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-sm border-t border-gray-200">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`block px-3 py-2 text-sm font-medium tracking-wide ${
+                    location === item.href
+                      ? "text-gray-900"
+                      : "text-gray-600"
+                  }`}
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    scrollToTop();
+                  }}
+                >
+                  {item.name}
+                </Link>
+              ))}
             </div>
           </div>
         )}

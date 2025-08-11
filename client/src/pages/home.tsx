@@ -149,6 +149,7 @@ export default function Home() {
     { id: "hero", name: "홈" },
     { id: "services", name: "서비스" },
     { id: "brands", name: "브랜드" },
+    { id: "achievements", name: "성과" },
     { id: "news", name: "최신뉴스" },
     { id: "stats", name: "실적" },
     { id: "cta", name: "문의" },
@@ -726,6 +727,134 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      {/* Achievements Section */}
+      <section
+        id="achievements"
+        className="h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 relative overflow-hidden"
+        style={{ scrollSnapAlign: "start" }}
+      >
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_20%,_rgba(0,0,0,0.8)_80%)]"></div>
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
+          }}></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="text-sm text-blue-300 font-semibold tracking-wide uppercase mb-4">
+              ACHIEVEMENTS & MILESTONES
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              FeedBack의 <span className="text-blue-300">성장 여정</span>
+            </h2>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+              지속적인 혁신과 파트너십을 통해 아시아를 넘어 글로벌 시장으로 확장하는 FeedBack의 주요 성과들을 확인해보세요
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Achievement Card 1 */}
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                <Globe className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">글로벌 확장</h3>
+              <p className="text-blue-100 mb-6 leading-relaxed">
+                한국을 시작으로 일본, 태국, 베트남 등 아시아 5개국에 진출하여 현지 파트너십을 구축했습니다.
+              </p>
+              <div className="flex items-center text-blue-300 font-semibold">
+                <span className="text-3xl font-bold mr-2">5</span>
+                <span>개국 진출</span>
+              </div>
+            </div>
+
+            {/* Achievement Card 2 */}
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-600 rounded-xl flex items-center justify-center mb-6">
+                <Award className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">브랜드 성과</h3>
+              <p className="text-blue-100 mb-6 leading-relaxed">
+                4개 자체 브랜드를 통해 다양한 분야에서 혁신적인 제품과 서비스를 선보이며 시장을 선도하고 있습니다.
+              </p>
+              <div className="flex items-center text-green-300 font-semibold">
+                <span className="text-3xl font-bold mr-2">4</span>
+                <span>개 자체 브랜드</span>
+              </div>
+            </div>
+
+            {/* Achievement Card 3 */}
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-600 rounded-xl flex items-center justify-center mb-6">
+                <TrendingUp className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">투자 유치</h3>
+              <p className="text-blue-100 mb-6 leading-relaxed">
+                성공적인 시리즈 A 투자 유치를 통해 동남아시아 시장 확장과 기술 고도화에 박차를 가하고 있습니다.
+              </p>
+              <div className="flex items-center text-orange-300 font-semibold">
+                <span className="text-3xl font-bold mr-2">Series A</span>
+                <span>투자 유치</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Timeline Section */}
+          <div className="mt-16">
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-8 text-center">주요 마일스톤</h3>
+              <div className="grid md:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Calendar className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="text-blue-300 font-semibold text-sm">2020</div>
+                  <div className="text-white font-medium">회사 설립</div>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Smartphone className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="text-blue-300 font-semibold text-sm">2022</div>
+                  <div className="text-white font-medium">첫 브랜드 런칭</div>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Globe className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="text-blue-300 font-semibold text-sm">2023</div>
+                  <div className="text-white font-medium">아시아 진출</div>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <TrendingUp className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="text-blue-300 font-semibold text-sm">2024</div>
+                  <div className="text-white font-medium">투자 유치</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="mt-12 text-center">
+            <Button
+              asChild
+              size="lg"
+              className="bg-white text-purple-900 hover:bg-gray-100 px-8 py-4 text-lg font-semibold"
+            >
+              <Link href="/about">
+                더 자세한 이야기 보기
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+      
       {/* News Section */}
       <section
         id="news"
