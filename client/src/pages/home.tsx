@@ -747,9 +747,9 @@ export default function Home() {
       >
         <div className="relative w-full z-10">
           {/* Section Header - Aligned with Navigation */}
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              NEWS <span className="text-gray-400 text-2xl">↗</span>
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
+              NEWS <span className="text-gray-400 text-lg sm:text-xl md:text-2xl lg:text-3xl">↗</span>
             </h2>
           </div>
 
@@ -757,7 +757,7 @@ export default function Home() {
           <div className="relative">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
               <div 
-                className="flex gap-6 overflow-x-auto pb-6 scrollbar-hide"
+                className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto pb-6 scrollbar-hide"
                 style={{ 
                   scrollSnapType: 'x mandatory',
                   scrollbarWidth: 'none',
@@ -765,7 +765,7 @@ export default function Home() {
                 }}
               >
               {/* Card 1 */}
-              <div className="flex-shrink-0 w-[320px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300" style={{ scrollSnapAlign: 'start' }}>
+              <div className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] lg:w-[380px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300" style={{ scrollSnapAlign: 'start' }}>
                 <div className="aspect-[4/3] bg-gray-200 relative">
                   <img
                     src={newsBackgroundImage}
@@ -773,16 +773,16 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-4">
-                  <h3 className="font-medium text-sm mb-3 text-gray-900 leading-tight">
+                <div className="p-4 sm:p-5 md:p-6">
+                  <h3 className="font-medium text-sm sm:text-base md:text-lg mb-3 text-gray-900 leading-tight">
                     영업팀장 상생, 중국 공기청정기 제조 공장 글로벌 영업팀장
                   </h3>
-                  <div className="text-xs text-gray-400">2023.05.10</div>
+                  <div className="text-xs sm:text-sm text-gray-400">2023.05.10</div>
                 </div>
               </div>
 
               {/* Card 2 */}
-              <div className="flex-shrink-0 w-[320px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300" style={{ scrollSnapAlign: 'start' }}>
+              <div className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] lg:w-[380px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300" style={{ scrollSnapAlign: 'start' }}>
                 <div className="aspect-[4/3] bg-gray-200 relative">
                   <img
                     src={serviceBackgroundImage}
@@ -790,16 +790,16 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-4">
-                  <h3 className="font-medium text-sm mb-3 text-gray-900 leading-tight">
+                <div className="p-4 sm:p-5 md:p-6">
+                  <h3 className="font-medium text-sm sm:text-base md:text-lg mb-3 text-gray-900 leading-tight">
                     상생, 중국, 중국 공기청정기 제조 공장 글로벌 영업팀장 체결
                   </h3>
-                  <div className="text-xs text-gray-400">2023.05.10</div>
+                  <div className="text-xs sm:text-sm text-gray-400">2023.05.10</div>
                 </div>
               </div>
 
               {/* Card 3 */}
-              <div className="flex-shrink-0 w-[320px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300" style={{ scrollSnapAlign: 'start' }}>
+              <div className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] lg:w-[380px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300" style={{ scrollSnapAlign: 'start' }}>
                 <div className="aspect-[4/3] bg-gray-200 relative">
                   <img
                     src={hoidImg}
@@ -807,16 +807,16 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-4">
-                  <h3 className="font-medium text-sm mb-3 text-gray-900 leading-tight">
+                <div className="p-4 sm:p-5 md:p-6">
+                  <h3 className="font-medium text-sm sm:text-base md:text-lg mb-3 text-gray-900 leading-tight">
                     상생, 중국, 중국 공기청정기 제조 공장 글로벌 협력
                   </h3>
-                  <div className="text-xs text-gray-400">2023.05.10</div>
+                  <div className="text-xs sm:text-sm text-gray-400">2023.05.10</div>
                 </div>
               </div>
 
               {/* Card 4 */}
-              <div className="flex-shrink-0 w-[320px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300" style={{ scrollSnapAlign: 'start' }}>
+              <div className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] lg:w-[380px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300" style={{ scrollSnapAlign: 'start' }}>
                 <div className="aspect-[4/3] bg-gray-200 relative">
                   <img
                     src={medifeedImg}
@@ -824,11 +824,11 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="p-4">
-                  <h3 className="font-medium text-sm mb-3 text-gray-900 leading-tight">
+                <div className="p-4 sm:p-5 md:p-6">
+                  <h3 className="font-medium text-sm sm:text-base md:text-lg mb-3 text-gray-900 leading-tight">
                     상생, 중국, 중국 공기청정기 제조 공장 글로벌 협력
                   </h3>
-                  <div className="text-xs text-gray-400">2023.05.10</div>
+                  <div className="text-xs sm:text-sm text-gray-400">2023.05.10</div>
                 </div>
               </div>
               </div>
