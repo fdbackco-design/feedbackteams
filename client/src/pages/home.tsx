@@ -746,123 +746,80 @@ export default function Home() {
         style={{ scrollSnapAlign: "start" }}
       >
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Content Section */}
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <div className="text-sm text-primary font-semibold tracking-wide uppercase mb-2">
-                  LATEST NEWS
-                </div>
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                  성장하는 FeedBack의
-                  <br />
-                  <span className="text-primary">주요 소식과 성과</span>
-                </h2>
-                <p className="text-xl text-gray-600 leading-relaxed">
-                  글로벌 비즈니스 파트너로서 FeedBack의 다양한 성과와 브랜드
-                  확장, 투자 유치 등의 최신 소식을 확인해보세요.
-                </p>
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              NEWS <span className="text-gray-400">↗</span>
+            </h2>
+          </div>
+
+          {/* News Cards - 4 cards horizontally */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Card 1 */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="aspect-video bg-gray-200 relative">
+                <img
+                  src={newsBackgroundImage}
+                  alt="영업팀장 상생, 중국 공기청정기 제조 공장 글로벌 영업팀장"
+                  className="w-full h-full object-cover"
+                />
               </div>
-
-              <div className="grid sm:grid-cols-2 gap-6">
-                <div className="bg-white p-6 rounded-xl shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <Globe className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <h3 className="font-bold text-lg mb-2 text-gray-900">Hoid 일본 진출</h3>
-                  <p className="text-gray-700 text-sm leading-relaxed">
-                    디자인 가전 브랜드 Hoid가 일본 시장에 정식 진출하여 도쿄와
-                    오사카 주요 매장에서 만나보실 수 있습니다.
-                  </p>
-                </div>
-
-                <div className="bg-white p-6 rounded-xl shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                    <TrendingUp className="w-6 h-6 text-green-600" />
-                  </div>
-                  <h3 className="font-bold text-lg mb-2 text-gray-900">시리즈 A 투자 유치</h3>
-                  <p className="text-gray-700 text-sm leading-relaxed">
-                    성공적인 투자 유치로 동남아시아 시장 확장과 서비스 고도화를
-                    가속화할 예정입니다.
-                  </p>
-                </div>
-
-                <div className="bg-white p-6 rounded-xl shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
-                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                    <Smartphone className="w-6 h-6 text-purple-600" />
-                  </div>
-                  <h3 className="font-bold text-lg mb-2 text-gray-900">다국어 앱 출시</h3>
-                  <p className="text-gray-700 text-sm leading-relaxed">
-                    의료관광 고객을 위한 전용 모바일 앱의 베타 버전이 출시되어
-                    4개 국어를 지원합니다.
-                  </p>
-                </div>
-
-                <div className="bg-white p-6 rounded-xl shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
-                  <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                    <Award className="w-6 h-6 text-red-600" />
-                  </div>
-                  <h3 className="font-bold text-lg mb-2 text-gray-900">중국 공장 MOU</h3>
-                  <p className="text-gray-700 text-sm leading-relaxed">
-                    중국 최대 규모 공기청정기 제조 공장과 MOU 체결로 3-in-1
-                    기술을 국내 독점 도입했습니다.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-4">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-white"
-                >
-                  <Link href="/news">모든 뉴스 보기</Link>
-                </Button>
-                <Button asChild variant="outline" size="lg">
-                  <Link href="/contact">보도자료 문의</Link>
-                </Button>
+              <div className="p-4">
+                <h3 className="font-bold text-sm mb-2 text-gray-900 leading-tight">
+                  영업팀장 상생, 중국 공기청정기 제조 공장 글로벌 영업팀장
+                </h3>
+                <div className="text-xs text-gray-500">2023.05.10</div>
               </div>
             </div>
 
-            {/* Visual Section */}
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-3xl transform rotate-3 opacity-10"></div>
-              <div className="relative bg-white rounded-3xl shadow-2xl p-8 transform -rotate-1">
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-2">
-                      2025.08
-                    </div>
-                    <div className="text-sm text-gray-600">최신 보도</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-2">
-                      6+
-                    </div>
-                    <div className="text-sm text-gray-600">주요 뉴스</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-2">
-                      3
-                    </div>
-                    <div className="text-sm text-gray-600">브랜드 런칭</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-primary mb-2">
-                      2
-                    </div>
-                    <div className="text-sm text-gray-600">글로벌 진출</div>
-                  </div>
-                </div>
+            {/* Card 2 */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="aspect-video bg-gray-200 relative">
+                <img
+                  src={serviceBackgroundImage}
+                  alt="상생, 중국, 중국 공기청정기 제조 공장 글로벌 영업팀장"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="font-bold text-sm mb-2 text-gray-900 leading-tight">
+                  상생, 중국, 중국 공기청정기 제조 공장 글로벌 영업팀장
+                </h3>
+                <div className="text-xs text-gray-500">2023.05.10</div>
+              </div>
+            </div>
 
-                <div className="mt-6 pt-6 border-t border-gray-200">
-                  <blockquote className="text-center italic text-gray-700">
-                    "혁신과 성장으로 미래를 만들어 갑니다"
-                  </blockquote>
-                  <div className="text-center text-sm text-gray-500 mt-2">
-                    - FeedBack 보도자료
-                  </div>
-                </div>
+            {/* Card 3 */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="aspect-video bg-gray-200 relative">
+                <img
+                  src={hoidImg}
+                  alt="상생, 중국, 중국 공기청정기 제조 공장 글로벌"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="font-bold text-sm mb-2 text-gray-900 leading-tight">
+                  상생, 중국, 중국 공기청정기 제조 공장 글로벌
+                </h3>
+                <div className="text-xs text-gray-500">2023.05.10</div>
+              </div>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="aspect-video bg-gray-200 relative">
+                <img
+                  src={medifeedImg}
+                  alt="상생, 중국, 중국 공기청정기 제조 공장 글로벌"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="font-bold text-sm mb-2 text-gray-900 leading-tight">
+                  상생, 중국, 중국 공기청정기 제조 공장 글로벌
+                </h3>
+                <div className="text-xs text-gray-500">2023.05.10</div>
               </div>
             </div>
           </div>
