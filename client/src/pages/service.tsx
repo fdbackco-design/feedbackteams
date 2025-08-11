@@ -181,43 +181,40 @@ export default function Service() {
             onMouseMove={handleMouseMove}
           >
             {services.map((service, index) => (
-              <Card key={index} className="flex-shrink-0 w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] max-w-[800px] shadow-lg overflow-hidden bg-white rounded-2xl">
-                {/* Image Section with overlay content */}
-                <div className="relative h-[240px] lg:h-[280px] overflow-hidden rounded-2xl">
+              <Card key={index} className="flex-shrink-0 w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] max-w-[800px] shadow-lg overflow-hidden bg-white rounded-2xl flex flex-col">
+                {/* Image Section - Clean, no overlays */}
+                <div className="h-[240px] lg:h-[280px] overflow-hidden rounded-t-2xl">
                   {service.imageUrl ? (
                     <img 
                       src={service.imageUrl} 
                       alt={service.title}
-                      className="w-full h-full object-cover rounded-2xl"
+                      className="w-full h-full object-cover"
                     />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl">
+                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300">
                       <service.icon className="w-20 h-20 text-gray-400" />
                     </div>
                   )}
-                  
-                  {/* Bottom overlay for better text readability */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
-                  
-                  {/* Content positioned at bottom of image */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    {/* Large number and title */}
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-4xl lg:text-5xl font-bold text-blue-400">
-                        {String(index + 1).padStart(2, '0')}
-                      </span>
-                      <Button size="sm" className="bg-white/20 backdrop-blur-sm text-white border-white/30 rounded-full px-4 py-2 text-xs">
-                        프로젝트 문의
-                      </Button>
-                    </div>
-                    <h3 className="text-xl lg:text-2xl font-bold text-white mb-2">
-                      {service.title}
-                    </h3>
-                  </div>
                 </div>
                 
-                {/* Content Section - Clean white background */}
-                <div className="p-6 lg:p-8 bg-white">
+                {/* Content Section - All text content here */}
+                <div className="p-6 lg:p-8 bg-white flex-1">
+                  {/* Service number and button row */}
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-4xl lg:text-5xl font-bold text-blue-500">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <Button size="sm" className="bg-gray-100 text-gray-800 hover:bg-gray-200 rounded-full px-4 py-2 text-xs">
+                      프로젝트 문의
+                    </Button>
+                  </div>
+                  
+                  {/* Title */}
+                  <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
+                    {service.title}
+                  </h3>
+                  
+                  {/* Description */}
                   <p className="text-gray-700 mb-4 leading-relaxed text-sm lg:text-base">
                     {service.description}
                   </p>
