@@ -176,23 +176,76 @@ export default function Service() {
 
   // 스크롤 이벤트를 감지하여 페이저 업데이트
   const handleScroll = () => {
-    if (!carouselRef.current || isDragging) return;
+    if (!carouselRef.current) return;
     
-    const firstChild = carouselRef.current.children[0] as HTMLElement;
-    const cardWidth = firstChild.clientWidth;
-    const gap = 24;
-    const slideWidth = cardWidth + gap;
-    const currentScroll = carouselRef.current.scrollLeft;
-    const containerWidth = carouselRef.current.clientWidth;
+    const container = carouselRef.current;
+    const cards = Array.from(container.children) as HTMLElement[];
+    const containerRect = container.getBoundingClientRect();
+    const containerCenter = containerRect.left + containerRect.width / 2;
     
-    // 현재 스크롤 위치에서 가장 가까운 카드 중심 찾기
-    const centerOffsetFromLeft = currentScroll + containerWidth / 2;
-    const nearestIndex = Math.round(centerOffsetFromLeft / slideWidth);
-    const clampedIndex = Math.max(0, Math.min(nearestIndex, services.length - 1));
+    let closestIndex = 0;
+    let closestDistance = Infinity;
     
-    if (clampedIndex !== currentIndex) {
-      setCurrentIndex(clampedIndex);
+    cards.forEach((card, index) => {
+      const cardRect = card.getBoundingClientRect();
+      const cardCenter = cardRect.left + cardRect.width / 2;
+      const distance = Math.abs(cardCenter - containerCenter);
+      
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestIndex = index;
+      }
+    });
+    
+    if (closestIndex !== currentIndex) {
+      setCurrentIndex(closestIndex);
     }
+  };
+
+  // 스크롤 종료 감지를 위한 디바운스
+  const [scrollTimeout, setScrollTimeout] = useState<NodeJS.Timeout | null>(null);
+  
+  const handleScrollEnd = () => {
+    if (!carouselRef.current) return;
+    
+    const container = carouselRef.current;
+    const cards = Array.from(container.children) as HTMLElement[];
+    const containerRect = container.getBoundingClientRect();
+    const containerCenter = containerRect.left + containerRect.width / 2;
+    
+    let closestIndex = 0;
+    let closestDistance = Infinity;
+    
+    cards.forEach((card, index) => {
+      const cardRect = card.getBoundingClientRect();
+      const cardCenter = cardRect.left + cardRect.width / 2;
+      const distance = Math.abs(cardCenter - containerCenter);
+      
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestIndex = index;
+      }
+    });
+    
+    // 가장 가까운 카드로 스냅
+    if (closestIndex !== currentIndex) {
+      setCurrentIndex(closestIndex);
+      goToSlide(closestIndex);
+    }
+  };
+
+  // 스크롤 이벤트 처리 개선
+  const handleScrollWithSnap = () => {
+    handleScroll();
+    
+    // 기존 타이머 클리어
+    if (scrollTimeout) {
+      clearTimeout(scrollTimeout);
+    }
+    
+    // 스크롤 종료 후 스냅 처리
+    const timeout = setTimeout(handleScrollEnd, 150);
+    setScrollTimeout(timeout);
   };
 
   // 초기 로드 시 첫 번째 카드를 중앙에 위치시키고 스크롤 이벤트 등록
@@ -203,16 +256,19 @@ export default function Service() {
     
     const carousel = carouselRef.current;
     if (carousel) {
-      carousel.addEventListener('scroll', handleScroll);
+      carousel.addEventListener('scroll', handleScrollWithSnap);
     }
     
     return () => {
       clearTimeout(timer);
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
       if (carousel) {
-        carousel.removeEventListener('scroll', handleScroll);
+        carousel.removeEventListener('scroll', handleScrollWithSnap);
       }
     };
-  }, [currentIndex, isDragging]);
+  }, [currentIndex, scrollTimeout]);
 
   return (
     <section className="min-h-screen py-20 bg-gray-50">
@@ -249,7 +305,11 @@ export default function Service() {
           <div
             ref={carouselRef}
             className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth cursor-grab select-none w-full"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            style={{ 
+              scrollbarWidth: "none", 
+              msOverflowStyle: "none",
+              scrollSnapType: "x mandatory"
+            }}
             onMouseDown={handleMouseDown}
             onMouseLeave={handleMouseLeave}
             onMouseUp={handleMouseUp}
@@ -259,6 +319,7 @@ export default function Service() {
               <Card
                 key={index}
                 className="flex-shrink-0 w-[80%] overflow-hidden flex flex-col border-0 shadow-none bg-transparent"
+                style={{ scrollSnapAlign: "center" }}
               >
                 {/* Image Section - Clean, no overlays */}
                 <div className="h-[400px] lg:h-[450px] overflow-hidden">
@@ -270,7 +331,7 @@ export default function Service() {
                         index === 1 || index === 3
                           ? "object-center"
                           : index === 4
-                            ? "object-[40%_30%]"
+                            ? "object-[30%_20%]"
                             : "object-top"
                       }`}
                     />
