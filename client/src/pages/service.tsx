@@ -70,46 +70,39 @@ export default function Service() {
   const nextSlide = () => {
     const newIndex = (currentIndex + 1) % services.length;
     setCurrentIndex(newIndex);
-    if (carouselRef.current) {
-      const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
-      const gap = 24; // gap-6 = 24px
-      const containerWidth = carouselRef.current.clientWidth;
-      const centerOffset = (containerWidth - cardWidth) / 2;
-      const slidePosition = newIndex * (cardWidth + gap) - centerOffset;
-      carouselRef.current.scrollTo({
-        left: Math.max(0, slidePosition),
-        behavior: 'smooth'
-      });
-    }
+    goToSlide(newIndex);
   };
   
   const prevSlide = () => {
     const newIndex = currentIndex === 0 ? services.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
-    if (carouselRef.current) {
-      const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
-      const gap = 24; // gap-6 = 24px
-      const containerWidth = carouselRef.current.clientWidth;
-      const centerOffset = (containerWidth - cardWidth) / 2;
-      const slidePosition = newIndex * (cardWidth + gap) - centerOffset;
-      carouselRef.current.scrollTo({
-        left: Math.max(0, slidePosition),
-        behavior: 'smooth'
-      });
-    }
+    goToSlide(newIndex);
   };
   
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
-    if (carouselRef.current) {
-      const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
+    if (carouselRef.current && carouselRef.current.children[0]) {
+      const firstChild = carouselRef.current.children[0] as HTMLElement;
+      const cardWidth = firstChild.clientWidth;
       const gap = 24; // gap-6 = 24px
       const containerWidth = carouselRef.current.clientWidth;
-      // 카드를 화면 중앙에 위치시키기 위한 계산
-      const centerOffset = (containerWidth - cardWidth) / 2;
-      const slidePosition = index * (cardWidth + gap) - centerOffset;
+      
+      // 카드를 정확히 화면 중앙에 위치시키기 위한 계산
+      const slideWidth = cardWidth + gap;
+      const totalScrollWidth = carouselRef.current.scrollWidth;
+      
+      // 선택된 카드의 왼쪽 위치
+      const cardLeft = index * slideWidth;
+      
+      // 카드 중앙을 화면 중앙에 맞추기 위한 스크롤 위치
+      const targetScroll = cardLeft - (containerWidth - cardWidth) / 2;
+      
+      // 스크롤 범위 제한
+      const maxScroll = totalScrollWidth - containerWidth;
+      const finalScroll = Math.max(0, Math.min(targetScroll, maxScroll));
+      
       carouselRef.current.scrollTo({
-        left: Math.max(0, slidePosition),
+        left: finalScroll,
         behavior: 'smooth'
       });
     }
@@ -136,12 +129,18 @@ export default function Service() {
     if (carouselRef.current) {
       carouselRef.current.style.cursor = 'grab';
       // 드래그 후 가장 가까운 슬라이드로 스냅
-      const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
+      const firstChild = carouselRef.current.children[0] as HTMLElement;
+      const cardWidth = firstChild.clientWidth;
       const gap = 24;
       const slideWidth = cardWidth + gap;
       const currentScroll = carouselRef.current.scrollLeft;
-      const newIndex = Math.round(currentScroll / slideWidth);
-      const clampedIndex = Math.max(0, Math.min(newIndex, services.length - 1));
+      const containerWidth = carouselRef.current.clientWidth;
+      
+      // 현재 스크롤 위치에서 가장 가까운 카드 중심 찾기
+      const centerOffsetFromLeft = currentScroll + containerWidth / 2;
+      const nearestIndex = Math.round(centerOffsetFromLeft / slideWidth);
+      const clampedIndex = Math.max(0, Math.min(nearestIndex, services.length - 1));
+      
       setCurrentIndex(clampedIndex);
       goToSlide(clampedIndex);
     }

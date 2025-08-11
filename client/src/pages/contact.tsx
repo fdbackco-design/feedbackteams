@@ -186,7 +186,7 @@ export default function Contact() {
             {t("contact.title")}
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {t("문의를 남주세요")
+            {t("FeedBack과 함께 새로운 비즈니스 기회를 만들어보세요.")
               .split("\n")
               .map((line, index) => (
                 <span key={index}>
