@@ -220,7 +220,8 @@ html {
 
 /* Parallax Section Title */
 .about-parallax-title {
-  @apply text-4xl lg:text-5xl font-bold text-white leading-tight;
+  @apply text-4xl lg:text-5xl font-bold text-white;
+  line-height: 1.2;
 }
 
 .about-parallax-description {
