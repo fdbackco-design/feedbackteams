@@ -145,9 +145,9 @@ export default function Service() {
   return (
     <section className="min-h-screen py-20 bg-gray-50">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-        <div className="text-center mb-20">
-          <h1 className="text-5xl font-bold text-gray-900 mb-8">서비스 소개</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">서비스 소개</h1>
+          <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
             FeedBack은 다양한 분야의 전문적인 서비스를 통해<br />
             고객의 비즈니스 성공을 지원합니다.
           </p>
@@ -183,7 +183,7 @@ export default function Service() {
             {services.map((service, index) => (
               <Card key={index} className="flex-shrink-0 w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] max-w-[800px] shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-[1.02]">
                 {/* Image Section */}
-                <div className="relative h-56 lg:h-64 bg-gradient-to-br from-gray-100 to-gray-200">
+                <div className="relative h-48 lg:h-52 bg-gradient-to-br from-gray-100 to-gray-200">
                   {service.imageUrl ? (
                     <img 
                       src={service.imageUrl} 
@@ -200,28 +200,28 @@ export default function Service() {
                   <div className="absolute inset-0 bg-black/5 group-hover:bg-black/10 transition-colors duration-300"></div>
                 </div>
                 
-                <CardContent className="p-8">
+                <CardContent className="p-6 lg:p-8">
                   <div className="flex flex-col">
-                    <CardTitle className="text-2xl font-bold text-gray-900 mb-4">
+                    <CardTitle className="text-xl lg:text-2xl font-bold text-gray-900 mb-3">
                       {service.title}
                     </CardTitle>
-                    <CardDescription className="text-gray-600 mb-6 leading-relaxed text-base">
+                    <CardDescription className="text-gray-600 mb-4 leading-relaxed text-sm lg:text-base">
                       {service.description}
                     </CardDescription>
-                    <div className="mb-6 space-y-2">
+                    <div className="mb-4 space-y-1">
                       {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="text-sm text-gray-500 flex items-center">
-                          <span className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0"></span>
+                        <div key={featureIndex} className="text-xs lg:text-sm text-gray-500 flex items-center">
+                          <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2 flex-shrink-0"></span>
                           {feature}
                         </div>
                       ))}
                     </div>
                     {service.buttonText === "브랜드 보기" ? (
-                      <Button asChild className={`${service.buttonColor} text-white transition-all duration-300 hover:scale-105 text-base w-full py-3`}>
+                      <Button asChild className={`${service.buttonColor} text-white transition-all duration-300 hover:scale-105 text-sm lg:text-base w-full`}>
                         <Link href="/brand">{service.buttonText}</Link>
                       </Button>
                     ) : (
-                      <Button className={`${service.buttonColor} text-white transition-all duration-300 hover:scale-105 text-base w-full py-3`}>
+                      <Button className={`${service.buttonColor} text-white transition-all duration-300 hover:scale-105 text-sm lg:text-base w-full`}>
                         {service.buttonText}
                       </Button>
                     )}
@@ -232,7 +232,7 @@ export default function Service() {
           </div>
           
           {/* Dot Indicators */}
-          <div className="flex justify-center mt-12 space-x-3">
+          <div className="flex justify-center mt-8 space-x-3">
             {services.map((_, index) => (
               <button
                 key={index}
@@ -248,7 +248,7 @@ export default function Service() {
         </div>
         
         {/* CTA Section */}
-        <div className="mt-20 text-center bg-primary rounded-2xl p-12 text-white">
+        <div className="mt-16 text-center bg-primary rounded-2xl p-8 lg:p-12 text-white">
           <h3 className="text-3xl font-bold mb-4">더 자세한 상담이 필요하신가요?</h3>
           <p className="text-xl mb-8">전문 컨설턴트가 귀하의 비즈니스에 맞는 최적의 솔루션을 제안해드립니다.</p>
           <Button asChild variant="secondary" size="lg">
