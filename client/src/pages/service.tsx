@@ -209,7 +209,8 @@ export default function Service() {
                       src={service.imageUrl} 
                       alt={service.title}
                       className={`w-full h-full object-cover rounded-2xl ${
-                        index === 1 || index === 3 || index === 4 ? 'object-center' : 'object-top'
+                        index === 1 || index === 3 ? 'object-center' : 
+                        index === 4 ? 'object-[30%_20%]' : 'object-top'
                       }`}
                     />
                   ) : (
