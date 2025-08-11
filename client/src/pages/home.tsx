@@ -745,9 +745,9 @@ export default function Home() {
         className="h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white"
         style={{ scrollSnapAlign: "start" }}
       >
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-          {/* Section Header - Left Aligned */}
-          <div className="mb-12">
+        <div className="relative w-full z-10">
+          {/* Section Header - Aligned with Navigation */}
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
               NEWS <span className="text-gray-400 text-2xl">↗</span>
             </h2>
@@ -755,14 +755,15 @@ export default function Home() {
 
           {/* News Cards - Horizontal Scrollable */}
           <div className="relative">
-            <div 
-              className="flex gap-6 overflow-x-auto pb-6 scrollbar-hide"
-              style={{ 
-                scrollSnapType: 'x mandatory',
-                scrollbarWidth: 'none',
-                msOverflowStyle: 'none'
-              }}
-            >
+            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+              <div 
+                className="flex gap-6 overflow-x-auto pb-6 scrollbar-hide"
+                style={{ 
+                  scrollSnapType: 'x mandatory',
+                  scrollbarWidth: 'none',
+                  msOverflowStyle: 'none'
+                }}
+              >
               {/* Card 1 */}
               <div className="flex-shrink-0 w-[320px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300" style={{ scrollSnapAlign: 'start' }}>
                 <div className="aspect-[4/3] bg-gray-200 relative">
@@ -830,10 +831,11 @@ export default function Home() {
                   <div className="text-xs text-gray-400">2023.05.10</div>
                 </div>
               </div>
-            </div>
+              </div>
 
-            {/* Horizontal Line Separator */}
-            <div className="w-full h-px bg-gray-300 mt-8"></div>
+              {/* Horizontal Line Separator */}
+              <div className="w-full h-px bg-gray-300 mt-8"></div>
+            </div>
           </div>
         </div>
       </section>
