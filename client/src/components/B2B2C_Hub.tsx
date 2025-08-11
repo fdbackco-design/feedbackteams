@@ -27,8 +27,7 @@ const B2B2C_Hub = () => {
                   <Factory className="w-8 h-8 text-blue-600" />
                 </div>
                 <div className="text-center">
-                  <span className="text-sm font-semibold text-blue-600 uppercase tracking-wide">STEP 1</span>
-                  <h3 className="text-xl font-bold text-gray-900 mt-2 mb-4">B2B 제조사</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">B2B 제조사</h3>
                   <p className="text-gray-600 text-sm mb-6">
                     품질 높은 제품을 생산하는 제조사와 전략적 파트너십을 구축합니다
                   </p>
@@ -78,8 +77,7 @@ const B2B2C_Hub = () => {
                   <Truck className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-center">
-                  <span className="text-sm font-semibold text-blue-100 uppercase tracking-wide">STEP 2</span>
-                  <h3 className="text-xl font-bold mt-2 mb-4">FeedBack 유통 허브</h3>
+                  <h3 className="text-xl font-bold mb-4">FeedBack 유통 허브</h3>
                   <p className="text-blue-100 text-sm mb-6">
                     전국·글로벌 유통망을 통해 제품을 소비자에게 전달합니다
                   </p>
@@ -144,8 +142,7 @@ const B2B2C_Hub = () => {
                   <ShoppingBag className="w-8 h-8 text-purple-600" />
                 </div>
                 <div className="text-center">
-                  <span className="text-sm font-semibold text-purple-600 uppercase tracking-wide">STEP 3</span>
-                  <h3 className="text-xl font-bold text-gray-900 mt-2 mb-4">B2C 소비자</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">B2C 소비자</h3>
                   <p className="text-gray-600 text-sm mb-6">
                     다양한 채널을 통해 소비자에게 최고의 제품과 서비스를 제공합니다
                   </p>
@@ -184,7 +181,6 @@ const B2B2C_Hub = () => {
                     <Factory className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <span className="text-xs font-semibold text-blue-600 uppercase tracking-wide">STEP 1</span>
                     <h3 className="text-lg font-bold text-gray-900">B2B 제조사</h3>
                   </div>
                 </div>
@@ -217,7 +213,6 @@ const B2B2C_Hub = () => {
                     <Truck className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <span className="text-xs font-semibold text-blue-100 uppercase tracking-wide">STEP 2</span>
                     <h3 className="text-lg font-bold">FeedBack 유통 허브</h3>
                   </div>
                 </div>
@@ -250,7 +245,6 @@ const B2B2C_Hub = () => {
                     <ShoppingBag className="w-6 h-6 text-purple-600" />
                   </div>
                   <div>
-                    <span className="text-xs font-semibold text-purple-600 uppercase tracking-wide">STEP 3</span>
                     <h3 className="text-lg font-bold text-gray-900">B2C 소비자</h3>
                   </div>
                 </div>
