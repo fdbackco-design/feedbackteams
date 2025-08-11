@@ -652,7 +652,7 @@ export default function Home() {
                 playsInline
                 onClick={(e) => e.stopPropagation()}
               >
-                <source src="/main_banner_last_1754902140577.mp4" type="video/mp4" />
+                <source src={mainBannerVideo} type="video/mp4" />
                 비디오를 재생할 수 없습니다. 브라우저가 이 비디오 형식을 지원하지 않습니다.
               </video>
               
