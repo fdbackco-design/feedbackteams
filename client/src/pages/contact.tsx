@@ -166,7 +166,7 @@ export default function Contact() {
     {
       icon: Clock,
       title: t("운영시간"),
-      content: t("contact.info.hours.content"),
+      content: t("평일 10:00 - 19:00, 주말 및 공휴일 휴무"),
       color: "bg-gray-600",
     },
   ];

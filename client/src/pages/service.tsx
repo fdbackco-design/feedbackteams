@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -64,14 +64,20 @@ export default function Service() {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+
+
   
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % services.length);
+    const newIndex = (currentIndex + 1) % services.length;
+    setCurrentIndex(newIndex);
     if (carouselRef.current) {
       const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
       const gap = 24; // gap-6 = 24px
+      const containerWidth = carouselRef.current.clientWidth;
+      const centerOffset = (containerWidth - cardWidth) / 2;
+      const slidePosition = newIndex * (cardWidth + gap) - centerOffset;
       carouselRef.current.scrollTo({
-        left: ((currentIndex + 1) % services.length) * (cardWidth + gap),
+        left: Math.max(0, slidePosition),
         behavior: 'smooth'
       });
     }
@@ -83,8 +89,11 @@ export default function Service() {
     if (carouselRef.current) {
       const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
       const gap = 24; // gap-6 = 24px
+      const containerWidth = carouselRef.current.clientWidth;
+      const centerOffset = (containerWidth - cardWidth) / 2;
+      const slidePosition = newIndex * (cardWidth + gap) - centerOffset;
       carouselRef.current.scrollTo({
-        left: newIndex * (cardWidth + gap),
+        left: Math.max(0, slidePosition),
         behavior: 'smooth'
       });
     }
@@ -95,8 +104,12 @@ export default function Service() {
     if (carouselRef.current) {
       const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
       const gap = 24; // gap-6 = 24px
+      const containerWidth = carouselRef.current.clientWidth;
+      // 카드를 화면 중앙에 위치시키기 위한 계산
+      const centerOffset = (containerWidth - cardWidth) / 2;
+      const slidePosition = index * (cardWidth + gap) - centerOffset;
       carouselRef.current.scrollTo({
-        left: index * (cardWidth + gap),
+        left: Math.max(0, slidePosition),
         behavior: 'smooth'
       });
     }
@@ -141,6 +154,14 @@ export default function Service() {
     const walk = (x - startX) * 2; // 드래그 속도 조절
     carouselRef.current.scrollLeft = scrollLeft - walk;
   };
+
+  // 초기 로드 시 첫 번째 카드를 중앙에 위치시키기
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      goToSlide(0);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <section className="min-h-screen py-20 bg-gray-50">
