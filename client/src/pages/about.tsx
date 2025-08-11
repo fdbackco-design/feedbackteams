@@ -461,10 +461,10 @@ export default function About() {
           <div className="text-center mb-16">
             <div className="text-lg text-foreground leading-relaxed space-y-8 max-w-4xl mx-auto">
               <p className="about-story-main text-[30px]">
-                <span className="text-primary">Feedback</span>은 유통을 중심으로
+                <span style={{color: '#0F4C82'}}>Feedback</span>은 유통을 중심으로
                 <br />
                 브랜드 마케팅, 제조, 무역 수출입을 아우르는
-                <span className="text-accent"> 종합 커머스 기업</span>입니다.
+                <span style={{color: '#0F4C82'}}> 종합 커머스 기업</span>입니다.
               </p>
 
               <p className="about-story-sub">
@@ -522,7 +522,7 @@ export default function About() {
             <h2 className="about-section-title mb-8">
               경영철학
             </h2>
-            <p className="about-story-sub text-foreground leading-relaxed max-w-4xl mx-auto">
+            <p className="about-story-sub leading-relaxed max-w-4xl mx-auto" style={{color: '#000000'}}>
               FeedBack은 브랜드와 시장을 연결하는 실행 중심의 유통 플랫폼으로서
               <br />
               모든 파트너와 함께 성장하는 상생의 생태계를 구축하고 있습니다.
@@ -556,7 +556,7 @@ export default function About() {
                   고객사와 파트너의 신뢰를 기반으로 장기 협력과 함께 발전하는
                   구조를 설계하며,
                   <br />
-                  <span className="font-semibold text-primary">
+                  <span className="font-semibold" style={{color: '#0F4C82'}}>
                     모두가 지속 가능한 이익을 나누는 상생 플랫폼
                   </span>
                   을 지향합니다.
@@ -591,7 +591,7 @@ export default function About() {
                   브랜드가 시장에서 자리 잡도록 실행 가능한 솔루션을 제공합니다.
                   <br />
                   <br />
-                  <span className="font-semibold text-primary">
+                  <span className="font-semibold" style={{color: '#0F4C82'}}>
                     제품력에 브랜딩을 입히고, 브랜딩에 유통을 결합하며,
                     <br />
                     유통에 경험과 콘텐츠를 심는 방식이 FeedBack의 방식
@@ -625,7 +625,7 @@ export default function About() {
                   글로벌 시장 진출 기회를 제공합니다.
                   <br />
                   <br />
-                  <span className="font-semibold text-primary">
+                  <span className="font-semibold" style={{color: '#0F4C82'}}>
                     전략적 진출 설계 + 제휴 기반 실행력
                   </span>
                   을 통해
@@ -660,7 +660,7 @@ export default function About() {
                   FeedBack의 존재 이유는 파트너와 고객의 신뢰입니다.
                   <br />
                   <br />
-                  <span className="font-semibold text-primary">
+                  <span className="font-semibold" style={{color: '#0F4C82'}}>
                     검증된 품질과 안정적인 공급, 투명한 유통 프로세스,
                     <br />
                     정직한 사후 서비스 체계
@@ -689,7 +689,7 @@ export default function About() {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="flex items-center mb-16 bg-white/70 p-4 rounded-xl backdrop-blur-sm">
             <div className="w-4 h-4 bg-blue-600 rounded-full mr-6"></div>
-            <h2 className="about-section-title text-slate-900">연혁</h2>
+            <h2 className="about-section-title" style={{color: '#000000'}}>연혁</h2>
           </div>
 
           <div className="relative ml-2">
