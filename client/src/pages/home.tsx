@@ -142,6 +142,7 @@ export default function Home() {
   const [statsInView, setStatsInView] = useState(false);
   const statsRef = useRef<HTMLDivElement>(null);
   const newsScrollRef = useRef<HTMLDivElement>(null);
+  const [newsScrollProgress, setNewsScrollProgress] = useState(0);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const serviceCarouselRef = useRef<HTMLDivElement>(null);
   const [currentBrandIndex, setCurrentBrandIndex] = useState(0);
@@ -248,16 +249,28 @@ export default function Home() {
       newsContainer.scrollLeft = scrollLeft - walk;
     };
 
+    const handleScroll = () => {
+      const scrollLeft = newsContainer.scrollLeft;
+      const maxScrollLeft = newsContainer.scrollWidth - newsContainer.clientWidth;
+      const progress = maxScrollLeft > 0 ? (scrollLeft / maxScrollLeft) * 100 : 0;
+      setNewsScrollProgress(progress);
+    };
+
     newsContainer.addEventListener('mousedown', handleMouseDown);
     newsContainer.addEventListener('mouseleave', handleMouseLeave);
     newsContainer.addEventListener('mouseup', handleMouseUp);
     newsContainer.addEventListener('mousemove', handleMouseMove);
+    newsContainer.addEventListener('scroll', handleScroll);
+
+    // Initial progress calculation
+    handleScroll();
 
     return () => {
       newsContainer.removeEventListener('mousedown', handleMouseDown);
       newsContainer.removeEventListener('mouseleave', handleMouseLeave);
       newsContainer.removeEventListener('mouseup', handleMouseUp);
       newsContainer.removeEventListener('mousemove', handleMouseMove);
+      newsContainer.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -845,14 +858,17 @@ export default function Home() {
               })}
             </div>
 
-            {/* Pagination Dots */}
-            <div className="flex justify-center mt-6 space-x-2">
-              {newsData.slice(0, 6).map((_, index) => (
+            {/* Progress Bar Pager */}
+            <div className="flex justify-center mt-8">
+              <div className="w-32 h-0.5 bg-gray-300 rounded-full relative overflow-hidden">
                 <div 
-                  key={index}
-                  className={`w-2 h-2 rounded-full ${index === 0 ? 'bg-gray-800' : 'bg-gray-300'}`}
+                  className="h-full bg-black rounded-full transition-all duration-300 ease-out"
+                  style={{ 
+                    width: `${newsScrollProgress}%`,
+                    transform: `translateX(0%)` 
+                  }}
                 />
-              ))}
+              </div>
             </div>
 
             {/* Horizontal Line Separator */}
