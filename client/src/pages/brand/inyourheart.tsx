@@ -78,11 +78,11 @@ export default function InYourHeart() {
             <div className="inline-block px-4 py-2 bg-pink-100 text-pink-600 rounded-full text-sm font-semibold mb-6">
               BRAND VALUES
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold text-[#000000] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-6">
               감성이 담긴 뷰티 철학
             </h2>
             <div className="w-32 h-1 bg-pink-500 mx-auto mb-8"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               피부에 순하고 마음까지 따뜻하게 만드는 감성 스킨케어
             </p>
           </div>

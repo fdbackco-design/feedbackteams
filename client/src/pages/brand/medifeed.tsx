@@ -80,11 +80,11 @@ export default function Medifeed() {
             <div className="inline-block px-4 py-2 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-sm font-semibold mb-6">
               PRODUCT CATEGORIES
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold text-[#000000] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-6">
               전문화된 건강 솔루션
             </h2>
             <div className="w-32 h-1 bg-[#0F4C82] mx-auto mb-8"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               과학적 연구를 바탕으로 개발된 특화 영양제로 일상의 건강을 책임집니다
             </p>
           </div>

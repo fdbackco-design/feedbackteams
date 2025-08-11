@@ -97,11 +97,11 @@ export default function Hoid() {
             <div className="inline-block px-4 py-2 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-sm font-semibold mb-6">
               PRODUCT FEATURES
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold text-[#000000] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-6">
               혁신적인 기술력
             </h2>
             <div className="w-32 h-1 bg-[#0F4C82] mx-auto mb-8"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               미니멀한 디자인 속에 숨어있는 첨단 기술로 완전히 새로운 공기청정 경험을 제공합니다
             </p>
           </div>

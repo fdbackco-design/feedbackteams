@@ -81,11 +81,11 @@ export default function Sangsaeng() {
             <div className="inline-block px-4 py-2 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-sm font-semibold mb-6">
               SERVICE PORTFOLIO
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold text-[#000000] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-6">
               글로벌 헬스케어 생태계
             </h2>
             <div className="w-32 h-1 bg-[#0F4C82] mx-auto mb-8"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               의료 서비스부터 브랜딩까지, 통합된 헬스케어 솔루션을 제공합니다
             </p>
           </div>
