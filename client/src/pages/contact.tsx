@@ -278,7 +278,7 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div>
+          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">
               {t("문의 남기기")}
             </h2>
