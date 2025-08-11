@@ -899,7 +899,7 @@ export default function Home() {
           <div className="relative max-w-7xl mx-auto pl-6 lg:pl-8">
             <div 
               ref={newsScrollRef}
-              className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto pb-6 scrollbar-hide cursor-grab pr-6 lg:pr-8"
+              className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto pb-6 scrollbar-hide cursor-grab"
               style={{ 
                 scrollSnapType: 'x mandatory',
                 scrollbarWidth: 'none',
@@ -908,6 +908,9 @@ export default function Home() {
                 scrollBehavior: 'auto' // Disable smooth scroll for manual dragging
               }}
             >
+              {/* First padding spacer */}
+              <div className="flex-shrink-0 w-0"></div>
+              
               {newsData.slice(0, 6).map((news, index) => {
                 const src = resolveNewsThumbnail(news.thumbnail);
                 return (
@@ -936,6 +939,9 @@ export default function Home() {
                   </div>
                 );
               })}
+              
+              {/* Last padding spacer for smooth scroll */}
+              <div className="flex-shrink-0 w-6 lg:w-8"></div>
             </div>
 
             {/* Progress Bar Pager - Matches Navigation Width */}
