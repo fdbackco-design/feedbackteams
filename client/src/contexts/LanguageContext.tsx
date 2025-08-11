@@ -21,11 +21,11 @@ const translations = {
     'nav.contact': '문의하기',
     
     // Hero Section
-    'hero.title': '글로벌 비즈니스 파트너',
-    'hero.subtitle': 'FeedBack',
-    'hero.description': '아시아를 넘어 세계로 나아가는 기업들의 든든한 파트너가 되겠습니다.',
-    'hero.cta.consultation': '무료 상담 신청',
-    'hero.cta.proposal': '사업 제안서 보기',
+    'hero.title': '브랜드와 시장을 연결하는',
+    'hero.subtitle': '유통 플랫폼, FEEDBACK',
+    'hero.description': '유통·브랜드·마케팅·제조가 하나로 연결되는 상생 플랫폼',
+    'hero.cta.consultation': '서비스 둘러보기',
+    'hero.cta.proposal': '소개 영상 보기',
     
     // Services Section
     'services.title': '서비스',
@@ -158,11 +158,11 @@ const translations = {
     'nav.contact': 'Contact',
     
     // Hero Section
-    'hero.title': 'Global Business Partner',
-    'hero.subtitle': 'FeedBack',
-    'hero.description': 'We will be a reliable partner for companies expanding from Asia to the world.',
-    'hero.cta.consultation': 'Free Consultation',
-    'hero.cta.proposal': 'View Business Proposal',
+    'hero.title': 'Distribution Platform Connecting',
+    'hero.subtitle': 'Brands and Markets, FEEDBACK',
+    'hero.description': 'A mutual growth platform where distribution, branding, marketing, and manufacturing connect as one',
+    'hero.cta.consultation': 'Explore Services',
+    'hero.cta.proposal': 'Watch Introduction Video',
     
     // Services Section
     'services.title': 'Services',
