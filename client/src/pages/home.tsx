@@ -896,8 +896,8 @@ export default function Home() {
           </div>
 
           {/* News Cards - Horizontal Scrollable */}
-          <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-            {/* Navigation Buttons */}
+          <div className="relative">
+            {/* Navigation Buttons - In Margin Area */}
             <button
               onClick={() => {
                 if (newsScrollRef.current) {
@@ -935,6 +935,8 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
               </svg>
             </button>
+
+            <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
             <div 
               ref={newsScrollRef}
@@ -990,6 +992,7 @@ export default function Home() {
                   }}
                 />
               </div>
+            </div>
             </div>
           </div>
         </div>
