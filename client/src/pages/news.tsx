@@ -44,7 +44,7 @@ export default function News() {
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
+        <div className="text-center mb-20 mt-[150px]">
           <h1 className="text-5xl font-bold text-gray-900 mb-8">
             뉴스 & 보도자료
           </h1>
