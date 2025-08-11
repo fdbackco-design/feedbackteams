@@ -16,7 +16,7 @@ interface NetworkBackgroundProps {
 
 const NetworkBackground: React.FC<NetworkBackgroundProps> = ({ className = "" }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number | null>(null);
   const nodesRef = useRef<Node[]>([]);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   const mouseRef = useRef({ x: 0, y: 0 });
@@ -173,16 +173,21 @@ const NetworkBackground: React.FC<NetworkBackgroundProps> = ({ className = "" })
       ctx.shadowBlur = 0;
       ctx.globalAlpha = 1;
 
-      animationRef.current = requestAnimationFrame(animate);
+      if (typeof window !== 'undefined') {
+        animationRef.current = requestAnimationFrame(animate);
+      }
     };
 
     animate();
 
     return () => {
       window.removeEventListener("resize", updateDimensions);
-      canvas.removeEventListener("mousemove", handleMouseMove);
-      if (animationRef.current) {
+      if (canvas) {
+        canvas.removeEventListener("mousemove", handleMouseMove);
+      }
+      if (animationRef.current !== null) {
         cancelAnimationFrame(animationRef.current);
+        animationRef.current = null;
       }
     };
   }, [dimensions.width, dimensions.height]);
