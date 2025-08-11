@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Factory, ShoppingBag, CheckCircle, ArrowRight, ArrowLeft, ArrowDown, ArrowUp } from "lucide-react";
+import { Factory, ShoppingBag, CheckCircle, ArrowRight, ArrowDown, Users, Truck, ShoppingCart } from "lucide-react";
 
 const B2B2C_Hub = () => {
   return (
@@ -15,307 +15,281 @@ const B2B2C_Hub = () => {
           </p>
         </div>
 
-        {/* Desktop Layout: 3 columns */}
-        <div className="hidden lg:grid lg:grid-cols-3 gap-8 items-stretch">
-          {/* B2B Card - Left */}
-          <div className="bg-white rounded-2xl shadow-xl border border-gray-200 p-8 h-full flex flex-col hover:shadow-2xl transition-shadow duration-300">
-            <div className="flex items-center mb-6">
-              <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
-                <Factory className="w-7 h-7 text-blue-600" />
+        {/* Flow Layout */}
+        <div className="relative">
+          {/* Desktop Flow: Horizontal */}
+          <div className="hidden lg:flex items-center justify-between">
+            {/* Step 1: B2B (제조사) */}
+            <motion.div 
+              className="flex-1 max-w-sm"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-white rounded-2xl shadow-xl p-8 relative">
+                <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <Factory className="w-8 h-8 text-blue-600" />
+                </div>
+                <div className="text-center">
+                  <span className="text-sm font-semibold text-blue-600 uppercase tracking-wide">STEP 1</span>
+                  <h3 className="text-xl font-bold text-gray-900 mt-2 mb-4">B2B 제조사</h3>
+                  <p className="text-gray-600 text-sm mb-6">
+                    품질 높은 제품을 생산하는 제조사와 전략적 파트너십을 구축합니다
+                  </p>
+                  
+                  <div className="space-y-2 text-left">
+                    <div className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <span>전문 제조 파트너</span>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <span>품질 관리 시스템</span>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <span>OEM/ODM 생산</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="text-sm font-semibold text-blue-600 uppercase tracking-wide">B2B</div>
-            </div>
-            
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              제조사의 시장 진입을 가속하는 전략적 유통 파트너
-            </h3>
-            
-            <ul className="space-y-3 mb-6 flex-grow">
-              <li className="flex items-start">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700">전국·글로벌 유통망을 통한 안정적인 판로 제공</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700">홈쇼핑, 온라인 마켓, 해외 수출 등 다각화된 판매 채널 확보</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700">브랜드 포지셔닝과 제품 가치에 맞춘 맞춤형 유통 전략</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700">계약, 물류, 마케팅까지 원스톱 지원</span>
-              </li>
-            </ul>
-            
-            <div className="flex flex-wrap gap-2 mt-auto">
-              <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
-                글로벌 진출
-              </span>
-              <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
-                안정적인 판로
-              </span>
-              <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
-                전략적 제휴
-              </span>
-            </div>
+            </motion.div>
+
+            {/* Arrow 1 */}
+            <motion.div 
+              className="flex-shrink-0 mx-6"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex flex-col items-center">
+                <ArrowRight className="w-8 h-8 text-blue-500" />
+                <span className="text-xs text-gray-500 mt-2">유통 연결</span>
+              </div>
+            </motion.div>
+
+            {/* Step 2: FeedBack (유통 허브) */}
+            <motion.div 
+              className="flex-1 max-w-sm"
+              initial={{ opacity: 0, y: -50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl shadow-xl p-8 text-white relative">
+                <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <Truck className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-center">
+                  <span className="text-sm font-semibold text-blue-100 uppercase tracking-wide">STEP 2</span>
+                  <h3 className="text-xl font-bold mt-2 mb-4">FeedBack 유통 허브</h3>
+                  <p className="text-blue-100 text-sm mb-6">
+                    전국·글로벌 유통망을 통해 제품을 소비자에게 전달합니다
+                  </p>
+                  
+                  <div className="space-y-2 text-left">
+                    <div className="flex items-center text-sm text-blue-100">
+                      <CheckCircle className="w-4 h-4 text-green-300 mr-2 flex-shrink-0" />
+                      <span>전국 유통망</span>
+                    </div>
+                    <div className="flex items-center text-sm text-blue-100">
+                      <CheckCircle className="w-4 h-4 text-green-300 mr-2 flex-shrink-0" />
+                      <span>물류 최적화</span>
+                    </div>
+                    <div className="flex items-center text-sm text-blue-100">
+                      <CheckCircle className="w-4 h-4 text-green-300 mr-2 flex-shrink-0" />
+                      <span>브랜드 마케팅</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Animated flowing effect */}
+                <div className="absolute inset-0 rounded-2xl overflow-hidden">
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"
+                    animate={{
+                      x: ["-100%", "100%"],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                  />
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Arrow 2 */}
+            <motion.div 
+              className="flex-shrink-0 mx-6"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex flex-col items-center">
+                <ArrowRight className="w-8 h-8 text-purple-500" />
+                <span className="text-xs text-gray-500 mt-2">소비자 전달</span>
+              </div>
+            </motion.div>
+
+            {/* Step 3: B2C (소비자) */}
+            <motion.div 
+              className="flex-1 max-w-sm"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-white rounded-2xl shadow-xl p-8 relative">
+                <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <ShoppingBag className="w-8 h-8 text-purple-600" />
+                </div>
+                <div className="text-center">
+                  <span className="text-sm font-semibold text-purple-600 uppercase tracking-wide">STEP 3</span>
+                  <h3 className="text-xl font-bold text-gray-900 mt-2 mb-4">B2C 소비자</h3>
+                  <p className="text-gray-600 text-sm mb-6">
+                    다양한 채널을 통해 소비자에게 최고의 제품과 서비스를 제공합니다
+                  </p>
+                  
+                  <div className="space-y-2 text-left">
+                    <div className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <span>온라인·오프라인</span>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <span>홈쇼핑 연계</span>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-700">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <span>글로벌 진출</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
 
-          {/* Center Connector Card */}
-          <div className="bg-white rounded-2xl shadow-xl border border-gray-200 p-8 h-full flex flex-col justify-center items-center relative overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-            {/* Animated flowing lines */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="relative w-full h-1">
-                {/* Background line */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-300 to-transparent rounded-full"></div>
-                
-                {/* Animated flowing gradient bars */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-600 to-transparent rounded-full"
-                  animate={{
-                    x: ["-100%", "100%"],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "linear",
-                  }}
-                />
-                
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-500 to-transparent rounded-full"
-                  animate={{
-                    x: ["-100%", "100%"],
-                  }}
-                  transition={{
-                    duration: 2.5,
-                    repeat: Infinity,
-                    ease: "linear",
-                    delay: 0.5,
-                  }}
-                />
+          {/* Mobile Flow: Vertical */}
+          <div className="lg:hidden space-y-8">
+            {/* Step 1: B2B */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-white rounded-2xl shadow-lg p-6">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
+                    <Factory className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <span className="text-xs font-semibold text-blue-600 uppercase tracking-wide">STEP 1</span>
+                    <h3 className="text-lg font-bold text-gray-900">B2B 제조사</h3>
+                  </div>
+                </div>
+                <p className="text-gray-600 text-sm mb-4">
+                  품질 높은 제품을 생산하는 제조사와 전략적 파트너십을 구축합니다
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">전문 제조</span>
+                  <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">품질 관리</span>
+                  <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">OEM/ODM</span>
+                </div>
               </div>
-              
-              {/* Left Arrow */}
-              <div className="absolute left-4">
-                <ArrowLeft className="w-6 h-6 text-slate-600" />
-              </div>
-              
-              {/* Right Arrow */}
-              <div className="absolute right-4">
-                <ArrowRight className="w-6 h-6 text-slate-600" />
-              </div>
-            </div>
-            
-            {/* Content */}
-            <div className="text-center z-10 bg-white px-6 py-8 rounded-xl">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                "B2B와 B2C를 잇는 유통 허브, 피드백"
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                제조사의 제품이 소비자에게 도달하기까지,<br />
-                피드백은 모든 과정을 설계하고 실행합니다.
-              </p>
-            </div>
-          </div>
+            </motion.div>
 
-          {/* B2C Card - Right */}
-          <div className="bg-white rounded-2xl shadow-xl border border-gray-200 p-8 h-full flex flex-col hover:shadow-2xl transition-shadow duration-300">
-            <div className="flex items-center mb-6">
-              <div className="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mr-4">
-                <ShoppingBag className="w-7 h-7 text-purple-600" />
+            {/* Arrow Down */}
+            <div className="flex justify-center">
+              <ArrowDown className="w-8 h-8 text-blue-500" />
+            </div>
+
+            {/* Step 2: FeedBack Hub */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl shadow-lg p-6 text-white">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mr-4">
+                    <Truck className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <span className="text-xs font-semibold text-blue-100 uppercase tracking-wide">STEP 2</span>
+                    <h3 className="text-lg font-bold">FeedBack 유통 허브</h3>
+                  </div>
+                </div>
+                <p className="text-blue-100 text-sm mb-4">
+                  전국·글로벌 유통망을 통해 제품을 소비자에게 전달합니다
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-2 py-1 bg-white/20 text-white rounded-full text-xs">전국 유통망</span>
+                  <span className="px-2 py-1 bg-white/20 text-white rounded-full text-xs">물류 최적화</span>
+                  <span className="px-2 py-1 bg-white/20 text-white rounded-full text-xs">브랜드 마케팅</span>
+                </div>
               </div>
-              <div className="text-sm font-semibold text-purple-600 uppercase tracking-wide">B2C</div>
+            </motion.div>
+
+            {/* Arrow Down */}
+            <div className="flex justify-center">
+              <ArrowDown className="w-8 h-8 text-purple-500" />
             </div>
-            
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              소비자에게 직접 전달되는 차별화된 브랜드 경험
-            </h3>
-            
-            <ul className="space-y-3 mb-6 flex-grow">
-              <li className="flex items-start">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700">Hoid, Medifeed, InYourHeart 등 자체 브랜드 운영</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700">제품 기획부터 패키징, 콘텐츠까지 완성된 브랜드 경험 제공</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700">온라인·오프라인 통합 마케팅으로 인지도와 충성도 강화</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700">고객 피드백 기반의 제품 개선과 신제품 개발</span>
-              </li>
-            </ul>
-            
-            <div className="flex flex-wrap gap-2 mt-auto">
-              <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
-                브랜드 경험
-              </span>
-              <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
-                소비자 신뢰
-              </span>
-              <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
-                프리미엄 품질
-              </span>
-            </div>
+
+            {/* Step 3: B2C */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-white rounded-2xl shadow-lg p-6">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mr-4">
+                    <ShoppingBag className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <div>
+                    <span className="text-xs font-semibold text-purple-600 uppercase tracking-wide">STEP 3</span>
+                    <h3 className="text-lg font-bold text-gray-900">B2C 소비자</h3>
+                  </div>
+                </div>
+                <p className="text-gray-600 text-sm mb-4">
+                  다양한 채널을 통해 소비자에게 최고의 제품과 서비스를 제공합니다
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded-full text-xs">온라인·오프라인</span>
+                  <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded-full text-xs">홈쇼핑 연계</span>
+                  <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded-full text-xs">글로벌 진출</span>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
 
-        {/* Mobile Layout: Stacked */}
-        <div className="lg:hidden space-y-8">
-          {/* B2B Card */}
-          <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-3">
-                <Factory className="w-6 h-6 text-blue-600" />
-              </div>
-              <div className="text-sm font-semibold text-blue-600 uppercase tracking-wide">B2B</div>
-            </div>
-            
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              제조사의 시장 진입을 가속하는 전략적 유통 파트너
+        {/* Bottom Summary */}
+        <motion.div 
+          className="mt-16 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <div className="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              "완전한 유통 생태계, 피드백"
             </h3>
-            
-            <ul className="space-y-2 mb-4">
-              <li className="flex items-start">
-                <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700 text-sm">전국·글로벌 유통망을 통한 안정적인 판로 제공</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700 text-sm">홈쇼핑, 온라인 마켓, 해외 수출 등 다각화된 판매 채널 확보</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700 text-sm">브랜드 포지셔닝과 제품 가치에 맞춘 맞춤형 유통 전략</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700 text-sm">계약, 물류, 마케팅까지 원스톱 지원</span>
-              </li>
-            </ul>
-            
-            <div className="flex flex-wrap gap-2">
-              <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">
-                글로벌 진출
-              </span>
-              <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">
-                안정적인 판로
-              </span>
-              <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">
-                전략적 제휴
-              </span>
-            </div>
+            <p className="text-gray-600 leading-relaxed">
+              제조사의 우수한 제품이 소비자에게 성공적으로 전달될 수 있도록,<br />
+              피드백은 전체 유통 과정을 설계하고 최적화합니다.
+            </p>
           </div>
-
-          {/* Mobile Connector */}
-          <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 text-center relative overflow-hidden">
-            {/* Vertical animated flowing lines */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 flex flex-col items-center justify-center">
-              <div className="relative h-full w-1">
-                {/* Background line */}
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-300 to-transparent rounded-full"></div>
-                
-                {/* Animated flowing gradient bars */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-600 to-transparent rounded-full"
-                  animate={{
-                    y: ["-100%", "100%"],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "linear",
-                  }}
-                />
-                
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-500 to-transparent rounded-full"
-                  animate={{
-                    y: ["-100%", "100%"],
-                  }}
-                  transition={{
-                    duration: 2.5,
-                    repeat: Infinity,
-                    ease: "linear",
-                    delay: 0.5,
-                  }}
-                />
-              </div>
-              
-              {/* Up Arrow */}
-              <div className="absolute top-4">
-                <ArrowUp className="w-5 h-5 text-slate-600" />
-              </div>
-              
-              {/* Down Arrow */}
-              <div className="absolute bottom-4">
-                <ArrowDown className="w-5 h-5 text-slate-600" />
-              </div>
-            </div>
-            
-            {/* Content */}
-            <div className="relative z-10 bg-white px-4 py-6 rounded-xl mx-8">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">
-                "B2B와 B2C를 잇는 유통 허브, 피드백"
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                제조사의 제품이 소비자에게 도달하기까지,<br />
-                피드백은 모든 과정을 설계하고 실행합니다.
-              </p>
-            </div>
-          </div>
-
-          {/* B2C Card */}
-          <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mr-3">
-                <ShoppingBag className="w-6 h-6 text-purple-600" />
-              </div>
-              <div className="text-sm font-semibold text-purple-600 uppercase tracking-wide">B2C</div>
-            </div>
-            
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              소비자에게 직접 전달되는 차별화된 브랜드 경험
-            </h3>
-            
-            <ul className="space-y-2 mb-4">
-              <li className="flex items-start">
-                <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700 text-sm">Hoid, Medifeed, InYourHeart 등 자체 브랜드 운영</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700 text-sm">제품 기획부터 패키징, 콘텐츠까지 완성된 브랜드 경험 제공</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700 text-sm">온라인·오프라인 통합 마케팅으로 인지도와 충성도 강화</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-700 text-sm">고객 피드백 기반의 제품 개선과 신제품 개발</span>
-              </li>
-            </ul>
-            
-            <div className="flex flex-wrap gap-2">
-              <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">
-                브랜드 경험
-              </span>
-              <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">
-                소비자 신뢰
-              </span>
-              <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">
-                프리미엄 품질
-              </span>
-            </div>
-          </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
