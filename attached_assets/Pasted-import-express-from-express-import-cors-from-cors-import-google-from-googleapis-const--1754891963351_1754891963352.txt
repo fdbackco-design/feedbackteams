@@ -1,0 +1,117 @@
+import express from "express";
+import cors from "cors";
+import { google } from "googleapis";
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// --- OAuth2 클라이언트 준비
+const oAuth2Client = new google.auth.OAuth2(
+  process.env.GMAIL_CLIENT_ID,
+  process.env.GMAIL_CLIENT_SECRET,
+  process.env.GMAIL_REDIRECT_URI
+);
+
+// Refresh Token이 있으면 세팅
+if (process.env.GMAIL_REFRESH_TOKEN) {
+  oAuth2Client.setCredentials({ refresh_token: process.env.GMAIL_REFRESH_TOKEN });
+}
+
+// 1) 구글 로그인 시작 (한 번만 실행해서 Refresh Token 얻는 용도)
+app.get("/auth", (req, res) => {
+  const url = oAuth2Client.generateAuthUrl({
+    access_type: "offline",      // refresh_token 받으려면 필수
+    prompt: "consent",           // 매번 동의 강제 → 첫 획득 시 유용
+    scope: ["https://www.googleapis.com/auth/gmail.send"],
+  });
+  res.redirect(url);
+});
+
+// 2) OAuth 콜백: code로 토큰 교환
+app.get("/oauth2callback", async (req, res) => {
+  try {
+    const { code } = req.query;
+    const { tokens } = await oAuth2Client.getToken(code);
+    // refresh_token을 획득했다면 콘솔에 출력
+    if (tokens.refresh_token) {
+      console.log("\n==== COPY THIS REFRESH TOKEN TO REPLIT SECRETS ====");
+      console.log(tokens.refresh_token);
+      console.log("==================================================\n");
+    }
+    oAuth2Client.setCredentials(tokens);
+    res.send("인증 완료! 콘솔의 refresh token을 Replit Secrets에 GMAIL_REFRESH_TOKEN으로 저장하세요.");
+  } catch (e) {
+    console.error(e);
+    res.status(500).send("OAuth 처리 중 오류");
+  }
+});
+
+// 3) 실제 메일 발송 엔드포인트
+app.post("/send", async (req, res) => {
+  try {
+    const {
+      name, company, email, phone, inquiryType, message
+    } = req.body;
+
+    // 인증 객체가 refresh token을 갖도록 보장
+    if (!oAuth2Client.credentials.refresh_token && process.env.GMAIL_REFRESH_TOKEN) {
+      oAuth2Client.setCredentials({ refresh_token: process.env.GMAIL_REFRESH_TOKEN });
+    }
+
+    const gmail = google.gmail({ version: "v1", auth: oAuth2Client });
+
+    // 메일 내용 구성
+    const to = "fdbackco@gmail.com";            // 수신자
+    const from = "fdbackco@gmail.com";          // 발신자(인증 계정)
+    const subject = `[문의] ${inquiryType || "일반"} - ${name || "이름없음"}`;
+
+    const html = `
+      <h3>새 문의가 도착했습니다</h3>
+      <ul>
+        <li><b>이름:</b> ${name}</li>
+        <li><b>회사:</b> ${company || "-"}</li>
+        <li><b>이메일:</b> ${email}</li>
+        <li><b>전화:</b> ${phone || "-"}</li>
+        <li><b>유형:</b> ${inquiryType || "-"}</li>
+      </ul>
+      <p style="white-space:pre-line">${(message || "").replace(/</g,"&lt;")}</p>
+    `;
+
+    const raw = buildRawEmail({ to, from, subject, html });
+    await gmail.users.messages.send({
+      userId: "me",
+      requestBody: { raw },
+    });
+
+    res.json({ ok: true });
+  } catch (e) {
+    console.error(e);
+    res.status(500).json({ ok: false, error: e.message });
+  }
+});
+
+// MIME → base64url 인코딩
+function buildRawEmail({ to, from, subject, html }) {
+  const lines = [
+    `To: ${to}`,
+    `From: ${from}`,
+    `Subject: ${encodeToMimeHeader(subject)}`,
+    "MIME-Version: 1.0",
+    "Content-Type: text/html; charset=UTF-8",
+    "",
+    html,
+  ];
+  const content = lines.join("\n");
+  return Buffer.from(content)
+    .toString("base64")
+    .replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+
+// UTF-8 제목 인코딩 (한글 제목 안전)
+function encodeToMimeHeader(text) {
+  return `=?UTF-8?B?${Buffer.from(text).toString("base64")}?=`;
+}
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server listening on ${PORT}`));

@@ -45,10 +45,12 @@ export default function Contact() {
     message: "",
     privacyAgree: false,
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
     if (!formData.privacyAgree) {
       toast({
         title: t("contact.form.privacy.error.title"),
@@ -58,22 +60,85 @@ export default function Contact() {
       return;
     }
 
-    // Handle form submission
-    toast({
-      title: t("contact.form.success.title"),
-      description: t("contact.form.success.description"),
-    });
+    // 필수 필드 검증
+    if (!formData.name || !formData.email || !formData.message) {
+      toast({
+        title: "입력 오류",
+        description: "이름, 이메일, 문의내용은 필수 항목입니다.",
+        variant: "destructive",
+      });
+      return;
+    }
 
-    // Reset form
-    setFormData({
-      name: "",
-      company: "",
-      email: "",
-      phone: "",
-      inquiryType: "",
-      message: "",
-      privacyAgree: false,
-    });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          company: formData.company,
+          email: formData.email,
+          phone: formData.phone,
+          inquiryType: formData.inquiryType,
+          message: formData.message,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.ok) {
+        toast({
+          title: t("contact.form.success.title"),
+          description: "문의가 성공적으로 전송되었습니다. 빠른 시일 내에 답변드리겠습니다.",
+        });
+
+        // Reset form
+        setFormData({
+          name: "",
+          company: "",
+          email: "",
+          phone: "",
+          inquiryType: "",
+          message: "",
+          privacyAgree: false,
+        });
+      } else {
+        if (result.needAuth) {
+          toast({
+            title: "Gmail 인증 필요",
+            description: (
+              <div>
+                <p>Gmail API 인증이 필요합니다.</p>
+                <a 
+                  href="/api/auth/gmail" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-600 underline"
+                >
+                  여기를 클릭하여 Gmail 인증 진행
+                </a>
+              </div>
+            ),
+            variant: "destructive",
+          });
+        } else {
+          throw new Error(result.error || "알 수 없는 오류가 발생했습니다.");
+        }
+      }
+    } catch (error: any) {
+      console.error("이메일 발송 오류:", error);
+      toast({
+        title: "발송 실패",
+        description: error.message || "이메일 발송 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -340,9 +405,10 @@ export default function Contact() {
               {/* Submit Button */}
               <Button
                 type="submit"
+                disabled={isSubmitting}
                 className="w-full py-4 text-lg font-semibold"
               >
-                {t("contact.form.submit")}
+                {isSubmitting ? "발송 중..." : t("contact.form.submit")}
               </Button>
             </form>
           </div>

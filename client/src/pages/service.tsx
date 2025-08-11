@@ -181,7 +181,7 @@ export default function Service() {
             onMouseMove={handleMouseMove}
           >
             {services.map((service, index) => (
-              <Card key={index} className="flex-shrink-0 w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] max-w-[800px] overflow-hidden bg-white flex flex-col border-0 shadow-none">
+              <Card key={index} className="flex-shrink-0 w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] max-w-[800px] overflow-hidden flex flex-col border-0 shadow-none bg-transparent">
                 {/* Image Section - Clean, no overlays */}
                 <div className="h-[240px] lg:h-[280px] overflow-hidden">
                   {service.imageUrl ? (
@@ -198,7 +198,7 @@ export default function Service() {
                 </div>
                 
                 {/* Content Section - All text content here */}
-                <div className="p-6 lg:p-8 bg-white flex-1">
+                <div className="p-6 lg:p-8 flex-1">
                   {/* Service number and button row */}
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-4xl lg:text-5xl font-bold text-blue-500">
