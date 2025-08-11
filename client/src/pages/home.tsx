@@ -879,35 +879,36 @@ export default function Home() {
         className="h-screen flex items-center justify-center text-white relative overflow-hidden"
         style={{ scrollSnapAlign: "start" }}
       >
-        {/* CSS 네트워크 애니메이션 배경 */}
+        {/* 네트워크 애니메이션 배경 */}
         <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 overflow-hidden">
-          {/* 애니메이션 네트워크 노드들 */}
-          {networkNodes.map((node) => (
-            <div
-              key={node.id}
-              className="absolute w-2 h-2 bg-blue-400 rounded-full opacity-70"
-              style={{
-                left: `${node.left}%`,
-                top: `${node.top}%`,
-                animation: `pulse ${node.duration}s ease-in-out infinite`,
-                animationDelay: `${node.delay}s`
-              }}
-            />
-          ))}
+          {/* 고정된 위치의 큰 네트워크 노드들 */}
+          <div className="absolute w-8 h-8 bg-blue-300 rounded-full top-[20%] left-[15%] animate-pulse" style={{ boxShadow: '0 0 30px rgba(59, 130, 246, 0.8)' }} />
+          <div className="absolute w-6 h-6 bg-blue-400 rounded-full top-[30%] left-[80%] animate-pulse" style={{ boxShadow: '0 0 25px rgba(59, 130, 246, 0.7)', animationDelay: '1s' }} />
+          <div className="absolute w-10 h-10 bg-blue-200 rounded-full top-[60%] left-[25%] animate-pulse" style={{ boxShadow: '0 0 35px rgba(59, 130, 246, 0.9)', animationDelay: '2s' }} />
+          <div className="absolute w-7 h-7 bg-blue-300 rounded-full top-[70%] left-[70%] animate-pulse" style={{ boxShadow: '0 0 28px rgba(59, 130, 246, 0.8)', animationDelay: '0.5s' }} />
+          <div className="absolute w-5 h-5 bg-blue-400 rounded-full top-[40%] left-[50%] animate-pulse" style={{ boxShadow: '0 0 22px rgba(59, 130, 246, 0.6)', animationDelay: '1.5s' }} />
+          <div className="absolute w-9 h-9 bg-blue-300 rounded-full top-[80%] left-[40%] animate-pulse" style={{ boxShadow: '0 0 32px rgba(59, 130, 246, 0.8)', animationDelay: '2.5s' }} />
           
-          {/* 연결선 효과 */}
-          <div className="absolute inset-0" style={{
-            background: `
-              radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-              radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-              radial-gradient(circle at 60% 20%, rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-              radial-gradient(circle at 30% 80%, rgba(59, 130, 246, 0.1) 1px, transparent 1px),
-              linear-gradient(45deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px),
-              linear-gradient(-45deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px)
-            `,
-            backgroundSize: '100px 100px, 150px 150px, 120px 120px, 180px 180px, 50px 50px, 50px 50px',
-            animation: 'networkMove 20s linear infinite'
-          }} />
+          {/* 연결선들 */}
+          <div className="absolute w-px h-32 bg-blue-300 opacity-40 top-[20%] left-[19%] transform rotate-45 animate-pulse" style={{ animationDelay: '3s' }} />
+          <div className="absolute w-40 h-px bg-blue-300 opacity-40 top-[35%] left-[25%] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute w-px h-24 bg-blue-300 opacity-40 top-[40%] left-[53%] transform -rotate-12 animate-pulse" style={{ animationDelay: '2s' }} />
+          <div className="absolute w-32 h-px bg-blue-300 opacity-40 top-[65%] left-[30%] transform rotate-12 animate-pulse" style={{ animationDelay: '0.5s' }} />
+          
+          {/* 움직이는 배경 패턴 */}
+          <div 
+            className="absolute inset-0 opacity-30" 
+            style={{
+              backgroundImage: `
+                radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.3) 2px, transparent 2px),
+                radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.2) 1px, transparent 1px),
+                radial-gradient(circle at 60% 20%, rgba(59, 130, 246, 0.25) 1.5px, transparent 1.5px),
+                radial-gradient(circle at 30% 80%, rgba(59, 130, 246, 0.2) 1px, transparent 1px)
+              `,
+              backgroundSize: '120px 120px, 80px 80px, 100px 100px, 90px 90px',
+              animation: 'networkMove 20s linear infinite'
+            }}
+          />
         </div>
         <div className="absolute inset-0 bg-black bg-opacity-30"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
