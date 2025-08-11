@@ -45,6 +45,8 @@ import hoidImg from "@assets/brand2_1754881083408.jpg";
 import medifeedImg from "@assets/medifeed_1_1754636614100.jpg";
 import inyourheartImg from "@assets/brand3_1754881349690.jpg";
 import sangsaengImg from "@assets/sangsaeng_1_1754636754183.jpg";
+import newsData from "@/data/news.json";
+import { resolveNewsThumbnail, FALLBACK } from "@/assets/news";
 
 const services = [
   {
@@ -764,85 +766,44 @@ export default function Home() {
                 WebkitOverflowScrolling: 'touch'
               }}
             >
-              {/* Card 1 */}
-              <div className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] lg:w-[380px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300" style={{ scrollSnapAlign: 'start' }}>
-                <div className="aspect-[4/3] bg-gray-200 relative">
-                  <img
-                    src={newsBackgroundImage}
-                    alt="영업팀장 상생, 중국 공기청정기 제조 공장 글로벌 영업팀장"
-                    className="w-full h-full object-cover"
-                    draggable={false}
-                  />
-                </div>
-                <div className="p-4 sm:p-5 md:p-6">
-                  <h3 className="font-medium text-sm sm:text-base md:text-lg mb-3 text-gray-900 leading-tight">
-                    영업팀장 상생, 중국 공기청정기 제조 공장 글로벌 영업팀장
-                  </h3>
-                  <div className="text-xs sm:text-sm text-gray-400">2023.05.10</div>
-                </div>
-              </div>
-
-              {/* Card 2 */}
-              <div className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] lg:w-[380px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300" style={{ scrollSnapAlign: 'start' }}>
-                <div className="aspect-[4/3] bg-gray-200 relative">
-                  <img
-                    src={serviceBackgroundImage}
-                    alt="상생, 중국, 중국 공기청정기 제조 공장 글로벌 영업팀장"
-                    className="w-full h-full object-cover"
-                    draggable={false}
-                  />
-                </div>
-                <div className="p-4 sm:p-5 md:p-6">
-                  <h3 className="font-medium text-sm sm:text-base md:text-lg mb-3 text-gray-900 leading-tight">
-                    상생, 중국, 중국 공기청정기 제조 공장 글로벌 영업팀장 체결
-                  </h3>
-                  <div className="text-xs sm:text-sm text-gray-400">2023.05.10</div>
-                </div>
-              </div>
-
-              {/* Card 3 */}
-              <div className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] lg:w-[380px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300" style={{ scrollSnapAlign: 'start' }}>
-                <div className="aspect-[4/3] bg-gray-200 relative">
-                  <img
-                    src={hoidImg}
-                    alt="상생, 중국, 중국 공기청정기 제조 공장 글로벌"
-                    className="w-full h-full object-cover"
-                    draggable={false}
-                  />
-                </div>
-                <div className="p-4 sm:p-5 md:p-6">
-                  <h3 className="font-medium text-sm sm:text-base md:text-lg mb-3 text-gray-900 leading-tight">
-                    상생, 중국, 중국 공기청정기 제조 공장 글로벌 협력
-                  </h3>
-                  <div className="text-xs sm:text-sm text-gray-400">2023.05.10</div>
-                </div>
-              </div>
-
-              {/* Card 4 */}
-              <div className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] lg:w-[380px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300" style={{ scrollSnapAlign: 'start' }}>
-                <div className="aspect-[4/3] bg-gray-200 relative">
-                  <img
-                    src={medifeedImg}
-                    alt="상생, 중국, 중국 공기청정기 제조 공장 글로벌"
-                    className="w-full h-full object-cover"
-                    draggable={false}
-                  />
-                </div>
-                <div className="p-4 sm:p-5 md:p-6">
-                  <h3 className="font-medium text-sm sm:text-base md:text-lg mb-3 text-gray-900 leading-tight">
-                    상생, 중국, 중국 공기청정기 제조 공장 글로벌 협력
-                  </h3>
-                  <div className="text-xs sm:text-sm text-gray-400">2023.05.10</div>
-                </div>
-              </div>
+              {newsData.slice(0, 6).map((news, index) => {
+                const src = resolveNewsThumbnail(news.thumbnail);
+                return (
+                  <div 
+                    key={index}
+                    className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] lg:w-[380px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300" 
+                    style={{ scrollSnapAlign: 'start' }}
+                  >
+                    <div className="aspect-[4/3] bg-gray-200 relative">
+                      <img
+                        src={src}
+                        alt={news.title}
+                        className="w-full h-full object-cover"
+                        draggable={false}
+                        onError={(e) => {
+                          (e.currentTarget as HTMLImageElement).src = FALLBACK;
+                        }}
+                      />
+                    </div>
+                    <div className="p-4 sm:p-5 md:p-6">
+                      <h3 className="font-medium text-sm sm:text-base md:text-lg mb-3 text-gray-900 leading-tight line-clamp-2">
+                        {news.title}
+                      </h3>
+                      <div className="text-xs sm:text-sm text-gray-400">{news.date}</div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
 
             {/* Pagination Dots */}
             <div className="flex justify-center mt-6 space-x-2">
-              <div className="w-2 h-2 bg-gray-800 rounded-full"></div>
-              <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
-              <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
-              <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+              {newsData.slice(0, 6).map((_, index) => (
+                <div 
+                  key={index}
+                  className={`w-2 h-2 rounded-full ${index === 0 ? 'bg-gray-800' : 'bg-gray-300'}`}
+                />
+              ))}
             </div>
 
             {/* Horizontal Line Separator */}
