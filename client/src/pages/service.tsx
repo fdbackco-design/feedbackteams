@@ -173,7 +173,7 @@ export default function Service() {
           {/* Carousel Track */}
           <div 
             ref={carouselRef}
-            className="flex gap-8 overflow-x-auto scrollbar-hide scroll-smooth px-16 cursor-grab select-none"
+            className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth px-4 cursor-grab select-none"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             onMouseDown={handleMouseDown}
             onMouseLeave={handleMouseLeave}
@@ -181,7 +181,7 @@ export default function Service() {
             onMouseMove={handleMouseMove}
           >
             {services.map((service, index) => (
-              <Card key={index} className="flex-shrink-0 w-[400px] lg:w-[480px] xl:w-[520px] shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-[1.02]">
+              <Card key={index} className="flex-shrink-0 w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] max-w-[800px] shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-[1.02]">
                 {/* Image Section */}
                 <div className="relative h-56 lg:h-64 bg-gradient-to-br from-gray-100 to-gray-200">
                   {service.imageUrl ? (
