@@ -16,6 +16,7 @@ import Hoid from "@/pages/brand/hoid";
 import Medifeed from "@/pages/brand/medifeed";
 import InYourHeart from "@/pages/brand/inyourheart";
 import Sangsaeng from "@/pages/brand/sangsaeng";
+import B2B2C_Demo from "@/pages/B2B2C_Demo";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -32,6 +33,7 @@ function Router() {
       <Route path="/news" component={News} />
       <Route path="/article/:id" component={Article} />
       <Route path="/contact" component={Contact} />
+      <Route path="/b2b2c-demo" component={B2B2C_Demo} />
       <Route component={NotFound} />
     </Switch>
   );
