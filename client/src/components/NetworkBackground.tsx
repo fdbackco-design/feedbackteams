@@ -50,8 +50,8 @@ const NetworkBackground: React.FC<NetworkBackgroundProps> = ({ className = "" })
 
     canvas.addEventListener("mousemove", handleMouseMove);
 
-    // Initialize nodes with higher density
-    const nodeCount = Math.floor((dimensions.width * dimensions.height) / 8000) + 50;
+    // Initialize nodes with optimized density for performance
+    const nodeCount = Math.min(80, Math.floor((dimensions.width * dimensions.height) / 12000) + 40);
     nodesRef.current = Array.from({ length: nodeCount }, () => {
       const baseX = Math.random() * dimensions.width;
       const baseY = Math.random() * dimensions.height;
@@ -76,12 +76,12 @@ const NetworkBackground: React.FC<NetworkBackgroundProps> = ({ className = "" })
 
       // Update node positions with continuous animation + mouse interaction
       const mouse = mouseRef.current;
-      const time = Date.now() * 0.001;
+      const currentTime = Date.now() * 0.001;
       
       nodes.forEach((node, index) => {
         // Basic floating animation - always active
-        const floatX = Math.sin(time * 0.5 + index * 0.1) * 20;
-        const floatY = Math.cos(time * 0.3 + index * 0.15) * 15;
+        const floatX = Math.sin(currentTime * 0.5 + index * 0.1) * 20;
+        const floatY = Math.cos(currentTime * 0.3 + index * 0.15) * 15;
         
         // Calculate distance to mouse for interaction
         const mouseDx = mouse.x - node.baseX;
@@ -104,76 +104,74 @@ const NetworkBackground: React.FC<NetworkBackgroundProps> = ({ className = "" })
         node.y = Math.max(10, Math.min(dimensions.height - 10, node.y));
       });
 
-      // Draw connections with enhanced visibility
+      // Optimized connection drawing with fewer operations
+      ctx.strokeStyle = `rgba(34, 211, 238, 0.6)`;
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
           const dx = nodes[i].x - nodes[j].x;
           const dy = nodes[i].y - nodes[j].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
+          const distanceSquared = dx * dx + dy * dy; // Skip sqrt for performance
+          const maxDistanceSquared = maxDistance * maxDistance;
 
-          if (distance < maxDistance) {
+          if (distanceSquared < maxDistanceSquared) {
+            const distance = Math.sqrt(distanceSquared);
             const opacity = (maxDistance - distance) / maxDistance;
             
-            // Main connection line with stronger visibility
-            ctx.strokeStyle = `rgba(34, 211, 238, ${opacity * 0.8})`;
-            ctx.lineWidth = opacity * 2;
-            ctx.beginPath();
-            ctx.moveTo(nodes[i].x, nodes[i].y);
-            ctx.lineTo(nodes[j].x, nodes[j].y);
-            ctx.stroke();
-            
-            // Add subtle gradient overlay for depth
-            const gradient = ctx.createLinearGradient(nodes[i].x, nodes[i].y, nodes[j].x, nodes[j].y);
-            gradient.addColorStop(0, `rgba(59, 130, 246, ${opacity * 0.4})`);
-            gradient.addColorStop(1, `rgba(34, 211, 238, ${opacity * 0.4})`);
-            
-            ctx.strokeStyle = gradient;
-            ctx.lineWidth = opacity * 1;
-            ctx.beginPath();
-            ctx.moveTo(nodes[i].x, nodes[i].y);
-            ctx.lineTo(nodes[j].x, nodes[j].y);
-            ctx.stroke();
+            if (opacity > 0.1) { // Only draw visible connections
+              ctx.globalAlpha = opacity * 0.8;
+              ctx.moveTo(nodes[i].x, nodes[i].y);
+              ctx.lineTo(nodes[j].x, nodes[j].y);
+            }
           }
         }
       }
+      
+      ctx.stroke();
+      ctx.globalAlpha = 1; // Reset alpha
 
-      // Draw nodes with enhanced visibility like the reference image
+      // Optimized node rendering for better performance
+      const time = Date.now() * 0.001;
+      
+      // Draw all outer glows at once
+      ctx.shadowColor = "rgba(34, 211, 238, 0.8)";
+      ctx.shadowBlur = 6;
+      ctx.fillStyle = `rgba(34, 211, 238, 0.2)`;
       nodes.forEach((node, index) => {
-        const time = Date.now() * 0.001;
         const pulse = Math.sin(time + index * 0.15) * 0.2 + 0.8;
-        
-        // Large outer glow - reduced size
-        ctx.shadowColor = "rgba(34, 211, 238, 1)";
-        ctx.shadowBlur = 8;
-        ctx.fillStyle = `rgba(34, 211, 238, ${0.3})`;
+        ctx.globalAlpha = 0.3 * pulse;
         ctx.beginPath();
-        ctx.arc(node.x, node.y, node.size * 2, 0, Math.PI * 2);
+        ctx.arc(node.x, node.y, node.size * 1.8, 0, Math.PI * 2);
         ctx.fill();
-        
-        // Medium glow ring - reduced size
-        ctx.shadowBlur = 6;
-        ctx.fillStyle = `rgba(59, 130, 246, ${0.6})`;
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, node.size * 1.5, 0, Math.PI * 2);
-        ctx.fill();
-        
-        // Main bright node - reduced size
-        ctx.shadowBlur = 4;
-        ctx.fillStyle = `rgba(34, 211, 238, ${0.9 * pulse})`;
+      });
+      
+      // Draw main nodes
+      ctx.shadowBlur = 3;
+      ctx.fillStyle = `rgba(34, 211, 238, 0.9)`;
+      nodes.forEach((node, index) => {
+        const pulse = Math.sin(time + index * 0.15) * 0.2 + 0.8;
+        ctx.globalAlpha = pulse;
         ctx.beginPath();
         ctx.arc(node.x, node.y, node.size * 1.2, 0, Math.PI * 2);
         ctx.fill();
-
-        // Bright white core - reduced size
-        ctx.shadowBlur = 2;
-        ctx.fillStyle = `rgba(255, 255, 255, ${pulse})`;
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, node.size * 0.6, 0, Math.PI * 2);
-        ctx.fill();
-        
-        // Reset shadow
-        ctx.shadowBlur = 0;
       });
+      
+      // Draw white cores
+      ctx.shadowBlur = 1;
+      ctx.fillStyle = `rgba(255, 255, 255, 0.9)`;
+      nodes.forEach((node, index) => {
+        const pulse = Math.sin(time + index * 0.15) * 0.2 + 0.8;
+        ctx.globalAlpha = pulse;
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, node.size * 0.5, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      
+      // Reset all effects
+      ctx.shadowBlur = 0;
+      ctx.globalAlpha = 1;
 
       animationRef.current = requestAnimationFrame(animate);
     };
