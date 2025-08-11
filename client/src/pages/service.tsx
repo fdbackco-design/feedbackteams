@@ -82,18 +82,25 @@ export default function Service() {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [isButtonClick, setIsButtonClick] = useState(false);
 
   const nextSlide = () => {
+    setIsButtonClick(true);
     const newIndex = (currentIndex + 1) % services.length;
     setCurrentIndex(newIndex);
     goToSlide(newIndex);
+    // 버튼 클릭 플래그를 잠시 후 해제
+    setTimeout(() => setIsButtonClick(false), 500);
   };
 
   const prevSlide = () => {
+    setIsButtonClick(true);
     const newIndex =
       currentIndex === 0 ? services.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
     goToSlide(newIndex);
+    // 버튼 클릭 플래그를 잠시 후 해제
+    setTimeout(() => setIsButtonClick(false), 500);
   };
 
   const goToSlide = (index: number) => {
@@ -176,7 +183,7 @@ export default function Service() {
 
   // 스크롤 이벤트를 감지하여 페이저 업데이트
   const handleScroll = () => {
-    if (!carouselRef.current) return;
+    if (!carouselRef.current || isButtonClick) return;
     
     const container = carouselRef.current;
     const cards = Array.from(container.children) as HTMLElement[];
@@ -206,7 +213,7 @@ export default function Service() {
   const [scrollTimeout, setScrollTimeout] = useState<NodeJS.Timeout | null>(null);
   
   const handleScrollEnd = () => {
-    if (!carouselRef.current) return;
+    if (!carouselRef.current || isButtonClick) return;
     
     const container = carouselRef.current;
     const cards = Array.from(container.children) as HTMLElement[];
@@ -268,7 +275,7 @@ export default function Service() {
         carousel.removeEventListener('scroll', handleScrollWithSnap);
       }
     };
-  }, [currentIndex, scrollTimeout]);
+  }, [currentIndex, scrollTimeout, isButtonClick]);
 
   return (
     <section className="min-h-screen py-20 bg-gray-50">
