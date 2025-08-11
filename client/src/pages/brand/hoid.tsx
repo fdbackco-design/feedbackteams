@@ -220,7 +220,7 @@ export default function Hoid() {
             HOID와 함께 건강하고 쾌적한 실내 환경을 만들어보세요
           </p>
           <div className="space-x-4">
-            <Button variant="secondary" size="lg">
+            <Button className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-[#000000] text-primary-foreground hover:bg-[#000000]/90 h-11 rounded-md px-8" size="lg">
               제품 카탈로그 다운로드
             </Button>
             <Button
