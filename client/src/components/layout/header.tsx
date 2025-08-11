@@ -16,6 +16,7 @@ export default function Header() {
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState('KR');
   const [currentSection, setCurrentSection] = useState('hero');
+  const [scrollY, setScrollY] = useState(0);
   const [location] = useLocation();
 
   useEffect(() => {
@@ -23,18 +24,21 @@ export default function Header() {
       // 홈페이지가 아니면 섹션 감지 안함
       if (location !== '/') return;
       
-      const scrollY = window.scrollY;
+      const currentScrollY = window.scrollY;
       const windowHeight = window.innerHeight;
       let newSection = 'hero';
       
-      // 간단한 스크롤 위치 기반 섹션 감지
-      if (scrollY < windowHeight * 0.8) {
+      // 스크롤 값 업데이트
+      setScrollY(currentScrollY);
+      
+      // 픽셀 기반 섹션 감지 (더 정확)
+      if (currentScrollY < 600) {
         newSection = 'hero';     // 메인 섹션 (동영상 배경)
-      } else if (scrollY < windowHeight * 1.8) {
+      } else if (currentScrollY < 1400) {
         newSection = 'service';  // 서비스 섹션 (흰색 배경) - 검은 텍스트
-      } else if (scrollY < windowHeight * 2.8) {
+      } else if (currentScrollY < 2200) {
         newSection = 'brand';    // 브랜드 섹션 (어두운 배경)
-      } else if (scrollY < windowHeight * 3.8) {
+      } else if (currentScrollY < 3000) {
         newSection = 'news';     // 뉴스 섹션 (흰색 배경) - 검은 텍스트
       } else {
         newSection = 'stats';    // 통계 섹션 (파란 배경)
@@ -42,13 +46,17 @@ export default function Header() {
       
       if (newSection !== currentSection) {
         setCurrentSection(newSection);
-        // 디버깅용 로그 (임시)
-        console.log('Section changed to:', newSection, 'at scroll:', scrollY);
+        // 디버깅용 로그
+        console.log('Section changed to:', newSection, 'at scroll:', currentScrollY, 'windowHeight:', windowHeight);
       }
     };
     
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // 초기 실행
+    // 스크롤 이벤트 리스너 추가
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    // 초기 실행 (약간의 지연을 두어 DOM이 완전히 로드된 후 실행)
+    setTimeout(handleScroll, 100);
+    
     return () => window.removeEventListener('scroll', handleScroll);
   }, [currentSection, location]);
 
@@ -124,7 +132,8 @@ export default function Header() {
       {isHomePage && (
         <div className="fixed top-20 left-4 z-50 bg-black/70 text-white px-3 py-1 rounded text-sm font-mono space-y-1">
           <div>Section: {currentSection}</div>
-          <div>TextColor: {textColor}</div>
+          <div>Scroll: {Math.round(scrollY)}</div>
+          <div>WindowH: {Math.round(window.innerHeight || 0)}</div>
           <div>IsHome: {isHomePage ? 'Yes' : 'No'}</div>
         </div>
       )}
