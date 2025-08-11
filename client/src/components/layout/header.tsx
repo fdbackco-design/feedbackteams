@@ -74,35 +74,35 @@ export default function Header() {
   // 섹션에 따른 텍스트 색상 결정 (홈페이지에서만)
   const getTextColor = () => {
     if (!isHomePage) {
-      return 'text-gray-900'; // 서브페이지에서는 기본 어두운 색상
+      return 'text-gray-900 font-semibold'; // 서브페이지에서는 기본 어두운 색상
     }
     
     switch (currentSection) {
       case 'service': // 2번째 섹션 - 서비스 (흰색 배경)
       case 'news':    // 4번째 섹션 - 뉴스 (흰색 배경)
-        return 'text-gray-900 font-semibold'; // 더 진한 검은색과 굵은 글씨
+        return '!text-black font-bold'; // !important로 강제 적용
       case 'hero':    // 1번째 섹션 - 메인
       case 'brand':   // 3번째 섹션 - 브랜드
       case 'stats':   // 5번째 섹션 - 통계
       default:
-        return 'text-white font-semibold';
+        return '!text-white font-semibold'; // !important로 강제 적용
     }
   };
 
   const getHoverColor = () => {
     if (!isHomePage) {
-      return 'text-gray-600 hover:text-gray-900'; // 서브페이지에서는 기본 색상
+      return 'text-gray-600 hover:!text-gray-900 font-medium';
     }
     
     switch (currentSection) {
       case 'service': // 2번째 섹션 - 서비스 (흰색 배경)
       case 'news':    // 4번째 섹션 - 뉴스 (흰색 배경)
-        return 'text-gray-600 hover:text-gray-900 font-medium';
+        return '!text-gray-700 hover:!text-black font-medium';
       case 'hero':    // 1번째 섹션 - 메인
       case 'brand':   // 3번째 섹션 - 브랜드
       case 'stats':   // 5번째 섹션 - 통계
       default:
-        return 'text-white/70 hover:text-white font-medium';
+        return '!text-white/80 hover:!text-white font-medium';
     }
   };
 
@@ -122,8 +122,10 @@ export default function Header() {
     <header className={`fixed top-0 left-0 right-0 z-50 ${headerStyle}`}>
       {/* 디버깅용 현재 섹션 표시 (임시) */}
       {isHomePage && (
-        <div className="fixed top-20 left-4 z-50 bg-black/70 text-white px-3 py-1 rounded text-sm font-mono">
-          Section: {currentSection}
+        <div className="fixed top-20 left-4 z-50 bg-black/70 text-white px-3 py-1 rounded text-sm font-mono space-y-1">
+          <div>Section: {currentSection}</div>
+          <div>TextColor: {textColor}</div>
+          <div>IsHome: {isHomePage ? 'Yes' : 'No'}</div>
         </div>
       )}
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -131,7 +133,14 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0" onClick={scrollToTop}>
-              <span className={`text-2xl font-bold tracking-wider transition-colors duration-300 ${textColor}`}>
+              <span 
+                className="text-2xl font-bold tracking-wider transition-colors duration-300"
+                style={{
+                  color: isHomePage 
+                    ? (currentSection === 'service' || currentSection === 'news' ? '#000000' : '#ffffff')
+                    : '#1f2937'
+                }}
+              >
                 FeedBack
               </span>
             </Link>
@@ -144,11 +153,14 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`text-sm font-medium tracking-wide transition-colors duration-300 ${
-                    location === item.href
-                      ? textColor
-                      : hoverColor
-                  }`}
+                  className="text-sm font-medium tracking-wide transition-colors duration-300"
+                  style={{
+                    color: isHomePage 
+                      ? (currentSection === 'service' || currentSection === 'news' ? 
+                          (location === item.href ? '#000000' : '#4b5563') : 
+                          (location === item.href ? '#ffffff' : 'rgba(255,255,255,0.8)'))
+                      : (location === item.href ? '#1f2937' : '#6b7280')
+                  }}
                   onClick={scrollToTop}
                 >
                   {item.name}
@@ -161,7 +173,12 @@ export default function Header() {
           <div className="hidden md:flex items-center relative">
             <button 
               onClick={() => setIsLanguageMenuOpen(!isLanguageMenuOpen)}
-              className={`flex items-center text-sm font-medium tracking-wide transition-colors duration-300 ${textColor}`}
+              className="flex items-center text-sm font-medium tracking-wide transition-colors duration-300"
+              style={{
+                color: isHomePage 
+                  ? (currentSection === 'service' || currentSection === 'news' ? '#000000' : '#ffffff')
+                  : '#1f2937'
+              }}
             >
               {currentLanguage}
               <ChevronDown className="ml-1 h-4 w-4" />
@@ -202,9 +219,14 @@ export default function Header() {
               variant="ghost"
               size="sm"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`transition-colors duration-300 ${textColor} ${
+              className={`transition-colors duration-300 ${
                 isHomePage ? 'hover:bg-black/10' : 'hover:bg-gray-100'
               }`}
+              style={{
+                color: isHomePage 
+                  ? (currentSection === 'service' || currentSection === 'news' ? '#000000' : '#ffffff')
+                  : '#1f2937'
+              }}
             >
               {isMobileMenuOpen ? (
                 <X className="h-6 w-6" />
