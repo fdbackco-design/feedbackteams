@@ -897,6 +897,45 @@ export default function Home() {
 
           {/* News Cards - Horizontal Scrollable */}
           <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+            {/* Navigation Buttons */}
+            <button
+              onClick={() => {
+                if (newsScrollRef.current) {
+                  const containerWidth = newsScrollRef.current.clientWidth;
+                  const scrollAmount = containerWidth * 0.8; // 80% of container width
+                  newsScrollRef.current.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                  });
+                }
+              }}
+              className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/95 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:scale-110 border border-gray-100"
+              aria-label="Previous news"
+            >
+              <svg className="w-6 h-6 text-gray-700 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            <button
+              onClick={() => {
+                if (newsScrollRef.current) {
+                  const containerWidth = newsScrollRef.current.clientWidth;
+                  const scrollAmount = containerWidth * 0.8; // 80% of container width
+                  newsScrollRef.current.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                  });
+                }
+              }}
+              className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/95 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:scale-110 border border-gray-100"
+              aria-label="Next news"
+            >
+              <svg className="w-6 h-6 text-gray-700 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
             <div 
               ref={newsScrollRef}
               className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto pb-6 scrollbar-hide cursor-grab"
