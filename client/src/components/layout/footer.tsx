@@ -124,6 +124,7 @@ export default function Footer() {
                 <Link
                   href="/brand/hoid"
                   className="hover:text-white transition-colors"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
                   Hoid
                 </Link>
@@ -132,6 +133,7 @@ export default function Footer() {
                 <Link
                   href="/brand/medifeed"
                   className="hover:text-white transition-colors"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
                   Medifeed
                 </Link>
@@ -140,6 +142,7 @@ export default function Footer() {
                 <Link
                   href="/brand/inyourheart"
                   className="hover:text-white transition-colors"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
                   InYourHeart
                 </Link>
@@ -148,6 +151,7 @@ export default function Footer() {
                 <Link
                   href="/brand/sangsaeng"
                   className="hover:text-white transition-colors"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
                   상생
                 </Link>
@@ -160,6 +164,7 @@ export default function Footer() {
                 <Link
                   href="/about"
                   className="hover:text-white transition-colors"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
                   회사소개
                 </Link>
@@ -168,6 +173,7 @@ export default function Footer() {
                 <Link
                   href="/news"
                   className="hover:text-white transition-colors"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
                   뉴스
                 </Link>
@@ -176,6 +182,7 @@ export default function Footer() {
                 <Link
                   href="/contact"
                   className="hover:text-white transition-colors"
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 >
                   연락처
                 </Link>
