@@ -764,7 +764,7 @@ export default function About() {
           </div>
 
           <div className="mt-16 bg-white/75 border border-slate-200 p-8 rounded-2xl text-center shadow-lg backdrop-blur-sm">
-            <p className="about-story-detail text-slate-800 leading-relaxed font-medium">
+            <p className="about-story-detail leading-relaxed font-medium text-[#000000]">
               피드백은 제품 출시와 동시에 국내외 홈쇼핑, 이커머스, 도매 채널과의
               연계를 통해
               <br />
