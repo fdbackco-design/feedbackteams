@@ -80,7 +80,7 @@ export default function News() {
                 key={index}
                 className="shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
               >
-                <div className="aspect-video bg-gray-200 relative overflow-hidden">
+                <div className="aspect-[4/3] bg-gray-200 relative overflow-hidden">
                   <img
                     src={src}
                     alt={news.title}
