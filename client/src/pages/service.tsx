@@ -165,7 +165,7 @@ export default function Service() {
 
   return (
     <section className="min-h-screen py-20 bg-gray-50">
-      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
+      <div className="max-w-[1400px] mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
         <div className="text-center mb-16 mt-[150px]">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             서비스 소개
@@ -304,7 +304,7 @@ export default function Service() {
       </div>
 
       {/* CTA Section - Separate container with max-width */}
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+      <div className="max-w-[1400px] mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
         <div className="mt-16 text-center bg-primary rounded-2xl p-8 lg:p-12 text-white">
           <h3 className="text-3xl font-bold mb-4">
             더 자세한 상담이 필요하신가요?
