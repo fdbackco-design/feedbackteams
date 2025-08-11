@@ -71,11 +71,11 @@ export default function InYourHeart() {
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <svg className="w-full h-full" viewBox="0 0 1200 600" fill="none">
-            <circle cx="200" cy="100" r="100" fill="#ec4899" />
+            <circle cx="200" cy="100" r="100" fill="#0F4C82" />
             <circle cx="1000" cy="400" r="150" fill="#0F4C82" />
             <path
               d="M300 300 Q600 100 900 300"
-              stroke="#ec4899"
+              stroke="#0F4C82"
               strokeWidth="3"
             />
           </svg>
@@ -98,7 +98,7 @@ export default function InYourHeart() {
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="group">
               <div className="bg-white rounded-2xl p-10 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
-                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-gradient-to-br from-[#0F4C82] to-[#1a5c94] rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                   <Leaf className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4 text-center">
@@ -108,7 +108,7 @@ export default function InYourHeart() {
                   피부에 순하고 환경에 친화적인 성분만을 사용하여 안전하고
                   지속가능한 뷰티를 추구합니다.
                 </p>
-                <div className="flex items-center justify-center text-green-600 font-semibold group-hover:translate-x-2 transition-transform duration-300">
+                <div className="flex items-center justify-center text-[#0F4C82] font-semibold group-hover:translate-x-2 transition-transform duration-300">
                   <span className="mr-2">성분 상세보기</span>
                   <ArrowRight className="w-4 h-4" />
                 </div>
@@ -117,7 +117,7 @@ export default function InYourHeart() {
 
             <div className="group">
               <div className="bg-white rounded-2xl p-10 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
-                <div className="w-20 h-20 bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-gradient-to-br from-[#0F4C82] to-[#1a5c94] rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                   <Heart className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4 text-center">
@@ -127,7 +127,7 @@ export default function InYourHeart() {
                   제품 사용 순간부터 특별한 경험이 될 수 있도록 감성적이고
                   아름다운 패키지를 디자인합니다.
                 </p>
-                <div className="flex items-center justify-center text-pink-600 font-semibold group-hover:translate-x-2 transition-transform duration-300">
+                <div className="flex items-center justify-center text-[#0F4C82] font-semibold group-hover:translate-x-2 transition-transform duration-300">
                   <span className="mr-2">디자인 상세보기</span>
                   <ArrowRight className="w-4 h-4" />
                 </div>
@@ -136,7 +136,7 @@ export default function InYourHeart() {
 
             <div className="group">
               <div className="bg-white rounded-2xl p-10 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
-                <div className="w-20 h-20 bg-gradient-to-br from-[#0F4C82] to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-gradient-to-br from-[#0F4C82] to-[#1a5c94] rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                   <Globe2 className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4 text-center">
@@ -157,7 +157,7 @@ export default function InYourHeart() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-gradient-to-br from-pink-600 via-purple-600 to-[#0F4C82] text-white">
+      <section className="py-32 bg-[#0F4C82] text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
@@ -170,7 +170,7 @@ export default function InYourHeart() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button
                 size="lg"
-                className="bg-white text-[#0F4C82] hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-semibold"
+                className="text-[#ffffff] bg-[#000000] hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-semibold"
               >
                 제품 체험하기
                 <ArrowRight className="ml-2 w-5 h-5" />
