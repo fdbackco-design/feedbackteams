@@ -100,32 +100,51 @@ const B2B2C_Hub = () => {
 
                 {/* Animated spreading effect */}
                 <div className="absolute inset-0 rounded-2xl overflow-hidden">
+                  {/* Pulse wave from center */}
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/20"
+                    className="absolute inset-0"
+                    style={{
+                      background: "radial-gradient(circle at center, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.2) 30%, transparent 60%)",
+                    }}
                     animate={{
-                      scale: [1, 1.5, 1],
-                      opacity: [0.3, 0.7, 0.3],
+                      scale: [0.5, 2.5, 0.5],
+                      opacity: [1, 0, 1],
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeOut",
+                    }}
+                  />
+                  {/* Secondary pulse */}
+                  <motion.div
+                    className="absolute inset-0"
+                    style={{
+                      background: "radial-gradient(circle at center, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 40%, transparent 70%)",
+                    }}
+                    animate={{
+                      scale: [0.3, 3, 0.3],
+                      opacity: [0.8, 0, 0.8],
                     }}
                     transition={{
                       duration: 2.5,
                       repeat: Infinity,
-                      ease: "easeInOut",
+                      ease: "easeOut",
+                      delay: 0.6,
                     }}
                   />
+                  {/* Horizontal spreading effect */}
                   <motion.div
-                    className="absolute inset-0 bg-radial-gradient from-center"
-                    style={{
-                      background: "radial-gradient(circle at center, rgba(255,255,255,0.15) 20%, transparent 70%)",
-                    }}
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
                     animate={{
-                      scale: [0.8, 1.8, 0.8],
-                      opacity: [0.8, 0.2, 0.8],
+                      scaleX: [0.2, 2, 0.2],
+                      opacity: [0, 0.8, 0],
                     }}
                     transition={{
-                      duration: 3,
+                      duration: 1.8,
                       repeat: Infinity,
                       ease: "easeInOut",
-                      delay: 0.5,
+                      delay: 0.3,
                     }}
                   />
                 </div>
