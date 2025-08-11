@@ -736,35 +736,39 @@ export default function Home() {
                   </div>
                   
                   {/* Content Section */}
-                  <div className="p-8 lg:p-12 flex flex-col justify-center">
-                    <div className="text-sm text-primary font-semibold mb-4">
-                      0{currentServiceIndex + 1}/0{services.length}
+                  <div className="p-8 lg:p-12 flex flex-col justify-between min-h-[400px]">
+                    <div className="flex-1">
+                      <div className="text-sm text-primary font-semibold mb-4">
+                        0{currentServiceIndex + 1}/0{services.length}
+                      </div>
+                      <h3 className="service-card-title mb-6 h-[4rem] leading-tight flex items-center">
+                        {services[currentServiceIndex].title}
+                      </h3>
+                      <p className="service-card-description mb-6 h-[4.5rem] leading-relaxed flex items-start">
+                        {services[currentServiceIndex].description}
+                      </p>
+                      <div className="space-y-2 mb-8 h-[6rem] flex flex-col justify-start">
+                        {services[currentServiceIndex].features.map(
+                          (feature, index) => (
+                            <div
+                              key={index}
+                              className="flex items-center text-sm text-gray-500"
+                            >
+                              <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
+                              {feature}
+                            </div>
+                          ),
+                        )}
+                      </div>
                     </div>
-                    <h3 className="service-card-title mb-6">
-                      {services[currentServiceIndex].title}
-                    </h3>
-                    <p className="service-card-description mb-6">
-                      {services[currentServiceIndex].description}
-                    </p>
-                    <div className="space-y-2 mb-8">
-                      {services[currentServiceIndex].features.map(
-                        (feature, index) => (
-                          <div
-                            key={index}
-                            className="flex items-center text-sm text-gray-500"
-                          >
-                            <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
-                            {feature}
-                          </div>
-                        ),
-                      )}
+                    <div className="mt-auto">
+                      <Link href="/service">
+                        <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-semibold inline-flex items-center group">
+                          자세히 보기
+                          <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                        </Button>
+                      </Link>
                     </div>
-                    <Link href="/service">
-                      <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-semibold inline-flex items-center group">
-                        자세히 보기
-                        <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                      </Button>
-                    </Link>
                   </div>
                 </div>
               )}
