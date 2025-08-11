@@ -41,7 +41,7 @@ import hospitalImage from "@assets/Whisk_8652b62135_1754649198457.jpg";
 import uiDesignImage from "@assets/UI_1754650048438.png";
 import newsBackgroundImage from "@assets/representation-user-experience-interface-design_1754649277467.jpg";
 import serviceBackgroundImage from "@assets/futuristic-warehouse-with-blue-neon-lights-connected-data_1754566796044.jpg";
-import hoidImg from "@/assets/brand/hoidintro.jpg";
+import hoidImg from "@assets/brand1_1754880897294.jpg";
 import medifeedImg from "@assets/medifeed_1_1754636614100.jpg";
 import inyourheartImg from "@assets/in_your_1754636664888.jpg";
 import sangsaengImg from "@assets/sangsaeng_1_1754636754183.jpg";
