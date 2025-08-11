@@ -987,34 +987,34 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/15">
-              <div className="text-6xl font-bold mb-4 tabular-nums text-white drop-shadow-lg">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 text-center">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/15">
+              <div className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-2 lg:mb-4 tabular-nums text-white drop-shadow-lg">
                 {yearCount}
               </div>
-              <div className="text-xl text-blue-300 font-medium">{t("stats.since")}</div>
-              <div className="text-sm text-gray-300 mt-2">{t("stats.since.sub")}</div>
+              <div className="text-sm sm:text-lg lg:text-xl text-blue-300 font-medium">{t("stats.since")}</div>
+              <div className="text-xs sm:text-sm text-gray-300 mt-1 lg:mt-2">{t("stats.since.sub")}</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/15">
-              <div className="text-6xl font-bold mb-4 tabular-nums text-white drop-shadow-lg">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/15">
+              <div className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-2 lg:mb-4 tabular-nums text-white drop-shadow-lg">
                 {brandCount}+
               </div>
-              <div className="text-xl text-blue-300 font-medium">{t("stats.brands")}</div>
-              <div className="text-sm text-gray-300 mt-2">{t("stats.brands.sub")}</div>
+              <div className="text-sm sm:text-lg lg:text-xl text-blue-300 font-medium">{t("stats.brands")}</div>
+              <div className="text-xs sm:text-sm text-gray-300 mt-1 lg:mt-2">{t("stats.brands.sub")}</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/15">
-              <div className="text-6xl font-bold mb-4 tabular-nums text-white drop-shadow-lg">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/15">
+              <div className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-2 lg:mb-4 tabular-nums text-white drop-shadow-lg">
                 {partnerCount}+
               </div>
-              <div className="text-xl text-blue-300 font-medium">{t("stats.countries")}</div>
-              <div className="text-sm text-gray-300 mt-2">{t("stats.countries.sub")}</div>
+              <div className="text-sm sm:text-lg lg:text-xl text-blue-300 font-medium">{t("stats.countries")}</div>
+              <div className="text-xs sm:text-sm text-gray-300 mt-1 lg:mt-2">{t("stats.countries.sub")}</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/15">
-              <div className="text-6xl font-bold mb-4 tabular-nums text-white drop-shadow-lg">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/15">
+              <div className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-2 lg:mb-4 tabular-nums text-white drop-shadow-lg">
                 {hospitalCount}+
               </div>
-              <div className="text-xl text-blue-300 font-medium">{t("stats.hospitals")}</div>
-              <div className="text-sm text-gray-300 mt-2">{t("stats.hospitals.sub")}</div>
+              <div className="text-sm sm:text-lg lg:text-xl text-blue-300 font-medium">{t("stats.hospitals")}</div>
+              <div className="text-xs sm:text-sm text-gray-300 mt-1 lg:mt-2">{t("stats.hospitals.sub")}</div>
             </div>
           </div>
         </div>
