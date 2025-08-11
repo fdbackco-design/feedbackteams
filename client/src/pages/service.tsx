@@ -173,7 +173,7 @@ export default function Service() {
           {/* Carousel Track */}
           <div 
             ref={carouselRef}
-            className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth px-4 cursor-grab select-none"
+            className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth px-4 cursor-grab select-none w-full"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             onMouseDown={handleMouseDown}
             onMouseLeave={handleMouseLeave}
