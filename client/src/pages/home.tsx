@@ -131,39 +131,6 @@ const brands = [
   },
 ];
 
-const newsItems = [
-  {
-    title: "삼성호이드, 중국 공기청정기 제조 공장과 MOU 체결로 글로벌 영역권 확대",
-    description: "혁신적인 3-in-1 기술로 글로벌 시장 진출을 가속화합니다.",
-    date: "2025.06.10",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=250&fit=crop"
-  },
-  {
-    title: "삼성호이드, 중국 공기청정기 제조 공장과 MOU 체결로 글로벌 영역권 확대", 
-    description: "첨단 제조 기술과 디자인 혁신으로 새로운 시장을 개척합니다.",
-    date: "2025.05.10",
-    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=250&fit=crop"
-  },
-  {
-    title: "삼성호이드, 중국 공기청정기 제조 공장과 MOU 체결로 글로벌 영역권 확대",
-    description: "지속가능한 기술과 친환경 솔루션으로 미래를 선도합니다.",
-    date: "2025.05.10", 
-    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=250&fit=crop"
-  },
-  {
-    title: "FeedBack 의료관광 플랫폼 베타 출시",
-    description: "글로벌 의료관광 시장을 위한 혁신적인 플랫폼이 베타 서비스를 시작합니다.",
-    date: "2025.04.15",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=250&fit=crop"
-  },
-  {
-    title: "InYourHeart K-뷰티 브랜드 글로벌 진출",
-    description: "감성적인 스킨케어 브랜드가 해외 시장에서 큰 성공을 거두고 있습니다.",
-    date: "2025.03.20",
-    image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=250&fit=crop"
-  }
-];
-
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
@@ -179,12 +146,6 @@ export default function Home() {
   const [imageLoaded, setImageLoaded] = useState(true);
   const [nextBrandIndex, setNextBrandIndex] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
-  
-  // News carousel states
-  const [currentNewsIndex, setCurrentNewsIndex] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [currentX, setCurrentX] = useState(0);
 
   const sections = [
     { id: "hero", name: "홈" },
@@ -249,37 +210,6 @@ export default function Home() {
     duration: 2500,
     trigger: statsInView,
   });
-
-  // News drag handlers
-  const handleNewsMouseDown = (e: React.MouseEvent) => {
-    setIsDragging(true);
-    setStartX(e.clientX);
-    setCurrentX(e.clientX);
-  };
-
-  const handleNewsMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    setCurrentX(e.clientX);
-  };
-
-  const handleNewsMouseUp = () => {
-    if (!isDragging) return;
-    setIsDragging(false);
-
-    const diff = startX - currentX;
-    const threshold = 100; // minimum drag distance
-
-    if (Math.abs(diff) > threshold) {
-      if (diff > 0 && currentNewsIndex < newsItems.length - 3) {
-        // Dragged left, show next
-        setCurrentNewsIndex(currentNewsIndex + 1);
-      } else if (diff < 0 && currentNewsIndex > 0) {
-        // Dragged right, show previous
-        setCurrentNewsIndex(currentNewsIndex - 1);
-      }
-    }
-  };
 
   useEffect(() => {
     let wheelTimeout: NodeJS.Timeout;
@@ -812,74 +742,128 @@ export default function Home() {
       {/* News Section */}
       <section
         id="news"
-        className="h-screen flex flex-col items-center justify-center bg-white relative overflow-hidden"
+        className="h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white"
         style={{ scrollSnapAlign: "start" }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-bold text-black mb-4 flex items-center justify-center gap-4">
-              NEWS
-              <div className="w-6 h-6 border-2 border-black rotate-45"></div>
-            </h2>
-          </div>
-
-          {/* Draggable News Cards Container */}
-          <div className="relative overflow-hidden">
-            <div 
-              className="flex gap-8 transition-transform duration-500 ease-out cursor-grab active:cursor-grabbing select-none"
-              style={{ 
-                transform: `translateX(-${currentNewsIndex * (100 / 3)}%)`,
-                width: `${newsItems.length * (100 / 3)}%`
-              }}
-              onMouseDown={handleNewsMouseDown}
-              onMouseMove={handleNewsMouseMove}
-              onMouseUp={handleNewsMouseUp}
-              onMouseLeave={handleNewsMouseUp}
-            >
-              {newsItems.map((news, index) => (
-                <div 
-                  key={index}
-                  className="flex-shrink-0 w-full"
-                  style={{ width: `${100 / newsItems.length}%` }}
-                >
-                  <div className="bg-white rounded-lg shadow-lg overflow-hidden h-96 group hover:shadow-xl transition-shadow duration-300">
-                    <div className="h-60 overflow-hidden">
-                      <img 
-                        src={news.image} 
-                        alt={news.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                    </div>
-                    <div className="p-6">
-                      <h3 className="font-bold text-lg text-black mb-2 line-clamp-2">
-                        {news.title}
-                      </h3>
-                      <p className="text-gray-600 text-sm mb-3 line-clamp-2">
-                        {news.description}
-                      </p>
-                      <div className="text-gray-400 text-xs">
-                        {news.date}
-                      </div>
-                    </div>
-                  </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Content Section */}
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <div className="text-sm text-primary font-semibold tracking-wide uppercase mb-2">
+                  LATEST NEWS
                 </div>
-              ))}
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  성장하는 FeedBack의
+                  <br />
+                  <span className="text-primary">주요 소식과 성과</span>
+                </h2>
+                <p className="text-xl text-gray-600 leading-relaxed">
+                  글로벌 비즈니스 파트너로서 FeedBack의 다양한 성과와 브랜드
+                  확장, 투자 유치 등의 최신 소식을 확인해보세요.
+                </p>
+              </div>
+
+              <div className="grid sm:grid-cols-2 gap-6">
+                <div className="bg-white p-6 rounded-xl shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <Globe className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="font-bold text-lg mb-2 text-gray-900">Hoid 일본 진출</h3>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    디자인 가전 브랜드 Hoid가 일본 시장에 정식 진출하여 도쿄와
+                    오사카 주요 매장에서 만나보실 수 있습니다.
+                  </p>
+                </div>
+
+                <div className="bg-white p-6 rounded-xl shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                    <TrendingUp className="w-6 h-6 text-green-600" />
+                  </div>
+                  <h3 className="font-bold text-lg mb-2 text-gray-900">시리즈 A 투자 유치</h3>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    성공적인 투자 유치로 동남아시아 시장 확장과 서비스 고도화를
+                    가속화할 예정입니다.
+                  </p>
+                </div>
+
+                <div className="bg-white p-6 rounded-xl shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
+                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                    <Smartphone className="w-6 h-6 text-purple-600" />
+                  </div>
+                  <h3 className="font-bold text-lg mb-2 text-gray-900">다국어 앱 출시</h3>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    의료관광 고객을 위한 전용 모바일 앱의 베타 버전이 출시되어
+                    4개 국어를 지원합니다.
+                  </p>
+                </div>
+
+                <div className="bg-white p-6 rounded-xl shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
+                  <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                    <Award className="w-6 h-6 text-red-600" />
+                  </div>
+                  <h3 className="font-bold text-lg mb-2 text-gray-900">중국 공장 MOU</h3>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    중국 최대 규모 공기청정기 제조 공장과 MOU 체결로 3-in-1
+                    기술을 국내 독점 도입했습니다.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-white"
+                >
+                  <Link href="/news">모든 뉴스 보기</Link>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link href="/contact">보도자료 문의</Link>
+                </Button>
+              </div>
             </div>
 
-            {/* Navigation Dots */}
-            <div className="flex justify-center gap-3 mt-8">
-              {Array.from({ length: Math.max(1, newsItems.length - 2) }).map((_, index) => (
-                <button
-                  key={index}
-                  className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                    currentNewsIndex === index 
-                      ? 'bg-black' 
-                      : 'bg-gray-300 hover:bg-gray-400'
-                  }`}
-                  onClick={() => setCurrentNewsIndex(index)}
-                />
-              ))}
+            {/* Visual Section */}
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-3xl transform rotate-3 opacity-10"></div>
+              <div className="relative bg-white rounded-3xl shadow-2xl p-8 transform -rotate-1">
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-primary mb-2">
+                      2025.08
+                    </div>
+                    <div className="text-sm text-gray-600">최신 보도</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-primary mb-2">
+                      6+
+                    </div>
+                    <div className="text-sm text-gray-600">주요 뉴스</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-primary mb-2">
+                      3
+                    </div>
+                    <div className="text-sm text-gray-600">브랜드 런칭</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-primary mb-2">
+                      2
+                    </div>
+                    <div className="text-sm text-gray-600">글로벌 진출</div>
+                  </div>
+                </div>
+
+                <div className="mt-6 pt-6 border-t border-gray-200">
+                  <blockquote className="text-center italic text-gray-700">
+                    "혁신과 성장으로 미래를 만들어 갑니다"
+                  </blockquote>
+                  <div className="text-center text-sm text-gray-500 mt-2">
+                    - FeedBack 보도자료
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
