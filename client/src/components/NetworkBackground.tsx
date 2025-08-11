@@ -62,7 +62,7 @@ const NetworkBackground: React.FC<NetworkBackgroundProps> = ({ className = "" })
         baseY,
         vx: (Math.random() - 0.5) * 0.2,
         vy: (Math.random() - 0.5) * 0.2,
-        size: Math.random() * 2 + 1,
+        size: Math.random() * 1 + 0.5,
       };
     });
 
@@ -142,33 +142,33 @@ const NetworkBackground: React.FC<NetworkBackgroundProps> = ({ className = "" })
         const time = Date.now() * 0.001;
         const pulse = Math.sin(time + index * 0.15) * 0.2 + 0.8;
         
-        // Large outer glow for better visibility
+        // Large outer glow - reduced size
         ctx.shadowColor = "rgba(34, 211, 238, 1)";
-        ctx.shadowBlur = 15;
+        ctx.shadowBlur = 8;
         ctx.fillStyle = `rgba(34, 211, 238, ${0.3})`;
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, node.size * 3, 0, Math.PI * 2);
-        ctx.fill();
-        
-        // Medium glow ring
-        ctx.shadowBlur = 10;
-        ctx.fillStyle = `rgba(59, 130, 246, ${0.6})`;
         ctx.beginPath();
         ctx.arc(node.x, node.y, node.size * 2, 0, Math.PI * 2);
         ctx.fill();
         
-        // Main bright node
-        ctx.shadowBlur = 5;
-        ctx.fillStyle = `rgba(34, 211, 238, ${0.9 * pulse})`;
+        // Medium glow ring - reduced size
+        ctx.shadowBlur = 6;
+        ctx.fillStyle = `rgba(59, 130, 246, ${0.6})`;
         ctx.beginPath();
         ctx.arc(node.x, node.y, node.size * 1.5, 0, Math.PI * 2);
         ctx.fill();
+        
+        // Main bright node - reduced size
+        ctx.shadowBlur = 4;
+        ctx.fillStyle = `rgba(34, 211, 238, ${0.9 * pulse})`;
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, node.size * 1.2, 0, Math.PI * 2);
+        ctx.fill();
 
-        // Bright white core
+        // Bright white core - reduced size
         ctx.shadowBlur = 2;
         ctx.fillStyle = `rgba(255, 255, 255, ${pulse})`;
         ctx.beginPath();
-        ctx.arc(node.x, node.y, node.size * 0.8, 0, Math.PI * 2);
+        ctx.arc(node.x, node.y, node.size * 0.6, 0, Math.PI * 2);
         ctx.fill();
         
         // Reset shadow
