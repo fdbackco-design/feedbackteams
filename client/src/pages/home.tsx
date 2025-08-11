@@ -698,19 +698,19 @@ export default function Home() {
               )}
             </div>
 
-            {/* Dot Indicators */}
-            <div className="flex justify-center mt-8 space-x-2">
-              {services.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentServiceIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentServiceIndex
-                      ? "bg-primary"
-                      : "bg-gray-300 hover:bg-gray-400"
-                  }`}
-                />
-              ))}
+            {/* Progress Bar Pager - Matches Navigation Width */}
+            <div className="mt-8">
+              <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                <div className="h-0.5 bg-gray-300 rounded-full relative overflow-hidden">
+                  <div 
+                    className="h-full bg-black rounded-full transition-all duration-300 ease-out"
+                    style={{ 
+                      width: `${((currentServiceIndex + 1) / services.length) * 100}%`,
+                      transform: `translateX(0%)` 
+                    }}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
