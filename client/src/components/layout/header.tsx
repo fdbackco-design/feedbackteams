@@ -41,7 +41,15 @@ export default function Header(_props: HeaderProps) {
   useEffect(() => {
     if (!isHomePage) return;
 
-    const sectionIds = ["hero", "services", "brands", "news", "stats", "cta"];
+    const sectionIds = [
+      "hero",
+      "services",
+      "b2b2c",
+      "brands",
+      "news",
+      "stats",
+      "cta",
+    ];
     const elements = sectionIds
       .map((id) => document.getElementById(id))
       .filter((el): el is HTMLElement => !!el);
@@ -53,25 +61,22 @@ export default function Header(_props: HeaderProps) {
 
     const io = new IntersectionObserver(
       (entries) => {
-        // 가장 많이 보이는 섹션을 active로
         let maxRatio = -1;
-        let winner = mostVisibleId;
+        let winner = "hero";
         for (const entry of entries) {
-          const id = entry.target.id;
+          const id = (entry.target as HTMLElement).id;
           if (entry.intersectionRatio > maxRatio) {
             maxRatio = entry.intersectionRatio;
             winner = id;
           }
         }
-        if (winner !== mostVisibleId) {
-          mostVisibleId = winner;
-          setActiveSectionId(winner);
-        }
+        setActiveSectionId((prev) => (prev === winner ? prev : winner));
       },
       {
-        // root를 컨테이너로 지정 (없으면 뷰포트)
-        root: (rootEl as Element) || null,
+        root: null, // ✅ 뷰포트 기준(= window 스크롤 따라감)
         threshold: [0, 0.25, 0.5, 0.75, 1],
+        // 선택: 중앙 근처에서 전환되게 하고 싶으면 ↓ 같이 사용
+        // rootMargin: "-40% 0px -40% 0px",
       },
     );
 
@@ -82,7 +87,9 @@ export default function Header(_props: HeaderProps) {
   // 🔑 요구사항: services, news일 때만 검정 글씨
   const isBlackSection =
     isHomePage &&
-    (activeSectionId === "services" || activeSectionId === "news");
+    (activeSectionId === "services" ||
+      activeSectionId === "b2b2c" ||
+      activeSectionId === "news");
 
   // 서브페이지일 땐 흰 배경 고정
   const headerBgClass = isHomePage
