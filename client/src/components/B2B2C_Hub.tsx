@@ -40,26 +40,26 @@ const B2B2C_Hub = () => {
               viewport={{ once: true }}
             >
               <div className="bg-white rounded-2xl shadow-xl p-8 relative">
-                <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <Factory className="w-8 h-8 text-blue-600" />
+                <div className="w-16 h-16 bg-[#0F4C82]/10 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <Factory className="w-8 h-8 text-[#0F4C82]" />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">B2B 제조사</h3>
+                  <h3 className="text-xl font-bold text-black mb-4">B2B 제조사</h3>
                   <p className="text-gray-600 text-sm mb-6">
                     품질 높은 제품을 생산하는 제조사와 전략적 파트너십을 구축합니다
                   </p>
                   
                   <div className="space-y-2 text-left">
                     <div className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-[#0F4C82] mr-2 flex-shrink-0" />
                       <span>전문 제조 파트너</span>
                     </div>
                     <div className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-[#0F4C82] mr-2 flex-shrink-0" />
                       <span>품질 관리 시스템</span>
                     </div>
                     <div className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-[#0F4C82] mr-2 flex-shrink-0" />
                       <span>OEM/ODM 생산</span>
                     </div>
                   </div>
@@ -76,8 +76,8 @@ const B2B2C_Hub = () => {
               viewport={{ once: true }}
             >
               <div className="flex flex-col items-center">
-                <ArrowLeft className="w-8 h-8 text-blue-500" />
-                <span className="text-xs text-gray-500 mt-2">유통 연결</span>
+                <ArrowLeft className="w-8 h-8 text-[#0F4C82]" />
+                <span className="text-xs text-white mt-2">유통 연결</span>
               </div>
             </motion.div>
 
@@ -89,27 +89,27 @@ const B2B2C_Hub = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl shadow-xl p-8 text-white relative">
+              <div className="bg-[#0F4C82] rounded-2xl shadow-xl p-8 text-white relative">
                 <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <Truck className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-center">
                   <h3 className="text-xl font-bold mb-4">FeedBack 유통 허브</h3>
-                  <p className="text-blue-100 text-sm mb-6">
+                  <p className="text-white/80 text-sm mb-6">
                     전국·글로벌 유통망을 통해 제품을 소비자에게 전달합니다
                   </p>
                   
                   <div className="space-y-2 text-left">
-                    <div className="flex items-center text-sm text-blue-100">
-                      <CheckCircle className="w-4 h-4 text-green-300 mr-2 flex-shrink-0" />
+                    <div className="flex items-center text-sm text-white/90">
+                      <CheckCircle className="w-4 h-4 text-white mr-2 flex-shrink-0" />
                       <span>전국 유통망</span>
                     </div>
-                    <div className="flex items-center text-sm text-blue-100">
-                      <CheckCircle className="w-4 h-4 text-green-300 mr-2 flex-shrink-0" />
+                    <div className="flex items-center text-sm text-white/90">
+                      <CheckCircle className="w-4 h-4 text-white mr-2 flex-shrink-0" />
                       <span>물류 최적화</span>
                     </div>
-                    <div className="flex items-center text-sm text-blue-100">
-                      <CheckCircle className="w-4 h-4 text-green-300 mr-2 flex-shrink-0" />
+                    <div className="flex items-center text-sm text-white/90">
+                      <CheckCircle className="w-4 h-4 text-white mr-2 flex-shrink-0" />
                       <span>브랜드 마케팅</span>
                     </div>
                   </div>
@@ -160,8 +160,8 @@ const B2B2C_Hub = () => {
               viewport={{ once: true }}
             >
               <div className="flex flex-col items-center">
-                <ArrowRight className="w-8 h-8 text-purple-500" />
-                <span className="text-xs text-gray-500 mt-2">소비자 전달</span>
+                <ArrowRight className="w-8 h-8 text-[#0F4C82]" />
+                <span className="text-xs text-white mt-2">소비자 전달</span>
               </div>
             </motion.div>
 
@@ -174,26 +174,26 @@ const B2B2C_Hub = () => {
               viewport={{ once: true }}
             >
               <div className="bg-white rounded-2xl shadow-xl p-8 relative">
-                <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <ShoppingBag className="w-8 h-8 text-purple-600" />
+                <div className="w-16 h-16 bg-[#0F4C82]/10 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <ShoppingBag className="w-8 h-8 text-[#0F4C82]" />
                 </div>
                 <div className="text-center">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">B2C 소비자</h3>
+                  <h3 className="text-xl font-bold text-black mb-4">B2C 소비자</h3>
                   <p className="text-gray-600 text-sm mb-6">
                     다양한 채널을 통해 소비자에게 최고의 제품과 서비스를 제공합니다
                   </p>
                   
                   <div className="space-y-2 text-left">
                     <div className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-[#0F4C82] mr-2 flex-shrink-0" />
                       <span>온라인·오프라인</span>
                     </div>
                     <div className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-[#0F4C82] mr-2 flex-shrink-0" />
                       <span>홈쇼핑 연계</span>
                     </div>
                     <div className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-[#0F4C82] mr-2 flex-shrink-0" />
                       <span>글로벌 진출</span>
                     </div>
                   </div>
@@ -213,27 +213,27 @@ const B2B2C_Hub = () => {
             >
               <div className="bg-white rounded-2xl shadow-lg p-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
-                    <Factory className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-[#0F4C82]/10 rounded-xl flex items-center justify-center mr-4">
+                    <Factory className="w-6 h-6 text-[#0F4C82]" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900">B2B 제조사</h3>
+                    <h3 className="text-lg font-bold text-black">B2B 제조사</h3>
                   </div>
                 </div>
                 <p className="text-gray-600 text-sm mb-4">
                   품질 높은 제품을 생산하는 제조사와 전략적 파트너십을 구축합니다
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">전문 제조</span>
-                  <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">품질 관리</span>
-                  <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">OEM/ODM</span>
+                  <span className="px-2 py-1 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-xs">전문 제조</span>
+                  <span className="px-2 py-1 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-xs">품질 관리</span>
+                  <span className="px-2 py-1 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-xs">OEM/ODM</span>
                 </div>
               </div>
             </motion.div>
 
             {/* Arrow Down */}
             <div className="flex justify-center">
-              <ArrowDown className="w-8 h-8 text-blue-500" />
+              <ArrowDown className="w-8 h-8 text-[#0F4C82]" />
             </div>
 
             {/* Step 2: FeedBack Hub */}
@@ -243,7 +243,7 @@ const B2B2C_Hub = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl shadow-lg p-6 text-white">
+              <div className="bg-[#0F4C82] rounded-2xl shadow-lg p-6 text-white">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mr-4">
                     <Truck className="w-6 h-6 text-white" />
@@ -252,7 +252,7 @@ const B2B2C_Hub = () => {
                     <h3 className="text-lg font-bold">FeedBack 유통 허브</h3>
                   </div>
                 </div>
-                <p className="text-blue-100 text-sm mb-4">
+                <p className="text-white/80 text-sm mb-4">
                   전국·글로벌 유통망을 통해 제품을 소비자에게 전달합니다
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -265,7 +265,7 @@ const B2B2C_Hub = () => {
 
             {/* Arrow Down */}
             <div className="flex justify-center">
-              <ArrowDown className="w-8 h-8 text-purple-500" />
+              <ArrowDown className="w-8 h-8 text-[#0F4C82]" />
             </div>
 
             {/* Step 3: B2C */}
@@ -277,20 +277,20 @@ const B2B2C_Hub = () => {
             >
               <div className="bg-white rounded-2xl shadow-lg p-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mr-4">
-                    <ShoppingBag className="w-6 h-6 text-purple-600" />
+                  <div className="w-12 h-12 bg-[#0F4C82]/10 rounded-xl flex items-center justify-center mr-4">
+                    <ShoppingBag className="w-6 h-6 text-[#0F4C82]" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900">B2C 소비자</h3>
+                    <h3 className="text-lg font-bold text-black">B2C 소비자</h3>
                   </div>
                 </div>
                 <p className="text-gray-600 text-sm mb-4">
                   다양한 채널을 통해 소비자에게 최고의 제품과 서비스를 제공합니다
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded-full text-xs">온라인·오프라인</span>
-                  <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded-full text-xs">홈쇼핑 연계</span>
-                  <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded-full text-xs">글로벌 진출</span>
+                  <span className="px-2 py-1 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-xs">온라인·오프라인</span>
+                  <span className="px-2 py-1 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-xs">홈쇼핑 연계</span>
+                  <span className="px-2 py-1 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-xs">글로벌 진출</span>
                 </div>
               </div>
             </motion.div>
