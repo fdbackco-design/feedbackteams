@@ -181,23 +181,23 @@ export default function Service() {
             onMouseMove={handleMouseMove}
           >
             {services.map((service, index) => (
-              <Card key={index} className="flex-shrink-0 w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] max-w-[800px] shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-[1.02] bg-white rounded-2xl">
+              <Card key={index} className="flex-shrink-0 w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] max-w-[800px] shadow-lg overflow-hidden bg-white rounded-2xl">
                 {/* Image Section with overlay content */}
-                <div className="relative h-[240px] lg:h-[280px] overflow-hidden rounded-t-2xl">
+                <div className="relative h-[240px] lg:h-[280px] overflow-hidden rounded-2xl">
                   {service.imageUrl ? (
                     <img 
                       src={service.imageUrl} 
                       alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover rounded-2xl"
                     />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300">
+                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl">
                       <service.icon className="w-20 h-20 text-gray-400" />
                     </div>
                   )}
                   
                   {/* Bottom overlay for better text readability */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl"></div>
                   
                   {/* Content positioned at bottom of image */}
                   <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -206,7 +206,7 @@ export default function Service() {
                       <span className="text-4xl lg:text-5xl font-bold text-blue-400">
                         {String(index + 1).padStart(2, '0')}
                       </span>
-                      <Button size="sm" className="bg-white/20 backdrop-blur-sm text-white border-white/30 hover:bg-white/30 rounded-full px-4 py-2 text-xs">
+                      <Button size="sm" className="bg-white/20 backdrop-blur-sm text-white border-white/30 rounded-full px-4 py-2 text-xs">
                         프로젝트 문의
                       </Button>
                     </div>
