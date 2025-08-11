@@ -754,16 +754,16 @@ export default function Home() {
           </div>
 
           {/* News Cards - Horizontal Scrollable */}
-          <div className="relative">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
-              <div 
-                className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto pb-6 scrollbar-hide"
-                style={{ 
-                  scrollSnapType: 'x mandatory',
-                  scrollbarWidth: 'none',
-                  msOverflowStyle: 'none'
-                }}
-              >
+          <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+            <div 
+              className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto pb-6 scrollbar-hide cursor-grab active:cursor-grabbing"
+              style={{ 
+                scrollSnapType: 'x mandatory',
+                scrollbarWidth: 'none',
+                msOverflowStyle: 'none',
+                WebkitOverflowScrolling: 'touch'
+              }}
+            >
               {/* Card 1 */}
               <div className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] lg:w-[380px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300" style={{ scrollSnapAlign: 'start' }}>
                 <div className="aspect-[4/3] bg-gray-200 relative">
@@ -771,6 +771,7 @@ export default function Home() {
                     src={newsBackgroundImage}
                     alt="영업팀장 상생, 중국 공기청정기 제조 공장 글로벌 영업팀장"
                     className="w-full h-full object-cover"
+                    draggable={false}
                   />
                 </div>
                 <div className="p-4 sm:p-5 md:p-6">
@@ -788,6 +789,7 @@ export default function Home() {
                     src={serviceBackgroundImage}
                     alt="상생, 중국, 중국 공기청정기 제조 공장 글로벌 영업팀장"
                     className="w-full h-full object-cover"
+                    draggable={false}
                   />
                 </div>
                 <div className="p-4 sm:p-5 md:p-6">
@@ -805,6 +807,7 @@ export default function Home() {
                     src={hoidImg}
                     alt="상생, 중국, 중국 공기청정기 제조 공장 글로벌"
                     className="w-full h-full object-cover"
+                    draggable={false}
                   />
                 </div>
                 <div className="p-4 sm:p-5 md:p-6">
@@ -822,6 +825,7 @@ export default function Home() {
                     src={medifeedImg}
                     alt="상생, 중국, 중국 공기청정기 제조 공장 글로벌"
                     className="w-full h-full object-cover"
+                    draggable={false}
                   />
                 </div>
                 <div className="p-4 sm:p-5 md:p-6">
@@ -831,11 +835,18 @@ export default function Home() {
                   <div className="text-xs sm:text-sm text-gray-400">2023.05.10</div>
                 </div>
               </div>
-              </div>
-
-              {/* Horizontal Line Separator */}
-              <div className="w-full h-px bg-gray-300 mt-8"></div>
             </div>
+
+            {/* Pagination Dots */}
+            <div className="flex justify-center mt-6 space-x-2">
+              <div className="w-2 h-2 bg-gray-800 rounded-full"></div>
+              <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+              <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+              <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+            </div>
+
+            {/* Horizontal Line Separator */}
+            <div className="w-full h-px bg-gray-300 mt-8"></div>
           </div>
         </div>
       </section>
