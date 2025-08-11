@@ -896,10 +896,10 @@ export default function Home() {
           </div>
 
           {/* News Cards - Horizontal Scrollable */}
-          <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="relative max-w-7xl mx-auto pl-6 lg:pl-8">
             <div 
               ref={newsScrollRef}
-              className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto pb-6 scrollbar-hide cursor-grab"
+              className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto pb-6 scrollbar-hide cursor-grab pr-6 lg:pr-8"
               style={{ 
                 scrollSnapType: 'x mandatory',
                 scrollbarWidth: 'none',
@@ -940,7 +940,7 @@ export default function Home() {
 
             {/* Progress Bar Pager - Matches Navigation Width */}
             <div className="mt-8">
-              <div className="max-w-7xl mx-auto px-6 lg:px-8">
+              <div className="max-w-7xl mx-auto pl-6 lg:pl-8 pr-6 lg:pr-8">
                 <div className="h-0.5 bg-gray-300 rounded-full relative overflow-hidden">
                   <div 
                     className="h-full bg-black rounded-full transition-all duration-300 ease-out"
