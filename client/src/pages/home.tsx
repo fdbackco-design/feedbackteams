@@ -43,7 +43,7 @@ import newsBackgroundImage from "@assets/representation-user-experience-interfac
 import serviceBackgroundImage from "@assets/futuristic-warehouse-with-blue-neon-lights-connected-data_1754566796044.jpg";
 import hoidImg from "@assets/brand2_1754881083408.jpg";
 import medifeedImg from "@assets/medifeed_1_1754636614100.jpg";
-import inyourheartImg from "@assets/in_your_1754636664888.jpg";
+import inyourheartImg from "@assets/brand3_1754881349690.jpg";
 import sangsaengImg from "@assets/sangsaeng_1_1754636754183.jpg";
 
 const services = [
