@@ -74,14 +74,14 @@ export default function Header() {
     }
     
     switch (currentSection) {
-      case 'service': // 2번째 섹션
-      case 'news':    // 4번째 섹션
-        return 'text-black';
-      case 'hero':    // 1번째 섹션
-      case 'brand':   // 3번째 섹션
-      case 'stats':   // 5번째 섹션
+      case 'service': // 2번째 섹션 - 서비스 (흰색 배경)
+      case 'news':    // 4번째 섹션 - 뉴스 (흰색 배경)
+        return 'text-gray-900 font-semibold'; // 더 진한 검은색과 굵은 글씨
+      case 'hero':    // 1번째 섹션 - 메인
+      case 'brand':   // 3번째 섹션 - 브랜드
+      case 'stats':   // 5번째 섹션 - 통계
       default:
-        return 'text-white';
+        return 'text-white font-semibold';
     }
   };
 
@@ -91,14 +91,14 @@ export default function Header() {
     }
     
     switch (currentSection) {
-      case 'service': // 2번째 섹션
-      case 'news':    // 4번째 섹션
-        return 'text-black/70 hover:text-black';
-      case 'hero':    // 1번째 섹션
-      case 'brand':   // 3번째 섹션
-      case 'stats':   // 5번째 섹션
+      case 'service': // 2번째 섹션 - 서비스 (흰색 배경)
+      case 'news':    // 4번째 섹션 - 뉴스 (흰색 배경)
+        return 'text-gray-600 hover:text-gray-900 font-medium';
+      case 'hero':    // 1번째 섹션 - 메인
+      case 'brand':   // 3번째 섹션 - 브랜드
+      case 'stats':   // 5번째 섹션 - 통계
       default:
-        return 'text-white/70 hover:text-white';
+        return 'text-white/70 hover:text-white font-medium';
     }
   };
 
