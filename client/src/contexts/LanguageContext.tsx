@@ -14,7 +14,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 const translations = {
   KR: {
     // Navigation
-    'nav.home': '홈',
+    'nav.home': '회사소개',
     'nav.services': '서비스',
     'nav.brands': '브랜드',
     'nav.news': '뉴스',
@@ -151,7 +151,7 @@ const translations = {
   },
   EN: {
     // Navigation
-    'nav.home': 'Home',
+    'nav.home': 'About',
     'nav.services': 'Services',
     'nav.brands': 'Brands',
     'nav.news': 'News',
