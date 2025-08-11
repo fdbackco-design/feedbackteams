@@ -186,7 +186,7 @@ export default function Contact() {
             {t("contact.title")}
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {t("문의를 남여주세요")
+            {t("문의를 남주세요")
               .split("\n")
               .map((line, index) => (
                 <span key={index}>
@@ -245,7 +245,7 @@ export default function Contact() {
             {/* Social Media */}
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">
-                {t("contact.social.title")}
+                {t("소셜미디어")}
               </h3>
               <div className="flex space-x-4">
                 <a
