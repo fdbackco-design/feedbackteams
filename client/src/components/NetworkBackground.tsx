@@ -20,8 +20,10 @@ const NetworkBackground: React.FC<NetworkBackgroundProps> = ({ className = "" })
   const nodesRef = useRef<Node[]>([]);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   const mouseRef = useRef({ x: 0, y: 0 });
+  const isUnmountedRef = useRef(false);
 
   useEffect(() => {
+    isUnmountedRef.current = false;
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -67,7 +69,7 @@ const NetworkBackground: React.FC<NetworkBackgroundProps> = ({ className = "" })
     });
 
     const animate = () => {
-      if (!canvas || !ctx) return;
+      if (!canvas || !ctx || isUnmountedRef.current) return;
 
       ctx.clearRect(0, 0, dimensions.width, dimensions.height);
 
@@ -173,7 +175,7 @@ const NetworkBackground: React.FC<NetworkBackgroundProps> = ({ className = "" })
       ctx.shadowBlur = 0;
       ctx.globalAlpha = 1;
 
-      if (typeof window !== 'undefined') {
+      if (typeof window !== 'undefined' && !isUnmountedRef.current) {
         animationRef.current = requestAnimationFrame(animate);
       }
     };
@@ -181,6 +183,7 @@ const NetworkBackground: React.FC<NetworkBackgroundProps> = ({ className = "" })
     animate();
 
     return () => {
+      isUnmountedRef.current = true;
       window.removeEventListener("resize", updateDimensions);
       if (canvas) {
         canvas.removeEventListener("mousemove", handleMouseMove);
