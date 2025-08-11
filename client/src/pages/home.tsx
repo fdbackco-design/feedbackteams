@@ -871,8 +871,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Horizontal Line Separator */}
-            <div className="w-full h-px bg-gray-300 mt-8"></div>
+            
           </div>
         </div>
       </section>
