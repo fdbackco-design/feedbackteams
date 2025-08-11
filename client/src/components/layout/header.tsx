@@ -157,3 +157,121 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
+            <div className="flex items-center space-x-8">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="transition-colors duration-200 font-medium"
+                  style={{ color: linkColor(item.href) }}
+                >
+                  {item.name}
+                </Link>
+              ))}
+
+              {/* Language Switcher */}
+              <div className="relative">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsLanguageMenuOpen(!isLanguageMenuOpen);
+                  }}
+                  className="flex items-center space-x-1 transition-colors duration-200 font-medium"
+                  style={{ color: languageButtonColor }}
+                >
+                  <span>{currentLanguage}</span>
+                  <ChevronDown className="h-4 w-4" />
+                </button>
+
+                {isLanguageMenuOpen && (
+                  <div className="absolute right-0 top-full mt-2 bg-white border border-gray-200 rounded-md shadow-lg z-50">
+                    <button
+                      onClick={() => {
+                        setCurrentLanguage('KR');
+                        setIsLanguageMenuOpen(false);
+                      }}
+                      className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
+                    >
+                      한국어 (KR)
+                    </button>
+                    <button
+                      onClick={() => {
+                        setCurrentLanguage('EN');
+                        setIsLanguageMenuOpen(false);
+                      }}
+                      className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
+                    >
+                      English (EN)
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2"
+              style={{ color: languageButtonColor }}
+            >
+              {isMobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </Button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-white border-t border-gray-200">
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="block px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+
+              {/* Mobile Language Switcher */}
+              <div className="px-3 py-2 border-t border-gray-200 mt-2">
+                <div className="text-sm font-medium text-gray-900 mb-2">Language</div>
+                <button
+                  onClick={() => {
+                    setCurrentLanguage('KR');
+                    setIsLanguageMenuOpen(false);
+                  }}
+                  className={`block w-full text-left px-2 py-1 text-sm rounded ${
+                    currentLanguage === 'KR' ? 'bg-gray-100 text-gray-900' : 'text-gray-700'
+                  }`}
+                >
+                  한국어 (KR)
+                </button>
+                <button
+                  onClick={() => {
+                    setCurrentLanguage('EN');
+                    setIsLanguageMenuOpen(false);
+                  }}
+                  className={`block w-full text-left px-2 py-1 text-sm rounded ${
+                    currentLanguage === 'EN' ? 'bg-gray-100 text-gray-900' : 'text-gray-700'
+                  }`}
+                >
+                  English (EN)
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+      </nav>
+    </header>
+  );
+}
