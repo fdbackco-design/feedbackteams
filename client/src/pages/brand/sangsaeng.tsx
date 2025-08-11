@@ -96,9 +96,9 @@ export default function Sangsaeng() {
                 <div className="w-20 h-20 bg-gradient-to-br from-[#0F4C82] to-[#1a5c94] rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                   <Heart className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-3xl font-bold text-[#000000] mb-4 text-center">상생 메디컬</h3>
-                <p className="text-gray-600 mb-6 text-center text-lg">Sangsaeng Medical</p>
-                <p className="text-xl text-gray-600 leading-relaxed mb-8 text-center">
+                <h3 className="text-2xl font-bold text-[#000000] mb-4 text-center">상생 메디컬</h3>
+                <p className="text-gray-600 mb-6 text-center text-base">Sangsaeng Medical</p>
+                <p className="text-lg text-gray-600 leading-relaxed mb-6 text-center">
                   실생활 기반 건강 솔루션과 의료 서비스를 제공하는 헬스케어 브랜드
                 </p>
                 <div className="bg-gray-50 rounded-xl p-6">
@@ -133,9 +133,9 @@ export default function Sangsaeng() {
                 <div className="w-20 h-20 bg-gradient-to-br from-[#0F4C82] to-[#1a5c94] rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                   <Smartphone className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-3xl font-bold text-[#000000] mb-4 text-center">상생 플랫폼</h3>
-                <p className="text-gray-600 mb-6 text-center text-lg">Sangsaeng Platform</p>
-                <p className="text-xl text-gray-600 leading-relaxed mb-8 text-center">
+                <h3 className="text-2xl font-bold text-[#000000] mb-4 text-center">상생 플랫폼</h3>
+                <p className="text-gray-600 mb-6 text-center text-base">Sangsaeng Platform</p>
+                <p className="text-lg text-gray-600 leading-relaxed mb-6 text-center">
                   의료부터 관광까지 손안의 다국어 의료 플랫폼 앱
                 </p>
                 <div className="bg-gray-50 rounded-xl p-6">
@@ -170,9 +170,9 @@ export default function Sangsaeng() {
                 <div className="w-20 h-20 bg-gradient-to-br from-[#0F4C82] to-[#1a5c94] rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                   <Globe className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-3xl font-bold text-[#000000] mb-4 text-center">상생 브랜딩</h3>
-                <p className="text-gray-600 mb-6 text-center text-lg">Sangsaeng Branding</p>
-                <p className="text-xl text-gray-600 leading-relaxed mb-8 text-center">
+                <h3 className="text-2xl font-bold text-[#000000] mb-4 text-center">상생 브랜딩</h3>
+                <p className="text-gray-600 mb-6 text-center text-base">Sangsaeng Branding</p>
+                <p className="text-lg text-gray-600 leading-relaxed mb-6 text-center">
                   콘텐츠, 메타광고, 글로벌 인플루언서 연계 브랜딩 조직
                 </p>
                 <div className="bg-gray-50 rounded-xl p-6">
@@ -209,11 +209,11 @@ export default function Sangsaeng() {
       <section className="py-32 bg-[#0F4C82] text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               세계와 연결되는
               <span className="block">한국 의료의 미래</span>
             </h2>
-            <p className="text-xl lg:text-2xl mb-12 opacity-90 leading-relaxed">
+            <p className="text-lg lg:text-xl mb-12 opacity-90 leading-relaxed">
               상생과 함께 안전하고 신뢰할 수 있는 의료 서비스를 경험해보세요
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

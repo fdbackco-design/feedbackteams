@@ -95,8 +95,8 @@ export default function Medifeed() {
                 <div className="w-20 h-20 bg-gradient-to-br from-[#0F4C82] to-[#1a5c94] rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                   <Heart className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-3xl font-bold text-[#000000] mb-6 text-center">잇몸 건강 전문</h3>
-                <p className="text-xl text-gray-600 leading-relaxed mb-8 text-center">
+                <h3 className="text-2xl font-bold text-[#000000] mb-4 text-center">잇몸 건강 전문</h3>
+                <p className="text-lg text-gray-600 leading-relaxed mb-6 text-center">
                   치주질환 예방과 잇몸 건강 유지를 위한 전문 영양제
                 </p>
                 <div className="bg-gray-50 rounded-xl p-6">
@@ -131,8 +131,8 @@ export default function Medifeed() {
                 <div className="w-20 h-20 bg-gradient-to-br from-[#0F4C82] to-[#1a5c94] rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                   <Star className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-3xl font-bold text-[#000000] mb-6 text-center">눈 건강 전문</h3>
-                <p className="text-xl text-gray-600 leading-relaxed mb-8 text-center">
+                <h3 className="text-2xl font-bold text-[#000000] mb-4 text-center">눈 건강 전문</h3>
+                <p className="text-lg text-gray-600 leading-relaxed mb-6 text-center">
                   디지털 시대 눈의 피로와 시력 보호를 위한 기능성 영양제
                 </p>
                 <div className="bg-gray-50 rounded-xl p-6">
@@ -223,11 +223,11 @@ export default function Medifeed() {
       <section className="py-32 bg-[#0F4C82] text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               건강한 하루, 
               <span className="block">작은 습관에서 시작</span>
             </h2>
-            <p className="text-xl lg:text-2xl mb-12 opacity-90 leading-relaxed">
+            <p className="text-lg lg:text-xl mb-12 opacity-90 leading-relaxed">
               MEDIFEED와 함께 일상 속 작은 변화로 더 나은 건강을 만들어보세요
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

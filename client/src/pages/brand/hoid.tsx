@@ -184,10 +184,10 @@ export default function Hoid() {
                   <Calendar className="w-4 h-4 mr-2" />
                   2025년 8월 16일
                 </div>
-                <h3 className="text-3xl font-bold text-[#000000] mb-6">
+                <h3 className="text-2xl font-bold text-[#000000] mb-4">
                   중국 초대형 공기청정기 제조사와 MOU 체결
                 </h3>
-                <p className="text-xl text-gray-600 leading-relaxed mb-8">
+                <p className="text-lg text-gray-600 leading-relaxed mb-6">
                   HOID는 중국 최대 공기청정기 제조업체와 글로벌 유통 및 기술 협력 MOU를 체결했습니다. 
                   이를 통해 아시아 전역으로 사업 영역을 확장하고, 더 많은 고객에게 깨끗한 공기를 제공할 예정입니다.
                 </p>
@@ -219,7 +219,7 @@ export default function Hoid() {
               <div className="inline-block px-4 py-2 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-sm font-semibold mb-6">
                 HOME SHOPPING LAUNCH
               </div>
-              <h2 className="text-5xl font-bold text-[#000000] mb-8 leading-tight">
+              <h2 className="text-4xl font-bold text-[#000000] mb-6 leading-tight">
                 TV 속으로 들어간 
                 <span className="block text-[#0F4C82]">프리미엄 디자인</span>
               </h2>
@@ -229,10 +229,10 @@ export default function Hoid() {
                   <Calendar className="w-4 h-4 mr-2" />
                   2025년 8월 런칭
                 </div>
-                <h3 className="text-3xl font-bold text-[#000000] mb-6">
+                <h3 className="text-2xl font-bold text-[#000000] mb-4">
                   프리미엄 디자인 가전, 이제 집에서 만나보세요
                 </h3>
-                <p className="text-xl text-gray-600 leading-relaxed mb-8">
+                <p className="text-lg text-gray-600 leading-relaxed mb-6">
                   프리미엄 디자인 가전 브랜드 호이드가 드디어 홈쇼핑을 통해 여러분을 찾아갑니다. 
                   세련된 디자인과 뛰어난 성능, 그리고 생활을 바꾸는 혁신적인 기술을 이제 TV 속에서 직접 확인하세요.
                 </p>
@@ -262,11 +262,11 @@ export default function Hoid() {
             <div className="inline-block px-4 py-2 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-sm font-semibold mb-6">
               DISTRIBUTION CHANNELS
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold text-[#000000] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-6">
               전국 어디서나 만날 수 있는
             </h2>
             <div className="w-32 h-1 bg-[#0F4C82] mx-auto mb-8"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               다양한 유통 채널을 통해 고객 여러분께 더 가깝게 다가갑니다
             </p>
           </div>
@@ -323,7 +323,7 @@ export default function Hoid() {
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               깨끗한 공기, 새로운 일상
             </h2>
-            <p className="text-xl lg:text-2xl mb-12 opacity-90 leading-relaxed">
+            <p className="text-lg lg:text-xl mb-12 opacity-90 leading-relaxed">
               HOID와 함께 건강하고 쾌적한 실내 환경을 만들어보세요
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
