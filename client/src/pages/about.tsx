@@ -23,7 +23,7 @@ import trustImage from "@assets/hands_1754568922347.png";
 import peopleImage from "@assets/people_1754639134434.jpg";
 import mapImage from "@assets/map_1754832577677.png";
 
-import _______ from "@assets/조직도.png";
+
 
 // SVG 컴포넌트들
 const HeroBackgroundSVG = () => (
@@ -846,7 +846,7 @@ export default function About() {
           <div className="flex justify-center">
             <div className="bg-white p-8 rounded-2xl shadow-xl max-w-full overflow-x-auto border border-border">
               <img
-                src={_______}
+                src={organizationChart}
                 alt="피드백 조직도"
                 className="max-w-full h-auto rounded-lg"
               />
