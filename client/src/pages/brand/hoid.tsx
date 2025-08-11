@@ -138,7 +138,6 @@ export default function Hoid() {
                       영역을 확장하고, 더 많은 고객에게 깨끗한 공기를 제공할
                       예정입니다.
                     </p>
-                    <Button>자세히 보기</Button>
                   </CardContent>
                 </div>
               </div>
@@ -174,7 +173,6 @@ export default function Hoid() {
                     세련된 디자인과 뛰어난 성능, 그리고 생활을 바꾸는 혁신적인 기술을 이제 TV 속에서 직접 확인하세요.
                     첫 방송 특별 혜택과 한정 구성으로 더욱 합리적인 기회를 놓치지 마세요.
                   </p>
-                  <Button>자세히 보기</Button>
                 </CardContent>
               </div>
             </div>
