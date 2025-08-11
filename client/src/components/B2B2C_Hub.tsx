@@ -3,11 +3,28 @@ import { Factory, ShoppingBag, CheckCircle, ArrowLeft, ArrowRight, ArrowDown, Us
 
 const B2B2C_Hub = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-100 via-white to-gray-50 min-h-screen flex items-center">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-20 min-h-screen flex items-center overflow-hidden">
+      {/* Video Background */}
+      <div className="absolute inset-0">
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/b2b_1754900204090.mp4" type="video/mp4" />
+        </video>
+      </div>
+      
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+      
+      {/* Content */}
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">제조사부터 소비자까지, 완전한 유통 생태계를 구축합니다.</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">제조사부터 소비자까지, 완전한 유통 생태계를 구축합니다.</h2>
         </div>
 
         {/* Flow Layout */}
@@ -289,10 +306,10 @@ const B2B2C_Hub = () => {
           viewport={{ once: true }}
         >
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl font-bold text-white mb-4">
               "완전한 유통 생태계, 피드백"
             </h3>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-gray-200 leading-relaxed">
               제조사의 우수한 제품이 소비자에게 성공적으로 전달될 수 있도록,<br />
               피드백은 전체 유통 과정을 설계하고 최적화합니다.
             </p>
