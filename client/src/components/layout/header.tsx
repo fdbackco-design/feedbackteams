@@ -196,7 +196,7 @@ export default function Header() {
                   style={{
                     color: isHomePage 
                       ? (currentSection === 'service' || currentSection === 'news' ? 
-                          (location === item.href ? '#000000' : '#4b5563') : 
+                          (location === item.href ? '#000000' : '#000000') : 
                           (location === item.href ? '#ffffff' : 'rgba(255,255,255,0.8)'))
                       : (location === item.href ? '#1f2937' : '#6b7280')
                   }}
