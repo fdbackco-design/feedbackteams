@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+// 네비게이션
 const navigationKR = [
   { name: "회사소개", href: "/about" },
   { name: "서비스", href: "/service" },
@@ -19,132 +20,96 @@ const navigationEN = [
   { name: "Contact", href: "/contact" },
 ];
 
-type SectionKey =
-  | "hero"
-  | "service"
-  | "brand"
-  | "news"
-  | "stats"
-  | "cta"
-  | "footer";
-
+// Home에서 prop을 주더라도 이제 색 결정에는 사용하지 않습니다(요구사항: 섹션 id 기준)
 type HeaderProps = {
-  /** Home에서 전달하는 0-based 슬라이드 인덱스. 2,4,5면 검정 */
   currentSlide?: number;
 };
 
-export default function Header({ currentSlide }: HeaderProps) {
+export default function Header(_props: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState<"KR" | "EN">("KR");
 
-  // 스크롤 기반 섹션(fallback용)
-  const [currentSection, setCurrentSection] = useState<SectionKey>("hero");
-  const [scrollY, setScrollY] = useState(0);
-
-  // 전역 Header 사용 시 Home에서 쏘는 커스텀 이벤트 수신용
-  const [forceBlack, setForceBlack] = useState<boolean | null>(null);
+  // 현재 뷰포트 중앙에 들어온 section id
+  const [activeSectionId, setActiveSectionId] = useState<string>("hero");
 
   const [location] = useLocation();
   const isHomePage = location === "/";
   const navigation = currentLanguage === "KR" ? navigationKR : navigationEN;
 
-  // Home에서 dispatch하는 header:color 이벤트 수신 (선택적)
+  // 뷰포트 중앙선 기준으로 가장 "가까운(or 포함하는)" 섹션 id 계산
   useEffect(() => {
-    const handler = (e: Event) => {
-      const { isBlack } = (e as CustomEvent).detail || {};
-      setForceBlack(typeof isBlack === "boolean" ? isBlack : null);
-    };
-    window.addEventListener("header:color", handler as EventListener, {
-      passive: true,
-    });
-    return () =>
-      window.removeEventListener("header:color", handler as EventListener);
-  }, []);
+    if (!isHomePage) return;
 
-  // 스크롤 위치 → 섹션 추정 (Home에서 prop이 안 올 때만 의미가 있음)
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!isHomePage) return;
-      const y = window.scrollY;
-      setScrollY(y);
+    const sectionIds = ["hero", "services", "brands", "news", "stats", "cta"];
+    const getActiveId = () => {
+      const centerY = window.innerHeight / 2;
+      let bestId = "hero";
+      let bestDist = Number.POSITIVE_INFINITY;
 
-      // 섹션 높이에 맞춰 범위를 조정하세요 (현재 800단위)
-      let s: SectionKey = "hero"; // 슬라이드 0
-      if (y < 800) s = "hero";
-      else if (y < 1600)
-        s = "service"; // 슬라이드 1
-      else if (y < 2400)
-        s = "brand"; // 슬라이드 2 (검정)
-      else if (y < 3200)
-        s = "news"; // 슬라이드 3
-      else if (y < 4000)
-        s = "stats"; // 슬라이드 4 (검정)
-      else if (y < 4800)
-        s = "cta"; // 슬라이드 5 (검정)
-      else s = "footer";
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        const rect = el.getBoundingClientRect();
+        const sectionCenter = rect.top + rect.height / 2;
+        const dist = Math.abs(sectionCenter - centerY);
 
-      if (s !== currentSection) setCurrentSection(s);
+        // 뷰포트 중앙선이 섹션 안에 있으면 바로 채택
+        const containsCenter = rect.top <= centerY && rect.bottom >= centerY;
+        if (containsCenter) {
+          bestId = id;
+          bestDist = 0;
+          break;
+        }
+        // 아니면 중앙선과의 거리 최소값 채택
+        if (dist < bestDist) {
+          bestDist = dist;
+          bestId = id;
+        }
+      }
+      return bestId;
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    setTimeout(handleScroll, 100);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [currentSection, isHomePage]);
-
-  // 드롭다운 외부 클릭 시 닫기
-  useEffect(() => {
-    const onDocClick = () => {
-      if (isLanguageMenuOpen) setIsLanguageMenuOpen(false);
+    const onScroll = () => setActiveSectionId(getActiveId());
+    // 초기 계산 + 스크롤/리사이즈 대응
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
     };
-    document.addEventListener("click", onDocClick);
-    return () => document.removeEventListener("click", onDocClick);
-  }, [isLanguageMenuOpen]);
+  }, [isHomePage]);
 
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
-
-  // ✅ 헤더 텍스트 색 결정 우선순위:
-  // 1) forceBlack (Home에서 이벤트로 강제)
-  // 2) currentSlide prop (2,4,5 → 검정)
-  // 3) 스크롤 기반 섹션 추정 (brand/stats/cta → 검정)
-  const computedBlackBySlide =
-    typeof currentSlide === "number" ? [2, 4, 5].includes(currentSlide) : null;
-
-  const computedBlackByScroll =
-    currentSection === "brand" ||
-    currentSection === "stats" ||
-    currentSection === "cta";
-
+  // 🔑 요구사항: services, news일 때만 검정 글씨
   const isBlackSection =
-    isHomePage && (forceBlack ?? computedBlackBySlide ?? computedBlackByScroll);
+    isHomePage &&
+    (activeSectionId === "services" || activeSectionId === "news");
 
-  // 헤더 배경 (서브는 고정 배경)
+  // 서브페이지일 땐 흰 배경 고정
   const headerBgClass = isHomePage
     ? ""
     : "bg-white/95 backdrop-blur-md shadow-lg";
 
-  // 공통 텍스트 컬러: currentColor로 통일
+  // 글씨색 (로고/아이콘/텍스트 모두 currentColor)
   const headerTextClass = isHomePage
     ? isBlackSection
       ? "text-black"
       : "text-white"
     : "text-gray-900";
 
-  // 서브페이지 링크 기본/활성
+  // 서브페이지 링크 색상
   const subLinkColor = (href: string) =>
     location === href ? "text-gray-900" : "text-gray-500";
 
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 ${headerBgClass}`}>
-      {/* 디버그 박스 (필요 없으면 제거) */}
+      {/* 디버그 박스(원하면 제거) */}
       {isHomePage && (
-        <div className="fixed top-20 left-4 z-50 bg-black/70 text-white px-3 py-1 rounded text-sm font-mono space-y-1">
-          <div>Section(fallback): {currentSection}</div>
-          <div>
-            SlideProp: {typeof currentSlide === "number" ? currentSlide : "NA"}
-          </div>
-          <div>ForceBlack: {String(forceBlack)}</div>
-          <div>ScrollY: {Math.round(scrollY)}</div>
+        <div className="fixed top-20 left-4 z-50 bg-black/70 text-white px-3 py-1 rounded text-sm font-mono">
+          <div>ActiveSection: {activeSectionId}</div>
         </div>
       )}
 

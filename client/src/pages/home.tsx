@@ -859,19 +859,19 @@ export default function Home() {
             </div>
 
             {/* Progress Bar Pager - Matches Navigation Width */}
-            <div className="flex justify-center mt-8">
-              <div className="w-80 h-0.5 bg-gray-300 rounded-full relative overflow-hidden">
-                <div 
-                  className="h-full bg-black rounded-full transition-all duration-300 ease-out"
-                  style={{ 
-                    width: `${newsScrollProgress}%`,
-                    transform: `translateX(0%)` 
-                  }}
-                />
+            <div className="mt-8">
+              <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                <div className="h-0.5 bg-gray-300 rounded-full relative overflow-hidden">
+                  <div 
+                    className="h-full bg-black rounded-full transition-all duration-300 ease-out"
+                    style={{ 
+                      width: `${newsScrollProgress}%`,
+                      transform: `translateX(0%)` 
+                    }}
+                  />
+                </div>
               </div>
             </div>
-
-            
           </div>
         </div>
       </section>
