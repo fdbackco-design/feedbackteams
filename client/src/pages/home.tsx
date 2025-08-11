@@ -652,7 +652,7 @@ export default function Home() {
                 playsInline
                 onClick={(e) => e.stopPropagation()}
               >
-                <source src="/attached_assets/main_banner_last_1754902140577.mp4" type="video/mp4" />
+                <source src="/main_banner_last_1754902140577.mp4" type="video/mp4" />
                 비디오를 재생할 수 없습니다. 브라우저가 이 비디오 형식을 지원하지 않습니다.
               </video>
               
@@ -937,8 +937,8 @@ export default function Home() {
           </div>
 
           {/* News Cards - Horizontal Scrollable */}
-          <div className="relative">
-            {/* Navigation Buttons - In Margin Area */}
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
+            {/* Navigation Buttons - Close to Card Area */}
             <button
               onClick={() => {
                 if (newsScrollRef.current) {
@@ -950,7 +950,7 @@ export default function Home() {
                   });
                 }
               }}
-              className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/95 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:scale-110 border border-gray-100"
+              className="absolute -left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/95 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:scale-110 border border-gray-100"
               aria-label="Previous news"
             >
               <svg className="w-6 h-6 text-gray-700 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -969,15 +969,13 @@ export default function Home() {
                   });
                 }
               }}
-              className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/95 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:scale-110 border border-gray-100"
+              className="absolute -right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/95 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:scale-110 border border-gray-100"
               aria-label="Next news"
             >
               <svg className="w-6 h-6 text-gray-700 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
               </svg>
             </button>
-
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
             <div 
               ref={newsScrollRef}
@@ -1033,7 +1031,6 @@ export default function Home() {
                   }}
                 />
               </div>
-            </div>
             </div>
           </div>
         </div>
