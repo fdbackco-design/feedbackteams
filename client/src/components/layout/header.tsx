@@ -42,43 +42,41 @@ export default function Header(_props: HeaderProps) {
     if (!isHomePage) return;
 
     const sectionIds = ["hero", "services", "brands", "news", "stats", "cta"];
-    const getActiveId = () => {
-      const centerY = window.innerHeight / 2;
-      let bestId = "hero";
-      let bestDist = Number.POSITIVE_INFINITY;
+    const elements = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => !!el);
 
-      for (const id of sectionIds) {
-        const el = document.getElementById(id);
-        if (!el) continue;
-        const rect = el.getBoundingClientRect();
-        const sectionCenter = rect.top + rect.height / 2;
-        const dist = Math.abs(sectionCenter - centerY);
+    // 스크롤 루트: fullpage-container가 있으면 그걸로, 없으면 뷰포트
+    const rootEl = document.querySelector(".fullpage-container");
 
-        // 뷰포트 중앙선이 섹션 안에 있으면 바로 채택
-        const containsCenter = rect.top <= centerY && rect.bottom >= centerY;
-        if (containsCenter) {
-          bestId = id;
-          bestDist = 0;
-          break;
+    let mostVisibleId = "hero";
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        // 가장 많이 보이는 섹션을 active로
+        let maxRatio = -1;
+        let winner = mostVisibleId;
+        for (const entry of entries) {
+          const id = entry.target.id;
+          if (entry.intersectionRatio > maxRatio) {
+            maxRatio = entry.intersectionRatio;
+            winner = id;
+          }
         }
-        // 아니면 중앙선과의 거리 최소값 채택
-        if (dist < bestDist) {
-          bestDist = dist;
-          bestId = id;
+        if (winner !== mostVisibleId) {
+          mostVisibleId = winner;
+          setActiveSectionId(winner);
         }
-      }
-      return bestId;
-    };
+      },
+      {
+        // root를 컨테이너로 지정 (없으면 뷰포트)
+        root: (rootEl as Element) || null,
+        threshold: [0, 0.25, 0.5, 0.75, 1],
+      },
+    );
 
-    const onScroll = () => setActiveSectionId(getActiveId());
-    // 초기 계산 + 스크롤/리사이즈 대응
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-    };
+    elements.forEach((el) => io.observe(el));
+    return () => io.disconnect();
   }, [isHomePage]);
 
   // 🔑 요구사항: services, news일 때만 검정 글씨

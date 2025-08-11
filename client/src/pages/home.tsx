@@ -226,26 +226,34 @@ export default function Home() {
 
     const handleMouseDown = (e: MouseEvent) => {
       isDown = true;
-      newsContainer.classList.add('active:cursor-grabbing');
-      startX = e.pageX - newsContainer.offsetLeft;
+      newsContainer.style.cursor = 'grabbing';
+      newsContainer.style.userSelect = 'none';
+      startX = e.pageX;
       scrollLeft = newsContainer.scrollLeft;
+      e.preventDefault();
     };
 
     const handleMouseLeave = () => {
-      isDown = false;
-      newsContainer.classList.remove('active:cursor-grabbing');
+      // Don't reset if still dragging - let global mouse up handle it
+      if (!isDown) {
+        newsContainer.style.cursor = 'grab';
+        newsContainer.style.userSelect = '';
+      }
     };
 
     const handleMouseUp = () => {
-      isDown = false;
-      newsContainer.classList.remove('active:cursor-grabbing');
+      if (isDown) {
+        isDown = false;
+        newsContainer.style.cursor = 'grab';
+        newsContainer.style.userSelect = '';
+      }
     };
 
     const handleMouseMove = (e: MouseEvent) => {
       if (!isDown) return;
       e.preventDefault();
-      const x = e.pageX - newsContainer.offsetLeft;
-      const walk = (x - startX) * 2; // Scroll speed multiplier
+      const x = e.pageX;
+      const walk = (x - startX) * 1.5; // Smooth scroll speed
       newsContainer.scrollLeft = scrollLeft - walk;
     };
 
@@ -256,10 +264,45 @@ export default function Home() {
       setNewsScrollProgress(progress);
     };
 
+    // Touch events for mobile
+    const handleTouchStart = (e: TouchEvent) => {
+      isDown = true;
+      newsContainer.style.cursor = 'grabbing';
+      newsContainer.style.userSelect = 'none';
+      startX = e.touches[0].pageX - newsContainer.offsetLeft;
+      scrollLeft = newsContainer.scrollLeft;
+    };
+
+    const handleTouchEnd = () => {
+      isDown = false;
+      newsContainer.style.cursor = 'grab';
+      newsContainer.style.userSelect = '';
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.touches[0].pageX - newsContainer.offsetLeft;
+      const walk = (x - startX) * 2.5;
+      newsContainer.scrollLeft = scrollLeft - walk;
+    };
+
+    // Mouse events
     newsContainer.addEventListener('mousedown', handleMouseDown);
     newsContainer.addEventListener('mouseleave', handleMouseLeave);
     newsContainer.addEventListener('mouseup', handleMouseUp);
     newsContainer.addEventListener('mousemove', handleMouseMove);
+    
+    // Global mouse events for better drag experience
+    document.addEventListener('mouseup', handleMouseUp);
+    document.addEventListener('mousemove', handleMouseMove);
+    
+    // Touch events
+    newsContainer.addEventListener('touchstart', handleTouchStart, { passive: false });
+    newsContainer.addEventListener('touchend', handleTouchEnd);
+    newsContainer.addEventListener('touchmove', handleTouchMove, { passive: false });
+    
+    // Scroll progress tracking
     newsContainer.addEventListener('scroll', handleScroll);
 
     // Initial progress calculation
@@ -270,6 +313,11 @@ export default function Home() {
       newsContainer.removeEventListener('mouseleave', handleMouseLeave);
       newsContainer.removeEventListener('mouseup', handleMouseUp);
       newsContainer.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
+      document.removeEventListener('mousemove', handleMouseMove);
+      newsContainer.removeEventListener('touchstart', handleTouchStart);
+      newsContainer.removeEventListener('touchend', handleTouchEnd);
+      newsContainer.removeEventListener('touchmove', handleTouchMove);
       newsContainer.removeEventListener('scroll', handleScroll);
     };
   }, []);
@@ -820,12 +868,13 @@ export default function Home() {
           <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
             <div 
               ref={newsScrollRef}
-              className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto pb-6 scrollbar-hide cursor-grab active:cursor-grabbing"
+              className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto pb-6 scrollbar-hide cursor-grab"
               style={{ 
                 scrollSnapType: 'x mandatory',
                 scrollbarWidth: 'none',
                 msOverflowStyle: 'none',
-                WebkitOverflowScrolling: 'touch'
+                WebkitOverflowScrolling: 'touch',
+                scrollBehavior: 'auto' // Disable smooth scroll for manual dragging
               }}
             >
               {newsData.slice(0, 6).map((news, index) => {
