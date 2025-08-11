@@ -331,7 +331,7 @@ const BrandMessageBannerSVG = () => (
     <div className="relative z-10 flex items-center justify-center h-96 px-8">
       <div className="text-center">
         <h2
-          className="text-4xl md:text-5xl font-bold text-white leading-tight mb-4 drop-shadow-2xl"
+          className="about-banner-title mb-4"
           style={{ textShadow: "2px 2px 8px rgba(0,0,0,0.8)" }}
         >
           피드백은 브랜드의 성장을
@@ -460,21 +460,21 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="text-lg text-foreground leading-relaxed space-y-8 max-w-4xl mx-auto">
-              <p className="text-2xl font-semibold">
+              <p className="about-story-main">
                 <span className="text-primary">Feedback</span>은 유통을 중심으로
                 <br />
                 브랜드 마케팅, 제조, 무역 수출입을 아우르는
                 <span className="text-accent"> 종합 커머스 기업</span>입니다.
               </p>
 
-              <p className="text-xl">
+              <p className="about-story-sub">
                 Hoid, Medifeed, InYourHeart, 상생 등 자체 브랜드와 글로벌
                 파트너십을 기반으로,
                 <br />
                 기획부터 제조·유통·브랜딩까지 전 과정을 함께합니다.
               </p>
 
-              <p className="text-lg">
+              <p className="about-story-detail">
                 고객의 삶 속에 스며든 FeedBack의 브랜드 하나하나가 고객 여러분의
                 하루를
                 <br />
@@ -501,13 +501,13 @@ export default function About() {
 
         {/* Content overlay */}
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight">
+          <h3 className="about-parallax-title mb-8">
             고객님의 <span className="text-blue-300">'생활 속 행복'</span>을
             목표로
             <br />
             열정 넘치는 이들이 모인 FeedBack은
           </h3>
-          <p className="text-xl lg:text-2xl text-gray-200 leading-relaxed max-w-3xl mx-auto">
+          <p className="about-parallax-description max-w-3xl mx-auto">
             최고의 제품을 안겨드리기 위해 기술혁신에 끊임없이 노력을 기울이고
             있으며,
             <br />
@@ -519,10 +519,10 @@ export default function About() {
       <section className="py-20 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-8">
+            <h2 className="about-section-title mb-8">
               경영철학
             </h2>
-            <p className="text-xl text-foreground leading-relaxed max-w-4xl mx-auto">
+            <p className="about-story-sub text-foreground leading-relaxed max-w-4xl mx-auto">
               FeedBack은 브랜드와 시장을 연결하는 실행 중심의 유통 플랫폼으로서
               <br />
               모든 파트너와 함께 성장하는 상생의 생태계를 구축하고 있습니다.
@@ -543,10 +543,10 @@ export default function About() {
                 </div>
               </div>
               <div className="lg:w-1/2 text-center lg:text-left">
-                <h3 className="text-2xl font-bold text-foreground mb-6">
+                <h3 className="about-philosophy-title mb-6">
                   고객·파트너 중심: '공생'의 유통 모델을 실현합니다
                 </h3>
-                <p className="text-lg text-foreground leading-relaxed">
+                <p className="about-philosophy-description">
                   FeedBack은 단순히 물건을 사고파는 곳이 아닌,
                   <br />
                   제조사·브랜드·소매처가 함께 성장할 수 있는 유통 생태계를
@@ -579,10 +579,10 @@ export default function About() {
                 </div>
               </div>
               <div className="lg:w-1/2 text-center lg:text-left">
-                <h3 className="text-2xl font-bold text-foreground mb-6">
+                <h3 className="about-philosophy-title mb-6">
                   통합 실행력으로 브랜드와 시장을 연결합니다
                 </h3>
-                <p className="text-lg text-foreground leading-relaxed">
+                <p className="about-philosophy-description">
                   단순 유통을 넘어 상품 기획, 브랜딩, 마케팅, 유통 채널을
                   유기적으로 연결합니다.
                   <br />
@@ -616,10 +616,10 @@ export default function About() {
                 </div>
               </div>
               <div className="lg:w-1/2 text-center lg:text-left">
-                <h3 className="text-2xl font-bold text-foreground mb-6">
+                <h3 className="about-philosophy-title mb-6">
                   글로벌 시장에서 경쟁력을 만드는 실행 중심 기업
                 </h3>
-                <p className="text-lg text-foreground leading-relaxed">
+                <p className="about-philosophy-description">
                   아시아를 기반으로 성장해 온 브랜드에게
                   <br />
                   글로벌 시장 진출 기회를 제공합니다.
@@ -653,10 +653,10 @@ export default function About() {
                 </div>
               </div>
               <div className="lg:w-1/2 text-center lg:text-left">
-                <h3 className="text-2xl font-bold text-foreground mb-6">
+                <h3 className="about-philosophy-title mb-6">
                   신뢰를 통한 장기 파트너십 구축
                 </h3>
-                <p className="text-lg text-foreground leading-relaxed">
+                <p className="about-philosophy-description">
                   FeedBack의 존재 이유는 파트너와 고객의 신뢰입니다.
                   <br />
                   <br />
@@ -689,7 +689,7 @@ export default function About() {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="flex items-center mb-16 bg-white/70 p-4 rounded-xl backdrop-blur-sm">
             <div className="w-4 h-4 bg-blue-600 rounded-full mr-6"></div>
-            <h2 className="text-5xl font-bold text-slate-900">연혁</h2>
+            <h2 className="about-section-title text-slate-900">연혁</h2>
           </div>
 
           <div className="relative ml-2">
@@ -729,11 +729,11 @@ export default function About() {
                     ? 'opacity-100 translate-y-0' 
                     : 'opacity-0 translate-y-8'
                 }`}>
-                  <h3 className="text-3xl font-bold text-slate-900 mb-4">
+                  <h3 className="about-timeline-year mb-4">
                     {item.year}
                   </h3>
                   <div className="text-slate-700 leading-relaxed">
-                    <p className="text-lg flex items-start">
+                    <p className="about-timeline-description flex items-start">
                       <span className="text-blue-600 mr-2 mt-1">•</span>
                       {item.description}
                     </p>
@@ -764,7 +764,7 @@ export default function About() {
           </div>
 
           <div className="mt-16 bg-white/75 border border-slate-200 p-8 rounded-2xl text-center shadow-lg backdrop-blur-sm">
-            <p className="text-lg text-slate-800 leading-relaxed font-medium">
+            <p className="about-story-detail text-slate-800 leading-relaxed font-medium">
               피드백은 제품 출시와 동시에 국내외 홈쇼핑, 이커머스, 도매 채널과의
               연계를 통해
               <br />
@@ -777,10 +777,10 @@ export default function About() {
       <section className="py-20 bg-gradient-to-br from-muted to-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <blockquote className="text-3xl font-bold text-primary mb-8">
+            <blockquote className="about-ceo-quote mb-8">
               "고객의 행복과 글로벌 파트너십을 최우선으로 생각합니다."
             </blockquote>
-            <h2 className="text-4xl font-bold text-foreground mb-8">
+            <h2 className="about-ceo-title mb-8">
               CEO 인사말
             </h2>
           </div>
@@ -803,31 +803,31 @@ export default function About() {
               {/* 메시지 영역 */}
               <div className="lg:w-2/3 p-12">
                 <div className="space-y-6 text-foreground leading-relaxed">
-                  <p className="text-lg">
+                  <p className="about-ceo-message">
                     안녕하세요. (주)피드백 대표 송해민입니다.
                   </p>
 
-                  <p className="text-lg">
+                  <p className="about-ceo-message">
                     저희 피드백은 빠르게 변화하는 글로벌 유통 시장 속에서,
                     브랜드와 시장의 연결자이자 실행자로서 새로운 유통 구조를
                     제시하고 있습니다.
                   </p>
 
-                  <p className="text-lg">
+                  <p className="about-ceo-message">
                     단순히 '물건을 파는 회사'가 아닌, 브랜드를 함께 키우고
                     시장에 안착시키는 파트너로서 제조사, 유통사, 소비자 모두가
                     만족하는 구조를 만들기 위해 노력하고 있습니다.
                   </p>
 
                   <div className="bg-primary/5 p-6 rounded-xl border-l-4 border-primary">
-                    <p className="text-lg font-semibold text-primary">
+                    <p className="about-ceo-highlight">
                       제품력에 브랜딩을 더하고, 브랜딩에 유통망을 연결하며,
                       유통에 콘텐츠와 경험을 심는 것. 이것이 피드백의
                       방식입니다.
                     </p>
                   </div>
 
-                  <p className="text-lg">
+                  <p className="about-ceo-message">
                     앞으로도 국내외 파트너 여러분과 함께 더 크고 넓은 시장에서
                     기회를 창출하는 기업이 되겠습니다. 감사합니다.
                   </p>
@@ -840,7 +840,7 @@ export default function About() {
       {/* Organization Chart */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-foreground text-center mb-16">
+          <h2 className="about-org-title mb-16">
             조직도
           </h2>
 
@@ -855,7 +855,7 @@ export default function About() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-lg text-muted-foreground">
+            <p className="about-org-description">
               체계적인 조직 구성을 통해 각 분야의 전문성을 바탕으로
               <br />
               고객에게 최고의 서비스를 제공하고 있습니다.

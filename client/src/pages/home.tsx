@@ -912,7 +912,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
       {/* B2B2C Hub Section */}
       <section
         id="achievements"
@@ -921,7 +920,6 @@ export default function Home() {
       >
         <B2B2C_Hub />
       </section>
-      
       {/* News Section */}
       <section
         id="news"
@@ -1124,7 +1122,7 @@ export default function Home() {
             <h2 className="cta-title text-white mb-6">
               {t("cta.title")}
             </h2>
-            <p className="cta-description text-white mb-12">
+            <p className="cta-description text-white mb-12 font-normal">
               {t("cta.description").split('\n').map((line, index) => (
                 <span key={index}>
                   {line}
@@ -1154,7 +1152,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Footer */}
       <Footer />
     </div>
