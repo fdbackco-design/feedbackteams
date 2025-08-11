@@ -3,12 +3,20 @@ import { Link, useLocation } from "wouter";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const navigation = [
+const navigationKR = [
   { name: "회사소개", href: "/about" },
   { name: "서비스", href: "/service" },
   { name: "브랜드", href: "/brand" },
   { name: "뉴스", href: "/news" },
   { name: "연락처", href: "/contact" },
+];
+
+const navigationEN = [
+  { name: "About", href: "/about" },
+  { name: "Services", href: "/service" },
+  { name: "Brands", href: "/brand" },
+  { name: "News", href: "/news" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export default function Header() {
@@ -18,6 +26,9 @@ export default function Header() {
   const [currentSection, setCurrentSection] = useState('hero');
   const [scrollY, setScrollY] = useState(0);
   const [location] = useLocation();
+
+  // 현재 언어에 따른 네비게이션 선택
+  const navigation = currentLanguage === 'KR' ? navigationKR : navigationEN;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -214,13 +225,13 @@ export default function Header() {
             
             {/* Language Dropdown */}
             {isLanguageMenuOpen && (
-              <div className="absolute top-full right-0 mt-2 bg-white border border-gray-200 rounded-md shadow-lg z-50">
+              <div className="absolute top-full left-0 mt-2 bg-white border border-gray-200 rounded-md shadow-lg z-50 min-w-[140px]">
                 <button
                   onClick={() => {
                     setCurrentLanguage('KR');
                     setIsLanguageMenuOpen(false);
                   }}
-                  className={`block w-full px-4 py-2 text-sm text-left hover:bg-gray-100 ${
+                  className={`block w-full px-4 py-2 text-sm text-left hover:bg-gray-100 text-gray-800 ${
                     currentLanguage === 'KR' ? 'bg-gray-50 font-medium' : ''
                   }`}
                 >
@@ -231,7 +242,7 @@ export default function Header() {
                     setCurrentLanguage('EN');
                     setIsLanguageMenuOpen(false);
                   }}
-                  className={`block w-full px-4 py-2 text-sm text-left hover:bg-gray-100 ${
+                  className={`block w-full px-4 py-2 text-sm text-left hover:bg-gray-100 text-gray-800 ${
                     currentLanguage === 'EN' ? 'bg-gray-50 font-medium' : ''
                   }`}
                 >
