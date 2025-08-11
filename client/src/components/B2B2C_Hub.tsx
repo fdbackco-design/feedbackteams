@@ -98,17 +98,34 @@ const B2B2C_Hub = () => {
                   </div>
                 </div>
 
-                {/* Animated flowing effect */}
+                {/* Animated spreading effect */}
                 <div className="absolute inset-0 rounded-2xl overflow-hidden">
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"
+                    className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-white/20"
                     animate={{
-                      x: ["-100%", "100%"],
+                      scale: [1, 1.5, 1],
+                      opacity: [0.3, 0.7, 0.3],
+                    }}
+                    transition={{
+                      duration: 2.5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                  />
+                  <motion.div
+                    className="absolute inset-0 bg-radial-gradient from-center"
+                    style={{
+                      background: "radial-gradient(circle at center, rgba(255,255,255,0.15) 20%, transparent 70%)",
+                    }}
+                    animate={{
+                      scale: [0.8, 1.8, 0.8],
+                      opacity: [0.8, 0.2, 0.8],
                     }}
                     transition={{
                       duration: 3,
                       repeat: Infinity,
-                      ease: "linear",
+                      ease: "easeInOut",
+                      delay: 0.5,
                     }}
                   />
                 </div>
