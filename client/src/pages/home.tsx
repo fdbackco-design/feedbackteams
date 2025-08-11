@@ -865,18 +865,24 @@ export default function Home() {
           </div>
 
           {/* News Cards - Horizontal Scrollable */}
-          <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-            <div 
-              ref={newsScrollRef}
-              className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto pb-6 scrollbar-hide cursor-grab"
-              style={{ 
-                scrollSnapType: 'x mandatory',
-                scrollbarWidth: 'none',
-                msOverflowStyle: 'none',
-                WebkitOverflowScrolling: 'touch',
-                scrollBehavior: 'auto' // Disable smooth scroll for manual dragging
-              }}
-            >
+          <div className="relative">
+            {/* Left gradient fade */}
+            <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+            
+            <div className="max-w-7xl mx-auto pl-6 lg:pl-8">
+              <div 
+                ref={newsScrollRef}
+                className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto pb-6 scrollbar-hide cursor-grab pr-6 lg:pr-8"
+                style={{ 
+                  scrollSnapType: 'x mandatory',
+                  scrollbarWidth: 'none',
+                  msOverflowStyle: 'none',
+                  WebkitOverflowScrolling: 'touch',
+                  scrollBehavior: 'auto', // Disable smooth scroll for manual dragging
+                  maskImage: 'linear-gradient(to right, transparent 0, black 8rem, black 100%)',
+                  WebkitMaskImage: 'linear-gradient(to right, transparent 0, black 8rem, black 100%)'
+                }}
+              >
               {newsData.slice(0, 6).map((news, index) => {
                 const src = resolveNewsThumbnail(news.thumbnail);
                 return (
@@ -905,6 +911,7 @@ export default function Home() {
                   </div>
                 );
               })}
+              </div>
             </div>
 
             {/* Progress Bar Pager - Matches Navigation Width */}
