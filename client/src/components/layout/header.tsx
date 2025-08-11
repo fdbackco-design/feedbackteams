@@ -19,116 +19,85 @@ const navigationEN = [
   { name: "Contact", href: "/contact" },
 ];
 
+type SectionKey =
+  | "hero"
+  | "service"
+  | "brand"
+  | "news"
+  | "stats"
+  | "cta"
+  | "footer";
+
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState<"KR" | "EN">("KR");
-  const [currentSection, setCurrentSection] = useState<
-    "hero" | "service" | "brand" | "news" | "stats" | "cta" | "footer"
-  >("hero");
+  const [currentSection, setCurrentSection] = useState<SectionKey>("hero");
   const [scrollY, setScrollY] = useState(0);
   const [location] = useLocation();
 
   const navigation = currentLanguage === "KR" ? navigationKR : navigationEN;
 
-  // 홈 경로 보강 판단 (/, /#, /?xxx 형태도 홈으로 처리)
-  const isHomePage =
-    location === "/" ||
-    location === "" ||
-    location === "/#" ||
-    location.startsWith("/?") ||
-    location.startsWith("/#");
+  // 홈 여부
+  const isHomePage = location === "/";
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!isHomePage) return; // 홈에서만 섹션 감지
+      if (!isHomePage) return;
+      const y = window.scrollY;
+      setScrollY(y);
 
-      const currentScrollY = window.scrollY;
-      const windowHeight = window.innerHeight;
-      let newSection: typeof currentSection = "hero";
+      let s: SectionKey = "hero";
+      if (y < 600) s = "hero";
+      else if (y < 1400) s = "service";
+      else if (y < 2200) s = "brand";
+      else if (y < 3000) s = "news";
+      else if (y < 3800) s = "stats";
+      else if (y < 4600) s = "cta";
+      else s = "footer";
 
-      setScrollY(currentScrollY);
-
-      // ★ 섹션 위치값(임계치) 변경 없음
-      if (currentScrollY < 600) {
-        newSection = "hero";
-      } else if (currentScrollY < 1400) {
-        newSection = "service";
-      } else if (currentScrollY < 2200) {
-        newSection = "brand";
-      } else if (currentScrollY < 3000) {
-        newSection = "news";
-      } else if (currentScrollY < 3800) {
-        newSection = "stats";
-      } else if (currentScrollY < 4600) {
-        newSection = "cta";
-      } else {
-        newSection = "footer";
-      }
-
-      if (newSection !== currentSection) {
-        setCurrentSection(newSection);
-        console.log(
-          "Section changed to:",
-          newSection,
-          "at scroll:",
-          currentScrollY,
-          "windowHeight:",
-          windowHeight,
-        );
-      }
+      if (s !== currentSection) setCurrentSection(s);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    setTimeout(handleScroll, 100); // 초기 1회 실행
-
+    setTimeout(handleScroll, 100);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [currentSection, isHomePage]);
 
   // 드롭다운 외부 클릭 시 닫기
   useEffect(() => {
-    const handleClickOutside = () => {
+    const onDocClick = () => {
       if (isLanguageMenuOpen) setIsLanguageMenuOpen(false);
     };
-    document.addEventListener("click", handleClickOutside);
-    return () => document.removeEventListener("click", handleClickOutside);
+    document.addEventListener("click", onDocClick);
+    return () => document.removeEventListener("click", onDocClick);
   }, [isLanguageMenuOpen]);
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
-  // ★ 텍스트/로고 컬러만 토글
+  // ✅ 텍스트/아이콘/로고 컬러만 토글
   const isBlackSection =
     isHomePage && (currentSection === "service" || currentSection === "news");
 
-  const getHeaderStyle = () =>
-    isHomePage ? "" : "bg-white/95 backdrop-blur-md shadow-lg"; // 배경은 기존 로직 유지
+  // 헤더 배경 (서브는 고정 배경)
+  const headerBgClass = isHomePage
+    ? ""
+    : "bg-white/95 backdrop-blur-md shadow-lg";
 
-  const logoFillColor = isHomePage
+  // 공통 텍스트 컬러: currentColor로 통일
+  const headerTextClass = isHomePage
     ? isBlackSection
-      ? "#000000"
-      : "#ffffff"
-    : "#1f2937";
+      ? "text-black"
+      : "text-white"
+    : "text-gray-900";
 
-  const linkColor = (href: string) => {
-    if (!isHomePage) return location === href ? "#1f2937" : "#6b7280";
-    return isBlackSection
-      ? "#000000"
-      : location === href
-        ? "#ffffff"
-        : "rgba(255,255,255,0.8)";
-  };
-
-  const languageButtonColor = isHomePage
-    ? isBlackSection
-      ? "#000000"
-      : "#ffffff"
-    : "#1f2937";
-
-  const headerStyle = getHeaderStyle();
+  // 서브페이지 링크 기본/활성
+  const subLinkColor = (href: string) =>
+    location === href ? "text-gray-900" : "text-gray-500";
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 ${headerStyle}`}>
-      {/* 디버그 박스 (필요없으면 제거) */}
+    <header className={`fixed top-0 left-0 right-0 z-50 ${headerBgClass}`}>
+      {/* 디버그(원하면 제거) */}
       {isHomePage && (
         <div className="fixed top-20 left-4 z-50 bg-black/70 text-white px-3 py-1 rounded text-sm font-mono space-y-1">
           <div>Section: {currentSection}</div>
@@ -138,17 +107,18 @@ export default function Header() {
       )}
 
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div
+          className={`flex justify-between items-center h-16 transition-colors duration-300 ${headerTextClass}`}
+        >
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0" onClick={scrollToTop}>
               <svg
-                id="Layer_1"
-                data-name="Layer 1"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 204.75 27.91"
                 className="h-6 transition-colors duration-300"
-                style={{ fill: logoFillColor }}
+                // ✨ 로고는 currentColor를 따름
+                fill="currentColor"
               >
                 <g>
                   <path d="M3.91,3.58v8.03h15.15v3.58H3.91v12.72H0V0h21.61v3.58H3.91Z" />
@@ -173,9 +143,15 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-sm font-medium tracking-wide transition-colors duration-300"
-                  style={{ color: linkColor(item.href) }}
                   onClick={scrollToTop}
+                  className={`text-sm font-medium tracking-wide transition-colors duration-300
+                    ${
+                      isHomePage
+                        ? isBlackSection
+                          ? "text-black hover:text-black/80"
+                          : "text-white/80 hover:text-white"
+                        : subLinkColor(item.href)
+                    }`}
                 >
                   {item.name}
                 </Link>
@@ -190,8 +166,14 @@ export default function Header() {
                 e.stopPropagation();
                 setIsLanguageMenuOpen(!isLanguageMenuOpen);
               }}
-              className="flex items-center text-sm font-medium tracking-wide transition-colors duration-300"
-              style={{ color: languageButtonColor }}
+              className={`flex items-center text-sm font-medium tracking-wide transition-colors duration-300
+                ${
+                  isHomePage
+                    ? isBlackSection
+                      ? "text-black hover:text-black/80"
+                      : "text-white hover:text-white"
+                    : "text-gray-900"
+                }`}
             >
               {currentLanguage}
               <ChevronDown className="ml-1 h-4 w-4" />
@@ -231,14 +213,8 @@ export default function Header() {
               variant="ghost"
               size="sm"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`transition-colors duration-300 ${isHomePage ? "hover:bg-black/10" : "hover:bg-gray-100"}`}
-              style={{
-                color: isHomePage
-                  ? isBlackSection
-                    ? "#000000"
-                    : "#ffffff"
-                  : "#1f2937",
-              }}
+              className={`transition-colors duration-300 ${isHomePage ? "hover:bg-black/10" : "hover:bg-gray-100"}
+                ${isHomePage ? (isBlackSection ? "text-black" : "text-white") : "text-gray-900"}`}
             >
               {isMobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -257,11 +233,12 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`block px-3 py-2 text-sm font-medium tracking-wide ${location === item.href ? "text-gray-900" : "text-gray-600"}`}
                   onClick={() => {
                     setIsMobileMenuOpen(false);
                     scrollToTop();
                   }}
+                  className={`block px-3 py-2 text-sm font-medium tracking-wide
+                    ${location === item.href ? "text-gray-900" : "text-gray-600"}`}
                 >
                   {item.name}
                 </Link>
