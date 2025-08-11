@@ -604,7 +604,7 @@ export default function Home() {
         }}
       >
         {/* 블러 오버레이 */}
-        <div className="absolute inset-0 bg-white/50 backdrop-blur-md"></div>
+        <div className="absolute inset-0 bg-white/65 backdrop-blur"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div
             className="text-center mb-12 opacity-0 animate-fade-in-up"
