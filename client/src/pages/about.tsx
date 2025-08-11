@@ -460,7 +460,7 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="text-lg text-foreground leading-relaxed space-y-8 max-w-4xl mx-auto">
-              <p className="about-story-main">
+              <p className="about-story-main text-[30px]">
                 <span className="text-primary">Feedback</span>은 유통을 중심으로
                 <br />
                 브랜드 마케팅, 제조, 무역 수출입을 아우르는
