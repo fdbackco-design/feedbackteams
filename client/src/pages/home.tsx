@@ -889,14 +889,14 @@ export default function Home() {
       >
         <div className="relative w-full z-10">
           {/* Section Header - Aligned with Navigation */}
-          <div className="max-w-7xl ml-auto pl-6 lg:pl-8 mb-8 sm:mb-12">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
               {t("news.title")} <span className="text-gray-400 text-lg sm:text-xl md:text-2xl lg:text-3xl">↗</span>
             </h2>
           </div>
 
           {/* News Cards - Horizontal Scrollable */}
-          <div className="relative max-w-7xl ml-auto pl-6 lg:pl-8">
+          <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
             <div 
               ref={newsScrollRef}
               className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto pb-6 scrollbar-hide cursor-grab"
@@ -908,8 +908,6 @@ export default function Home() {
                 scrollBehavior: 'auto' // Disable smooth scroll for manual dragging
               }}
             >
-              {/* First padding spacer */}
-              <div className="flex-shrink-0 w-0"></div>
               
               {newsData.slice(0, 6).map((news, index) => {
                 const src = resolveNewsThumbnail(news.thumbnail);
@@ -940,22 +938,18 @@ export default function Home() {
                 );
               })}
               
-              {/* Last padding spacer for smooth scroll */}
-              <div className="flex-shrink-0 w-6 lg:w-8"></div>
             </div>
 
             {/* Progress Bar Pager - Matches Navigation Width */}
             <div className="mt-8">
-              <div className="max-w-7xl mx-auto pl-6 lg:pl-8 pr-6 lg:pr-8">
-                <div className="h-0.5 bg-gray-300 rounded-full relative overflow-hidden">
-                  <div 
-                    className="h-full bg-black rounded-full transition-all duration-300 ease-out"
-                    style={{ 
-                      width: `${newsScrollProgress}%`,
-                      transform: `translateX(0%)` 
-                    }}
-                  />
-                </div>
+              <div className="h-0.5 bg-gray-300 rounded-full relative overflow-hidden">
+                <div 
+                  className="h-full bg-black rounded-full transition-all duration-300 ease-out"
+                  style={{ 
+                    width: `${newsScrollProgress}%`,
+                    transform: `translateX(0%)` 
+                  }}
+                />
               </div>
             </div>
           </div>
