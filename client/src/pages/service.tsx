@@ -170,6 +170,7 @@ export default function Service() {
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             서비스 소개
           </h1>
+          <div className="w-24 h-1 bg-[#0F4C82] mx-auto mb-8"></div>
           <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
             FeedBack은 다양한 분야의 전문적인 서비스를 통해
             <br />

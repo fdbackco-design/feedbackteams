@@ -182,9 +182,10 @@ export default function Contact() {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-32 mt-[150px]">
-          <h1 className="text-5xl font-bold text-gray-900 mb-8">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
             {t("contact.title")}
           </h1>
+          <div className="w-24 h-1 bg-[#0F4C82] mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {t("FeedBack과 함께 새로운 비즈니스 기회를 만들어보세요.")
               .split("\n")
