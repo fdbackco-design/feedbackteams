@@ -871,35 +871,47 @@ export default function Home() {
       <section
         id="stats"
         ref={statsRef}
-        className="h-screen flex items-center justify-center bg-gradient-to-r from-primary to-secondary text-white relative overflow-hidden"
+        className="h-screen flex items-center justify-center bg-gradient-to-br from-primary via-secondary to-primary text-white relative overflow-hidden"
         style={{ scrollSnapAlign: "start" }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
+              FeedBack의 성장 지표
+            </h2>
+            <p className="text-xl opacity-90 drop-shadow-md">
+              글로벌 비즈니스 파트너로서의 성과와 신뢰
+            </p>
+          </div>
           <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div className="transform hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="text-5xl font-bold mb-2 tabular-nums min-w-[120px]">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 transform hover:scale-110 transition-all duration-300 cursor-pointer hover:bg-white/20 border border-white/20">
+              <div className="text-5xl font-bold mb-4 tabular-nums text-white drop-shadow-lg">
                 {yearCount}
               </div>
-              <div className="text-xl opacity-90">설립년도</div>
+              <div className="text-lg font-medium text-white/90">설립년도</div>
+              <div className="text-sm text-white/70 mt-2">Since</div>
             </div>
-            <div className="transform hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="text-5xl font-bold mb-2 tabular-nums min-w-[80px]">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 transform hover:scale-110 transition-all duration-300 cursor-pointer hover:bg-white/20 border border-white/20">
+              <div className="text-5xl font-bold mb-4 tabular-nums text-white drop-shadow-lg">
                 {brandCount}+
               </div>
-              <div className="text-xl opacity-90">자체 브랜드</div>
+              <div className="text-lg font-medium text-white/90">자체 브랜드</div>
+              <div className="text-sm text-white/70 mt-2">Own Brands</div>
             </div>
-            <div className="transform hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="text-5xl font-bold mb-2 tabular-nums min-w-[80px]">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 transform hover:scale-110 transition-all duration-300 cursor-pointer hover:bg-white/20 border border-white/20">
+              <div className="text-5xl font-bold mb-4 tabular-nums text-white drop-shadow-lg">
                 {partnerCount}+
               </div>
-              <div className="text-xl opacity-90">파트너 국가</div>
+              <div className="text-lg font-medium text-white/90">파트너 국가</div>
+              <div className="text-sm text-white/70 mt-2">Partner Countries</div>
             </div>
-            <div className="transform hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="text-5xl font-bold mb-2 tabular-nums min-w-[100px]">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 transform hover:scale-110 transition-all duration-300 cursor-pointer hover:bg-white/20 border border-white/20">
+              <div className="text-5xl font-bold mb-4 tabular-nums text-white drop-shadow-lg">
                 {hospitalCount}+
               </div>
-              <div className="text-xl opacity-90">병원 제휴</div>
+              <div className="text-lg font-medium text-white/90">병원 제휴</div>
+              <div className="text-sm text-white/70 mt-2">Hospital Partners</div>
             </div>
           </div>
         </div>
