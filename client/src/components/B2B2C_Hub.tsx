@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Factory, ShoppingBag, CheckCircle, ArrowLeft, ArrowDown, Users, Truck, ShoppingCart } from "lucide-react";
+import { Factory, ShoppingBag, CheckCircle, ArrowLeft, ArrowRight, ArrowDown, Users, Truck, ShoppingCart } from "lucide-react";
 
 const B2B2C_Hub = () => {
   return (
@@ -59,7 +59,7 @@ const B2B2C_Hub = () => {
               viewport={{ once: true }}
             >
               <div className="flex flex-col items-center">
-                <ArrowLeft className="w-8 h-8 text-blue-500" />
+                <ArrowRight className="w-8 h-8 text-blue-500" />
                 <span className="text-xs text-gray-500 mt-2">유통 연결</span>
               </div>
             </motion.div>
