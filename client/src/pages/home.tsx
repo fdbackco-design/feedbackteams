@@ -29,6 +29,7 @@ import {
 } from "lucide-react";
 import { useCountUp } from "@/hooks/useCountUp";
 import HoidLogo from "@/components/HoidLogo";
+import Footer from "@/components/layout/footer";
 import shipVideo from "@assets/ship_section_1754640786186.mp4";
 import mainBannerVideo from "@assets/main_banner_last_1754645135592.mp4";
 import cargoShipImage from "@assets/bada-leul-hanghae-haneun-hwamulseon_1754648981305.jpg";
@@ -949,6 +950,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

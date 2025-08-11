@@ -40,8 +40,12 @@ export default function Header() {
         newSection = 'brand';    // 브랜드 섹션 (어두운 배경)
       } else if (currentScrollY < 3000) {
         newSection = 'news';     // 뉴스 섹션 (흰색 배경) - 검은 텍스트
-      } else {
+      } else if (currentScrollY < 3800) {
         newSection = 'stats';    // 통계 섹션 (파란 배경)
+      } else if (currentScrollY < 4600) {
+        newSection = 'cta';      // CTA 섹션 (동영상 배경)
+      } else {
+        newSection = 'footer';   // 푸터 섹션 (어두운 배경)
       }
       
       if (newSection !== currentSection) {
