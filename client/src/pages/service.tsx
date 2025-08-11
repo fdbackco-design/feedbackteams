@@ -203,12 +203,12 @@ export default function Service() {
             {services.map((service, index) => (
               <Card key={index} className="flex-shrink-0 w-[80%] overflow-hidden flex flex-col border-0 shadow-none bg-transparent">
                 {/* Image Section - Clean, no overlays */}
-                <div className="h-[350px] lg:h-[400px] overflow-hidden">
+                <div className="h-[400px] lg:h-[450px] overflow-hidden">
                   {service.imageUrl ? (
                     <img 
                       src={service.imageUrl} 
                       alt={service.title}
-                      className="w-full h-full object-cover rounded-2xl"
+                      className="w-full h-full object-cover object-top rounded-2xl"
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl">
