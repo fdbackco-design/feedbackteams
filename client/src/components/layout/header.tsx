@@ -29,35 +29,59 @@ type SectionKey =
   | "footer";
 
 type HeaderProps = {
-  currentSlide?: number; // 0-based; 2,4,5면 검정
+  /** Home에서 전달하는 0-based 슬라이드 인덱스. 2,4,5면 검정 */
+  currentSlide?: number;
 };
 
 export default function Header({ currentSlide }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState<"KR" | "EN">("KR");
+
+  // 스크롤 기반 섹션(fallback용)
   const [currentSection, setCurrentSection] = useState<SectionKey>("hero");
   const [scrollY, setScrollY] = useState(0);
-  const [location] = useLocation();
 
+  // 전역 Header 사용 시 Home에서 쏘는 커스텀 이벤트 수신용
+  const [forceBlack, setForceBlack] = useState<boolean | null>(null);
+
+  const [location] = useLocation();
+  const isHomePage = location === "/";
   const navigation = currentLanguage === "KR" ? navigationKR : navigationEN;
 
-  // 홈 여부
-  const isHomePage = location === "/";
+  // Home에서 dispatch하는 header:color 이벤트 수신 (선택적)
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const { isBlack } = (e as CustomEvent).detail || {};
+      setForceBlack(typeof isBlack === "boolean" ? isBlack : null);
+    };
+    window.addEventListener("header:color", handler as EventListener, {
+      passive: true,
+    });
+    return () =>
+      window.removeEventListener("header:color", handler as EventListener);
+  }, []);
 
+  // 스크롤 위치 → 섹션 추정 (Home에서 prop이 안 올 때만 의미가 있음)
   useEffect(() => {
     const handleScroll = () => {
       if (!isHomePage) return;
       const y = window.scrollY;
       setScrollY(y);
 
-      let s: SectionKey = "hero";
-      if (y < 800) s = "hero";        // 슬라이드 0
-      else if (y < 1600) s = "service";   // 슬라이드 1
-      else if (y < 2400) s = "brand";     // 슬라이드 2 - 검은색
-      else if (y < 3200) s = "news";      // 슬라이드 3
-      else if (y < 4000) s = "stats";     // 슬라이드 4 - 검은색
-      else if (y < 4800) s = "cta";       // 슬라이드 5 - 검은색
+      // 섹션 높이에 맞춰 범위를 조정하세요 (현재 800단위)
+      let s: SectionKey = "hero"; // 슬라이드 0
+      if (y < 800) s = "hero";
+      else if (y < 1600)
+        s = "service"; // 슬라이드 1
+      else if (y < 2400)
+        s = "brand"; // 슬라이드 2 (검정)
+      else if (y < 3200)
+        s = "news"; // 슬라이드 3
+      else if (y < 4000)
+        s = "stats"; // 슬라이드 4 (검정)
+      else if (y < 4800)
+        s = "cta"; // 슬라이드 5 (검정)
       else s = "footer";
 
       if (s !== currentSection) setCurrentSection(s);
@@ -79,12 +103,20 @@ export default function Header({ currentSlide }: HeaderProps) {
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
-  // ✅ 2, 4, 5 슬라이드에서만 검은색 헤더 (brands, news, stats)
+  // ✅ 헤더 텍스트 색 결정 우선순위:
+  // 1) forceBlack (Home에서 이벤트로 강제)
+  // 2) currentSlide prop (2,4,5 → 검정)
+  // 3) 스크롤 기반 섹션 추정 (brand/stats/cta → 검정)
+  const computedBlackBySlide =
+    typeof currentSlide === "number" ? [2, 4, 5].includes(currentSlide) : null;
+
+  const computedBlackByScroll =
+    currentSection === "brand" ||
+    currentSection === "stats" ||
+    currentSection === "cta";
+
   const isBlackSection =
-    isHomePage &&
-    ((typeof currentSlide === "number" && [2, 4, 5].includes(currentSlide)) ||
-      (currentSlide === undefined &&
-        (currentSection === "brand" || currentSection === "news" || currentSection === "stats")));
+    isHomePage && (forceBlack ?? computedBlackBySlide ?? computedBlackByScroll);
 
   // 헤더 배경 (서브는 고정 배경)
   const headerBgClass = isHomePage
@@ -104,12 +136,15 @@ export default function Header({ currentSlide }: HeaderProps) {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 ${headerBgClass}`}>
-      {/* 디버그(원하면 제거) */}
+      {/* 디버그 박스 (필요 없으면 제거) */}
       {isHomePage && (
         <div className="fixed top-20 left-4 z-50 bg-black/70 text-white px-3 py-1 rounded text-sm font-mono space-y-1">
-          <div>Section: {currentSection}</div>
-          <div>Scroll: {Math.round(scrollY)}</div>
-          <div>IsHome: {isHomePage ? "Yes" : "No"}</div>
+          <div>Section(fallback): {currentSection}</div>
+          <div>
+            SlideProp: {typeof currentSlide === "number" ? currentSlide : "NA"}
+          </div>
+          <div>ForceBlack: {String(forceBlack)}</div>
+          <div>ScrollY: {Math.round(scrollY)}</div>
         </div>
       )}
 
@@ -124,7 +159,6 @@ export default function Header({ currentSlide }: HeaderProps) {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 204.75 27.91"
                 className="h-6 transition-colors duration-300"
-                // ✨ 로고는 currentColor를 따름
                 fill="currentColor"
               >
                 <g>
