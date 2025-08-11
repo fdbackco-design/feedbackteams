@@ -224,9 +224,8 @@ export default function Hoid() {
               제품 카탈로그 다운로드
             </Button>
             <Button
-              variant="outline"
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-blue-600"
+              className="bg-[#000000] text-white border border-white hover:bg-white hover:text-blue-600"
             >
               문의하기
             </Button>
