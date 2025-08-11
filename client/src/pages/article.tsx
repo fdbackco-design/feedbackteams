@@ -6,6 +6,8 @@ import newsData from "@/data/news.json";
 
 import flow_2025_04_17_193718625 from "@assets/flow_2025-04-17_193718625.png";
 
+import ______1 from "@assets/호이드1.jpg";
+
 const categoryColors: Record<string, string> = {
   "보도자료": "bg-secondary text-white",
   "브랜드뉴스": "bg-primary text-white", 
@@ -63,7 +65,7 @@ export default function Article() {
         {/* Featured Image */}
         <div className="mb-8">
           <img 
-            src={flow_2025_04_17_193718625}
+            src={______1}
             alt={article.title}
             className="w-full rounded-lg shadow-lg"
           />
