@@ -17,7 +17,6 @@ export default function Medifeed() {
           </Button>
         </Link>
       </div>
-
       {/* Hero Section */}
       <section className="relative h-screen w-full overflow-hidden">
         {/* Background Video */}
@@ -47,7 +46,6 @@ export default function Medifeed() {
           </div>
         </div>
       </section>
-
       {/* Product Categories */}
       <section className="container mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-center mb-12">주요 제품군</h2>
@@ -89,7 +87,6 @@ export default function Medifeed() {
           </Card>
         </div>
       </section>
-
       {/* Brand Philosophy */}
       <section className="bg-green-50 py-16">
         <div className="container mx-auto px-4">
@@ -123,7 +120,6 @@ export default function Medifeed() {
           </div>
         </div>
       </section>
-
       {/* Quality Assurance */}
       <section className="container mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-center mb-12">품질 보증</h2>
@@ -158,7 +154,6 @@ export default function Medifeed() {
           </div>
         </div>
       </section>
-
       {/* Customer Reviews */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
@@ -211,9 +206,8 @@ export default function Medifeed() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
-      <section className="bg-green-600 text-white py-16">
+      <section className="text-white py-16 bg-[#0f4780]">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">건강한 습관, 메디피드와 함께</h2>
           <p className="text-xl mb-8 opacity-90">
