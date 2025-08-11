@@ -181,14 +181,9 @@ export default function Service() {
             onMouseMove={handleMouseMove}
           >
             {services.map((service, index) => (
-              <Card key={index} className="flex-shrink-0 w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] max-w-[800px] shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-[1.02] flex flex-col">
-                {/* Image Section */}
-                <div className="relative h-[250px] lg:h-[280px] bg-gradient-to-br from-gray-100 to-gray-200">
-                  {/* Service Number Badge */}
-                  <div className="absolute top-4 left-4 z-10 bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-bold">
-                    {String(index + 1).padStart(2, '0')}
-                  </div>
-                  
+              <Card key={index} className="flex-shrink-0 w-[90vw] sm:w-[80vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] max-w-[800px] shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-[1.02] relative">
+                {/* Background Image */}
+                <div className="relative h-[300px] lg:h-[350px]">
                   {service.imageUrl ? (
                     <img 
                       src={service.imageUrl} 
@@ -196,40 +191,57 @@ export default function Service() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100">
-                      <service.icon className="w-20 h-20 text-blue-400" />
+                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300">
+                      <service.icon className="w-20 h-20 text-gray-400" />
                     </div>
                   )}
+                  
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-black/20"></div>
                 </div>
                 
-                {/* Content Section */}
-                <CardContent className="p-6 lg:p-8 flex-1 flex flex-col">
-                  <div className="flex flex-col h-full">
-                    <CardTitle className="text-xl lg:text-2xl font-bold text-gray-900 mb-3">
+                {/* Content Overlay */}
+                <div className="absolute inset-0 p-6 lg:p-8 flex flex-col justify-end">
+                  {/* Service Number - Large */}
+                  <div className="absolute top-6 left-6">
+                    <span className="text-4xl lg:text-5xl font-bold text-blue-500">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                  </div>
+                  
+                  {/* Action Button - Top Right */}
+                  <div className="absolute top-6 right-6">
+                    {service.buttonText === "브랜드 보기" ? (
+                      <Button asChild size="sm" className="bg-white/90 text-gray-800 hover:bg-white rounded-full px-4 py-2 text-xs font-medium">
+                        <Link href="/brand">프로젝트 문의</Link>
+                      </Button>
+                    ) : (
+                      <Button size="sm" className="bg-white/90 text-gray-800 hover:bg-white rounded-full px-4 py-2 text-xs font-medium">
+                        프로젝트 문의
+                      </Button>
+                    )}
+                  </div>
+                  
+                  {/* Main Content */}
+                  <div className="text-white">
+                    <h3 className="text-xl lg:text-2xl font-bold mb-3">
                       {service.title}
-                    </CardTitle>
-                    <CardDescription className="text-gray-600 mb-4 leading-relaxed text-sm lg:text-base flex-grow">
+                    </h3>
+                    <p className="text-white/90 mb-4 leading-relaxed text-sm lg:text-base">
                       {service.description}
-                    </CardDescription>
-                    <div className="mb-6 space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="text-xs lg:text-sm text-gray-500 flex items-center">
-                          <span className="w-1.5 h-1.5 bg-primary rounded-full mr-3 flex-shrink-0"></span>
+                    </p>
+                    
+                    {/* Features */}
+                    <div className="space-y-1">
+                      {service.features.slice(0, 3).map((feature, featureIndex) => (
+                        <div key={featureIndex} className="text-xs lg:text-sm text-white/80 flex items-center">
+                          <span className="w-1 h-1 bg-white rounded-full mr-2 flex-shrink-0"></span>
                           {feature}
                         </div>
                       ))}
                     </div>
-                    {service.buttonText === "브랜드 보기" ? (
-                      <Button asChild className={`${service.buttonColor} text-white transition-all duration-300 hover:scale-105 text-sm lg:text-base w-full mt-auto`}>
-                        <Link href="/brand">{service.buttonText}</Link>
-                      </Button>
-                    ) : (
-                      <Button className={`${service.buttonColor} text-white transition-all duration-300 hover:scale-105 text-sm lg:text-base w-full mt-auto`}>
-                        {service.buttonText}
-                      </Button>
-                    )}
                   </div>
-                </CardContent>
+                </div>
               </Card>
             ))}
           </div>
