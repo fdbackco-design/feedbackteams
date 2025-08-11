@@ -194,35 +194,29 @@ html {
 
 /* About Section Titles */
 .about-section-title {
-  @apply text-4xl font-bold;
-  color: #000000;
+  @apply text-4xl font-bold text-foreground;
 }
 
 /* About Story Text */
 .about-story-main {
   @apply text-2xl font-semibold;
-  color: #000000;
 }
 
 .about-story-sub {
   @apply text-xl;
-  color: #000000;
 }
 
 .about-story-detail {
   @apply text-lg;
-  color: #000000;
 }
 
 /* Philosophy Section Titles */
 .about-philosophy-title {
-  @apply text-2xl font-bold;
-  color: #000000;
+  @apply text-2xl font-bold text-foreground;
 }
 
 .about-philosophy-description {
-  @apply text-lg leading-relaxed;
-  color: #000000;
+  @apply text-lg text-foreground leading-relaxed;
 }
 
 /* Parallax Section Title */
@@ -237,45 +231,37 @@ html {
 
 /* Timeline Styles */
 .about-timeline-year {
-  @apply text-3xl font-bold;
-  color: #000000;
+  @apply text-3xl font-bold text-slate-900;
 }
 
 .about-timeline-description {
   @apply text-lg;
-  color: #000000;
 }
 
 /* CEO Message Styles */
 .about-ceo-quote {
-  @apply text-3xl font-bold;
-  color: #0F4C82;
+  @apply text-3xl font-bold text-primary;
 }
 
 .about-ceo-title {
-  @apply text-4xl font-bold;
-  color: #000000;
+  @apply text-4xl font-bold text-foreground;
 }
 
 .about-ceo-message {
   @apply text-lg leading-relaxed;
-  color: #000000;
 }
 
 .about-ceo-highlight {
-  @apply text-lg font-semibold;
-  color: #0F4C82;
+  @apply text-lg font-semibold text-primary;
 }
 
 /* Organization Chart Title */
 .about-org-title {
-  @apply text-4xl font-bold text-center;
-  color: #000000;
+  @apply text-4xl font-bold text-foreground text-center;
 }
 
 .about-org-description {
-  @apply text-lg;
-  color: #000000;
+  @apply text-lg text-muted-foreground;
 }
 
 .dark {
