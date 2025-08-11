@@ -7,16 +7,28 @@ import { storage } from "./storage";
 const oAuth2Client = new google.auth.OAuth2(
   process.env.GMAIL_CLIENT_ID,
   process.env.GMAIL_CLIENT_SECRET,
-  process.env.GMAIL_REDIRECT_URI
+  process.env.GMAIL_REDIRECT_URI,
 );
 
 // Refresh Token이 있으면 설정
 if (process.env.GMAIL_REFRESH_TOKEN) {
-  oAuth2Client.setCredentials({ refresh_token: process.env.GMAIL_REFRESH_TOKEN });
+  oAuth2Client.setCredentials({
+    refresh_token: process.env.GMAIL_REFRESH_TOKEN,
+  });
 }
 
 // MIME 이메일 구성 함수
-function buildRawEmail({ to, from, subject, html }: { to: string; from: string; subject: string; html: string }) {
+function buildRawEmail({
+  to,
+  from,
+  subject,
+  html,
+}: {
+  to: string;
+  from: string;
+  subject: string;
+  html: string;
+}) {
   const lines = [
     `To: ${to}`,
     `From: ${from}`,
@@ -29,7 +41,9 @@ function buildRawEmail({ to, from, subject, html }: { to: string; from: string; 
   const content = lines.join("\n");
   return Buffer.from(content)
     .toString("base64")
-    .replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+    .replace(/\+/g, "-")
+    .replace(/\//g, "_")
+    .replace(/=+$/, "");
 }
 
 // UTF-8 제목 인코딩
@@ -49,26 +63,32 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // OAuth 콜백
+  // OAuth 콜백
   app.get("/api/oauth2callback", async (req, res) => {
     try {
       const { code } = req.query;
       const { tokens } = await oAuth2Client.getToken(code as string);
-      
+
       if (tokens.refresh_token) {
         console.log("\n==== COPY THIS REFRESH TOKEN TO REPLIT SECRETS ====");
         console.log("GMAIL_REFRESH_TOKEN =", tokens.refresh_token);
         console.log("==================================================\n");
       }
-      
+
       oAuth2Client.setCredentials(tokens);
+
+      // 🚨 임시로 화면에도 표시 (획득 후 꼭 삭제!)
       res.send(`
-        <html>
-          <body>
-            <h2>Gmail 인증 완료!</h2>
-            <p>콘솔에 출력된 GMAIL_REFRESH_TOKEN을 Replit Secrets에 추가하세요.</p>
-            <p>이 창을 닫고 애플리케이션으로 돌아가세요.</p>
-          </body>
-        </html>
+        <html><body>
+          <h2>Gmail 인증 완료!</h2>
+          ${
+            tokens.refresh_token
+              ? `<p><b>GMAIL_REFRESH_TOKEN</b>:</p><pre>${tokens.refresh_token}</pre>`
+              : `<p>이번 응답에 refresh_token이 포함되지 않았습니다. 
+                 계정 권한을 철회한 뒤 다시 시도해주세요.</p>`
+          }
+          <p>콘솔(logs)에도 값이 출력됩니다.</p>
+        </body></html>
       `);
     } catch (e) {
       console.error("OAuth 처리 중 오류:", e);
@@ -83,16 +103,19 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       // Refresh Token 확인
       if (!process.env.GMAIL_REFRESH_TOKEN) {
-        return res.status(400).json({ 
-          ok: false, 
-          error: "Gmail 인증이 필요합니다. /api/auth/gmail 경로로 인증을 완료하세요.",
-          needAuth: true
+        return res.status(400).json({
+          ok: false,
+          error:
+            "Gmail 인증이 필요합니다. /api/auth/gmail 경로로 인증을 완료하세요.",
+          needAuth: true,
         });
       }
 
       // 인증 설정
       if (!oAuth2Client.credentials.refresh_token) {
-        oAuth2Client.setCredentials({ refresh_token: process.env.GMAIL_REFRESH_TOKEN });
+        oAuth2Client.setCredentials({
+          refresh_token: process.env.GMAIL_REFRESH_TOKEN,
+        });
       }
 
       const gmail = google.gmail({ version: "v1", auth: oAuth2Client });
@@ -149,19 +172,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
       `;
 
       const raw = buildRawEmail({ to, from, subject, html });
-      
+
       await gmail.users.messages.send({
         userId: "me",
         requestBody: { raw },
       });
 
       res.json({ ok: true, message: "이메일이 성공적으로 발송되었습니다." });
-
     } catch (error: any) {
       console.error("이메일 발송 오류:", error);
-      res.status(500).json({ 
-        ok: false, 
-        error: error.message || "이메일 발송 중 오류가 발생했습니다." 
+      res.status(500).json({
+        ok: false,
+        error: error.message || "이메일 발송 중 오류가 발생했습니다.",
       });
     }
   });
