@@ -3,12 +3,12 @@ import { Factory, ShoppingBag, CheckCircle, ArrowRight, ArrowLeft, ArrowDown, Ar
 
 const B2B2C_Hub = () => {
   return (
-    <section className="py-20 bg-gray-50 min-h-screen flex items-center">
+    <section className="py-20 bg-gradient-to-br from-gray-100 via-white to-gray-50 min-h-screen flex items-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Desktop Layout: 3 columns */}
         <div className="hidden lg:grid lg:grid-cols-3 gap-8 items-stretch">
           {/* B2B Card - Left */}
-          <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 h-full flex flex-col">
+          <div className="bg-white rounded-2xl shadow-xl border border-gray-200 p-8 h-full flex flex-col hover:shadow-2xl transition-shadow duration-300">
             <div className="flex items-center mb-6">
               <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
                 <Factory className="w-7 h-7 text-blue-600" />
@@ -53,7 +53,7 @@ const B2B2C_Hub = () => {
           </div>
 
           {/* Center Connector Card */}
-          <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 h-full flex flex-col justify-center items-center relative overflow-hidden">
+          <div className="bg-white rounded-2xl shadow-xl border border-gray-200 p-8 h-full flex flex-col justify-center items-center relative overflow-hidden hover:shadow-2xl transition-shadow duration-300">
             {/* Animated flowing lines */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="relative w-full h-1">
@@ -111,7 +111,7 @@ const B2B2C_Hub = () => {
           </div>
 
           {/* B2C Card - Right */}
-          <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 h-full flex flex-col">
+          <div className="bg-white rounded-2xl shadow-xl border border-gray-200 p-8 h-full flex flex-col hover:shadow-2xl transition-shadow duration-300">
             <div className="flex items-center mb-6">
               <div className="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mr-4">
                 <ShoppingBag className="w-7 h-7 text-purple-600" />

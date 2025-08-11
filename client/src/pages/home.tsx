@@ -349,14 +349,14 @@ export default function Home() {
         <div className="relative h-48">
           {/* Background line */}
           <div className={`absolute right-0 top-0 w-0.5 h-full transition-all duration-500 ${
-            currentSection === 0 || currentSection === 4 || currentSection === 5 
+            currentSection === 0 || currentSection === 6
               ? 'bg-gray-300' 
               : 'bg-gray-500'
           }`}></div>
           {/* Progress line */}
           <div 
             className={`absolute right-0 top-0 w-0.5 transition-all duration-500 ${
-              currentSection === 0 || currentSection === 4 || currentSection === 5 
+              currentSection === 0 || currentSection === 6
                 ? 'bg-white' 
                 : 'bg-primary'
             }`}
@@ -364,14 +364,14 @@ export default function Home() {
           ></div>
           {/* Section numbers */}
           <div className={`absolute right-3 top-0 text-sm font-medium transition-all duration-500 ${
-            currentSection === 0 || currentSection === 4 || currentSection === 5 
+            currentSection === 0 || currentSection === 6
               ? 'text-white' 
               : 'text-gray-900'
           }`}>
             {String(currentSection + 1).padStart(2, '0')}
           </div>
           <div className={`absolute right-3 bottom-0 text-sm font-medium transition-all duration-500 ${
-            currentSection === 0 || currentSection === 4 || currentSection === 5 
+            currentSection === 0 || currentSection === 6
               ? 'text-gray-400' 
               : 'text-gray-600'
           }`}>
@@ -741,7 +741,7 @@ export default function Home() {
       {/* News Section */}
       <section
         id="news"
-        className="h-screen flex items-center justify-center bg-white"
+        className="h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white"
         style={{ scrollSnapAlign: "start" }}
       >
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
@@ -764,45 +764,45 @@ export default function Home() {
               </div>
 
               <div className="grid sm:grid-cols-2 gap-6">
-                <div className="bg-white p-6 rounded-xl shadow-lg">
+                <div className="bg-white p-6 rounded-xl shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <Globe className="w-6 h-6 text-blue-600" />
                   </div>
-                  <h3 className="font-bold text-lg mb-2">Hoid 일본 진출</h3>
-                  <p className="text-gray-600 text-sm">
+                  <h3 className="font-bold text-lg mb-2 text-gray-900">Hoid 일본 진출</h3>
+                  <p className="text-gray-700 text-sm leading-relaxed">
                     디자인 가전 브랜드 Hoid가 일본 시장에 정식 진출하여 도쿄와
                     오사카 주요 매장에서 만나보실 수 있습니다.
                   </p>
                 </div>
 
-                <div className="bg-white p-6 rounded-xl shadow-lg">
+                <div className="bg-white p-6 rounded-xl shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                     <TrendingUp className="w-6 h-6 text-green-600" />
                   </div>
-                  <h3 className="font-bold text-lg mb-2">시리즈 A 투자 유치</h3>
-                  <p className="text-gray-600 text-sm">
+                  <h3 className="font-bold text-lg mb-2 text-gray-900">시리즈 A 투자 유치</h3>
+                  <p className="text-gray-700 text-sm leading-relaxed">
                     성공적인 투자 유치로 동남아시아 시장 확장과 서비스 고도화를
                     가속화할 예정입니다.
                   </p>
                 </div>
 
-                <div className="bg-white p-6 rounded-xl shadow-lg">
+                <div className="bg-white p-6 rounded-xl shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                     <Smartphone className="w-6 h-6 text-purple-600" />
                   </div>
-                  <h3 className="font-bold text-lg mb-2">다국어 앱 출시</h3>
-                  <p className="text-gray-600 text-sm">
+                  <h3 className="font-bold text-lg mb-2 text-gray-900">다국어 앱 출시</h3>
+                  <p className="text-gray-700 text-sm leading-relaxed">
                     의료관광 고객을 위한 전용 모바일 앱의 베타 버전이 출시되어
                     4개 국어를 지원합니다.
                   </p>
                 </div>
 
-                <div className="bg-white p-6 rounded-xl shadow-lg">
+                <div className="bg-white p-6 rounded-xl shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
                   <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
                     <Award className="w-6 h-6 text-red-600" />
                   </div>
-                  <h3 className="font-bold text-lg mb-2">중국 공장 MOU</h3>
-                  <p className="text-gray-600 text-sm">
+                  <h3 className="font-bold text-lg mb-2 text-gray-900">중국 공장 MOU</h3>
+                  <p className="text-gray-700 text-sm leading-relaxed">
                     중국 최대 규모 공기청정기 제조 공장과 MOU 체결로 3-in-1
                     기술을 국내 독점 도입했습니다.
                   </p>
@@ -923,8 +923,8 @@ export default function Home() {
           </video>
         </div>
 
-        {/* Black overlay with 25% transparency */}
-        <div className="absolute inset-0 bg-[#0000005e]"></div>
+        {/* Black overlay with enhanced contrast */}
+        <div className="absolute inset-0 bg-black/60"></div>
 
         {/* Content over video */}
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
@@ -932,10 +932,10 @@ export default function Home() {
             className="ml-[10%] max-w-2xl opacity-0 animate-fade-in-up"
             style={{ animationDelay: "0.1s" }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-2xl">
               글로벌 진출을 꿈꾸시나요?
             </h2>
-            <p className="text-xl text-white/90 mb-12 drop-shadow-lg font-semibold">
+            <p className="text-xl text-white mb-12 drop-shadow-2xl font-semibold leading-relaxed">
               FeedBack과 함께 아시아를 넘어 세계 시장으로 나아가세요.
               <br />
               전문 컨설턴트가 맞춤형 솔루션을 제안해드립니다.
