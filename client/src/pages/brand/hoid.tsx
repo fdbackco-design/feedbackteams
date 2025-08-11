@@ -168,7 +168,6 @@ export default function Hoid() {
                   alt="MOU 체결 현장"
                   className="w-full rounded-3xl shadow-2xl"
                 />
-                <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-[#0F4C82] rounded-full opacity-20"></div>
               </div>
             </div>
             <div className="order-1 lg:order-2">
@@ -251,7 +250,6 @@ export default function Hoid() {
                   alt="호이드 홈쇼핑 방송 현장"
                   className="w-full rounded-3xl shadow-2xl"
                 />
-                <div className="absolute -top-8 -left-8 w-32 h-32 bg-[#0F4C82] rounded-full opacity-20"></div>
               </div>
             </div>
           </div>
