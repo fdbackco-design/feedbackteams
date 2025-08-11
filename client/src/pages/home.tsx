@@ -180,22 +180,28 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
-  // CSS 네트워크 애니메이션을 위한 네트워크 노드 생성
-  const generateNetworkNodes = () => {
+  // 복잡한 네트워크 노드 생성
+  const generateComplexNetwork = () => {
     const nodes = [];
-    for (let i = 0; i < 20; i++) {
-      nodes.push({
-        id: i,
-        left: Math.random() * 100,
-        top: Math.random() * 100,
-        delay: Math.random() * 3,
-        duration: 3 + Math.random() * 2
-      });
+    // 격자 형태로 노드들을 배치하되 약간의 랜덤성 추가
+    for (let row = 0; row < 8; row++) {
+      for (let col = 0; col < 12; col++) {
+        const baseX = (col / 11) * 100;
+        const baseY = (row / 7) * 100;
+        nodes.push({
+          id: `${row}-${col}`,
+          left: baseX + (Math.random() - 0.5) * 15, // ±7.5% 랜덤
+          top: baseY + (Math.random() - 0.5) * 15,   // ±7.5% 랜덤
+          delay: Math.random() * 4,
+          duration: 2 + Math.random() * 3,
+          size: 2 + Math.random() * 4
+        });
+      }
     }
     return nodes;
   };
 
-  const [networkNodes] = useState(generateNetworkNodes());
+  const [complexNetwork] = useState(generateComplexNetwork());
 
   const yearCount = useCountUp({
     start: 2000,
@@ -879,34 +885,127 @@ export default function Home() {
         className="h-screen flex items-center justify-center text-white relative overflow-hidden"
         style={{ scrollSnapAlign: "start" }}
       >
-        {/* 네트워크 애니메이션 배경 */}
-        <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 overflow-hidden">
-          {/* 고정된 위치의 큰 네트워크 노드들 */}
-          <div className="absolute w-8 h-8 bg-blue-300 rounded-full top-[20%] left-[15%] animate-pulse" style={{ boxShadow: '0 0 30px rgba(59, 130, 246, 0.8)' }} />
-          <div className="absolute w-6 h-6 bg-blue-400 rounded-full top-[30%] left-[80%] animate-pulse" style={{ boxShadow: '0 0 25px rgba(59, 130, 246, 0.7)', animationDelay: '1s' }} />
-          <div className="absolute w-10 h-10 bg-blue-200 rounded-full top-[60%] left-[25%] animate-pulse" style={{ boxShadow: '0 0 35px rgba(59, 130, 246, 0.9)', animationDelay: '2s' }} />
-          <div className="absolute w-7 h-7 bg-blue-300 rounded-full top-[70%] left-[70%] animate-pulse" style={{ boxShadow: '0 0 28px rgba(59, 130, 246, 0.8)', animationDelay: '0.5s' }} />
-          <div className="absolute w-5 h-5 bg-blue-400 rounded-full top-[40%] left-[50%] animate-pulse" style={{ boxShadow: '0 0 22px rgba(59, 130, 246, 0.6)', animationDelay: '1.5s' }} />
-          <div className="absolute w-9 h-9 bg-blue-300 rounded-full top-[80%] left-[40%] animate-pulse" style={{ boxShadow: '0 0 32px rgba(59, 130, 246, 0.8)', animationDelay: '2.5s' }} />
+        {/* 복잡한 네트워크 애니메이션 배경 */}
+        <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900 overflow-hidden">
+          {/* 네트워크 노드들 */}
+          {complexNetwork.map((node) => (
+            <div
+              key={node.id}
+              className="absolute bg-cyan-400 rounded-full opacity-80"
+              style={{
+                left: `${node.left}%`,
+                top: `${node.top}%`,
+                width: `${node.size}px`,
+                height: `${node.size}px`,
+                boxShadow: '0 0 8px rgba(34, 211, 238, 0.6)',
+                animation: `pulse ${node.duration}s ease-in-out infinite`,
+                animationDelay: `${node.delay}s`
+              }}
+            />
+          ))}
           
-          {/* 연결선들 */}
-          <div className="absolute w-px h-32 bg-blue-300 opacity-40 top-[20%] left-[19%] transform rotate-45 animate-pulse" style={{ animationDelay: '3s' }} />
-          <div className="absolute w-40 h-px bg-blue-300 opacity-40 top-[35%] left-[25%] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="absolute w-px h-24 bg-blue-300 opacity-40 top-[40%] left-[53%] transform -rotate-12 animate-pulse" style={{ animationDelay: '2s' }} />
-          <div className="absolute w-32 h-px bg-blue-300 opacity-40 top-[65%] left-[30%] transform rotate-12 animate-pulse" style={{ animationDelay: '0.5s' }} />
+          {/* 수평 연결선들 */}
+          {complexNetwork.filter((_, index) => index % 12 !== 11).map((node, index) => {
+            const nextNode = complexNetwork[index + 1];
+            if (!nextNode) return null;
+            const distance = Math.sqrt(
+              Math.pow(nextNode.left - node.left, 2) + Math.pow(nextNode.top - node.top, 2)
+            );
+            return (
+              <div
+                key={`h-line-${node.id}`}
+                className="absolute bg-cyan-300 opacity-40"
+                style={{
+                  left: `${node.left}%`,
+                  top: `${node.top}%`,
+                  width: `${Math.abs(nextNode.left - node.left)}%`,
+                  height: '1px',
+                  transform: `rotate(${Math.atan2(nextNode.top - node.top, nextNode.left - node.left) * 180 / Math.PI}deg)`,
+                  transformOrigin: '0 0',
+                  animation: `networkPulse ${3 + Math.random() * 2}s ease-in-out infinite`,
+                  animationDelay: `${Math.random() * 2}s`
+                }}
+              />
+            );
+          })}
           
-          {/* 움직이는 배경 패턴 */}
+          {/* 수직 연결선들 */}
+          {complexNetwork.filter((_, index) => index < complexNetwork.length - 12).map((node, index) => {
+            const nextRowNode = complexNetwork[index + 12];
+            if (!nextRowNode) return null;
+            return (
+              <div
+                key={`v-line-${node.id}`}
+                className="absolute bg-cyan-300 opacity-40"
+                style={{
+                  left: `${node.left}%`,
+                  top: `${node.top}%`,
+                  width: `${Math.abs(nextRowNode.left - node.left)}%`,
+                  height: '1px',
+                  transform: `rotate(${Math.atan2(nextRowNode.top - node.top, nextRowNode.left - node.left) * 180 / Math.PI}deg)`,
+                  transformOrigin: '0 0',
+                  animation: `networkPulse ${3 + Math.random() * 2}s ease-in-out infinite`,
+                  animationDelay: `${Math.random() * 2}s`
+                }}
+              />
+            );
+          })}
+          
+          {/* 대각선 연결선들 */}
+          {complexNetwork.filter((_, index) => index % 12 !== 11 && index < complexNetwork.length - 12).map((node, index) => {
+            const diagonalNode = complexNetwork[index + 13];
+            if (!diagonalNode) return null;
+            return (
+              <div
+                key={`d-line-${node.id}`}
+                className="absolute bg-cyan-200 opacity-30"
+                style={{
+                  left: `${node.left}%`,
+                  top: `${node.top}%`,
+                  width: `${Math.abs(diagonalNode.left - node.left)}%`,
+                  height: '1px',
+                  transform: `rotate(${Math.atan2(diagonalNode.top - node.top, diagonalNode.left - node.left) * 180 / Math.PI}deg)`,
+                  transformOrigin: '0 0',
+                  animation: `networkPulse ${4 + Math.random() * 2}s ease-in-out infinite`,
+                  animationDelay: `${Math.random() * 3}s`
+                }}
+              />
+            );
+          })}
+          
+          {/* 반대 대각선 연결선들 */}
+          {complexNetwork.filter((_, index) => index % 12 !== 0 && index < complexNetwork.length - 12).map((node, index) => {
+            const diagonalNode = complexNetwork[index + 11];
+            if (!diagonalNode) return null;
+            return (
+              <div
+                key={`rd-line-${node.id}`}
+                className="absolute bg-cyan-200 opacity-25"
+                style={{
+                  left: `${node.left}%`,
+                  top: `${node.top}%`,
+                  width: `${Math.abs(diagonalNode.left - node.left)}%`,
+                  height: '1px',
+                  transform: `rotate(${Math.atan2(diagonalNode.top - node.top, diagonalNode.left - node.left) * 180 / Math.PI}deg)`,
+                  transformOrigin: '0 0',
+                  animation: `networkPulse ${4 + Math.random() * 2}s ease-in-out infinite`,
+                  animationDelay: `${Math.random() * 3}s`
+                }}
+              />
+            );
+          })}
+          
+          {/* 추가 동적 요소들 */}
           <div 
-            className="absolute inset-0 opacity-30" 
+            className="absolute inset-0 opacity-20" 
             style={{
-              backgroundImage: `
-                radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.3) 2px, transparent 2px),
-                radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.2) 1px, transparent 1px),
-                radial-gradient(circle at 60% 20%, rgba(59, 130, 246, 0.25) 1.5px, transparent 1.5px),
-                radial-gradient(circle at 30% 80%, rgba(59, 130, 246, 0.2) 1px, transparent 1px)
+              background: `
+                radial-gradient(circle at 10% 20%, rgba(34, 211, 238, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 90% 80%, rgba(34, 211, 238, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 50% 50%, rgba(34, 211, 238, 0.05) 1px, transparent 1px)
               `,
-              backgroundSize: '120px 120px, 80px 80px, 100px 100px, 90px 90px',
-              animation: 'networkMove 20s linear infinite'
+              backgroundSize: '60px 60px, 80px 80px, 100px 100px',
+              animation: 'networkMove 25s linear infinite'
             }}
           />
         </div>
