@@ -153,57 +153,98 @@ export default function Service() {
           </p>
         </div>
         
-        {/* Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-10 xl:gap-12">
-          {services.map((service, index) => (
-            <Card key={index} className="shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-[1.02] h-full flex flex-col">
-              {/* Image Section */}
-              <div className="relative h-48 lg:h-56 bg-gradient-to-br from-gray-100 to-gray-200">
-                {service.imageUrl ? (
-                  <img 
-                    src={service.imageUrl} 
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center">
-                    <div className="w-16 h-16 bg-white/80 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <service.icon className="w-8 h-8 text-gray-600" />
-                    </div>
-                  </div>
-                )}
-                <div className="absolute inset-0 bg-black/5 group-hover:bg-black/10 transition-colors duration-300"></div>
-              </div>
-              
-              <CardContent className="p-6 lg:p-8 flex-1">
-                <div className="flex flex-col h-full">
-                  <CardTitle className="text-xl lg:text-2xl font-bold text-gray-900 mb-3 lg:mb-4">
-                    {service.title}
-                  </CardTitle>
-                  <CardDescription className="text-gray-600 mb-4 lg:mb-6 leading-relaxed text-sm lg:text-base flex-grow">
-                    {service.description}
-                  </CardDescription>
-                  <div className="mb-4 lg:mb-6 space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="text-xs lg:text-sm text-gray-500 flex items-center">
-                        <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2 flex-shrink-0"></span>
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                  {service.buttonText === "브랜드 보기" ? (
-                    <Button asChild className={`${service.buttonColor} text-white transition-all duration-300 hover:scale-105 text-sm lg:text-base w-full`}>
-                      <Link href="/brand">{service.buttonText}</Link>
-                    </Button>
+        {/* Horizontal Carousel Layout */}
+        <div className="relative">
+          {/* Navigation Arrows */}
+          <button 
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
+          >
+            <ChevronLeft className="w-6 h-6 text-gray-600" />
+          </button>
+          
+          <button 
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
+          >
+            <ChevronRight className="w-6 h-6 text-gray-600" />
+          </button>
+          
+          {/* Carousel Track */}
+          <div 
+            ref={carouselRef}
+            className="flex gap-8 overflow-x-auto scrollbar-hide scroll-smooth px-16 cursor-grab select-none"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            onMouseDown={handleMouseDown}
+            onMouseLeave={handleMouseLeave}
+            onMouseUp={handleMouseUp}
+            onMouseMove={handleMouseMove}
+          >
+            {services.map((service, index) => (
+              <Card key={index} className="flex-shrink-0 w-[400px] lg:w-[480px] xl:w-[520px] shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:scale-[1.02]">
+                {/* Image Section */}
+                <div className="relative h-56 lg:h-64 bg-gradient-to-br from-gray-100 to-gray-200">
+                  {service.imageUrl ? (
+                    <img 
+                      src={service.imageUrl} 
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   ) : (
-                    <Button className={`${service.buttonColor} text-white transition-all duration-300 hover:scale-105 text-sm lg:text-base w-full`}>
-                      {service.buttonText}
-                    </Button>
+                    <div className="w-full h-full flex items-center justify-center">
+                      <div className="w-20 h-20 bg-white/80 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <service.icon className="w-10 h-10 text-gray-600" />
+                      </div>
+                    </div>
                   )}
+                  <div className="absolute inset-0 bg-black/5 group-hover:bg-black/10 transition-colors duration-300"></div>
                 </div>
-              </CardContent>
-            </Card>
-          ))}
+                
+                <CardContent className="p-8">
+                  <div className="flex flex-col">
+                    <CardTitle className="text-2xl font-bold text-gray-900 mb-4">
+                      {service.title}
+                    </CardTitle>
+                    <CardDescription className="text-gray-600 mb-6 leading-relaxed text-base">
+                      {service.description}
+                    </CardDescription>
+                    <div className="mb-6 space-y-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="text-sm text-gray-500 flex items-center">
+                          <span className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0"></span>
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                    {service.buttonText === "브랜드 보기" ? (
+                      <Button asChild className={`${service.buttonColor} text-white transition-all duration-300 hover:scale-105 text-base w-full py-3`}>
+                        <Link href="/brand">{service.buttonText}</Link>
+                      </Button>
+                    ) : (
+                      <Button className={`${service.buttonColor} text-white transition-all duration-300 hover:scale-105 text-base w-full py-3`}>
+                        {service.buttonText}
+                      </Button>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          
+          {/* Dot Indicators */}
+          <div className="flex justify-center mt-12 space-x-3">
+            {services.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentIndex 
+                    ? 'bg-primary scale-125' 
+                    : 'bg-gray-300 hover:bg-gray-400'
+                }`}
+              />
+            ))}
+          </div>
         </div>
         
         {/* CTA Section */}
