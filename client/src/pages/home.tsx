@@ -932,7 +932,7 @@ export default function Home() {
           {/* Section Header - Aligned with Navigation */}
           <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-8 sm:mb-12">
             <h2 className="news-title">
-              {t("news.title")} <span className="text-gray-400 text-lg sm:text-xl md:text-2xl lg:text-3xl">↗</span>
+              {t("news.title")}
             </h2>
           </div>
 
