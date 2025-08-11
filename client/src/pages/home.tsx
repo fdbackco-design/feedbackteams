@@ -1,8 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-// @ts-ignore
-import * as THREE from 'three';
-// @ts-ignore  
-import NET from 'vanta/dist/vanta.net.min';
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import {
@@ -148,8 +144,6 @@ export default function Home() {
   const [imageLoaded, setImageLoaded] = useState(true);
   const [nextBrandIndex, setNextBrandIndex] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
-  const vantaRef = useRef<HTMLDivElement>(null);
-  const [vantaEffect, setVantaEffect] = useState<any>(null);
 
   const sections = [
     { id: "hero", name: "홈" },
@@ -186,34 +180,22 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
-  // Vanta.js NET 효과 초기화
-  useEffect(() => {
-    if (vantaRef.current && !vantaEffect) {
-      const effect = NET({
-        el: vantaRef.current,
-        THREE: THREE,
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0x3b82f6, // 파란색
-        backgroundColor: 0x1e3a8a, // 진한 파란색
-        points: 10.00,
-        maxDistance: 20.00,
-        spacing: 15.00
+  // CSS 네트워크 애니메이션을 위한 네트워크 노드 생성
+  const generateNetworkNodes = () => {
+    const nodes = [];
+    for (let i = 0; i < 20; i++) {
+      nodes.push({
+        id: i,
+        left: Math.random() * 100,
+        top: Math.random() * 100,
+        delay: Math.random() * 3,
+        duration: 3 + Math.random() * 2
       });
-      setVantaEffect(effect);
     }
-    return () => {
-      if (vantaEffect) {
-        vantaEffect.destroy();
-        setVantaEffect(null);
-      }
-    };
-  }, []);
+    return nodes;
+  };
+
+  const [networkNodes] = useState(generateNetworkNodes());
 
   const yearCount = useCountUp({
     start: 2000,
@@ -897,9 +879,37 @@ export default function Home() {
         className="h-screen flex items-center justify-center text-white relative overflow-hidden"
         style={{ scrollSnapAlign: "start" }}
       >
-        {/* Vanta.js NET 배경 */}
-        <div ref={vantaRef} className="absolute inset-0 w-full h-full"></div>
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        {/* CSS 네트워크 애니메이션 배경 */}
+        <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 overflow-hidden">
+          {/* 애니메이션 네트워크 노드들 */}
+          {networkNodes.map((node) => (
+            <div
+              key={node.id}
+              className="absolute w-2 h-2 bg-blue-400 rounded-full opacity-70"
+              style={{
+                left: `${node.left}%`,
+                top: `${node.top}%`,
+                animation: `pulse ${node.duration}s ease-in-out infinite`,
+                animationDelay: `${node.delay}s`
+              }}
+            />
+          ))}
+          
+          {/* 연결선 효과 */}
+          <div className="absolute inset-0" style={{
+            background: `
+              radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+              radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+              radial-gradient(circle at 60% 20%, rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+              radial-gradient(circle at 30% 80%, rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+              linear-gradient(45deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+              linear-gradient(-45deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px)
+            `,
+            backgroundSize: '100px 100px, 150px 150px, 120px 120px, 180px 180px, 50px 50px, 50px 50px',
+            animation: 'networkMove 20s linear infinite'
+          }} />
+        </div>
+        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="transform hover:scale-110 transition-transform duration-300 cursor-pointer">
