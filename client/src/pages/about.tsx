@@ -338,7 +338,7 @@ const BrandMessageBannerSVG = () => (
           <br />
           <span className="text-[#ffffff]">유통으로 설계합니다</span>
         </h2>
-        <div className="w-24 h-1 bg-blue-300 mx-auto mt-6 rounded-full shadow-lg drop-shadow-lg"></div>
+
       </div>
     </div>
 
