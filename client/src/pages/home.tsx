@@ -994,10 +994,15 @@ export default function Home() {
               {newsData.slice(0, 6).map((news, index) => {
                 const src = resolveNewsThumbnail(news.thumbnail);
                 return (
-                  <div 
+                  <Link 
                     key={index}
-                    className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] lg:w-[420px] xl:w-[480px] 2xl:w-[520px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300" 
+                    href={news.link}
+                    className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] lg:w-[420px] xl:w-[480px] 2xl:w-[520px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer" 
                     style={{ scrollSnapAlign: 'start' }}
+                    onClick={() => {
+                      // Scroll to top when navigating to news detail
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
                   >
                     <div className="aspect-[4/3] bg-gray-200 relative">
                       <img
@@ -1016,7 +1021,7 @@ export default function Home() {
                       </h3>
                       <div className="text-xs sm:text-sm text-gray-400">{news.date}</div>
                     </div>
-                  </div>
+                  </Link>
                 );
               })}
               
