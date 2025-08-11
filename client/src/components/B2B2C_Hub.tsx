@@ -275,7 +275,7 @@ const B2B2C_Hub = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           viewport={{ once: true }}
         >
-          <div className="bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               "완전한 유통 생태계, 피드백"
             </h3>
