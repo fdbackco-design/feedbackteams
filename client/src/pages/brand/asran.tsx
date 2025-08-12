@@ -178,13 +178,7 @@ export default function AsranPage() {
               </div>
             </div>
             
-            <div className="lg:order-first">
-              <img
-                src={asranMainImg}
-                alt="ASRAN 냄비 세트"
-                className="w-full h-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
-              />
-            </div>
+            
           </div>
         </div>
       </section>
