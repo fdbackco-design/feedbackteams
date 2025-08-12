@@ -556,7 +556,7 @@ export default function About() {
                   고객사와 파트너의 신뢰를 기반으로 장기 협력과 함께 발전하는
                   구조를 설계하며,
                   <br />
-                  <span className="font-semibold text-primary">
+                  <span className="font-semibold text-[0F4C82]">
                     모두가 지속 가능한 이익을 나누는 상생 플랫폼
                   </span>
                   을 지향합니다.
