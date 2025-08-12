@@ -108,10 +108,7 @@ export default function InYourHeart() {
                   피부에 순하고 환경에 친화적인 성분만을 사용하여 안전하고
                   지속가능한 뷰티를 추구합니다.
                 </p>
-                <div className="flex items-center justify-center text-[#0F4C82] font-semibold group-hover:translate-x-2 transition-transform duration-300">
-                  <span className="mr-2">성분 상세보기</span>
-                  <ArrowRight className="w-4 h-4" />
-                </div>
+                
               </div>
             </div>
 
@@ -127,10 +124,7 @@ export default function InYourHeart() {
                   제품 사용 순간부터 특별한 경험이 될 수 있도록 감성적이고
                   아름다운 패키지를 디자인합니다.
                 </p>
-                <div className="flex items-center justify-center text-[#0F4C82] font-semibold group-hover:translate-x-2 transition-transform duration-300">
-                  <span className="mr-2">디자인 상세보기</span>
-                  <ArrowRight className="w-4 h-4" />
-                </div>
+                
               </div>
             </div>
 
@@ -146,10 +140,7 @@ export default function InYourHeart() {
                   한국의 우수한 뷰티 기술과 혁신을 전 세계에 알리며 K-뷰티의
                   가치를 높여갑니다.
                 </p>
-                <div className="flex items-center justify-center text-[#0F4C82] font-semibold group-hover:translate-x-2 transition-transform duration-300">
-                  <span className="mr-2">글로벌 진출</span>
-                  <ArrowRight className="w-4 h-4" />
-                </div>
+                
               </div>
             </div>
           </div>
