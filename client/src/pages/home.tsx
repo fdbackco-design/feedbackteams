@@ -853,7 +853,14 @@ export default function Home() {
               </div>
 
               <p className="brand-description">
-                {brands[currentBrandIndex].description}
+                {brands[currentBrandIndex].description.includes('공기청정기, 제습기 등') ? (
+                  <>
+                    공기청정기, 제습기 등 미니멀한 디자인과 첨단 기술이 만나<br />
+                    일상의 공기질을 혁신하는 스마트 가전 브랜드입니다.
+                  </>
+                ) : (
+                  brands[currentBrandIndex].description
+                )}
               </p>
 
               <div className="flex flex-wrap gap-3 mt-6">
