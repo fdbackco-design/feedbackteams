@@ -92,7 +92,7 @@ export default function Brand() {
                       {brand.name}
                     </h2>
                     <p className="text-gray-500 text-xl mb-2">{brand.category}</p>
-                    <p className="text-[#0F4C82] font-semibold text-lg italic">
+                    <p className="text-[#0F4C82] font-semibold text-lg">
                       {brand.slogan}
                     </p>
                   </div>
