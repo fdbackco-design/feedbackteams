@@ -266,9 +266,7 @@ export default function Medifeed() {
                 variant="outline"
                 size="lg"
                 className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#0F4C82] transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-semibold"
-              >
-                건강 상담 신청하기
-              </Button>
+              >상담 신청하기</Button>
             </div>
           </div>
         </div>
