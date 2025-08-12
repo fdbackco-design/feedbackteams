@@ -148,7 +148,7 @@ export default function Contact() {
     {
       icon: MapPin,
       title: t("본사 주소"),
-      content: t("인천 연수구 송도과학로 80, 송도 AIT센터 1302호"),
+      content: t("인천 연수구 송도과학로 80, 송도 AIT센터 1301호, 1302호"),
       color: "bg-primary",
     },
     {
@@ -160,7 +160,7 @@ export default function Contact() {
     {
       icon: Mail,
       title: t("이메일"),
-      content: "fdbackco@gmail.com",
+      content: "fdbackteams@gmail.com",
       color: "bg-accent",
     },
     {
@@ -172,10 +172,7 @@ export default function Contact() {
   ];
 
   const departments = [
-    { dept: t("마케팅부"), email: "fdbackco@gmail.com" },
-    { dept: t("영업부"), email: "fdbackco@gmail.com" },
-    { dept: t("개발부"), email: "fdbackco@gmail.com" },
-    { dept: t("경영지원부"), email: "fdbackco@gmail.com" },
+    { dept: t("경영지원부"), email: "fdbackteams@gmail.com" },
   ];
 
   return (

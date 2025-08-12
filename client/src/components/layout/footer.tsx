@@ -77,7 +77,9 @@ export default function Footer() {
                 <Link
                   href="/service"
                   className="hover:text-white transition-colors"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                 >
                   유통/수출입 중개
                 </Link>
@@ -86,7 +88,9 @@ export default function Footer() {
                 <Link
                   href="/service"
                   className="hover:text-white transition-colors"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                 >
                   자체 브랜드 제조
                 </Link>
@@ -95,7 +99,9 @@ export default function Footer() {
                 <Link
                   href="/service"
                   className="hover:text-white transition-colors"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                 >
                   글로벌 마케팅
                 </Link>
@@ -104,7 +110,9 @@ export default function Footer() {
                 <Link
                   href="/service"
                   className="hover:text-white transition-colors"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                 >
                   의료관광 플랫폼
                 </Link>
@@ -113,7 +121,9 @@ export default function Footer() {
                 <Link
                   href="/service"
                   className="hover:text-white transition-colors"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                 >
                   앱 개발
                 </Link>
@@ -129,7 +139,9 @@ export default function Footer() {
                 <Link
                   href="/brand/hoid"
                   className="hover:text-white transition-colors"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                 >
                   Hoid
                 </Link>
@@ -138,7 +150,9 @@ export default function Footer() {
                 <Link
                   href="/brand/medifeed"
                   className="hover:text-white transition-colors"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                 >
                   Medifeed
                 </Link>
@@ -147,7 +161,9 @@ export default function Footer() {
                 <Link
                   href="/brand/inyourheart"
                   className="hover:text-white transition-colors"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                 >
                   InYourHeart
                 </Link>
@@ -156,7 +172,9 @@ export default function Footer() {
                 <Link
                   href="/brand/sangsaeng"
                   className="hover:text-white transition-colors"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                 >
                   상생
                 </Link>
@@ -169,7 +187,9 @@ export default function Footer() {
                 <Link
                   href="/about"
                   className="hover:text-white transition-colors"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                 >
                   회사소개
                 </Link>
@@ -178,7 +198,9 @@ export default function Footer() {
                 <Link
                   href="/news"
                   className="hover:text-white transition-colors"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                 >
                   뉴스
                 </Link>
@@ -187,7 +209,9 @@ export default function Footer() {
                 <Link
                   href="/contact"
                   className="hover:text-white transition-colors"
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                 >
                   연락처
                 </Link>
@@ -201,7 +225,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-white/60 text-sm mb-4 md:mb-0">
               <p>&copy; 2024 FeedBack Corp. All rights reserved.</p>
-              <p>사업자등록번호: 296-87-03628 | 대표: 송해민</p>
+              <p>사업자등록번호: 296-87-03628 | 대표: 송해민, 정성현</p>
             </div>
             <div className="flex space-x-6 text-sm text-gray-400">
               <a href="#" className="hover:text-white transition-colors">
