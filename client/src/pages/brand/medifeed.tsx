@@ -270,7 +270,7 @@ export default function Medifeed() {
                 className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#0F4C82] transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-semibold"
                 onClick={() => setLocation("/contact")}
               >
-                건강 상담 신청하기
+                상담 신청하기
               </Button>
             </div>
           </div>

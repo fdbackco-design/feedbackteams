@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import {
   ArrowLeft,
   Heart,
@@ -18,6 +18,8 @@ import {
 import inyourHeartVideo from "@assets/imyour_banner_1754643247969.mp4";
 
 export default function InYourHeart() {
+  const [, setLocation] = useLocation();
+
   return (
     <div>
       {/* Hero Section with Video Background */}
@@ -108,7 +110,6 @@ export default function InYourHeart() {
                   피부에 순하고 환경에 친화적인 성분만을 사용하여 안전하고
                   지속가능한 뷰티를 추구합니다.
                 </p>
-                
               </div>
             </div>
 
@@ -124,7 +125,6 @@ export default function InYourHeart() {
                   제품 사용 순간부터 특별한 경험이 될 수 있도록 감성적이고
                   아름다운 패키지를 디자인합니다.
                 </p>
-                
               </div>
             </div>
 
@@ -140,7 +140,6 @@ export default function InYourHeart() {
                   한국의 우수한 뷰티 기술과 혁신을 전 세계에 알리며 K-뷰티의
                   가치를 높여갑니다.
                 </p>
-                
               </div>
             </div>
           </div>
@@ -160,18 +159,12 @@ export default function InYourHeart() {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button
-                size="lg"
-                className="hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-semibold text-[#ffffff] bg-[#000000]"
-              >
-                제품 체험하기
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button
                 variant="outline"
                 size="lg"
                 className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#0F4C82] transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-semibold"
+                onClick={() => setLocation("/contact")}
               >
-                글로벌 스토어 방문
+                문의하기
               </Button>
             </div>
           </div>

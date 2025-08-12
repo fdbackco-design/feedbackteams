@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import {
   ArrowLeft,
   Heart,
@@ -22,6 +22,7 @@ import SangsaengLogo from "@/components/SangsaengLogo";
 import medicalVideo from "@assets/medical_1754647118451.mp4";
 
 export default function Sangsaeng() {
+  const [, setLocation] = useLocation();
   return (
     <div>
       {/* Hero Section with Video Background */}
@@ -157,10 +158,6 @@ export default function Sangsaeng() {
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center justify-center text-[#0F4C82] font-semibold group-hover:translate-x-2 transition-transform duration-300 mt-6">
-                  <span className="mr-2">서비스 상세보기</span>
-                  <ArrowRight className="w-4 h-4" />
-                </div>
               </div>
             </div>
 
@@ -205,10 +202,6 @@ export default function Sangsaeng() {
                       </span>
                     </div>
                   </div>
-                </div>
-                <div className="flex items-center justify-center text-[#0F4C82] font-semibold group-hover:translate-x-2 transition-transform duration-300 mt-6">
-                  <span className="mr-2">플랫폼 상세보기</span>
-                  <ArrowRight className="w-4 h-4" />
                 </div>
               </div>
             </div>
@@ -255,10 +248,6 @@ export default function Sangsaeng() {
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center justify-center text-[#0F4C82] font-semibold group-hover:translate-x-2 transition-transform duration-300 mt-6">
-                  <span className="mr-2">브랜딩 상세보기</span>
-                  <ArrowRight className="w-4 h-4" />
-                </div>
               </div>
             </div>
           </div>
@@ -278,18 +267,12 @@ export default function Sangsaeng() {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button
-                size="lg"
-                className="bg-white text-[#0F4C82] hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-semibold"
-              >
-                의료관광 상담받기
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button
                 variant="outline"
                 size="lg"
                 className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#0F4C82] transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-semibold"
+                onClick={() => setLocation("/contact")}
               >
-                병원 파트너십 문의
+                문의하기
               </Button>
             </div>
           </div>
