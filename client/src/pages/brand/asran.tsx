@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import asranMainImg from "@assets/Mask group_1754982638844.jpg";
+import asranVideo from "@assets/asran_self_1754985186297.mp4";
 
 export default function AsranPage() {
   const [activeFeature, setActiveFeature] = useState(0);
@@ -128,30 +129,41 @@ export default function AsranPage() {
       {/* Hero Section */}
       <section 
         ref={heroRef}
-        className="relative overflow-hidden bg-white pt-32 pb-20"
+        className="relative overflow-hidden bg-black pt-32 pb-20"
         style={{ 
           opacity: 0,
           transform: 'translateY(30px)',
           transition: 'opacity 0.8s ease-out, transform 0.8s ease-out'
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-gray-100/30"></div>
+        <div className="absolute inset-0">
+          <video
+            className="w-full h-full object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src={asranVideo} type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <Badge className="bg-[#0F4C82] text-white px-4 py-2 text-sm font-medium">
+                <Badge className="bg-white text-[#0F4C82] px-4 py-2 text-sm font-medium">
                   프리미엄 주방용품
                 </Badge>
-                <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
                   ASRAN
                 </h1>
-                <p className="text-2xl text-[#0F4C82] font-semibold">
+                <p className="text-2xl text-white font-semibold">
                   독일 기술과 합리적 가격을 모두 갖춘 냄비
                 </p>
               </div>
               
-              <p className="text-xl text-gray-700 leading-relaxed">
+              <p className="text-xl text-white/90 leading-relaxed">
                 SUS410 스테인리스 스틸과 3중 바닥구조로 뛰어난 열전도율과 내구성을 자랑합니다. 
                 인덕션과 가스 겸용으로 어떤 주방환경에서도 완벽하게 사용 가능한 프리미엄 냄비입니다.
               </p>
@@ -159,7 +171,7 @@ export default function AsranPage() {
               <div className="flex flex-wrap gap-4">
                 <Button 
                   variant="outline" 
-                  className="border-[#0F4C82] text-[#0F4C82] hover:bg-[#0F4C82] hover:text-white px-8 py-4 text-lg font-semibold rounded-xl"
+                  className="border-white text-white hover:bg-white hover:text-[#0F4C82] px-8 py-4 text-lg font-semibold rounded-xl"
                 >
                   카탈로그 다운로드
                 </Button>
