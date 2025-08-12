@@ -78,7 +78,9 @@ export default function Brand() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate-in');
+            const element = entry.target as HTMLElement;
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
           }
         });
       },
@@ -118,8 +120,12 @@ export default function Brand() {
             <div 
               key={brand.id} 
               ref={(el) => cardRefs.current[index] = el}
-              className={`${brand.bgColor} rounded-2xl sm:rounded-3xl mobile-card-padding lg:p-16 shadow-xl border border-gray-100 scroll-animate`}
-              style={{ transitionDelay: `${index * 0.1}s` }}>
+              className={`${brand.bgColor} rounded-2xl sm:rounded-3xl mobile-card-padding lg:p-16 shadow-xl border border-gray-100`}
+              style={{ 
+                opacity: 0,
+                transform: 'translateY(50px)',
+                transition: `opacity 0.8s ease-out ${index * 0.2}s, transform 0.8s ease-out ${index * 0.2}s`
+              }}>
               <div
                 className={`grid lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}
               >
@@ -174,7 +180,12 @@ export default function Brand() {
         {/* Brand Partnership CTA */}
         <div 
           ref={ctaRef}
-          className="mt-24 bg-[#0F4C82] rounded-3xl p-16 text-white text-center shadow-2xl scroll-animate"
+          className="mt-24 bg-[#0F4C82] rounded-3xl p-16 text-white text-center shadow-2xl"
+          style={{ 
+            opacity: 0,
+            transform: 'translateY(50px)',
+            transition: 'opacity 0.8s ease-out 1s, transform 0.8s ease-out 1s'
+          }}
         >
           <div className="max-w-4xl mx-auto">
             <h3 className="text-4xl lg:text-5xl font-bold mb-6">
