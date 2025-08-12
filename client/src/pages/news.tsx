@@ -48,7 +48,7 @@ export default function News() {
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
             뉴스 & 보도자료
           </h1>
-          <div className="w-24 h-1 bg-[#0F4C82] mx-auto mb-8"></div>
+          <div className="w-24 h-0.5 bg-[#0F4C82] mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             FeedBack의 최신 소식과 주요 성과를 확인해보세요.
             <br />

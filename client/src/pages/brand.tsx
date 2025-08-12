@@ -73,7 +73,7 @@ export default function Brand() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-10 mt-[75px]">
           <h1 className="text-5xl font-bold text-[#000000] mb-6">브랜드 소개</h1>
-          <div className="w-24 h-1 bg-[#0F4C82] mx-auto mb-8"></div>
+          <div className="w-24 h-0.5 bg-[#0F4C82] mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             혁신적인 기술과 디자인을 바탕으로 한 FeedBack의 자체 브랜드들을 소개합니다.
             <br />각 브랜드는 고유한 가치와 비전을 가지고 고객에게 최고의 경험을 제공합니다.
