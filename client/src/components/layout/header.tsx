@@ -77,11 +77,11 @@ export default function Header(_props: HeaderProps) {
     return () => io.disconnect();
   }, [isHomePage]);
 
-  // 🔑 요구사항: hero(1번), brands(4번) 섹션에서만 검정 글씨
+  // 🔑 요구사항: services(2번), news(5번) 섹션에서만 검정 글씨
   const isBlackSection =
     isHomePage &&
-    (activeSectionId === "hero" ||
-      activeSectionId === "brands");
+    (activeSectionId === "services" ||
+      activeSectionId === "news");
 
   // 서브페이지일 땐 흰 배경 고정
   const headerBgClass = isHomePage
