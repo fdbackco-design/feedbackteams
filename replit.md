@@ -2,6 +2,14 @@
 
 FeedBack is a full-stack web application that serves as a corporate website for an Asian business services company. The application showcases the company's services including medical tourism brokerage, multi-language mobile app development, brand distribution, and marketing consulting. It features a modern corporate design with multiple pages including company information, services, brands, news, and contact forms.
 
+## Recent Performance Optimizations (2025-01-20)
+- **Code Splitting**: Implemented React.lazy for all page components to reduce initial bundle size
+- **Image Optimization**: Added LazyImage component with Intersection Observer for efficient image loading
+- **Video Optimization**: Created LazyVideo component with deferred loading for better performance
+- **Animation Optimization**: Replaced Framer Motion with CSS animations to reduce JavaScript overhead
+- **Timeline Performance**: Optimized About page timeline animations with batched state updates
+- **Reduced Motion Support**: Added prefers-reduced-motion media query support
+
 # User Preferences
 
 Preferred communication style: Simple, everyday language.

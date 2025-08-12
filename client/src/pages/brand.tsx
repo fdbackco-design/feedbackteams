@@ -7,7 +7,7 @@ import hoidImg from "@/assets/brand/hoidintro.jpg";
 import medifeedImg from "@assets/medifeed_1_1754636614100.jpg";
 import inyourheartImg from "@assets/in_your_1754636664888.jpg";
 import sangsaengImg from "@assets/sangsaeng_1_1754636754183.jpg";
-import { motion } from "framer-motion";
+import LazyImage from "@/components/LazyImage";
 
 const brands = [
   {
@@ -83,17 +83,10 @@ export default function Brand() {
 
         <div className="space-y-20">
           {brands.map((brand, index) => (
-            <motion.div 
+            <div 
               key={brand.id} 
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ 
-                duration: 0.8,
-                delay: 0.2,
-                ease: [0.25, 0.46, 0.45, 0.94] 
-              }}
-              viewport={{ once: true, margin: "-50px" }}
-              className={`${brand.bgColor} rounded-3xl p-12 lg:p-16 shadow-xl border border-gray-100`}>
+              className={`${brand.bgColor} rounded-3xl p-12 lg:p-16 shadow-xl border border-gray-100 opacity-0 animate-fade-in-up`}
+              style={{ animationDelay: `${index * 0.2}s` }}>
               <div
                 className={`grid lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}
               >
@@ -134,28 +127,21 @@ export default function Brand() {
                     index % 2 === 1 ? "lg:col-start-1" : "lg:order-last"
                   }
                 >
-                  <img
+                  <LazyImage
                     src={brand.image}
                     alt={`${brand.name} 제품`}
                     className="rounded-2xl shadow-2xl w-full h-auto transform hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Brand Partnership CTA */}
-        <motion.div 
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ 
-            duration: 0.8,
-            delay: 0.3,
-            ease: [0.25, 0.46, 0.45, 0.94] 
-          }}
-          viewport={{ once: true, margin: "-50px" }}
-          className="mt-24 bg-[#0F4C82] rounded-3xl p-16 text-white text-center shadow-2xl"
+        <div 
+          className="mt-24 bg-[#0F4C82] rounded-3xl p-16 text-white text-center shadow-2xl opacity-0 animate-fade-in-up"
+          style={{ animationDelay: "1s" }}
         >
           <div className="max-w-4xl mx-auto">
             <h3 className="text-4xl lg:text-5xl font-bold mb-6">
@@ -173,7 +159,7 @@ export default function Brand() {
               <Link href="/contact">파트너십 문의하기</Link>
             </Button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

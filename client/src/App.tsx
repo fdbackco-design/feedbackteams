@@ -6,37 +6,52 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import Home from "@/pages/home";
-import About from "@/pages/about";
-import Service from "@/pages/service";
-import Brand from "@/pages/brand";
-import News from "@/pages/news";
-import Contact from "@/pages/contact";
-import Article from "@/pages/article";
-import Hoid from "@/pages/brand/hoid";
-import Medifeed from "@/pages/brand/medifeed";
-import InYourHeart from "@/pages/brand/inyourheart";
-import Sangsaeng from "@/pages/brand/sangsaeng";
-import B2B2C_Demo from "@/pages/B2B2C_Demo";
-import NotFound from "@/pages/not-found";
+import { Suspense, lazy } from "react";
+
+// 코드 분할을 위한 lazy loading
+const Home = lazy(() => import("@/pages/home"));
+const About = lazy(() => import("@/pages/about"));
+const Service = lazy(() => import("@/pages/service"));
+const Brand = lazy(() => import("@/pages/brand"));
+const News = lazy(() => import("@/pages/news"));
+const Contact = lazy(() => import("@/pages/contact"));
+const Article = lazy(() => import("@/pages/article"));
+const Hoid = lazy(() => import("@/pages/brand/hoid"));
+const Medifeed = lazy(() => import("@/pages/brand/medifeed"));
+const InYourHeart = lazy(() => import("@/pages/brand/inyourheart"));
+const Sangsaeng = lazy(() => import("@/pages/brand/sangsaeng"));
+const B2B2C_Demo = lazy(() => import("@/pages/B2B2C_Demo"));
+const NotFound = lazy(() => import("@/pages/not-found"));
+
+// 로딩 컴포넌트
+const LoadingSpinner = () => (
+  <div className="min-h-screen flex items-center justify-center bg-background">
+    <div className="flex flex-col items-center space-y-4">
+      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+      <p className="text-muted-foreground">로딩 중...</p>
+    </div>
+  </div>
+);
 
 function Router() {
   return (
-    <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/service" component={Service} />
-      <Route path="/brand" component={Brand} />
-      <Route path="/brand/hoid" component={Hoid} />
-      <Route path="/brand/medifeed" component={Medifeed} />
-      <Route path="/brand/inyourheart" component={InYourHeart} />
-      <Route path="/brand/sangsaeng" component={Sangsaeng} />
-      <Route path="/news" component={News} />
-      <Route path="/article/:id" component={Article} />
-      <Route path="/contact" component={Contact} />
-      <Route path="/b2b2c-demo" component={B2B2C_Demo} />
-      <Route component={NotFound} />
-    </Switch>
+    <Suspense fallback={<LoadingSpinner />}>
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/service" component={Service} />
+        <Route path="/brand" component={Brand} />
+        <Route path="/brand/hoid" component={Hoid} />
+        <Route path="/brand/medifeed" component={Medifeed} />
+        <Route path="/brand/inyourheart" component={InYourHeart} />
+        <Route path="/brand/sangsaeng" component={Sangsaeng} />
+        <Route path="/news" component={News} />
+        <Route path="/article/:id" component={Article} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/b2b2c-demo" component={B2B2C_Demo} />
+        <Route component={NotFound} />
+      </Switch>
+    </Suspense>
   );
 }
 

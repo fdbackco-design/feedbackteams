@@ -410,38 +410,45 @@ export default function About() {
     setTimelineVisible(new Array(timelineData.length).fill(false));
   }, [timelineData.length]);
 
-  // Intersection Observer를 사용한 스크롤 애니메이션
+  // Intersection Observer를 사용한 스크롤 애니메이션 (성능 최적화)
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
+        const updates: { [key: number]: boolean } = {};
+        
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const index = Number(entry.target.getAttribute('data-index'));
             if (index >= 0) {
-              // 순차적으로 나타나도록 딜레이 적용
-              setTimeout(() => {
-                setTimelineVisible(prev => {
-                  const newVisible = [...prev];
-                  newVisible[index] = true;
-                  return newVisible;
-                });
-              }, index * 300); // 300ms씩 순차적으로 나타남
+              updates[index] = true;
             }
           }
         });
+
+        // 한번에 상태 업데이트로 리렌더링 최소화
+        if (Object.keys(updates).length > 0) {
+          setTimelineVisible(prev => {
+            const newVisible = [...prev];
+            Object.entries(updates).forEach(([index, value]) => {
+              newVisible[Number(index)] = value;
+            });
+            return newVisible;
+          });
+        }
       },
       {
-        threshold: 0.2,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.3,
+        rootMargin: '0px 0px -100px 0px'
       }
     );
 
-    timelineRefs.current.forEach((ref) => {
+    const currentRefs = timelineRefs.current;
+    currentRefs.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
 
     return () => {
-      timelineRefs.current.forEach((ref) => {
+      currentRefs.forEach((ref) => {
         if (ref) observer.unobserve(ref);
       });
     };

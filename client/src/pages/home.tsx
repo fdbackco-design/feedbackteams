@@ -32,6 +32,8 @@ import { useCountUp } from "@/hooks/useCountUp";
 import HoidLogo from "@/components/HoidLogo";
 import B2B2C_Hub from "@/components/B2B2C_Hub";
 import NetworkBackground from "@/components/NetworkBackground";
+import LazyImage from "@/components/LazyImage";
+import LazyVideo from "@/components/LazyVideo";
 import shipVideo from "@assets/ship_section_1754640786186.mp4";
 import mainBannerVideo from "@assets/main_banner_last_1754645135592.mp4";
 import cargoShipImage from "@assets/bada-leul-hanghae-haneun-hwamulseon_1754648981305.jpg";
@@ -568,13 +570,13 @@ export default function Home() {
         style={{ scrollSnapAlign: "start" }}
       >
         <div className="absolute inset-0">
-          <video
-            className="absolute inset-0 w-full h-full object-cover"
-            autoPlay
-            loop
-            muted
-            playsInline
+          <LazyVideo
             src={mainBannerVideo}
+            className="absolute inset-0 w-full h-full object-cover"
+            autoPlay={true}
+            loop={true}
+            muted={true}
+            preload="metadata"
           />
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         </div>
@@ -736,7 +738,7 @@ export default function Home() {
                 <div className="grid lg:grid-cols-2 gap-0">
                   {/* Image Section */}
                   <div className="relative h-64 lg:h-auto">
-                    <img
+                    <LazyImage
                       src={services[currentServiceIndex].imageUrl}
                       alt={services[currentServiceIndex].title}
                       className="w-full h-full object-cover"
@@ -807,7 +809,7 @@ export default function Home() {
         style={{ scrollSnapAlign: "start" }}
       >
         <div className="absolute inset-0">
-          <img
+          <LazyImage
             src={brands[currentBrandIndex].image}
             alt={brands[currentBrandIndex].name}
             className={`w-full h-full object-cover transition-all duration-500 ${
@@ -1014,14 +1016,10 @@ export default function Home() {
                     }}
                   >
                     <div className="aspect-[4/3] bg-gray-200 relative">
-                      <img
+                      <LazyImage
                         src={src}
                         alt={news.title}
                         className="w-full h-full object-cover"
-                        draggable={false}
-                        onError={(e) => {
-                          (e.currentTarget as HTMLImageElement).src = FALLBACK;
-                        }}
                       />
                     </div>
                     <div className="p-4 sm:p-5 md:p-6">
@@ -1117,15 +1115,14 @@ export default function Home() {
       >
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full">
-          <video
+          <LazyVideo
+            src={shipVideo}
             className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto transform -translate-x-1/2 -translate-y-1/2 object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-          >
-            <source src={shipVideo} type="video/mp4" />
-          </video>
+            autoPlay={true}
+            muted={true}
+            loop={true}
+            preload="none"
+          />
         </div>
 
         {/* Black overlay with enhanced contrast */}
