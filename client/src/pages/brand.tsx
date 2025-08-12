@@ -150,7 +150,7 @@ export default function Brand() {
                     {brand.logo === "svg" && brand.id === "hoid" ? (
                       <HoidLogo className="mb-2 w-72 h-auto" />
                     ) : brand.logo === "svg" && brand.id === "asran" ? (
-                      <AsranLogo className="mb-2" width="280" height="auto" />
+                      <AsranLogo className="mb-2 [&_.cls-1]:fill-black" width="280" height="auto" />
                     ) : (
                       <h2 className="text-4xl lg:text-5xl font-bold text-[#000000] mb-2">
                         {brand.name}
