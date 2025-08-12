@@ -181,7 +181,7 @@ export default function Contact() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-32 mt-[150px]">
+        <div className="text-center mb-16 mt-[75px]">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
             {t("contact.title")}
           </h1>

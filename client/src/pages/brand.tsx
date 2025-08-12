@@ -71,7 +71,7 @@ export default function Brand() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-20 mt-[150px]">
+        <div className="text-center mb-10 mt-[75px]">
           <h1 className="text-5xl font-bold text-[#000000] mb-6">브랜드 소개</h1>
           <div className="w-24 h-1 bg-[#0F4C82] mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
