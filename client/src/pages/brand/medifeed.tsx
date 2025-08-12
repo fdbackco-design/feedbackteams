@@ -17,7 +17,7 @@ import {
   Calendar,
 } from "lucide-react";
 import MedifeedLogo from "@/components/MedifeedLogo";
-// Video now served from public directory
+import medifeedVideo from "@assets/medifeed_1754647409969.mp4";
 
 export default function Medifeed() {
   return (
@@ -31,7 +31,7 @@ export default function Medifeed() {
           loop
           muted
           playsInline
-          src="/medifeed_1754647409969.mp4"
+          src={medifeedVideo}
         />
         <div className="absolute inset-0 bg-black/40"></div>
 

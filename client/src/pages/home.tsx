@@ -32,7 +32,8 @@ import { useCountUp } from "@/hooks/useCountUp";
 import HoidLogo from "@/components/HoidLogo";
 import B2B2C_Hub from "@/components/B2B2C_Hub";
 import NetworkBackground from "@/components/NetworkBackground";
-// Videos now served from public directory
+import shipVideo from "@assets/ship_section_1754640786186.mp4";
+import mainBannerVideo from "@assets/main_banner_last_1754645135592.mp4";
 import cargoShipImage from "@assets/bada-leul-hanghae-haneun-hwamulseon_1754648981305.jpg";
 import factoryImage from "@assets/factory_1754649106831.png";
 import homeshoppingImage from "@assets/homeshopping_1754649174036.png";
@@ -573,7 +574,7 @@ export default function Home() {
             loop
             muted
             playsInline
-            src="/main_banner_last_1754645135592.mp4"
+            src={mainBannerVideo}
           />
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         </div>
@@ -660,7 +661,7 @@ export default function Home() {
                 playsInline
                 onClick={(e) => e.stopPropagation()}
               >
-                <source src="/main_banner_last_1754645135592.mp4" type="video/mp4" />
+                <source src={mainBannerVideo} type="video/mp4" />
                 비디오를 재생할 수 없습니다. 브라우저가 이 비디오 형식을 지원하지 않습니다.
               </video>
               
@@ -1123,7 +1124,7 @@ export default function Home() {
             loop
             playsInline
           >
-            <source src="/ship_section_1754640786186.mp4" type="video/mp4" />
+            <source src={shipVideo} type="video/mp4" />
           </video>
         </div>
 

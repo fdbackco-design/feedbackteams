@@ -15,7 +15,7 @@ import {
   Globe2,
   ArrowRight,
 } from "lucide-react";
-// Video now served from public directory
+import inyourHeartVideo from "@assets/imyour_banner_1754643247969.mp4";
 
 export default function InYourHeart() {
   return (
@@ -29,7 +29,7 @@ export default function InYourHeart() {
           loop
           muted
           playsInline
-          src="/imyour_banner_1754643247969.mp4"
+          src={inyourHeartVideo}
         />
         <div className="absolute inset-0 bg-black/40"></div>
 

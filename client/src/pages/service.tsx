@@ -1,6 +1,13 @@
-import { useState, useRef, useEffect, useMemo } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import {
   Hospital,
   Smartphone,
@@ -70,109 +77,115 @@ const services = [
 ];
 
 export default function Service() {
-  // [마지막 클론, ...원본, 첫 클론]
-  const extendedServices = useMemo(
-    () => [services[services.length - 1], ...services, services[0]],
-    [],
-  );
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
-  // 무한루프 인덱스는 1부터(=실제 첫 슬라이드)
-  const [currentIndex, setCurrentIndex] = useState(1);
-  const [translateX, setTranslateX] = useState(0);
+  // 무한 스크롤을 위해 services 배열을 3배로 복제
+  const infiniteServices = [...services, ...services, ...services];
 
-  const trackRef = useRef<HTMLDivElement>(null);
-  const jumpingRef = useRef(false); // 점프 중 중복 처리 방지
-
-  const GAP = 16; // gap-4
-
-  const getTranslateFor = (index: number) => {
-    const track = trackRef.current;
-    if (!track) return 0;
-    const firstCard = track.children[0] as HTMLElement | undefined;
-    const cardWidth = firstCard?.clientWidth || 0;
-    const containerWidth = track.clientWidth;
-    const slideWidth = cardWidth + GAP;
-    const centerOffset = (containerWidth - cardWidth) / 2;
-    return -(index * slideWidth) + centerOffset;
+  const nextSlide = () => {
+    const newIndex = (currentIndex + 1) % services.length;
+    setCurrentIndex(newIndex);
+    goToSlide(newIndex + services.length); // 중간 세트의 인덱스로 이동
   };
 
-  const moveTo = (index: number) => {
-    // 일반 이동은 transition 유지
-    const track = trackRef.current;
-    if (track) track.style.transition = ""; // 기본 transition 사용
-    setCurrentIndex(index);
-    setTranslateX(getTranslateFor(index));
+  const prevSlide = () => {
+    const newIndex = currentIndex === 0 ? services.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+    goToSlide(newIndex + services.length); // 중간 세트의 인덱스로 이동
   };
 
-  const nextSlide = () => moveTo(currentIndex + 1);
-  const prevSlide = () => moveTo(currentIndex - 1);
-  const goToSlide = (realIndex: number) => moveTo(realIndex + 1); // 0~n-1 → +1
+  const goToSlide = (actualIndex: number) => {
+    if (carouselRef.current && carouselRef.current.children[0]) {
+      const firstChild = carouselRef.current.children[0] as HTMLElement;
+      const cardWidth = firstChild.clientWidth;
+      const gap = 16; // gap-4 = 16px
+      const containerWidth = carouselRef.current.clientWidth;
 
-  // 초기 배치: transition 끄고 1번으로 즉시 배치
+      // 카드를 정확히 화면 중앙에 위치시키기 위한 계산
+      const slideWidth = cardWidth + gap;
+      
+      // 선택된 카드의 왼쪽 위치
+      const cardLeft = actualIndex * slideWidth;
+
+      // 카드 중앙을 화면 중앙에 맞추기 위한 스크롤 위치
+      const targetScroll = cardLeft - (containerWidth - cardWidth) / 2;
+
+      carouselRef.current.scrollTo({
+        left: targetScroll,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  // 스크롤 끝에 도달했을 때 무한 루프 처리
+  const handleScroll = () => {
+    if (!carouselRef.current || isDragging) return;
+
+    const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
+    const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
+    const gap = 16;
+    const slideWidth = cardWidth + gap;
+    const totalOriginalWidth = services.length * slideWidth;
+
+    // 첫 번째 세트의 끝에 도달하면 두 번째 세트로 점프
+    if (scrollLeft <= slideWidth) {
+      carouselRef.current.scrollLeft = scrollLeft + totalOriginalWidth;
+    }
+    // 세 번째 세트의 시작에 도달하면 두 번째 세트로 점프
+    else if (scrollLeft >= totalOriginalWidth * 2 - slideWidth) {
+      carouselRef.current.scrollLeft = scrollLeft - totalOriginalWidth;
+    }
+  };
+
+  // 드래그 이벤트 핸들러들
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!carouselRef.current) return;
+    setIsDragging(true);
+    setStartX(e.pageX - carouselRef.current.offsetLeft);
+    setScrollLeft(carouselRef.current.scrollLeft);
+    carouselRef.current.style.cursor = "grabbing";
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+    if (carouselRef.current) {
+      carouselRef.current.style.cursor = "grab";
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+    if (carouselRef.current) {
+      carouselRef.current.style.cursor = "grab";
+    }
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !carouselRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - carouselRef.current.offsetLeft;
+    const walk = (x - startX) * 2; // 드래그 속도 조절
+    carouselRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  // 초기 위치를 중간 세트로 설정
   useEffect(() => {
-    const t = setTimeout(() => {
-      const track = trackRef.current;
-      if (!track) return;
-      track.style.transition = "none";
-      setCurrentIndex(1);
-      setTranslateX(getTranslateFor(1));
-      // 강제 리플로우로 스타일 확정
-      track.getBoundingClientRect();
-      // 다음 프레임에 transition 복구
-      requestAnimationFrame(() => {
-        const tr = trackRef.current;
-        if (tr) tr.style.transition = "";
-      });
-    }, 100);
-    return () => clearTimeout(t);
+    if (carouselRef.current) {
+      const timer = setTimeout(() => {
+        goToSlide(currentIndex + services.length);
+        carouselRef.current?.addEventListener('scroll', handleScroll);
+      }, 100);
+
+      return () => {
+        clearTimeout(timer);
+        carouselRef.current?.removeEventListener('scroll', handleScroll);
+      };
+    }
   }, []);
-
-  // transition 끝나면 경계에서 점프(transition 없이 즉시 이동)
-  const handleTransitionEnd = (e?: React.TransitionEvent<HTMLDivElement>) => {
-    // 트랙 자신에게서만 처리(이미지 등 자식의 이벤트 무시)
-    if (e && e.target !== e.currentTarget) return;
-
-    const track = trackRef.current;
-    if (!track || jumpingRef.current) return;
-
-    const lastCloneIndex = extendedServices.length - 1;
-
-    // 오른쪽 끝(마지막 클론) → 실제 첫(1)로 점프
-    if (currentIndex === lastCloneIndex) {
-      jumpingRef.current = true;
-      track.style.transition = "none";
-      const real = 1;
-      setCurrentIndex(real);
-      setTranslateX(getTranslateFor(real));
-      track.getBoundingClientRect(); // 리플로우
-      requestAnimationFrame(() => {
-        const tr = trackRef.current;
-        if (tr) tr.style.transition = "";
-        jumpingRef.current = false;
-      });
-      return;
-    }
-
-    // 왼쪽 끝(첫 클론) → 실제 마지막(services.length)으로 점프
-    if (currentIndex === 0) {
-      jumpingRef.current = true;
-      track.style.transition = "none";
-      const real = services.length;
-      setCurrentIndex(real);
-      setTranslateX(getTranslateFor(real));
-      track.getBoundingClientRect();
-      requestAnimationFrame(() => {
-        const tr = trackRef.current;
-        if (tr) tr.style.transition = "";
-        jumpingRef.current = false;
-      });
-    }
-  };
-
-  // 도트 활성 인덱스(0~n-1)
-  const activeDot =
-    (((currentIndex - 1) % services.length) + services.length) %
-    services.length;
 
   return (
     <section className="min-h-screen py-20 bg-gray-50">
@@ -189,9 +202,9 @@ export default function Service() {
           </p>
         </div>
 
-        {/* Horizontal Carousel */}
+        {/* Horizontal Carousel Layout */}
         <div className="relative w-full">
-          {/* Arrows */}
+          {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
             className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
@@ -206,99 +219,108 @@ export default function Service() {
             <ChevronRight className="w-6 h-6 text-gray-600" />
           </button>
 
-          {/* Track */}
-          <div className="overflow-hidden w-full">
-            <div
-              ref={trackRef}
-              onTransitionEnd={handleTransitionEnd}
-              className="flex gap-4 transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(${translateX}px)` }}
-            >
-              {extendedServices.map((service, index) => (
-                <Card
-                  key={`${service.title}-${index}`}
-                  className="flex-shrink-0 w-[80%] overflow-hidden flex flex-col border-0 shadow-none bg-transparent"
-                  style={{ scrollSnapAlign: "center" }}
-                >
-                  {/* Image */}
-                  <div className="h-[400px] lg:h-[450px] overflow-hidden">
-                    {service.imageUrl ? (
-                      <img
-                        src={service.imageUrl}
-                        alt={service.title}
-                        className={`w-full h-full object-cover rounded-2xl ${
-                          index === 2 || index === 4
-                            ? "object-center"
-                            : index === 5
-                              ? "object-[30%_20%]"
-                              : "object-top"
-                        }`}
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl">
-                        {/* @ts-ignore */}
-                        <service.icon className="w-20 h-20 text-gray-400" />
-                      </div>
-                    )}
+          {/* Carousel Track */}
+          <div
+            ref={carouselRef}
+            className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth cursor-grab select-none w-full"
+            style={{ 
+              scrollbarWidth: "none", 
+              msOverflowStyle: "none",
+              scrollSnapType: "x mandatory"
+            }}
+            onMouseDown={handleMouseDown}
+            onMouseLeave={handleMouseLeave}
+            onMouseUp={handleMouseUp}
+            onMouseMove={handleMouseMove}
+          >
+            {infiniteServices.map((service, index) => (
+              <Card
+                key={index}
+                className="flex-shrink-0 w-[80%] overflow-hidden flex flex-col border-0 shadow-none bg-transparent"
+                style={{ scrollSnapAlign: "center" }}
+              >
+                {/* Image Section - Clean, no overlays */}
+                <div className="h-[400px] lg:h-[450px] overflow-hidden">
+                  {service.imageUrl ? (
+                    <img
+                      src={service.imageUrl}
+                      alt={service.title}
+                      className={`w-full h-full object-cover rounded-2xl ${
+                        (index % services.length) === 1 || (index % services.length) === 3
+                          ? "object-center"
+                          : (index % services.length) === 4
+                            ? "object-[30%_20%]"
+                            : "object-top"
+                      }`}
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl">
+                      <service.icon className="w-20 h-20 text-gray-400" />
+                    </div>
+                  )}
+                </div>
+
+                {/* Content Section - All text content here */}
+                <div className="p-6 lg:p-8 flex-1">
+                  {/* Service number and button row */}
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-4xl lg:text-5xl font-bold text-blue-500">
+                      {String((index % services.length) + 1).padStart(2, "0")}
+                    </span>
+                    <Button
+                      asChild
+                      size="sm"
+                      className="bg-gray-100 text-gray-800 hover:bg-gray-200 rounded-full px-4 py-2 text-xs"
+                    >
+                      <Link 
+                        href="/contact"
+                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                      >
+                        프로젝트 문의
+                      </Link>
+                    </Button>
                   </div>
 
-                  {/* Content */}
-                  <div className="p-6 lg:p-8 flex-1">
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="text-4xl lg:text-5xl font-bold text-blue-500">
-                        {String(
-                          ((index - 1 + services.length) % services.length) + 1,
-                        ).padStart(2, "0")}
-                      </span>
-                      <Button
-                        asChild
-                        size="sm"
-                        className="bg-gray-100 text-gray-800 hover:bg-gray-200 rounded-full px-4 py-2 text-xs"
-                      >
-                        <Link
-                          href="/contact"
-                          onClick={() =>
-                            window.scrollTo({ top: 0, behavior: "smooth" })
-                          }
-                        >
-                          프로젝트 문의
-                        </Link>
-                      </Button>
-                    </div>
+                  {/* Title */}
+                  <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
+                    {service.title}
+                  </h3>
 
-                    <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
-                      {service.title}
-                    </h3>
+                  {/* Description */}
+                  <p className="text-gray-700 mb-4 leading-relaxed text-sm lg:text-base">
+                    {service.description}
+                  </p>
 
-                    <p className="text-gray-700 mb-4 leading-relaxed text-sm lg:text-base">
-                      {service.description}
-                    </p>
-
-                    <div className="space-y-2">
-                      {service.features.slice(0, 3).map((feature, i) => (
+                  {/* Features list */}
+                  <div className="space-y-2">
+                    {service.features
+                      .slice(0, 3)
+                      .map((feature, featureIndex) => (
                         <div
-                          key={i}
+                          key={featureIndex}
                           className="text-xs lg:text-sm text-gray-600 flex items-start"
                         >
                           <span className="w-1 h-1 bg-gray-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
                           {feature}
                         </div>
                       ))}
-                    </div>
                   </div>
-                </Card>
-              ))}
-            </div>
+                </div>
+              </Card>
+            ))}
           </div>
 
-          {/* Dots */}
+          {/* Dot Indicators */}
           <div className="flex justify-center mt-8 space-x-3">
             {services.map((_, index) => (
               <button
                 key={index}
-                onClick={() => goToSlide(index)}
+                onClick={() => {
+                  setCurrentIndex(index);
+                  goToSlide(index + services.length);
+                }}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === activeDot
+                  index === currentIndex
                     ? "bg-primary scale-125"
                     : "bg-gray-300 hover:bg-gray-400"
                 }`}
@@ -308,7 +330,7 @@ export default function Service() {
         </div>
       </div>
 
-      {/* CTA */}
+      {/* CTA Section - Separate container with max-width */}
       <div className="max-w-[1400px] mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
         <div className="mt-16 text-center bg-primary rounded-2xl p-8 lg:p-12 text-white">
           <h3 className="text-3xl font-bold mb-4">
