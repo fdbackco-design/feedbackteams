@@ -121,14 +121,34 @@ export default function Service() {
     }
   };
 
-  // 자동 슬라이드 기능
-  useEffect(() => {
-    const autoSlide = setInterval(() => {
-      nextSlide();
-    }, 4000); // 4초마다 자동 슬라이드
+  // 무한 루프를 위한 스크롤 처리
+  const handleScroll = () => {
+    if (!carouselRef.current || isDragging) return;
 
-    return () => clearInterval(autoSlide);
-  }, [currentIndex]);
+    const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
+    const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
+    const gap = 16;
+    const slideWidth = cardWidth + gap;
+    const totalOriginalWidth = services.length * slideWidth;
+
+    // 디바운싱을 위한 timeout
+    setTimeout(() => {
+      if (!carouselRef.current) return;
+      
+      // 첫 번째 세트의 시작 부분에 도달했을 때
+      if (carouselRef.current.scrollLeft <= slideWidth / 2) {
+        carouselRef.current.style.scrollBehavior = 'auto';
+        carouselRef.current.scrollLeft = totalOriginalWidth + carouselRef.current.scrollLeft;
+        carouselRef.current.style.scrollBehavior = 'smooth';
+      }
+      // 세 번째 세트의 끝 부분에 도달했을 때
+      else if (carouselRef.current.scrollLeft >= totalOriginalWidth * 2 - slideWidth / 2) {
+        carouselRef.current.style.scrollBehavior = 'auto';
+        carouselRef.current.scrollLeft = carouselRef.current.scrollLeft - totalOriginalWidth;
+        carouselRef.current.style.scrollBehavior = 'smooth';
+      }
+    }, 100);
+  };
 
   // 드래그 이벤트 핸들러들
   const handleMouseDown = (e: React.MouseEvent) => {
@@ -217,6 +237,7 @@ export default function Service() {
             onMouseLeave={handleMouseLeave}
             onMouseUp={handleMouseUp}
             onMouseMove={handleMouseMove}
+            onScroll={handleScroll}
           >
             {infiniteServices.map((service, index) => (
               <Card
