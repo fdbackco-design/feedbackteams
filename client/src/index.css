@@ -159,6 +159,21 @@ html {
   @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
 }
 
+/* Additional mobile optimizations for brand page */
+@media (max-width: 640px) {
+  .brand-card {
+    @apply px-3 py-4;
+  }
+  
+  .brand-title {
+    @apply text-lg leading-tight;
+  }
+  
+  .brand-description {
+    @apply text-xs leading-relaxed;
+  }
+}
+
 /* Better mobile viewport handling */
 @media (max-width: 639px) {
   .mobile-full-height {

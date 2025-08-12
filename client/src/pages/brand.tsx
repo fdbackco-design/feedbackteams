@@ -143,55 +143,55 @@ export default function Brand() {
                 transition: `opacity 0.8s ease-out ${index * 0.2}s, transform 0.8s ease-out ${index * 0.2}s`
               }}>
               <div
-                className={`grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}
+                className={`grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 lg:gap-16 items-start lg:items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}
               >
-                <div className={`mobile-card-padding ${index % 2 === 1 ? "lg:col-start-2" : ""}`}>
-                  <div className="mb-6 sm:mb-8">
+                <div className={`space-y-4 sm:space-y-6 ${index % 2 === 1 ? "lg:col-start-2" : ""}`}>
+                  <div className="space-y-3 sm:space-y-4">
                     {brand.logo === "svg" && brand.id === "hoid" ? (
-                      <HoidLogo className="mb-3 w-48 sm:w-64 md:w-72 h-auto" />
+                      <HoidLogo className="w-40 sm:w-48 md:w-64 lg:w-72 h-auto" />
                     ) : brand.logo === "svg" && brand.id === "asran" ? (
-                      <AsranLogo className="mb-3 [&_.cls-1]:fill-black" width="200" height="auto" />
+                      <AsranLogo className="[&_.cls-1]:fill-black" width="180" height="auto" />
                     ) : (
-                      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#000000] mb-3 leading-tight">
+                      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-[#000000] leading-tight">
                         {brand.name}
                       </h2>
                     )}
-                    <p className="text-gray-500 text-base sm:text-lg md:text-xl mb-2">{brand.category}</p>
-                    <p className="text-[#0F4C82] font-semibold text-base sm:text-lg leading-relaxed">
+                    <p className="text-gray-500 text-sm sm:text-base md:text-lg lg:text-xl">{brand.category}</p>
+                    <p className="text-[#0F4C82] font-semibold text-sm sm:text-base md:text-lg leading-relaxed">
                       {brand.slogan}
                     </p>
                   </div>
-                  <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-6 sm:mb-8 md:mb-10 leading-relaxed">
+                  <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed max-w-prose">
                     {brand.description}
                   </p>
-                  <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 mb-6 sm:mb-8 md:mb-10">
+                  <div className="flex flex-wrap gap-2 sm:gap-3">
                     {brand.products.map((product, productIndex) => (
                       <Badge
                         key={productIndex}
-                        className={`${brand.badgeColor} text-white px-3 py-1 sm:px-4 sm:py-2 md:px-5 md:py-2 text-xs sm:text-sm font-medium rounded-full`}
+                        className={`${brand.badgeColor} text-white px-2 py-1 sm:px-3 sm:py-1 md:px-4 md:py-2 text-xs sm:text-sm font-medium rounded-full`}
                       >
                         {product}
                       </Badge>
                     ))}
                   </div>
-                  <Link href={`/brand/${brand.id}`}>
+                  <Link href={`/brand/${brand.id}`} className="block">
                     <Button
-                      className={`${brand.buttonColor} text-white px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-4 text-sm sm:text-base md:text-lg font-semibold transition-all duration-300 transform hover:scale-105 rounded-xl shadow-lg hover:shadow-xl tap-target w-full sm:w-auto`}
+                      className={`${brand.buttonColor} text-white px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 text-xs sm:text-sm md:text-base lg:text-lg font-semibold transition-all duration-300 transform hover:scale-105 rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl tap-target w-full sm:w-auto`}
                     >
-                      {brand.name} 브랜드 자세히 보기
-                      <ArrowRight className="ml-2 sm:ml-3 w-4 h-4 sm:w-5 sm:h-5" />
+                      <span className="truncate">{brand.name} 브랜드 자세히 보기</span>
+                      <ArrowRight className="ml-1 sm:ml-2 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 flex-shrink-0" />
                     </Button>
                   </Link>
                 </div>
                 <div
-                  className={`mt-6 sm:mt-8 lg:mt-0 ${
+                  className={`mt-4 sm:mt-6 lg:mt-0 ${
                     index % 2 === 1 ? "lg:col-start-1" : "lg:order-last"
                   }`}
                 >
                   <LazyImage
                     src={brand.image}
                     alt={`${brand.name} 제품`}
-                    className="rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl w-full h-auto transform hover:scale-105 transition-transform duration-300"
+                    className="rounded-lg sm:rounded-xl lg:rounded-2xl shadow-md sm:shadow-lg lg:shadow-2xl w-full h-auto transform hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
