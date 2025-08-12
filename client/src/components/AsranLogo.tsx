@@ -15,7 +15,7 @@ export default function AsranLogo({ className = "", width = "200", height = "aut
     >
       <defs>
         <style>
-          {`.cls-1 { fill: #231f20; }`}
+          {`.cls-1 { fill: #696969; }`}
         </style>
       </defs>
       <g id="LWPOLYLINE">
