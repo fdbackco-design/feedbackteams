@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
+import { useEffect, useRef } from "react";
 import HoidLogo from "@/components/HoidLogo";
 import hoidImg from "@/assets/brand/hoidintro.jpg";
 import medifeedImg from "@assets/medifeed_1_1754636614100.jpg";
@@ -69,6 +70,37 @@ const brands = [
 ];
 
 export default function Brand() {
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const ctaRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      }
+    );
+
+    // 브랜드 카드들 관찰
+    cardRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    // CTA 섹션 관찰
+    if (ctaRef.current) {
+      observer.observe(ctaRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -85,8 +117,9 @@ export default function Brand() {
           {brands.map((brand, index) => (
             <div 
               key={brand.id} 
-              className={`${brand.bgColor} rounded-2xl sm:rounded-3xl mobile-card-padding lg:p-16 shadow-xl border border-gray-100 opacity-0 animate-fade-in-up`}
-              style={{ animationDelay: `${index * 0.2}s` }}>
+              ref={(el) => cardRefs.current[index] = el}
+              className={`${brand.bgColor} rounded-2xl sm:rounded-3xl mobile-card-padding lg:p-16 shadow-xl border border-gray-100 scroll-animate`}
+              style={{ transitionDelay: `${index * 0.1}s` }}>
               <div
                 className={`grid lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}
               >
@@ -140,8 +173,8 @@ export default function Brand() {
 
         {/* Brand Partnership CTA */}
         <div 
-          className="mt-24 bg-[#0F4C82] rounded-3xl p-16 text-white text-center shadow-2xl opacity-0 animate-fade-in-up"
-          style={{ animationDelay: "1s" }}
+          ref={ctaRef}
+          className="mt-24 bg-[#0F4C82] rounded-3xl p-16 text-white text-center shadow-2xl scroll-animate"
         >
           <div className="max-w-4xl mx-auto">
             <h3 className="text-4xl lg:text-5xl font-bold mb-6">
