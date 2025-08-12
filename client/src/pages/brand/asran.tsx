@@ -130,7 +130,7 @@ export default function AsranPage() {
       {/* Hero Section */}
       <section 
         ref={heroRef}
-        className="relative overflow-hidden bg-black pt-32 pb-32"
+        className="relative overflow-hidden bg-black pt-48 pb-48"
         style={{ 
           opacity: 0,
           transform: 'translateY(30px)',
