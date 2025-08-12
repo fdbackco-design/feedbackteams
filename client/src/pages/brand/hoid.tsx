@@ -167,10 +167,7 @@ export default function Hoid() {
                 <p className="text-gray-600 leading-relaxed text-lg mb-6">
                   어떤 공간에도 자연스럽게 어울리는 세련되고 모던한 디자인 철학
                 </p>
-                <div className="flex items-center text-[#0F4C82] font-semibold group-hover:translate-x-2 transition-transform duration-300">
-                  <span className="mr-2">디자인 스토리</span>
-                  <ArrowRight className="w-4 h-4" />
-                </div>
+                
               </div>
             </div>
           </div>
