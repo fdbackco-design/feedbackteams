@@ -1108,7 +1108,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 text-center">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 text-center">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/15">
               <div className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-2 lg:mb-4 tabular-nums text-white drop-shadow-lg">
                 {yearCount}
@@ -1130,13 +1130,7 @@ export default function Home() {
               <div className="text-sm sm:text-lg lg:text-xl text-blue-300 font-medium">{t("stats.countries")}</div>
               <div className="text-xs sm:text-sm text-gray-300 mt-1 lg:mt-2">{t("stats.countries.sub")}</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/15">
-              <div className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-2 lg:mb-4 tabular-nums text-white drop-shadow-lg">
-                {hospitalCount}+
-              </div>
-              <div className="text-sm sm:text-lg lg:text-xl text-blue-300 font-medium">{t("stats.hospitals")}</div>
-              <div className="text-xs sm:text-sm text-gray-300 mt-1 lg:mt-2">{t("stats.hospitals.sub")}</div>
-            </div>
+            
           </div>
         </div>
       </section>
