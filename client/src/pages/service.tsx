@@ -82,110 +82,68 @@ export default function Service() {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
-
-  // 무한 스크롤을 위해 services 배열을 3배로 복제
-  const infiniteServices = [...services, ...services, ...services];
+  const [translateX, setTranslateX] = useState(0);
 
   const nextSlide = () => {
     const newIndex = (currentIndex + 1) % services.length;
     setCurrentIndex(newIndex);
-    goToSlide(newIndex + services.length); // 중간 세트의 인덱스로 이동
+    
+    if (carouselRef.current) {
+      const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
+      const gap = 16;
+      const slideWidth = cardWidth + gap;
+      const containerWidth = carouselRef.current.clientWidth;
+      
+      // 카드 중앙 정렬을 위한 offset
+      const centerOffset = (containerWidth - cardWidth) / 2;
+      const newTranslateX = -(newIndex * slideWidth) + centerOffset;
+      
+      setTranslateX(newTranslateX);
+    }
   };
 
   const prevSlide = () => {
     const newIndex = currentIndex === 0 ? services.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
-    goToSlide(newIndex + services.length); // 중간 세트의 인덱스로 이동
-  };
-
-  const goToSlide = (actualIndex: number) => {
-    if (carouselRef.current && carouselRef.current.children[0]) {
-      const firstChild = carouselRef.current.children[0] as HTMLElement;
-      const cardWidth = firstChild.clientWidth;
-      const gap = 16; // gap-4 = 16px
-      const containerWidth = carouselRef.current.clientWidth;
-
-      // 카드를 정확히 화면 중앙에 위치시키기 위한 계산
+    
+    if (carouselRef.current) {
+      const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
+      const gap = 16;
       const slideWidth = cardWidth + gap;
+      const containerWidth = carouselRef.current.clientWidth;
       
-      // 선택된 카드의 왼쪽 위치
-      const cardLeft = actualIndex * slideWidth;
-
-      // 카드 중앙을 화면 중앙에 맞추기 위한 스크롤 위치
-      const targetScroll = cardLeft - (containerWidth - cardWidth) / 2;
-
-      carouselRef.current.scrollTo({
-        left: targetScroll,
-        behavior: "smooth",
-      });
+      // 카드 중앙 정렬을 위한 offset
+      const centerOffset = (containerWidth - cardWidth) / 2;
+      const newTranslateX = -(newIndex * slideWidth) + centerOffset;
+      
+      setTranslateX(newTranslateX);
     }
   };
 
-  // 스크롤 끝에 도달했을 때 무한 루프 처리
-  const handleScroll = () => {
-    if (!carouselRef.current || isDragging) return;
-
-    const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
-    const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
-    const gap = 16;
-    const slideWidth = cardWidth + gap;
-    const totalOriginalWidth = services.length * slideWidth;
-
-    // 첫 번째 세트의 끝에 도달하면 두 번째 세트로 점프
-    if (scrollLeft <= slideWidth) {
-      carouselRef.current.scrollLeft = scrollLeft + totalOriginalWidth;
-    }
-    // 세 번째 세트의 시작에 도달하면 두 번째 세트로 점프
-    else if (scrollLeft >= totalOriginalWidth * 2 - slideWidth) {
-      carouselRef.current.scrollLeft = scrollLeft - totalOriginalWidth;
-    }
-  };
-
-  // 드래그 이벤트 핸들러들
-  const handleMouseDown = (e: React.MouseEvent) => {
-    if (!carouselRef.current) return;
-    setIsDragging(true);
-    setStartX(e.pageX - carouselRef.current.offsetLeft);
-    setScrollLeft(carouselRef.current.scrollLeft);
-    carouselRef.current.style.cursor = "grabbing";
-  };
-
-  const handleMouseLeave = () => {
-    setIsDragging(false);
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+    
     if (carouselRef.current) {
-      carouselRef.current.style.cursor = "grab";
+      const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
+      const gap = 16;
+      const slideWidth = cardWidth + gap;
+      const containerWidth = carouselRef.current.clientWidth;
+      
+      // 카드 중앙 정렬을 위한 offset
+      const centerOffset = (containerWidth - cardWidth) / 2;
+      const newTranslateX = -(index * slideWidth) + centerOffset;
+      
+      setTranslateX(newTranslateX);
     }
   };
 
-  const handleMouseUp = () => {
-    setIsDragging(false);
-    if (carouselRef.current) {
-      carouselRef.current.style.cursor = "grab";
-    }
-  };
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging || !carouselRef.current) return;
-    e.preventDefault();
-    const x = e.pageX - carouselRef.current.offsetLeft;
-    const walk = (x - startX) * 2; // 드래그 속도 조절
-    carouselRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  // 초기 위치를 중간 세트의 첫 번째 카드로 설정
+  // 초기 위치 설정
   useEffect(() => {
-    if (carouselRef.current) {
-      const timer = setTimeout(() => {
-        setCurrentIndex(0); // 1번째 카드로 설정
-        goToSlide(services.length); // 중간 세트의 첫 번째 카드
-        carouselRef.current?.addEventListener('scroll', handleScroll);
-      }, 100);
+    const timer = setTimeout(() => {
+      goToSlide(0); // 1번째 카드로 설정
+    }, 100);
 
-      return () => {
-        clearTimeout(timer);
-        carouselRef.current?.removeEventListener('scroll', handleScroll);
-      };
-    }
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -221,21 +179,16 @@ export default function Service() {
           </button>
 
           {/* Carousel Track */}
-          <div
-            ref={carouselRef}
-            className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth cursor-grab select-none w-full"
-            style={{ 
-              scrollbarWidth: "none", 
-              msOverflowStyle: "none",
-              scrollSnapType: "x mandatory"
-            }}
-            onMouseDown={handleMouseDown}
-            onMouseLeave={handleMouseLeave}
-            onMouseUp={handleMouseUp}
-            onMouseMove={handleMouseMove}
-          >
-            {infiniteServices.map((service, index) => (
-              <Card
+          <div className="overflow-hidden w-full">
+            <div
+              ref={carouselRef}
+              className="flex gap-4 transition-transform duration-500 ease-in-out"
+              style={{ 
+                transform: `translateX(${translateX}px)`
+              }}
+            >
+              {services.map((service, index) => (
+                <Card
                 key={index}
                 className="flex-shrink-0 w-[80%] overflow-hidden flex flex-col border-0 shadow-none bg-transparent"
                 style={{ scrollSnapAlign: "center" }}
@@ -247,9 +200,9 @@ export default function Service() {
                       src={service.imageUrl}
                       alt={service.title}
                       className={`w-full h-full object-cover rounded-2xl ${
-                        (index % services.length) === 1 || (index % services.length) === 3
+                        index === 1 || index === 3
                           ? "object-center"
-                          : (index % services.length) === 4
+                          : index === 4
                             ? "object-[30%_20%]"
                             : "object-top"
                       }`}
@@ -266,7 +219,7 @@ export default function Service() {
                   {/* Service number and button row */}
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-4xl lg:text-5xl font-bold text-blue-500">
-                      {String((index % services.length) + 1).padStart(2, "0")}
+                      {String(index + 1).padStart(2, "0")}
                     </span>
                     <Button
                       asChild
@@ -309,6 +262,7 @@ export default function Service() {
                 </div>
               </Card>
             ))}
+            </div>
           </div>
 
           {/* Dot Indicators */}
@@ -316,10 +270,7 @@ export default function Service() {
             {services.map((_, index) => (
               <button
                 key={index}
-                onClick={() => {
-                  setCurrentIndex(index);
-                  goToSlide(index + services.length);
-                }}
+                onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentIndex
                     ? "bg-primary scale-125"
