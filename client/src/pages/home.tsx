@@ -844,28 +844,16 @@ export default function Home() {
                 <div className="text-sm font-semibold uppercase tracking-wide opacity-90">
                   {brands[currentBrandIndex].category}
                 </div>
-                <h2 className="brand-title text-5xl md:text-6xl mb-4">
+                <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight">
                   {brands[currentBrandIndex].name}
                 </h2>
-                <p className="text-2xl md:text-3xl font-light mb-6 opacity-90">
+                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light mb-6 opacity-90 leading-tight">
                   {brands[currentBrandIndex].slogan}
                 </p>
               </div>
 
-              <p className="brand-description">
-                {brands[currentBrandIndex].description.includes('공기청정기, 제습기 등') ? (
-                  <>
-                    공기청정기, 제습기 등 미니멀한 디자인과 첨단 기술이 만나<br />
-                    일상의 공기질을 혁신하는 스마트 가전 브랜드입니다.
-                  </>
-                ) : brands[currentBrandIndex].description.includes('잇몸과 눈 건강을') ? (
-                  <>
-                    잇몸과 눈 건강을 중심으로 한 기능성 영양제 브랜드로,<br />
-                    실용성과 안전성을 바탕으로 건강 솔루션을 제공합니다.
-                  </>
-                ) : (
-                  brands[currentBrandIndex].description
-                )}
+              <p className="text-base sm:text-lg leading-relaxed opacity-90 max-w-md sm:max-w-lg">
+                {brands[currentBrandIndex].description}
               </p>
 
               <div className="flex flex-wrap gap-3 mt-6">
@@ -1041,7 +1029,7 @@ export default function Home() {
                   <Link 
                     key={index}
                     href={news.link}
-                    className="flex-shrink-0 w-[380px] sm:w-[420px] md:w-[480px] lg:w-[540px] xl:w-[600px] 2xl:w-[640px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer" 
+                    className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[380px] lg:w-[420px] xl:w-[480px] 2xl:w-[520px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer" 
                     style={{ scrollSnapAlign: 'center' }}
                     onClick={() => {
                       // Scroll to top when navigating to news detail
@@ -1055,11 +1043,11 @@ export default function Home() {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="p-6 sm:p-7 md:p-8">
-                      <h3 className="news-card-title mb-4">
+                    <div className="p-4 sm:p-5 md:p-6 lg:p-7">
+                      <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 leading-tight line-clamp-2 mb-3">
                         {news.title}
                       </h3>
-                      <div className="news-card-date">{news.date}</div>
+                      <div className="text-sm sm:text-base text-gray-500">{news.date}</div>
                     </div>
                   </Link>
                 );
@@ -1158,13 +1146,13 @@ export default function Home() {
         {/* Content over video */}
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
           <div
-            className="ml-[10%] max-w-2xl opacity-0 animate-fade-in-up"
+            className="sm:ml-[10%] max-w-2xl opacity-0 animate-fade-in-up"
             style={{ animationDelay: "0.1s" }}
           >
-            <h2 className="cta-title text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
               {t("cta.title")}
             </h2>
-            <p className="cta-description text-white mb-12 font-normal">
+            <p className="text-lg sm:text-xl font-semibold text-white mb-8 sm:mb-12 font-normal leading-relaxed">
               {t("cta.description").split('\n').map((line, index) => (
                 <span key={index}>
                   {line}

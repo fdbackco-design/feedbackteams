@@ -122,28 +122,28 @@ export default function Brand() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-10 mt-[75px]">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#000000] mb-4 sm:mb-6">브랜드 소개</h1>
+        <div className="text-center mb-10 mt-16 sm:mt-20 mobile-padding">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#000000] mb-4 sm:mb-6">브랜드 소개</h1>
           <div className="w-16 sm:w-24 h-0.5 bg-[#0F4C82] mx-auto mb-6 sm:mb-8"></div>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mobile-padding">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             혁신적인 기술과 디자인을 바탕으로 한 FeedBack의 자체 브랜드들을 소개합니다.
             <br className="hidden sm:block" />각 브랜드는 고유한 가치와 비전을 가지고 고객에게 최고의 경험을 제공합니다.
           </p>
         </div>
 
-        <div className="space-y-20">
+        <div className="space-y-12 sm:space-y-16 md:space-y-20">
           {brands.map((brand, index) => (
             <div 
               key={brand.id} 
               ref={(el) => cardRefs.current[index] = el}
-              className={`${brand.bgColor} rounded-2xl sm:rounded-3xl mobile-card-padding lg:p-16 shadow-xl border border-gray-100`}
+              className={`${brand.bgColor} rounded-xl sm:rounded-2xl lg:rounded-3xl mobile-card-padding lg:p-16 shadow-xl border border-gray-100`}
               style={{ 
                 opacity: 0,
                 transform: 'translateY(50px)',
                 transition: `opacity 0.8s ease-out ${index * 0.2}s, transform 0.8s ease-out ${index * 0.2}s`
               }}>
               <div
-                className={`grid lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}
+                className={`grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}
               >
                 <div className={index % 2 === 1 ? "lg:col-start-2" : ""}>
                   <div className="mb-8">

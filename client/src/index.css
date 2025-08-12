@@ -74,6 +74,41 @@ html {
   @apply p-4 sm:p-6 lg:p-8;
 }
 
+/* Enhanced mobile carousel controls */
+.mobile-carousel-button {
+  @apply w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all duration-300;
+}
+
+/* Mobile image handling */
+.mobile-responsive-image {
+  @apply w-full h-auto object-cover;
+}
+
+/* Mobile form improvements */
+.mobile-form-input {
+  @apply w-full px-3 py-3 sm:px-4 sm:py-4 text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent;
+}
+
+/* Mobile navigation improvements */
+.mobile-nav-item {
+  @apply block px-4 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition-colors duration-200;
+}
+
+/* Enhanced mobile viewport heights */
+.mobile-min-height {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* Mobile safe area for notched phones */
+.mobile-safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.mobile-safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
 /* Scroll animation classes */
 .scroll-animate {
   opacity: 0;

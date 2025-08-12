@@ -194,13 +194,13 @@ export default function Service() {
 
   return (
     <section className="min-h-screen py-20 bg-gray-50">
-      <div className="max-w-[1400px] mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
-        <div className="text-center mb-8 mt-[75px]">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="text-center mb-8 mt-16 sm:mt-20 mobile-padding">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
             서비스 소개
           </h1>
           <div className="w-16 sm:w-24 h-0.5 bg-[#0F4C82] mx-auto mb-6 sm:mb-8"></div>
-          <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto mobile-padding">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             FeedBack은 다양한 분야의 전문적인 서비스를 통해
             <br className="hidden sm:block" />
             고객의 비즈니스 성공을 지원합니다.
@@ -242,11 +242,11 @@ export default function Service() {
             {infiniteServices.map((service, index) => (
               <Card
                 key={index}
-                className="flex-shrink-0 w-[80%] overflow-hidden flex flex-col border-0 shadow-none bg-transparent"
+                className="flex-shrink-0 w-[85%] sm:w-[80%] md:w-[75%] lg:w-[70%] overflow-hidden flex flex-col border-0 shadow-none bg-transparent"
                 style={{ scrollSnapAlign: "center" }}
               >
                 {/* Image Section - Clean, no overlays */}
-                <div className="h-[400px] lg:h-[450px] overflow-hidden">
+                <div className="h-[280px] sm:h-[320px] md:h-[360px] lg:h-[400px] xl:h-[450px] overflow-hidden">
                   {service.imageUrl ? (
                     <img
                       src={service.imageUrl}

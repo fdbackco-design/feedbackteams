@@ -178,12 +178,12 @@ export default function Contact() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 mt-[75px]">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+        <div className="text-center mb-16 mt-16 sm:mt-20 mobile-padding">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             {t("contact.title")}
           </h1>
-          <div className="w-24 h-0.5 bg-[#0F4C82] mx-auto mb-8"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="w-16 sm:w-24 h-0.5 bg-[#0F4C82] mx-auto mb-8"></div>
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             {t("FeedBack과 함께 새로운 비즈니스 기회를 만들어보세요.")
               .split("\n")
               .map((line, index) => (
@@ -195,27 +195,27 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 mobile-padding">
           {/* Contact Information */}
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
               {t("연락처")}
             </h2>
 
             {/* Company Info Cards */}
-            <div className="space-y-6 mb-12">
+            <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-12">
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex items-start">
                   <div
-                    className={`w-12 h-12 ${info.color} rounded-full flex items-center justify-center flex-shrink-0`}
+                    className={`w-10 h-10 sm:w-12 sm:h-12 ${info.color} rounded-full flex items-center justify-center flex-shrink-0 tap-target`}
                   >
-                    <info.icon className="w-6 h-6 text-white" />
+                    <info.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <div className="ml-4">
-                    <h3 className="font-semibold text-gray-900 mb-1">
+                  <div className="ml-3 sm:ml-4">
+                    <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-1">
                       {info.title}
                     </h3>
-                    <p className="text-gray-600 whitespace-pre-line">
+                    <p className="text-sm sm:text-base text-gray-600 whitespace-pre-line">
                       {info.content}
                     </p>
                   </div>
@@ -242,33 +242,33 @@ export default function Contact() {
 
             {/* Social Media */}
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">
                 {t("소셜미디어")}
               </h3>
-              <div className="flex space-x-4">
+              <div className="flex space-x-3 sm:space-x-4">
                 <a
                   href="#"
-                  className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors tap-target"
                 >
-                  <Facebook className="w-6 h-6" />
+                  <Facebook className="w-5 h-5 sm:w-6 sm:h-6" />
                 </a>
                 <a
                   href="#"
-                  className="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center text-white hover:bg-blue-500 transition-colors"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-400 rounded-full flex items-center justify-center text-white hover:bg-blue-500 transition-colors tap-target"
                 >
-                  <Twitter className="w-6 h-6" />
+                  <Twitter className="w-5 h-5 sm:w-6 sm:h-6" />
                 </a>
                 <a
                   href="#"
-                  className="w-12 h-12 bg-blue-700 rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition-colors"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-700 rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition-colors tap-target"
                 >
-                  <Linkedin className="w-6 h-6" />
+                  <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
                 </a>
                 <a
                   href="#"
-                  className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white hover:bg-red-700 transition-colors"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-red-600 rounded-full flex items-center justify-center text-white hover:bg-red-700 transition-colors tap-target"
                 >
-                  <Youtube className="w-6 h-6" />
+                  <Youtube className="w-5 h-5 sm:w-6 sm:h-6" />
                 </a>
               </div>
             </div>

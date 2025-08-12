@@ -44,12 +44,12 @@ export default function News() {
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10 mt-[75px]">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+        <div className="text-center mb-10 mt-16 sm:mt-20 mobile-padding">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
             뉴스 & 보도자료
           </h1>
           <div className="w-16 sm:w-24 h-0.5 bg-[#0F4C82] mx-auto mb-6 sm:mb-8"></div>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mobile-padding">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             FeedBack의 최신 소식과 주요 성과를 확인해보세요.
             <br className="hidden sm:block" />
             언론 보도자료와 기업 뉴스를 한눈에 볼 수 있습니다.
@@ -58,12 +58,12 @@ export default function News() {
 
         {/* News Filter */}
         <div className="flex justify-center mb-8 sm:mb-12 mobile-padding">
-          <div className="bg-white rounded-lg p-2 shadow-sm">
+          <div className="bg-white rounded-lg p-1 sm:p-2 shadow-sm">
             {filterOptions.map((option) => (
               <Button
                 key={option.value}
                 variant={activeFilter === option.value ? "default" : "ghost"}
-                className="mobile-button-size mr-2 last:mr-0"
+                className="text-xs sm:text-sm px-3 py-2 sm:px-4 sm:py-2 mr-1 sm:mr-2 last:mr-0 tap-target"
                 onClick={() => setActiveFilter(option.value)}
               >
                 {option.label}
@@ -73,7 +73,7 @@ export default function News() {
         </div>
 
         {/* News Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12 mobile-padding">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12 mobile-padding">
           {filteredNews.slice(0, visibleNews).map((news, index) => {
             const src = resolveNewsThumbnail(news.thumbnail);
             return (
