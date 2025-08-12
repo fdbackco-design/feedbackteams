@@ -956,12 +956,16 @@ export default function Home() {
             <button
               onClick={() => {
                 if (newsScrollRef.current) {
-                  const containerWidth = newsScrollRef.current.clientWidth;
-                  const scrollAmount = containerWidth * 0.8; // 80% of container width
-                  newsScrollRef.current.scrollBy({
-                    left: -scrollAmount,
-                    behavior: 'smooth'
-                  });
+                  const cards = newsScrollRef.current.children;
+                  if (cards.length > 0) {
+                    const cardWidth = (cards[0] as HTMLElement).offsetWidth;
+                    const gap = 32; // md:gap-8
+                    const slideWidth = cardWidth + gap;
+                    newsScrollRef.current.scrollBy({
+                      left: -slideWidth,
+                      behavior: 'smooth'
+                    });
+                  }
                 }
               }}
               className="absolute -left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/95 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:scale-110 border border-gray-100"
@@ -975,12 +979,16 @@ export default function Home() {
             <button
               onClick={() => {
                 if (newsScrollRef.current) {
-                  const containerWidth = newsScrollRef.current.clientWidth;
-                  const scrollAmount = containerWidth * 0.8; // 80% of container width
-                  newsScrollRef.current.scrollBy({
-                    left: scrollAmount,
-                    behavior: 'smooth'
-                  });
+                  const cards = newsScrollRef.current.children;
+                  if (cards.length > 0) {
+                    const cardWidth = (cards[0] as HTMLElement).offsetWidth;
+                    const gap = 32; // md:gap-8
+                    const slideWidth = cardWidth + gap;
+                    newsScrollRef.current.scrollBy({
+                      left: slideWidth,
+                      behavior: 'smooth'
+                    });
+                  }
                 }
               }}
               className="absolute -right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/95 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:scale-110 border border-gray-100"
@@ -993,7 +1001,7 @@ export default function Home() {
 
             <div 
               ref={newsScrollRef}
-              className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto pb-6 scrollbar-hide cursor-grab"
+              className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto pb-6 scrollbar-hide cursor-grab justify-start"
               style={{ 
                 scrollSnapType: 'x mandatory',
                 scrollbarWidth: 'none',
@@ -1010,7 +1018,7 @@ export default function Home() {
                     key={index}
                     href={news.link}
                     className="flex-shrink-0 w-[380px] sm:w-[420px] md:w-[480px] lg:w-[540px] xl:w-[600px] 2xl:w-[640px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer" 
-                    style={{ scrollSnapAlign: 'start' }}
+                    style={{ scrollSnapAlign: 'center' }}
                     onClick={() => {
                       // Scroll to top when navigating to news detail
                       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1024,10 +1032,10 @@ export default function Home() {
                       />
                     </div>
                     <div className="p-6 sm:p-7 md:p-8">
-                      <h3 className="font-medium text-base sm:text-lg md:text-xl lg:text-2xl mb-4 text-gray-900 leading-tight line-clamp-2">
+                      <h3 className="news-card-title mb-4">
                         {news.title}
                       </h3>
-                      <div className="text-sm sm:text-base text-gray-400">{news.date}</div>
+                      <div className="news-card-date">{news.date}</div>
                     </div>
                   </Link>
                 );
