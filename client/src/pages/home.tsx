@@ -526,8 +526,8 @@ export default function Home() {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Section Navigation Line - Desktop: right side, Mobile: center */}
-      <div className="fixed right-4 md:right-8 top-1/2 transform -translate-y-1/2 md:translate-x-0 left-1/2 -translate-x-1/2 md:left-auto z-50">
+      {/* Section Navigation Line - Desktop: right side, Mobile: bottom center */}
+      <div className="fixed right-4 md:right-8 bottom-4 md:top-1/2 transform md:-translate-y-1/2 md:translate-x-0 left-1/2 -translate-x-1/2 md:left-auto z-50">
         <div className="relative h-8 md:h-48 w-32 md:w-auto">
           {/* Background line - horizontal on mobile, vertical on desktop */}
           <div className={`absolute md:right-0 md:top-0 bottom-2 md:bottom-auto left-0 md:left-auto w-full md:w-0.5 h-0.5 md:h-full transition-all duration-500 ${
