@@ -152,9 +152,6 @@ export default function AsranPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <Badge className="bg-white text-[#0F4C82] px-4 py-2 text-sm font-medium">
-                  프리미엄 주방용품
-                </Badge>
                 <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
                   ASRAN
                 </h1>
