@@ -338,7 +338,7 @@ export default function AsranPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 bg-[#0F4C82] text-white">
+      <section className="py-20 bg-[#0F4C82] text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
