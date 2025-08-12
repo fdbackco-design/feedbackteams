@@ -22,7 +22,7 @@ import globalImage from "@assets/13730_1754568375896.jpg";
 import trustImage from "@assets/hands_1754568922347.png";
 import peopleImage from "@assets/people_1754639134434.jpg";
 import mapImage from "@assets/map_1754832577677.png";
-import newOrganizationChart from "@assets/company_map_1754903370561.png";
+import newOrganizationChart from "@assets/company_2_1754983649735.png";
 
 
 
