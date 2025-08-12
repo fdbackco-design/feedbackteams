@@ -8,6 +8,7 @@ import hoidImg from "@/assets/brand/hoidintro.jpg";
 import medifeedImg from "@assets/medifeed_1_1754636614100.jpg";
 import inyourheartImg from "@assets/in_your_1754636664888.jpg";
 import sangsaengImg from "@assets/sangsaeng_1_1754636754183.jpg";
+import asranImg from "@assets/Mask group_1754982638844.jpg";
 import LazyImage from "@/components/LazyImage";
 
 const brands = [
@@ -24,6 +25,20 @@ const brands = [
     buttonColor: "bg-[#0F4C82] hover:bg-[#0d4070]",
     badgeColor: "bg-[#0F4C82]",
     image: hoidImg,
+  },
+  {
+    id: "asran",
+    name: "ASRAN",
+    category: "프리미엄 주방용품 브랜드",
+    slogan: "독일 기술과 합리적 가격을 모두 갖춘 냄비",
+    logo: "ASRAN",
+    description:
+      "SUS410 스테인리스 스틸과 3중 바닥구조로 뛰어난 열전도율과 내구성을 자랑하는 프리미엄 주방용품 브랜드입니다. 인덕션과 가스 겸용으로 어떤 주방환경에서도 완벽하게 사용 가능합니다.",
+    products: ["SUS410 스테인리스", "3중 바닥구조", "인덕션/가스 겸용", "3가지 사이즈"],
+    bgColor: "bg-gray-50",
+    buttonColor: "bg-[#0F4C82] hover:bg-[#0d4070]",
+    badgeColor: "bg-[#0F4C82]",
+    image: asranImg,
   },
   {
     id: "medifeed",

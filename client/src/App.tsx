@@ -18,6 +18,7 @@ const Contact = lazy(() => import("@/pages/contact"));
 const Article = lazy(() => import("@/pages/article"));
 const Hoid = lazy(() => import("@/pages/brand/hoid"));
 const Medifeed = lazy(() => import("@/pages/brand/medifeed"));
+const Asran = lazy(() => import("@/pages/brand/asran"));
 const InYourHeart = lazy(() => import("@/pages/brand/inyourheart"));
 const Sangsaeng = lazy(() => import("@/pages/brand/sangsaeng"));
 const B2B2C_Demo = lazy(() => import("@/pages/B2B2C_Demo"));
@@ -42,6 +43,7 @@ function Router() {
         <Route path="/service" component={Service} />
         <Route path="/brand" component={Brand} />
         <Route path="/brand/hoid" component={Hoid} />
+        <Route path="/brand/asran" component={Asran} />
         <Route path="/brand/medifeed" component={Medifeed} />
         <Route path="/brand/inyourheart" component={InYourHeart} />
         <Route path="/brand/sangsaeng" component={Sangsaeng} />
