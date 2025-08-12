@@ -234,55 +234,7 @@ export default function AsranPage() {
         </div>
       </section>
 
-      {/* Product Sizes Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              3가지 사이즈로 모든 요리를 완성
-            </h2>
-            <p className="text-xl text-gray-600">
-              소용량부터 대용량까지, 혼자서도 가족과도 완벽하게
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {productSizes.map((product, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 border-2 border-gray-100">
-                <CardContent className="p-8">
-                  <div className="text-4xl mb-4">{product.icon}</div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    {product.size} {product.type}
-                  </h3>
-                  <p className="text-gray-600">
-                    {product.usage}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {/* Cooking Types */}
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-8">
-              무한한 요리 가능성
-            </h3>
-            <div className="grid md:grid-cols-3 gap-8">
-              {cookingTypes.map((type, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-4xl mb-4">{type.icon}</div>
-                  <h4 className="text-xl font-semibold text-gray-900 mb-2">
-                    {type.title}
-                  </h4>
-                  <p className="text-gray-600">
-                    {type.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Customer Reviews */}
       <section 
