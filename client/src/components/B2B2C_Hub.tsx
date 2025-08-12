@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Factory, ShoppingBag, CheckCircle, ArrowLeft, ArrowRight, ArrowDown, Users, Truck, ShoppingCart } from "lucide-react";
-import b2bVideo from "@assets/b2b_1754900204090.mp4";
 
 const B2B2C_Hub = () => {
   return (
@@ -14,7 +13,7 @@ const B2B2C_Hub = () => {
           muted
           playsInline
         >
-          <source src={b2bVideo} type="video/mp4" />
+          <source src="/sky-background.mp4" type="video/mp4" />
         </video>
       </div>
       {/* Dark Overlay */}
