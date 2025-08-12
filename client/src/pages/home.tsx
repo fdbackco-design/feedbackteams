@@ -528,16 +528,16 @@ export default function Home() {
     >
       {/* Section Navigation Line - Desktop: right side, Mobile: bottom center */}
       <div className="fixed right-4 md:right-8 bottom-4 md:top-1/2 transform md:-translate-y-1/2 md:translate-x-0 left-1/2 -translate-x-1/2 md:left-auto z-50">
-        <div className="relative h-12 md:h-48 w-48 md:w-auto">
+        <div className="relative h-8 md:h-48 w-32 md:w-auto">
           {/* Background line - horizontal on mobile, vertical on desktop */}
-          <div className={`absolute md:right-0 md:top-0 bottom-0 md:bottom-auto left-0 md:left-auto w-full md:w-0.5 h-0.5 md:h-full transition-all duration-500 ${
+          <div className={`absolute md:right-0 md:top-0 bottom-2 md:bottom-auto left-0 md:left-auto w-full md:w-0.5 h-0.5 md:h-full transition-all duration-500 ${
             currentSection === 0 || currentSection === 5 || currentSection === 6
               ? 'bg-gray-300' 
               : 'bg-gray-500'
           }`}></div>
           {/* Progress line - horizontal on mobile, vertical on desktop */}
           <div 
-            className={`absolute md:right-0 md:top-0 bottom-0 md:bottom-auto left-0 md:left-auto w-0.5 md:w-0.5 h-0.5 md:h-auto transition-all duration-500 ${
+            className={`absolute md:right-0 md:top-0 bottom-2 md:bottom-auto left-0 md:left-auto w-0.5 md:w-0.5 h-0.5 md:h-auto transition-all duration-500 ${
               currentSection === 0 || currentSection === 5 || currentSection === 6
                 ? 'bg-white' 
                 : 'bg-primary'
@@ -548,14 +548,14 @@ export default function Home() {
             }}
           ></div>
           {/* Section numbers - horizontal layout on mobile, vertical on desktop */}
-          <div className={`absolute md:right-3 md:top-0 left-0 md:left-auto -top-6 md:top-0 text-sm font-medium transition-all duration-500 ${
+          <div className={`absolute md:right-3 md:top-0 left-0 md:left-auto -top-3 md:top-0 text-xs md:text-sm font-medium transition-all duration-500 ${
             currentSection === 0 || currentSection === 5 || currentSection === 6
               ? 'text-white' 
               : 'text-gray-900'
           }`}>
             {String(currentSection + 1).padStart(2, '0')}
           </div>
-          <div className={`absolute md:right-3 md:bottom-0 right-0 md:right-3 -top-6 md:top-auto text-sm font-medium transition-all duration-500 ${
+          <div className={`absolute md:right-3 md:bottom-0 right-0 md:right-3 -top-3 md:top-auto text-xs md:text-sm font-medium transition-all duration-500 ${
             currentSection === 0 || currentSection === 5 || currentSection === 6
               ? 'text-gray-400' 
               : 'text-gray-600'
