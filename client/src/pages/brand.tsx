@@ -7,6 +7,7 @@ import hoidImg from "@/assets/brand/hoidintro.jpg";
 import medifeedImg from "@assets/medifeed_1_1754636614100.jpg";
 import inyourheartImg from "@assets/in_your_1754636664888.jpg";
 import sangsaengImg from "@assets/sangsaeng_1_1754636754183.jpg";
+import { motion } from "framer-motion";
 
 const brands = [
   {
@@ -82,7 +83,17 @@ export default function Brand() {
 
         <div className="space-y-20">
           {brands.map((brand, index) => (
-            <div key={brand.id} className={`${brand.bgColor} rounded-3xl p-12 lg:p-16 shadow-xl border border-gray-100`}>
+            <motion.div 
+              key={brand.id} 
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ 
+                duration: 0.8,
+                delay: 0.2,
+                ease: [0.25, 0.46, 0.45, 0.94] 
+              }}
+              viewport={{ once: true, margin: "-50px" }}
+              className={`${brand.bgColor} rounded-3xl p-12 lg:p-16 shadow-xl border border-gray-100`}>
               <div
                 className={`grid lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}
               >
@@ -130,12 +141,22 @@ export default function Brand() {
                   />
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Brand Partnership CTA */}
-        <div className="mt-24 bg-[#0F4C82] rounded-3xl p-16 text-white text-center shadow-2xl">
+        <motion.div 
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ 
+            duration: 0.8,
+            delay: 0.3,
+            ease: [0.25, 0.46, 0.45, 0.94] 
+          }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="mt-24 bg-[#0F4C82] rounded-3xl p-16 text-white text-center shadow-2xl"
+        >
           <div className="max-w-4xl mx-auto">
             <h3 className="text-4xl lg:text-5xl font-bold mb-6">
               브랜드 파트너십에 관심이 있으신가요?
@@ -152,7 +173,7 @@ export default function Brand() {
               <Link href="/contact">파트너십 문의하기</Link>
             </Button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
