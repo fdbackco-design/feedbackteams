@@ -77,41 +77,83 @@ const services = [
 ];
 
 export default function Service() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(1); // 중간부터 시작 (1이 실제 첫 번째)
   const carouselRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
-  // 무한 스크롤을 위해 services 배열을 3배로 복제
-  const infiniteServices = [...services, ...services, ...services];
+  // 무한 루프를 위해 앞뒤에 클론 추가
+  const cloneFirst = services[0];
+  const cloneLast = services[services.length - 1];
+  const infiniteServices = [cloneLast, ...services, cloneFirst];
 
   const nextSlide = () => {
-    const newIndex = (currentIndex + 1) % services.length;
-    setCurrentIndex(newIndex);
-    goToSlide(newIndex + services.length); // 중간 세트의 인덱스로 이동
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    
+    const nextIndex = currentIndex + 1;
+    setCurrentIndex(nextIndex);
+    goToSlide(nextIndex);
+    
+    // 마지막 클론에 도달했을 때 (실제 마지막 + 1)
+    if (nextIndex === infiniteServices.length - 1) {
+      setTimeout(() => {
+        setIsTransitioning(false);
+        setCurrentIndex(1); // 실제 첫 번째로
+        if (carouselRef.current) {
+          carouselRef.current.style.transition = 'none';
+          goToSlideWithoutTransition(1);
+          setTimeout(() => {
+            if (carouselRef.current) {
+              carouselRef.current.style.transition = 'transform 500ms ease';
+            }
+          }, 50);
+        }
+      }, 500);
+    } else {
+      setTimeout(() => setIsTransitioning(false), 500);
+    }
   };
 
   const prevSlide = () => {
-    const newIndex = currentIndex === 0 ? services.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-    goToSlide(newIndex + services.length); // 중간 세트의 인덱스로 이동
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    
+    const prevIndex = currentIndex - 1;
+    setCurrentIndex(prevIndex);
+    goToSlide(prevIndex);
+    
+    // 첫 번째 클론에 도달했을 때 (0)
+    if (prevIndex === 0) {
+      setTimeout(() => {
+        setIsTransitioning(false);
+        setCurrentIndex(services.length); // 실제 마지막으로
+        if (carouselRef.current) {
+          carouselRef.current.style.transition = 'none';
+          goToSlideWithoutTransition(services.length);
+          setTimeout(() => {
+            if (carouselRef.current) {
+              carouselRef.current.style.transition = 'transform 500ms ease';
+            }
+          }, 50);
+        }
+      }, 500);
+    } else {
+      setTimeout(() => setIsTransitioning(false), 500);
+    }
   };
 
-  const goToSlide = (actualIndex: number) => {
+  const goToSlide = (slideIndex: number) => {
     if (carouselRef.current && carouselRef.current.children[0]) {
       const firstChild = carouselRef.current.children[0] as HTMLElement;
       const cardWidth = firstChild.clientWidth;
-      const gap = 16; // gap-4 = 16px
+      const gap = 16;
       const containerWidth = carouselRef.current.clientWidth;
-
-      // 카드를 정확히 화면 중앙에 위치시키기 위한 계산
       const slideWidth = cardWidth + gap;
       
-      // 선택된 카드의 왼쪽 위치
-      const cardLeft = actualIndex * slideWidth;
-
-      // 카드 중앙을 화면 중앙에 맞추기 위한 스크롤 위치
+      const cardLeft = slideIndex * slideWidth;
       const targetScroll = cardLeft - (containerWidth - cardWidth) / 2;
 
       carouselRef.current.scrollTo({
@@ -121,34 +163,29 @@ export default function Service() {
     }
   };
 
-  // 무한 루프를 위한 스크롤 처리
-  const handleScroll = () => {
-    if (!carouselRef.current || isDragging) return;
-
-    const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
-    const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
-    const gap = 16;
-    const slideWidth = cardWidth + gap;
-    const totalOriginalWidth = services.length * slideWidth;
-
-    // 디바운싱을 위한 timeout
-    setTimeout(() => {
-      if (!carouselRef.current) return;
+  const goToSlideWithoutTransition = (slideIndex: number) => {
+    if (carouselRef.current && carouselRef.current.children[0]) {
+      const firstChild = carouselRef.current.children[0] as HTMLElement;
+      const cardWidth = firstChild.clientWidth;
+      const gap = 16;
+      const containerWidth = carouselRef.current.clientWidth;
+      const slideWidth = cardWidth + gap;
       
-      // 첫 번째 세트의 시작 부분에 도달했을 때
-      if (carouselRef.current.scrollLeft <= slideWidth / 2) {
-        carouselRef.current.style.scrollBehavior = 'auto';
-        carouselRef.current.scrollLeft = totalOriginalWidth + carouselRef.current.scrollLeft;
-        carouselRef.current.style.scrollBehavior = 'smooth';
-      }
-      // 세 번째 세트의 끝 부분에 도달했을 때
-      else if (carouselRef.current.scrollLeft >= totalOriginalWidth * 2 - slideWidth / 2) {
-        carouselRef.current.style.scrollBehavior = 'auto';
-        carouselRef.current.scrollLeft = carouselRef.current.scrollLeft - totalOriginalWidth;
-        carouselRef.current.style.scrollBehavior = 'smooth';
-      }
-    }, 100);
+      const cardLeft = slideIndex * slideWidth;
+      const targetScroll = cardLeft - (containerWidth - cardWidth) / 2;
+
+      carouselRef.current.scrollLeft = targetScroll;
+    }
   };
+
+  // 초기 위치 설정
+  useEffect(() => {
+    if (carouselRef.current) {
+      carouselRef.current.style.transition = 'transform 500ms ease';
+      // 처음 로드 시 실제 첫 번째 카드로 이동 (인덱스 1)
+      setTimeout(() => goToSlideWithoutTransition(1), 100);
+    }
+  }, []);
 
   // 드래그 이벤트 핸들러들
   const handleMouseDown = (e: React.MouseEvent) => {
@@ -237,7 +274,6 @@ export default function Service() {
             onMouseLeave={handleMouseLeave}
             onMouseUp={handleMouseUp}
             onMouseMove={handleMouseMove}
-            onScroll={handleScroll}
           >
             {infiniteServices.map((service, index) => (
               <Card
@@ -271,7 +307,13 @@ export default function Service() {
                   {/* Service number and button row */}
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-4xl lg:text-5xl font-bold text-blue-500">
-                      {String((index % services.length) + 1).padStart(2, "0")}
+                      {String(
+                        index === 0 
+                          ? services.length 
+                          : index === infiniteServices.length - 1 
+                            ? 1 
+                            : index
+                      ).padStart(2, "0")}
                     </span>
                     <Button
                       asChild
@@ -322,11 +364,12 @@ export default function Service() {
               <button
                 key={index}
                 onClick={() => {
-                  setCurrentIndex(index);
-                  goToSlide(index + services.length);
+                  if (isTransitioning) return;
+                  setCurrentIndex(index + 1); // +1 because index 0 is clone
+                  goToSlide(index + 1);
                 }}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex
+                  (currentIndex - 1) === index
                     ? "bg-primary scale-125"
                     : "bg-gray-300 hover:bg-gray-400"
                 }`}
