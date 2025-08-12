@@ -168,14 +168,7 @@ export default function AsranPage() {
                 인덕션과 가스 겸용으로 어떤 주방환경에서도 완벽하게 사용 가능한 프리미엄 냄비입니다.
               </p>
 
-              <div className="flex flex-wrap gap-4">
-                <Button 
-                  variant="outline" 
-                  className="border-white text-white hover:bg-white hover:text-[#0F4C82] px-8 py-4 text-lg font-semibold rounded-xl"
-                >
-                  카탈로그 다운로드
-                </Button>
-              </div>
+              
             </div>
             
             
