@@ -152,10 +152,7 @@ export default function Hoid() {
                   99.995% 초미세먼지 제거 효율을 자랑하는 의료급 고성능 필터
                   시스템
                 </p>
-                <div className="flex items-center text-[#0F4C82] font-semibold group-hover:translate-x-2 transition-transform duration-300">
-                  <span className="mr-2">기술 상세</span>
-                  <ArrowRight className="w-4 h-4" />
-                </div>
+                
               </div>
             </div>
 
