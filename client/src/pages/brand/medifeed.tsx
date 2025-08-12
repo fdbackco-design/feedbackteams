@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import {
   ArrowLeft,
   Heart,
@@ -20,6 +20,8 @@ import MedifeedLogo from "@/components/MedifeedLogo";
 import medifeedVideo from "@assets/medifeed_1754647409969.mp4";
 
 export default function Medifeed() {
+  const [, setLocation] = useLocation();
+
   return (
     <div>
       {/* Hero Section with Video Background */}
@@ -266,7 +268,10 @@ export default function Medifeed() {
                 variant="outline"
                 size="lg"
                 className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#0F4C82] transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-semibold"
-              >상담 신청하기</Button>
+                onClick={() => setLocation("/contact")}
+              >
+                건강 상담 신청하기
+              </Button>
             </div>
           </div>
         </div>
