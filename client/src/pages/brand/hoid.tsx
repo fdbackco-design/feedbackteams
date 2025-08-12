@@ -363,12 +363,6 @@ export default function Hoid() {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button
-                size="lg"
-                className="bg-[#000000] text-white hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-medium"
-              >
-                제품 카탈로그 다운로드
-              </Button>
-              <Button
                 variant="outline"
                 size="lg"
                 className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#0F4C82] transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-medium"
