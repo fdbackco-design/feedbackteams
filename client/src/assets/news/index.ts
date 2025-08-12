@@ -5,6 +5,7 @@ import factory from "./factory.jpeg";
 import hoid1 from "./hoid1.jpg";
 import hoid2 from "./hoid2.jpeg";
 import hoid3 from "./hoid3.jpg";
+import hoid10 from "@assets/hoid10_1754966817151.png";
 import homeshopping from "./homeshopping.png";
 
 // 추가 이미지가 생기면 여기 위에 import 하고 아래 객체에 key/value 추가
@@ -15,6 +16,7 @@ export const newsImages: Record<string, string> = {
   "hoid1.jpg": hoid1,
   "hoid2.jpeg": hoid2,
   "hoid3.jpg": hoid3,
+  "hoid10.png": hoid10,
   "homeshopping.png": homeshopping,
 };
 
