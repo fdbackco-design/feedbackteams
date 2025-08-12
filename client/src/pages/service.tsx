@@ -172,11 +172,12 @@ export default function Service() {
     carouselRef.current.scrollLeft = scrollLeft - walk;
   };
 
-  // 초기 위치를 중간 세트로 설정
+  // 초기 위치를 중간 세트의 첫 번째 카드로 설정
   useEffect(() => {
     if (carouselRef.current) {
       const timer = setTimeout(() => {
-        goToSlide(currentIndex + services.length);
+        setCurrentIndex(0); // 1번째 카드로 설정
+        goToSlide(services.length); // 중간 세트의 첫 번째 카드
         carouselRef.current?.addEventListener('scroll', handleScroll);
       }, 100);
 
