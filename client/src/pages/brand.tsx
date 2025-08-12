@@ -87,27 +87,14 @@ export default function Brand() {
                 className={`grid lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}
               >
                 <div className={index % 2 === 1 ? "lg:col-start-2" : ""}>
-                  <div className="flex items-start mb-8">
-                    <div
-                      className={`w-24 h-24 ${brand.badgeColor} rounded-2xl flex items-center justify-center mr-8 shadow-lg`}
-                    >
-                      {brand.id === 'hoid' ? (
-                        <HoidLogo className="w-14 h-auto" fill="white" />
-                      ) : (
-                        <span className="text-white font-bold text-2xl">
-                          {brand.logo}
-                        </span>
-                      )}
-                    </div>
-                    <div>
-                      <h2 className="text-4xl lg:text-5xl font-bold text-[#000000] mb-2">
-                        {brand.name}
-                      </h2>
-                      <p className="text-gray-500 text-xl mb-2">{brand.category}</p>
-                      <p className="text-[#0F4C82] font-semibold text-lg italic">
-                        {brand.slogan}
-                      </p>
-                    </div>
+                  <div className="mb-8">
+                    <h2 className="text-4xl lg:text-5xl font-bold text-[#000000] mb-2">
+                      {brand.name}
+                    </h2>
+                    <p className="text-gray-500 text-xl mb-2">{brand.category}</p>
+                    <p className="text-[#0F4C82] font-semibold text-lg italic">
+                      {brand.slogan}
+                    </p>
                   </div>
                   <p className="text-lg text-gray-700 mb-10 leading-relaxed">
                     {brand.description}
