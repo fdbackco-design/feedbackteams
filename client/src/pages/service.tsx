@@ -1,13 +1,6 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
 import {
   Hospital,
   Smartphone,
@@ -77,74 +70,109 @@ const services = [
 ];
 
 export default function Service() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const carouselRef = useRef<HTMLDivElement>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
+  // [마지막 클론, ...원본, 첫 클론]
+  const extendedServices = useMemo(
+    () => [services[services.length - 1], ...services, services[0]],
+    [],
+  );
+
+  // 무한루프 인덱스는 1부터(=실제 첫 슬라이드)
+  const [currentIndex, setCurrentIndex] = useState(1);
   const [translateX, setTranslateX] = useState(0);
 
-  const nextSlide = () => {
-    const newIndex = (currentIndex + 1) % services.length;
-    setCurrentIndex(newIndex);
-    
-    if (carouselRef.current) {
-      const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
-      const gap = 16;
-      const slideWidth = cardWidth + gap;
-      const containerWidth = carouselRef.current.clientWidth;
-      
-      // 카드 중앙 정렬을 위한 offset
-      const centerOffset = (containerWidth - cardWidth) / 2;
-      const newTranslateX = -(newIndex * slideWidth) + centerOffset;
-      
-      setTranslateX(newTranslateX);
-    }
+  const trackRef = useRef<HTMLDivElement>(null);
+  const jumpingRef = useRef(false); // 점프 중 중복 처리 방지
+
+  const GAP = 16; // gap-4
+
+  const getTranslateFor = (index: number) => {
+    const track = trackRef.current;
+    if (!track) return 0;
+    const firstCard = track.children[0] as HTMLElement | undefined;
+    const cardWidth = firstCard?.clientWidth || 0;
+    const containerWidth = track.clientWidth;
+    const slideWidth = cardWidth + GAP;
+    const centerOffset = (containerWidth - cardWidth) / 2;
+    return -(index * slideWidth) + centerOffset;
   };
 
-  const prevSlide = () => {
-    const newIndex = currentIndex === 0 ? services.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-    
-    if (carouselRef.current) {
-      const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
-      const gap = 16;
-      const slideWidth = cardWidth + gap;
-      const containerWidth = carouselRef.current.clientWidth;
-      
-      // 카드 중앙 정렬을 위한 offset
-      const centerOffset = (containerWidth - cardWidth) / 2;
-      const newTranslateX = -(newIndex * slideWidth) + centerOffset;
-      
-      setTranslateX(newTranslateX);
-    }
-  };
-
-  const goToSlide = (index: number) => {
+  const moveTo = (index: number) => {
+    // 일반 이동은 transition 유지
+    const track = trackRef.current;
+    if (track) track.style.transition = ""; // 기본 transition 사용
     setCurrentIndex(index);
-    
-    if (carouselRef.current) {
-      const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
-      const gap = 16;
-      const slideWidth = cardWidth + gap;
-      const containerWidth = carouselRef.current.clientWidth;
-      
-      // 카드 중앙 정렬을 위한 offset
-      const centerOffset = (containerWidth - cardWidth) / 2;
-      const newTranslateX = -(index * slideWidth) + centerOffset;
-      
-      setTranslateX(newTranslateX);
+    setTranslateX(getTranslateFor(index));
+  };
+
+  const nextSlide = () => moveTo(currentIndex + 1);
+  const prevSlide = () => moveTo(currentIndex - 1);
+  const goToSlide = (realIndex: number) => moveTo(realIndex + 1); // 0~n-1 → +1
+
+  // 초기 배치: transition 끄고 1번으로 즉시 배치
+  useEffect(() => {
+    const t = setTimeout(() => {
+      const track = trackRef.current;
+      if (!track) return;
+      track.style.transition = "none";
+      setCurrentIndex(1);
+      setTranslateX(getTranslateFor(1));
+      // 강제 리플로우로 스타일 확정
+      track.getBoundingClientRect();
+      // 다음 프레임에 transition 복구
+      requestAnimationFrame(() => {
+        const tr = trackRef.current;
+        if (tr) tr.style.transition = "";
+      });
+    }, 100);
+    return () => clearTimeout(t);
+  }, []);
+
+  // transition 끝나면 경계에서 점프(transition 없이 즉시 이동)
+  const handleTransitionEnd = (e?: React.TransitionEvent<HTMLDivElement>) => {
+    // 트랙 자신에게서만 처리(이미지 등 자식의 이벤트 무시)
+    if (e && e.target !== e.currentTarget) return;
+
+    const track = trackRef.current;
+    if (!track || jumpingRef.current) return;
+
+    const lastCloneIndex = extendedServices.length - 1;
+
+    // 오른쪽 끝(마지막 클론) → 실제 첫(1)로 점프
+    if (currentIndex === lastCloneIndex) {
+      jumpingRef.current = true;
+      track.style.transition = "none";
+      const real = 1;
+      setCurrentIndex(real);
+      setTranslateX(getTranslateFor(real));
+      track.getBoundingClientRect(); // 리플로우
+      requestAnimationFrame(() => {
+        const tr = trackRef.current;
+        if (tr) tr.style.transition = "";
+        jumpingRef.current = false;
+      });
+      return;
+    }
+
+    // 왼쪽 끝(첫 클론) → 실제 마지막(services.length)으로 점프
+    if (currentIndex === 0) {
+      jumpingRef.current = true;
+      track.style.transition = "none";
+      const real = services.length;
+      setCurrentIndex(real);
+      setTranslateX(getTranslateFor(real));
+      track.getBoundingClientRect();
+      requestAnimationFrame(() => {
+        const tr = trackRef.current;
+        if (tr) tr.style.transition = "";
+        jumpingRef.current = false;
+      });
     }
   };
 
-  // 초기 위치 설정
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      goToSlide(0); // 1번째 카드로 설정
-    }, 100);
-
-    return () => clearTimeout(timer);
-  }, []);
+  // 도트 활성 인덱스(0~n-1)
+  const activeDot =
+    (((currentIndex - 1) % services.length) + services.length) %
+    services.length;
 
   return (
     <section className="min-h-screen py-20 bg-gray-50">
@@ -161,9 +189,9 @@ export default function Service() {
           </p>
         </div>
 
-        {/* Horizontal Carousel Layout */}
+        {/* Horizontal Carousel */}
         <div className="relative w-full">
-          {/* Navigation Arrows */}
+          {/* Arrows */}
           <button
             onClick={prevSlide}
             className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
@@ -178,101 +206,99 @@ export default function Service() {
             <ChevronRight className="w-6 h-6 text-gray-600" />
           </button>
 
-          {/* Carousel Track */}
+          {/* Track */}
           <div className="overflow-hidden w-full">
             <div
-              ref={carouselRef}
+              ref={trackRef}
+              onTransitionEnd={handleTransitionEnd}
               className="flex gap-4 transition-transform duration-500 ease-in-out"
-              style={{ 
-                transform: `translateX(${translateX}px)`
-              }}
+              style={{ transform: `translateX(${translateX}px)` }}
             >
-              {services.map((service, index) => (
+              {extendedServices.map((service, index) => (
                 <Card
-                key={index}
-                className="flex-shrink-0 w-[80%] overflow-hidden flex flex-col border-0 shadow-none bg-transparent"
-                style={{ scrollSnapAlign: "center" }}
-              >
-                {/* Image Section - Clean, no overlays */}
-                <div className="h-[400px] lg:h-[450px] overflow-hidden">
-                  {service.imageUrl ? (
-                    <img
-                      src={service.imageUrl}
-                      alt={service.title}
-                      className={`w-full h-full object-cover rounded-2xl ${
-                        index === 1 || index === 3
-                          ? "object-center"
-                          : index === 4
-                            ? "object-[30%_20%]"
-                            : "object-top"
-                      }`}
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl">
-                      <service.icon className="w-20 h-20 text-gray-400" />
-                    </div>
-                  )}
-                </div>
-
-                {/* Content Section - All text content here */}
-                <div className="p-6 lg:p-8 flex-1">
-                  {/* Service number and button row */}
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-4xl lg:text-5xl font-bold text-blue-500">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <Button
-                      asChild
-                      size="sm"
-                      className="bg-gray-100 text-gray-800 hover:bg-gray-200 rounded-full px-4 py-2 text-xs"
-                    >
-                      <Link 
-                        href="/contact"
-                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                      >
-                        프로젝트 문의
-                      </Link>
-                    </Button>
+                  key={`${service.title}-${index}`}
+                  className="flex-shrink-0 w-[80%] overflow-hidden flex flex-col border-0 shadow-none bg-transparent"
+                  style={{ scrollSnapAlign: "center" }}
+                >
+                  {/* Image */}
+                  <div className="h-[400px] lg:h-[450px] overflow-hidden">
+                    {service.imageUrl ? (
+                      <img
+                        src={service.imageUrl}
+                        alt={service.title}
+                        className={`w-full h-full object-cover rounded-2xl ${
+                          index === 2 || index === 4
+                            ? "object-center"
+                            : index === 5
+                              ? "object-[30%_20%]"
+                              : "object-top"
+                        }`}
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl">
+                        {/* @ts-ignore */}
+                        <service.icon className="w-20 h-20 text-gray-400" />
+                      </div>
+                    )}
                   </div>
 
-                  {/* Title */}
-                  <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
-                    {service.title}
-                  </h3>
+                  {/* Content */}
+                  <div className="p-6 lg:p-8 flex-1">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-4xl lg:text-5xl font-bold text-blue-500">
+                        {String(
+                          ((index - 1 + services.length) % services.length) + 1,
+                        ).padStart(2, "0")}
+                      </span>
+                      <Button
+                        asChild
+                        size="sm"
+                        className="bg-gray-100 text-gray-800 hover:bg-gray-200 rounded-full px-4 py-2 text-xs"
+                      >
+                        <Link
+                          href="/contact"
+                          onClick={() =>
+                            window.scrollTo({ top: 0, behavior: "smooth" })
+                          }
+                        >
+                          프로젝트 문의
+                        </Link>
+                      </Button>
+                    </div>
 
-                  {/* Description */}
-                  <p className="text-gray-700 mb-4 leading-relaxed text-sm lg:text-base">
-                    {service.description}
-                  </p>
+                    <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
+                      {service.title}
+                    </h3>
 
-                  {/* Features list */}
-                  <div className="space-y-2">
-                    {service.features
-                      .slice(0, 3)
-                      .map((feature, featureIndex) => (
+                    <p className="text-gray-700 mb-4 leading-relaxed text-sm lg:text-base">
+                      {service.description}
+                    </p>
+
+                    <div className="space-y-2">
+                      {service.features.slice(0, 3).map((feature, i) => (
                         <div
-                          key={featureIndex}
+                          key={i}
                           className="text-xs lg:text-sm text-gray-600 flex items-start"
                         >
                           <span className="w-1 h-1 bg-gray-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
                           {feature}
                         </div>
                       ))}
+                    </div>
                   </div>
-                </div>
-              </Card>
-            ))}
+                </Card>
+              ))}
             </div>
           </div>
 
-          {/* Dot Indicators */}
+          {/* Dots */}
           <div className="flex justify-center mt-8 space-x-3">
             {services.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex
+                  index === activeDot
                     ? "bg-primary scale-125"
                     : "bg-gray-300 hover:bg-gray-400"
                 }`}
@@ -282,7 +308,7 @@ export default function Service() {
         </div>
       </div>
 
-      {/* CTA Section - Separate container with max-width */}
+      {/* CTA */}
       <div className="max-w-[1400px] mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
         <div className="mt-16 text-center bg-primary rounded-2xl p-8 lg:p-12 text-white">
           <h3 className="text-3xl font-bold mb-4">
