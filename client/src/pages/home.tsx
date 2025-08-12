@@ -45,7 +45,7 @@ import newsBackgroundImage from "@assets/representation-user-experience-interfac
 import serviceBackgroundImage from "@assets/futuristic-warehouse-with-blue-neon-lights-connected-data_1754566796044.jpg";
 import hoidImg from "@assets/brand2_1754881083408.jpg";
 import medifeedImg from "@assets/medifeed_1_1754636614100.jpg";
-import inyourheartImg from "@assets/brand3_1754881349690.jpg";
+import asranImg from "@assets/image_Pippit_202507291037 1_1754993039700.jpg";
 import sangsaengImg from "@assets/sangsaeng_1_1754636754183.jpg";
 import newsData from "@/data/news.json";
 import { resolveNewsThumbnail, FALLBACK } from "@/assets/news";
@@ -135,19 +135,19 @@ const getBrands = (t: (key: string) => string) => [
     color: "from-blue-500 to-blue-700",
   },
   {
-    id: "inyourheart",
-    name: "InYourHeart",
-    category: t("brands.inyourheart.category"),
-    slogan: t("brands.inyourheart.slogan"),
-    description: t("brands.inyourheart.description"),
+    id: "asran",
+    name: "ASRAN",
+    category: "프리미엄 주방용품",
+    slogan: "독일 기술과 합리적 가격을 모두 갖춘 냄비",
+    description: "SUS410 스테인리스 스틸과 3중 바닥구조로 뛰어난 열전도율과 내구성을 자랑합니다. 인덕션과 가스 겸용으로 어떤 주방환경에서도 완벽하게 사용 가능한 프리미엄 냄비입니다.",
     products: [
-      t("brands.inyourheart.products.0"),
-      t("brands.inyourheart.products.1"),
-      t("brands.inyourheart.products.2"),
-      t("brands.inyourheart.products.3")
+      "SUS410 스테인리스 스틸",
+      "3중 바닥구조",
+      "인덕션 & 가스 겸용",
+      "프리미엄 마감"
     ],
-    image: inyourheartImg,
-    color: "from-pink-500 to-pink-700",
+    image: asranImg,
+    color: "from-gray-600 to-gray-800",
   },
   {
     id: "sangsaeng",
