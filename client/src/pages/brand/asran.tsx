@@ -14,11 +14,12 @@ import {
   Users,
   Award,
 } from "lucide-react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import asranMainImg from "@assets/Mask group_1754982638844.jpg";
 
 export default function AsranPage() {
   const [activeFeature, setActiveFeature] = useState(0);
+  const [, setLocation] = useLocation();
   const heroRef = useRef<HTMLDivElement>(null);
   const featuresRef = useRef<HTMLDivElement>(null);
   const testimonialsRef = useRef<HTMLDivElement>(null);
@@ -337,31 +338,24 @@ export default function AsranPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-gradient-to-r from-[#0F4C82] to-blue-600 rounded-3xl p-12 text-white">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              지금 바로 ASRAN과 함께하세요
+      <section className="py-32 bg-[#0F4C82] text-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+              독일 기술력과 만나는
+              <span className="block">프리미엄 요리 경험</span>
             </h2>
-            <p className="text-xl mb-8 opacity-90">
-              독일 기술력과 합리적 가격을 모두 갖춘 프리미엄 냄비로 
-              <br className="hidden sm:block" />
-              새로운 요리의 경험을 시작하세요.
+            <p className="text-lg lg:text-xl mb-12 opacity-90 leading-relaxed">
+              ASRAN과 함께 새로운 요리의 세계를 경험해보세요
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                asChild 
-                size="lg" 
-                className="bg-white text-[#0F4C82] hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-xl"
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#0F4C82] transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-semibold"
+                onClick={() => setLocation("/contact")}
               >
-                <Link href="/contact">제품 문의하기</Link>
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-[#0F4C82] px-8 py-4 text-lg font-semibold rounded-xl"
-              >
-                더 자세히 알아보기
+                문의하기
               </Button>
             </div>
           </div>
