@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Factory, ShoppingBag, CheckCircle, ArrowLeft, ArrowRight, ArrowDown, Users, Truck, ShoppingCart } from "lucide-react";
+import sky5Video from "../assets/sky5.mp4";
 
 const B2B2C_Hub = () => {
   return (
@@ -12,9 +13,8 @@ const B2B2C_Hub = () => {
           loop
           muted
           playsInline
-        >
-          <source src="/sky-background.mp4" type="video/mp4" />
-        </video>
+          src={sky5Video}
+        />
       </div>
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-30"></div>
