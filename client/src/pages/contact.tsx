@@ -185,7 +185,7 @@ export default function Contact() {
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
             {t("contact.title")}
           </h1>
-          <div className="w-24 h-1 bg-[#0F4C82] mx-auto mb-8"></div>
+          <div className="w-24 h-0.5 bg-[#0F4C82] mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {t("FeedBack과 함께 새로운 비즈니스 기회를 만들어보세요.")
               .split("\n")
