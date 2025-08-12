@@ -695,24 +695,13 @@ export default function About() {
           <div className="relative ml-2">
             {/* 수직 라인 */}
             <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-slate-300"></div>
-            {/* 애니메이션 라인 */}
-            <div 
-              className="absolute left-0 top-0 w-0.5 bg-gradient-to-b from-blue-600 to-blue-500 transition-all duration-2000 ease-out"
-              style={{
-                height: timelineVisible.filter(v => v).length > 0 ? `${(timelineVisible.filter(v => v).length / timelineData.length) * 100}%` : '0%'
-              }}
-            ></div>
+            {/* 고정 라인 */}
+            <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-600 to-blue-500"></div>
 
             {timelineData.map((item, index) => (
               <div 
-                key={index} 
-                ref={(el) => (timelineRefs.current[index] = el)}
-                data-index={index}
-                className={`relative mb-16 last:mb-0 transition-all duration-1000 ease-out ${
-                  timelineVisible[index] 
-                    ? 'opacity-100 translate-x-0' 
-                    : 'opacity-0 translate-x-[-50px]'
-                }`}
+                key={index}
+                className="relative mb-16 last:mb-0"
               >
                 {/* 타임라인 도트 */}
                 <div className="absolute left-0 transform -translate-x-1/2">
@@ -720,11 +709,7 @@ export default function About() {
                 </div>
 
                 {/* 연도와 내용 */}
-                <div className={`ml-8 bg-white/70 p-6 rounded-xl backdrop-blur-sm shadow-sm transition-all duration-1000 ease-out ${
-                  timelineVisible[index] 
-                    ? 'opacity-100 translate-y-0' 
-                    : 'opacity-0 translate-y-8'
-                }`}>
+                <div className="ml-8 bg-white/70 p-6 rounded-xl backdrop-blur-sm shadow-sm">
                   <h3 className="about-timeline-year mb-4">
                     {item.year}
                   </h3>
@@ -743,11 +728,7 @@ export default function About() {
                                 ? "secondary"
                                 : "outline"
                           }
-                          className={`bg-blue-100 text-blue-800 border-blue-300 transition-all duration-1000 ease-out ${
-                            timelineVisible[index] 
-                              ? 'opacity-100 scale-100' 
-                              : 'opacity-0 scale-75'
-                          }`}
+                          className="bg-blue-100 text-blue-800 border-blue-300"
                         >
                           {item.type}
                         </Badge>
