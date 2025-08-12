@@ -30,7 +30,6 @@ import {
 } from "lucide-react";
 import { useCountUp } from "@/hooks/useCountUp";
 import HoidLogo from "@/components/HoidLogo";
-import Footer from "@/components/layout/footer";
 import B2B2C_Hub from "@/components/B2B2C_Hub";
 import NetworkBackground from "@/components/NetworkBackground";
 import shipVideo from "@assets/ship_section_1754640786186.mp4";
@@ -1161,8 +1160,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Footer */}
-      <Footer />
     </div>
   );
 }
