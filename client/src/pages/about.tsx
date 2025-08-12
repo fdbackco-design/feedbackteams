@@ -546,7 +546,7 @@ export default function About() {
                 <h3 className="about-philosophy-title mb-6">
                   고객·파트너 중심: '공생'의 유통 모델을 실현합니다
                 </h3>
-                <p className="about-philosophy-description">
+                <p className="about-philosophy-description text-[0F4C82]">
                   FeedBack은 단순히 물건을 사고파는 곳이 아닌,
                   <br />
                   제조사·브랜드·소매처가 함께 성장할 수 있는 유통 생태계를
