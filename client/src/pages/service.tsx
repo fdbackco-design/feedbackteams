@@ -83,44 +83,61 @@ export default function Service() {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
 
+  // 무한 스크롤을 위해 services 배열을 3배로 복제
+  const infiniteServices = [...services, ...services, ...services];
+
   const nextSlide = () => {
     const newIndex = (currentIndex + 1) % services.length;
     setCurrentIndex(newIndex);
-    goToSlide(newIndex);
+    goToSlide(newIndex + services.length); // 중간 세트의 인덱스로 이동
   };
 
   const prevSlide = () => {
     const newIndex = currentIndex === 0 ? services.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
-    goToSlide(newIndex);
+    goToSlide(newIndex + services.length); // 중간 세트의 인덱스로 이동
   };
 
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
+  const goToSlide = (actualIndex: number) => {
     if (carouselRef.current && carouselRef.current.children[0]) {
       const firstChild = carouselRef.current.children[0] as HTMLElement;
       const cardWidth = firstChild.clientWidth;
-      const gap = 24; // gap-6 = 24px
+      const gap = 16; // gap-4 = 16px
       const containerWidth = carouselRef.current.clientWidth;
 
       // 카드를 정확히 화면 중앙에 위치시키기 위한 계산
       const slideWidth = cardWidth + gap;
-      const totalScrollWidth = carouselRef.current.scrollWidth;
-
+      
       // 선택된 카드의 왼쪽 위치
-      const cardLeft = index * slideWidth;
+      const cardLeft = actualIndex * slideWidth;
 
       // 카드 중앙을 화면 중앙에 맞추기 위한 스크롤 위치
       const targetScroll = cardLeft - (containerWidth - cardWidth) / 2;
 
-      // 스크롤 범위 제한
-      const maxScroll = totalScrollWidth - containerWidth;
-      const finalScroll = Math.max(0, Math.min(targetScroll, maxScroll));
-
       carouselRef.current.scrollTo({
-        left: finalScroll,
+        left: targetScroll,
         behavior: "smooth",
       });
+    }
+  };
+
+  // 스크롤 끝에 도달했을 때 무한 루프 처리
+  const handleScroll = () => {
+    if (!carouselRef.current || isDragging) return;
+
+    const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
+    const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
+    const gap = 16;
+    const slideWidth = cardWidth + gap;
+    const totalOriginalWidth = services.length * slideWidth;
+
+    // 첫 번째 세트의 끝에 도달하면 두 번째 세트로 점프
+    if (scrollLeft <= slideWidth) {
+      carouselRef.current.scrollLeft = scrollLeft + totalOriginalWidth;
+    }
+    // 세 번째 세트의 시작에 도달하면 두 번째 세트로 점프
+    else if (scrollLeft >= totalOriginalWidth * 2 - slideWidth) {
+      carouselRef.current.scrollLeft = scrollLeft - totalOriginalWidth;
     }
   };
 
@@ -155,12 +172,19 @@ export default function Service() {
     carouselRef.current.scrollLeft = scrollLeft - walk;
   };
 
-  // 초기 로드 시 첫 번째 카드를 중앙에 위치
+  // 초기 위치를 중간 세트로 설정
   useEffect(() => {
-    const timer = setTimeout(() => {
-      goToSlide(0);
-    }, 100);
-    return () => clearTimeout(timer);
+    if (carouselRef.current) {
+      const timer = setTimeout(() => {
+        goToSlide(currentIndex + services.length);
+        carouselRef.current?.addEventListener('scroll', handleScroll);
+      }, 100);
+
+      return () => {
+        clearTimeout(timer);
+        carouselRef.current?.removeEventListener('scroll', handleScroll);
+      };
+    }
   }, []);
 
   return (
@@ -209,7 +233,7 @@ export default function Service() {
             onMouseUp={handleMouseUp}
             onMouseMove={handleMouseMove}
           >
-            {services.map((service, index) => (
+            {infiniteServices.map((service, index) => (
               <Card
                 key={index}
                 className="flex-shrink-0 w-[80%] overflow-hidden flex flex-col border-0 shadow-none bg-transparent"
@@ -222,9 +246,9 @@ export default function Service() {
                       src={service.imageUrl}
                       alt={service.title}
                       className={`w-full h-full object-cover rounded-2xl ${
-                        index === 1 || index === 3
+                        (index % services.length) === 1 || (index % services.length) === 3
                           ? "object-center"
-                          : index === 4
+                          : (index % services.length) === 4
                             ? "object-[30%_20%]"
                             : "object-top"
                       }`}
@@ -241,7 +265,7 @@ export default function Service() {
                   {/* Service number and button row */}
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-4xl lg:text-5xl font-bold text-blue-500">
-                      {String(index + 1).padStart(2, "0")}
+                      {String((index % services.length) + 1).padStart(2, "0")}
                     </span>
                     <Button
                       asChild
@@ -291,7 +315,10 @@ export default function Service() {
             {services.map((_, index) => (
               <button
                 key={index}
-                onClick={() => goToSlide(index)}
+                onClick={() => {
+                  setCurrentIndex(index);
+                  goToSlide(index + services.length);
+                }}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentIndex
                     ? "bg-primary scale-125"
