@@ -1161,7 +1161,7 @@ export default function Home() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="text-lg px-10 py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl animate-floating border-white bg-white text-blue-600 hover:bg-gray-100"
+                className="text-lg px-10 py-6 animate-floating border-white bg-white text-blue-600"
                 style={{ animationDelay: "1.5s" }}
               >
                 <Link href="/service">{t("cta.proposal")}</Link>
