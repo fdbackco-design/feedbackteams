@@ -17,6 +17,7 @@ import {
 import { Link, useLocation } from "wouter";
 import asranMainImg from "@assets/Mask group_1754982638844.jpg";
 import asranVideo from "@assets/asran_self_1754985186297.mp4";
+import AsranLogo from "@/components/AsranLogo";
 
 export default function AsranPage() {
   const [activeFeature, setActiveFeature] = useState(0);
@@ -152,9 +153,11 @@ export default function AsranPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
-                  ASRAN
-                </h1>
+                <AsranLogo 
+                  className="filter brightness-0 invert" 
+                  width="300"
+                  height="75"
+                />
                 <p className="text-2xl text-white font-semibold">
                   독일 기술과 합리적 가격을 모두 갖춘 냄비
                 </p>
