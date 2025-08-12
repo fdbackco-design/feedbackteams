@@ -142,6 +142,23 @@ html {
   @apply gap-3 sm:gap-4 lg:gap-6;
 }
 
+/* Enhanced Mobile Classes for Better UX */
+.mobile-padding {
+  @apply px-4 sm:px-6;
+}
+
+.mobile-card-padding {
+  @apply p-4 sm:p-6 lg:p-8;
+}
+
+.mobile-button-size {
+  @apply px-3 py-2 sm:px-4 sm:py-2 text-sm sm:text-base;
+}
+
+.tap-target {
+  @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
+}
+
 /* Better mobile viewport handling */
 @media (max-width: 639px) {
   .mobile-full-height {

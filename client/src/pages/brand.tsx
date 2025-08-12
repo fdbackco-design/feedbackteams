@@ -145,30 +145,30 @@ export default function Brand() {
               <div
                 className={`grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}
               >
-                <div className={index % 2 === 1 ? "lg:col-start-2" : ""}>
-                  <div className="mb-8">
+                <div className={`mobile-card-padding ${index % 2 === 1 ? "lg:col-start-2" : ""}`}>
+                  <div className="mb-6 sm:mb-8">
                     {brand.logo === "svg" && brand.id === "hoid" ? (
-                      <HoidLogo className="mb-2 w-72 h-auto" />
+                      <HoidLogo className="mb-3 w-48 sm:w-64 md:w-72 h-auto" />
                     ) : brand.logo === "svg" && brand.id === "asran" ? (
-                      <AsranLogo className="mb-2 [&_.cls-1]:fill-black" width="280" height="auto" />
+                      <AsranLogo className="mb-3 [&_.cls-1]:fill-black" width="200" height="auto" />
                     ) : (
-                      <h2 className="text-4xl lg:text-5xl font-bold text-[#000000] mb-2">
+                      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#000000] mb-3 leading-tight">
                         {brand.name}
                       </h2>
                     )}
-                    <p className="text-gray-500 text-xl mb-2">{brand.category}</p>
-                    <p className="text-[#0F4C82] font-semibold text-lg">
+                    <p className="text-gray-500 text-base sm:text-lg md:text-xl mb-2">{brand.category}</p>
+                    <p className="text-[#0F4C82] font-semibold text-base sm:text-lg leading-relaxed">
                       {brand.slogan}
                     </p>
                   </div>
-                  <p className="text-lg text-gray-700 mb-10 leading-relaxed">
+                  <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-6 sm:mb-8 md:mb-10 leading-relaxed">
                     {brand.description}
                   </p>
-                  <div className="flex flex-wrap gap-4 mb-10">
+                  <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 mb-6 sm:mb-8 md:mb-10">
                     {brand.products.map((product, productIndex) => (
                       <Badge
                         key={productIndex}
-                        className={`${brand.badgeColor} text-white px-5 py-2 text-sm font-medium rounded-full`}
+                        className={`${brand.badgeColor} text-white px-3 py-1 sm:px-4 sm:py-2 md:px-5 md:py-2 text-xs sm:text-sm font-medium rounded-full`}
                       >
                         {product}
                       </Badge>
@@ -176,22 +176,22 @@ export default function Brand() {
                   </div>
                   <Link href={`/brand/${brand.id}`}>
                     <Button
-                      className={`${brand.buttonColor} text-white px-10 py-4 text-lg font-semibold transition-all duration-300 transform hover:scale-105 rounded-xl shadow-lg hover:shadow-xl`}
+                      className={`${brand.buttonColor} text-white px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-4 text-sm sm:text-base md:text-lg font-semibold transition-all duration-300 transform hover:scale-105 rounded-xl shadow-lg hover:shadow-xl tap-target w-full sm:w-auto`}
                     >
                       {brand.name} 브랜드 자세히 보기
-                      <ArrowRight className="ml-3 w-5 h-5" />
+                      <ArrowRight className="ml-2 sm:ml-3 w-4 h-4 sm:w-5 sm:h-5" />
                     </Button>
                   </Link>
                 </div>
                 <div
-                  className={
+                  className={`mt-6 sm:mt-8 lg:mt-0 ${
                     index % 2 === 1 ? "lg:col-start-1" : "lg:order-last"
-                  }
+                  }`}
                 >
                   <LazyImage
                     src={brand.image}
                     alt={`${brand.name} 제품`}
-                    className="rounded-2xl shadow-2xl w-full h-auto transform hover:scale-105 transition-transform duration-300"
+                    className="rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl w-full h-auto transform hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               </div>
@@ -202,7 +202,7 @@ export default function Brand() {
         {/* Brand Partnership CTA */}
         <div 
           ref={ctaRef}
-          className="mt-24 bg-[#0F4C82] rounded-3xl p-16 text-white text-center shadow-2xl"
+          className="mt-16 sm:mt-20 md:mt-24 bg-[#0F4C82] rounded-xl sm:rounded-2xl md:rounded-3xl mobile-card-padding text-white text-center shadow-xl sm:shadow-2xl"
           style={{ 
             opacity: 0,
             transform: 'translateY(50px)',
@@ -210,16 +210,16 @@ export default function Brand() {
           }}
         >
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-4xl lg:text-5xl font-bold mb-6">
+            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
               브랜드 파트너십에 관심이 있으신가요?
             </h3>
-            <p className="text-xl lg:text-2xl mb-12 leading-relaxed opacity-90">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-8 sm:mb-10 md:mb-12 leading-relaxed opacity-90">
               FeedBack과 함께 혁신적인 브랜드를 만들어보세요. 기획부터 유통까지 전 과정을 지원하여 
               성공적인 브랜드 런칭을 도와드립니다.
             </p>
             <Button 
               asChild 
-              className="bg-[#000000] text-white hover:bg-gray-800 px-10 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="bg-[#000000] text-white hover:bg-gray-800 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-4 text-sm sm:text-base md:text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg tap-target w-full sm:w-auto"
               size="lg"
             >
               <Link href="/contact">파트너십 문의하기</Link>
