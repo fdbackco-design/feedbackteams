@@ -158,12 +158,6 @@ export default function AsranPage() {
 
               <div className="flex flex-wrap gap-4">
                 <Button 
-                  asChild 
-                  className="bg-[#0F4C82] hover:bg-[#0d4070] text-white px-8 py-4 text-lg font-semibold rounded-xl"
-                >
-                  <Link href="/contact">제품 문의하기</Link>
-                </Button>
-                <Button 
                   variant="outline" 
                   className="border-[#0F4C82] text-[#0F4C82] hover:bg-[#0F4C82] hover:text-white px-8 py-4 text-lg font-semibold rounded-xl"
                 >
