@@ -256,7 +256,7 @@ export default function Home() {
 
   const brandCount = useCountUp({
     start: 0,
-    end: 4,
+    end: 7,
     duration: 1800,
     trigger: statsInView,
   });
