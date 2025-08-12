@@ -121,25 +121,14 @@ export default function Service() {
     }
   };
 
-  // 스크롤 끝에 도달했을 때 무한 루프 처리
-  const handleScroll = () => {
-    if (!carouselRef.current || isDragging) return;
+  // 자동 슬라이드 기능
+  useEffect(() => {
+    const autoSlide = setInterval(() => {
+      nextSlide();
+    }, 4000); // 4초마다 자동 슬라이드
 
-    const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
-    const cardWidth = carouselRef.current.children[0]?.clientWidth || 0;
-    const gap = 16;
-    const slideWidth = cardWidth + gap;
-    const totalOriginalWidth = services.length * slideWidth;
-
-    // 첫 번째 세트의 끝에 도달하면 두 번째 세트로 점프
-    if (scrollLeft <= slideWidth) {
-      carouselRef.current.scrollLeft = scrollLeft + totalOriginalWidth;
-    }
-    // 세 번째 세트의 시작에 도달하면 두 번째 세트로 점프
-    else if (scrollLeft >= totalOriginalWidth * 2 - slideWidth) {
-      carouselRef.current.scrollLeft = scrollLeft - totalOriginalWidth;
-    }
-  };
+    return () => clearInterval(autoSlide);
+  }, [currentIndex]);
 
   // 드래그 이벤트 핸들러들
   const handleMouseDown = (e: React.MouseEvent) => {
@@ -177,13 +166,9 @@ export default function Service() {
     if (carouselRef.current) {
       const timer = setTimeout(() => {
         goToSlide(currentIndex + services.length);
-        carouselRef.current?.addEventListener('scroll', handleScroll);
       }, 100);
 
-      return () => {
-        clearTimeout(timer);
-        carouselRef.current?.removeEventListener('scroll', handleScroll);
-      };
+      return () => clearTimeout(timer);
     }
   }, []);
 
