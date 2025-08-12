@@ -184,10 +184,6 @@ export default function Medifeed() {
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center justify-center text-[#0F4C82] font-semibold group-hover:translate-x-2 transition-transform duration-300 mt-6">
-                  <span className="mr-2">제품 상세보기</span>
-                  <ArrowRight className="w-4 h-4" />
-                </div>
               </div>
             </div>
           </div>
