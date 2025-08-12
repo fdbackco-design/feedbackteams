@@ -374,12 +374,22 @@ export default function Home() {
     let wheelTimeout: NodeJS.Timeout;
     
     const handleWheel = (e: WheelEvent) => {
+      // Allow normal scrolling if we're at the last section and scrolling down
+      // or if we're at the first section and scrolling up
+      const direction = e.deltaY > 0 ? 1 : -1;
+      
+      // Check if we're at the boundaries and should allow normal scrolling
+      if ((currentSection === sections.length - 1 && direction > 0) ||
+          (currentSection === 0 && direction < 0)) {
+        // Allow normal browser scrolling for footer access
+        return;
+      }
+      
       e.preventDefault();
       
       // Skip if already scrolling
       if (isScrolling) return;
       
-      const direction = e.deltaY > 0 ? 1 : -1;
       const newSection = Math.max(
         0,
         Math.min(sections.length - 1, currentSection + direction),
@@ -499,7 +509,7 @@ export default function Home() {
 
   return (
     <div
-      className="fullpage-container hide-scrollbar"
+      className="w-full"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
