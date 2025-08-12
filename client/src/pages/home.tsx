@@ -1154,15 +1154,7 @@ export default function Home() {
               >
                 <Link href="/contact">{t("cta.consultation")}</Link>
               </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="text-lg px-10 py-6 animate-floating border-white bg-white text-blue-600"
-                style={{ animationDelay: "1.5s" }}
-              >
-                <Link href="/service">{t("cta.proposal")}</Link>
-              </Button>
+
             </div>
           </div>
         </div>
