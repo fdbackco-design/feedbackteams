@@ -186,6 +186,7 @@ export default function Home() {
   const [imageLoaded, setImageLoaded] = useState(true);
   const [nextBrandIndex, setNextBrandIndex] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
+  const [currentNewsIndex, setCurrentNewsIndex] = useState(0);
 
   const sections = [
     { id: "hero", name: "홈" },
@@ -941,97 +942,91 @@ export default function Home() {
         className="h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white"
         style={{ scrollSnapAlign: "start" }}
       >
-        <div className="relative w-full z-10">
-          {/* Section Header - Aligned with Navigation */}
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-8 sm:mb-12">
-            <h2 className="news-title">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+          <div
+            className="text-center mb-12 opacity-0 animate-fade-in-up"
+            style={{ animationDelay: "0.1s" }}
+          >
+            <div className="section-subtitle mb-2">
+              NEWS
+            </div>
+            <h2 className="section-title-primary mb-4">
               {t("news.title")}
             </h2>
+            <p className="section-description">
+              최신 소식과 업데이트를 확인해보세요
+            </p>
           </div>
 
-          {/* News Cards - Horizontal Scrollable */}
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-            {/* Navigation Buttons - Close to Card Area */}
+          {/* News Carousel */}
+          <div className="relative max-w-6xl mx-auto">
+            {/* Navigation Arrows */}
             <button
               onClick={() => {
-                if (newsScrollRef.current) {
-                  const containerWidth = newsScrollRef.current.clientWidth;
-                  const scrollAmount = containerWidth * 0.8; // 80% of container width
-                  newsScrollRef.current.scrollBy({
-                    left: -scrollAmount,
-                    behavior: 'smooth'
-                  });
-                }
+                const newIndex =
+                  currentNewsIndex === 0
+                    ? Math.min(newsData.length - 1, 5)
+                    : currentNewsIndex - 1;
+                setCurrentNewsIndex(newIndex);
               }}
-              className="absolute -left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/95 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:scale-110 border border-gray-100"
-              aria-label="Previous news"
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
             >
-              <svg className="w-6 h-6 text-gray-700 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
-              </svg>
+              <ChevronLeft className="w-6 h-6 text-gray-600" />
             </button>
 
             <button
               onClick={() => {
-                if (newsScrollRef.current) {
-                  const containerWidth = newsScrollRef.current.clientWidth;
-                  const scrollAmount = containerWidth * 0.8; // 80% of container width
-                  newsScrollRef.current.scrollBy({
-                    left: scrollAmount,
-                    behavior: 'smooth'
-                  });
-                }
+                const newIndex = (currentNewsIndex + 1) % Math.min(newsData.length, 6);
+                setCurrentNewsIndex(newIndex);
               }}
-              className="absolute -right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/95 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:scale-110 border border-gray-100"
-              aria-label="Next news"
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
             >
-              <svg className="w-6 h-6 text-gray-700 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-              </svg>
+              <ChevronRight className="w-6 h-6 text-gray-600" />
             </button>
 
-            <div 
-              ref={newsScrollRef}
-              className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto pb-6 scrollbar-hide cursor-grab"
-              style={{ 
-                scrollSnapType: 'x mandatory',
-                scrollbarWidth: 'none',
-                msOverflowStyle: 'none',
-                WebkitOverflowScrolling: 'touch',
-                scrollBehavior: 'auto' // Disable smooth scroll for manual dragging
-              }}
-            >
-              
-              {newsData.slice(0, 6).map((news, index) => {
-                const src = resolveNewsThumbnail(news.thumbnail);
-                return (
-                  <Link 
-                    key={index}
-                    href={news.link}
-                    className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] lg:w-[420px] xl:w-[480px] 2xl:w-[520px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer" 
-                    style={{ scrollSnapAlign: 'start' }}
-                    onClick={() => {
-                      // Scroll to top when navigating to news detail
-                      window.scrollTo({ top: 0, behavior: 'smooth' });
-                    }}
-                  >
-                    <div className="aspect-[4/3] bg-gray-200 relative">
-                      <LazyImage
-                        src={src}
-                        alt={news.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="p-4 sm:p-5 md:p-6">
-                      <h3 className="font-medium text-sm sm:text-base md:text-lg mb-3 text-gray-900 leading-tight line-clamp-2">
-                        {news.title}
+            {/* News Card */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden max-w-4xl mx-auto">
+              {newsData[currentNewsIndex] && (
+                <div className="grid lg:grid-cols-2 gap-0">
+                  {/* Image Section */}
+                  <div className="relative h-64 lg:h-auto">
+                    <LazyImage
+                      src={resolveNewsThumbnail(newsData[currentNewsIndex].thumbnail)}
+                      alt={newsData[currentNewsIndex].title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-10"></div>
+                  </div>
+                  
+                  {/* Content Section */}
+                  <div className="p-8 lg:p-12 flex flex-col justify-between min-h-[400px]">
+                    <div className="flex-1">
+                      <div className="text-sm text-primary font-semibold mb-4">
+                        0{currentNewsIndex + 1}/0{Math.min(newsData.length, 6)}
+                      </div>
+                      <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                        {newsData[currentNewsIndex].title}
                       </h3>
-                      <div className="text-xs sm:text-sm text-gray-400">{news.date}</div>
+                      <div className="text-lg text-gray-600 mb-6 leading-relaxed">
+                        {newsData[currentNewsIndex].date}
+                      </div>
                     </div>
-                  </Link>
-                );
-              })}
-              
+                    <div className="mt-auto">
+                      <Link href={newsData[currentNewsIndex].link}>
+                        <Button 
+                          className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-semibold inline-flex items-center group"
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                          }}
+                        >
+                          자세히 보기
+                          <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Progress Bar Pager - Matches Navigation Width */}
@@ -1040,7 +1035,7 @@ export default function Home() {
                 <div 
                   className="h-full bg-black rounded-full transition-all duration-300 ease-out"
                   style={{ 
-                    width: `${newsScrollProgress}%`,
+                    width: `${((currentNewsIndex + 1) / Math.min(newsData.length, 6)) * 100}%`,
                     transform: `translateX(0%)` 
                   }}
                 />
