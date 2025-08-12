@@ -19,7 +19,7 @@ import {
   Calendar,
 } from "lucide-react";
 import SangsaengLogo from "@/components/SangsaengLogo";
-import medicalVideo from "@assets/medical_1754647118451.mp4";
+// Video now served from public directory
 
 export default function Sangsaeng() {
   return (
@@ -33,7 +33,7 @@ export default function Sangsaeng() {
           loop
           muted
           playsInline
-          src={medicalVideo}
+          src="/medical_1754647118451.mp4"
         />
         <div className="absolute inset-0 bg-black/40"></div>
 
