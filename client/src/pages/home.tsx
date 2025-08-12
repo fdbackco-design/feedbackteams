@@ -187,6 +187,7 @@ export default function Home() {
   const [nextBrandIndex, setNextBrandIndex] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
   const [currentNewsIndex, setCurrentNewsIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   const sections = [
     { id: "hero", name: "홈" },
@@ -202,6 +203,14 @@ export default function Home() {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Check mobile on mount and resize
+  useEffect(() => {
+    const checkIsMobile = () => setIsMobile(window.innerWidth < 768);
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+    return () => window.removeEventListener('resize', checkIsMobile);
   }, []);
 
   // ESC key to close video modal
@@ -517,33 +526,36 @@ export default function Home() {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Section Navigation Line */}
-      <div className="fixed right-4 md:right-8 top-1/2 transform -translate-y-1/2 z-50">
-        <div className="relative h-48">
-          {/* Background line */}
-          <div className={`absolute right-0 top-0 w-0.5 h-full transition-all duration-500 ${
+      {/* Section Navigation Line - Desktop: right side, Mobile: bottom center */}
+      <div className="fixed right-4 md:right-8 bottom-4 md:top-1/2 transform md:-translate-y-1/2 md:translate-x-0 left-1/2 -translate-x-1/2 md:left-auto z-50">
+        <div className="relative h-12 md:h-48 w-48 md:w-auto">
+          {/* Background line - horizontal on mobile, vertical on desktop */}
+          <div className={`absolute md:right-0 md:top-0 bottom-0 md:bottom-auto left-0 md:left-auto w-full md:w-0.5 h-0.5 md:h-full transition-all duration-500 ${
             currentSection === 0 || currentSection === 5 || currentSection === 6
               ? 'bg-gray-300' 
               : 'bg-gray-500'
           }`}></div>
-          {/* Progress line */}
+          {/* Progress line - horizontal on mobile, vertical on desktop */}
           <div 
-            className={`absolute right-0 top-0 w-0.5 transition-all duration-500 ${
+            className={`absolute md:right-0 md:top-0 bottom-0 md:bottom-auto left-0 md:left-auto w-0.5 md:w-0.5 h-0.5 md:h-auto transition-all duration-500 ${
               currentSection === 0 || currentSection === 5 || currentSection === 6
                 ? 'bg-white' 
                 : 'bg-primary'
             }`}
-            style={{ height: `${((currentSection + 1) / sections.length) * 100}%` }}
+            style={{ 
+              width: `${isMobile ? ((currentSection + 1) / sections.length) * 100 : 0.5}%`,
+              height: `${!isMobile ? ((currentSection + 1) / sections.length) * 100 : 0.5}%`
+            }}
           ></div>
-          {/* Section numbers */}
-          <div className={`absolute right-3 top-0 text-sm font-medium transition-all duration-500 ${
+          {/* Section numbers - horizontal layout on mobile, vertical on desktop */}
+          <div className={`absolute md:right-3 md:top-0 left-0 md:left-auto -top-6 md:top-0 text-sm font-medium transition-all duration-500 ${
             currentSection === 0 || currentSection === 5 || currentSection === 6
               ? 'text-white' 
               : 'text-gray-900'
           }`}>
             {String(currentSection + 1).padStart(2, '0')}
           </div>
-          <div className={`absolute right-3 bottom-0 text-sm font-medium transition-all duration-500 ${
+          <div className={`absolute md:right-3 md:bottom-0 right-0 md:right-3 -top-6 md:top-auto text-sm font-medium transition-all duration-500 ${
             currentSection === 0 || currentSection === 5 || currentSection === 6
               ? 'text-gray-400' 
               : 'text-gray-600'
