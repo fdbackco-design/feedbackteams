@@ -938,112 +938,138 @@ export default function Home() {
       {/* News Section */}
       <section
         id="news"
-        className="h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white"
+        className="h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 to-white"
         style={{ scrollSnapAlign: "start" }}
       >
-        <div className="relative w-full z-10">
-          {/* Section Header - Aligned with Navigation */}
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-8 sm:mb-12">
-            <h2 className="news-title">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+          <div
+            className="text-center mb-12 opacity-0 animate-fade-in-up"
+            style={{ animationDelay: "0.1s" }}
+          >
+            <div className="section-subtitle mb-2">
+              NEWS
+            </div>
+            <h2 className="section-title-primary mb-4">
               {t("news.title")}
             </h2>
+            <p className="section-description">
+              최신 소식과 업데이트를 확인하세요
+            </p>
           </div>
 
-          {/* News Cards - Horizontal Scrollable */}
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-            {/* Navigation Buttons - Close to Card Area */}
+          {/* News Carousel */}
+          <div className="relative max-w-6xl mx-auto">
+            {/* Navigation Arrows */}
             <button
               onClick={() => {
                 if (newsScrollRef.current) {
                   const containerWidth = newsScrollRef.current.clientWidth;
-                  const scrollAmount = containerWidth * 0.8; // 80% of container width
+                  const scrollAmount = containerWidth * 0.8;
                   newsScrollRef.current.scrollBy({
                     left: -scrollAmount,
                     behavior: 'smooth'
                   });
                 }
               }}
-              className="absolute -left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/95 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:scale-110 border border-gray-100"
-              aria-label="Previous news"
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
             >
-              <svg className="w-6 h-6 text-gray-700 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
-              </svg>
+              <ChevronLeft className="w-6 h-6 text-gray-600" />
             </button>
 
             <button
               onClick={() => {
                 if (newsScrollRef.current) {
                   const containerWidth = newsScrollRef.current.clientWidth;
-                  const scrollAmount = containerWidth * 0.8; // 80% of container width
+                  const scrollAmount = containerWidth * 0.8;
                   newsScrollRef.current.scrollBy({
                     left: scrollAmount,
                     behavior: 'smooth'
                   });
                 }
               }}
-              className="absolute -right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/95 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:scale-110 border border-gray-100"
-              aria-label="Next news"
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
             >
-              <svg className="w-6 h-6 text-gray-700 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-              </svg>
+              <ChevronRight className="w-6 h-6 text-gray-600" />
             </button>
 
-            <div 
-              ref={newsScrollRef}
-              className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto pb-6 scrollbar-hide cursor-grab"
-              style={{ 
-                scrollSnapType: 'x mandatory',
-                scrollbarWidth: 'none',
-                msOverflowStyle: 'none',
-                WebkitOverflowScrolling: 'touch',
-                scrollBehavior: 'auto' // Disable smooth scroll for manual dragging
-              }}
-            >
-              
-              {newsData.slice(0, 6).map((news, index) => {
-                const src = resolveNewsThumbnail(news.thumbnail);
-                return (
-                  <Link 
-                    key={index}
-                    href={news.link}
-                    className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] lg:w-[420px] xl:w-[480px] 2xl:w-[520px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer" 
-                    style={{ scrollSnapAlign: 'start' }}
-                    onClick={() => {
-                      // Scroll to top when navigating to news detail
-                      window.scrollTo({ top: 0, behavior: 'smooth' });
-                    }}
-                  >
-                    <div className="aspect-[4/3] bg-gray-200 relative">
-                      <LazyImage
-                        src={src}
-                        alt={news.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="p-4 sm:p-5 md:p-6">
-                      <h3 className="font-medium text-sm sm:text-base md:text-lg mb-3 text-gray-900 leading-tight line-clamp-2">
-                        {news.title}
-                      </h3>
-                      <div className="text-xs sm:text-sm text-gray-400">{news.date}</div>
-                    </div>
-                  </Link>
-                );
-              })}
-              
-            </div>
+            {/* News Cards Container */}
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden">
+              <div 
+                ref={newsScrollRef}
+                className="flex overflow-x-auto scrollbar-hide"
+                style={{ 
+                  scrollSnapType: 'x mandatory',
+                  scrollbarWidth: 'none',
+                  msOverflowStyle: 'none',
+                  WebkitOverflowScrolling: 'touch',
+                  scrollBehavior: 'smooth'
+                }}
+              >
+                {newsData.slice(0, 6).map((news, index) => {
+                  const src = resolveNewsThumbnail(news.thumbnail);
+                  return (
+                    <Link 
+                      key={index}
+                      href={news.link}
+                      className="flex-shrink-0 w-full block hover:bg-gray-50 transition-colors duration-300" 
+                      style={{ scrollSnapAlign: 'start' }}
+                      onClick={() => {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}
+                    >
+                      <div className="grid lg:grid-cols-2 gap-0">
+                        {/* Image Section */}
+                        <div className="relative h-64 lg:h-80">
+                          <LazyImage
+                            src={src}
+                            alt={news.title}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
 
-            {/* Progress Bar Pager - Matches Navigation Width */}
-            <div className="mt-8">
-              <div className="h-0.5 bg-gray-300 rounded-full relative overflow-hidden">
-                <div 
-                  className="h-full bg-black rounded-full transition-all duration-300 ease-out"
-                  style={{ 
-                    width: `${newsScrollProgress}%`,
-                    transform: `translateX(0%)` 
-                  }}
-                />
+                        {/* Content Section */}
+                        <div className="p-8 lg:p-12 flex flex-col justify-center">
+                          <div className="mb-4">
+                            <span className="inline-block bg-[#0F4C82] text-white text-xs px-3 py-1 rounded-full font-medium">
+                              뉴스
+                            </span>
+                          </div>
+                          <h3 className="text-2xl lg:text-3xl font-bold text-[#000000] mb-6 leading-tight">
+                            {news.title}
+                          </h3>
+                          <div className="text-sm text-gray-500 mb-6">
+                            {news.date}
+                          </div>
+                          <div className="flex items-center text-[#0F4C82] font-medium">
+                            자세히 보기
+                            <ArrowRight className="ml-2 w-4 h-4" />
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  );
+                })}
+              </div>
+
+              {/* Progress Indicator */}
+              <div className="px-8 pb-6">
+                <div className="flex justify-center space-x-2">
+                  {newsData.slice(0, 6).map((_, index) => (
+                    <button
+                      key={index}
+                      className="w-2 h-2 rounded-full bg-gray-300 transition-colors duration-300"
+                      onClick={() => {
+                        if (newsScrollRef.current) {
+                          const cardWidth = newsScrollRef.current.scrollWidth / 6;
+                          newsScrollRef.current.scrollTo({
+                            left: cardWidth * index,
+                            behavior: 'smooth'
+                          });
+                        }
+                      }}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
