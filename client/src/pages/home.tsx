@@ -858,6 +858,11 @@ export default function Home() {
                     공기청정기, 제습기 등 미니멀한 디자인과 첨단 기술이 만나<br />
                     일상의 공기질을 혁신하는 스마트 가전 브랜드입니다.
                   </>
+                ) : brands[currentBrandIndex].description.includes('잇몸과 눈 건강을') ? (
+                  <>
+                    잇몸과 눈 건강을 중심으로 한 기능성 영양제 브랜드로,<br />
+                    실용성과 안전성을 바탕으로 건강 솔루션을 제공합니다.
+                  </>
                 ) : (
                   brands[currentBrandIndex].description
                 )}
