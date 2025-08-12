@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import {
   ArrowLeft,
   CheckCircle,
@@ -22,6 +22,8 @@ import flow_2025_04_17_193718625_1754623144595 from "@assets/flow_2025-04-17_193
 import homeshoppingImage from "@assets/homeshopping_1754639787939.png";
 
 export default function Hoid() {
+  const [, setLocation] = useLocation();
+
   return (
     <div>
       {/* Hero Section with Video Background - Full Screen */}
@@ -366,6 +368,7 @@ export default function Hoid() {
                 variant="outline"
                 size="lg"
                 className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#0F4C82] transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-medium"
+                onClick={() => setLocation("/contact")}
               >
                 문의하기
               </Button>
