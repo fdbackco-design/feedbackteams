@@ -601,35 +601,35 @@ export default function Home() {
             opacity: Math.max(0, 1 - scrollY / 500),
           }}
         >
-          <h1 className="hero-title mb-6 animate-fade-in-up">
+          <h1 className="hero-title mb-4 sm:mb-6 animate-fade-in-up">
             {t("hero.title")}
             <br />
             <span className="hero-subtitle">{t("hero.subtitle")}</span>
           </h1>
           <p
-            className="hero-description mb-8 animate-fade-in-up"
+            className="hero-description mb-6 sm:mb-8 animate-fade-in-up"
             style={{ animationDelay: "0.3s" }}
           >
             {t("hero.description")}
           </p>
           <div
-            className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-fade-in-up"
             style={{ animationDelay: "0.6s" }}
           >
             <Button
               asChild
               size="lg"
-              className="text-lg px-8 py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+              className="mobile-button-size text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
             >
               <Link href="/service">{t("hero.cta.consultation")}</Link>
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="text-lg px-8 py-6 border-white bg-white text-black hover:bg-gray-100 hover:text-black transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+              className="mobile-button-size text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 border-white bg-white text-black hover:bg-gray-100 hover:text-black transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
               onClick={() => setIsVideoPlaying(true)}
             >
-              <Play className="mr-2 w-5 h-5" />
+              <Play className="mr-2 w-4 sm:w-5 h-4 sm:h-5" />
               {t("hero.cta.proposal")}
             </Button>
           </div>
@@ -703,9 +703,9 @@ export default function Home() {
       >
         {/* 블러 오버레이 */}
         <div className="absolute inset-0 bg-white/65 backdrop-blur"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+        <div className="relative max-w-7xl mx-auto mobile-padding z-10">
           <div
-            className="text-center mb-12 opacity-0 animate-fade-in-up"
+            className="text-center mb-8 sm:mb-12 opacity-0 animate-fade-in-up"
             style={{ animationDelay: "0.1s" }}
           >
             <div className="section-subtitle mb-2">
@@ -730,9 +730,9 @@ export default function Home() {
                     : currentServiceIndex - 1;
                 setCurrentServiceIndex(newIndex);
               }}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
+              className="tap-target absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
             >
-              <ChevronLeft className="w-6 h-6 text-gray-600" />
+              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
             </button>
 
             <button
@@ -740,9 +740,9 @@ export default function Home() {
                 const newIndex = (currentServiceIndex + 1) % services.length;
                 setCurrentServiceIndex(newIndex);
               }}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
+              className="tap-target absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
             >
-              <ChevronRight className="w-6 h-6 text-gray-600" />
+              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
             </button>
 
             {/* Service Card */}
@@ -760,7 +760,7 @@ export default function Home() {
                   </div>
                   
                   {/* Content Section */}
-                  <div className="p-8 lg:p-12 flex flex-col justify-between min-h-[400px]">
+                  <div className="p-6 sm:p-8 lg:p-12 flex flex-col justify-between min-h-[350px] sm:min-h-[400px]">
                     <div className="flex-1">
                       <div className="text-sm text-primary font-semibold mb-4">
                         0{currentServiceIndex + 1}/0{services.length}
@@ -834,7 +834,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent"></div>
         </div>
 
-        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 h-full flex flex-col">
+        <div className="relative z-10 w-full mobile-padding h-full flex flex-col">
           {/* Content Section */}
           <div className="flex-1 flex items-center">
             <div className={`text-white space-y-6 transition-all duration-500 max-w-2xl ${

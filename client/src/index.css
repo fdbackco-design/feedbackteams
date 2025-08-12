@@ -42,6 +42,74 @@ html {
   overflow: hidden;
 }
 
+/* Mobile optimized spacing and sizing */
+.mobile-padding {
+  @apply px-4 sm:px-6 lg:px-8;
+}
+
+.mobile-text-size {
+  @apply text-sm sm:text-base;
+}
+
+.mobile-button-size {
+  @apply text-sm px-4 py-2 sm:text-base sm:px-6 sm:py-3;
+}
+
+/* Touch-friendly tap targets */
+.tap-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Mobile responsive improvements */
+.mobile-hero-spacing {
+  @apply px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16;
+}
+
+.mobile-section-spacing {
+  @apply py-12 sm:py-16 lg:py-20;
+}
+
+.mobile-card-padding {
+  @apply p-4 sm:p-6 lg:p-8;
+}
+
+.mobile-button-spacing {
+  @apply gap-3 sm:gap-4 lg:gap-6;
+}
+
+/* Better mobile viewport handling */
+@media (max-width: 639px) {
+  .mobile-full-height {
+    height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile */
+  }
+}
+
+/* Improved mobile touch interactions */
+.mobile-touch-area {
+  @apply min-h-11 min-w-11 flex items-center justify-center;
+}
+
+/* Mobile text scaling */
+@media (max-width: 639px) {
+  .hero-title {
+    @apply text-3xl;
+  }
+  
+  .brand-title {
+    @apply text-3xl;
+  }
+  
+  .section-title-primary {
+    @apply text-2xl;
+  }
+  
+  .b2b2c-main-title {
+    @apply text-2xl;
+  }
+}
+
 /* Performance optimized animations */
 @keyframes fadeInUp {
   0% {

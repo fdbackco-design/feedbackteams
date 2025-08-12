@@ -196,13 +196,13 @@ export default function Service() {
     <section className="min-h-screen py-20 bg-gray-50">
       <div className="max-w-[1400px] mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
         <div className="text-center mb-8 mt-[75px]">
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
             서비스 소개
           </h1>
-          <div className="w-24 h-0.5 bg-[#0F4C82] mx-auto mb-8"></div>
-          <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="w-16 sm:w-24 h-0.5 bg-[#0F4C82] mx-auto mb-6 sm:mb-8"></div>
+          <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto mobile-padding">
             FeedBack은 다양한 분야의 전문적인 서비스를 통해
-            <br />
+            <br className="hidden sm:block" />
             고객의 비즈니스 성공을 지원합니다.
           </p>
         </div>
@@ -212,16 +212,16 @@ export default function Service() {
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
+            className="tap-target absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
           >
-            <ChevronLeft className="w-6 h-6 text-gray-600" />
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
+            className="tap-target absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
           >
-            <ChevronRight className="w-6 h-6 text-gray-600" />
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
           </button>
 
           {/* Carousel Track */}

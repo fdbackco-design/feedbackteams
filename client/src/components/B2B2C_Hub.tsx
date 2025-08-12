@@ -21,7 +21,7 @@ const B2B2C_Hub = () => {
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <h2 className="b2b2c-main-title mt-[12px] mb-[12px]" style={{ lineHeight: '1.2' }}>
             <span className="font-normal">제조사부터 소비자까지</span>, <br />
             완전한 유통 생태계를 구축합니다.
@@ -40,7 +40,7 @@ const B2B2C_Hub = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="bg-white rounded-2xl shadow-xl p-8 relative">
+              <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 relative">
                 <div className="w-16 h-16 bg-[#0F4C82]/10 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <Factory className="w-8 h-8 text-[#0F4C82]" />
                 </div>
