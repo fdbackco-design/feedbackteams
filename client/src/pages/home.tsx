@@ -1009,25 +1009,25 @@ export default function Home() {
                   <Link 
                     key={index}
                     href={news.link}
-                    className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] lg:w-[420px] xl:w-[480px] 2xl:w-[520px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer" 
+                    className="flex-shrink-0 w-[380px] sm:w-[420px] md:w-[480px] lg:w-[540px] xl:w-[600px] 2xl:w-[640px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer" 
                     style={{ scrollSnapAlign: 'start' }}
                     onClick={() => {
                       // Scroll to top when navigating to news detail
                       window.scrollTo({ top: 0, behavior: 'smooth' });
                     }}
                   >
-                    <div className="aspect-[4/3] bg-gray-200 relative">
+                    <div className="aspect-[16/10] bg-gray-200 relative">
                       <LazyImage
                         src={src}
                         alt={news.title}
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="p-4 sm:p-5 md:p-6">
-                      <h3 className="font-medium text-sm sm:text-base md:text-lg mb-3 text-gray-900 leading-tight line-clamp-2">
+                    <div className="p-6 sm:p-7 md:p-8">
+                      <h3 className="font-medium text-base sm:text-lg md:text-xl lg:text-2xl mb-4 text-gray-900 leading-tight line-clamp-2">
                         {news.title}
                       </h3>
-                      <div className="text-xs sm:text-sm text-gray-400">{news.date}</div>
+                      <div className="text-sm sm:text-base text-gray-400">{news.date}</div>
                     </div>
                   </Link>
                 );
