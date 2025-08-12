@@ -136,10 +136,7 @@ export default function Hoid() {
                   공기청정, 제습, 살균 기능을 하나로 통합한 혁신적인 올인원
                   솔루션
                 </p>
-                <div className="flex items-center text-[#0F4C82] font-semibold group-hover:translate-x-2 transition-transform duration-300">
-                  <span className="mr-2">자세히 보기</span>
-                  <ArrowRight className="w-4 h-4" />
-                </div>
+                
               </div>
             </div>
 
