@@ -24,8 +24,6 @@ import peopleImage from "@assets/people_1754639134434.jpg";
 import mapImage from "@assets/map_1754832577677.png";
 import newOrganizationChart from "@assets/company_2_1754983649735.png";
 
-
-
 // SVG 컴포넌트들
 const HeroBackgroundSVG = () => (
   <svg
@@ -338,7 +336,6 @@ const BrandMessageBannerSVG = () => (
           <br />
           <span className="text-[#ffffff]">유통으로 설계합니다</span>
         </h2>
-
       </div>
     </div>
 
@@ -415,10 +412,10 @@ export default function About() {
     const observer = new IntersectionObserver(
       (entries) => {
         const updates: { [key: number]: boolean } = {};
-        
+
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const index = Number(entry.target.getAttribute('data-index'));
+            const index = Number(entry.target.getAttribute("data-index"));
             if (index >= 0) {
               updates[index] = true;
             }
@@ -427,7 +424,7 @@ export default function About() {
 
         // 한번에 상태 업데이트로 리렌더링 최소화
         if (Object.keys(updates).length > 0) {
-          setTimelineVisible(prev => {
+          setTimelineVisible((prev) => {
             const newVisible = [...prev];
             Object.entries(updates).forEach(([index, value]) => {
               newVisible[Number(index)] = value;
@@ -438,8 +435,8 @@ export default function About() {
       },
       {
         threshold: 0.3,
-        rootMargin: '0px 0px -100px 0px'
-      }
+        rootMargin: "0px 0px -100px 0px",
+      },
     );
 
     const currentRefs = timelineRefs.current;
@@ -526,9 +523,7 @@ export default function About() {
       <section className="py-20 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="about-section-title mb-8">
-              경영철학
-            </h2>
+            <h2 className="about-section-title mb-8">경영철학</h2>
             <p className="about-story-sub text-foreground leading-relaxed max-w-4xl mx-auto">
               FeedBack은 브랜드와 시장을 연결하는 실행 중심의 유통 플랫폼으로서
               <br />
@@ -682,13 +677,13 @@ export default function About() {
         </div>
       </section>
       {/* Timeline - 이미지 스타일 레이아웃 */}
-      <section 
+      <section
         className="py-20 relative overflow-hidden bg-white text-slate-800"
         style={{
           backgroundImage: `url(${mapImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
         {/* 화이트 오버레이 */}
@@ -703,22 +698,25 @@ export default function About() {
             {/* 수직 라인 */}
             <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-slate-300"></div>
             {/* 애니메이션 라인 */}
-            <div 
+            <div
               className="absolute left-0 top-0 w-0.5 bg-gradient-to-b from-blue-600 to-blue-500 transition-all duration-2000 ease-out"
               style={{
-                height: timelineVisible.filter(v => v).length > 0 ? `${(timelineVisible.filter(v => v).length / timelineData.length) * 100}%` : '0%'
+                height:
+                  timelineVisible.filter((v) => v).length > 0
+                    ? `${(timelineVisible.filter((v) => v).length / timelineData.length) * 100}%`
+                    : "0%",
               }}
             ></div>
 
             {timelineData.map((item, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 ref={(el) => (timelineRefs.current[index] = el)}
                 data-index={index}
                 className={`relative mb-16 last:mb-0 transition-all duration-1000 ease-out ${
-                  timelineVisible[index] 
-                    ? 'opacity-100 translate-x-0' 
-                    : 'opacity-0 translate-x-[-50px]'
+                  timelineVisible[index]
+                    ? "opacity-100 translate-x-0"
+                    : "opacity-0 translate-x-[-50px]"
                 }`}
               >
                 {/* 타임라인 도트 */}
@@ -727,14 +725,14 @@ export default function About() {
                 </div>
 
                 {/* 연도와 내용 */}
-                <div className={`ml-8 bg-white/70 p-6 rounded-xl backdrop-blur-sm shadow-sm transition-all duration-1000 ease-out ${
-                  timelineVisible[index] 
-                    ? 'opacity-100 translate-y-0' 
-                    : 'opacity-0 translate-y-8'
-                }`}>
-                  <h3 className="about-timeline-year mb-4">
-                    {item.year}
-                  </h3>
+                <div
+                  className={`ml-8 bg-white/70 p-6 rounded-xl backdrop-blur-sm shadow-sm transition-all duration-1000 ease-out ${
+                    timelineVisible[index]
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-8"
+                  }`}
+                >
+                  <h3 className="about-timeline-year mb-4">{item.year}</h3>
                   <div className="text-slate-700 leading-relaxed">
                     <p className="about-timeline-description flex items-start">
                       <span className="text-blue-600 mr-2 mt-1">•</span>
@@ -751,9 +749,9 @@ export default function About() {
                                 : "outline"
                           }
                           className={`bg-blue-100 text-blue-800 border-blue-300 transition-all duration-1000 ease-out ${
-                            timelineVisible[index] 
-                              ? 'opacity-100 scale-100' 
-                              : 'opacity-0 scale-75'
+                            timelineVisible[index]
+                              ? "opacity-100 scale-100"
+                              : "opacity-0 scale-75"
                           }`}
                         >
                           {item.type}
@@ -783,16 +781,14 @@ export default function About() {
             <blockquote className="about-ceo-quote mb-8">
               "고객의 행복과 글로벌 파트너십을 최우선으로 생각합니다."
             </blockquote>
-            <h2 className="about-ceo-title mb-8">
-              CEO 인사말
-            </h2>
+            <h2 className="about-ceo-title mb-8">CEO 인사말</h2>
           </div>
 
           <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
             <div className="flex flex-col lg:flex-row">
               {/* CEO 프로필 영역 */}
               <div className="lg:w-1/3 bg-gradient-to-br from-primary to-accent p-12 text-white text-center flex flex-col justify-center">
-                <h3 className="text-2xl font-bold mb-2">송해민</h3>
+                <h3 className="text-2xl font-bold mb-2">송해민, 정성현</h3>
                 <p className="text-lg opacity-90">(주)피드백 대표</p>
                 <div className="mt-8 pt-8 border-t border-white/20">
                   <p className="text-sm opacity-80">
@@ -843,9 +839,7 @@ export default function About() {
       {/* Organization Chart */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="about-org-title mb-16">
-            조직도
-          </h2>
+          <h2 className="about-org-title mb-16">조직도</h2>
 
           <div className="flex justify-center">
             <div className="bg-white p-8 rounded-2xl shadow-xl max-w-full overflow-x-auto border border-border">

@@ -138,7 +138,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
       const gmail = google.gmail({ version: "v1", auth: oAuth2Client });
 
-      const to = "fdbackco@gmail.com";
+      const to = "fdbackteams@gmail.com";
       const from = "fdbackco@gmail.com";
       const subject = `[FeedBack 문의] ${data.inquiryType || "일반"} - ${data.name}`;
 
