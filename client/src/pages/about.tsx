@@ -551,14 +551,15 @@ export default function About() {
                 </h3>
                 <p className="about-philosophy-description text-[0F4C82] text-[20px]">
                   FeedBack은 단순히 물건을 사고파는 곳이 아닌,
-                  <br className="hidden sm:block" />
+                  <br className="hidden lg:block" />
                   제조사·브랜드·소매처가 함께 성장할 수 있는 유통 생태계를
                   구축합니다.
                   <br />
                   <br />
                   고객사와 파트너의 신뢰를 기반으로 장기 협력과 함께 발전하는
+                  <br className="hidden lg:block" />
                   구조를 설계하며,
-                  <br className="hidden sm:block" />
+                  <br className="hidden sm:block lg:hidden" />
                   <span className="font-semibold text-[0F4C82]">
                     모두가 지속 가능한 이익을 나누는 상생 플랫폼
                   </span>
@@ -587,16 +588,17 @@ export default function About() {
                 </h3>
                 <p className="about-philosophy-description text-[20px]">
                   단순 유통을 넘어 상품 기획, 브랜딩, 마케팅, 유통 채널을
+                  <br className="hidden lg:block" />
                   유기적으로 연결합니다.
-                  <br className="hidden sm:block" />
+                  <br className="hidden sm:block lg:hidden" />
                   고유한 OEM 역량과 자체 브랜드 경험을 결합하여,
-                  <br className="hidden sm:block" />
+                  <br className="hidden lg:block" />
                   브랜드가 시장에서 자리 잡도록 실행 가능한 솔루션을 제공합니다.
                   <br />
                   <br />
                   <span className="font-semibold text-primary">
                     제품력에 브랜딩을 입히고, 브랜딩에 유통을 결합하며,
-                    <br className="hidden sm:block" />
+                    <br className="hidden lg:block" />
                     유통에 경험과 콘텐츠를 심는 방식이 FeedBack의 방식
                   </span>
                   입니다.
@@ -624,7 +626,7 @@ export default function About() {
                 </h3>
                 <p className="about-philosophy-description text-[20px]">
                   아시아를 기반으로 성장해 온 브랜드에게
-                  <br className="hidden sm:block" />
+                  <br className="hidden lg:block" />
                   글로벌 시장 진출 기회를 제공합니다.
                   <br />
                   <br />
@@ -632,11 +634,11 @@ export default function About() {
                     전략적 진출 설계 + 제휴 기반 실행력
                   </span>
                   을 통해
-                  <br className="hidden sm:block" />
+                  <br className="hidden lg:block" />
                   브랜드의 세계화를 지원하고,
-                  <br className="hidden sm:block" />
+                  <br className="hidden lg:block" />
                   국내외 파트너와의 협업을 통해
-                  <br className="hidden sm:block" />더 크고 넓은 시장에서 기회를
+                  <br className="hidden lg:block" />더 크고 넓은 시장에서 기회를
                   창출합니다.
                 </p>
               </div>
@@ -666,11 +668,11 @@ export default function About() {
                   <br />
                   <span className="font-semibold text-primary">
                     검증된 품질과 안정적인 공급, 투명한 유통 프로세스,
-                    <br className="hidden sm:block" />
+                    <br className="hidden lg:block" />
                     정직한 사후 서비스 체계
                   </span>
                   를 통해
-                  <br className="hidden sm:block" />
+                  <br className="hidden lg:block" />
                   파트너가 오래 함께할 수 있는 신뢰 기반을 만듭니다.
                 </p>
               </div>
