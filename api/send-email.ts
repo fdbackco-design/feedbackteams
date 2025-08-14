@@ -36,7 +36,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       service: 'gmail',
       auth: {
         type: 'OAuth2',
-        user: process.env.GMAIL_FROM,            // 보내는 주소
+        user: 'fdbackteams@gmail.com',            // 보내는 주소
         clientId: process.env.GMAIL_CLIENT_ID,
         clientSecret: process.env.GMAIL_CLIENT_SECRET,
         refreshToken: process.env.GMAIL_REFRESH_TOKEN,
@@ -44,8 +44,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     })
 
     await transporter.sendMail({
-      from: process.env.GMAIL_FROM,
-      to: process.env.GMAIL_TO || process.env.GMAIL_FROM, // 수신자
+      from: 'fdbackteams@gmail.com',
+      to: 'fdbackteams@gmail.com', // 수신자
       replyTo: email,
       subject: `[Contact:${inquiryType || '일반'}] ${name} (${company || 'N/A'})`,
       text: `phone: ${phone || '-'}\n\n${message}`,
