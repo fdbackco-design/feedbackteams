@@ -468,6 +468,7 @@ export default function About() {
                 <span className="text-primary">Feedback</span>은 유통을 중심으로
                 <br className="hidden sm:block" />
                 브랜드 마케팅, 제조, 무역 수출입을 아우르는
+                <br className="hidden lg:block" />
                 <span className="text-accent"> 종합 커머스 기업</span>입니다.
               </p>
 
