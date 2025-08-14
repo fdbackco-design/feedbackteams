@@ -776,7 +776,7 @@ export default function Home() {
             </div>
 
             {/* Navigation Arrows - Below the card on mobile */}
-            <div className="flex justify-center items-center gap-4 sm:gap-6 mt-4 sm:mt-6">
+            <div className="flex justify-center items-center gap-4 sm:gap-6 mt-2 sm:mt-4">
               <button
                 onClick={() => {
                   const newIndex =
@@ -810,7 +810,7 @@ export default function Home() {
             </div>
 
             {/* Progress Bar Pager */}
-            <div className="mt-6 sm:mt-8">
+            <div className="mt-3 sm:mt-5">
               <div className="max-w-lg mx-auto">
                 <div className="h-1 bg-gray-300 rounded-full relative overflow-hidden">
                   <div 
