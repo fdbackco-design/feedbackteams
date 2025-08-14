@@ -582,7 +582,7 @@ export default function About() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                 </div>
               </div>
-              <div className="lg:w-1/2 text-center lg:text-left">
+              <div className="lg:w-1/2 text-center lg:text-right">
                 <h3 className="about-philosophy-title mb-6">
                   통합 실행력으로 브랜드와 시장을 연결합니다
                 </h3>
@@ -657,7 +657,7 @@ export default function About() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                 </div>
               </div>
-              <div className="lg:w-1/2 text-center lg:text-left">
+              <div className="lg:w-1/2 text-center lg:text-right">
                 <h3 className="about-philosophy-title mb-6">
                   신뢰를 통한 장기 파트너십 구축
                 </h3>
