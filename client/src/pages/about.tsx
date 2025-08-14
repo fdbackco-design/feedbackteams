@@ -507,7 +507,7 @@ export default function About() {
         {/* Content overlay */}
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="about-parallax-title mb-8">
-            고객님의 <span className="text-[#ffffff]">'생활 속 행복'</span>을
+            고객님의 <span className="text-[#ffffff] font-bold">'생활 속 행복'</span>을
             목표로
             <br className="hidden sm:block" />
             열정 넘치는 이들이 모인 FeedBack은
