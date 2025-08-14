@@ -1047,25 +1047,25 @@ export default function Home() {
                   <Link 
                     key={index}
                     href={news.link}
-                    className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[380px] lg:w-[420px] xl:w-[480px] 2xl:w-[520px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer" 
+                    className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[380px] lg:w-[420px] xl:w-[480px] 2xl:w-[520px] h-[320px] sm:h-[360px] md:h-[400px] lg:h-[440px] xl:h-[480px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer flex flex-col" 
                     style={{ scrollSnapAlign: 'center' }}
                     onClick={() => {
                       // Scroll to top when navigating to news detail
                       window.scrollTo({ top: 0, behavior: 'smooth' });
                     }}
                   >
-                    <div className="aspect-[16/10] bg-gray-200 relative">
+                    <div className="aspect-[16/10] bg-gray-200 relative flex-shrink-0">
                       <LazyImage
                         src={src}
                         alt={news.title}
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="p-4 sm:p-5 md:p-6 lg:p-7">
-                      <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 leading-tight line-clamp-2 mb-3">
+                    <div className="p-4 sm:p-5 md:p-6 lg:p-7 flex flex-col flex-1">
+                      <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 leading-tight line-clamp-2 mb-3 flex-1">
                         {news.title}
                       </h3>
-                      <div className="text-sm sm:text-base text-gray-500">{news.date}</div>
+                      <div className="text-sm sm:text-base text-gray-500 mt-auto">{news.date}</div>
                     </div>
                   </Link>
                 );
