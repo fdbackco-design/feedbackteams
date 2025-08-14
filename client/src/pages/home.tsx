@@ -1165,9 +1165,9 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/60"></div>
 
         {/* Content over video */}
-        <div className="relative z-10 w-full mobile-padding flex items-center justify-center min-h-screen">
+        <div className="relative z-10 w-full mobile-padding flex items-center justify-center min-h-screen sm:justify-start sm:items-start sm:pt-20">
           <div
-            className="text-center sm:text-left sm:ml-[10%] max-w-2xl opacity-0 animate-fade-in-up"
+            className="text-center sm:text-left sm:ml-[5%] lg:ml-[8%] max-w-2xl opacity-0 animate-fade-in-up"
             style={{ animationDelay: "0.1s" }}
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight">
