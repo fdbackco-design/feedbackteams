@@ -333,7 +333,7 @@ const BrandMessageBannerSVG = () => (
           style={{ textShadow: "2px 2px 8px rgba(0,0,0,0.8)" }}
         >
           피드백은 브랜드의 성장을
-          <br />
+          <br className="hidden sm:block" />
           <span className="text-[#ffffff]">유통으로 설계합니다</span>
         </h2>
       </div>
