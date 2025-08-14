@@ -695,7 +695,6 @@ export default function Home() {
         className="min-h-screen flex items-center justify-center relative overflow-hidden pt-12 sm:pt-16 md:pt-20"
         style={{ 
           scrollSnapAlign: "start",
-          marginTop: "50px",
           backgroundImage: `url(${services[currentServiceIndex]?.imageUrl || serviceBackgroundImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
