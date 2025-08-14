@@ -621,7 +621,7 @@ export default function About() {
                 <h3 className="about-philosophy-title mb-6">
                   글로벌 시장에서 경쟁력을 만드는 실행 중심 기업
                 </h3>
-                <p className="about-philosophy-description">
+                <p className="about-philosophy-description text-[20px]">
                   아시아를 기반으로 성장해 온 브랜드에게
                   <br className="hidden sm:block" />
                   글로벌 시장 진출 기회를 제공합니다.
