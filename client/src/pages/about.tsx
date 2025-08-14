@@ -673,7 +673,7 @@ export default function About() {
                   </span>
                   를 통해
                   <br className="hidden lg:block" />
-                  파트너가 오래 함께할 수 있는 신뢰 기반을 만듭니다.
+                  파트너가 오래 함께할 수 <br className="block lg:hidden" />있는 신뢰 기반을 만듭니다.
                 </p>
               </div>
             </div>
