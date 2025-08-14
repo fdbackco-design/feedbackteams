@@ -189,7 +189,7 @@ export default function Contact() {
               .map((line, index) => (
                 <span key={index}>
                   {line}
-                  {index === 0 && <br />}
+                  {index === 0 && <br className="hidden sm:block" />}
                 </span>
               ))}
           </p>
