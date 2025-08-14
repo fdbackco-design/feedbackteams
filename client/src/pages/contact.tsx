@@ -92,7 +92,7 @@ export default function Contact() {
 
       if (result.ok) {
         toast({
-          title: t("contact.form.success.title"),
+          title: t("메일 발송 성공"),
           description:
             "문의가 성공적으로 전송되었습니다. 빠른 시일 내에 답변드리겠습니다.",
         });

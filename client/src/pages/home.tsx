@@ -1180,7 +1180,7 @@ export default function Home() {
               {t("cta.description").split('\n').map((line, index) => (
                 <span key={index}>
                   {line}
-                  {index === 0 && <br />}
+                  {index === 0 && <br className="hidden sm:block" />}
                 </span>
               ))}
             </p>
