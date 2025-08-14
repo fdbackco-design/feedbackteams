@@ -668,6 +668,7 @@ export default function About() {
                   <br />
                   <span className="font-semibold text-primary">
                     검증된 품질과 안정적인 공급, 투명한 유통 프로세스,
+                    <br className="block lg:hidden" />
                     <br className="hidden lg:block" />
                     정직한 사후 서비스 체계
                   </span>
