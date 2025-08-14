@@ -334,7 +334,7 @@ const BrandMessageBannerSVG = () => (
         >
           피드백은 브랜드의 성장을
           <br className="hidden sm:block" />
-          <span className="text-[#ffffff]">유통으로 설계합니다</span>
+          <span className="text-[#ffffff]"> 유통으로 설계합니다</span>
         </h2>
       </div>
     </div>
@@ -843,17 +843,17 @@ export default function About() {
           <h2 className="about-org-title mb-16">조직도</h2>
 
           <div className="flex justify-center">
-            <div className="bg-white p-8 rounded-2xl shadow-xl max-w-full overflow-x-auto border border-border">
+            <div className="bg-white p-4 sm:p-8 rounded-2xl shadow-xl w-full overflow-x-auto border border-border">
               <img
                 src={newOrganizationChart}
                 alt="피드백 조직도"
-                className="max-w-full h-auto rounded-lg"
+                className="w-full min-w-[600px] h-auto rounded-lg"
               />
             </div>
           </div>
 
           <div className="text-center mt-12">
-            <p className="about-org-description text-[20px]">
+            <p className="about-org-description">
               체계적인 조직 구성을 통해 각 분야의 전문성을 바탕으로
               <br className="hidden sm:block" />
               고객에게 최고의 서비스를 제공하고 있습니다.
