@@ -809,8 +809,8 @@ export default function Home() {
               </button>
             </div>
 
-            {/* Progress Bar Pager */}
-            <div className="mt-3 sm:mt-5">
+            {/* Progress Bar Pager - Hidden on mobile */}
+            <div className="hidden sm:block mt-3 sm:mt-5">
               <div className="max-w-lg mx-auto">
                 <div className="h-1 bg-gray-300 rounded-full relative overflow-hidden">
                   <div 
