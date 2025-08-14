@@ -604,7 +604,7 @@ export default function Home() {
           <h1 className="hero-title mb-4 sm:mb-6 animate-fade-in-up">
             {t("hero.title")}
             <br />
-            <span className="hero-subtitle">{t("hero.subtitle")}</span>
+            <span className="hero-subtitle text-[60px]">{t("hero.subtitle")}</span>
           </h1>
           <p
             className="hero-description mb-6 sm:mb-8 animate-fade-in-up"
