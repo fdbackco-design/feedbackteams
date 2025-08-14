@@ -967,15 +967,19 @@ export default function Home() {
       >
         <div className="relative w-full z-10">
           {/* Section Header - Aligned with Navigation */}
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-8 sm:mb-12">
-            <h2 className="news-title">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-12">
+            <h2 className="news-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-900">
               {t("news.title")}
             </h2>
+            {/* Mobile swipe indicator */}
+            <div className="block md:hidden text-center mt-4">
+              <p className="text-sm text-gray-500">← 좌우로 스와이프하여 더 많은 뉴스를 확인하세요 →</p>
+            </div>
           </div>
 
           {/* News Cards - Horizontal Scrollable */}
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-            {/* Navigation Buttons - Close to Card Area */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            {/* Navigation Buttons - Hidden on mobile, visible on desktop */}
             <button
               onClick={() => {
                 if (newsScrollRef.current) {
@@ -991,7 +995,7 @@ export default function Home() {
                   }
                 }
               }}
-              className="absolute -left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/95 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:scale-110 border border-gray-100"
+              className="hidden md:flex absolute -left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/95 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 items-center justify-center group hover:scale-110 border border-gray-100"
               aria-label="Previous news"
             >
               <svg className="w-6 h-6 text-gray-700 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1014,7 +1018,7 @@ export default function Home() {
                   }
                 }
               }}
-              className="absolute -right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/95 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:scale-110 border border-gray-100"
+              className="hidden md:flex absolute -right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/95 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 items-center justify-center group hover:scale-110 border border-gray-100"
               aria-label="Next news"
             >
               <svg className="w-6 h-6 text-gray-700 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1024,7 +1028,7 @@ export default function Home() {
 
             <div 
               ref={newsScrollRef}
-              className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto pb-6 scrollbar-hide cursor-grab justify-start"
+              className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto pb-6 scrollbar-hide cursor-grab justify-start px-2 sm:px-0"
               style={{ 
                 scrollSnapType: 'x mandatory',
                 scrollbarWidth: 'none',
