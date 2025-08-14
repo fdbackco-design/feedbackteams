@@ -712,7 +712,7 @@ export default function Home() {
             <div className="section-subtitle mb-2 text-[14px]">
               SERVICE
             </div>
-            <h2 className="section-title-primary mb-4 text-[36px] font-bold">
+            <h2 className="section-title-primary mb-4 text-[24px] sm:text-[36px] font-bold">
               {t("services.title")}
             </h2>
             <p className="section-description">
