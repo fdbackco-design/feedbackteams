@@ -658,7 +658,7 @@ export default function About() {
                 <h3 className="about-philosophy-title mb-6">
                   신뢰를 통한 장기 파트너십 구축
                 </h3>
-                <p className="about-philosophy-description">
+                <p className="about-philosophy-description text-[20px]">
                   FeedBack의 존재 이유는 파트너와 고객의 신뢰입니다.
                   <br />
                   <br />
