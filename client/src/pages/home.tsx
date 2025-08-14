@@ -1160,7 +1160,7 @@ export default function Home() {
             muted={true}
             loop={true}
             preload="none"
-            playsInline={true}
+            playsInline
           />
         </div>
 

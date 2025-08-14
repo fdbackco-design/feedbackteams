@@ -425,7 +425,7 @@ html {
 }
 
 .hero-subtitle {
-  @apply section-title-white font-bold;
+  @apply font-bold text-white leading-tight;
 }
 
 .hero-description {
