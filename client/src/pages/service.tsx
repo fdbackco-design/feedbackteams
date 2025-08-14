@@ -328,8 +328,8 @@ export default function Service() {
             ))}
           </div>
 
-          {/* Dot Indicators */}
-          <div className="flex justify-center mt-8 space-x-3">
+          {/* Dot Indicators - Hidden on mobile, visible on desktop */}
+          <div className="hidden md:flex justify-center mt-8 space-x-3">
             {services.map((_, index) => (
               <button
                 key={index}
