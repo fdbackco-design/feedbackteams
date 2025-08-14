@@ -563,7 +563,7 @@ export default function About() {
                   <span className="font-semibold text-[0F4C82]">
                     모두가 지속 가능한 이익을 나누는 상생 플랫폼
                   </span>
-                  을 지향합니다.
+                  을 <br className="block lg:hidden" />지향합니다.
                 </p>
               </div>
             </div>
