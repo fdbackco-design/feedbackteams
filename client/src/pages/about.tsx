@@ -856,7 +856,7 @@ export default function About() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="about-org-description">
+            <p className="about-org-description text-[20px]">
               체계적인 조직 구성을 통해 각 분야의 전문성을 바탕으로
               <br className="hidden sm:block" />
               고객에게 최고의 서비스를 제공하고 있습니다.
