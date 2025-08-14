@@ -846,12 +846,11 @@ export default function About() {
           <h2 className="about-org-title mb-16">조직도</h2>
 
           <div className="flex justify-center">
-            <div className="bg-white p-4 sm:p-8 rounded-2xl shadow-xl w-full overflow-x-auto border border-border">
+            <div className="bg-white p-4 sm:p-8 rounded-2xl shadow-xl w-full border border-border">
               <img
                 src={newOrganizationChart}
                 alt="피드백 조직도"
-                className="w-auto h-auto rounded-lg"
-                style={{ minWidth: "360px" }}
+                className="w-full h-auto rounded-lg"
               />
             </div>
           </div>
