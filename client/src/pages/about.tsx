@@ -584,7 +584,7 @@ export default function About() {
                 <h3 className="about-philosophy-title mb-6">
                   통합 실행력으로 브랜드와 시장을 연결합니다
                 </h3>
-                <p className="about-philosophy-description">
+                <p className="about-philosophy-description text-[20px]">
                   단순 유통을 넘어 상품 기획, 브랜딩, 마케팅, 유통 채널을
                   유기적으로 연결합니다.
                   <br className="hidden sm:block" />
