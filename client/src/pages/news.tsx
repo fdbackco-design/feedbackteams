@@ -81,54 +81,54 @@ export default function News() {
           {filteredNews.slice(0, visibleNews).map((news, index) => {
             const src = resolveNewsThumbnail(news.thumbnail);
             return (
-              <Card
+              <Link
                 key={index}
-                className="shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col h-full"
+                href={news.link}
+                className="block transition-transform hover:scale-[1.02]"
+                onClick={() => {
+                  // Scroll to top when navigating to external link
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
               >
-                <div className="aspect-[4/3] bg-gray-200 relative overflow-hidden">
-                  <img
-                    src={src}
-                    alt={news.title}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                    decoding="async"
-                    onError={(e) => {
-                      (e.currentTarget as HTMLImageElement).src = FALLBACK;
-                    }}
-                  />
-                </div>
-                <CardHeader className="pb-3">
-                  <div className="flex items-center justify-between mb-3">
-                    <Badge
-                      className={
-                        categoryColors[news.category] ||
-                        "bg-gray-500 text-white"
-                      }
-                    >
-                      {news.category}
-                    </Badge>
-                    <time className="text-gray-500 text-sm">{news.date}</time>
+                <Card className="shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col h-full cursor-pointer">
+                  <div className="aspect-[4/3] bg-gray-200 relative overflow-hidden">
+                    <img
+                      src={src}
+                      alt={news.title}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                      decoding="async"
+                      onError={(e) => {
+                        (e.currentTarget as HTMLImageElement).src = FALLBACK;
+                      }}
+                    />
                   </div>
-                  <CardTitle className="text-xl font-bold text-gray-900 line-clamp-2 h-[3.5rem] leading-tight">
-                    {news.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="flex-1 flex flex-col justify-between pt-0">
-                  <CardDescription className="text-gray-600 mb-6 line-clamp-3 h-[4.5rem] leading-relaxed">
-                    {news.summary}
-                  </CardDescription>
-                  <Link
-                    href={news.link}
-                    className="text-primary font-semibold hover:underline self-start"
-                    onClick={() => {
-                      // Scroll to top when navigating to external link
-                      window.scrollTo({ top: 0, behavior: 'smooth' });
-                    }}
-                  >
-                    전체 기사 읽기 →
-                  </Link>
-                </CardContent>
-              </Card>
+                  <CardHeader className="pb-3">
+                    <div className="flex items-center justify-between mb-3">
+                      <Badge
+                        className={
+                          categoryColors[news.category] ||
+                          "bg-gray-500 text-white"
+                        }
+                      >
+                        {news.category}
+                      </Badge>
+                      <time className="text-gray-500 text-sm">{news.date}</time>
+                    </div>
+                    <CardTitle className="text-xl font-bold text-gray-900 line-clamp-2 h-[3.5rem] leading-tight">
+                      {news.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-1 flex flex-col justify-between pt-0">
+                    <CardDescription className="text-gray-600 mb-6 line-clamp-3 h-[4.5rem] leading-relaxed">
+                      {news.summary}
+                    </CardDescription>
+                    <div className="text-primary font-semibold self-start">
+                      전체 기사 읽기 →
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             );
           })}
         </div>
