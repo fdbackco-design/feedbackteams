@@ -725,9 +725,9 @@ export default function Home() {
             {/* Service Card */}
             <div className="bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-xl overflow-hidden max-w-4xl mx-auto mb-6 sm:mb-8">
               {services[currentServiceIndex] && (
-                <div className="grid lg:grid-cols-2 gap-0">
+                <div className="grid lg:grid-cols-2 gap-0 h-[500px] sm:h-[550px] md:h-[600px] lg:h-[500px]">
                   {/* Image Section */}
-                  <div className="relative h-48 sm:h-64 lg:h-auto">
+                  <div className="relative h-48 sm:h-64 lg:h-full">
                     <LazyImage
                       src={services[currentServiceIndex].imageUrl}
                       alt={services[currentServiceIndex].title}
@@ -737,7 +737,7 @@ export default function Home() {
                   </div>
                   
                   {/* Content Section */}
-                  <div className="p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-between min-h-[280px] sm:min-h-[350px] lg:min-h-[400px]">
+                  <div className="p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-between flex-1">
                     <div className="flex-1">
                       <div className="text-xs sm:text-sm text-primary font-semibold mb-3 sm:mb-4">
                         0{currentServiceIndex + 1}/0{services.length}
@@ -745,11 +745,11 @@ export default function Home() {
                       <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-[#000000] mb-3 sm:mb-4 md:mb-6 leading-tight">
                         {services[currentServiceIndex].title}
                       </h3>
-                      <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-4 sm:mb-6 leading-relaxed">
+                      <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-4 sm:mb-6 leading-relaxed line-clamp-3">
                         {services[currentServiceIndex].description}
                       </p>
                       <div className="space-y-1 sm:space-y-2 mb-4 sm:mb-6 md:mb-8">
-                        {services[currentServiceIndex].features.map(
+                        {services[currentServiceIndex].features.slice(0, 3).map(
                           (feature, index) => (
                             <div
                               key={index}
@@ -1160,7 +1160,6 @@ export default function Home() {
             muted={true}
             loop={true}
             preload="none"
-            playsInline
           />
         </div>
 
