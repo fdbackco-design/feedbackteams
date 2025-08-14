@@ -1075,51 +1075,50 @@ export default function Home() {
       <section
         id="stats"
         ref={statsRef}
-        className="h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white relative overflow-hidden"
-        style={{ scrollSnapAlign: "start" }}
+        className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white relative overflow-hidden pt-12 sm:pt-16 md:pt-20"
+        style={{ scrollSnapAlign: "start", marginTop: "50px" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-70"></div>
         
         {/* Dynamic Network Background */}
         <NetworkBackground className="opacity-50" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto mobile-padding relative z-10">
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <div className="section-subtitle-light mb-4">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <div className="section-subtitle-light mb-3 sm:mb-4 text-xs sm:text-sm uppercase tracking-wider">
               {t("stats.subtitle")}
             </div>
-            <h2 className="section-title-primary-white mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 leading-tight text-white">
               {t("stats.title")} <span className="text-blue-400">FeedBack</span>
             </h2>
-            <p className="section-description-white">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-300 max-w-3xl mx-auto">
               {t("stats.description")}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 text-center">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/15">
-              <div className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-2 lg:mb-4 tabular-nums text-white drop-shadow-lg">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8 text-center">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-xl lg:rounded-2xl p-3 sm:p-4 md:p-6 lg:p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/15">
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-1 sm:mb-2 lg:mb-4 tabular-nums text-white drop-shadow-lg">
                 {yearCount}
               </div>
-              <div className="text-sm sm:text-lg lg:text-xl text-blue-300 font-medium">{t("stats.since")}</div>
-              <div className="text-xs sm:text-sm text-gray-300 mt-1 lg:mt-2">{t("stats.since.sub")}</div>
+              <div className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-blue-300 font-medium">{t("stats.since")}</div>
+              <div className="text-xs text-gray-300 mt-1 lg:mt-2 leading-tight">{t("stats.since.sub")}</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/15">
-              <div className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-2 lg:mb-4 tabular-nums text-white drop-shadow-lg">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-xl lg:rounded-2xl p-3 sm:p-4 md:p-6 lg:p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/15">
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-1 sm:mb-2 lg:mb-4 tabular-nums text-white drop-shadow-lg">
                 {brandCount}+
               </div>
-              <div className="text-sm sm:text-lg lg:text-xl text-blue-300 font-medium">{t("stats.brands")}</div>
-              <div className="text-xs sm:text-sm text-gray-300 mt-1 lg:mt-2">{t("stats.brands.sub")}</div>
+              <div className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-blue-300 font-medium">{t("stats.brands")}</div>
+              <div className="text-xs text-gray-300 mt-1 lg:mt-2 leading-tight">{t("stats.brands.sub")}</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/15">
-              <div className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-2 lg:mb-4 tabular-nums text-white drop-shadow-lg">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-xl lg:rounded-2xl p-3 sm:p-4 md:p-6 lg:p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/15 sm:col-span-2 lg:col-span-1">
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-1 sm:mb-2 lg:mb-4 tabular-nums text-white drop-shadow-lg">
                 {partnerCount}+
               </div>
-              <div className="text-sm sm:text-lg lg:text-xl text-blue-300 font-medium">{t("stats.countries")}</div>
-              <div className="text-xs sm:text-sm text-gray-300 mt-1 lg:mt-2">{t("stats.countries.sub")}</div>
+              <div className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-blue-300 font-medium">{t("stats.countries")}</div>
+              <div className="text-xs text-gray-300 mt-1 lg:mt-2 leading-tight">{t("stats.countries.sub")}</div>
             </div>
-            
           </div>
         </div>
       </section>

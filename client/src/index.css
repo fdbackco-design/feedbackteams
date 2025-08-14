@@ -207,6 +207,19 @@ html {
   .section-description {
     @apply text-sm sm:text-base;
   }
+  
+  /* Stats section mobile optimizations */
+  .section-title-primary-white {
+    @apply text-xl sm:text-2xl md:text-3xl;
+  }
+  
+  .section-subtitle-light {
+    @apply text-xs sm:text-sm;
+  }
+  
+  .section-description-white {
+    @apply text-sm leading-relaxed;
+  }
 }
 
 /* Better mobile viewport handling */
