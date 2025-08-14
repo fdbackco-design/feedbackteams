@@ -792,7 +792,7 @@ export default function About() {
                 <h3 className="text-2xl font-bold mb-2">송해민, 정성현</h3>
                 <p className="text-lg opacity-90">(주)피드백 대표</p>
                 <div className="mt-8 pt-8 border-t border-white/20">
-                  <p className="text-sm opacity-80">
+                  <p className="opacity-80 text-[18px]">
                     "브랜드와 시장을 연결하는
                     <br />
                     플랫폼 기업으로 성장"
