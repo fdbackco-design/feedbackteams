@@ -692,9 +692,10 @@ export default function Home() {
       {/* Services Section */}
       <section
         id="services"
-        className="h-screen flex items-center justify-center relative overflow-hidden"
+        className="min-h-screen flex items-center justify-center relative overflow-hidden pt-12 sm:pt-16 md:pt-20"
         style={{ 
           scrollSnapAlign: "start",
+          marginTop: "50px",
           backgroundImage: `url(${services[currentServiceIndex]?.imageUrl || serviceBackgroundImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
@@ -746,11 +747,11 @@ export default function Home() {
             </button>
 
             {/* Service Card */}
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden max-w-4xl mx-auto">
+            <div className="bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-xl overflow-hidden max-w-4xl mx-auto">
               {services[currentServiceIndex] && (
                 <div className="grid lg:grid-cols-2 gap-0">
                   {/* Image Section */}
-                  <div className="relative h-64 lg:h-auto">
+                  <div className="relative h-48 sm:h-64 lg:h-auto">
                     <LazyImage
                       src={services[currentServiceIndex].imageUrl}
                       alt={services[currentServiceIndex].title}
@@ -760,26 +761,26 @@ export default function Home() {
                   </div>
                   
                   {/* Content Section */}
-                  <div className="p-6 sm:p-8 lg:p-12 flex flex-col justify-between min-h-[350px] sm:min-h-[400px]">
+                  <div className="p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-between min-h-[280px] sm:min-h-[350px] lg:min-h-[400px]">
                     <div className="flex-1">
-                      <div className="text-sm text-primary font-semibold mb-4">
+                      <div className="text-xs sm:text-sm text-primary font-semibold mb-3 sm:mb-4">
                         0{currentServiceIndex + 1}/0{services.length}
                       </div>
-                      <h3 className="service-card-title mb-6 h-[4rem] leading-tight flex items-center">
+                      <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-[#000000] mb-3 sm:mb-4 md:mb-6 leading-tight">
                         {services[currentServiceIndex].title}
                       </h3>
-                      <p className="service-card-description mb-6 h-[4.5rem] leading-relaxed flex items-start">
+                      <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-4 sm:mb-6 leading-relaxed">
                         {services[currentServiceIndex].description}
                       </p>
-                      <div className="space-y-2 mb-8 h-[6rem] flex flex-col justify-start">
+                      <div className="space-y-1 sm:space-y-2 mb-4 sm:mb-6 md:mb-8">
                         {services[currentServiceIndex].features.map(
                           (feature, index) => (
                             <div
                               key={index}
-                              className="flex items-center text-sm text-gray-500"
+                              className="flex items-start text-xs sm:text-sm text-gray-600"
                             >
-                              <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
-                              {feature}
+                              <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-primary rounded-full mr-2 sm:mr-3 mt-1.5 sm:mt-2 flex-shrink-0"></div>
+                              <span className="leading-relaxed">{feature}</span>
                             </div>
                           ),
                         )}
@@ -787,9 +788,9 @@ export default function Home() {
                     </div>
                     <div className="mt-auto">
                       <Link href="/service">
-                        <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-semibold inline-flex items-center group">
+                        <Button className="bg-primary hover:bg-primary/90 text-white px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-3 text-sm sm:text-base rounded-lg font-semibold inline-flex items-center group w-full sm:w-auto justify-center tap-target">
                           자세히 보기
-                          <ArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                          <ArrowRight className="ml-1 sm:ml-2 w-3 h-3 sm:w-4 sm:h-4 transform group-hover:translate-x-1 transition-transform" />
                         </Button>
                       </Link>
                     </div>
@@ -840,38 +841,38 @@ export default function Home() {
             <div className={`text-white space-y-6 transition-all duration-500 max-w-2xl ${
               imageLoaded ? 'opacity-100 transform translate-x-0' : 'opacity-0 transform translate-x-4'
             }`}>
-              <div className="space-y-2">
-                <div className="text-sm font-semibold uppercase tracking-wide opacity-90">
+              <div className="space-y-2 sm:space-y-3">
+                <div className="text-xs sm:text-sm font-semibold uppercase tracking-wide opacity-90">
                   {brands[currentBrandIndex].category}
                 </div>
-                <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 leading-tight">
                   {brands[currentBrandIndex].name}
                 </h2>
-                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-light mb-6 opacity-90 leading-tight">
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light mb-4 sm:mb-6 opacity-90 leading-tight">
                   {brands[currentBrandIndex].slogan}
                 </p>
               </div>
 
-              <p className="text-base sm:text-lg leading-relaxed opacity-90 max-w-md sm:max-w-lg">
+              <p className="text-sm sm:text-base lg:text-lg leading-relaxed opacity-90 max-w-sm sm:max-w-md lg:max-w-lg">
                 {brands[currentBrandIndex].description}
               </p>
 
-              <div className="flex flex-wrap gap-3 mt-6">
+              <div className="flex flex-wrap gap-2 sm:gap-3 mt-4 sm:mt-6">
                 {brands[currentBrandIndex].products.map((product, index) => (
                   <span
                     key={index}
-                    className="px-4 py-2 bg-white bg-opacity-80 rounded-full text-sm font-medium text-gray-900 backdrop-blur-sm"
+                    className="px-3 py-1 sm:px-4 sm:py-2 bg-white bg-opacity-80 rounded-full text-xs sm:text-sm font-medium text-gray-900 backdrop-blur-sm"
                   >
                     {product}
                   </span>
                 ))}
               </div>
 
-              <div className="flex items-center space-x-4 mt-8">
+              <div className="flex items-center space-x-3 sm:space-x-4 mt-6 sm:mt-8">
                 <Button
                   asChild
                   size="lg"
-                  className="bg-white text-gray-900 hover:bg-gray-100"
+                  className="bg-white text-gray-900 hover:bg-gray-100 px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base tap-target"
                 >
                   <Link href={`/brand/${brands[currentBrandIndex].id}`}>
                     브랜드 자세히 보기
