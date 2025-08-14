@@ -466,7 +466,7 @@ export default function About() {
             <div className="text-lg text-foreground leading-relaxed space-y-8 max-w-4xl mx-auto">
               <p className="about-story-main text-[30px]">
                 <span className="text-primary">Feedback</span>은 유통을 중심으로
-                <br />
+                <br className="hidden sm:block" />
                 브랜드 마케팅, 제조, 무역 수출입을 아우르는
                 <span className="text-accent"> 종합 커머스 기업</span>입니다.
               </p>
@@ -474,14 +474,14 @@ export default function About() {
               <p className="about-story-sub">
                 Hoid, Medifeed, InYourHeart, 상생 등 자체 브랜드와 글로벌
                 파트너십을 기반으로,
-                <br />
+                <br className="hidden sm:block" />
                 기획부터 제조·유통·브랜딩까지 전 과정을 함께합니다.
               </p>
 
               <p className="about-story-detail text-[20px]">
                 고객의 삶 속에 스며든 FeedBack의 브랜드 하나하나가 고객 여러분의
                 하루를
-                <br />
+                <br className="hidden sm:block" />
                 더욱 편리하고 행복하게 만들 수 있도록 언제나 노력하는 FeedBack이
                 되겠습니다.
               </p>
@@ -508,13 +508,13 @@ export default function About() {
           <h3 className="about-parallax-title mb-8">
             고객님의 <span className="text-[#ffffff]">'생활 속 행복'</span>을
             목표로
-            <br />
+            <br className="hidden sm:block" />
             열정 넘치는 이들이 모인 FeedBack은
           </h3>
           <p className="about-parallax-description max-w-3xl mx-auto">
             최고의 제품을 안겨드리기 위해 기술혁신에 끊임없이 노력을 기울이고
             있으며,
-            <br />
+            <br className="hidden sm:block" />
             이를 위한 연구개발투자 또한 지속적으로 이루어지고 있습니다.
           </p>
         </div>
@@ -526,7 +526,7 @@ export default function About() {
             <h2 className="about-section-title mb-8">경영철학</h2>
             <p className="about-story-sub text-foreground leading-relaxed max-w-4xl mx-auto">
               FeedBack은 브랜드와 시장을 연결하는 실행 중심의 유통 플랫폼으로서
-              <br />
+              <br className="hidden sm:block" />
               모든 파트너와 함께 성장하는 상생의 생태계를 구축하고 있습니다.
             </p>
           </div>
@@ -550,14 +550,14 @@ export default function About() {
                 </h3>
                 <p className="about-philosophy-description text-[0F4C82]">
                   FeedBack은 단순히 물건을 사고파는 곳이 아닌,
-                  <br />
+                  <br className="hidden sm:block" />
                   제조사·브랜드·소매처가 함께 성장할 수 있는 유통 생태계를
                   구축합니다.
                   <br />
                   <br />
                   고객사와 파트너의 신뢰를 기반으로 장기 협력과 함께 발전하는
                   구조를 설계하며,
-                  <br />
+                  <br className="hidden sm:block" />
                   <span className="font-semibold text-[0F4C82]">
                     모두가 지속 가능한 이익을 나누는 상생 플랫폼
                   </span>
@@ -587,15 +587,15 @@ export default function About() {
                 <p className="about-philosophy-description">
                   단순 유통을 넘어 상품 기획, 브랜딩, 마케팅, 유통 채널을
                   유기적으로 연결합니다.
-                  <br />
+                  <br className="hidden sm:block" />
                   고유한 OEM 역량과 자체 브랜드 경험을 결합하여,
-                  <br />
+                  <br className="hidden sm:block" />
                   브랜드가 시장에서 자리 잡도록 실행 가능한 솔루션을 제공합니다.
                   <br />
                   <br />
                   <span className="font-semibold text-primary">
                     제품력에 브랜딩을 입히고, 브랜딩에 유통을 결합하며,
-                    <br />
+                    <br className="hidden sm:block" />
                     유통에 경험과 콘텐츠를 심는 방식이 FeedBack의 방식
                   </span>
                   입니다.
@@ -623,7 +623,7 @@ export default function About() {
                 </h3>
                 <p className="about-philosophy-description">
                   아시아를 기반으로 성장해 온 브랜드에게
-                  <br />
+                  <br className="hidden sm:block" />
                   글로벌 시장 진출 기회를 제공합니다.
                   <br />
                   <br />
@@ -631,11 +631,11 @@ export default function About() {
                     전략적 진출 설계 + 제휴 기반 실행력
                   </span>
                   을 통해
-                  <br />
+                  <br className="hidden sm:block" />
                   브랜드의 세계화를 지원하고,
-                  <br />
+                  <br className="hidden sm:block" />
                   국내외 파트너와의 협업을 통해
-                  <br />더 크고 넓은 시장에서 기회를 창출합니다.
+                  <br className="hidden sm:block" />더 크고 넓은 시장에서 기회를 창출합니다.
                 </p>
               </div>
             </div>
@@ -664,11 +664,11 @@ export default function About() {
                   <br />
                   <span className="font-semibold text-primary">
                     검증된 품질과 안정적인 공급, 투명한 유통 프로세스,
-                    <br />
+                    <br className="hidden sm:block" />
                     정직한 사후 서비스 체계
                   </span>
                   를 통해
-                  <br />
+                  <br className="hidden sm:block" />
                   파트너가 오래 함께할 수 있는 신뢰 기반을 만듭니다.
                 </p>
               </div>
@@ -768,7 +768,7 @@ export default function About() {
             <p className="about-story-detail leading-relaxed font-medium text-[#000000]">
               피드백은 제품 출시와 동시에 국내외 홈쇼핑, 이커머스, 도매 채널과의
               연계를 통해
-              <br />
+              <br className="hidden sm:block" />
               빠르게 시장을 확장하고 있습니다.
             </p>
           </div>
@@ -854,7 +854,7 @@ export default function About() {
           <div className="text-center mt-12">
             <p className="about-org-description">
               체계적인 조직 구성을 통해 각 분야의 전문성을 바탕으로
-              <br />
+              <br className="hidden sm:block" />
               고객에게 최고의 서비스를 제공하고 있습니다.
             </p>
           </div>
