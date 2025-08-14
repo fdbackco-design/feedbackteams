@@ -722,32 +722,8 @@ export default function Home() {
 
           {/* Service Carousel */}
           <div className="relative max-w-6xl mx-auto">
-            {/* Navigation Arrows */}
-            <button
-              onClick={() => {
-                const newIndex =
-                  currentServiceIndex === 0
-                    ? services.length - 1
-                    : currentServiceIndex - 1;
-                setCurrentServiceIndex(newIndex);
-              }}
-              className="tap-target absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
-            >
-              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
-            </button>
-
-            <button
-              onClick={() => {
-                const newIndex = (currentServiceIndex + 1) % services.length;
-                setCurrentServiceIndex(newIndex);
-              }}
-              className="tap-target absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
-            >
-              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
-            </button>
-
             {/* Service Card */}
-            <div className="bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-xl overflow-hidden max-w-4xl mx-auto">
+            <div className="bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-xl overflow-hidden max-w-4xl mx-auto mb-6 sm:mb-8">
               {services[currentServiceIndex] && (
                 <div className="grid lg:grid-cols-2 gap-0">
                   {/* Image Section */}
@@ -799,10 +775,44 @@ export default function Home() {
               )}
             </div>
 
-            {/* Progress Bar Pager - Matches Navigation Width */}
-            <div className="mt-8">
-              <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                <div className="h-0.5 bg-gray-300 rounded-full relative overflow-hidden">
+            {/* Navigation Arrows - Below the card on mobile */}
+            <div className="flex justify-center items-center gap-4 sm:gap-6 mt-4 sm:mt-6">
+              <button
+                onClick={() => {
+                  const newIndex =
+                    currentServiceIndex === 0
+                      ? services.length - 1
+                      : currentServiceIndex - 1;
+                  setCurrentServiceIndex(newIndex);
+                }}
+                className="tap-target w-12 h-12 sm:w-14 sm:h-14 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-all duration-300 hover:scale-105"
+              >
+                <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
+              </button>
+
+              {/* Service Counter */}
+              <div className="px-4 py-2 sm:px-6 sm:py-3 bg-white/90 backdrop-blur-sm rounded-full shadow-lg">
+                <div className="text-sm sm:text-base font-semibold text-gray-700">
+                  {String(currentServiceIndex + 1).padStart(2, "0")} /{" "}
+                  {String(services.length).padStart(2, "0")}
+                </div>
+              </div>
+
+              <button
+                onClick={() => {
+                  const newIndex = (currentServiceIndex + 1) % services.length;
+                  setCurrentServiceIndex(newIndex);
+                }}
+                className="tap-target w-12 h-12 sm:w-14 sm:h-14 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-all duration-300 hover:scale-105"
+              >
+                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
+              </button>
+            </div>
+
+            {/* Progress Bar Pager */}
+            <div className="mt-6 sm:mt-8">
+              <div className="max-w-lg mx-auto">
+                <div className="h-1 bg-gray-300 rounded-full relative overflow-hidden">
                   <div 
                     className="h-full bg-black rounded-full transition-all duration-300 ease-out"
                     style={{ 
