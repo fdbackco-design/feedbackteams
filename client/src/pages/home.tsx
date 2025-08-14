@@ -1139,18 +1139,25 @@ export default function Home() {
       {/* CTA Section with Video Background */}
       <section
         id="cta"
-        className="h-screen flex items-center justify-center relative overflow-hidden"
+        className="min-h-screen flex items-center justify-center relative overflow-hidden"
         style={{ scrollSnapAlign: "start" }}
       >
-        {/* Video Background */}
+        {/* Video Background - Mobile optimized */}
         <div className="absolute inset-0 w-full h-full">
           <LazyVideo
             src={shipVideo}
-            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto transform -translate-x-1/2 -translate-y-1/2 object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{
+              width: '100vw',
+              height: '100vh',
+              objectFit: 'cover',
+              objectPosition: 'center'
+            }}
             autoPlay={true}
             muted={true}
             loop={true}
             preload="none"
+            playsInline={true}
           />
         </div>
 
@@ -1158,15 +1165,15 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/60"></div>
 
         {/* Content over video */}
-        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 w-full mobile-padding flex items-center justify-center min-h-screen">
           <div
-            className="sm:ml-[10%] max-w-2xl opacity-0 animate-fade-in-up"
+            className="text-center sm:text-left sm:ml-[10%] max-w-2xl opacity-0 animate-fade-in-up"
             style={{ animationDelay: "0.1s" }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight">
               {t("cta.title")}
             </h2>
-            <p className="text-lg sm:text-xl font-semibold text-white mb-8 sm:mb-12 font-normal leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl font-medium text-white mb-6 sm:mb-8 md:mb-12 leading-relaxed">
               {t("cta.description").split('\n').map((line, index) => (
                 <span key={index}>
                   {line}
@@ -1174,16 +1181,15 @@ export default function Home() {
                 </span>
               ))}
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 items-start">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center sm:items-start justify-center sm:justify-start">
               <Button
                 asChild
                 size="lg"
-                className="text-lg px-10 py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl animate-floating bg-white text-blue-600 hover:bg-gray-100"
+                className="text-base sm:text-lg px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl animate-floating bg-white text-blue-600 hover:bg-gray-100 w-full sm:w-auto tap-target"
                 style={{ animationDelay: "1s" }}
               >
                 <Link href="/contact">{t("cta.consultation")}</Link>
               </Button>
-
             </div>
           </div>
         </div>

@@ -236,6 +236,13 @@ html {
     .main-content {
       padding-bottom: 80px;
     }
+    
+    /* CTA section video mobile optimization */
+    .cta-video-mobile {
+      width: 100vw !important;
+      height: 100vh !important;
+      object-fit: cover !important;
+    }
   }
 }
 
