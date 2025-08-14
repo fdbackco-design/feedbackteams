@@ -547,7 +547,7 @@ export default function About() {
               </div>
               <div className="lg:w-1/2 text-center lg:text-left">
                 <h3 className="about-philosophy-title mb-6">
-                  고객·파트너 중심: '공생'의 유통 모델을<br className="hidden lg:block" /> 실현합니다
+                  고객·파트너 중심: '공생'의 유통 모델을<br className="block lg:hidden" /><br className="hidden lg:block" /> 실현합니다
                 </h3>
                 <p className="about-philosophy-description text-[0F4C82] text-[20px]">
                   FeedBack은 단순히 물건을 사고파는 곳이 아닌,
