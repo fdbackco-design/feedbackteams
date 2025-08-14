@@ -622,7 +622,7 @@ export default function About() {
               </div>
               <div className="lg:w-1/2 text-center lg:text-left">
                 <h3 className="about-philosophy-title mb-6">
-                  글로벌 시장에서 경쟁력을 만드는 실행 중심 기업
+                  글로벌 시장에서 경쟁력을 만드는<br className="hidden lg:block" /> 실행 중심 기업
                 </h3>
                 <p className="about-philosophy-description text-[20px]">
                   아시아를 기반으로 성장해 온 브랜드에게
