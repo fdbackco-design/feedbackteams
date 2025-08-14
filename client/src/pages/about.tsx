@@ -847,7 +847,7 @@ export default function About() {
               <img
                 src={newOrganizationChart}
                 alt="피드백 조직도"
-                className="w-full min-w-[500px] sm:min-w-[600px] h-auto rounded-lg"
+                className="w-full min-w-[500px] sm:min-w-[600px] h-auto rounded-lg object-cover"
               />
             </div>
           </div>
