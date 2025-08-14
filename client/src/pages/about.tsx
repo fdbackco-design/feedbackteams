@@ -22,7 +22,7 @@ import globalImage from "@assets/13730_1754568375896.jpg";
 import trustImage from "@assets/hands_1754568922347.png";
 import peopleImage from "@assets/people_1754639134434.jpg";
 import mapImage from "@assets/map_1754832577677.png";
-import newOrganizationChart from "@assets/mo_company_1755157288698.png";
+import newOrganizationChart from "@assets/mo_company_1755158476798.png";
 
 // SVG 컴포넌트들
 const HeroBackgroundSVG = () => (
