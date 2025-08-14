@@ -526,9 +526,9 @@ export default function Home() {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Section Navigation Line - Desktop: right side middle, Mobile: bottom center */}
-      <div className="fixed right-4 md:right-8 bottom-4 md:bottom-auto md:top-1/2 transform md:-translate-y-1/2 md:translate-x-0 left-1/2 -translate-x-1/2 md:left-auto z-50">
-        <div className="relative h-8 md:h-48 w-32 md:w-auto">
+      {/* Section Navigation Line - Desktop: right side middle, Mobile: bottom right */}
+      <div className="fixed right-4 bottom-16 md:right-8 md:bottom-auto md:top-1/2 transform md:-translate-y-1/2 z-40">
+        <div className="relative h-8 md:h-48 w-20 md:w-auto">
           {/* Background line - horizontal on mobile, vertical on desktop */}
           <div className={`absolute md:right-0 md:top-0 bottom-2 md:bottom-auto left-0 md:left-auto w-full md:w-0.5 h-0.5 md:h-full transition-all duration-500 ${
             currentSection === 0 || currentSection === 5 || currentSection === 6
@@ -548,28 +548,28 @@ export default function Home() {
             }}
           ></div>
           {/* Section numbers - horizontal layout on mobile, vertical on desktop */}
-          <div className={`absolute md:right-3 md:top-0 left-0 md:left-auto -top-3 md:top-0 text-xs md:text-sm font-medium transition-all duration-500 ${
+          <div className={`absolute md:right-3 md:top-0 left-0 md:left-auto -top-6 md:top-0 text-xs md:text-sm font-semibold transition-all duration-500 ${
             currentSection === 0 || currentSection === 5 || currentSection === 6
-              ? 'text-white' 
+              ? 'text-white drop-shadow-lg' 
               : 'text-gray-900'
           }`}>
             {String(currentSection + 1).padStart(2, '0')}
           </div>
-          <div className={`absolute md:right-3 md:bottom-0 right-0 md:right-3 -top-3 md:top-auto text-xs md:text-sm font-medium transition-all duration-500 ${
+          <div className={`absolute md:right-3 md:bottom-0 right-0 md:right-3 -top-6 md:top-auto text-xs md:text-sm font-medium transition-all duration-500 ${
             currentSection === 0 || currentSection === 5 || currentSection === 6
-              ? 'text-gray-400' 
+              ? 'text-gray-300 drop-shadow-md' 
               : 'text-gray-600'
           }`}>
             {String(sections.length).padStart(2, '0')}
           </div>
         </div>
       </div>
-      {/* Navigation Arrows */}
+      {/* Navigation Arrows - Moved to avoid overlap */}
       {currentSection > 0 && (
-        <div className="fixed right-4 md:right-8 bottom-4 md:bottom-8 z-50">
+        <div className="fixed right-4 bottom-4 md:right-8 md:bottom-8 z-50">
           <button
             onClick={() => scrollToSection(0)}
-            className="p-2 md:p-3 rounded-full transition-all duration-300 bg-white shadow-lg hover:shadow-xl text-primary hover:bg-primary hover:text-white"
+            className="p-2 md:p-3 rounded-full transition-all duration-300 bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl text-primary hover:bg-primary hover:text-white tap-target"
             title="첫 번째 섹션으로"
           >
             <ChevronUp className="w-4 h-4 md:w-6 md:h-6" />

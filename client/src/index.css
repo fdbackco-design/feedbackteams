@@ -220,6 +220,23 @@ html {
   .section-description-white {
     @apply text-sm leading-relaxed;
   }
+  
+  /* Mobile navigation improvements */
+  .mobile-nav-indicator {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Ensure navigation doesn't interfere with content */
+  @media (max-width: 768px) {
+    .section-navigation {
+      z-index: 30;
+    }
+    
+    .main-content {
+      padding-bottom: 80px;
+    }
+  }
 }
 
 /* Better mobile viewport handling */
