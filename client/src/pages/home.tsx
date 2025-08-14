@@ -709,7 +709,7 @@ export default function Home() {
             className="text-center mb-8 sm:mb-12 opacity-0 animate-fade-in-up"
             style={{ animationDelay: "0.1s" }}
           >
-            <div className="section-subtitle mb-2">
+            <div className="section-subtitle mb-2 text-[14px]">
               SERVICE
             </div>
             <h2 className="section-title-primary mb-4 text-[36px] font-bold">
