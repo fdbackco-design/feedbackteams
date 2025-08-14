@@ -1,4 +1,5 @@
-module.exports = {
+// client/postcss.config.js  (ESM)
+export default {
   plugins: {
     tailwindcss: {},
     autoprefixer: {},
