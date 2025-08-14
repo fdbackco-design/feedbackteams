@@ -56,14 +56,14 @@ export default function News() {
           </p>
         </div>
 
-        {/* News Filter */}
-        <div className="flex justify-center mb-8 sm:mb-12 mobile-padding">
-          <div className="bg-white rounded-lg p-1 sm:p-2 shadow-sm">
+        {/* News Filter - Mobile Optimized */}
+        <div className="mb-8 sm:mb-12 mobile-padding">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
             {filterOptions.map((option) => (
               <Button
                 key={option.value}
                 variant={activeFilter === option.value ? "default" : "ghost"}
-                className="text-xs sm:text-sm px-3 py-2 sm:px-4 sm:py-2 mr-1 sm:mr-2 last:mr-0 tap-target"
+                className="text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-3 tap-target bg-white hover:bg-gray-50 border border-gray-200 rounded-full shadow-sm"
                 onClick={() => setActiveFilter(option.value)}
               >
                 {option.label}
