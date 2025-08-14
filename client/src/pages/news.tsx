@@ -62,8 +62,12 @@ export default function News() {
             {filterOptions.map((option) => (
               <Button
                 key={option.value}
-                variant={activeFilter === option.value ? "default" : "ghost"}
-                className="text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-3 tap-target bg-white hover:bg-gray-50 border border-gray-200 rounded-full shadow-sm"
+                variant="ghost"
+                className={`text-xs sm:text-sm px-4 py-2 sm:px-5 sm:py-3 tap-target rounded-full shadow-sm border transition-all duration-200 ${
+                  activeFilter === option.value 
+                    ? "bg-[#0F4C82] text-white border-[#0F4C82] hover:bg-[#0F4C82]/90" 
+                    : "bg-white text-gray-700 border-gray-200 hover:bg-gray-50 hover:text-[#0F4C82]"
+                }`}
                 onClick={() => setActiveFilter(option.value)}
               >
                 {option.label}
