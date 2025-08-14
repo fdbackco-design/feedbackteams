@@ -164,48 +164,16 @@ html {
   .brand-card {
     @apply px-3 py-4;
   }
-  
-  .brand-title {
-    @apply text-lg leading-tight;
-  }
-  
-  .brand-description {
-    @apply text-xs leading-relaxed;
-  }
 }
 
-/* Mobile optimizations for home page */
+/* Mobile optimizations - 모바일 최적화 */
 @media (max-width: 768px) {
-  .hero-title {
-    @apply text-2xl sm:text-3xl leading-tight;
-  }
-  
-  .hero-subtitle {
-    @apply text-xl sm:text-2xl;
-  }
-  
-  .hero-description {
-    @apply text-sm sm:text-base leading-relaxed;
-  }
-  
   .service-card-title {
-    @apply text-lg sm:text-xl leading-tight;
+    @apply card-title;
   }
   
   .service-card-description {
-    @apply text-sm leading-relaxed;
-  }
-  
-  .section-title-primary {
-    @apply text-xl sm:text-2xl;
-  }
-  
-  .section-subtitle {
-    @apply text-xs sm:text-sm;
-  }
-  
-  .section-description {
-    @apply text-sm sm:text-base;
+    @apply body-text;
   }
   
   /* Stats section mobile optimizations */
@@ -260,21 +228,10 @@ html {
 }
 
 /* Mobile text scaling */
+/* Additional mobile overrides if needed */
 @media (max-width: 639px) {
-  .hero-title {
-    @apply text-3xl;
-  }
-  
-  .brand-title {
-    @apply text-3xl;
-  }
-  
-  .section-title-primary {
-    @apply text-2xl;
-  }
-  
   .b2b2c-main-title {
-    @apply text-2xl;
+    @apply section-title;
   }
 }
 
@@ -385,80 +342,112 @@ html {
   --spacing: 0.25rem;
 }
 
-/* Standardized Typography Classes */
-/* Main Section Titles */
-.section-title-primary {
-  @apply text-4xl md:text-5xl font-bold text-gray-900;
+/* Standardized Typography System */
+/* Main Page Titles - 대제목 */
+.page-title {
+  @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight;
 }
 
-.section-title-primary-white {
-  @apply text-4xl md:text-5xl font-bold text-white;
+.page-title-white {
+  @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight;
 }
 
-/* Section Subtitles/Taglines */
-.section-subtitle {
-  @apply text-sm text-primary font-semibold tracking-wide uppercase;
+/* Section Titles - 섹션 제목 */
+.section-title {
+  @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight;
 }
 
-.section-subtitle-light {
-  @apply text-sm text-blue-300 font-semibold tracking-wide uppercase;
+.section-title-white {
+  @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight;
 }
 
-/* Section Descriptions */
-.section-description {
-  @apply text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed;
+/* Card Titles - 카드 제목 */
+.card-title {
+  @apply text-lg sm:text-xl md:text-2xl font-bold text-gray-900 leading-tight;
 }
 
-.section-description-white {
-  @apply text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed;
+.card-title-white {
+  @apply text-lg sm:text-xl md:text-2xl font-bold text-white leading-tight;
 }
 
-/* News Section Specific */
+/* Body Text - 본문 */
+.body-text {
+  @apply text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed;
+}
+
+.body-text-white {
+  @apply text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed;
+}
+
+/* Small Text - 작은 글씨 */
+.small-text {
+  @apply text-xs sm:text-sm text-gray-500 leading-relaxed;
+}
+
+.small-text-white {
+  @apply text-xs sm:text-sm text-gray-300 leading-relaxed;
+}
+
+/* Button Text - 버튼 텍스트 */
+.button-text {
+  @apply text-xs sm:text-sm md:text-base font-medium;
+}
+
+/* Label Text - 라벨 텍스트 */
+.label-text {
+  @apply text-xs sm:text-sm font-medium text-gray-700;
+}
+
+/* Legacy Support - 기존 클래스들을 새 시스템으로 매핑 */
 .news-title {
-  @apply text-4xl md:text-5xl font-bold text-gray-900 mb-2;
+  @apply page-title mb-2;
 }
 
 .news-card-title {
-  @apply text-lg md:text-xl lg:text-2xl font-semibold text-gray-900 leading-tight line-clamp-2;
+  @apply card-title line-clamp-2;
 }
 
 .news-card-date {
-  @apply text-sm md:text-base text-gray-500;
+  @apply small-text;
+}
+
+.section-description {
+  @apply body-text max-w-3xl mx-auto;
 }
 
 .section-description-white {
-  @apply text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed;
+  @apply body-text-white max-w-3xl mx-auto;
 }
 
-/* Hero Titles */
+/* Hero Section - 메인 히어로 섹션 */
 .hero-title {
-  @apply text-5xl md:text-7xl font-light leading-tight text-white;
+  @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light leading-tight text-white;
 }
 
 .hero-subtitle {
-  @apply font-bold;
+  @apply section-title-white font-bold;
 }
 
 .hero-description {
-  @apply text-xl md:text-2xl opacity-90;
+  @apply body-text-white opacity-90;
 }
 
-/* Brand Section Titles */
+/* Brand Section - 브랜드 섹션 */
 .brand-title {
-  @apply text-4xl md:text-5xl font-bold leading-tight;
+  @apply page-title;
 }
 
 .brand-description {
-  @apply text-lg leading-relaxed opacity-90 max-w-sm;
+  @apply body-text opacity-90 max-w-sm;
 }
 
-/* CTA Section Titles */
+/* CTA Section - 행동 유도 섹션 */
 .cta-title {
-  @apply text-4xl md:text-5xl font-bold drop-shadow-2xl;
+  @apply page-title-white drop-shadow-2xl;
 }
 
 .cta-description {
-  @apply text-xl font-semibold leading-relaxed drop-shadow-2xl;
+  @apply body-text-white font-semibold drop-shadow-2xl;
 }
 
 /* News Section Title */
@@ -485,94 +474,92 @@ html {
 }
 
 .b2b2c-card-description {
-  @apply text-sm;
+  @apply small-text;
 }
 
 .b2b2c-summary-title {
-  @apply text-2xl font-bold text-white;
+  @apply section-title-white;
 }
 
 .b2b2c-summary-description {
-  @apply text-gray-200 leading-relaxed;
+  @apply body-text-white;
 }
 
-/* About Page Typography Classes */
+/* About Page Typography - 새 시스템 적용 */
 /* Main Banner Title */
 .about-banner-title {
-  @apply text-4xl md:text-5xl font-bold text-white drop-shadow-2xl;
-  line-height: 1.2;
+  @apply page-title-white drop-shadow-2xl;
 }
 
 /* About Section Titles */
 .about-section-title {
-  @apply text-4xl font-bold text-foreground;
+  @apply page-title;
 }
 
 /* About Story Text */
 .about-story-main {
-  @apply text-2xl font-semibold;
+  @apply section-title font-semibold;
 }
 
 .about-story-sub {
-  @apply text-xl;
+  @apply card-title;
 }
 
 .about-story-detail {
-  @apply text-lg;
+  @apply body-text;
 }
 
 /* Philosophy Section Titles */
 .about-philosophy-title {
-  @apply text-2xl font-bold text-foreground;
+  @apply section-title;
 }
 
 .about-philosophy-description {
-  @apply text-lg text-foreground leading-relaxed;
+  @apply body-text;
 }
 
 /* Parallax Section Title */
 .about-parallax-title {
-  @apply text-4xl lg:text-5xl font-bold text-white;
-  line-height: 1.2;
+  @apply page-title-white;
 }
 
 .about-parallax-description {
-  @apply text-xl lg:text-2xl text-gray-200 leading-relaxed;
+  @apply body-text-white;
 }
 
 /* Timeline Styles */
 .about-timeline-year {
-  @apply text-3xl font-bold text-slate-900;
+  @apply section-title font-bold text-slate-900;
 }
 
 .about-timeline-description {
-  @apply text-lg;
+  @apply body-text;
 }
 
 /* CEO Message Styles */
 .about-ceo-quote {
-  @apply text-3xl font-bold text-primary;
+  @apply section-title font-bold text-primary;
 }
 
 .about-ceo-title {
-  @apply text-4xl font-bold text-foreground;
+  @apply page-title;
 }
 
 .about-ceo-message {
-  @apply text-lg leading-relaxed;
+  @apply body-text;
 }
 
 .about-ceo-highlight {
-  @apply text-lg font-semibold text-primary;
+  @apply body-text font-semibold text-primary;
 }
 
 /* Organization Chart Title */
 .about-org-title {
-  @apply text-4xl font-bold text-foreground text-center;
+  @apply page-title text-center;
 }
 
 .about-org-description {
-  @apply text-lg text-muted-foreground;
+  @apply body-text text-muted-foreground;
 }
 
 .dark {
