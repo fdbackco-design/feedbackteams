@@ -209,17 +209,29 @@ export default function Service() {
 
         {/* Horizontal Carousel Layout */}
         <div className="relative w-full">
-          {/* Navigation Arrows */}
+          {/* Navigation Arrows - Hidden on mobile, visible on desktop */}
           <button
-            onClick={prevSlide}
-            className="tap-target absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
+            onClick={() => {
+              const container = carouselRef.current;
+              if (container) {
+                const scrollAmount = container.offsetWidth * 0.8;
+                container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+              }
+            }}
+            className="hidden md:flex tap-target absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white shadow-lg rounded-full items-center justify-center hover:bg-gray-50 transition-colors"
           >
             <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
           </button>
 
           <button
-            onClick={nextSlide}
-            className="tap-target absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-colors"
+            onClick={() => {
+              const container = carouselRef.current;
+              if (container) {
+                const scrollAmount = container.offsetWidth * 0.8;
+                container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+              }
+            }}
+            className="hidden md:flex tap-target absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white shadow-lg rounded-full items-center justify-center hover:bg-gray-50 transition-colors"
           >
             <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
           </button>

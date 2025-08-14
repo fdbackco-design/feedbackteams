@@ -803,7 +803,7 @@ export default function About() {
               <div className="lg:w-2/3 p-12">
                 <div className="space-y-6 text-foreground leading-relaxed">
                   <p className="about-ceo-message">
-                    안녕하세요. (주)피드백 대표 송해민입니다.
+                    안녕하세요. (주)피드백 대표 송해민, 정성현입니다.
                   </p>
 
                   <p className="about-ceo-message">
