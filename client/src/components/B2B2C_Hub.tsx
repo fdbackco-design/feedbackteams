@@ -53,30 +53,30 @@ const B2B2C_Hub = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 relative">
-                <div className="w-16 h-16 bg-[#0F4C82]/10 rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <Factory className="w-8 h-8 text-[#0F4C82]" />
+              <div className="bg-[#0F4C82] rounded-2xl shadow-xl p-6 sm:p-8 relative">
+                <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <Factory className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-center">
-                  <h3 className="b2b2c-card-title text-black mb-4">
+                  <h3 className="b2b2c-card-title text-white mb-4">
                     B2B 제조사
                   </h3>
-                  <p className="b2b2c-card-description text-gray-600 mb-6">
+                  <p className="b2b2c-card-description text-white/90 mb-6">
                     품질 높은 제품을 생산하는 제조사와 전략적 파트너십을
                     구축합니다
                   </p>
 
                   <div className="space-y-2 text-left">
-                    <div className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-[#0F4C82] mr-2 flex-shrink-0" />
+                    <div className="flex items-center text-sm text-white/80">
+                      <CheckCircle className="w-4 h-4 text-white mr-2 flex-shrink-0" />
                       <span>전문 제조 파트너</span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-[#0F4C82] mr-2 flex-shrink-0" />
+                    <div className="flex items-center text-sm text-white/80">
+                      <CheckCircle className="w-4 h-4 text-white mr-2 flex-shrink-0" />
                       <span>품질 관리 시스템</span>
                     </div>
-                    <div className="flex items-center text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-[#0F4C82] mr-2 flex-shrink-0" />
+                    <div className="flex items-center text-sm text-white/80">
+                      <CheckCircle className="w-4 h-4 text-white mr-2 flex-shrink-0" />
                       <span>OEM/ODM 생산</span>
                     </div>
                   </div>
