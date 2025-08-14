@@ -22,7 +22,7 @@ import globalImage from "@assets/13730_1754568375896.jpg";
 import trustImage from "@assets/hands_1754568922347.png";
 import peopleImage from "@assets/people_1754639134434.jpg";
 import mapImage from "@assets/map_1754832577677.png";
-import newOrganizationChart from "@assets/company_2_1754983649735.png";
+import newOrganizationChart from "@assets/mo_company_1755157288698.png";
 
 // SVG 컴포넌트들
 const HeroBackgroundSVG = () => (
@@ -847,7 +847,7 @@ export default function About() {
               <img
                 src={newOrganizationChart}
                 alt="피드백 조직도"
-                className="w-full min-w-[600px] h-auto rounded-lg"
+                className="w-full min-w-[500px] sm:min-w-[600px] h-auto rounded-lg"
               />
             </div>
           </div>
