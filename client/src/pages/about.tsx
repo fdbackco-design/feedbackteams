@@ -638,8 +638,7 @@ export default function About() {
                   브랜드의 세계화를 지원하고,
                   <br className="hidden lg:block" />
                   국내외 파트너와의 협업을 통해
-                  <br className="hidden lg:block" />더 크고 넓은 시장에서 기회를
-                  창출합니다.
+                  <br className="hidden lg:block" />더 크고 넓은 시장에서 기회를 <br className="block lg:hidden" />창출합니다.
                 </p>
               </div>
             </div>
