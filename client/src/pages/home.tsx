@@ -564,15 +564,15 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* Navigation Arrows - Moved to avoid overlap */}
+      {/* Navigation Arrows - Positioned to avoid overlap with section indicator */}
       {currentSection > 0 && (
-        <div className="fixed right-4 bottom-4 md:right-8 md:bottom-8 z-50">
+        <div className="fixed left-4 bottom-4 md:right-8 md:left-auto md:bottom-8 z-50">
           <button
             onClick={() => scrollToSection(0)}
-            className="p-2 md:p-3 rounded-full transition-all duration-300 bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl text-primary hover:bg-primary hover:text-white tap-target"
+            className="p-3 md:p-3 rounded-full transition-all duration-300 bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl text-primary hover:bg-primary hover:text-white tap-target"
             title="첫 번째 섹션으로"
           >
-            <ChevronUp className="w-4 h-4 md:w-6 md:h-6" />
+            <ChevronUp className="w-5 h-5 md:w-6 md:h-6" />
           </button>
         </div>
       )}
