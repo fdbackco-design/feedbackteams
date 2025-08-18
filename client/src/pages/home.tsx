@@ -1053,7 +1053,7 @@ export default function Home() {
                       window.scrollTo({ top: 0, behavior: 'smooth' });
                     }}
                   >
-                    <div className="aspect-[16/10] bg-gray-200 relative flex-shrink-0">
+                    <div className="h-[180px] sm:h-[200px] md:h-[220px] lg:h-[240px] xl:h-[260px] bg-gray-200 relative flex-shrink-0">
                       <LazyImage
                         src={src}
                         alt={news.title}
