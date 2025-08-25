@@ -225,7 +225,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-white/60 text-sm mb-4 md:mb-0">
               <p>&copy; 2024 FeedBack Corp. All rights reserved.</p>
-              <p>사업자등록번호: 296-87-03628 | 대표: 송해민, 정성현</p>
+              <p>사업자등록번호: 296-87-03628 | 대표이사: 송해민, 정성현</p>
             </div>
             <div className="flex space-x-6 text-sm text-gray-400">
               <a href="#" className="hover:text-white transition-colors">
