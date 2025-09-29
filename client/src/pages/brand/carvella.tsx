@@ -19,8 +19,10 @@ import {
   Shield,
 } from "lucide-react";
 import LazyImage from "@/components/LazyImage";
+import LazyVideo from "@/components/LazyVideo";
 import carvellaLogo from "@/assets/brand/carvella_logo.png";
 import carvellaHero from "@/assets/brand/carvella_hero.png";
+import carvellaVideo from "@assets/freepik__cinematic-video-starting-from-the-provided-referen__97177_1759116548781.mp4";
 
 export default function Carvella() {
   const [, setLocation] = useLocation();
@@ -29,12 +31,14 @@ export default function Carvella() {
     <div>
       {/* Hero Section with Background Image - Full Screen */}
       <section className="relative h-screen w-full overflow-hidden">
-        {/* Background Image */}
+        {/* Background Video */}
         <div className="absolute inset-0 w-full h-full">
-          <LazyImage
-            src={carvellaHero}
-            alt="Carvella 프리미엄 주방용품"
+          <LazyVideo
+            src={carvellaVideo}
             className="w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
           />
         </div>
 
