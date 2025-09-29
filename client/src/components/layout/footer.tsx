@@ -148,6 +148,39 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/brand/asran"
+                  className="hover:text-white transition-colors"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
+                >
+                  아슬란
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/brand/laceras"
+                  className="hover:text-white transition-colors"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
+                >
+                  라세라스
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/brand/carvella"
+                  className="hover:text-white transition-colors"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
+                >
+                  카르벨라
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/brand/medifeed"
                   className="hover:text-white transition-colors"
                   onClick={() =>

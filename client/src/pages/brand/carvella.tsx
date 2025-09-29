@@ -20,8 +20,8 @@ import {
 } from "lucide-react";
 import LazyImage from "@/components/LazyImage";
 import LazyVideo from "@/components/LazyVideo";
-import carvellaLogo from "@/assets/brand/carvella_logo.png";
-import carvellaHero from "@/assets/brand/carvella_hero.png";
+import carvellaLogo from "@/assets/brand/carll.png";
+import carvella from "@/assets/brand/car44.png";
 import carvellaVideo from "@assets/freepik__cinematic-video-starting-from-the-provided-referen__97177_1759116548781.mp4";
 
 export default function Carvella() {
@@ -284,10 +284,11 @@ export default function Carvella() {
             <div>
               <div className="relative">
                 <div className="w-full h-96 bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl shadow-2xl flex items-center justify-center">
-                  <div className="text-center text-gray-600">
-                    <ChefHat className="w-24 h-24 mx-auto mb-4 opacity-50" />
-                    <div className="text-lg">프리미엄 쿠킹웨어 이미지</div>
-                  </div>
+                  <LazyImage
+                    src={carvella}
+                    alt="럭셔리 캐리어 이미지"
+                    className="max-h-80 object-contain rounded-2xl"
+                  />
                 </div>
               </div>
             </div>
