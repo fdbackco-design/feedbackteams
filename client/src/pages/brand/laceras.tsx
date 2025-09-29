@@ -65,7 +65,7 @@ export default function LaCeras() {
                 <LazyImage
                   src={lacerasLogo}
                   alt="La Ceras 로고"
-                  className="h-14 md:h-16 w-2 md:w-3 object-contain"
+                  className="h-7 md:h-8 w-auto"
                 />
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
