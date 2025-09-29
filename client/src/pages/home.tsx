@@ -191,8 +191,8 @@ export default function Home() {
 
   const sections = [
     { id: "hero", name: "홈" },
-    { id: "services", name: "서비스" },
     { id: "brands", name: "브랜드" },
+    { id: "services", name: "서비스" },
     { id: "achievements", name: "B2B2C" },
     { id: "news", name: "최신뉴스" },
     { id: "stats", name: "실적" },
@@ -689,6 +689,134 @@ export default function Home() {
           </div>
         )}
       </section>
+      {/* Brands Section */}
+      <section
+        id="brands"
+        className="h-screen flex items-center justify-center bg-white relative overflow-hidden"
+        style={{ scrollSnapAlign: "start" }}
+      >
+        <div className="absolute inset-0">
+          <LazyImage
+            src={brands[currentBrandIndex].image}
+            alt={brands[currentBrandIndex].name}
+            className={`w-full h-full object-cover transition-all duration-500 ${
+              imageLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
+            onLoad={() => setImageLoaded(true)}
+          />
+          {/* Black gradient overlay from left to right */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent"></div>
+        </div>
+
+        <div className="relative z-10 w-full mobile-padding h-full flex flex-col">
+          {/* Content Section */}
+          <div className="flex-1 flex items-center">
+            <div className={`text-white space-y-6 transition-all duration-500 max-w-2xl ${
+              imageLoaded ? 'opacity-100 transform translate-x-0' : 'opacity-0 transform translate-x-4'
+            }`}>
+              <div className="space-y-2 sm:space-y-3">
+                <div className="text-xs sm:text-sm font-semibold uppercase tracking-wide opacity-90">
+                  {brands[currentBrandIndex].category}
+                </div>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 leading-tight">
+                  {brands[currentBrandIndex].name}
+                </h2>
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light mb-4 sm:mb-6 opacity-90 leading-tight">
+                  {brands[currentBrandIndex].slogan}
+                </p>
+              </div>
+
+              <p className="text-sm sm:text-base lg:text-lg leading-relaxed opacity-90 max-w-sm sm:max-w-md lg:max-w-lg">
+                {brands[currentBrandIndex].description}
+              </p>
+
+              <div className="flex flex-wrap gap-2 sm:gap-3 mt-4 sm:mt-6">
+                {brands[currentBrandIndex].products.map((product, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-1 sm:px-4 sm:py-2 bg-white bg-opacity-80 rounded-full text-xs sm:text-sm font-medium text-gray-900 backdrop-blur-sm"
+                  >
+                    {product}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex items-center space-x-3 sm:space-x-4 mt-6 sm:mt-8">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-white text-gray-900 hover:bg-gray-100 px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base tap-target"
+                >
+                  <Link 
+                    href={`/brand/${brands[currentBrandIndex].id}`}
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  >
+                    브랜드 자세히 보기
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          {/* Navigation Section - Bottom Center */}
+          <div className="flex items-center justify-center space-x-8 pb-8">
+            {/* Play/Pause Button */}
+            <button
+              onClick={() => setIsPaused(!isPaused)}
+              className="p-4 bg-black bg-opacity-40 rounded-full backdrop-blur-sm hover:bg-opacity-60 transition-all"
+            >
+              {isPaused ? (
+                <PlayCircle className="w-6 h-6 text-white" />
+              ) : (
+                <Pause className="w-6 h-6 text-white" />
+              )}
+            </button>
+
+            {/* Manual Navigation */}
+            <div className="flex items-center space-x-4">
+              <button
+                onClick={() => {
+                  setImageLoaded(false);
+                  setTimeout(() => {
+                    setCurrentBrandIndex(
+                      currentBrandIndex === 0
+                        ? brands.length - 1
+                        : currentBrandIndex - 1,
+                    );
+                    setTimeout(() => setImageLoaded(true), 50);
+                  }, 300);
+                }}
+                className="p-4 bg-black bg-opacity-40 rounded-full backdrop-blur-sm hover:bg-opacity-60 transition-all"
+              >
+                <ChevronLeft className="w-6 h-6 text-white" />
+              </button>
+              
+              {/* Brand Counter */}
+              <div className="px-6 py-3 bg-black bg-opacity-40 rounded-full backdrop-blur-sm">
+                <div className="text-lg text-white font-bold">
+                  {String(currentBrandIndex + 1).padStart(2, "0")} /{" "}
+                  {String(brands.length).padStart(2, "0")}
+                </div>
+              </div>
+              
+              <button
+                onClick={() => {
+                  setImageLoaded(false);
+                  setTimeout(() => {
+                    setCurrentBrandIndex(
+                      (currentBrandIndex + 1) % brands.length,
+                    );
+                    setTimeout(() => setImageLoaded(true), 50);
+                  }, 300);
+                }}
+                className="p-4 bg-black bg-opacity-40 rounded-full backdrop-blur-sm hover:bg-opacity-60 transition-all"
+              >
+                <ChevronRight className="w-6 h-6 text-white" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Services Section */}
       <section
         id="services"
@@ -821,134 +949,6 @@ export default function Home() {
                   />
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Brands Section */}
-      <section
-        id="brands"
-        className="h-screen flex items-center justify-center bg-white relative overflow-hidden"
-        style={{ scrollSnapAlign: "start" }}
-      >
-        <div className="absolute inset-0">
-          <LazyImage
-            src={brands[currentBrandIndex].image}
-            alt={brands[currentBrandIndex].name}
-            className={`w-full h-full object-cover transition-all duration-500 ${
-              imageLoaded ? 'opacity-100' : 'opacity-0'
-            }`}
-            onLoad={() => setImageLoaded(true)}
-          />
-          {/* Black gradient overlay from left to right */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent"></div>
-        </div>
-
-        <div className="relative z-10 w-full mobile-padding h-full flex flex-col">
-          {/* Content Section */}
-          <div className="flex-1 flex items-center">
-            <div className={`text-white space-y-6 transition-all duration-500 max-w-2xl ${
-              imageLoaded ? 'opacity-100 transform translate-x-0' : 'opacity-0 transform translate-x-4'
-            }`}>
-              <div className="space-y-2 sm:space-y-3">
-                <div className="text-xs sm:text-sm font-semibold uppercase tracking-wide opacity-90">
-                  {brands[currentBrandIndex].category}
-                </div>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 leading-tight">
-                  {brands[currentBrandIndex].name}
-                </h2>
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light mb-4 sm:mb-6 opacity-90 leading-tight">
-                  {brands[currentBrandIndex].slogan}
-                </p>
-              </div>
-
-              <p className="text-sm sm:text-base lg:text-lg leading-relaxed opacity-90 max-w-sm sm:max-w-md lg:max-w-lg">
-                {brands[currentBrandIndex].description}
-              </p>
-
-              <div className="flex flex-wrap gap-2 sm:gap-3 mt-4 sm:mt-6">
-                {brands[currentBrandIndex].products.map((product, index) => (
-                  <span
-                    key={index}
-                    className="px-3 py-1 sm:px-4 sm:py-2 bg-white bg-opacity-80 rounded-full text-xs sm:text-sm font-medium text-gray-900 backdrop-blur-sm"
-                  >
-                    {product}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex items-center space-x-3 sm:space-x-4 mt-6 sm:mt-8">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-white text-gray-900 hover:bg-gray-100 px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base tap-target"
-                >
-                  <Link 
-                    href={`/brand/${brands[currentBrandIndex].id}`}
-                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  >
-                    브랜드 자세히 보기
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-
-          {/* Navigation Section - Bottom Center */}
-          <div className="flex items-center justify-center space-x-8 pb-8">
-            {/* Play/Pause Button */}
-            <button
-              onClick={() => setIsPaused(!isPaused)}
-              className="p-4 bg-black bg-opacity-40 rounded-full backdrop-blur-sm hover:bg-opacity-60 transition-all"
-            >
-              {isPaused ? (
-                <PlayCircle className="w-6 h-6 text-white" />
-              ) : (
-                <Pause className="w-6 h-6 text-white" />
-              )}
-            </button>
-
-            {/* Manual Navigation */}
-            <div className="flex items-center space-x-4">
-              <button
-                onClick={() => {
-                  setImageLoaded(false);
-                  setTimeout(() => {
-                    setCurrentBrandIndex(
-                      currentBrandIndex === 0
-                        ? brands.length - 1
-                        : currentBrandIndex - 1,
-                    );
-                    setTimeout(() => setImageLoaded(true), 50);
-                  }, 300);
-                }}
-                className="p-4 bg-black bg-opacity-40 rounded-full backdrop-blur-sm hover:bg-opacity-60 transition-all"
-              >
-                <ChevronLeft className="w-6 h-6 text-white" />
-              </button>
-              
-              {/* Brand Counter */}
-              <div className="px-6 py-3 bg-black bg-opacity-40 rounded-full backdrop-blur-sm">
-                <div className="text-lg text-white font-bold">
-                  {String(currentBrandIndex + 1).padStart(2, "0")} /{" "}
-                  {String(brands.length).padStart(2, "0")}
-                </div>
-              </div>
-              
-              <button
-                onClick={() => {
-                  setImageLoaded(false);
-                  setTimeout(() => {
-                    setCurrentBrandIndex(
-                      (currentBrandIndex + 1) % brands.length,
-                    );
-                    setTimeout(() => setImageLoaded(true), 50);
-                  }, 300);
-                }}
-                className="p-4 bg-black bg-opacity-40 rounded-full backdrop-blur-sm hover:bg-opacity-60 transition-all"
-              >
-                <ChevronRight className="w-6 h-6 text-white" />
-              </button>
             </div>
           </div>
         </div>
