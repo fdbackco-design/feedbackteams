@@ -35,7 +35,7 @@ import NetworkBackground from "@/components/NetworkBackground";
 import LazyImage from "@/components/LazyImage";
 import LazyVideo from "@/components/LazyVideo";
 import shipVideo from "@assets/ship_section_1754640786186.mp4";
-import mainBannerVideo from "@assets/ship (1)_1759110460526.mp4";
+import mainBannerVideo from "@assets/ship (1)_1_1759110826092.mp4";
 import cargoShipImage from "@assets/bada-leul-hanghae-haneun-hwamulseon_1754648981305.jpg";
 import factoryImage from "@assets/factory_1754649106831.png";
 import homeshoppingImage from "@assets/homeshopping_1754649174036.png";
