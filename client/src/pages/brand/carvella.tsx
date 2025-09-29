@@ -74,8 +74,9 @@ export default function Carvella() {
                 <span className="block text-[#D4AF37]">당신의 주방으로</span>
               </h1>
               <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
-                이탈리아 전통 장인정신으로 완성한 프리미엄 쿠킹웨어 브랜드입니다.
-                고급 스테인리스와 다층 구조로 뛰어난 열전도와 내구성을 자랑합니다.
+                이탈리아 전통 장인정신으로 완성한 프리미엄 쿠킹웨어
+                브랜드입니다. 고급 스테인리스와 다층 구조로 뛰어난 열전도와
+                내구성을 자랑합니다.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
@@ -89,7 +90,7 @@ export default function Carvella() {
           </div>
         </div>
       </section>
-      
+
       {/* Product Features Section */}
       <section className="py-32 bg-white relative overflow-hidden">
         {/* Background Pattern */}
@@ -175,7 +176,9 @@ export default function Carvella() {
                   <div className="text-center text-white">
                     <div className="text-6xl font-bold mb-4">🇮🇹</div>
                     <div className="text-2xl font-bold">MADE IN ITALY</div>
-                    <div className="text-lg opacity-90">Artigianato Italiano</div>
+                    <div className="text-lg opacity-90">
+                      Artigianato Italiano
+                    </div>
                   </div>
                 </div>
               </div>
@@ -194,9 +197,10 @@ export default function Carvella() {
                   정밀함과 열정이 만나는 곳
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  이탈리아 북부 롬바르디아 지역의 전통 금속공예 기술을 바탕으로 탄생한 Carvella는 
-                  장인들의 정밀함과 요리에 대한 열정을 그대로 담아냅니다. 
-                  매 제품마다 이탈리아 장인의 손길이 닿아 완성되는 진정한 아르티지아나토입니다.
+                  이탈리아 북부 롬바르디아 지역의 전통 금속공예 기술을 바탕으로
+                  탄생한 Carvella는 장인들의 정밀함과 요리에 대한 열정을 그대로
+                  담아냅니다. 매 제품마다 이탈리아 장인의 손길이 닿아 완성되는
+                  진정한 아르티지아나토입니다.
                 </p>
               </div>
 
@@ -243,27 +247,36 @@ export default function Carvella() {
                   완벽한 요리를 위한 완벽한 도구
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  Carvella는 단순한 조리도구가 아닌 요리의 예술을 완성하는 파트너입니다. 
-                  프로 셰프의 엄격한 기준을 충족하면서도 가정에서 쉽게 사용할 수 있도록 
-                  설계되어 모든 요리 애호가들의 꿈을 현실로 만들어드립니다.
+                  Carvella는 단순한 조리도구가 아닌 요리의 예술을 완성하는
+                  파트너입니다. 프로 셰프의 엄격한 기준을 충족하면서도 가정에서
+                  쉽게 사용할 수 있도록 설계되어 모든 요리 애호가들의 꿈을
+                  현실로 만들어드립니다.
                 </p>
               </div>
 
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center p-6 bg-gray-50 rounded-xl">
-                  <div className="text-3xl font-bold text-[#6C2F1E] mb-2">15+</div>
+                  <div className="text-3xl font-bold text-[#6C2F1E] mb-2">
+                    15+
+                  </div>
                   <div className="text-sm text-gray-600">제품 라인업</div>
                 </div>
                 <div className="text-center p-6 bg-gray-50 rounded-xl">
-                  <div className="text-3xl font-bold text-[#6C2F1E] mb-2">25</div>
+                  <div className="text-3xl font-bold text-[#6C2F1E] mb-2">
+                    25
+                  </div>
                   <div className="text-sm text-gray-600">년 품질보증</div>
                 </div>
                 <div className="text-center p-6 bg-gray-50 rounded-xl">
-                  <div className="text-3xl font-bold text-[#6C2F1E] mb-2">95%</div>
+                  <div className="text-3xl font-bold text-[#6C2F1E] mb-2">
+                    95%
+                  </div>
                   <div className="text-sm text-gray-600">셰프 추천율</div>
                 </div>
                 <div className="text-center p-6 bg-gray-50 rounded-xl">
-                  <div className="text-3xl font-bold text-[#6C2F1E] mb-2">4.9</div>
+                  <div className="text-3xl font-bold text-[#6C2F1E] mb-2">
+                    4.9
+                  </div>
                   <div className="text-sm text-gray-600">고객 만족도</div>
                 </div>
               </div>
@@ -377,15 +390,20 @@ export default function Carvella() {
                 <ChefHat className="w-16 h-16 text-[#6C2F1E] mx-auto mb-4" />
                 <div className="flex justify-center mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star
+                      key={i}
+                      className="w-5 h-5 text-yellow-400 fill-current"
+                    />
                   ))}
                 </div>
               </div>
               <p className="text-gray-600 italic mb-6 leading-relaxed">
-                "Carvella의 냄비는 열전도가 완벽해서 요리가 훨씬 쉬워졌습니다. 
+                "Carvella의 냄비는 열전도가 완벽해서 요리가 훨씬 쉬워졌습니다.
                 프로 주방에서도 손색없는 품질입니다."
               </p>
-              <div className="font-semibold text-[#6C2F1E]">이탈리안 레스토랑 셰프</div>
+              <div className="font-semibold text-[#6C2F1E]">
+                이탈리안 레스토랑 셰프
+              </div>
             </div>
 
             <div className="bg-gray-50 rounded-2xl p-8 text-center">
@@ -393,13 +411,16 @@ export default function Carvella() {
                 <ChefHat className="w-16 h-16 text-[#6C2F1E] mx-auto mb-4" />
                 <div className="flex justify-center mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star
+                      key={i}
+                      className="w-5 h-5 text-yellow-400 fill-current"
+                    />
                   ))}
                 </div>
               </div>
               <p className="text-gray-600 italic mb-6 leading-relaxed">
-                "15년 넘게 사용해도 변함없는 품질과 성능. 
-                진정한 장인정신을 느낄 수 있는 제품입니다."
+                "15년 넘게 사용해도 변함없는 품질과 성능. 진정한 장인정신을 느낄
+                수 있는 제품입니다."
               </p>
               <div className="font-semibold text-[#6C2F1E]">요리 강사</div>
             </div>
@@ -409,13 +430,16 @@ export default function Carvella() {
                 <ChefHat className="w-16 h-16 text-[#6C2F1E] mx-auto mb-4" />
                 <div className="flex justify-center mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star
+                      key={i}
+                      className="w-5 h-5 text-yellow-400 fill-current"
+                    />
                   ))}
                 </div>
               </div>
               <p className="text-gray-600 italic mb-6 leading-relaxed">
-                "인덕션에서 가스레인지까지 어떤 열원에서도 완벽한 성능을 보여줍니다. 
-                가정용으로도 최고의 선택이에요."
+                "인덕션에서 가스레인지까지 어떤 열원에서도 완벽한 성능을
+                보여줍니다. 가정용으로도 최고의 선택이에요."
               </p>
               <div className="font-semibold text-[#6C2F1E]">요리 블로거</div>
             </div>
@@ -431,24 +455,9 @@ export default function Carvella() {
             <span className="block text-[#D4AF37]">프리미엄 쿠킹</span>
           </h2>
           <p className="text-xl mb-12 opacity-90 max-w-3xl mx-auto leading-relaxed">
-            이탈리아 장인정신으로 완성된 프리미엄 쿠킹웨어로 
-            당신의 요리를 더욱 특별하게 만들어보세요
+            이탈리아 장인정신으로 완성된 프리미엄 쿠킹웨어로 당신의 요리를 더욱
+            특별하게 만들어보세요
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button
-              size="lg"
-              className="bg-white text-[#6C2F1E] hover:bg-gray-100 px-12 py-4 text-lg font-semibold"
-            >
-              제품 둘러보기
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#6C2F1E] px-12 py-4 text-lg font-semibold"
-            >
-              매장 찾기
-            </Button>
-          </div>
         </div>
       </section>
     </div>
