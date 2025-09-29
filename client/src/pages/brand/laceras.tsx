@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 import LazyImage from "@/components/LazyImage";
 import LazyVideo from "@/components/LazyVideo";
-import lacerasLogo from "@/assets/brand/laceras_logo_new.png";
+import lacerasLogo from "@assets/laceras_hero_1759115520308.png";
 import lacerasHero from "@/assets/brand/laceras_hero.png";
 import lacerasVideo from "@assets/freepik__closeup-zoomin-of-a-small-black-luxury-suitcase-sm__23771_1759112696236.mp4";
 
