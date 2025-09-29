@@ -65,7 +65,7 @@ export default function LaCeras() {
                 <LazyImage
                   src={lacerasLogo}
                   alt="La Ceras 로고"
-                  className="h-20 md:h-24 w-auto"
+                  className="h-7 md:h-8 w-auto"
                 />
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
@@ -88,7 +88,7 @@ export default function LaCeras() {
           </div>
         </div>
       </section>
-      
+
       {/* Product Features Section */}
       <section className="py-32 bg-white relative overflow-hidden">
         {/* Background Pattern */}
