@@ -47,6 +47,8 @@ import hoidImg from "@assets/brand2_1754881083408.jpg";
 import medifeedImg from "@assets/medifeed_1_1754636614100.jpg";
 import asranImg from "@assets/image_Pippit_202507291037 1_1754993039700.jpg";
 import sangsaengImg from "@assets/sangsaeng_1_1754636754183.jpg";
+import lacerasImg from "@/assets/brand/laceras.jpg";
+import carvellaImg from "@/assets/brand/carvella.png";
 import newsData from "@/data/news.json";
 import { resolveNewsThumbnail, FALLBACK } from "@/assets/news";
 
@@ -139,7 +141,7 @@ const getBrands = (t: (key: string) => string) => [
     name: "ASRAN",
     category: "프리미엄 주방용품",
     slogan: "독일 기술과 합리적 가격을 모두 갖춘 냄비",
-    description: "공기청정기, 제습기 등 미니멀한 디자인과 첨단 기술이 만나 일상의 공기질을 혁신하는 스마트 가전 브랜드입니다.",
+    description: "SUS410 스테인리스 스틸과 3중 바닥구조로 뛰어난 열전도율과 내구성을 자랑하는 프리미엄 주방용품 브랜드입니다.",
     products: [
       "SUS410 스테인리스 스틸",
       "3중 바닥구조",
@@ -148,6 +150,36 @@ const getBrands = (t: (key: string) => string) => [
     ],
     image: asranImg,
     color: "from-gray-600 to-gray-800",
+  },
+  {
+    id: "laceras",
+    name: "La Ceras",
+    category: "프랑스 럭셔리 캐리어 브랜드",
+    slogan: "전통과 모던이 만나는 프렌치 럭셔리 트래블",
+    description: "프랑스의 장인정신과 현대적 세련미를 결합한 럭셔리 캐리어 브랜드입니다. 폴리카보네이트 하드셸, 정교한 마감과 균형 잡힌 디자인으로 비즈니스부터 라그주어리 여행까지 완벽한 트래블 솔루션을 제안합니다.",
+    products: [
+      "하드셸 캐리어",
+      "캐리온",
+      "TSA 락",
+      "360° 휠"
+    ],
+    image: lacerasImg,
+    color: "from-blue-600 to-red-600",
+  },
+  {
+    id: "carvella",
+    name: "Carvella",
+    category: "이탈리아 프리미엄 주방용품",
+    slogan: "이탈리아 장인의 정밀함, 당신의 주방으로",
+    description: "이탈리아 전통 장인정신으로 완성한 프리미엄 쿠킹웨어 브랜드입니다. 고급 스테인리스와 다층 구조로 뛰어난 열전도와 내구성을 갖추고, 인덕션부터 가스레인지까지 완벽 호환됩니다.",
+    products: [
+      "프리미엄 냄비",
+      "프라이팬",
+      "멀티 압력뚜껑",
+      "멀티 호환 열원"
+    ],
+    image: carvellaImg,
+    color: "from-orange-800 to-yellow-600",
   },
   {
     id: "sangsaeng",

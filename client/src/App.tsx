@@ -21,6 +21,8 @@ const Medifeed = lazy(() => import("@/pages/brand/medifeed"));
 const Asran = lazy(() => import("@/pages/brand/asran"));
 const InYourHeart = lazy(() => import("@/pages/brand/inyourheart"));
 const Sangsaeng = lazy(() => import("@/pages/brand/sangsaeng"));
+const LaCeras = lazy(() => import("@/pages/brand/laceras"));
+const Carvella = lazy(() => import("@/pages/brand/carvella"));
 const B2B2C_Demo = lazy(() => import("@/pages/B2B2C_Demo"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
@@ -47,6 +49,8 @@ function Router() {
         <Route path="/brand/medifeed" component={Medifeed} />
         <Route path="/brand/inyourheart" component={InYourHeart} />
         <Route path="/brand/sangsaeng" component={Sangsaeng} />
+        <Route path="/brand/laceras" component={LaCeras} />
+        <Route path="/brand/carvella" component={Carvella} />
         <Route path="/news" component={News} />
         <Route path="/article/:id" component={Article} />
         <Route path="/contact" component={Contact} />
