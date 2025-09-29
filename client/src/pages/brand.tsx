@@ -203,7 +203,7 @@ export default function Brand() {
                       <LazyImage
                         src={lacerasLogo}
                         alt="La Ceras 로고"
-                        className="w-16 sm:w-18 md:w-20 lg:w-22 h-auto"
+                        className="w-5 sm:w-6 md:w-7 lg:w-7 h-14 sm:h-16 md:h-18 lg:h-20 object-contain"
                       />
                     ) : brand.logo === "img" && brand.id === "carvella" ? (
                       <LazyImage
