@@ -12,7 +12,7 @@ import sangsaengImg from "@assets/sangsaeng_1_1754636754183.jpg";
 import asranImg from "@assets/Mask group_1754982638844.jpg";
 import lacerasImg from "@/assets/brand/laceras.jpg";
 import carvellaImg from "@/assets/brand/carvella.png";
-import lacerasLogo from "@/assets/brand/laceras_logo_new.png";
+import lacerasLogo from "@/assets/brand/laceras_logo.png";
 import carvellaLogo from "@/assets/brand/carvella_logo.png";
 import LazyImage from "@/components/LazyImage";
 
@@ -203,7 +203,7 @@ export default function Brand() {
                       <LazyImage
                         src={lacerasLogo}
                         alt="La Ceras 로고"
-                        className="w-32 sm:w-36 md:w-40 lg:w-44 h-auto"
+                        className="w-48 sm:w-56 md:w-64 lg:w-72 h-auto"
                       />
                     ) : brand.logo === "img" && brand.id === "carvella" ? (
                       <LazyImage
