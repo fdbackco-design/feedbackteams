@@ -18,8 +18,10 @@ import {
   Award,
 } from "lucide-react";
 import LazyImage from "@/components/LazyImage";
+import LazyVideo from "@/components/LazyVideo";
 import lacerasLogo from "@/assets/brand/laceras_logo.png";
 import lacerasHero from "@/assets/brand/laceras_hero.png";
+import lacerasVideo from "@assets/freepik__closeup-zoomin-of-a-small-black-luxury-suitcase-sm__23771_1759112696236.mp4";
 
 export default function LaCeras() {
   const [, setLocation] = useLocation();
@@ -28,12 +30,14 @@ export default function LaCeras() {
     <div>
       {/* Hero Section with Background Image - Full Screen */}
       <section className="relative h-screen w-full overflow-hidden">
-        {/* Background Image */}
+        {/* Background Video */}
         <div className="absolute inset-0 w-full h-full">
-          <LazyImage
-            src={lacerasHero}
-            alt="La Ceras 럭셔리 캐리어"
+          <LazyVideo
+            src={lacerasVideo}
             className="w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
           />
         </div>
 
