@@ -25,7 +25,7 @@ export default function AsranPage() {
   const heroRef = useRef<HTMLDivElement>(null);
   const featuresRef = useRef<HTMLDivElement>(null);
   const testimonialsRef = useRef<HTMLDivElement>(null);
-  
+
   const features = [
     {
       icon: Shield,
@@ -35,8 +35,8 @@ export default function AsranPage() {
         "부식 방지 & 변색 방지",
         "위생적이고 안전한 조리",
         "반영구적 사용 가능",
-        "고급스러운 미러 마감"
-      ]
+        "고급스러운 미러 마감",
+      ],
     },
     {
       icon: Thermometer,
@@ -46,20 +46,15 @@ export default function AsranPage() {
         "균등한 열 분산",
         "에너지 효율성 극대화",
         "빠른 가열 시간",
-        "열 손실 최소화"
-      ]
+        "열 손실 최소화",
+      ],
     },
     {
       icon: Zap,
       title: "모든 열원 완벽 호환",
       description: "어떤 주방환경에서도 완벽하게 사용 가능",
-      details: [
-        "인덕션 레인지",
-        "가스 레인지",
-        "하이라이트",
-        "전기 레인지"
-      ]
-    }
+      details: ["인덕션 레인지", "가스 레인지", "하이라이트", "전기 레인지"],
+    },
   ];
 
   const productSizes = [
@@ -67,38 +62,38 @@ export default function AsranPage() {
       size: "18cm",
       type: "편수냄비",
       usage: "소용량 요리, 이유식 제조에 최적",
-      icon: "👶"
+      icon: "👶",
     },
     {
-      size: "22cm", 
+      size: "22cm",
       type: "양수냄비",
       usage: "2-3인 가족 요리에 적합",
-      icon: "👥"
+      icon: "👥",
     },
     {
       size: "28cm",
-      type: "양수냄비", 
+      type: "양수냄비",
       usage: "대용량 요리, 대가족 요리에 완벽",
-      icon: "👨‍👩‍👧‍👦"
-    }
+      icon: "👨‍👩‍👧‍👦",
+    },
   ];
 
   const cookingTypes = [
     {
       title: "국물요리",
       description: "깊고 진한 국물 맛 구현",
-      icon: "🍲"
+      icon: "🍲",
     },
     {
       title: "찜 & 조림",
       description: "촉촉하고 부드러운 식감",
-      icon: "🥘"
+      icon: "🥘",
     },
     {
       title: "건강한 조리",
       description: "영양소 보존하는 조리법",
-      icon: "🥗"
-    }
+      icon: "🥗",
+    },
   ];
 
   useEffect(() => {
@@ -106,19 +101,19 @@ export default function AsranPage() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            (entry.target as HTMLElement).style.opacity = '1';
-            (entry.target as HTMLElement).style.transform = 'translateY(0)';
+            (entry.target as HTMLElement).style.opacity = "1";
+            (entry.target as HTMLElement).style.transform = "translateY(0)";
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
-    [heroRef, featuresRef, testimonialsRef].forEach(ref => {
+    [heroRef, featuresRef, testimonialsRef].forEach((ref) => {
       if (ref.current) {
         observer.observe(ref.current);
-        (ref.current as HTMLElement).style.opacity = '0';
-        (ref.current as HTMLElement).style.transform = 'translateY(30px)';
+        (ref.current as HTMLElement).style.opacity = "0";
+        (ref.current as HTMLElement).style.transform = "translateY(30px)";
       }
     });
 
@@ -128,13 +123,13 @@ export default function AsranPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <section 
+      <section
         ref={heroRef}
         className="relative overflow-hidden bg-black pt-48 pb-48"
-        style={{ 
+        style={{
           opacity: 0,
-          transform: 'translateY(30px)',
-          transition: 'opacity 0.8s ease-out, transform 0.8s ease-out'
+          transform: "translateY(30px)",
+          transition: "opacity 0.8s ease-out, transform 0.8s ease-out",
         }}
       >
         <div className="absolute inset-0">
@@ -153,8 +148,8 @@ export default function AsranPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <AsranLogo 
-                  className="filter brightness-0 invert" 
+                <AsranLogo
+                  className="filter brightness-0 invert"
                   width="300"
                   height="75"
                 />
@@ -162,28 +157,42 @@ export default function AsranPage() {
                   독일 기술과 합리적 가격을 모두 갖춘 냄비
                 </p>
               </div>
-              
+
               <p className="text-xl text-white/90 leading-relaxed">
-                SUS410 스테인리스 스틸과 3중 바닥구조로 뛰어난 열전도율과 내구성을 자랑합니다. 
-                인덕션과 가스 겸용으로 어떤 주방환경에서도 완벽하게 사용 가능한 프리미엄 냄비입니다.
+                SUS410 스테인리스 스틸과 3중 바닥구조로 뛰어난 열전도율과
+                내구성을 자랑합니다. 인덕션과 가스 겸용으로 어떤 주방환경에서도
+                완벽하게 사용 가능한 프리미엄 냄비입니다.
               </p>
 
-              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="https://www.asrankitchen.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#0F4C82] px-8 py-4 text-lg font-semibold"
+                  >
+                    ASRAN 홈페이지 가기
+                  </Button>
+                </a>
+              </div>
             </div>
-            
-            
           </div>
         </div>
       </section>
 
       {/* Key Features Section */}
-      <section 
+      <section
         ref={featuresRef}
         className="py-20 bg-gray-50"
-        style={{ 
+        style={{
           opacity: 0,
-          transform: 'translateY(30px)',
-          transition: 'opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s'
+          transform: "translateY(30px)",
+          transition:
+            "opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s",
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -192,13 +201,14 @@ export default function AsranPage() {
               ASRAN만의 특별한 기술
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              독일의 정밀한 기술력과 한국의 실용성이 만나 탄생한 프리미엄 주방용품
+              독일의 정밀한 기술력과 한국의 실용성이 만나 탄생한 프리미엄
+              주방용품
             </p>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <Card 
+              <Card
                 key={index}
                 className="group hover:shadow-2xl transition-all duration-300 cursor-pointer border-0 bg-white"
                 onClick={() => setActiveFeature(index)}
@@ -215,7 +225,10 @@ export default function AsranPage() {
                   </p>
                   <div className="space-y-3">
                     {feature.details.map((detail, detailIndex) => (
-                      <div key={detailIndex} className="flex items-center text-sm text-gray-700">
+                      <div
+                        key={detailIndex}
+                        className="flex items-center text-sm text-gray-700"
+                      >
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
                         {detail}
                       </div>
@@ -228,16 +241,15 @@ export default function AsranPage() {
         </div>
       </section>
 
-      
-
       {/* Customer Reviews */}
-      <section 
+      <section
         ref={testimonialsRef}
         className="py-20 bg-[#0F4C82]"
-        style={{ 
+        style={{
           opacity: 0,
-          transform: 'translateY(30px)',
-          transition: 'opacity 0.8s ease-out 0.4s, transform 0.8s ease-out 0.4s'
+          transform: "translateY(30px)",
+          transition:
+            "opacity 0.8s ease-out 0.4s, transform 0.8s ease-out 0.4s",
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -259,25 +271,26 @@ export default function AsranPage() {
             {[
               {
                 text: "가성비 너무 혜자네요! 이 가격에 이런 품질의 냄비를 만날 수 있다니 정말 만족스럽습니다.",
-                author: "김○○님"
+                author: "김○○님",
               },
               {
                 text: "냄비의 무게에 놀랐다. 엄청 가볍다! 가벼운 무게 덕분에 손목이 아프지 않고 편하게 요리할 수 있어요.",
-                author: "박○○님"
+                author: "박○○님",
               },
               {
                 text: "이유식 만들 때 편수냄비가 너무 유용하게 사용되고 있어요. 열 전도도 빠르고 청소도 쉬워서 좋습니다.",
-                author: "이○○님"
-              }
+                author: "이○○님",
+              },
             ].map((review, index) => (
-              <Card key={index} className="bg-white/10 backdrop-blur border-white/20">
+              <Card
+                key={index}
+                className="bg-white/10 backdrop-blur border-white/20"
+              >
                 <CardContent className="p-6">
                   <p className="text-white/90 mb-4 leading-relaxed">
                     "{review.text}"
                   </p>
-                  <p className="text-white/70 font-medium">
-                    - {review.author}
-                  </p>
+                  <p className="text-white/70 font-medium">- {review.author}</p>
                 </CardContent>
               </Card>
             ))}
@@ -299,20 +312,26 @@ export default function AsranPage() {
               {
                 icon: ChefHat,
                 title: "요리가 즐거워집니다",
-                description: "균등한 열 전도로 실패 없는 요리가 가능하여 요리에 대한 자신감이 생깁니다."
+                description:
+                  "균등한 열 전도로 실패 없는 요리가 가능하여 요리에 대한 자신감이 생깁니다.",
               },
               {
                 icon: Clock,
                 title: "요리 시간이 단축됩니다",
-                description: "빠른 가열 시간과 효율적인 열 분산으로 요리 시간을 대폭 줄일 수 있습니다."
+                description:
+                  "빠른 가열 시간과 효율적인 열 분산으로 요리 시간을 대폭 줄일 수 있습니다.",
               },
               {
                 icon: Award,
                 title: "주방이 더 아름다워집니다",
-                description: "고급스러운 미러 마감과 세련된 디자인으로 주방 인테리어가 한층 업그레이드됩니다."
-              }
+                description:
+                  "고급스러운 미러 마감과 세련된 디자인으로 주방 인테리어가 한층 업그레이드됩니다.",
+              },
             ].map((benefit, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300">
+              <Card
+                key={index}
+                className="text-center hover:shadow-lg transition-all duration-300"
+              >
                 <CardContent className="p-8">
                   <div className="flex items-center justify-center w-16 h-16 bg-[#0F4C82] rounded-xl mx-auto mb-6">
                     <benefit.icon className="w-8 h-8 text-white" />

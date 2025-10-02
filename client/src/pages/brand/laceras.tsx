@@ -78,6 +78,21 @@ export default function LaCeras() {
                 브랜드입니다. 비즈니스부터 럭셔리 여행까지 완벽한 트래블
                 솔루션을 제안합니다.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="https://www.laceras.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#0F4C82] px-8 py-4 text-lg font-semibold"
+                  >
+                    La Ceras 홈페이지 가기
+                  </Button>
+                </a>
+              </div>
               <div className="flex flex-col sm:flex-row gap-4"></div>
             </div>
           </div>

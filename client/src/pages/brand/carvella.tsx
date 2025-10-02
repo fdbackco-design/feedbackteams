@@ -79,12 +79,19 @@ export default function Carvella() {
                 내구성을 자랑합니다.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
-                  className="bg-[#6C2F1E] hover:bg-[#5a2719] border-2 border-[#6C2F1E] text-white px-8 py-4 text-lg font-semibold"
+                <a
+                  href="https://www.carvellakitchen.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  제품 컬렉션
-                </Button>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#0F4C82] px-8 py-4 text-lg font-semibold"
+                  >
+                    Carvella 홈페이지 가기
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
