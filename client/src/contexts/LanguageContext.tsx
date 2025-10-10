@@ -147,6 +147,18 @@ const translations = {
     
     // News Section
     'news.title': '뉴스',
+    'news.0.date': '2025.08.11',
+    'news.0.title': '(주)상생·제이일렉트릭, 중국 초대형 공기청정기 공장과 글로벌 MOU 체결',
+    'news.1.date': '2025.04.15',
+    'news.1.title': 'Hoid 공기청정기 1세대 출시',
+    'news.2.date': '2025.08.08',
+    'news.2.title': 'Hoid 청소기 공장 방문',
+    'news.3.date': '2025.08.14',
+    'news.3.title': '쥬얼리·그릇 신제품 출시 예정',
+    'news.4.date': '2025.09.01',
+    'news.4.title': 'Hoid 공기청정기 2세대 출시',
+    'news.5.date': '2025.08.20',
+    'news.5.title': 'Hoid 청소기 출시',
     
     // Stats Section
     'stats.title': '성장하는',
@@ -338,6 +350,18 @@ const translations = {
     
     // News Section
     'news.title': 'News',
+    'news.0.date': '2025.08.11',
+    'news.0.title': 'Sangsaeng·J Electric Signs Global MOU with China\'s Mega Air Purifier Factory',
+    'news.1.date': '2025.04.15',
+    'news.1.title': 'Hoid Air Purifier 1st Generation Launch',
+    'news.2.date': '2025.08.08',
+    'news.2.title': 'Hoid Vacuum Cleaner Factory Visit',
+    'news.3.date': '2025.08.14',
+    'news.3.title': 'Jewelry & Tableware New Products Coming Soon',
+    'news.4.date': '2025.09.01',
+    'news.4.title': 'Hoid Air Purifier 2nd Generation Launch',
+    'news.5.date': '2025.08.20',
+    'news.5.title': 'Hoid Vacuum Cleaner Launch',
     
     // Stats Section
     'stats.title': 'Growing',
