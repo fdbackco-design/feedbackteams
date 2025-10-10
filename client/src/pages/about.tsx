@@ -14,6 +14,7 @@ import {
   Zap,
   Shield,
 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import organizationChart from "@assets/organizationChart_1754563135776.png";
 import warehouseImage from "@assets/futuristic-warehouse-with-blue-neon-lights-connected-data_1754566796044.jpg";
 import partnershipImage from "@assets/5f76e132-877a-4d9e-8c9c-de9ff84cb5dd_1754568024377.jpg";
@@ -375,30 +376,31 @@ const BrandMessageBannerSVG = () => (
 );
 
 export default function About() {
+  const { t } = useLanguage();
   const [timelineVisible, setTimelineVisible] = useState<boolean[]>([]);
   const timelineRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const timelineData = [
     {
       year: "2025.09",
-      description: "Hoid 2세대 공기청정기 국내외 동시 론칭 (홈쇼핑 입점 확장)",
-      type: "확장",
+      description: t("about.timeline.2025_09"),
+      type: t("about.timeline.type.expansion"),
     },
-    { year: "2025.08", description: "Hoid 무선 청소기 출시", type: "제품출시" },
+    { year: "2025.08", description: t("about.timeline.2025_08"), type: t("about.timeline.type.product") },
     {
       year: "2025.04",
-      description: "Hoid 1세대 공기청정기 출시 (3-in-1 살균 기술 탑재)",
-      type: "제품출시",
+      description: t("about.timeline.2025_04"),
+      type: t("about.timeline.type.product"),
     },
     {
       year: "2025.01",
-      description: "자회사 상생메디컬 설립 및 통합 플랫폼 개발 개시",
-      type: "확장",
+      description: t("about.timeline.2025_01"),
+      type: t("about.timeline.type.expansion"),
     },
     {
       year: "2024",
-      description: "자체 브랜드 Hoid, Medifeed, InYourHeart 동시 론칭",
-      type: "창립",
+      description: t("about.timeline.2024"),
+      type: t("about.timeline.type.founding"),
     },
   ];
 
@@ -465,26 +467,15 @@ export default function About() {
           <div className="text-center mb-16">
             <div className="text-lg text-foreground leading-relaxed space-y-8 max-w-4xl mx-auto">
               <p className="about-story-main text-[30px]">
-                <span className="text-primary">Feedback</span>은 유통을 중심으로
-                <br className="hidden sm:block" />
-                브랜드 마케팅, 제조, 무역 수출입을 아우르는
-                <br className="hidden lg:block" />
-                <span className="text-accent"> 종합 커머스 기업</span>입니다.
+                {t("about.story.main")}
               </p>
 
               <p className="about-story-sub">
-                Hoid, Medifeed, InYourHeart, 상생 등 자체 브랜드와 글로벌
-                파트너십을 기반으로,
-                <br className="hidden sm:block" />
-                기획부터 제조·유통·브랜딩까지 전 과정을 함께합니다.
+                {t("about.story.sub")}
               </p>
 
               <p className="about-story-detail text-[20px]">
-                고객의 삶 속에 스며든 FeedBack의 브랜드 하나하나가 고객 여러분의
-                하루를
-                <br className="hidden sm:block" />
-                더욱 편리하고 행복하게 만들 수 있도록 언제나 노력하는 FeedBack이
-                되겠습니다.
+                {t("about.story.detail")}
               </p>
             </div>
           </div>
@@ -507,16 +498,10 @@ export default function About() {
         {/* Content overlay */}
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="about-parallax-title mb-8 font-light">
-            고객님의 <span className="text-[#ffffff] font-bold">'생활 속 행복'</span>을
-            목표로
-            <br className="hidden sm:block" />
-            열정 넘치는 이들이 모인 FeedBack은
+            {t("about.parallax.title")}
           </h3>
           <p className="about-parallax-description max-w-3xl mx-auto">
-            최고의 제품을 안겨드리기 위해 기술혁신에 끊임없이 노력을 기울이고
-            있으며,
-            <br className="hidden sm:block" />
-            이를 위한 연구개발투자 또한 지속적으로 이루어지고 있습니다.
+            {t("about.parallax.description")}
           </p>
         </div>
       </section>
@@ -524,11 +509,9 @@ export default function About() {
       <section className="py-20 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="about-section-title mb-8">경영철학</h2>
+            <h2 className="about-section-title mb-8">{t("about.philosophy.title")}</h2>
             <p className="about-story-sub text-foreground leading-relaxed max-w-4xl mx-auto">
-              FeedBack은 브랜드와 시장을 연결하는 실행 중심의 유통 플랫폼으로서
-              <br className="hidden sm:block" />
-              모든 파트너와 함께 성장하는 상생의 생태계를 구축하고 있습니다.
+              {t("about.philosophy.description")}
             </p>
           </div>
 
@@ -695,7 +678,7 @@ export default function About() {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="flex items-center mb-16 bg-white/70 p-4 rounded-xl backdrop-blur-sm">
             <div className="w-4 h-4 bg-blue-600 rounded-full mr-6"></div>
-            <h2 className="about-section-title text-slate-900">연혁</h2>
+            <h2 className="about-section-title text-slate-900">{t("about.timeline.title")}</h2>
           </div>
 
           <div className="relative ml-2">
