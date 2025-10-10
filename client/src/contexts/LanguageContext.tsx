@@ -147,6 +147,11 @@ const translations = {
     
     // News Section
     'news.title': '뉴스',
+    'news.back_to_list': '뉴스 목록으로 돌아가기',
+    'news.coming_soon': '전문 기사 내용이 곧 업데이트될 예정입니다.',
+    'news.category.보도자료': '보도자료',
+    'news.category.기업소식': '기업소식',
+    'news.category.브랜드뉴스': '브랜드뉴스',
     'news.0.date': '2025.08.11',
     'news.0.title': '(주)상생·제이일렉트릭, 중국 초대형 공기청정기 공장과 글로벌 MOU 체결',
     'news.1.date': '2025.04.15',
@@ -350,6 +355,11 @@ const translations = {
     
     // News Section
     'news.title': 'News',
+    'news.back_to_list': 'Back to News List',
+    'news.coming_soon': 'Full article content will be updated soon.',
+    'news.category.보도자료': 'Press Release',
+    'news.category.기업소식': 'Company News',
+    'news.category.브랜드뉴스': 'Brand News',
     'news.0.date': '2025.08.11',
     'news.0.title': 'Sangsaeng·J Electric Signs Global MOU with China\'s Mega Air Purifier Factory',
     'news.1.date': '2025.04.15',

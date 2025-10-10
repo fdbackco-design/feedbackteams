@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Calendar } from "lucide-react";
 import newsData from "@/data/news.json";
 import { resolveNewsThumbnail, FALLBACK } from "@/assets/news";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const categoryColors: Record<string, string> = {
   보도자료: "bg-secondary text-white",
@@ -12,6 +13,7 @@ const categoryColors: Record<string, string> = {
 };
 
 export default function Article() {
+  const { t } = useLanguage();
   const [location] = useLocation();
   const articleId = location.split("/").pop();
 
@@ -25,7 +27,7 @@ export default function Article() {
             기사를 찾을 수 없습니다
           </h1>
           <Link href="/news">
-            <Button>뉴스 목록으로 돌아가기</Button>
+            <Button>{t("news.back_to_list")}</Button>
           </Link>
         </div>
       </div>
@@ -43,7 +45,7 @@ export default function Article() {
           <Link href="/news">
             <Button variant="ghost" className="mb-6">
               <ArrowLeft className="w-4 h-4 mr-2" />
-              뉴스 목록으로 돌아가기
+              {t("news.back_to_list")}
             </Button>
           </Link>
 
@@ -53,16 +55,16 @@ export default function Article() {
                 categoryColors[article.category] || "bg-gray-500 text-white"
               }
             >
-              {article.category}
+              {t(`news.category.${article.category}`)}
             </Badge>
             <div className="flex items-center text-gray-500 text-sm">
               <Calendar className="w-4 h-4 mr-1" />
-              {article.date}
+              {t(`news.${articleId}.date`)}
             </div>
           </div>
 
           <h1 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
-            {article.title}
+            {t(`news.${articleId}.title`)}
           </h1>
         </div>
       </div>
@@ -98,7 +100,7 @@ export default function Article() {
             <div className="text-gray-700 leading-relaxed space-y-6">
               <p>{article.summary}</p>
               <p className="text-gray-500 italic">
-                전문 기사 내용이 곧 업데이트될 예정입니다.
+                {t("news.coming_soon")}
               </p>
             </div>
           )}
@@ -109,7 +111,7 @@ export default function Article() {
           <Link href="/news">
             <Button size="lg">
               <ArrowLeft className="w-4 h-4 mr-2" />
-              뉴스 목록으로 돌아가기
+              {t("news.back_to_list")}
             </Button>
           </Link>
         </div>
