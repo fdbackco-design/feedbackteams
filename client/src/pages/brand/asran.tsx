@@ -31,69 +31,69 @@ export default function AsranPage() {
   const features = [
     {
       icon: Shield,
-      title: "SUS410 스테인리스 스틸",
-      description: "최고급 소재로 내구성과 안전성을 보장합니다",
+      title: t("asran.feature1.title"),
+      description: t("asran.feature1.description"),
       details: [
-        "부식 방지 & 변색 방지",
-        "위생적이고 안전한 조리",
-        "반영구적 사용 가능",
-        "고급스러운 미러 마감",
+        t("asran.feature1.detail1"),
+        t("asran.feature1.detail2"),
+        t("asran.feature1.detail3"),
+        t("asran.feature1.detail4"),
       ],
     },
     {
       icon: Thermometer,
-      title: "3중 바닥구조",
-      description: "뛰어난 열전도율로 에너지 효율성 극대화",
+      title: t("asran.feature2.title"),
+      description: t("asran.feature2.description"),
       details: [
-        "균등한 열 분산",
-        "에너지 효율성 극대화",
-        "빠른 가열 시간",
-        "열 손실 최소화",
+        t("asran.feature2.detail1"),
+        t("asran.feature2.detail2"),
+        t("asran.feature2.detail3"),
+        t("asran.feature2.detail4"),
       ],
     },
     {
       icon: Zap,
-      title: "모든 열원 완벽 호환",
-      description: "어떤 주방환경에서도 완벽하게 사용 가능",
-      details: ["인덕션 레인지", "가스 레인지", "하이라이트", "전기 레인지"],
+      title: t("asran.feature3.title"),
+      description: t("asran.feature3.description"),
+      details: [t("asran.feature3.detail1"), t("asran.feature3.detail2"), t("asran.feature3.detail3"), t("asran.feature3.detail4")],
     },
   ];
 
   const productSizes = [
     {
       size: "18cm",
-      type: "편수냄비",
-      usage: "소용량 요리, 이유식 제조에 최적",
+      type: t("asran.size1.title"),
+      usage: t("asran.size1.usage"),
       icon: "👶",
     },
     {
       size: "22cm",
-      type: "양수냄비",
-      usage: "2-3인 가족 요리에 적합",
+      type: t("asran.size2.title"),
+      usage: t("asran.size2.usage"),
       icon: "👥",
     },
     {
       size: "28cm",
-      type: "양수냄비",
-      usage: "대용량 요리, 대가족 요리에 완벽",
+      type: t("asran.size3.title"),
+      usage: t("asran.size3.usage"),
       icon: "👨‍👩‍👧‍👦",
     },
   ];
 
   const cookingTypes = [
     {
-      title: "국물요리",
-      description: "깊고 진한 국물 맛 구현",
+      title: t("asran.cooking1.title"),
+      description: t("asran.cooking1.description"),
       icon: "🍲",
     },
     {
-      title: "찜 & 조림",
-      description: "촉촉하고 부드러운 식감",
+      title: t("asran.cooking2.title"),
+      description: t("asran.cooking2.description"),
       icon: "🥘",
     },
     {
-      title: "건강한 조리",
-      description: "영양소 보존하는 조리법",
+      title: t("asran.cooking3.title"),
+      description: t("asran.cooking3.description"),
       icon: "🥗",
     },
   ];
@@ -254,7 +254,7 @@ export default function AsranPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-white mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              실제 구매고객들의 생생한 후기
+              {t("asran.reviews.title")}
             </h2>
             <div className="flex justify-center items-center space-x-2 mb-8">
               <div className="flex text-yellow-400">
@@ -269,16 +269,16 @@ export default function AsranPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                text: "가성비 너무 혜자네요! 이 가격에 이런 품질의 냄비를 만날 수 있다니 정말 만족스럽습니다.",
-                author: "김○○님",
+                text: t("asran.review1"),
+                author: t("asran.review1.author"),
               },
               {
-                text: "냄비의 무게에 놀랐다. 엄청 가볍다! 가벼운 무게 덕분에 손목이 아프지 않고 편하게 요리할 수 있어요.",
-                author: "박○○님",
+                text: t("asran.review2"),
+                author: t("asran.review2.author"),
               },
               {
-                text: "이유식 만들 때 편수냄비가 너무 유용하게 사용되고 있어요. 열 전도도 빠르고 청소도 쉬워서 좋습니다.",
-                author: "이○○님",
+                text: t("asran.review3"),
+                author: t("asran.review3.author"),
               },
             ].map((review, index) => (
               <Card
@@ -302,7 +302,7 @@ export default function AsranPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              ASRAN 냄비와 함께하는 성공적인 요리 라이프
+              {t("asran.cta.subtitle")} ASRAN
             </h2>
           </div>
 
@@ -310,21 +310,18 @@ export default function AsranPage() {
             {[
               {
                 icon: ChefHat,
-                title: "요리가 즐거워집니다",
-                description:
-                  "균등한 열 전도로 실패 없는 요리가 가능하여 요리에 대한 자신감이 생깁니다.",
+                title: t("asran.benefit1.title"),
+                description: t("asran.benefit1.description"),
               },
               {
                 icon: Clock,
-                title: "요리 시간이 단축됩니다",
-                description:
-                  "빠른 가열 시간과 효율적인 열 분산으로 요리 시간을 대폭 줄일 수 있습니다.",
+                title: t("asran.benefit2.title"),
+                description: t("asran.benefit2.description"),
               },
               {
                 icon: Award,
-                title: "주방이 더 아름다워집니다",
-                description:
-                  "고급스러운 미러 마감과 세련된 디자인으로 주방 인테리어가 한층 업그레이드됩니다.",
+                title: t("asran.benefit3.title"),
+                description: t("asran.benefit3.description"),
               },
             ].map((benefit, index) => (
               <Card
@@ -353,11 +350,11 @@ export default function AsranPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-              독일 기술력과 만나는
-              <span className="block">프리미엄 요리 경험</span>
+              {t("asran.cta.title")}
+              <span className="block">{t("asran.cta.subtitle")}</span>
             </h2>
             <p className="text-lg lg:text-xl mb-12 opacity-90 leading-relaxed">
-              ASRAN과 함께 새로운 요리의 세계를 경험해보세요
+              {t("asran.cta.description")}
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button
@@ -366,7 +363,7 @@ export default function AsranPage() {
                 className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#0F4C82] transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-semibold"
                 onClick={() => setLocation("/contact")}
               >
-                문의하기
+                {t("asran.cta.button")}
               </Button>
             </div>
           </div>
