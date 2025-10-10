@@ -73,7 +73,9 @@ export default function Carvella() {
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                 {t("carvella.hero.title")}
-                <span className="block text-[#D4AF37]">{t("carvella.hero.subtitle")}</span>
+                <span className="block text-[#D4AF37]">
+                  {t("carvella.hero.subtitle")}
+                </span>
               </h1>
               <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
                 {t("carvella.hero.description")}
@@ -182,7 +184,7 @@ export default function Carvella() {
                 <div className="w-full h-96 bg-gradient-to-br from-[#6C2F1E] to-[#D4AF37] rounded-3xl flex items-center justify-center shadow-2xl">
                   <div className="text-center text-white">
                     <div className="text-6xl font-bold mb-4">🇮🇹</div>
-                    <div className="text-2xl font-bold">MADE IN ITALY</div>
+                    <div className="text-2xl font-bold">ITALY</div>
                     <div className="text-lg opacity-90">
                       Artigianato Italiano
                     </div>
@@ -196,7 +198,9 @@ export default function Carvella() {
               </div>
               <h2 className="text-5xl font-bold text-[#000000] mb-8 leading-tight">
                 {t("carvella.heritage.title")}
-                <span className="block text-[#6C2F1E]">{t("carvella.heritage.subtitle")}</span>
+                <span className="block text-[#6C2F1E]">
+                  {t("carvella.heritage.subtitle")}
+                </span>
               </h2>
 
               <div className="mb-8">
@@ -243,7 +247,9 @@ export default function Carvella() {
               </div>
               <h2 className="text-4xl font-bold text-[#000000] mb-6 leading-tight">
                 {t("carvella.cooking.title")}
-                <span className="block text-[#6C2F1E]">{t("carvella.cooking.subtitle")}</span>
+                <span className="block text-[#6C2F1E]">
+                  {t("carvella.cooking.subtitle")}
+                </span>
               </h2>
 
               <div className="mb-8">
@@ -260,25 +266,33 @@ export default function Carvella() {
                   <div className="text-3xl font-bold text-[#6C2F1E] mb-2">
                     15+
                   </div>
-                  <div className="text-sm text-gray-600">{t("carvella.cooking.lineup")}</div>
+                  <div className="text-sm text-gray-600">
+                    {t("carvella.cooking.lineup")}
+                  </div>
                 </div>
                 <div className="text-center p-6 bg-gray-50 rounded-xl">
                   <div className="text-3xl font-bold text-[#6C2F1E] mb-2">
                     25
                   </div>
-                  <div className="text-sm text-gray-600">{t("carvella.cooking.warranty")}</div>
+                  <div className="text-sm text-gray-600">
+                    {t("carvella.cooking.warranty")}
+                  </div>
                 </div>
                 <div className="text-center p-6 bg-gray-50 rounded-xl">
                   <div className="text-3xl font-bold text-[#6C2F1E] mb-2">
                     95%
                   </div>
-                  <div className="text-sm text-gray-600">{t("carvella.cooking.recommendation")}</div>
+                  <div className="text-sm text-gray-600">
+                    {t("carvella.cooking.recommendation")}
+                  </div>
                 </div>
                 <div className="text-center p-6 bg-gray-50 rounded-xl">
                   <div className="text-3xl font-bold text-[#6C2F1E] mb-2">
                     4.9
                   </div>
-                  <div className="text-sm text-gray-600">{t("carvella.cooking.satisfaction")}</div>
+                  <div className="text-sm text-gray-600">
+                    {t("carvella.cooking.satisfaction")}
+                  </div>
                 </div>
               </div>
             </div>
@@ -422,7 +436,9 @@ export default function Carvella() {
               <p className="text-gray-600 italic mb-6 leading-relaxed">
                 "{t("carvella.testimonial2")}"
               </p>
-              <div className="font-semibold text-[#6C2F1E]">{t("carvella.testimonial2.author")}</div>
+              <div className="font-semibold text-[#6C2F1E]">
+                {t("carvella.testimonial2.author")}
+              </div>
             </div>
 
             <div className="bg-gray-50 rounded-2xl p-8 text-center">
@@ -440,7 +456,9 @@ export default function Carvella() {
               <p className="text-gray-600 italic mb-6 leading-relaxed">
                 "{t("carvella.testimonial3")}"
               </p>
-              <div className="font-semibold text-[#6C2F1E]">{t("carvella.testimonial3.author")}</div>
+              <div className="font-semibold text-[#6C2F1E]">
+                {t("carvella.testimonial3.author")}
+              </div>
             </div>
           </div>
         </div>
@@ -451,7 +469,9 @@ export default function Carvella() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
             {t("carvella.cta.title")}
-            <span className="block text-[#D4AF37]">{t("carvella.cta.subtitle")}</span>
+            <span className="block text-[#D4AF37]">
+              {t("carvella.cta.subtitle")}
+            </span>
           </h2>
           <p className="text-xl mb-12 opacity-90 max-w-3xl mx-auto leading-relaxed">
             {t("carvella.cta.description")}

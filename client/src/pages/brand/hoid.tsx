@@ -243,15 +243,13 @@ export default function Hoid() {
               <div className="mb-8">
                 <div className="inline-flex items-center px-4 py-2 bg-[#0F4C82] text-white rounded-full text-sm font-medium mb-6">
                   <Calendar className="w-4 h-4 mr-2" />
-                  2025년 8월 런칭
+                  {t("hoid.homeshopping.date")}
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4">
-                  프리미엄 디자인 가전, 이제 집에서 만나보세요
+                  {t("hoid.homeshopping.heading")}
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  프리미엄 디자인 가전 브랜드 호이드가 드디어 홈쇼핑을 통해
-                  여러분을 찾아갑니다. 세련된 디자인과 뛰어난 성능, 그리고
-                  생활을 바꾸는 혁신적인 기술을 이제 TV 속에서 직접 확인하세요.
+                  {t("hoid.homeshopping.description")}
                 </p>
               </div>
 
@@ -277,11 +275,11 @@ export default function Hoid() {
               DISTRIBUTION CHANNELS
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-6">
-              전국 어디서나 만날 수 있는
+              {t("hoid.channels.title")}
             </h2>
             <div className="w-32 h-1 bg-[#0F4C82] mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              다양한 유통 채널을 통해 고객 여러분께 더 가깝게 다가갑니다
+              {t("hoid.channels.subtitle")}
             </p>
           </div>
 
@@ -292,10 +290,10 @@ export default function Hoid() {
                   <ShoppingCart className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4">
-                  홈쇼핑
+                  {t("hoid.channel1.title")}
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-lg">
-                  홈쇼핑 채널을 통한 직접 판매
+                  {t("hoid.channel1.description")}
                 </p>
               </div>
             </div>
@@ -306,10 +304,10 @@ export default function Hoid() {
                   <Globe className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4">
-                  스마트스토어
+                  {t("hoid.channel2.title")}
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-lg">
-                  온라인 공식 스토어 운영
+                  {t("hoid.channel2.description")}
                 </p>
               </div>
             </div>
@@ -320,10 +318,10 @@ export default function Hoid() {
                   <CheckCircle className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4">
-                  글로벌 셀러
+                  {t("hoid.channel3.title")}
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-lg">
-                  해외 온라인 플랫폼 진출
+                  {t("hoid.channel3.description")}
                 </p>
               </div>
             </div>
@@ -334,10 +332,10 @@ export default function Hoid() {
                   <Zap className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4">
-                  오프라인 매장
+                  {t("hoid.channel4.title")}
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-lg">
-                  전국 가전 매장 및 백화점
+                  {t("hoid.channel4.description")}
                 </p>
               </div>
             </div>
@@ -349,10 +347,10 @@ export default function Hoid() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-              깨끗한 공기, 새로운 일상
+              {t("hoid.cta.title")}
             </h2>
             <p className="text-lg lg:text-xl mb-12 opacity-90 leading-relaxed">
-              HOID와 함께 건강하고 쾌적한 실내 환경을 만들어보세요
+              {t("hoid.cta.description")}
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button
@@ -361,7 +359,7 @@ export default function Hoid() {
                 className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#0F4C82] transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-medium"
                 onClick={() => setLocation("/contact")}
               >
-                문의하기
+                {t("hoid.cta.button")}
               </Button>
             </div>
           </div>

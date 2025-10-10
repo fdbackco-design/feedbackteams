@@ -73,7 +73,9 @@ export default function LaCeras() {
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                 {t("laceras.hero.title")}
-                <span className="block text-[#FFD700]">{t("laceras.hero.subtitle")}</span>
+                <span className="block text-[#FFD700]">
+                  {t("laceras.hero.subtitle")}
+                </span>
               </h1>
               <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
                 {t("laceras.hero.description")}
@@ -183,7 +185,7 @@ export default function LaCeras() {
                 <div className="w-full h-96 bg-gradient-to-br from-[#233A73] to-[#E31E24] rounded-3xl flex items-center justify-center shadow-2xl">
                   <div className="text-center text-white">
                     <div className="text-6xl font-bold mb-4">🇫🇷</div>
-                    <div className="text-2xl font-bold">MADE IN FRANCE</div>
+                    <div className="text-2xl font-bold">FRANCE</div>
                     <div className="text-lg opacity-90">Since 1950</div>
                   </div>
                 </div>
@@ -195,7 +197,9 @@ export default function LaCeras() {
               </div>
               <h2 className="text-5xl font-bold text-[#000000] mb-8 leading-tight">
                 {t("laceras.heritage.title")}
-                <span className="block text-[#233A73]">{t("laceras.heritage.subtitle")}</span>
+                <span className="block text-[#233A73]">
+                  {t("laceras.heritage.subtitle")}
+                </span>
               </h2>
 
               <div className="mb-8">
@@ -261,25 +265,33 @@ export default function LaCeras() {
                   <div className="text-3xl font-bold text-[#233A73] mb-2">
                     3
                   </div>
-                  <div className="text-sm text-gray-600">{t("laceras.travel.size")}</div>
+                  <div className="text-sm text-gray-600">
+                    {t("laceras.travel.size")}
+                  </div>
                 </div>
                 <div className="text-center p-6 bg-gray-50 rounded-xl">
                   <div className="text-3xl font-bold text-[#233A73] mb-2">
                     10
                   </div>
-                  <div className="text-sm text-gray-600">{t("laceras.travel.warranty")}</div>
+                  <div className="text-sm text-gray-600">
+                    {t("laceras.travel.warranty")}
+                  </div>
                 </div>
                 <div className="text-center p-6 bg-gray-50 rounded-xl">
                   <div className="text-3xl font-bold text-[#233A73] mb-2">
                     50+
                   </div>
-                  <div className="text-sm text-gray-600">{t("laceras.travel.stores")}</div>
+                  <div className="text-sm text-gray-600">
+                    {t("laceras.travel.stores")}
+                  </div>
                 </div>
                 <div className="text-center p-6 bg-gray-50 rounded-xl">
                   <div className="text-3xl font-bold text-[#233A73] mb-2">
                     4.8
                   </div>
-                  <div className="text-sm text-gray-600">{t("laceras.travel.rating")}</div>
+                  <div className="text-sm text-gray-600">
+                    {t("laceras.travel.rating")}
+                  </div>
                 </div>
               </div>
             </div>
@@ -365,7 +377,9 @@ export default function LaCeras() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
             {t("laceras.cta.title")}
-            <span className="block text-[#FFD700]">{t("laceras.cta.subtitle")}</span>
+            <span className="block text-[#FFD700]">
+              {t("laceras.cta.subtitle")}
+            </span>
           </h2>
           <p className="text-xl mb-12 opacity-90 max-w-3xl mx-auto leading-relaxed">
             {t("laceras.cta.description")}
