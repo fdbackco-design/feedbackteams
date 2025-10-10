@@ -330,13 +330,10 @@ const BrandMessageBannerSVG = () => (
     <div className="relative z-10 flex items-center justify-center h-96 px-8">
       <div className="text-center">
         <h2
-          className="about-banner-title mb-4"
-          style={{ textShadow: "2px 2px 8px rgba(0,0,0,0.8)" }}
-        >
-          피드백은 브랜드의 성장을
-          <br className="block" />
-          <span className="text-[#ffffff]"> 유통으로 설계합니다</span>
-        </h2>
+            className="about-banner-title mb-4"
+            style={{ textShadow: "2px 2px 8px rgba(0,0,0,0.8)" }}
+            dangerouslySetInnerHTML={{ __html: t("about.banner.title") }}
+          />
       </div>
     </div>
 
