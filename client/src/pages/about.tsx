@@ -311,7 +311,7 @@ const TechnologySVG = () => (
 );
 
 // 새로운 브랜드 메시지 배너 - 미래형 창고 배경
-const BrandMessageBannerSVG = () => (
+const BrandMessageBannerSVG = ({ title }: { title: string }) => (
   <div className="relative overflow-hidden rounded-2xl shadow-2xl">
     {/* 배경 이미지 */}
     <div className="absolute inset-0">
@@ -332,7 +332,7 @@ const BrandMessageBannerSVG = () => (
         <h2
             className="about-banner-title mb-4"
             style={{ textShadow: "2px 2px 8px rgba(0,0,0,0.8)" }}
-            dangerouslySetInnerHTML={{ __html: t("about.banner.title") }}
+            dangerouslySetInnerHTML={{ __html: title }}
           />
       </div>
     </div>
@@ -455,7 +455,7 @@ export default function About() {
       {/* 브랜드 메시지 배너 */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <BrandMessageBannerSVG />
+          <BrandMessageBannerSVG title={t("about.story.main")} />
         </div>
       </section>
       {/* Company Story Section - 쿠쿠 스타일 스토리텔링 */}
