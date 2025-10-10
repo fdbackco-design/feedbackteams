@@ -49,6 +49,7 @@ import asranImg from "@assets/image_Pippit_202507291037 1_1754993039700.jpg";
 import sangsaengImg from "@assets/sangsaeng_1_1754636754183.jpg";
 import lacerasImg from "@/assets/brand/laceras.jpg";
 import carvellaImg from "@/assets/brand/carvella.png";
+import brandLineupImg from "@assets/brand_lineup_1760074500166.jpg";
 import newsData from "@/data/news.json";
 import { resolveNewsThumbnail, FALLBACK } from "@/assets/news";
 
@@ -106,6 +107,21 @@ const getServices = (t: (key: string) => string) => [
 ];
 
 const getBrands = (t: (key: string) => string) => [
+  {
+    id: "lineup",
+    name: "Feed Holdings Brand Lineup",
+    category: "브랜드 라인업",
+    slogan: "기술, 디자인, 그리고 일상의 편리함을 잇다.",
+    description: "피드백은 생활가전, 프리미엄 주방, 여행, 리빙 브랜드를 통해 일상을 더 나은 경험으로 만드는 기술과 디자인을 제공합니다.",
+    products: [
+      "HOiD",
+      "ASRAN",
+      "La Ceras",
+      "Carvella"
+    ],
+    image: brandLineupImg,
+    color: "from-slate-700 to-slate-900",
+  },
   {
     id: "hoid",
     name: "Hoid",
