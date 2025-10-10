@@ -11,8 +11,11 @@ import {
   ShoppingCart,
 } from "lucide-react";
 import sky5Video from "../assets/sky5.mp4";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const B2B2C_Hub = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="relative py-8 sm:py-12 lg:py-20 min-h-screen flex items-center overflow-hidden">
       {/* Video Background */}
@@ -36,8 +39,8 @@ const B2B2C_Hub = () => {
             className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-2 sm:mb-3"
             style={{ lineHeight: "1.2" }}
           >
-            <span className="font-normal">제조사부터 소비자까지</span>, <br />
-            완전한 유통 생태계를 구축합니다.
+            <span className="font-normal">{t("b2b2c.header.title")}</span>, <br />
+            {t("b2b2c.header.subtitle")}
           </h2>
         </div>
 
@@ -59,25 +62,24 @@ const B2B2C_Hub = () => {
                 </div>
                 <div className="text-center">
                   <h3 className="b2b2c-card-title text-black mb-4">
-                    B2B 제조사
+                    {t("b2b2c.b2b.title")}
                   </h3>
                   <p className="b2b2c-card-description text-gray-600 mb-6">
-                    품질 높은 제품을 생산하는 제조사와 전략적 파트너십을
-                    구축합니다
+                    {t("b2b2c.b2b.description")}
                   </p>
 
                   <div className="space-y-2 text-left">
                     <div className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 text-[#0F4C82] mr-2 flex-shrink-0" />
-                      <span>전문 제조 파트너</span>
+                      <span>{t("b2b2c.b2b.feature1")}</span>
                     </div>
                     <div className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 text-[#0F4C82] mr-2 flex-shrink-0" />
-                      <span>품질 관리 시스템</span>
+                      <span>{t("b2b2c.b2b.feature2")}</span>
                     </div>
                     <div className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 text-[#0F4C82] mr-2 flex-shrink-0" />
-                      <span>OEM/ODM 생산</span>
+                      <span>{t("b2b2c.b2b.feature3")}</span>
                     </div>
                   </div>
                 </div>
@@ -94,7 +96,7 @@ const B2B2C_Hub = () => {
             >
               <div className="flex flex-col items-center">
                 <ArrowLeft className="w-8 h-8 text-[#0F4C82]" />
-                <span className="text-xs text-white mt-2">유통 연결</span>
+                <span className="text-xs text-white mt-2">{t("b2b2c.arrow1")}</span>
               </div>
             </motion.div>
 
@@ -111,23 +113,23 @@ const B2B2C_Hub = () => {
                   <Truck className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-center">
-                  <h3 className="b2b2c-card-title mb-4">FeedBack 유통 허브</h3>
+                  <h3 className="b2b2c-card-title mb-4">{t("b2b2c.hub.title")}</h3>
                   <p className="b2b2c-card-description text-white mb-6">
-                    전국·글로벌 유통망을 통해 제품을 소비자에게 전달합니다
+                    {t("b2b2c.hub.description")}
                   </p>
 
                   <div className="space-y-2 text-left">
                     <div className="flex items-center text-sm text-white/90">
                       <CheckCircle className="w-4 h-4 text-white mr-2 flex-shrink-0" />
-                      <span>전국 유통망</span>
+                      <span>{t("b2b2c.hub.feature1")}</span>
                     </div>
                     <div className="flex items-center text-sm text-white/90">
                       <CheckCircle className="w-4 h-4 text-white mr-2 flex-shrink-0" />
-                      <span>물류 최적화</span>
+                      <span>{t("b2b2c.hub.feature2")}</span>
                     </div>
                     <div className="flex items-center text-sm text-white/90">
                       <CheckCircle className="w-4 h-4 text-white mr-2 flex-shrink-0" />
-                      <span>브랜드 마케팅</span>
+                      <span>{t("b2b2c.hub.feature3")}</span>
                     </div>
                   </div>
                 </div>
@@ -179,7 +181,7 @@ const B2B2C_Hub = () => {
             >
               <div className="flex flex-col items-center">
                 <ArrowRight className="w-8 h-8 text-[#0F4C82]" />
-                <span className="text-xs text-white mt-2">소비자 전달</span>
+                <span className="text-xs text-white mt-2">{t("b2b2c.arrow2")}</span>
               </div>
             </motion.div>
 
@@ -197,25 +199,24 @@ const B2B2C_Hub = () => {
                 </div>
                 <div className="text-center">
                   <h3 className="b2b2c-card-title text-black mb-4">
-                    B2C 소비자
+                    {t("b2b2c.b2c.title")}
                   </h3>
                   <p className="b2b2c-card-description text-gray-600 mb-6">
-                    다양한 채널을 통해 소비자에게 최고의 제품과 서비스를
-                    제공합니다
+                    {t("b2b2c.b2c.description")}
                   </p>
 
                   <div className="space-y-2 text-left">
                     <div className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 text-[#0F4C82] mr-2 flex-shrink-0" />
-                      <span>온라인·오프라인</span>
+                      <span>{t("b2b2c.b2c.feature1")}</span>
                     </div>
                     <div className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 text-[#0F4C82] mr-2 flex-shrink-0" />
-                      <span>홈쇼핑 연계</span>
+                      <span>{t("b2b2c.b2c.feature2")}</span>
                     </div>
                     <div className="flex items-center text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 text-[#0F4C82] mr-2 flex-shrink-0" />
-                      <span>글로벌 진출</span>
+                      <span>{t("b2b2c.b2c.feature3")}</span>
                     </div>
                   </div>
                 </div>
@@ -239,23 +240,22 @@ const B2B2C_Hub = () => {
                   </div>
                   <div>
                     <h3 className="text-sm sm:text-base font-semibold text-black">
-                      B2B 제조사
+                      {t("b2b2c.b2b.title")}
                     </h3>
                   </div>
                 </div>
                 <p className="text-xs sm:text-sm text-gray-600 mb-2">
-                  품질 높은 제품을 생산하는 제조사와 전략적 파트너십을
-                  구축합니다
+                  {t("b2b2c.b2b.description")}
                 </p>
                 <div className="flex flex-wrap gap-1">
                   <span className="px-2 py-0.5 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-xs">
-                    전문 제조
+                    {t("b2b2c.b2b.feature1_short")}
                   </span>
                   <span className="px-2 py-0.5 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-xs">
-                    품질 관리
+                    {t("b2b2c.b2b.feature2_short")}
                   </span>
                   <span className="px-2 py-0.5 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-xs">
-                    OEM/ODM
+                    {t("b2b2c.b2b.feature3_short")}
                   </span>
                 </div>
               </div>
@@ -280,22 +280,22 @@ const B2B2C_Hub = () => {
                   </div>
                   <div>
                     <h3 className="text-sm sm:text-base font-semibold">
-                      FeedBack 유통 허브
+                      {t("b2b2c.hub.title")}
                     </h3>
                   </div>
                 </div>
                 <p className="text-xs sm:text-sm text-white/80 mb-2">
-                  전국·글로벌 유통망을 통해 제품을 소비자에게 전달합니다
+                  {t("b2b2c.hub.description")}
                 </p>
                 <div className="flex flex-wrap gap-1">
                   <span className="px-2 py-0.5 bg-white/20 text-white rounded-full text-xs">
-                    전국 유통망
+                    {t("b2b2c.hub.feature1")}
                   </span>
                   <span className="px-2 py-0.5 bg-white/20 text-white rounded-full text-xs">
-                    물류 최적화
+                    {t("b2b2c.hub.feature2")}
                   </span>
                   <span className="px-2 py-0.5 bg-white/20 text-white rounded-full text-xs">
-                    브랜드 마케팅
+                    {t("b2b2c.hub.feature3")}
                   </span>
                 </div>
               </div>
@@ -320,23 +320,22 @@ const B2B2C_Hub = () => {
                   </div>
                   <div>
                     <h3 className="text-sm sm:text-base font-semibold text-black">
-                      B2C 소비자
+                      {t("b2b2c.b2c.title")}
                     </h3>
                   </div>
                 </div>
                 <p className="text-xs sm:text-sm text-gray-600 mb-2">
-                  다양한 채널을 통해 소비자에게 최고의 제품과 서비스를
-                  제공합니다
+                  {t("b2b2c.b2c.description")}
                 </p>
                 <div className="flex flex-wrap gap-1">
                   <span className="px-2 py-0.5 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-xs">
-                    온라인·오프라인
+                    {t("b2b2c.b2c.feature1")}
                   </span>
                   <span className="px-2 py-0.5 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-xs">
-                    홈쇼핑 연계
+                    {t("b2b2c.b2c.feature2")}
                   </span>
                   <span className="px-2 py-0.5 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-xs">
-                    글로벌 진출
+                    {t("b2b2c.b2c.feature3")}
                   </span>
                 </div>
               </div>
@@ -354,12 +353,10 @@ const B2B2C_Hub = () => {
         >
           <div className="max-w-4xl mx-auto">
             <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2 sm:mb-3 lg:mb-4">
-              "완전한 유통 생태계, 피드백"
+              "{t("b2b2c.summary.title")}"
             </h3>
             <p className="text-sm sm:text-base lg:text-lg text-white/80 leading-relaxed">
-              제조사의 우수한 제품이 소비자에게 성공적으로 전달될 수 있도록,
-              <br className="hidden sm:block" />
-              피드백은 전체 유통 과정을 설계하고 최적화합니다.
+              {t("b2b2c.summary.description")}
             </p>
           </div>
         </motion.div>
