@@ -11,30 +11,38 @@ import {
 } from "@/components/ui/card";
 import newsData from "@/data/news.json";
 import { resolveNewsThumbnail, FALLBACK } from "@/assets/news";
-
-const filterOptions = [
-  { value: "all", label: "전체" },
-  { value: "press", label: "보도자료" },
-  { value: "company", label: "기업소식" },
-  { value: "brand", label: "브랜드뉴스" },
-];
-
-const categoryColors: Record<string, string> = {
-  보도자료: "bg-secondary text-white",
-  브랜드뉴스: "bg-primary text-white",
-  기업소식: "bg-accent text-white",
-};
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function News() {
+  const { t } = useLanguage();
   const [activeFilter, setActiveFilter] = useState("all");
   const [visibleNews, setVisibleNews] = useState(6);
 
+  const filterOptions = [
+    { value: "all", label: t("news.filter.all") },
+    { value: "press", label: t("news.filter.press") },
+    { value: "company", label: t("news.filter.company") },
+    { value: "brand", label: t("news.filter.brand") },
+  ];
+
+  const getCategoryKey = (category: string) => {
+    const categoryMap: Record<string, string> = {
+      "보도자료": "press",
+      "기업소식": "company",
+      "브랜드뉴스": "brand",
+    };
+    return categoryMap[category] || category;
+  };
+
+  const categoryColors: Record<string, string> = {
+    "보도자료": "bg-secondary text-white",
+    "브랜드뉴스": "bg-primary text-white",
+    "기업소식": "bg-accent text-white",
+  };
+
   const filteredNews = newsData.filter(
     (news) =>
-      activeFilter === "all" ||
-      (activeFilter === "press" && news.category === "보도자료") ||
-      (activeFilter === "company" && news.category === "기업소식") ||
-      (activeFilter === "brand" && news.category === "브랜드뉴스"),
+      activeFilter === "all" || activeFilter === getCategoryKey(news.category)
   );
 
   const loadMoreNews = () => {
@@ -46,13 +54,11 @@ export default function News() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 mt-16 sm:mt-20 mobile-padding">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
-            뉴스 & 보도자료
+            {t("news.title")}
           </h1>
           <div className="w-16 sm:w-24 h-0.5 bg-[#0F4C82] mx-auto mb-6 sm:mb-8"></div>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            FeedBack의 최신 소식과 주요 성과를 확인해보세요.
-            <br className="hidden sm:block" />
-            언론 보도자료와 기업 뉴스를 한눈에 볼 수 있습니다.
+            {t("news.description")}
           </p>
         </div>
 
@@ -111,7 +117,7 @@ export default function News() {
                           "bg-gray-500 text-white"
                         }
                       >
-                        {news.category}
+                        {t(`news.category.${getCategoryKey(news.category)}`)}
                       </Badge>
                       <time className="text-gray-500 text-sm">{news.date}</time>
                     </div>
@@ -124,7 +130,7 @@ export default function News() {
                       {news.summary}
                     </CardDescription>
                     <div className="text-primary font-semibold self-start">
-                      전체 기사 읽기 →
+                      {t("news.readMore")} →
                     </div>
                   </CardContent>
                 </Card>
@@ -141,7 +147,7 @@ export default function News() {
               onClick={loadMoreNews}
               className="px-8 py-4 text-lg font-semibold"
             >
-              더 많은 뉴스 보기
+              {t("news.loadMore")}
             </Button>
           </div>
         )}
