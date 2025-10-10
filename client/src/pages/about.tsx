@@ -23,7 +23,7 @@ import globalImage from "@assets/13730_1754568375896.jpg";
 import trustImage from "@assets/hands_1754568922347.png";
 import peopleImage from "@assets/people_1754639134434.jpg";
 import mapImage from "@assets/map_1754832577677.png";
-import newOrganizationChart from "@assets/mo_company_1755158476798.png";
+import newOrganizationChart from "@assets/mo_company.png";
 
 // SVG 컴포넌트들
 const HeroBackgroundSVG = () => (
@@ -330,10 +330,10 @@ const BrandMessageBannerSVG = ({ title }: { title: string }) => (
     <div className="relative z-10 flex items-center justify-center h-96 px-8">
       <div className="text-center">
         <h2
-            className="about-banner-title mb-4"
-            style={{ textShadow: "2px 2px 8px rgba(0,0,0,0.8)" }}
-            dangerouslySetInnerHTML={{ __html: title }}
-          />
+          className="about-banner-title mb-4"
+          style={{ textShadow: "2px 2px 8px rgba(0,0,0,0.8)" }}
+          dangerouslySetInnerHTML={{ __html: title }}
+        />
       </div>
     </div>
 
@@ -383,7 +383,11 @@ export default function About() {
       description: t("about.timeline.2025_09"),
       type: t("about.timeline.type.expansion"),
     },
-    { year: "2025.08", description: t("about.timeline.2025_08"), type: t("about.timeline.type.product") },
+    {
+      year: "2025.08",
+      description: t("about.timeline.2025_08"),
+      type: t("about.timeline.type.product"),
+    },
     {
       year: "2025.04",
       description: t("about.timeline.2025_04"),
@@ -463,11 +467,20 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="text-lg text-foreground leading-relaxed space-y-8 max-w-4xl mx-auto">
-              <p className="about-story-main text-[30px]" dangerouslySetInnerHTML={{ __html: t("about.story.main") }} />
+              <p
+                className="about-story-main text-[30px]"
+                dangerouslySetInnerHTML={{ __html: t("about.story.main") }}
+              />
 
-              <p className="about-story-sub" dangerouslySetInnerHTML={{ __html: t("about.story.sub") }} />
+              <p
+                className="about-story-sub"
+                dangerouslySetInnerHTML={{ __html: t("about.story.sub") }}
+              />
 
-              <p className="about-story-detail text-[20px]" dangerouslySetInnerHTML={{ __html: t("about.story.detail") }} />
+              <p
+                className="about-story-detail text-[20px]"
+                dangerouslySetInnerHTML={{ __html: t("about.story.detail") }}
+              />
             </div>
           </div>
         </div>
@@ -488,16 +501,31 @@ export default function About() {
 
         {/* Content overlay */}
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="about-parallax-title mb-8 font-light" dangerouslySetInnerHTML={{ __html: t("about.parallax.title") }} />
-          <p className="about-parallax-description max-w-3xl mx-auto" dangerouslySetInnerHTML={{ __html: t("about.parallax.description") }} />
+          <h3
+            className="about-parallax-title mb-8 font-light"
+            dangerouslySetInnerHTML={{ __html: t("about.parallax.title") }}
+          />
+          <p
+            className="about-parallax-description max-w-3xl mx-auto"
+            dangerouslySetInnerHTML={{
+              __html: t("about.parallax.description"),
+            }}
+          />
         </div>
       </section>
       {/* 경영철학 - 쿠쿠 스타일의 4개 핵심 가치 */}
       <section className="py-20 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="about-section-title mb-8">{t("about.philosophy.title")}</h2>
-            <p className="about-story-sub text-foreground leading-relaxed max-w-4xl mx-auto" dangerouslySetInnerHTML={{ __html: t("about.philosophy.description") }} />
+            <h2 className="about-section-title mb-8">
+              {t("about.philosophy.title")}
+            </h2>
+            <p
+              className="about-story-sub text-foreground leading-relaxed max-w-4xl mx-auto"
+              dangerouslySetInnerHTML={{
+                __html: t("about.philosophy.description"),
+              }}
+            />
           </div>
 
           {/* 첫 번째 가치 - 고객·파트너 중심 */}
@@ -514,8 +542,18 @@ export default function About() {
                 </div>
               </div>
               <div className="lg:w-1/2 text-center lg:text-left">
-                <h3 className="about-philosophy-title mb-6" dangerouslySetInnerHTML={{ __html: t("about.philosophy.value1.title") }} />
-                <p className="about-philosophy-description text-[0F4C82] text-[20px]" dangerouslySetInnerHTML={{ __html: t("about.philosophy.value1.description") }} />
+                <h3
+                  className="about-philosophy-title mb-6"
+                  dangerouslySetInnerHTML={{
+                    __html: t("about.philosophy.value1.title"),
+                  }}
+                />
+                <p
+                  className="about-philosophy-description text-[0F4C82] text-[20px]"
+                  dangerouslySetInnerHTML={{
+                    __html: t("about.philosophy.value1.description"),
+                  }}
+                />
               </div>
             </div>
           </div>
@@ -534,8 +572,18 @@ export default function About() {
                 </div>
               </div>
               <div className="lg:w-1/2 text-center lg:text-right">
-                <h3 className="about-philosophy-title mb-6" dangerouslySetInnerHTML={{ __html: t("about.philosophy.value2.title") }} />
-                <p className="about-philosophy-description text-[20px]" dangerouslySetInnerHTML={{ __html: t("about.philosophy.value2.description") }} />
+                <h3
+                  className="about-philosophy-title mb-6"
+                  dangerouslySetInnerHTML={{
+                    __html: t("about.philosophy.value2.title"),
+                  }}
+                />
+                <p
+                  className="about-philosophy-description text-[20px]"
+                  dangerouslySetInnerHTML={{
+                    __html: t("about.philosophy.value2.description"),
+                  }}
+                />
               </div>
             </div>
           </div>
@@ -554,8 +602,18 @@ export default function About() {
                 </div>
               </div>
               <div className="lg:w-1/2 text-center lg:text-left">
-                <h3 className="about-philosophy-title mb-6" dangerouslySetInnerHTML={{ __html: t("about.philosophy.value3.title") }} />
-                <p className="about-philosophy-description text-[20px]" dangerouslySetInnerHTML={{ __html: t("about.philosophy.value3.description") }} />
+                <h3
+                  className="about-philosophy-title mb-6"
+                  dangerouslySetInnerHTML={{
+                    __html: t("about.philosophy.value3.title"),
+                  }}
+                />
+                <p
+                  className="about-philosophy-description text-[20px]"
+                  dangerouslySetInnerHTML={{
+                    __html: t("about.philosophy.value3.description"),
+                  }}
+                />
               </div>
             </div>
           </div>
@@ -574,8 +632,18 @@ export default function About() {
                 </div>
               </div>
               <div className="lg:w-1/2 text-center lg:text-right">
-                <h3 className="about-philosophy-title mb-6" dangerouslySetInnerHTML={{ __html: t("about.philosophy.value4.title") }} />
-                <p className="about-philosophy-description text-[20px]" dangerouslySetInnerHTML={{ __html: t("about.philosophy.value4.description") }} />
+                <h3
+                  className="about-philosophy-title mb-6"
+                  dangerouslySetInnerHTML={{
+                    __html: t("about.philosophy.value4.title"),
+                  }}
+                />
+                <p
+                  className="about-philosophy-description text-[20px]"
+                  dangerouslySetInnerHTML={{
+                    __html: t("about.philosophy.value4.description"),
+                  }}
+                />
               </div>
             </div>
           </div>
@@ -596,7 +664,9 @@ export default function About() {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="flex items-center mb-16 bg-white/70 p-4 rounded-xl backdrop-blur-sm">
             <div className="w-4 h-4 bg-blue-600 rounded-full mr-6"></div>
-            <h2 className="about-section-title text-slate-900">{t("about.timeline.title")}</h2>
+            <h2 className="about-section-title text-slate-900">
+              {t("about.timeline.title")}
+            </h2>
           </div>
 
           <div className="relative ml-2">
@@ -670,7 +740,10 @@ export default function About() {
           </div>
 
           <div className="mt-16 bg-white/75 border border-slate-200 p-8 rounded-2xl text-center shadow-lg backdrop-blur-sm">
-            <p className="about-story-detail leading-relaxed font-medium text-[#000000]" dangerouslySetInnerHTML={{ __html: t("about.timeline.bottom") }} />
+            <p
+              className="about-story-detail leading-relaxed font-medium text-[#000000]"
+              dangerouslySetInnerHTML={{ __html: t("about.timeline.bottom") }}
+            />
           </div>
         </div>
       </section>
@@ -688,27 +761,26 @@ export default function About() {
             <div className="flex flex-col lg:flex-row">
               {/* CEO 프로필 영역 */}
               <div className="lg:w-1/3 bg-gradient-to-br from-primary to-accent p-12 text-white text-center flex flex-col justify-center">
-                <h3 className="text-2xl font-bold mb-2">{t("about.ceo.name")}</h3>
+                <h3 className="text-2xl font-bold mb-2">
+                  {t("about.ceo.name")}
+                </h3>
                 <p className="text-lg opacity-90">{t("about.ceo.position")}</p>
                 <div className="mt-8 pt-8 border-t border-white/20">
-                  <p className="opacity-80 text-[18px]" dangerouslySetInnerHTML={{ __html: t("about.ceo.motto") }} />
+                  <p
+                    className="opacity-80 text-[18px]"
+                    dangerouslySetInnerHTML={{ __html: t("about.ceo.motto") }}
+                  />
                 </div>
               </div>
 
               {/* 메시지 영역 */}
               <div className="lg:w-2/3 p-12">
                 <div className="space-y-6 text-foreground leading-relaxed">
-                  <p className="about-ceo-message">
-                    {t("about.ceo.message1")}
-                  </p>
+                  <p className="about-ceo-message">{t("about.ceo.message1")}</p>
 
-                  <p className="about-ceo-message">
-                    {t("about.ceo.message2")}
-                  </p>
+                  <p className="about-ceo-message">{t("about.ceo.message2")}</p>
 
-                  <p className="about-ceo-message">
-                    {t("about.ceo.message3")}
-                  </p>
+                  <p className="about-ceo-message">{t("about.ceo.message3")}</p>
 
                   <div className="bg-primary/5 p-6 rounded-xl border-l-4 border-primary">
                     <p className="about-ceo-highlight">
@@ -716,9 +788,7 @@ export default function About() {
                     </p>
                   </div>
 
-                  <p className="about-ceo-message">
-                    {t("about.ceo.message4")}
-                  </p>
+                  <p className="about-ceo-message">{t("about.ceo.message4")}</p>
                 </div>
               </div>
             </div>
@@ -741,7 +811,10 @@ export default function About() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="about-org-description text-[20px]" dangerouslySetInnerHTML={{ __html: t("about.org.description") }} />
+            <p
+              className="about-org-description text-[20px]"
+              dangerouslySetInnerHTML={{ __html: t("about.org.description") }}
+            />
           </div>
         </div>
       </section>
