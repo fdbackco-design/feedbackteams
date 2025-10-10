@@ -122,12 +122,12 @@ export default function News() {
                       <time className="text-gray-500 text-sm">{news.date}</time>
                     </div>
                     <CardTitle className="text-xl font-bold text-gray-900 line-clamp-2 h-[3.5rem] leading-tight">
-                      {news.title}
+                      {t(`news.${index}.title`)}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="flex-1 flex flex-col justify-between pt-0">
                     <CardDescription className="text-gray-600 mb-6 line-clamp-3 h-[4.5rem] leading-relaxed">
-                      {news.summary}
+                      {t(`news.${index}.summary`)}
                     </CardDescription>
                     <div className="text-primary font-semibold self-start">
                       {t("news.readMore")} →
