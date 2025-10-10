@@ -53,6 +53,13 @@ import brandLineupImg from "@assets/brand_lineup_1760074500166.jpg";
 import newsData from "@/data/news.json";
 import { resolveNewsThumbnail, FALLBACK } from "@/assets/news";
 
+const getNewsData = (t: (key: string) => string) => 
+  newsData.map((news, index) => ({
+    ...news,
+    title: t(`news.${index}.title`),
+    date: t(`news.${index}.date`),
+  }));
+
 const getServices = (t: (key: string) => string) => [
   {
     title: t("services.distribution.title"),
@@ -220,6 +227,7 @@ export default function Home() {
   const { t } = useLanguage();
   const services = getServices(t);
   const brands = getBrands(t);
+  const translatedNewsData = getNewsData(t);
   const [scrollY, setScrollY] = useState(0);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [currentSection, setCurrentSection] = useState(0);
@@ -1168,7 +1176,7 @@ export default function Home() {
                 scrollBehavior: "auto", // Disable smooth scroll for manual dragging
               }}
             >
-              {newsData.slice(0, 6).map((news, index) => {
+              {translatedNewsData.slice(0, 6).map((news, index) => {
                 const src = resolveNewsThumbnail(news.thumbnail);
                 return (
                   <Link
