@@ -106,35 +106,35 @@ export default function Medifeed() {
                   <Heart className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4 text-center">
-                  잇몸 건강 전문
+                  {t("medifeed.category1.title")}
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6 text-center">
-                  치주질환 예방과 잇몸 건강 유지를 위한 전문 영양제
+                  {t("medifeed.category1.description")}
                 </p>
                 <div className="bg-gray-50 rounded-xl p-6">
                   <div className="grid grid-cols-2 gap-4">
                     <div className="flex items-center">
                       <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-3"></div>
                       <span className="text-gray-700 font-medium">
-                        코엔자임 Q10
+                        {t("medifeed.category1.ingredient1")}
                       </span>
                     </div>
                     <div className="flex items-center">
                       <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-3"></div>
                       <span className="text-gray-700 font-medium">
-                        비타민 C 복합체
+                        {t("medifeed.category1.ingredient2")}
                       </span>
                     </div>
                     <div className="flex items-center">
                       <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-3"></div>
                       <span className="text-gray-700 font-medium">
-                        아연 & 셀레늄
+                        {t("medifeed.category1.ingredient3")}
                       </span>
                     </div>
                     <div className="flex items-center">
                       <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-3"></div>
                       <span className="text-gray-700 font-medium">
-                        GMP 인증
+                        {t("medifeed.category1.ingredient4")}
                       </span>
                     </div>
                   </div>
@@ -148,35 +148,35 @@ export default function Medifeed() {
                   <Star className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4 text-center">
-                  눈 건강 전문
+                  {t("medifeed.category2.title")}
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6 text-center">
-                  디지털 시대 눈의 피로와 시력 보호를 위한 기능성 영양제
+                  {t("medifeed.category2.description")}
                 </p>
                 <div className="bg-gray-50 rounded-xl p-6">
                   <div className="grid grid-cols-2 gap-4">
                     <div className="flex items-center">
                       <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-3"></div>
                       <span className="text-gray-700 font-medium">
-                        루테인 & 지아잔틴
+                        {t("medifeed.category2.ingredient1")}
                       </span>
                     </div>
                     <div className="flex items-center">
                       <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-3"></div>
                       <span className="text-gray-700 font-medium">
-                        빌베리 추출물
+                        {t("medifeed.category2.ingredient2")}
                       </span>
                     </div>
                     <div className="flex items-center">
                       <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-3"></div>
                       <span className="text-gray-700 font-medium">
-                        오메가-3 지방산
+                        {t("medifeed.category2.ingredient3")}
                       </span>
                     </div>
                     <div className="flex items-center">
                       <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-3"></div>
                       <span className="text-gray-700 font-medium">
-                        블루라이트 차단
+                        {t("medifeed.category2.ingredient4")}
                       </span>
                     </div>
                   </div>
@@ -194,12 +194,11 @@ export default function Medifeed() {
               BRAND PHILOSOPHY
             </div>
             <h2 className="text-5xl md:text-6xl font-bold text-[#000000] mb-6">
-              건강한 일상을 만드는
+              {t("medifeed.philosophy.title")}
             </h2>
             <div className="w-32 h-1 bg-[#0F4C82] mx-auto mb-8"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              과학적 근거와 품질에 대한 확고한 신념으로 믿을 수 있는 건강
-              솔루션을 제공합니다
+              {t("medifeed.philosophy.subtitle")}
             </p>
           </div>
 
@@ -210,11 +209,10 @@ export default function Medifeed() {
                   <Shield className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4">
-                  안전성 우선
+                  {t("medifeed.value1.title")}
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-lg">
-                  엄격한 품질 관리와 GMP 인증을 통해 안전하고 신뢰할 수 있는
-                  제품만을 제공합니다.
+                  {t("medifeed.value1.description")}
                 </p>
               </div>
             </div>
@@ -225,11 +223,10 @@ export default function Medifeed() {
                   <Users className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4">
-                  실용적 접근
+                  {t("medifeed.value2.title")}
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-lg">
-                  바쁜 현대인의 라이프스타일에 맞춰 간편하게 섭취할 수 있는
-                  형태로 개발합니다.
+                  {t("medifeed.value2.description")}
                 </p>
               </div>
             </div>
@@ -240,11 +237,10 @@ export default function Medifeed() {
                   <Heart className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4">
-                  합리적 가격
+                  {t("medifeed.value3.title")}
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-lg">
-                  누구나 부담 없이 구매할 수 있는 합리적인 가격으로 건강한
-                  습관을 만들어갑니다.
+                  {t("medifeed.value3.description")}
                 </p>
               </div>
             </div>
@@ -256,11 +252,11 @@ export default function Medifeed() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-              건강한 하루,
-              <span className="block">작은 습관에서 시작</span>
+              {t("medifeed.cta.title")}
+              <span className="block">{t("medifeed.cta.subtitle")}</span>
             </h2>
             <p className="text-lg lg:text-xl mb-12 opacity-90 leading-relaxed">
-              MEDIFEED와 함께 일상 속 작은 변화로 더 나은 건강을 만들어보세요
+              {t("medifeed.cta.description")}
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button
@@ -269,7 +265,7 @@ export default function Medifeed() {
                 className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#0F4C82] transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-semibold"
                 onClick={() => setLocation("/contact")}
               >
-                상담 신청하기
+                {t("medifeed.cta.button")}
               </Button>
             </div>
           </div>
