@@ -254,6 +254,24 @@ const translations = {
     'contact.info.hours': '운영시간',
     'contact.info.hours.value': '월-금 09:00-18:00',
     
+    // About Page
+    'about.story.main': '<span class="text-primary">Feedback</span>은 유통을 중심으로<br class="hidden sm:block"/>브랜드 마케팅, 제조, 무역 수출입을 아우르는<br class="hidden lg:block"/><span class="text-accent"> 종합 커머스 기업</span>입니다.',
+    'about.story.sub': 'Hoid, Medifeed, InYourHeart, 상생 등 자체 브랜드와 글로벌 파트너십을 기반으로,<br class="hidden sm:block"/>기획부터 제조·유통·브랜딩까지 전 과정을 함께합니다.',
+    'about.story.detail': '고객의 삶 속에 스며든 FeedBack의 브랜드 하나하나가 고객 여러분의 하루를<br class="hidden sm:block"/>더욱 편리하고 행복하게 만들 수 있도록 언제나 노력하는 FeedBack이 되겠습니다.',
+    'about.parallax.title': '고객님의 <span class="text-[#ffffff] font-bold">\'생활 속 행복\'</span>을 목표로<br class="hidden sm:block"/>열정 넘치는 이들이 모인 FeedBack은',
+    'about.parallax.description': '최고의 제품을 안겨드리기 위해 기술혁신에 끊임없이 노력을 기울이고 있으며,<br class="hidden sm:block"/>이를 위한 연구개발투자 또한 지속적으로 이루어지고 있습니다.',
+    'about.philosophy.title': '경영철학',
+    'about.philosophy.description': 'FeedBack은 브랜드와 시장을 연결하는 실행 중심의 유통 플랫폼으로서<br class="hidden sm:block"/>모든 파트너와 함께 성장하는 상생의 생태계를 구축하고 있습니다.',
+    'about.timeline.title': '연혁',
+    'about.timeline.2025_09': 'Hoid 2세대 공기청정기 국내외 동시 론칭 (홈쇼핑 입점 확장)',
+    'about.timeline.2025_08': 'Hoid 무선 청소기 출시',
+    'about.timeline.2025_04': 'Hoid 1세대 공기청정기 출시 (3-in-1 살균 기술 탑재)',
+    'about.timeline.2025_01': '자회사 상생메디컬 설립 및 통합 플랫폼 개발 개시',
+    'about.timeline.2024': '자체 브랜드 Hoid, Medifeed, InYourHeart 동시 론칭',
+    'about.timeline.type.expansion': '확장',
+    'about.timeline.type.product': '제품출시',
+    'about.timeline.type.founding': '창립',
+    
     // Service Page
     '서비스 소개': '서비스 소개',
     'EXPERTISE & SOLUTION': 'EXPERTISE & SOLUTION',
@@ -533,6 +551,24 @@ const translations = {
     'contact.info.email': 'Email',
     'contact.info.hours': 'Business Hours',
     'contact.info.hours.value': 'Mon-Fri 09:00-18:00',
+    
+    // About Page
+    'about.story.main': '<span class="text-primary">FeedBack</span> is a comprehensive commerce company<br class="hidden sm:block"/>centered on distribution, encompassing<br class="hidden lg:block"/><span class="text-accent">brand marketing, manufacturing, and trade import/export</span>.',
+    'about.story.sub': 'Based on our own brands such as Hoid, Medifeed, InYourHeart, and Sangsaeng,<br class="hidden sm:block"/>and global partnerships, we support the entire process from planning to manufacturing, distribution, and branding.',
+    'about.story.detail': 'FeedBack will always strive to make every day<br class="hidden sm:block"/>more convenient and happier for you through each of our brands that permeate your daily life.',
+    'about.parallax.title': 'With the goal of <span class="text-[#ffffff] font-bold">\'happiness in your daily life\'</span>,<br class="hidden sm:block"/>FeedBack, where passionate people gather',
+    'about.parallax.description': 'We continuously strive for technological innovation to provide the best products,<br class="hidden sm:block"/>and R&D investments are also being made continuously.',
+    'about.philosophy.title': 'Management Philosophy',
+    'about.philosophy.description': 'As an execution-focused distribution platform connecting brands and markets,<br class="hidden sm:block"/>FeedBack is building a mutually beneficial ecosystem that grows together with all partners.',
+    'about.timeline.title': 'History',
+    'about.timeline.2025_09': 'Hoid 2nd Generation Air Purifier Global Launch (Home Shopping Expansion)',
+    'about.timeline.2025_08': 'Hoid Cordless Vacuum Cleaner Launch',
+    'about.timeline.2025_04': 'Hoid 1st Generation Air Purifier Launch (3-in-1 Sterilization Technology)',
+    'about.timeline.2025_01': 'Sangsaeng Medical Subsidiary Establishment and Integrated Platform Development Initiation',
+    'about.timeline.2024': 'Simultaneous Launch of Own Brands Hoid, Medifeed, InYourHeart',
+    'about.timeline.type.expansion': 'Expansion',
+    'about.timeline.type.product': 'Product Launch',
+    'about.timeline.type.founding': 'Founding',
     
     // Service Page
     '서비스 소개': 'Our Services',

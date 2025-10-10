@@ -466,17 +466,11 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="text-lg text-foreground leading-relaxed space-y-8 max-w-4xl mx-auto">
-              <p className="about-story-main text-[30px]">
-                {t("about.story.main")}
-              </p>
+              <p className="about-story-main text-[30px]" dangerouslySetInnerHTML={{ __html: t("about.story.main") }} />
 
-              <p className="about-story-sub">
-                {t("about.story.sub")}
-              </p>
+              <p className="about-story-sub" dangerouslySetInnerHTML={{ __html: t("about.story.sub") }} />
 
-              <p className="about-story-detail text-[20px]">
-                {t("about.story.detail")}
-              </p>
+              <p className="about-story-detail text-[20px]" dangerouslySetInnerHTML={{ __html: t("about.story.detail") }} />
             </div>
           </div>
         </div>
@@ -497,12 +491,8 @@ export default function About() {
 
         {/* Content overlay */}
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="about-parallax-title mb-8 font-light">
-            {t("about.parallax.title")}
-          </h3>
-          <p className="about-parallax-description max-w-3xl mx-auto">
-            {t("about.parallax.description")}
-          </p>
+          <h3 className="about-parallax-title mb-8 font-light" dangerouslySetInnerHTML={{ __html: t("about.parallax.title") }} />
+          <p className="about-parallax-description max-w-3xl mx-auto" dangerouslySetInnerHTML={{ __html: t("about.parallax.description") }} />
         </div>
       </section>
       {/* 경영철학 - 쿠쿠 스타일의 4개 핵심 가치 */}
@@ -510,9 +500,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="about-section-title mb-8">{t("about.philosophy.title")}</h2>
-            <p className="about-story-sub text-foreground leading-relaxed max-w-4xl mx-auto">
-              {t("about.philosophy.description")}
-            </p>
+            <p className="about-story-sub text-foreground leading-relaxed max-w-4xl mx-auto" dangerouslySetInnerHTML={{ __html: t("about.philosophy.description") }} />
           </div>
 
           {/* 첫 번째 가치 - 고객·파트너 중심 */}
