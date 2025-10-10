@@ -117,6 +117,7 @@ const getBrands = (t: (key: string) => string) => [
     products: ["HOiD", "ASRAN", "La Ceras", "Carvella"],
     image: brandLineupImg,
     color: "from-slate-700 to-slate-900",
+    website: null,
   },
   {
     id: "hoid",
@@ -132,6 +133,7 @@ const getBrands = (t: (key: string) => string) => [
     ],
     image: hoidImg,
     color: "from-gray-400 to-gray-600",
+    website: "https://hoid.co.kr/",
   },
   {
     id: "medifeed",
@@ -147,6 +149,7 @@ const getBrands = (t: (key: string) => string) => [
     ],
     image: medifeedImg,
     color: "from-blue-500 to-blue-700",
+    website: null,
   },
   {
     id: "asran",
@@ -163,6 +166,7 @@ const getBrands = (t: (key: string) => string) => [
     ],
     image: asranImg,
     color: "from-gray-600 to-gray-800",
+    website: "https://www.asrankitchen.com/",
   },
   {
     id: "laceras",
@@ -174,6 +178,7 @@ const getBrands = (t: (key: string) => string) => [
     products: ["하드셸 캐리어", "캐리온", "TSA 락", "360° 휠"],
     image: lacerasImg,
     color: "from-blue-600 to-red-600",
+    website: "https://www.laceras.com/",
   },
   {
     id: "carvella",
@@ -185,6 +190,7 @@ const getBrands = (t: (key: string) => string) => [
     products: ["프리미엄 냄비", "프라이팬", "멀티 압력뚜껑", "멀티 호환 열원"],
     image: carvellaImg,
     color: "from-orange-800 to-yellow-600",
+    website: "https://www.carvellakitchen.com/",
   },
   {
     id: "sangsaeng",
@@ -200,6 +206,7 @@ const getBrands = (t: (key: string) => string) => [
     ],
     image: sangsaengImg,
     color: "from-green-500 to-green-700",
+    website: null,
   },
 ];
 
@@ -834,6 +841,22 @@ export default function Home() {
                     브랜드 자세히 보기
                   </Link>
                 </Button>
+                {brands[currentBrandIndex].website && (
+                  <Button
+                    asChild
+                    size="lg"
+                    variant="outline"
+                    className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-gray-900 px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base tap-target"
+                  >
+                    <a
+                      href={brands[currentBrandIndex].website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      브랜드 홈페이지 가기
+                    </a>
+                  </Button>
+                )}
               </div>
             </div>
           </div>
