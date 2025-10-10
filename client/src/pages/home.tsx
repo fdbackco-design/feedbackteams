@@ -110,10 +110,9 @@ const getBrands = (t: (key: string) => string) => [
   {
     id: "lineup",
     name: "Feedback Brand Lineup",
-    category: "브랜드 라인업",
-    slogan: "기술, 디자인, 그리고 일상의 편리함을 잇다.",
-    description:
-      "피드백은 생활가전, 프리미엄 주방, 여행, 리빙 브랜드를 통해 일상을 더 나은 경험으로 만드는 기술과 디자인을 제공합니다.",
+    category: t("brands.lineup.category"),
+    slogan: t("brands.lineup.slogan"),
+    description: t("brands.lineup.description"),
     products: ["HOiD", "ASRAN", "La Ceras", "Carvella"],
     image: brandLineupImg,
     color: "from-slate-700 to-slate-900",
@@ -138,15 +137,14 @@ const getBrands = (t: (key: string) => string) => [
   {
     id: "asran",
     name: "ASRAN",
-    category: "프리미엄 주방용품",
-    slogan: "독일 기술과 합리적 가격을 모두 갖춘 냄비",
-    description:
-      "SUS410 스테인리스 스틸과 3중 바닥구조로 뛰어난 열전도율과 내구성을 자랑하는 프리미엄 주방용품 브랜드입니다.",
+    category: t("brands.asran.category"),
+    slogan: t("brands.asran.slogan"),
+    description: t("brands.asran.description"),
     products: [
-      "SUS410 스테인리스 스틸",
-      "3중 바닥구조",
-      "인덕션 & 가스 겸용",
-      "프리미엄 마감",
+      t("brands.asran.products.0"),
+      t("brands.asran.products.1"),
+      t("brands.asran.products.2"),
+      t("brands.asran.products.3"),
     ],
     image: asranImg,
     color: "from-gray-600 to-gray-800",
@@ -155,11 +153,15 @@ const getBrands = (t: (key: string) => string) => [
   {
     id: "laceras",
     name: "La Ceras",
-    category: "프랑스 럭셔리 캐리어 브랜드",
-    slogan: "전통과 모던이 만나는 프렌치 럭셔리 트래블",
-    description:
-      "프랑스의 장인정신과 현대적 세련미를 결합한 럭셔리 캐리어 브랜드입니다. 폴리카보네이트 하드셸, 정교한 마감과 균형 잡힌 디자인으로 비즈니스부터 라그주어리 여행까지 완벽한 트래블 솔루션을 제안합니다.",
-    products: ["하드셸 캐리어", "캐리온", "TSA 락", "360° 휠"],
+    category: t("brands.laceras.category"),
+    slogan: t("brands.laceras.slogan"),
+    description: t("brands.laceras.description"),
+    products: [
+      t("brands.laceras.products.0"),
+      t("brands.laceras.products.1"),
+      t("brands.laceras.products.2"),
+      t("brands.laceras.products.3"),
+    ],
     image: lacerasImg,
     color: "from-blue-600 to-red-600",
     website: "https://www.laceras.com/",
@@ -167,11 +169,15 @@ const getBrands = (t: (key: string) => string) => [
   {
     id: "carvella",
     name: "Carvella",
-    category: "이탈리아 프리미엄 주방용품",
-    slogan: "이탈리아 장인의 정밀함, 당신의 주방으로",
-    description:
-      "이탈리아 전통 장인정신으로 완성한 프리미엄 쿠킹웨어 브랜드입니다. 고급 스테인리스와 다층 구조로 뛰어난 열전도와 내구성을 갖추고, 인덕션부터 가스레인지까지 완벽 호환됩니다.",
-    products: ["프리미엄 냄비", "프라이팬", "멀티 압력뚜껑", "멀티 호환 열원"],
+    category: t("brands.carvella.category"),
+    slogan: t("brands.carvella.slogan"),
+    description: t("brands.carvella.description"),
+    products: [
+      t("brands.carvella.products.0"),
+      t("brands.carvella.products.1"),
+      t("brands.carvella.products.2"),
+      t("brands.carvella.products.3"),
+    ],
     image: carvellaImg,
     color: "from-orange-800 to-yellow-600",
     website: "https://www.carvellakitchen.com/",
@@ -838,7 +844,7 @@ export default function Home() {
                       window.scrollTo({ top: 0, behavior: "smooth" })
                     }
                   >
-                    브랜드 자세히 보기
+                    {t("ui.view_brand_detail")}
                   </Link>
                 </Button>
                 {brands[currentBrandIndex].website && (
@@ -853,7 +859,7 @@ export default function Home() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      브랜드 홈페이지 가기
+                      {t("ui.visit_website")}
                     </a>
                   </Button>
                 )}
