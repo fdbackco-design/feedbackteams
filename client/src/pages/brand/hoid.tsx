@@ -17,9 +17,11 @@ import {
   Calendar,
 } from "lucide-react";
 import HoidLogo from "@/components/HoidLogo";
+import LazyVideo from "@/components/LazyVideo";
 
 import flow_2025_04_17_193718625_1754623144595 from "@assets/flow_2025-04-17_193718625_1754623144595.png";
 import homeshoppingImage from "@assets/homeshopping_1754639787939.png";
+import hoidVideo from "@assets/hoid_air_purifier.mp4";
 
 export default function Hoid() {
   const [, setLocation] = useLocation();
@@ -30,20 +32,13 @@ export default function Hoid() {
       <section className="relative h-screen w-full overflow-hidden">
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full">
-          <iframe
-            src="https://player.vimeo.com/video/1074153050?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1&dnt=1&controls=0"
-            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto transform -translate-x-1/2 -translate-y-1/2 border-0"
-            frameBorder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen
-            title="HOID Brand Video"
-            style={{
-              width: "177.78vh",
-              height: "56.25vw",
-              minWidth: "100%",
-              minHeight: "100%",
-            }}
-          ></iframe>
+          <LazyVideo
+            src={hoidVideo}
+            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto transform -translate-x-1/2 -translate-y-1/2 object-cover"
+            autoPlay
+            muted
+            loop
+          />
         </div>
 
         {/* Overlay for better text readability */}
