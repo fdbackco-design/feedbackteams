@@ -517,25 +517,8 @@ export default function About() {
                 </div>
               </div>
               <div className="lg:w-1/2 text-center lg:text-left">
-                <h3 className="about-philosophy-title mb-6">
-                  고객·파트너 중심: '공생'의 유통 모델을<br className="block lg:hidden" /><br className="hidden lg:block" /> 실현합니다
-                </h3>
-                <p className="about-philosophy-description text-[0F4C82] text-[20px]">
-                  FeedBack은 단순히 물건을 사고파는 곳이 아닌,
-                  <br className="hidden lg:block" />
-                  제조사·브랜드·소매처가 함께 성장할 수 있는 유통 생태계를
-                  구축합니다.
-                  <br />
-                  <br />
-                  고객사와 파트너의 신뢰를 기반으로 장기 협력과 함께 발전하는
-                  <br className="hidden lg:block" />
-                  구조를 설계하며,
-                  <br className="hidden sm:block lg:hidden" />
-                  <span className="font-semibold text-[0F4C82]">
-                    모두가 지속 가능한 이익을 나누는 상생 플랫폼
-                  </span>
-                  을 <br className="block lg:hidden" />지향합니다.
-                </p>
+                <h3 className="about-philosophy-title mb-6" dangerouslySetInnerHTML={{ __html: t("about.philosophy.value1.title") }} />
+                <p className="about-philosophy-description text-[0F4C82] text-[20px]" dangerouslySetInnerHTML={{ __html: t("about.philosophy.value1.description") }} />
               </div>
             </div>
           </div>
@@ -554,26 +537,8 @@ export default function About() {
                 </div>
               </div>
               <div className="lg:w-1/2 text-center lg:text-right">
-                <h3 className="about-philosophy-title mb-6">
-                  통합 실행력으로 브랜드와 시장을<br className="hidden lg:block" /> 연결합니다
-                </h3>
-                <p className="about-philosophy-description text-[20px]">
-                  단순 유통을 넘어 상품 기획, 브랜딩, 마케팅, 유통 채널을
-                  <br className="hidden lg:block" />
-                  유기적으로 연결합니다.
-                  <br className="hidden sm:block lg:hidden" />
-                  고유한 OEM 역량과 자체 브랜드 경험을 결합하여,
-                  <br className="hidden lg:block" />
-                  브랜드가 시장에서 자리 잡도록 실행 가능한 솔루션을 제공합니다.
-                  <br />
-                  <br />
-                  <span className="font-semibold text-primary">
-                    제품력에 브랜딩을 입히고, 브랜딩에 유통을 결합하며,
-                    <br className="hidden lg:block" />
-                    유통에 경험과 콘텐츠를 심는 방식이 FeedBack의 방식
-                  </span>
-                  입니다.
-                </p>
+                <h3 className="about-philosophy-title mb-6" dangerouslySetInnerHTML={{ __html: t("about.philosophy.value2.title") }} />
+                <p className="about-philosophy-description text-[20px]" dangerouslySetInnerHTML={{ __html: t("about.philosophy.value2.description") }} />
               </div>
             </div>
           </div>
@@ -592,25 +557,8 @@ export default function About() {
                 </div>
               </div>
               <div className="lg:w-1/2 text-center lg:text-left">
-                <h3 className="about-philosophy-title mb-6">
-                  글로벌 시장에서 경쟁력을 만드는<br className="hidden lg:block" /> 실행 중심 기업
-                </h3>
-                <p className="about-philosophy-description text-[20px]">
-                  아시아를 기반으로 성장해 온 브랜드에게
-                  <br className="hidden lg:block" />
-                  글로벌 시장 진출 기회를 제공합니다.
-                  <br />
-                  <br />
-                  <span className="font-semibold text-primary">
-                    전략적 진출 설계 + 제휴 기반 실행력
-                  </span>
-                  을 통해
-                  <br className="hidden lg:block" />
-                  브랜드의 세계화를 지원하고,
-                  <br className="hidden lg:block" />
-                  국내외 파트너와의 협업을 통해
-                  <br className="hidden lg:block" />더 크고 넓은 시장에서 기회를 <br className="block lg:hidden" />창출합니다.
-                </p>
+                <h3 className="about-philosophy-title mb-6" dangerouslySetInnerHTML={{ __html: t("about.philosophy.value3.title") }} />
+                <p className="about-philosophy-description text-[20px]" dangerouslySetInnerHTML={{ __html: t("about.philosophy.value3.description") }} />
               </div>
             </div>
           </div>
@@ -629,23 +577,8 @@ export default function About() {
                 </div>
               </div>
               <div className="lg:w-1/2 text-center lg:text-right">
-                <h3 className="about-philosophy-title mb-6">
-                  신뢰를 통한 장기 파트너십 구축
-                </h3>
-                <p className="about-philosophy-description text-[20px]">
-                  FeedBack의 존재 이유는 파트너와 고객의 신뢰입니다.
-                  <br />
-                  <br />
-                  <span className="font-semibold text-primary">
-                    검증된 품질과 안정적인 공급, 투명한 유통 프로세스,
-                    <br className="block lg:hidden" />
-                    <br className="hidden lg:block" />
-                    정직한 사후 서비스 체계
-                  </span>
-                  를 통해
-                  <br className="hidden lg:block" />
-                  파트너가 오래 함께할 수 <br className="block lg:hidden" />있는 신뢰 기반을 만듭니다.
-                </p>
+                <h3 className="about-philosophy-title mb-6" dangerouslySetInnerHTML={{ __html: t("about.philosophy.value4.title") }} />
+                <p className="about-philosophy-description text-[20px]" dangerouslySetInnerHTML={{ __html: t("about.philosophy.value4.description") }} />
               </div>
             </div>
           </div>
@@ -740,12 +673,7 @@ export default function About() {
           </div>
 
           <div className="mt-16 bg-white/75 border border-slate-200 p-8 rounded-2xl text-center shadow-lg backdrop-blur-sm">
-            <p className="about-story-detail leading-relaxed font-medium text-[#000000]">
-              피드백은 제품 출시와 동시에 국내외 홈쇼핑, 이커머스, 도매 채널과의
-              연계를 통해
-              <br className="hidden sm:block" />
-              빠르게 시장을 확장하고 있습니다.
-            </p>
+            <p className="about-story-detail leading-relaxed font-medium text-[#000000]" dangerouslySetInnerHTML={{ __html: t("about.timeline.bottom") }} />
           </div>
         </div>
       </section>
@@ -754,23 +682,19 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <blockquote className="about-ceo-quote mb-8">
-              "고객의 행복과 글로벌 파트너십을 최우선으로 생각합니다."
+              {t("about.ceo.quote")}
             </blockquote>
-            <h2 className="about-ceo-title mb-8">CEO 인사말</h2>
+            <h2 className="about-ceo-title mb-8">{t("about.ceo.title")}</h2>
           </div>
 
           <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
             <div className="flex flex-col lg:flex-row">
               {/* CEO 프로필 영역 */}
               <div className="lg:w-1/3 bg-gradient-to-br from-primary to-accent p-12 text-white text-center flex flex-col justify-center">
-                <h3 className="text-2xl font-bold mb-2">송해민, 정성현</h3>
-                <p className="text-lg opacity-90">(주)피드백 대표</p>
+                <h3 className="text-2xl font-bold mb-2">{t("about.ceo.name")}</h3>
+                <p className="text-lg opacity-90">{t("about.ceo.position")}</p>
                 <div className="mt-8 pt-8 border-t border-white/20">
-                  <p className="opacity-80 text-[18px]">
-                    "브랜드와 시장을 연결하는
-                    <br />
-                    플랫폼 기업으로 성장"
-                  </p>
+                  <p className="opacity-80 text-[18px]" dangerouslySetInnerHTML={{ __html: t("about.ceo.motto") }} />
                 </div>
               </div>
 
@@ -778,32 +702,25 @@ export default function About() {
               <div className="lg:w-2/3 p-12">
                 <div className="space-y-6 text-foreground leading-relaxed">
                   <p className="about-ceo-message">
-                    안녕하세요. (주)피드백 대표 송해민, 정성현입니다.
+                    {t("about.ceo.message1")}
                   </p>
 
                   <p className="about-ceo-message">
-                    저희 피드백은 빠르게 변화하는 글로벌 유통 시장 속에서,
-                    브랜드와 시장의 연결자이자 실행자로서 새로운 유통 구조를
-                    제시하고 있습니다.
+                    {t("about.ceo.message2")}
                   </p>
 
                   <p className="about-ceo-message">
-                    단순히 '물건을 파는 회사'가 아닌, 브랜드를 함께 키우고
-                    시장에 안착시키는 파트너로서 제조사, 유통사, 소비자 모두가
-                    만족하는 구조를 만들기 위해 노력하고 있습니다.
+                    {t("about.ceo.message3")}
                   </p>
 
                   <div className="bg-primary/5 p-6 rounded-xl border-l-4 border-primary">
                     <p className="about-ceo-highlight">
-                      제품력에 브랜딩을 더하고, 브랜딩에 유통망을 연결하며,
-                      유통에 콘텐츠와 경험을 심는 것. 이것이 피드백의
-                      방식입니다.
+                      {t("about.ceo.highlight")}
                     </p>
                   </div>
 
                   <p className="about-ceo-message">
-                    앞으로도 국내외 파트너 여러분과 함께 더 크고 넓은 시장에서
-                    기회를 창출하는 기업이 되겠습니다. 감사합니다.
+                    {t("about.ceo.message4")}
                   </p>
                 </div>
               </div>
@@ -814,24 +731,20 @@ export default function About() {
       {/* Organization Chart */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="about-org-title mb-16">조직도</h2>
+          <h2 className="about-org-title mb-16">{t("about.org.title")}</h2>
 
           <div className="flex justify-center">
             <div className="bg-white p-4 sm:p-8 rounded-2xl shadow-xl w-full border border-border">
               <img
                 src={newOrganizationChart}
-                alt="피드백 조직도"
+                alt={t("about.org.title")}
                 className="w-full h-auto rounded-lg"
               />
             </div>
           </div>
 
           <div className="text-center mt-12">
-            <p className="about-org-description text-[20px]">
-              체계적인 조직 구성을 통해 각 분야의 전문성을 바탕으로
-              <br className="hidden sm:block" />
-              고객에게 최고의 서비스를 제공하고 있습니다.
-            </p>
+            <p className="about-org-description text-[20px]" dangerouslySetInnerHTML={{ __html: t("about.org.description") }} />
           </div>
         </div>
       </section>
