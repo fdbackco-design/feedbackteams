@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useRef } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import HoidLogo from "@/components/HoidLogo";
 import AsranLogo from "@/components/AsranLogo";
 import hoidImg from "@/assets/brand/hoidintro.jpg";
@@ -16,115 +17,104 @@ import lacerasLogo from "@/assets/brand/laceras_logo.png";
 import carvellaLogo from "@/assets/brand/carvella_logo.png";
 import LazyImage from "@/components/LazyImage";
 
-const brands = [
-  {
-    id: "hoid",
-    name: "Hoid",
-    category: "미니멀 가전 브랜드",
-    slogan: "공기 속까지 바꾸는 디자인",
-    logo: "svg",
-    description:
-      "공기청정기, 제습기 등 미니멀한 디자인과 첨단 기술이 만나 일상의 공기질을 혁신하는 스마트 가전 브랜드입니다. 홈쇼핑과 해외진출을 통해 글로벌 시장에서 인정받고 있습니다.",
-    products: ["공기청정기", "제습기", "3-in-1 기술", "HEPA14 필터"],
-    bgColor: "bg-white",
-    buttonColor: "bg-[#0F4C82] hover:bg-[#0d4070]",
-    badgeColor: "bg-[#0F4C82]",
-    image: hoidImg,
-  },
-  {
-    id: "asran",
-    name: "ASRAN",
-    category: "프리미엄 주방용품 브랜드",
-    slogan: "독일 기술과 합리적 가격을 모두 갖춘 냄비",
-    logo: "svg",
-    description:
-      "SUS410 스테인리스 스틸과 3중 바닥구조로 뛰어난 열전도율과 내구성을 자랑하는 프리미엄 주방용품 브랜드입니다. 인덕션과 가스 겸용으로 어떤 주방환경에서도 완벽하게 사용 가능합니다.",
-    products: [
-      "SUS410 스테인리스",
-      "3중 바닥구조",
-      "인덕션/가스 겸용",
-      "3가지 사이즈",
-    ],
-    bgColor: "bg-gray-50",
-    buttonColor: "bg-[#0F4C82] hover:bg-[#0d4070]",
-    badgeColor: "bg-[#0F4C82]",
-    image: asranImg,
-  },
-  {
-    id: "laceras",
-    name: "La Ceras",
-    category: "프랑스 럭셔리 캐리어 브랜드",
-    slogan: "전통과 모던이 만나는 프렌치 럭셔리 트래블",
-    logo: "img", // (현재 로고 이미지 컴포넌트가 없으니 텍스트 사용; 로고 렌더링 커스터마이즈 시 img 처리)
-    description:
-      "프랑스의 장인정신과 현대적 세련미를 결합한 럭셔리 캐리어 브랜드입니다. 폴리카보네이트 하드셸, 정교한 마감과 균형 잡힌 디자인으로 비즈니스부터 라그주어리 여행까지 완벽한 트래블 솔루션을 제안합니다.",
-    products: ["하드셸 캐리어", "캐리온", "트렁크", "TSA 락", "360° 휠"],
-    bgColor: "bg-white",
-    buttonColor: "bg-[#233A73] hover:bg-[#1c2f5c]", // 프랑스 블루 톤
-    badgeColor: "bg-[#233A73]",
-    image: lacerasImg,
-  },
-  {
-    id: "carvella",
-    name: "Carvella",
-    category: "이탈리아 프리미엄 주방용품",
-    slogan: "이탈리아 장인의 정밀함, 당신의 주방으로",
-    logo: "img",
-    description:
-      "이탈리아 전통 장인정신으로 완성한 프리미엄 쿠킹웨어 브랜드입니다. 고급 스테인리스와 다층 구조로 뛰어난 열전도와 내구성을 갖추고, 인덕션부터 가스레인지까지 완벽 호환됩니다.",
-    products: ["프리미엄 냄비", "프라이팬", "멀티 압력뚜껑", "멀티 호환 열원"],
-    bgColor: "bg-gray-50",
-    buttonColor: "bg-[#6C2F1E] hover:bg-[#5a2719]", // 다크 브라운(브랜드 톤)
-    badgeColor: "bg-[#6C2F1E]",
-    image: carvellaImg,
-  },
-  {
-    id: "medifeed",
-    name: "Medifeed",
-    category: "기능성 영양제 브랜드",
-    slogan: "매일을 지키는 작은 습관",
-    logo: "MF",
-    description:
-      "잇몸과 눈 건강을 중심으로 한 기능성 영양제 브랜드로, 실용성과 안전성을 바탕으로 누구나 쉽게 선택할 수 있는 건강 솔루션을 제공합니다.",
-    products: ["잇몸 건강", "눈 건강", "기능성 영양제", "GMP 인증"],
-    bgColor: "bg-gray-50",
-    buttonColor: "bg-[#0F4C82] hover:bg-[#0d4070]",
-    badgeColor: "bg-[#0F4C82]",
-    image: medifeedImg,
-  },
-  {
-    id: "inyourheart",
-    name: "InYourHeart",
-    category: "감성 스킨케어 브랜드",
-    slogan: "피부에 감성을 입히다",
-    logo: "♥",
-    description:
-      "클린뷰티 철학과 감성적인 패키지 디자인으로 글로벌 K-뷰티 시장을 선도하는 프리미엄 스킨케어 브랜드입니다.",
-    products: ["클린 포뮬러", "감성 패키지", "글로벌 K-뷰티", "세라마이드"],
-    bgColor: "bg-white",
-    buttonColor: "bg-[#0F4C82] hover:bg-[#0d4070]",
-    badgeColor: "bg-[#0F4C82]",
-    image: inyourheartImg,
-  },
-  {
-    id: "sangsaeng",
-    name: "상생 (Sangsaeng)",
-    category: "의료관광 플랫폼",
-    slogan: "WE CONNECT KOREAN MEDICAL SERVICES TO THE WORLD",
-    logo: "상생",
-    description:
-      "메디컬 투어리즘부터 글로벌 헬스케어 플랫폼까지, 한국의 우수한 의료 서비스를 전 세계에 연결하는 종합 의료 플랫폼입니다. 태국, 베트남을 시작으로 아시아 전역에 서비스를 확장하고 있습니다.",
-    products: ["의료관광", "헬스케어 플랫폼", "다국어 앱", "병원 네트워크"],
-    bgColor: "bg-gray-50",
-    buttonColor: "bg-[#0F4C82] hover:bg-[#0d4070]",
-    badgeColor: "bg-[#0F4C82]",
-    image: sangsaengImg,
-  },
-];
-
 export default function Brand() {
+  const { t } = useLanguage();
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const ctaRef = useRef<HTMLDivElement>(null);
+
+  const brands = [
+    {
+      id: "hoid",
+      name: "Hoid",
+      category: t("brands.hoid.category"),
+      slogan: t("brands.hoid.slogan"),
+      logo: "svg",
+      description: t("brands.hoid.description"),
+      products: [t("brands.hoid.products.0"), t("brands.hoid.products.1"), t("brands.hoid.products.2"), t("brands.hoid.products.3")],
+      bgColor: "bg-white",
+      buttonColor: "bg-[#0F4C82] hover:bg-[#0d4070]",
+      badgeColor: "bg-[#0F4C82]",
+      image: hoidImg,
+    },
+    {
+      id: "asran",
+      name: "ASRAN",
+      category: t("brands.asran.category"),
+      slogan: t("brands.asran.slogan"),
+      logo: "svg",
+      description: t("brands.asran.description"),
+      products: [t("brands.asran.products.0"), t("brands.asran.products.1"), t("brands.asran.products.2"), t("brands.asran.products.3")],
+      bgColor: "bg-gray-50",
+      buttonColor: "bg-[#0F4C82] hover:bg-[#0d4070]",
+      badgeColor: "bg-[#0F4C82]",
+      image: asranImg,
+    },
+    {
+      id: "laceras",
+      name: "La Ceras",
+      category: t("brands.laceras.category"),
+      slogan: t("brands.laceras.slogan"),
+      logo: "img",
+      description: t("brands.laceras.description"),
+      products: [t("brands.laceras.products.0"), t("brands.laceras.products.1"), t("brands.laceras.products.2"), t("brands.laceras.products.3")],
+      bgColor: "bg-white",
+      buttonColor: "bg-[#233A73] hover:bg-[#1c2f5c]",
+      badgeColor: "bg-[#233A73]",
+      image: lacerasImg,
+    },
+    {
+      id: "carvella",
+      name: "Carvella",
+      category: t("brands.carvella.category"),
+      slogan: t("brands.carvella.slogan"),
+      logo: "img",
+      description: t("brands.carvella.description"),
+      products: [t("brands.carvella.products.0"), t("brands.carvella.products.1"), t("brands.carvella.products.2"), t("brands.carvella.products.3")],
+      bgColor: "bg-gray-50",
+      buttonColor: "bg-[#6C2F1E] hover:bg-[#5a2719]",
+      badgeColor: "bg-[#6C2F1E]",
+      image: carvellaImg,
+    },
+    {
+      id: "medifeed",
+      name: "Medifeed",
+      category: t("brands.medifeed.category"),
+      slogan: t("brands.medifeed.slogan"),
+      logo: "MF",
+      description: t("brands.medifeed.description"),
+      products: [t("brands.medifeed.products.0"), t("brands.medifeed.products.1"), t("brands.medifeed.products.2"), t("brands.medifeed.products.3")],
+      bgColor: "bg-gray-50",
+      buttonColor: "bg-[#0F4C82] hover:bg-[#0d4070]",
+      badgeColor: "bg-[#0F4C82]",
+      image: medifeedImg,
+    },
+    {
+      id: "inyourheart",
+      name: "InYourHeart",
+      category: t("brands.inyourheart.category"),
+      slogan: t("brands.inyourheart.slogan"),
+      logo: "♥",
+      description: t("brands.inyourheart.description"),
+      products: [t("brands.inyourheart.products.0"), t("brands.inyourheart.products.1"), t("brands.inyourheart.products.2"), t("brands.inyourheart.products.3")],
+      bgColor: "bg-white",
+      buttonColor: "bg-[#0F4C82] hover:bg-[#0d4070]",
+      badgeColor: "bg-[#0F4C82]",
+      image: inyourheartImg,
+    },
+    {
+      id: "sangsaeng",
+      name: "상생 (Sangsaeng)",
+      category: t("brands.sangsaeng.category"),
+      slogan: t("brands.sangsaeng.slogan"),
+      logo: "상생",
+      description: t("brands.sangsaeng.description"),
+      products: [t("brands.sangsaeng.products.0"), t("brands.sangsaeng.products.1"), t("brands.sangsaeng.products.2"), t("brands.sangsaeng.products.3")],
+      bgColor: "bg-gray-50",
+      buttonColor: "bg-[#0F4C82] hover:bg-[#0d4070]",
+      badgeColor: "bg-[#0F4C82]",
+      image: sangsaengImg,
+    },
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -161,14 +151,11 @@ export default function Brand() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-10 mt-16 sm:mt-20 mobile-padding">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#000000] mb-4 sm:mb-6">
-            브랜드 소개
+            {t("브랜드 소개")}
           </h1>
           <div className="w-16 sm:w-24 h-0.5 bg-[#0F4C82] mx-auto mb-6 sm:mb-8"></div>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            혁신적인 기술과 디자인을 바탕으로 한 FeedBack의 자체 브랜드들을
-            소개합니다.
-            <br className="hidden sm:block" />각 브랜드는 고유한 가치와 비전을
-            가지고 고객에게 최고의 경험을 제공합니다.
+            {t("혁신적인 기술과 디자인을 바탕으로 한 FeedBack의 자체 브랜드들을 소개합니다.각 브랜드는 고유한 가치와 비전을 가지고 고객에게 최고의 경험을 제공합니다.")}
           </p>
         </div>
 
@@ -241,7 +228,7 @@ export default function Brand() {
                       className={`${brand.buttonColor} text-white px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 text-xs sm:text-sm md:text-base lg:text-lg font-semibold transition-all duration-300 transform hover:scale-105 rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl tap-target w-full sm:w-auto`}
                     >
                       <span className="truncate">
-                        {brand.name} 브랜드 자세히 보기
+                        {t("ui.view_brand_detail")}
                       </span>
                       <ArrowRight className="ml-1 sm:ml-2 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 flex-shrink-0" />
                     </Button>
@@ -275,18 +262,17 @@ export default function Brand() {
         >
           <div className="max-w-4xl mx-auto">
             <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
-              브랜드 파트너십에 관심이 있으신가요?
+              {t("브랜드 파트너십에 관심이 있으신가요?")}
             </h3>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-8 sm:mb-10 md:mb-12 leading-relaxed opacity-90">
-              FeedBack과 함께 혁신적인 브랜드를 만들어보세요. 기획부터 유통까지
-              전 과정을 지원하여 성공적인 브랜드 런칭을 도와드립니다.
+              {t("FeedBack과 함께 혁신적인 브랜드를 만들어보세요. 기획부터 유통까지 전 과정을 지원하여 성공적인 브랜드 런칭을 도와드립니다.")}
             </p>
             <Button
               asChild
               className="bg-[#000000] text-white hover:bg-gray-800 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-4 text-sm sm:text-base md:text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg tap-target w-full sm:w-auto"
               size="lg"
             >
-              <Link href="/contact">파트너십 문의하기</Link>
+              <Link href="/contact">{t("파트너십 문의하기")}</Link>
             </Button>
           </div>
         </div>

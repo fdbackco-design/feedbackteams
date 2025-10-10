@@ -268,6 +268,13 @@ const translations = {
     '전문 컨설턴트가 귀하의 비즈니스에 맞는 최적의 솔루션을 제안해드립니다.': '전문 컨설턴트가 귀하의 비즈니스에 맞는 최적의 솔루션을 제안해드립니다.',
     '무료 상담 신청': '무료 상담 신청',
     
+    // Brand Page
+    '브랜드 소개': '브랜드 소개',
+    '혁신적인 기술과 디자인을 바탕으로 한 FeedBack의 자체 브랜드들을 소개합니다.각 브랜드는 고유한 가치와 비전을 가지고 고객에게 최고의 경험을 제공합니다.': '혁신적인 기술과 디자인을 바탕으로 한 FeedBack의 자체 브랜드들을 소개합니다.각 브랜드는 고유한 가치와 비전을 가지고 고객에게 최고의 경험을 제공합니다.',
+    '브랜드 파트너십에 관심이 있으신가요?': '브랜드 파트너십에 관심이 있으신가요?',
+    'FeedBack과 함께 혁신적인 브랜드를 만들어보세요. 기획부터 유통까지 전 과정을 지원하여 성공적인 브랜드 런칭을 도와드립니다.': 'FeedBack과 함께 혁신적인 브랜드를 만들어보세요. 기획부터 유통까지 전 과정을 지원하여 성공적인 브랜드 런칭을 도와드립니다.',
+    '파트너십 문의하기': '파트너십 문의하기',
+    
     // Footer
     'footer.company': '회사 정보',
     'footer.services': '서비스',
@@ -530,6 +537,13 @@ const translations = {
     '더 자세한 상담이 필요하신가요?': 'Need More Detailed Consultation?',
     '전문 컨설턴트가 귀하의 비즈니스에 맞는 최적의 솔루션을 제안해드립니다.': 'Our professional consultants will propose the best solution for your business.',
     '무료 상담 신청': 'Free Consultation',
+    
+    // Brand Page
+    '브랜드 소개': 'Our Brands',
+    '혁신적인 기술과 디자인을 바탕으로 한 FeedBack의 자체 브랜드들을 소개합니다.각 브랜드는 고유한 가치와 비전을 가지고 고객에게 최고의 경험을 제공합니다.': 'Introducing FeedBack\'s own brands based on innovative technology and design. Each brand offers unique value and vision to provide the best experience to customers.',
+    '브랜드 파트너십에 관심이 있으신가요?': 'Interested in Brand Partnership?',
+    'FeedBack과 함께 혁신적인 브랜드를 만들어보세요. 기획부터 유통까지 전 과정을 지원하여 성공적인 브랜드 런칭을 도와드립니다.': 'Create an innovative brand with FeedBack. We support the entire process from planning to distribution to help you successfully launch your brand.',
+    '파트너십 문의하기': 'Inquire About Partnership',
     
     // Footer
     'footer.company': 'Company Info',
