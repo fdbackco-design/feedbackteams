@@ -124,8 +124,7 @@ export default function LaCeras() {
             </h2>
             <div className="w-32 h-1 bg-[#233A73] mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              정교한 마감과 균형 잡힌 디자인으로 완성된 프리미엄 럭셔리 트래블
-              경험
+              {t("laceras.features.subtitle")}
             </p>
           </div>
 
@@ -136,10 +135,10 @@ export default function LaCeras() {
                   <Shield className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4">
-                  폴리카보네이트 하드셸
+                  {t("laceras.feature1.title")}
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-lg mb-6">
-                  충격에 강하고 가벼운 프리미엄 소재로 소중한 짐을 안전하게 보호
+                  {t("laceras.feature1.description")}
                 </p>
               </div>
             </div>
@@ -150,11 +149,10 @@ export default function LaCeras() {
                   <Luggage className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4">
-                  TSA 승인 락
+                  {t("laceras.feature2.title")}
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-lg mb-6">
-                  국제공항 보안검색대 통과 시 안전하고 편리한 TSA 승인 보안
-                  시스템
+                  {t("laceras.feature2.description")}
                 </p>
               </div>
             </div>
@@ -165,11 +163,10 @@ export default function LaCeras() {
                   <Globe className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4">
-                  360° 듀얼 휠
+                  {t("laceras.feature3.title")}
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-lg mb-6">
-                  어떤 방향으로든 부드럽고 조용한 이동이 가능한 프리미엄 휠
-                  시스템
+                  {t("laceras.feature3.description")}
                 </p>
               </div>
             </div>
@@ -197,19 +194,16 @@ export default function LaCeras() {
                 FRENCH HERITAGE
               </div>
               <h2 className="text-5xl font-bold text-[#000000] mb-8 leading-tight">
-                프랑스 장인 정신의
-                <span className="block text-[#233A73]">70년 전통</span>
+                {t("laceras.heritage.title")}
+                <span className="block text-[#233A73]">{t("laceras.heritage.subtitle")}</span>
               </h2>
 
               <div className="mb-8">
                 <h3 className="text-2xl font-bold text-[#000000] mb-4">
-                  세대를 넘나드는 크래프트맨십
+                  {t("laceras.heritage.heading")}
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  1950년부터 시작된 La Ceras의 여정은 프랑스 전통 장인정신과
-                  현대적 혁신이 만나는 지점에서 계속되고 있습니다. 세심한
-                  디테일과 완벽한 마감으로 럭셔리 트래블의 새로운 기준을
-                  제시합니다.
+                  {t("laceras.heritage.description")}
                 </p>
               </div>
 
@@ -217,19 +211,19 @@ export default function LaCeras() {
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-[#233A73] rounded-full mr-4"></div>
                   <span className="text-gray-700 font-medium">
-                    프랑스 전통 가죽공예 기법 적용
+                    {t("laceras.heritage.point1")}
                   </span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-[#233A73] rounded-full mr-4"></div>
                   <span className="text-gray-700 font-medium">
-                    유럽 프리미엄 소재 엄선 사용
+                    {t("laceras.heritage.point2")}
                   </span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-[#233A73] rounded-full mr-4"></div>
                   <span className="text-gray-700 font-medium">
-                    수작업 마감과 품질 검수
+                    {t("laceras.heritage.point3")}
                   </span>
                 </div>
               </div>
@@ -247,20 +241,18 @@ export default function LaCeras() {
                 LUXURY TRAVEL
               </div>
               <h2 className="text-4xl font-bold text-[#000000] mb-6 leading-tight">
-                비즈니스부터 럭셔리까지
+                {t("laceras.travel.title")}
                 <span className="block text-[#233A73]">
-                  완벽한 트래블 솔루션
+                  {t("laceras.travel.subtitle")}
                 </span>
               </h2>
 
               <div className="mb-8">
                 <h3 className="text-2xl font-bold text-[#000000] mb-4">
-                  모든 여행의 순간을 특별하게
+                  {t("laceras.travel.heading")}
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  La Ceras는 단순한 캐리어가 아닌 여행의 파트너입니다. 비즈니스
-                  출장부터 로맨틱한 허니문, 가족 여행까지 모든 순간을 더욱
-                  세련되고 편안하게 만들어드립니다.
+                  {t("laceras.travel.description")}
                 </p>
               </div>
 
@@ -269,25 +261,25 @@ export default function LaCeras() {
                   <div className="text-3xl font-bold text-[#233A73] mb-2">
                     3
                   </div>
-                  <div className="text-sm text-gray-600">사이즈 옵션</div>
+                  <div className="text-sm text-gray-600">{t("laceras.travel.size")}</div>
                 </div>
                 <div className="text-center p-6 bg-gray-50 rounded-xl">
                   <div className="text-3xl font-bold text-[#233A73] mb-2">
                     10
                   </div>
-                  <div className="text-sm text-gray-600">년 보증</div>
+                  <div className="text-sm text-gray-600">{t("laceras.travel.warranty")}</div>
                 </div>
                 <div className="text-center p-6 bg-gray-50 rounded-xl">
                   <div className="text-3xl font-bold text-[#233A73] mb-2">
                     50+
                   </div>
-                  <div className="text-sm text-gray-600">글로벌 매장</div>
+                  <div className="text-sm text-gray-600">{t("laceras.travel.stores")}</div>
                 </div>
                 <div className="text-center p-6 bg-gray-50 rounded-xl">
                   <div className="text-3xl font-bold text-[#233A73] mb-2">
                     4.8
                   </div>
-                  <div className="text-sm text-gray-600">고객 만족도</div>
+                  <div className="text-sm text-gray-600">{t("laceras.travel.rating")}</div>
                 </div>
               </div>
             </div>
@@ -314,11 +306,11 @@ export default function LaCeras() {
               COLLECTION
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-6">
-              모든 여행 스타일에 맞는
+              {t("laceras.collection.title")}
             </h2>
             <div className="w-32 h-1 bg-[#233A73] mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              다양한 컬렉션으로 여행자의 취향과 필요에 완벽하게 부응합니다
+              {t("laceras.collection.subtitle")}
             </p>
           </div>
 
@@ -329,10 +321,10 @@ export default function LaCeras() {
                   <Star className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4">
-                  캐리온
+                  {t("laceras.collection1.title")}
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-lg">
-                  기내 반입 가능한 컴팩트 사이즈
+                  {t("laceras.collection1.description")}
                 </p>
               </div>
             </div>
@@ -343,10 +335,10 @@ export default function LaCeras() {
                   <Luggage className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4">
-                  하드셸 캐리어
+                  {t("laceras.collection2.title")}
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-lg">
-                  중거리 여행을 위한 미디움 사이즈
+                  {t("laceras.collection2.description")}
                 </p>
               </div>
             </div>
@@ -357,10 +349,10 @@ export default function LaCeras() {
                   <Award className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4">
-                  트렁크
+                  {t("laceras.collection3.title")}
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-lg">
-                  장기간 여행을 위한 라지 사이즈
+                  {t("laceras.collection3.description")}
                 </p>
               </div>
             </div>
@@ -372,12 +364,11 @@ export default function LaCeras() {
       <section className="py-32 bg-[#233A73] text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            La Ceras와 함께하는
-            <span className="block text-[#FFD700]">럭셔리 트래블</span>
+            {t("laceras.cta.title")}
+            <span className="block text-[#FFD700]">{t("laceras.cta.subtitle")}</span>
           </h2>
           <p className="text-xl mb-12 opacity-90 max-w-3xl mx-auto leading-relaxed">
-            프랑스 장인정신으로 완성된 프리미엄 캐리어로 당신의 여행을 더욱
-            특별하게 만들어보세요
+            {t("laceras.cta.description")}
           </p>
         </div>
       </section>
