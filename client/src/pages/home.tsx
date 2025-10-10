@@ -833,7 +833,7 @@ export default function Home() {
                   className="bg-white text-gray-900 hover:bg-gray-100 px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base tap-target"
                 >
                   <Link
-                    href={`/brand/${brands[currentBrandIndex].id}`}
+                    href={brands[currentBrandIndex].id === "lineup" ? "/brand" : `/brand/${brands[currentBrandIndex].id}`}
                     onClick={() =>
                       window.scrollTo({ top: 0, behavior: "smooth" })
                     }
