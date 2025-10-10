@@ -60,7 +60,7 @@ const getServices = (t: (key: string) => string) => [
     features: [
       t("services.distribution.features.0"),
       t("services.distribution.features.1"),
-      t("services.distribution.features.2")
+      t("services.distribution.features.2"),
     ],
     imageUrl: cargoShipImage,
   },
@@ -70,7 +70,7 @@ const getServices = (t: (key: string) => string) => [
     features: [
       t("services.manufacturing.features.0"),
       t("services.manufacturing.features.1"),
-      t("services.manufacturing.features.2")
+      t("services.manufacturing.features.2"),
     ],
     imageUrl: factoryImage,
   },
@@ -80,7 +80,7 @@ const getServices = (t: (key: string) => string) => [
     features: [
       t("services.marketing.features.0"),
       t("services.marketing.features.1"),
-      t("services.marketing.features.2")
+      t("services.marketing.features.2"),
     ],
     imageUrl: homeshoppingImage,
   },
@@ -90,7 +90,7 @@ const getServices = (t: (key: string) => string) => [
     features: [
       t("services.medical.features.0"),
       t("services.medical.features.1"),
-      t("services.medical.features.2")
+      t("services.medical.features.2"),
     ],
     imageUrl: hospitalImage,
   },
@@ -100,7 +100,7 @@ const getServices = (t: (key: string) => string) => [
     features: [
       t("services.app.features.0"),
       t("services.app.features.1"),
-      t("services.app.features.2")
+      t("services.app.features.2"),
     ],
     imageUrl: uiDesignImage,
   },
@@ -109,16 +109,12 @@ const getServices = (t: (key: string) => string) => [
 const getBrands = (t: (key: string) => string) => [
   {
     id: "lineup",
-    name: "Feed Holdings Brand Lineup",
+    name: "Feedback Brand Lineup",
     category: "브랜드 라인업",
     slogan: "기술, 디자인, 그리고 일상의 편리함을 잇다.",
-    description: "피드백은 생활가전, 프리미엄 주방, 여행, 리빙 브랜드를 통해 일상을 더 나은 경험으로 만드는 기술과 디자인을 제공합니다.",
-    products: [
-      "HOiD",
-      "ASRAN",
-      "La Ceras",
-      "Carvella"
-    ],
+    description:
+      "피드백은 생활가전, 프리미엄 주방, 여행, 리빙 브랜드를 통해 일상을 더 나은 경험으로 만드는 기술과 디자인을 제공합니다.",
+    products: ["HOiD", "ASRAN", "La Ceras", "Carvella"],
     image: brandLineupImg,
     color: "from-slate-700 to-slate-900",
   },
@@ -132,7 +128,7 @@ const getBrands = (t: (key: string) => string) => [
       t("brands.hoid.products.0"),
       t("brands.hoid.products.1"),
       t("brands.hoid.products.2"),
-      t("brands.hoid.products.3")
+      t("brands.hoid.products.3"),
     ],
     image: hoidImg,
     color: "from-gray-400 to-gray-600",
@@ -147,7 +143,7 @@ const getBrands = (t: (key: string) => string) => [
       t("brands.medifeed.products.0"),
       t("brands.medifeed.products.1"),
       t("brands.medifeed.products.2"),
-      t("brands.medifeed.products.3")
+      t("brands.medifeed.products.3"),
     ],
     image: medifeedImg,
     color: "from-blue-500 to-blue-700",
@@ -157,12 +153,13 @@ const getBrands = (t: (key: string) => string) => [
     name: "ASRAN",
     category: "프리미엄 주방용품",
     slogan: "독일 기술과 합리적 가격을 모두 갖춘 냄비",
-    description: "SUS410 스테인리스 스틸과 3중 바닥구조로 뛰어난 열전도율과 내구성을 자랑하는 프리미엄 주방용품 브랜드입니다.",
+    description:
+      "SUS410 스테인리스 스틸과 3중 바닥구조로 뛰어난 열전도율과 내구성을 자랑하는 프리미엄 주방용품 브랜드입니다.",
     products: [
       "SUS410 스테인리스 스틸",
       "3중 바닥구조",
       "인덕션 & 가스 겸용",
-      "프리미엄 마감"
+      "프리미엄 마감",
     ],
     image: asranImg,
     color: "from-gray-600 to-gray-800",
@@ -172,13 +169,9 @@ const getBrands = (t: (key: string) => string) => [
     name: "La Ceras",
     category: "프랑스 럭셔리 캐리어 브랜드",
     slogan: "전통과 모던이 만나는 프렌치 럭셔리 트래블",
-    description: "프랑스의 장인정신과 현대적 세련미를 결합한 럭셔리 캐리어 브랜드입니다. 폴리카보네이트 하드셸, 정교한 마감과 균형 잡힌 디자인으로 비즈니스부터 라그주어리 여행까지 완벽한 트래블 솔루션을 제안합니다.",
-    products: [
-      "하드셸 캐리어",
-      "캐리온",
-      "TSA 락",
-      "360° 휠"
-    ],
+    description:
+      "프랑스의 장인정신과 현대적 세련미를 결합한 럭셔리 캐리어 브랜드입니다. 폴리카보네이트 하드셸, 정교한 마감과 균형 잡힌 디자인으로 비즈니스부터 라그주어리 여행까지 완벽한 트래블 솔루션을 제안합니다.",
+    products: ["하드셸 캐리어", "캐리온", "TSA 락", "360° 휠"],
     image: lacerasImg,
     color: "from-blue-600 to-red-600",
   },
@@ -187,13 +180,9 @@ const getBrands = (t: (key: string) => string) => [
     name: "Carvella",
     category: "이탈리아 프리미엄 주방용품",
     slogan: "이탈리아 장인의 정밀함, 당신의 주방으로",
-    description: "이탈리아 전통 장인정신으로 완성한 프리미엄 쿠킹웨어 브랜드입니다. 고급 스테인리스와 다층 구조로 뛰어난 열전도와 내구성을 갖추고, 인덕션부터 가스레인지까지 완벽 호환됩니다.",
-    products: [
-      "프리미엄 냄비",
-      "프라이팬",
-      "멀티 압력뚜껑",
-      "멀티 호환 열원"
-    ],
+    description:
+      "이탈리아 전통 장인정신으로 완성한 프리미엄 쿠킹웨어 브랜드입니다. 고급 스테인리스와 다층 구조로 뛰어난 열전도와 내구성을 갖추고, 인덕션부터 가스레인지까지 완벽 호환됩니다.",
+    products: ["프리미엄 냄비", "프라이팬", "멀티 압력뚜껑", "멀티 호환 열원"],
     image: carvellaImg,
     color: "from-orange-800 to-yellow-600",
   },
@@ -207,7 +196,7 @@ const getBrands = (t: (key: string) => string) => [
       t("brands.sangsaeng.products.0"),
       t("brands.sangsaeng.products.1"),
       t("brands.sangsaeng.products.2"),
-      t("brands.sangsaeng.products.3")
+      t("brands.sangsaeng.products.3"),
     ],
     image: sangsaengImg,
     color: "from-green-500 to-green-700",
@@ -257,21 +246,21 @@ export default function Home() {
   useEffect(() => {
     const checkIsMobile = () => setIsMobile(window.innerWidth < 768);
     checkIsMobile();
-    window.addEventListener('resize', checkIsMobile);
-    return () => window.removeEventListener('resize', checkIsMobile);
+    window.addEventListener("resize", checkIsMobile);
+    return () => window.removeEventListener("resize", checkIsMobile);
   }, []);
 
   // ESC key to close video modal
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape' && isVideoPlaying) {
+      if (event.key === "Escape" && isVideoPlaying) {
         setIsVideoPlaying(false);
       }
     };
 
     if (isVideoPlaying) {
-      window.addEventListener('keydown', handleKeyDown);
-      return () => window.removeEventListener('keydown', handleKeyDown);
+      window.addEventListener("keydown", handleKeyDown);
+      return () => window.removeEventListener("keydown", handleKeyDown);
     }
   }, [isVideoPlaying]);
 
@@ -334,8 +323,8 @@ export default function Home() {
 
     const handleMouseDown = (e: MouseEvent) => {
       isDown = true;
-      newsContainer.style.cursor = 'grabbing';
-      newsContainer.style.userSelect = 'none';
+      newsContainer.style.cursor = "grabbing";
+      newsContainer.style.userSelect = "none";
       startX = e.pageX;
       scrollLeft = newsContainer.scrollLeft;
       e.preventDefault();
@@ -344,16 +333,16 @@ export default function Home() {
     const handleMouseLeave = () => {
       // Don't reset if still dragging - let global mouse up handle it
       if (!isDown) {
-        newsContainer.style.cursor = 'grab';
-        newsContainer.style.userSelect = '';
+        newsContainer.style.cursor = "grab";
+        newsContainer.style.userSelect = "";
       }
     };
 
     const handleMouseUp = () => {
       if (isDown) {
         isDown = false;
-        newsContainer.style.cursor = 'grab';
-        newsContainer.style.userSelect = '';
+        newsContainer.style.cursor = "grab";
+        newsContainer.style.userSelect = "";
       }
     };
 
@@ -367,24 +356,26 @@ export default function Home() {
 
     const handleScroll = () => {
       const scrollLeft = newsContainer.scrollLeft;
-      const maxScrollLeft = newsContainer.scrollWidth - newsContainer.clientWidth;
-      const progress = maxScrollLeft > 0 ? (scrollLeft / maxScrollLeft) * 100 : 0;
+      const maxScrollLeft =
+        newsContainer.scrollWidth - newsContainer.clientWidth;
+      const progress =
+        maxScrollLeft > 0 ? (scrollLeft / maxScrollLeft) * 100 : 0;
       setNewsScrollProgress(progress);
     };
 
     // Touch events for mobile
     const handleTouchStart = (e: TouchEvent) => {
       isDown = true;
-      newsContainer.style.cursor = 'grabbing';
-      newsContainer.style.userSelect = 'none';
+      newsContainer.style.cursor = "grabbing";
+      newsContainer.style.userSelect = "none";
       startX = e.touches[0].pageX - newsContainer.offsetLeft;
       scrollLeft = newsContainer.scrollLeft;
     };
 
     const handleTouchEnd = () => {
       isDown = false;
-      newsContainer.style.cursor = 'grab';
-      newsContainer.style.userSelect = '';
+      newsContainer.style.cursor = "grab";
+      newsContainer.style.userSelect = "";
     };
 
     const handleTouchMove = (e: TouchEvent) => {
@@ -396,60 +387,66 @@ export default function Home() {
     };
 
     // Mouse events
-    newsContainer.addEventListener('mousedown', handleMouseDown);
-    newsContainer.addEventListener('mouseleave', handleMouseLeave);
-    newsContainer.addEventListener('mouseup', handleMouseUp);
-    newsContainer.addEventListener('mousemove', handleMouseMove);
-    
+    newsContainer.addEventListener("mousedown", handleMouseDown);
+    newsContainer.addEventListener("mouseleave", handleMouseLeave);
+    newsContainer.addEventListener("mouseup", handleMouseUp);
+    newsContainer.addEventListener("mousemove", handleMouseMove);
+
     // Global mouse events for better drag experience
-    document.addEventListener('mouseup', handleMouseUp);
-    document.addEventListener('mousemove', handleMouseMove);
-    
+    document.addEventListener("mouseup", handleMouseUp);
+    document.addEventListener("mousemove", handleMouseMove);
+
     // Touch events
-    newsContainer.addEventListener('touchstart', handleTouchStart, { passive: false });
-    newsContainer.addEventListener('touchend', handleTouchEnd);
-    newsContainer.addEventListener('touchmove', handleTouchMove, { passive: false });
-    
+    newsContainer.addEventListener("touchstart", handleTouchStart, {
+      passive: false,
+    });
+    newsContainer.addEventListener("touchend", handleTouchEnd);
+    newsContainer.addEventListener("touchmove", handleTouchMove, {
+      passive: false,
+    });
+
     // Scroll progress tracking
-    newsContainer.addEventListener('scroll', handleScroll);
+    newsContainer.addEventListener("scroll", handleScroll);
 
     // Initial progress calculation
     handleScroll();
 
     return () => {
-      newsContainer.removeEventListener('mousedown', handleMouseDown);
-      newsContainer.removeEventListener('mouseleave', handleMouseLeave);
-      newsContainer.removeEventListener('mouseup', handleMouseUp);
-      newsContainer.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseup', handleMouseUp);
-      document.removeEventListener('mousemove', handleMouseMove);
-      newsContainer.removeEventListener('touchstart', handleTouchStart);
-      newsContainer.removeEventListener('touchend', handleTouchEnd);
-      newsContainer.removeEventListener('touchmove', handleTouchMove);
-      newsContainer.removeEventListener('scroll', handleScroll);
+      newsContainer.removeEventListener("mousedown", handleMouseDown);
+      newsContainer.removeEventListener("mouseleave", handleMouseLeave);
+      newsContainer.removeEventListener("mouseup", handleMouseUp);
+      newsContainer.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener("mouseup", handleMouseUp);
+      document.removeEventListener("mousemove", handleMouseMove);
+      newsContainer.removeEventListener("touchstart", handleTouchStart);
+      newsContainer.removeEventListener("touchend", handleTouchEnd);
+      newsContainer.removeEventListener("touchmove", handleTouchMove);
+      newsContainer.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   useEffect(() => {
     let wheelTimeout: NodeJS.Timeout;
-    
+
     const handleWheel = (e: WheelEvent) => {
       // Allow normal scrolling if we're at the last section and scrolling down
       // or if we're at the first section and scrolling up
       const direction = e.deltaY > 0 ? 1 : -1;
-      
+
       // Check if we're at the boundaries and should allow normal scrolling
-      if ((currentSection === sections.length - 1 && direction > 0) ||
-          (currentSection === 0 && direction < 0)) {
+      if (
+        (currentSection === sections.length - 1 && direction > 0) ||
+        (currentSection === 0 && direction < 0)
+      ) {
         // Allow normal browser scrolling for footer access
         return;
       }
-      
+
       e.preventDefault();
-      
+
       // Skip if already scrolling
       if (isScrolling) return;
-      
+
       const newSection = Math.max(
         0,
         Math.min(sections.length - 1, currentSection + direction),
@@ -459,11 +456,11 @@ export default function Home() {
         setIsScrolling(true);
         setCurrentSection(newSection);
         const targetElement = document.getElementById(sections[newSection].id);
-        targetElement?.scrollIntoView({ 
+        targetElement?.scrollIntoView({
           behavior: "smooth",
-          block: "start"
+          block: "start",
         });
-        
+
         // Reset scrolling state after animation
         setTimeout(() => {
           setIsScrolling(false);
@@ -543,15 +540,15 @@ export default function Home() {
 
   const scrollToSection = (index: number) => {
     if (isScrolling) return;
-    
+
     setIsScrolling(true);
     setCurrentSection(index);
     const targetElement = document.getElementById(sections[index].id);
-    targetElement?.scrollIntoView({ 
+    targetElement?.scrollIntoView({
       behavior: "smooth",
-      block: "start"
+      block: "start",
     });
-    
+
     setTimeout(() => {
       setIsScrolling(false);
     }, 1000);
@@ -578,37 +575,51 @@ export default function Home() {
       <div className="fixed right-4 bottom-16 md:right-8 md:bottom-auto md:top-1/2 transform md:-translate-y-1/2 z-40">
         <div className="relative h-8 md:h-48 w-20 md:w-auto">
           {/* Background line - horizontal on mobile, vertical on desktop */}
-          <div className={`absolute md:right-0 md:top-0 bottom-2 md:bottom-auto left-0 md:left-auto w-full md:w-0.5 h-0.5 md:h-full transition-all duration-500 ${
-            currentSection === 0 || currentSection === 5 || currentSection === 6
-              ? 'bg-gray-300' 
-              : 'bg-gray-500'
-          }`}></div>
-          {/* Progress line - horizontal on mobile, vertical on desktop */}
-          <div 
-            className={`absolute md:right-0 md:top-0 bottom-2 md:bottom-auto left-0 md:left-auto w-0.5 md:w-0.5 h-0.5 md:h-auto transition-all duration-500 ${
-              currentSection === 0 || currentSection === 5 || currentSection === 6
-                ? 'bg-white' 
-                : 'bg-primary'
+          <div
+            className={`absolute md:right-0 md:top-0 bottom-2 md:bottom-auto left-0 md:left-auto w-full md:w-0.5 h-0.5 md:h-full transition-all duration-500 ${
+              currentSection === 0 ||
+              currentSection === 5 ||
+              currentSection === 6
+                ? "bg-gray-300"
+                : "bg-gray-500"
             }`}
-            style={{ 
+          ></div>
+          {/* Progress line - horizontal on mobile, vertical on desktop */}
+          <div
+            className={`absolute md:right-0 md:top-0 bottom-2 md:bottom-auto left-0 md:left-auto w-0.5 md:w-0.5 h-0.5 md:h-auto transition-all duration-500 ${
+              currentSection === 0 ||
+              currentSection === 5 ||
+              currentSection === 6
+                ? "bg-white"
+                : "bg-primary"
+            }`}
+            style={{
               width: `${isMobile ? ((currentSection + 1) / sections.length) * 100 : 0.5}%`,
-              height: `${!isMobile ? ((currentSection + 1) / sections.length) * 100 : 0.5}%`
+              height: `${!isMobile ? ((currentSection + 1) / sections.length) * 100 : 0.5}%`,
             }}
           ></div>
           {/* Section numbers - horizontal layout on mobile, vertical on desktop */}
-          <div className={`absolute md:right-3 md:top-0 left-0 md:left-auto -top-6 md:top-0 text-xs md:text-sm font-semibold transition-all duration-500 ${
-            currentSection === 0 || currentSection === 5 || currentSection === 6
-              ? 'text-white drop-shadow-lg' 
-              : 'text-gray-900'
-          }`}>
-            {String(currentSection + 1).padStart(2, '0')}
+          <div
+            className={`absolute md:right-3 md:top-0 left-0 md:left-auto -top-6 md:top-0 text-xs md:text-sm font-semibold transition-all duration-500 ${
+              currentSection === 0 ||
+              currentSection === 5 ||
+              currentSection === 6
+                ? "text-white drop-shadow-lg"
+                : "text-gray-900"
+            }`}
+          >
+            {String(currentSection + 1).padStart(2, "0")}
           </div>
-          <div className={`absolute md:right-3 md:bottom-0 right-0 md:right-3 -top-6 md:top-auto text-xs md:text-sm font-medium transition-all duration-500 ${
-            currentSection === 0 || currentSection === 5 || currentSection === 6
-              ? 'text-gray-300 drop-shadow-md' 
-              : 'text-gray-600'
-          }`}>
-            {String(sections.length).padStart(2, '0')}
+          <div
+            className={`absolute md:right-3 md:bottom-0 right-0 md:right-3 -top-6 md:top-auto text-xs md:text-sm font-medium transition-all duration-500 ${
+              currentSection === 0 ||
+              currentSection === 5 ||
+              currentSection === 6
+                ? "text-gray-300 drop-shadow-md"
+                : "text-gray-600"
+            }`}
+          >
+            {String(sections.length).padStart(2, "0")}
           </div>
         </div>
       </div>
@@ -652,7 +663,9 @@ export default function Home() {
           <h1 className="hero-title mb-4 sm:mb-6 animate-fade-in-up">
             {t("hero.title")}
             <br />
-            <span className="hero-subtitle text-[30px] sm:text-[60px]">{t("hero.subtitle")}</span>
+            <span className="hero-subtitle text-[30px] sm:text-[60px]">
+              {t("hero.subtitle")}
+            </span>
           </h1>
           <p
             className="hero-description mb-6 sm:mb-8 animate-fade-in-up"
@@ -711,11 +724,21 @@ export default function Home() {
                 className="absolute -top-12 right-0 text-white hover:text-gray-300 z-10"
                 aria-label="Close video"
               >
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  className="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               </button>
-              
+
               {/* Video Player */}
               <video
                 className="w-full h-full object-contain rounded-lg"
@@ -725,13 +748,16 @@ export default function Home() {
                 onClick={(e) => e.stopPropagation()}
               >
                 <source src={mainBannerVideo} type="video/mp4" />
-                비디오를 재생할 수 없습니다. 브라우저가 이 비디오 형식을 지원하지 않습니다.
+                비디오를 재생할 수 없습니다. 브라우저가 이 비디오 형식을
+                지원하지 않습니다.
               </video>
-              
+
               {/* Video Info */}
               <div className="absolute -bottom-16 left-0 text-white">
                 <p className="text-lg font-semibold">FeedBack 소개 영상</p>
-                <p className="text-sm text-gray-300">ESC 키 또는 X 버튼으로 닫을 수 있습니다</p>
+                <p className="text-sm text-gray-300">
+                  ESC 키 또는 X 버튼으로 닫을 수 있습니다
+                </p>
               </div>
             </div>
           </div>
@@ -748,7 +774,7 @@ export default function Home() {
             src={brands[currentBrandIndex].image}
             alt={brands[currentBrandIndex].name}
             className={`w-full h-full object-cover transition-all duration-500 ${
-              imageLoaded ? 'opacity-100' : 'opacity-0'
+              imageLoaded ? "opacity-100" : "opacity-0"
             }`}
             onLoad={() => setImageLoaded(true)}
           />
@@ -759,9 +785,13 @@ export default function Home() {
         <div className="relative z-10 w-full mobile-padding h-full flex flex-col">
           {/* Content Section */}
           <div className="flex-1 flex items-center">
-            <div className={`text-white space-y-6 transition-all duration-500 max-w-2xl ${
-              imageLoaded ? 'opacity-100 transform translate-x-0' : 'opacity-0 transform translate-x-4'
-            }`}>
+            <div
+              className={`text-white space-y-6 transition-all duration-500 max-w-2xl ${
+                imageLoaded
+                  ? "opacity-100 transform translate-x-0"
+                  : "opacity-0 transform translate-x-4"
+              }`}
+            >
               <div className="space-y-2 sm:space-y-3">
                 <div className="text-xs sm:text-sm font-semibold uppercase tracking-wide opacity-90">
                   {brands[currentBrandIndex].category}
@@ -795,9 +825,11 @@ export default function Home() {
                   size="lg"
                   className="bg-white text-gray-900 hover:bg-gray-100 px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base tap-target"
                 >
-                  <Link 
+                  <Link
                     href={`/brand/${brands[currentBrandIndex].id}`}
-                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    onClick={() =>
+                      window.scrollTo({ top: 0, behavior: "smooth" })
+                    }
                   >
                     브랜드 자세히 보기
                   </Link>
@@ -838,7 +870,7 @@ export default function Home() {
               >
                 <ChevronLeft className="w-6 h-6 text-white" />
               </button>
-              
+
               {/* Brand Counter */}
               <div className="px-6 py-3 bg-black bg-opacity-40 rounded-full backdrop-blur-sm">
                 <div className="text-lg text-white font-bold">
@@ -846,7 +878,7 @@ export default function Home() {
                   {String(brands.length).padStart(2, "0")}
                 </div>
               </div>
-              
+
               <button
                 onClick={() => {
                   setImageLoaded(false);
@@ -869,12 +901,12 @@ export default function Home() {
       <section
         id="services"
         className="min-h-screen flex items-center justify-center relative overflow-hidden pt-12 sm:pt-16 md:pt-20"
-        style={{ 
+        style={{
           scrollSnapAlign: "start",
           backgroundImage: `url(${services[currentServiceIndex]?.imageUrl || serviceBackgroundImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
         {/* 블러 오버레이 */}
@@ -890,9 +922,7 @@ export default function Home() {
             <h2 className="section-title-primary mb-4 text-[24px] sm:text-[36px] font-bold">
               {t("services.title")}
             </h2>
-            <p className="section-description">
-              {t("hero.description")}
-            </p>
+            <p className="section-description">{t("hero.description")}</p>
           </div>
 
           {/* Service Carousel */}
@@ -910,7 +940,7 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-20"></div>
                   </div>
-                  
+
                   {/* Content Section */}
                   <div className="p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-between flex-1">
                     <div className="flex-1">
@@ -924,8 +954,9 @@ export default function Home() {
                         {services[currentServiceIndex].description}
                       </p>
                       <div className="space-y-1 sm:space-y-2 mb-4 sm:mb-6 md:mb-8">
-                        {services[currentServiceIndex].features.slice(0, 3).map(
-                          (feature, index) => (
+                        {services[currentServiceIndex].features
+                          .slice(0, 3)
+                          .map((feature, index) => (
                             <div
                               key={index}
                               className="flex items-start text-xs sm:text-sm text-gray-600"
@@ -933,8 +964,7 @@ export default function Home() {
                               <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-primary rounded-full mr-2 sm:mr-3 mt-1.5 sm:mt-2 flex-shrink-0"></div>
                               <span className="leading-relaxed">{feature}</span>
                             </div>
-                          ),
-                        )}
+                          ))}
                       </div>
                     </div>
                     <div className="mt-auto">
@@ -988,11 +1018,11 @@ export default function Home() {
             <div className="hidden sm:block mt-3 sm:mt-5">
               <div className="max-w-lg mx-auto">
                 <div className="h-1 bg-gray-300 rounded-full relative overflow-hidden">
-                  <div 
+                  <div
                     className="h-full bg-black rounded-full transition-all duration-300 ease-out"
-                    style={{ 
+                    style={{
                       width: `${((currentServiceIndex + 1) / services.length) * 100}%`,
-                      transform: `translateX(0%)` 
+                      transform: `translateX(0%)`,
                     }}
                   />
                 </div>
@@ -1023,7 +1053,9 @@ export default function Home() {
             </h2>
             {/* Mobile swipe indicator */}
             <div className="block md:hidden text-center mt-4">
-              <p className="text-sm text-gray-500">← 좌우로 스와이프하여 더 많은 뉴스를 확인하세요 →</p>
+              <p className="text-sm text-gray-500">
+                ← 좌우로 스와이프하여 더 많은 뉴스를 확인하세요 →
+              </p>
             </div>
           </div>
 
@@ -1040,7 +1072,7 @@ export default function Home() {
                     const slideWidth = cardWidth + gap;
                     newsScrollRef.current.scrollBy({
                       left: -slideWidth,
-                      behavior: 'smooth'
+                      behavior: "smooth",
                     });
                   }
                 }
@@ -1048,8 +1080,18 @@ export default function Home() {
               className="hidden md:flex absolute -left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/95 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 items-center justify-center group hover:scale-110 border border-gray-100"
               aria-label="Previous news"
             >
-              <svg className="w-6 h-6 text-gray-700 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+              <svg
+                className="w-6 h-6 text-gray-700 group-hover:text-black transition-colors"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2.5}
+                  d="M15 19l-7-7 7-7"
+                />
               </svg>
             </button>
 
@@ -1063,7 +1105,7 @@ export default function Home() {
                     const slideWidth = cardWidth + gap;
                     newsScrollRef.current.scrollBy({
                       left: slideWidth,
-                      behavior: 'smooth'
+                      behavior: "smooth",
                     });
                   }
                 }
@@ -1071,34 +1113,43 @@ export default function Home() {
               className="hidden md:flex absolute -right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white/95 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 items-center justify-center group hover:scale-110 border border-gray-100"
               aria-label="Next news"
             >
-              <svg className="w-6 h-6 text-gray-700 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+              <svg
+                className="w-6 h-6 text-gray-700 group-hover:text-black transition-colors"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2.5}
+                  d="M9 5l7 7-7 7"
+                />
               </svg>
             </button>
 
-            <div 
+            <div
               ref={newsScrollRef}
               className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto pb-6 scrollbar-hide cursor-grab justify-start px-2 sm:px-0"
-              style={{ 
-                scrollSnapType: 'x mandatory',
-                scrollbarWidth: 'none',
-                msOverflowStyle: 'none',
-                WebkitOverflowScrolling: 'touch',
-                scrollBehavior: 'auto' // Disable smooth scroll for manual dragging
+              style={{
+                scrollSnapType: "x mandatory",
+                scrollbarWidth: "none",
+                msOverflowStyle: "none",
+                WebkitOverflowScrolling: "touch",
+                scrollBehavior: "auto", // Disable smooth scroll for manual dragging
               }}
             >
-              
               {newsData.slice(0, 6).map((news, index) => {
                 const src = resolveNewsThumbnail(news.thumbnail);
                 return (
-                  <Link 
+                  <Link
                     key={index}
                     href={news.link}
-                    className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[380px] lg:w-[420px] xl:w-[480px] 2xl:w-[520px] h-[320px] sm:h-[360px] md:h-[400px] lg:h-[440px] xl:h-[480px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer flex flex-col" 
-                    style={{ scrollSnapAlign: 'center' }}
+                    className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[380px] lg:w-[420px] xl:w-[480px] 2xl:w-[520px] h-[320px] sm:h-[360px] md:h-[400px] lg:h-[440px] xl:h-[480px] bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 cursor-pointer flex flex-col"
+                    style={{ scrollSnapAlign: "center" }}
                     onClick={() => {
                       // Scroll to top when navigating to news detail
-                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     <div className="h-[180px] sm:h-[200px] md:h-[220px] lg:h-[240px] xl:h-[260px] bg-gray-200 relative flex-shrink-0">
@@ -1112,22 +1163,23 @@ export default function Home() {
                       <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 leading-tight line-clamp-2 mb-3 h-[3rem] sm:h-[3.5rem] md:h-[4rem] overflow-hidden">
                         {news.title}
                       </h3>
-                      <div className="text-sm sm:text-base text-gray-500 mt-auto">{news.date}</div>
+                      <div className="text-sm sm:text-base text-gray-500 mt-auto">
+                        {news.date}
+                      </div>
                     </div>
                   </Link>
                 );
               })}
-              
             </div>
 
             {/* Progress Bar Pager - Matches Navigation Width */}
             <div className="mt-8">
               <div className="h-0.5 bg-gray-300 rounded-full relative overflow-hidden">
-                <div 
+                <div
                   className="h-full bg-black rounded-full transition-all duration-300 ease-out"
-                  style={{ 
+                  style={{
                     width: `${newsScrollProgress}%`,
-                    transform: `translateX(0%)` 
+                    transform: `translateX(0%)`,
                   }}
                 />
               </div>
@@ -1143,7 +1195,7 @@ export default function Home() {
         style={{ scrollSnapAlign: "start", marginTop: "50px" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-70"></div>
-        
+
         {/* Dynamic Network Background */}
         <NetworkBackground className="opacity-50" />
 
@@ -1166,22 +1218,34 @@ export default function Home() {
               <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-1 sm:mb-2 lg:mb-4 tabular-nums text-white drop-shadow-lg">
                 {yearCount}
               </div>
-              <div className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-blue-300 font-medium">{t("stats.since")}</div>
-              <div className="text-xs text-gray-300 mt-1 lg:mt-2 leading-tight">{t("stats.since.sub")}</div>
+              <div className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-blue-300 font-medium">
+                {t("stats.since")}
+              </div>
+              <div className="text-xs text-gray-300 mt-1 lg:mt-2 leading-tight">
+                {t("stats.since.sub")}
+              </div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-xl lg:rounded-2xl p-3 sm:p-4 md:p-6 lg:p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/15">
               <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-1 sm:mb-2 lg:mb-4 tabular-nums text-white drop-shadow-lg">
                 {brandCount}+
               </div>
-              <div className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-blue-300 font-medium">{t("stats.brands")}</div>
-              <div className="text-xs text-gray-300 mt-1 lg:mt-2 leading-tight">{t("stats.brands.sub")}</div>
+              <div className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-blue-300 font-medium">
+                {t("stats.brands")}
+              </div>
+              <div className="text-xs text-gray-300 mt-1 lg:mt-2 leading-tight">
+                {t("stats.brands.sub")}
+              </div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-xl lg:rounded-2xl p-3 sm:p-4 md:p-6 lg:p-8 border border-white/20 transform hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-white/15 sm:col-span-2 lg:col-span-1">
               <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-1 sm:mb-2 lg:mb-4 tabular-nums text-white drop-shadow-lg">
                 {partnerCount}+
               </div>
-              <div className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-blue-300 font-medium">{t("stats.countries")}</div>
-              <div className="text-xs text-gray-300 mt-1 lg:mt-2 leading-tight">{t("stats.countries.sub")}</div>
+              <div className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-blue-300 font-medium">
+                {t("stats.countries")}
+              </div>
+              <div className="text-xs text-gray-300 mt-1 lg:mt-2 leading-tight">
+                {t("stats.countries.sub")}
+              </div>
             </div>
           </div>
         </div>
@@ -1198,10 +1262,10 @@ export default function Home() {
             src={shipVideo}
             className="absolute inset-0 w-full h-full object-cover"
             style={{
-              width: '100vw',
-              height: '100vh',
-              objectFit: 'cover',
-              objectPosition: 'center'
+              width: "100vw",
+              height: "100vh",
+              objectFit: "cover",
+              objectPosition: "center",
             }}
             autoPlay={true}
             muted={true}
@@ -1223,12 +1287,14 @@ export default function Home() {
               {t("cta.title")}
             </h2>
             <p className="text-base sm:text-lg md:text-xl font-medium text-white mb-6 sm:mb-8 md:mb-12 leading-relaxed">
-              {t("cta.description").split('\n').map((line, index) => (
-                <span key={index}>
-                  {line}
-                  {index === 0 && <br className="hidden sm:block" />}
-                </span>
-              ))}
+              {t("cta.description")
+                .split("\n")
+                .map((line, index) => (
+                  <span key={index}>
+                    {line}
+                    {index === 0 && <br className="hidden sm:block" />}
+                  </span>
+                ))}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center sm:items-start justify-center sm:justify-start">
               <Button
