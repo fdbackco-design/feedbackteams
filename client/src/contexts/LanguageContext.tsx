@@ -449,6 +449,24 @@ const translations = {
     "sangsaeng.services.title": "글로벌 헬스케어 생태계",
     "sangsaeng.services.subtitle": "의료 서비스부터 브랜딩까지, 통합된 헬스케어 솔루션을 제공합니다",
 
+    // Hoid Details
+    "hoid.feature1.title": "3-in-1 기술",
+    "hoid.feature1.description": "공기청정, 제습, 살균 기능을 하나로 통합한 혁신적인 올인원 솔루션",
+    "hoid.feature2.title": "HEPA14 필터",
+    "hoid.feature2.description": "99.995% 초미세먼지 제거 효율을 자랑하는 의료급 고성능 필터 시스템",
+    "hoid.feature3.title": "미니멀 디자인",
+    "hoid.feature3.description": "어떤 공간에도 자연스럽게 어울리는 세련되고 모던한 디자인 철학",
+    "hoid.partnership.title": "글로벌 확장의",
+    "hoid.partnership.subtitle": "새로운 전환점",
+    "hoid.partnership.date": "2025년 8월 16일",
+    "hoid.partnership.mou": "중국 초대형 공기청정기 제조사와 MOU 체결",
+    "hoid.partnership.description": "HOID는 중국 최대 공기청정기 제조업체와 글로벌 유통 및 기술 협력 MOU를 체결했습니다. 이를 통해 아시아 전역으로 사업 영역을 확장하고, 더 많은 고객에게 깨끗한 공기를 제공할 예정입니다.",
+    "hoid.partnership.point1": "아시아 전역 시장 진출",
+    "hoid.partnership.point2": "기술 협력 및 공동 개발",
+    "hoid.partnership.point3": "글로벌 유통망 확대",
+    "hoid.homeshopping.title": "TV 속으로 들어간",
+    "hoid.homeshopping.subtitle": "프리미엄 디자인",
+
     // Asran Details
     "asran.feature1.title": "SUS410 스테인리스 스틸",
     "asran.feature1.description": "최고급 소재로 내구성과 안전성을 보장합니다",
@@ -949,6 +967,24 @@ const translations = {
     "sangsaeng.hero.cta": "Visit Sangsaeng Website",
     "sangsaeng.services.title": "Global Healthcare Ecosystem",
     "sangsaeng.services.subtitle": "Providing integrated healthcare solutions from medical services to branding",
+
+    // Hoid Details
+    "hoid.feature1.title": "3-in-1 Technology",
+    "hoid.feature1.description": "Innovative all-in-one solution integrating air purification, dehumidification, and sterilization",
+    "hoid.feature2.title": "HEPA14 Filter",
+    "hoid.feature2.description": "Medical-grade high-performance filter system boasting 99.995% ultra-fine dust removal efficiency",
+    "hoid.feature3.title": "Minimalist Design",
+    "hoid.feature3.description": "Refined and modern design philosophy that naturally complements any space",
+    "hoid.partnership.title": "New Turning Point",
+    "hoid.partnership.subtitle": "in Global Expansion",
+    "hoid.partnership.date": "August 16, 2025",
+    "hoid.partnership.mou": "MOU Signed with China's Largest Air Purifier Manufacturer",
+    "hoid.partnership.description": "HOID has signed a global distribution and technology cooperation MOU with China's largest air purifier manufacturer. Through this, we plan to expand our business to Asia and provide clean air to more customers.",
+    "hoid.partnership.point1": "Market Expansion Across Asia",
+    "hoid.partnership.point2": "Technology Cooperation and Joint Development",
+    "hoid.partnership.point3": "Global Distribution Network Expansion",
+    "hoid.homeshopping.title": "Premium Design",
+    "hoid.homeshopping.subtitle": "Enters TV Screens",
 
     // Asran Details
     "asran.feature1.title": "SUS410 Stainless Steel",

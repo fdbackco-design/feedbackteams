@@ -127,11 +127,10 @@ export default function Hoid() {
                   <Zap className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4">
-                  3-in-1 기술
+                  {t("hoid.feature1.title")}
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-lg mb-6">
-                  공기청정, 제습, 살균 기능을 하나로 통합한 혁신적인 올인원
-                  솔루션
+                  {t("hoid.feature1.description")}
                 </p>
                 
               </div>
@@ -143,11 +142,10 @@ export default function Hoid() {
                   <CheckCircle className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4">
-                  HEPA14 필터
+                  {t("hoid.feature2.title")}
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-lg mb-6">
-                  99.995% 초미세먼지 제거 효율을 자랑하는 의료급 고성능 필터
-                  시스템
+                  {t("hoid.feature2.description")}
                 </p>
                 
               </div>
@@ -159,10 +157,10 @@ export default function Hoid() {
                   <Globe className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4">
-                  미니멀 디자인
+                  {t("hoid.feature3.title")}
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-lg mb-6">
-                  어떤 공간에도 자연스럽게 어울리는 세련되고 모던한 디자인 철학
+                  {t("hoid.feature3.description")}
                 </p>
                 
               </div>
@@ -188,22 +186,20 @@ export default function Hoid() {
                 GLOBAL PARTNERSHIP
               </div>
               <h2 className="text-5xl font-bold text-[#000000] mb-8 leading-tight">
-                글로벌 확장의
-                <span className="block text-[#0F4C82]">새로운 전환점</span>
+                {t("hoid.partnership.title")}
+                <span className="block text-[#0F4C82]">{t("hoid.partnership.subtitle")}</span>
               </h2>
 
               <div className="mb-8">
                 <div className="inline-flex items-center px-4 py-2 bg-[#0F4C82] text-white rounded-full text-sm font-medium mb-6">
                   <Calendar className="w-4 h-4 mr-2" />
-                  2025년 8월 16일
+                  {t("hoid.partnership.date")}
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4">
-                  중국 초대형 공기청정기 제조사와 MOU 체결
+                  {t("hoid.partnership.mou")}
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  HOID는 중국 최대 공기청정기 제조업체와 글로벌 유통 및 기술
-                  협력 MOU를 체결했습니다. 이를 통해 아시아 전역으로 사업 영역을
-                  확장하고, 더 많은 고객에게 깨끗한 공기를 제공할 예정입니다.
+                  {t("hoid.partnership.description")}
                 </p>
               </div>
 
@@ -211,19 +207,19 @@ export default function Hoid() {
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-4"></div>
                   <span className="text-gray-700 font-medium">
-                    아시아 전역 시장 진출
+                    {t("hoid.partnership.point1")}
                   </span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-4"></div>
                   <span className="text-gray-700 font-medium">
-                    기술 협력 및 공동 개발
+                    {t("hoid.partnership.point2")}
                   </span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-4"></div>
                   <span className="text-gray-700 font-medium">
-                    글로벌 유통망 확대
+                    {t("hoid.partnership.point3")}
                   </span>
                 </div>
               </div>
@@ -240,8 +236,8 @@ export default function Hoid() {
                 HOME SHOPPING LAUNCH
               </div>
               <h2 className="text-4xl font-bold text-[#000000] mb-6 leading-tight">
-                TV 속으로 들어간
-                <span className="block text-[#0F4C82]">프리미엄 디자인</span>
+                {t("hoid.homeshopping.title")}
+                <span className="block text-[#0F4C82]">{t("hoid.homeshopping.subtitle")}</span>
               </h2>
 
               <div className="mb-8">
