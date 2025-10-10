@@ -93,12 +93,12 @@ export default function Article() {
               className="text-gray-700 leading-relaxed space-y-6"
               // \n → <br/> 치환
               dangerouslySetInnerHTML={{
-                __html: article.content.replace(/\n/g, "<br/>"),
+                __html: t(`news.${articleId}.content`).replace(/\n/g, "<br/>"),
               }}
             />
           ) : (
             <div className="text-gray-700 leading-relaxed space-y-6">
-              <p>{article.summary}</p>
+              <p>{t(`news.${articleId}.summary`)}</p>
               <p className="text-gray-500 italic">
                 {t("news.coming_soon")}
               </p>
