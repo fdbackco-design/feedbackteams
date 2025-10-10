@@ -16,9 +16,11 @@ import {
   ArrowRight,
 } from "lucide-react";
 import inyourHeartVideo from "@assets/imyour_banner_1754643247969.mp4";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function InYourHeart() {
   const [, setLocation] = useLocation();
+  const { t } = useLanguage();
 
   return (
     <div>
@@ -43,7 +45,7 @@ export default function InYourHeart() {
               className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
-              브랜드 목록으로 돌아가기
+              {t("브랜드 목록으로 돌아가기")}
             </Button>
           </Link>
         </div>
@@ -56,11 +58,10 @@ export default function InYourHeart() {
                 IN YOUR HEART
               </h1>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white/90">
-                피부에 감성을 입히다
+                {t("inyourheart.hero.title")}
               </h2>
               <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
-                클린뷰티 철학과 감성적인 패키지 디자인으로 글로벌 K-뷰티 시장을
-                선도하는 프리미엄 스킨케어 브랜드입니다.
+                {t("inyourheart.hero.description")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4"></div>
             </div>
@@ -89,11 +90,11 @@ export default function InYourHeart() {
               BRAND VALUES
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-6">
-              감성이 담긴 뷰티 철학
+              {t("inyourheart.values.title")}
             </h2>
             <div className="w-32 h-1 bg-[#0F4C82] mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              피부에 순하고 마음까지 따뜻하게 만드는 감성 스킨케어
+              {t("inyourheart.values.subtitle")}
             </p>
           </div>
 

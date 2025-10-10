@@ -18,10 +18,12 @@ import { Link, useLocation } from "wouter";
 import asranMainImg from "@assets/Mask group_1754982638844.jpg";
 import asranVideo from "@assets/asran_self_1754985186297.mp4";
 import AsranLogo from "@/components/AsranLogo";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function AsranPage() {
   const [activeFeature, setActiveFeature] = useState(0);
   const [, setLocation] = useLocation();
+  const { t } = useLanguage();
   const heroRef = useRef<HTMLDivElement>(null);
   const featuresRef = useRef<HTMLDivElement>(null);
   const testimonialsRef = useRef<HTMLDivElement>(null);
@@ -154,14 +156,12 @@ export default function AsranPage() {
                   height="75"
                 />
                 <p className="text-2xl text-white font-semibold">
-                  독일 기술과 합리적 가격을 모두 갖춘 냄비
+                  {t("asran.hero.tagline")}
                 </p>
               </div>
 
               <p className="text-xl text-white/90 leading-relaxed">
-                SUS410 스테인리스 스틸과 3중 바닥구조로 뛰어난 열전도율과
-                내구성을 자랑합니다. 인덕션과 가스 겸용으로 어떤 주방환경에서도
-                완벽하게 사용 가능한 프리미엄 냄비입니다.
+                {t("asran.hero.description")}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -175,7 +175,7 @@ export default function AsranPage() {
                     size="lg"
                     className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#0F4C82] px-8 py-4 text-lg font-semibold"
                   >
-                    ASRAN 홈페이지 가기
+                    {t("asran.hero.cta")}
                   </Button>
                 </a>
               </div>
@@ -198,11 +198,10 @@ export default function AsranPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              ASRAN만의 특별한 기술
+              {t("asran.features.title")}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              독일의 정밀한 기술력과 한국의 실용성이 만나 탄생한 프리미엄
-              주방용품
+              {t("asran.features.subtitle")}
             </p>
           </div>
 

@@ -399,6 +399,56 @@ const translations = {
       "FeedBack과 함께 혁신적인 브랜드를 만들어보세요. 기획부터 유통까지 전 과정을 지원하여 성공적인 브랜드 런칭을 도와드립니다.",
     "파트너십 문의하기": "파트너십 문의하기",
 
+    // Brand Detail Pages - Common
+    "브랜드 목록으로 돌아가기": "브랜드 목록으로 돌아가기",
+
+    // Hoid Brand Page
+    "hoid.hero.title": "공기 속까지 바꾸는 디자인",
+    "hoid.hero.description": "미니멀한 디자인과 첨단 기술이 만나 일상의 공기질을 혁신하는 스마트 가전 브랜드입니다.",
+    "hoid.hero.cta": "Hoid 홈페이지 가기",
+    "hoid.features.title": "혁신적인 기술력",
+    "hoid.features.subtitle": "미니멀한 디자인 속에 숨어있는 첨단 기술로 완전히 새로운 공기청정 경험을 제공합니다",
+
+    // Asran Brand Page
+    "asran.hero.tagline": "독일 기술과 합리적 가격을 모두 갖춘 냄비",
+    "asran.hero.description": "SUS410 스테인리스 스틸과 3중 바닥구조로 뛰어난 열전도율과 내구성을 자랑합니다. 인덕션과 가스 겸용으로 어떤 주방환경에서도 완벽하게 사용 가능한 프리미엄 냄비입니다.",
+    "asran.hero.cta": "ASRAN 홈페이지 가기",
+    "asran.features.title": "ASRAN만의 특별한 기술",
+    "asran.features.subtitle": "독일의 정밀한 기술력과 한국의 실용성이 만나 탄생한 프리미엄 주방용품",
+
+    // Medifeed Brand Page
+    "medifeed.hero.title": "매일을 지키는 작은 습관",
+    "medifeed.hero.description": "잇몸과 눈 건강을 중심으로 한 기능성 영양제 브랜드로, 실용성과 안전성을 바탕으로 누구나 쉽게 선택할 수 있는 건강 솔루션을 제공합니다.",
+    "medifeed.features.title": "전문화된 건강 솔루션",
+    "medifeed.features.subtitle": "과학적 연구를 바탕으로 개발된 특화 영양제로 일상의 건강을 책임집니다",
+
+    // LaCeras Brand Page
+    "laceras.hero.title": "전통과 모던이 만나는",
+    "laceras.hero.subtitle": "프렌치 럭셔리",
+    "laceras.hero.description": "프랑스의 장인정신과 현대적 세련미를 결합한 럭셔리 캐리어 브랜드입니다. 비즈니스부터 럭셔리 여행까지 완벽한 트래블 솔루션을 제안합니다.",
+    "laceras.hero.cta": "La Ceras 홈페이지 가기",
+    "laceras.features.title": "프렌치 크래프트맨십",
+
+    // Carvella Brand Page
+    "carvella.hero.title": "이탈리아 장인의 정밀함",
+    "carvella.hero.subtitle": "당신의 주방으로",
+    "carvella.hero.description": "이탈리아 전통 장인정신으로 완성한 프리미엄 쿠킹웨어 브랜드입니다. 고급 스테인리스와 다층 구조로 뛰어난 열전도와 내구성을 자랑합니다.",
+    "carvella.hero.cta": "Carvella 홈페이지 가기",
+    "carvella.features.title": "이탈리아 장인정신",
+
+    // InYourHeart Brand Page
+    "inyourheart.hero.title": "피부에 감성을 입히다",
+    "inyourheart.hero.description": "클린뷰티 철학과 감성적인 패키지 디자인으로 글로벌 K-뷰티 시장을 선도하는 프리미엄 스킨케어 브랜드입니다.",
+    "inyourheart.values.title": "감성이 담긴 뷰티 철학",
+    "inyourheart.values.subtitle": "피부에 순하고 마음까지 따뜻하게 만드는 감성 스킨케어",
+
+    // Sangsaeng Brand Page
+    "sangsaeng.hero.title": "한국 의료를 세계로 연결하다",
+    "sangsaeng.hero.description": "메디컬 투어리즘부터 글로벌 헬스케어 플랫폼까지, 한국의 우수한 의료 서비스를 전 세계에 연결하는 종합 의료 플랫폼입니다.",
+    "sangsaeng.hero.cta": "상생 홈페이지 가기",
+    "sangsaeng.services.title": "글로벌 헬스케어 생태계",
+    "sangsaeng.services.subtitle": "의료 서비스부터 브랜딩까지, 통합된 헬스케어 솔루션을 제공합니다",
+
     // Footer
     "footer.company": "회사 정보",
     "footer.services": "서비스",
@@ -800,6 +850,56 @@ const translations = {
     "FeedBack과 함께 혁신적인 브랜드를 만들어보세요. 기획부터 유통까지 전 과정을 지원하여 성공적인 브랜드 런칭을 도와드립니다.":
       "Create an innovative brand with FeedBack. We support the entire process from planning to distribution to help you successfully launch your brand.",
     "파트너십 문의하기": "Inquire About Partnership",
+
+    // Brand Detail Pages - Common
+    "브랜드 목록으로 돌아가기": "Back to Brand List",
+
+    // Hoid Brand Page
+    "hoid.hero.title": "Design that Changes Even the Air",
+    "hoid.hero.description": "A smart home appliance brand that revolutionizes everyday air quality by combining minimalist design with cutting-edge technology.",
+    "hoid.hero.cta": "Visit Hoid Website",
+    "hoid.features.title": "Innovative Technology",
+    "hoid.features.subtitle": "Experience a completely new air purification with cutting-edge technology hidden within minimalist design",
+
+    // Asran Brand Page
+    "asran.hero.tagline": "Pots with Both German Technology and Reasonable Price",
+    "asran.hero.description": "Boasting excellent heat conductivity and durability with SUS410 stainless steel and triple-layer bottom structure. A premium pot that can be used perfectly in any kitchen environment, compatible with both induction and gas.",
+    "asran.hero.cta": "Visit ASRAN Website",
+    "asran.features.title": "ASRAN's Special Technology",
+    "asran.features.subtitle": "Premium kitchenware born from the meeting of Germany's precision technology and Korea's practicality",
+
+    // Medifeed Brand Page
+    "medifeed.hero.title": "Small Habits that Protect Every Day",
+    "medifeed.hero.description": "A functional nutritional supplement brand focused on gum and eye health, providing health solutions that anyone can easily choose based on practicality and safety.",
+    "medifeed.features.title": "Specialized Health Solutions",
+    "medifeed.features.subtitle": "Taking responsibility for everyday health with specialized supplements developed based on scientific research",
+
+    // LaCeras Brand Page
+    "laceras.hero.title": "Where Tradition Meets Modern",
+    "laceras.hero.subtitle": "French Luxury",
+    "laceras.hero.description": "A luxury carrier brand combining French craftsmanship with modern sophistication. Proposing perfect travel solutions from business to luxury travel.",
+    "laceras.hero.cta": "Visit La Ceras Website",
+    "laceras.features.title": "French Craftsmanship",
+
+    // Carvella Brand Page
+    "carvella.hero.title": "Italian Artisan Precision",
+    "carvella.hero.subtitle": "To Your Kitchen",
+    "carvella.hero.description": "A premium cookware brand completed with traditional Italian craftsmanship. Boasting excellent heat conduction and durability with premium stainless steel and multi-layer structure.",
+    "carvella.hero.cta": "Visit Carvella Website",
+    "carvella.features.title": "Italian Craftsmanship",
+
+    // InYourHeart Brand Page
+    "inyourheart.hero.title": "Adding Emotion to Your Skin",
+    "inyourheart.hero.description": "A premium skincare brand leading the global K-beauty market with clean beauty philosophy and emotional package design.",
+    "inyourheart.values.title": "Beauty Philosophy with Emotion",
+    "inyourheart.values.subtitle": "Emotional skincare that is gentle on the skin and warms the heart",
+
+    // Sangsaeng Brand Page
+    "sangsaeng.hero.title": "Connecting Korean Healthcare to the World",
+    "sangsaeng.hero.description": "A comprehensive medical platform connecting Korea's excellent medical services to the world, from medical tourism to global healthcare platforms.",
+    "sangsaeng.hero.cta": "Visit Sangsaeng Website",
+    "sangsaeng.services.title": "Global Healthcare Ecosystem",
+    "sangsaeng.services.subtitle": "Providing integrated healthcare solutions from medical services to branding",
 
     // Footer
     "footer.company": "Company Info",

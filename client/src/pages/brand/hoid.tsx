@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import HoidLogo from "@/components/HoidLogo";
 import LazyVideo from "@/components/LazyVideo";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 import flow_2025_04_17_193718625_1754623144595 from "@assets/flow_2025-04-17_193718625_1754623144595.png";
 import homeshoppingImage from "@assets/homeshopping_1754639787939.png";
@@ -25,6 +26,7 @@ import hoidVideo from "@assets/hoid_air_purifier.mp4";
 
 export default function Hoid() {
   const [, setLocation] = useLocation();
+  const { t } = useLanguage();
 
   return (
     <div>
@@ -52,7 +54,7 @@ export default function Hoid() {
               className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
-              브랜드 목록으로 돌아가기
+              {t("브랜드 목록으로 돌아가기")}
             </Button>
           </Link>
         </div>
@@ -65,11 +67,10 @@ export default function Hoid() {
                 <HoidLogo className="h-20 md:h-24" fill="white" />
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                공기 속까지 바꾸는 디자인
+                {t("hoid.hero.title")}
               </h1>
               <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
-                미니멀한 디자인과 첨단 기술이 만나 일상의 공기질을 혁신하는
-                스마트 가전 브랜드입니다.
+                {t("hoid.hero.description")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -82,7 +83,7 @@ export default function Hoid() {
                     size="lg"
                     className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#0F4C82] px-8 py-4 text-lg font-semibold"
                   >
-                    Hoid 홈페이지 가기
+                    {t("hoid.hero.cta")}
                   </Button>
                 </a>
               </div>
@@ -111,12 +112,11 @@ export default function Hoid() {
               PRODUCT FEATURES
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-6">
-              혁신적인 기술력
+              {t("hoid.features.title")}
             </h2>
             <div className="w-32 h-1 bg-[#0F4C82] mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              미니멀한 디자인 속에 숨어있는 첨단 기술로 완전히 새로운 공기청정
-              경험을 제공합니다
+              {t("hoid.features.subtitle")}
             </p>
           </div>
 

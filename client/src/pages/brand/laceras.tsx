@@ -23,9 +23,11 @@ import lacerasLogo from "@/assets/brand/laceras_logo.png";
 import lacerasHero from "@/assets/brand/laceras_hero.png";
 import lacerasVideo from "@assets/freepik__closeup-zoomin-of-a-small-black-luxury-suitcase-sm__23771_1759112696236.mp4";
 import lacerasCarri from "@/assets/brand/carri-scene.png";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function LaCeras() {
   const [, setLocation] = useLocation();
+  const { t } = useLanguage();
 
   return (
     <div>
@@ -53,7 +55,7 @@ export default function LaCeras() {
               className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
-              브랜드 목록으로 돌아가기
+              {t("브랜드 목록으로 돌아가기")}
             </Button>
           </Link>
         </div>
@@ -70,13 +72,11 @@ export default function LaCeras() {
                 />
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                전통과 모던이 만나는
-                <span className="block text-[#FFD700]">프렌치 럭셔리</span>
+                {t("laceras.hero.title")}
+                <span className="block text-[#FFD700]">{t("laceras.hero.subtitle")}</span>
               </h1>
               <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
-                프랑스의 장인정신과 현대적 세련미를 결합한 럭셔리 캐리어
-                브랜드입니다. 비즈니스부터 럭셔리 여행까지 완벽한 트래블
-                솔루션을 제안합니다.
+                {t("laceras.hero.description")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -89,7 +89,7 @@ export default function LaCeras() {
                     size="lg"
                     className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#0F4C82] px-8 py-4 text-lg font-semibold"
                   >
-                    La Ceras 홈페이지 가기
+                    {t("laceras.hero.cta")}
                   </Button>
                 </a>
               </div>
@@ -120,7 +120,7 @@ export default function LaCeras() {
               PREMIUM FEATURES
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-6">
-              프렌치 크래프트맨십
+              {t("laceras.features.title")}
             </h2>
             <div className="w-32 h-1 bg-[#233A73] mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">

@@ -18,9 +18,11 @@ import {
 } from "lucide-react";
 import MedifeedLogo from "@/components/MedifeedLogo";
 import medifeedVideo from "@assets/medifeed_1754647409969.mp4";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Medifeed() {
   const [, setLocation] = useLocation();
+  const { t } = useLanguage();
 
   return (
     <div>
@@ -45,7 +47,7 @@ export default function Medifeed() {
               className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
-              브랜드 목록으로 돌아가기
+              {t("브랜드 목록으로 돌아가기")}
             </Button>
           </Link>
         </div>
@@ -58,12 +60,10 @@ export default function Medifeed() {
                 <MedifeedLogo className="h-20 md:h-24" />
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                매일을 지키는 작은 습관
+                {t("medifeed.hero.title")}
               </h1>
               <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
-                잇몸과 눈 건강을 중심으로 한 기능성 영양제 브랜드로, 실용성과
-                안전성을 바탕으로 누구나 쉽게 선택할 수 있는 건강 솔루션을
-                제공합니다.
+                {t("medifeed.hero.description")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4"></div>
             </div>
@@ -91,12 +91,11 @@ export default function Medifeed() {
               PRODUCT CATEGORIES
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-6">
-              전문화된 건강 솔루션
+              {t("medifeed.features.title")}
             </h2>
             <div className="w-32 h-1 bg-[#0F4C82] mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              과학적 연구를 바탕으로 개발된 특화 영양제로 일상의 건강을
-              책임집니다
+              {t("medifeed.features.subtitle")}
             </p>
           </div>
 

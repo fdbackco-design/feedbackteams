@@ -23,9 +23,11 @@ import LazyVideo from "@/components/LazyVideo";
 import carvellaLogo from "@/assets/brand/carll.png";
 import carvella from "@/assets/brand/car44.png";
 import carvellaVideo from "@assets/freepik__cinematic-video-starting-from-the-provided-referen__97177_1759116548781.mp4";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Carvella() {
   const [, setLocation] = useLocation();
+  const { t } = useLanguage();
 
   return (
     <div>
@@ -53,7 +55,7 @@ export default function Carvella() {
               className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
-              브랜드 목록으로 돌아가기
+              {t("브랜드 목록으로 돌아가기")}
             </Button>
           </Link>
         </div>
@@ -70,13 +72,11 @@ export default function Carvella() {
                 />
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                이탈리아 장인의 정밀함
-                <span className="block text-[#D4AF37]">당신의 주방으로</span>
+                {t("carvella.hero.title")}
+                <span className="block text-[#D4AF37]">{t("carvella.hero.subtitle")}</span>
               </h1>
               <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
-                이탈리아 전통 장인정신으로 완성한 프리미엄 쿠킹웨어
-                브랜드입니다. 고급 스테인리스와 다층 구조로 뛰어난 열전도와
-                내구성을 자랑합니다.
+                {t("carvella.hero.description")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -89,7 +89,7 @@ export default function Carvella() {
                     size="lg"
                     className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#0F4C82] px-8 py-4 text-lg font-semibold"
                   >
-                    Carvella 홈페이지 가기
+                    {t("carvella.hero.cta")}
                   </Button>
                 </a>
               </div>
@@ -119,7 +119,7 @@ export default function Carvella() {
               PREMIUM TECHNOLOGY
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-6">
-              이탈리아 장인정신
+              {t("carvella.features.title")}
             </h2>
             <div className="w-32 h-1 bg-[#6C2F1E] mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">

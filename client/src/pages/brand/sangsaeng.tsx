@@ -20,9 +20,11 @@ import {
 } from "lucide-react";
 import SangsaengLogo from "@/components/SangsaengLogo";
 import medicalVideo from "@assets/medical_1754647118451.mp4";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Sangsaeng() {
   const [, setLocation] = useLocation();
+  const { t } = useLanguage();
   return (
     <div>
       {/* Hero Section with Video Background */}
@@ -46,7 +48,7 @@ export default function Sangsaeng() {
               className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
-              브랜드 목록으로 돌아가기
+              {t("브랜드 목록으로 돌아가기")}
             </Button>
           </Link>
         </div>
@@ -59,11 +61,10 @@ export default function Sangsaeng() {
                 <SangsaengLogo className="h-20 md:h-24" fill="white" />
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                한국 의료를 세계로 연결하다
+                {t("sangsaeng.hero.title")}
               </h1>
               <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
-                메디컬 투어리즘부터 글로벌 헬스케어 플랫폼까지, 한국의 우수한
-                의료 서비스를 전 세계에 연결하는 종합 의료 플랫폼입니다.
+                {t("sangsaeng.hero.description")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
@@ -76,7 +77,7 @@ export default function Sangsaeng() {
                     size="lg"
                     className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#0F4C82] px-8 py-4 text-lg font-semibold"
                   >
-                    상생 홈페이지 가기
+                    {t("sangsaeng.hero.cta")}
                   </Button>
                 </a>
               </div>
@@ -106,11 +107,11 @@ export default function Sangsaeng() {
               SERVICE PORTFOLIO
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-6">
-              글로벌 헬스케어 생태계
+              {t("sangsaeng.services.title")}
             </h2>
             <div className="w-32 h-1 bg-[#0F4C82] mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              의료 서비스부터 브랜딩까지, 통합된 헬스케어 솔루션을 제공합니다
+              {t("sangsaeng.services.subtitle")}
             </p>
           </div>
 
