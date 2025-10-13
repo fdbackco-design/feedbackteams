@@ -23,6 +23,7 @@ import lacerasLogo from "@/assets/brand/laceras_logo.png";
 import lacerasHero from "@/assets/brand/laceras_hero.png";
 import lacerasVideo from "@assets/freepik__closeup-zoomin-of-a-small-black-luxury-suitcase-sm__23771_1759112696236.mp4";
 import lacerasCarri from "@/assets/brand/carri-scene.png";
+import FranceImage from "@/assets/brand/carria.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function LaCeras() {
@@ -182,13 +183,12 @@ export default function LaCeras() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
               <div className="relative">
-                <div className="w-full h-96 bg-gradient-to-br from-[#233A73] to-[#E31E24] rounded-3xl flex items-center justify-center shadow-2xl">
-                  <div className="text-center text-white">
-                    <div className="text-6xl font-bold mb-4">🇫🇷</div>
-                    <div className="text-2xl font-bold">FRANCE</div>
-                    <div className="text-lg opacity-90">Since 1950</div>
-                  </div>
-                </div>
+                <div
+                  className="w-full h-96 bg-cover bg-center rounded-3xl shadow-2xl"
+                  style={{
+                    backgroundImage: `url(${FranceImage})`,
+                  }}
+                ></div>
               </div>
             </div>
             <div className="order-1 lg:order-2">
@@ -279,7 +279,7 @@ export default function LaCeras() {
                 </div>
                 <div className="text-center p-6 bg-gray-50 rounded-xl">
                   <div className="text-3xl font-bold text-[#233A73] mb-2">
-                    50+
+                    3+
                   </div>
                   <div className="text-sm text-gray-600">
                     {t("laceras.travel.stores")}

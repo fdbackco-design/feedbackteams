@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import pot from "@assets/pot.jpeg";
 import homeshoppingImage from "@assets/s1.jpeg";
+import pan from "@assets/pan.jpg";
 import {
   ChefHat,
   Shield,
@@ -340,7 +341,7 @@ export default function AsranPage() {
             <div className="order-2 lg:order-1">
               <div className="relative">
                 <img
-                  src={pot}
+                  src={pan}
                   alt={productSizes[2].type}
                   className="w-full rounded-3xl shadow-2xl"
                 />

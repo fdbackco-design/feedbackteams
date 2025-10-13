@@ -150,7 +150,7 @@ const translations = {
     "brands.asran.products.2": "인덕션 & 가스 겸용",
     "brands.asran.products.3": "프리미엄 마감",
     "brands.laceras.category": "프랑스 럭셔리 캐리어 브랜드",
-    "brands.laceras.slogan": "전통과 모던이 만나는 프렌�.� 럭셔리 트래블",
+    "brands.laceras.slogan": "전통과 모던이 만나는 프렌치 럭셔리 트래블",
     "brands.laceras.description":
       "프랑스의 장인정신과 현대적 세련미를 결합한 럭셔리 캐리어 브랜드입니다. 폴리카보네이트 하드셸, 정교한 마감과 균형 잡힌 디자인으로 비즈니스부터 라그주어리 여행까지 완벽한 트래블 솔루션을 제안합니다.",
     "brands.laceras.products.0": "하드셸 캐리어",
@@ -172,8 +172,8 @@ const translations = {
     "ui.learn_more": "자세히 보기",
 
     // B2B2C Section
-    "b2b2c.header.title": "제조사부터 소비자음지",
-    "b2b2c.header.subtitle": "완 ����한 유통 생태계를 구축합니다.",
+    "b2b2c.header.title": "제조사부터 소비자까지",
+    "b2b2c.header.subtitle": "완전한 유통 생태계를 구축합니다.",
     "b2b2c.b2b.title": "B2B 제조사",
     "b2b2c.b2b.description":
       "품질 높은 제품을 생산하는 제조사와 전략적 파트너십을 구축합니다",
@@ -238,12 +238,12 @@ const translations = {
       "Hoid는 제품의 품질과 신뢰성을 직접 확인하기 위해 최근 Hoid 무선 청소기 생산 공장을 방문했습니다.",
     "news.2.content":
       "Hoid는 제품의 품질과 신뢰성을 직접 확인하기 위해 최근 Hoid 무선 청소기 생산 공장을 방문했습니다. 생산 현장에서는 최신 자동화 라인과 숙련된 기술 인력이 협력하여 완벽한 품질의 제품을 생산하고 있었으며, 각 단계별로 엄격한 품질 관리 절차가 적용되고 있었습니다. 특히, 배터리 내구성 테스트와 모터 성능 점검 등 출고 전 필수 검증 과정을 거쳐 소비자에게 최상의 상태로 전달되도록 하고 있습니다. 이번 공장 방문은 Hoid가 추구하는 품질 우선 철학을 현장에서 다시 한번 확인하는 중요한 계기가 되었습니다.",
-    "news.3.date": "2025.08.14",
-    "news.3.title": "쥬얼리·그릇 신제품 출시 예정",
+    "news.3.date": "2025.10.13",
+    "news.3.title": "ASRAN·Carvella·La Ceras 브랜드 독점 총판 계약 체결",
     "news.3.summary":
-      "Hoid는 가전제품을 넘어 소비자의 일상을 전반적으로 아우르는 토탈 라이프스타일 브랜드로 도약을 준비하고 있습니다.",
+      "Feedback은 글로벌 프리미엄 주방·리빙 브랜드 ASRAN, Carvella와 럭셔리 캐리어 브랜드 La Ceras의 국내 독점 총판권을 확보했습니다.",
     "news.3.content":
-      "Hoid는 가전제품을 넘어 소비자의 일상을 전반적으로 아우르는 토탈 라이프스타일 브랜드로 도약을 준비하고 있습니다. 향후 계획에는 프리미엄 쥬얼리 라인과 고급 그릇 컬렉션 출시가 포함되어 있으며, 각각 세심한 디자인과 고품질 소재를 바탕으로 제작됩니다. 쥬얼리 라인은 특별한 날을 더욱 빛나게 해줄 세련된 디자id�과 장인정신이 깃든 마감 처리가 특징이며, 그릇 라인은 미니멀하면서도 우아한 라인을 살려, 식탁 위 품격을 높이는 제품으로 선보일 예정입니다. Hoid는 앞으로도 다양한 카테고리에서 혁신과 아름다움을 동시에 제공하며, 소비자의 라이프스타일 가치를 높이는 것을 목표로 하고 있습니다.",
+      "Feedback은 글로벌 프리미엄 주방·리빙 브랜드 ASRAN, Carvella와 럭셔리 캐리어 브랜드 La Ceras와 독점 총판 계약을 체결했습니다. 이번 계약을 통해 Feedback은 세 브랜드의 전 제품에 대한 국내 유통, 마케팅, 고객 서비스 전반을 담당하게 됩니다. ASRAN은 스테인리스 하이엔드 쿡웨어 브랜드로, 정밀한 열전도 기술과 세련된 디자인으로 유명합니다. Carvella는 이탈리아 감성을 담은 프리미엄 키친 브랜드로, 숙련된 장인의 노하우를 바탕으로 제작된 제품군을 선보입니다. La Ceras는 하이브리드 소재와 세련된 디자인으로 주목받는 프리미엄 캐리어 브랜드입니다. Feedback은 이번 독점 계약을 통해 글로벌 프리미엄 리빙 브랜드를 국내 시장에 소개하고, 지속적인 품질 관리와 브랜드 가치 강화를 통해 소비자에게 새로운 라이프스타일 경험을 제공할 계획입니다.",
     "news.4.date": "2025.09.01",
     "news.4.title": "Hoid 공기청정기 2세대 출시",
     "news.4.summary":
@@ -256,6 +256,12 @@ const translations = {
       "Hoid의 프리미엄 무선 청소기가 공식적으로 출시되었습니다.",
     "news.5.content":
       "Hoid의 프리미엄 무선 청소기가 공식적으로 출시되었습니다. 이 제품은 고성능 모터와 강력한 흡입력, 장시간 사용이 가능한 고효율 배터리를 갖추어 대형 주택부터 소형 공간까지 효율적으로 청소할 수 있습니다. 또한, 무게를 최소화한 인체공학적 설계로 손목 부담을 줄였으며, 브러시 헤드 교체를 통해 바닥, 카펫, 침구 등 다양한 환경에서 최적의 성능을 발휘합니다. 먼지통과 필터는 물세척이 가능하여 위생적으로 관리할 수 있고, 모든 구성품은 사용 편의성을 최우선으로 설계되었습니다. 이번 출시를 통해 Hoid는 청소기 시장에서도 새로운 기준을 제시하고 있습니다.",
+    "news.6.date": "2025.08.14",
+    "news.6.title": "쥬얼리·그릇 신제품 출시 예정",
+    "news.6.summary":
+      "Hoid는 가전제품을 넘어 소비자의 일상을 전반적으로 아우르는 토탈 라이프스타일 브랜드로 도약을 준비하고 있습니다.",
+    "news.6.content":
+      "Hoid는 가전제품을 넘어 소비자의 일상을 전반적으로 아우르는 토탈 라이프스타일 브랜드로 도약을 준비하고 있습니다. 향후 계획에는 프리미엄 쥬얼리 라인과 고급 그릇 컬렉션 출시가 포함되어 있으며, 각각 세심한 디자인과 고품질 소재를 바탕으로 제작됩니다. 쥬얼리 라인은 특별한 날을 더욱 빛나게 해줄 세련된 디자인과 장인정신이 깃든 마감 처리가 특징이며, 그릇 라인은 미니멀하면서도 우아한 라인을 살려, 식탁 위 품격을 높이는 제품으로 선보일 예정입니다. Hoid는 앞으로도 다양한 카테고리에서 혁신과 아름다움을 동시에 제공하며, 소비자의 라이프스타일 가치를 높이는 것을 목표로 하고 있습니다.",
 
     // Stats Section
     "stats.title": "성장하는",
@@ -318,7 +324,7 @@ const translations = {
     "contact.form.privacy.error.description":
       "진행을 위해 개인정보 처리방침에 동의해주세요.",
     "contact.form.submit": "문의 보내기",
-    "contact.form.sending": "발송 중...",
+    "contact.form.sending": "발송하기...",
 
     "contact.errors.required.title": "입력 오류",
     "contact.errors.required.description":
@@ -342,7 +348,7 @@ const translations = {
     "about.story.main":
       '<span class="text-white">피드백은 브랜드의 성장을 <br>유통으로 설계합니다.</span>',
     "about.story.sub":
-      'Hoid, Medifeed, InYourHeart, 상생 등 자체 브랜드와 글로벌 파트너십을 기반으로,<br class="hidden sm:block"/>기획부터 제조·유통·브랜딩까지 전 과정�L� 함께합니다.',
+      'Hoid, Medifeed, InYourHeart, 상생 등 자체 브랜드와 글로벌 파트너십을 기반으로,<br class="hidden sm:block"/>기획부터 제조·유통·브랜딩까지 전 과정을 함께합니다.',
     "about.story.detail":
       '고객의 삶 속에 스며든 FeedBack의 브랜드 하나하나가 고객 여러분의 하루를<br class="hidden sm:block"/>더욱 편리하고 행복하게 만들 수 있도록 언제나 노력하는 FeedBack이 되겠습니다.',
     "about.banner.title":
@@ -367,7 +373,7 @@ const translations = {
     "about.timeline.type.product": "제품출시",
     "about.timeline.type.founding": "창립",
     "about.philosophy.value1.title":
-      ' ��객·파트너 중심: \'공생\'의 유통 모델을<br class="block lg:hidden"/><br class="hidden lg:block"/> 실현합니다',
+      ' 고객·파트너 중심: \'공생\'의 유통 모델을<br class="block lg:hidden"/><br class="hidden lg:block"/> 실현합니다',
     "about.philosophy.value1.description":
       'FeedBack은 단순히 물건을 사고파는 곳이 아닌,<br class="hidden lg:block"/>제조사·브랜드·소매처가 함께 성장할 수 있는 유통 생태계를 구축합니다.<br/><br/>고객사와 파트너의 신뢰를 기반으로 장기 협력과 함께 발전하는<br class="hidden lg:block"/>구조를 설계하며,<br class="hidden sm:block lg:hidden"/><span class="font-semibold text-[0F4C82]">모두가 지속 가능한 이익을 나누는 상생 플랫폼</span>을 <br class="block lg:hidden"/>지향합니다.',
     "about.philosophy.value2.title":
@@ -414,10 +420,10 @@ const translations = {
     "Hoid, Medifeed, InYourHeart, 상생 등 4개 자체 브랜드의 제조 및 OEM 생산을 통해 브랜드 성장을 지원합니다. 품질 관리부터 제품 개발까지 전 과정을 책임집니다.":
       "Hoid, Medifeed, InYourHeart, 상생 등 4개 자체 브랜드의 제조 및 OEM 생산을 통해 브랜드 성장을 지원합니다. 품질 관리부터 제품 개발까지 전 과정을 책임집니다.",
     "글로벌 마케팅/브랜딩": "글로벌 마케팅/브랜딩",
-    "홈쇼핑 연계와 디지털 마케팅을 통한 글로벌 브랜딩 솔루션을 제공합니다. 브랜드 아이덴티티 개발부터 글로벌 시장 진출 전략까지 종합적인 마케팅 서비L��를 지원합니다.":
+    "홈쇼핑 연계와 디지털 마케팅을 통한 글로벌 브랜딩 솔루션을 제공합니다. 브랜드 아이덴티티 개발부터 글로벌 시장 진출 전략까지 종합적인 마케팅 서비스를 지원합니다.":
       "홈쇼핑 연계와 디지털 마케팅을 통한 글로벌 브랜딩 솔루션을 제공합니다. 브랜드 아이덴티티 개발부터 글로벌 시장 진출 전략까지 종합적인 마케팅 서비스를 지원합니다.",
     "의료관광 플랫폼": "의료관광 플랫폼",
-    "상생 브랜드를 통한 의료관광 플랫폼 운영으로 한국의 우수한 의료 서비스를 전 세계에 연결합니다. 태국, 베트남을 시작으로 아시아 전역으로 서비스를 확장하고 있s �니다.":
+    "상생 브랜드를 통한 의료관광 플랫폼 운영으로 한국의 우수한 의료 서비스를 전 세계에 연결합니다. 태국, 베트남을 시작으로 아시아 전역으로 서비스를 확장하고 있습니다.":
       "상생 브랜드를 통한 의료관광 플랫폼 운영으로 한국의 우수한 의료 서비스를 전 세계에 연결합니다. 태국, 베트남을 시작으로 아시아 전역으로 서비스를 확장하고 있습니다.",
     "앱 개발": "앱 개발",
     "의료/케어 통합 앱 개발로 디지털 헬스케어 솔루션을 제공합니다. 다국어 지원과 실시간 상담 기능을 통해 글로벌 사용자들에게 편리한 서비스를 제공합니다.":
@@ -435,7 +441,7 @@ const translations = {
 
     // Brand Page
     "브랜드 소개": "브랜드 소개",
-    "혁신적인 기술과 디자인을 바탕으로 한 FeedBack의 자체 n��n ���드들을 소개합니다.각 브랜드는 고유한 가치와 비전을 가지고 고객에게 최고의 경험을 제공합니다.":
+    "혁신적인 기술과 디자인을 바탕으로 한 FeedBack의 자체 브랜드들을 소개합니다.각 브랜드는 고유한 가치와 비전을 가지고 고객에게 최고의 경험을 제공합니다.":
       "혁신적인 기술과 디자인을 바탕으로 한 FeedBack의 자체 브랜드들을 소개합니다.각 브랜드는 고유한 가치와 비전을 가지고 고객에게 최고의 경험을 제공합니다.",
     "브랜드 파트너십에 관심이 있으신가요?":
       "브랜드 파트너십에 관심이 있으신가요?",
@@ -531,13 +537,13 @@ const translations = {
     "laceras.features.title": "프렌치 크래프트맨십",
     "laceras.features.subtitle":
       "정교한 마감과 균형 잡힌 디자인으로 완성된 프리미엄 럭셔리 트래블 경험",
-    "laceras.feature1.title": "폴리카보네이트 하드셸",
+    "laceras.feature1.title": "하이브리드 구조",
     "laceras.feature1.description":
-      "충격에 강하고 가벼운 프리미엄 소재로 소중한 짐을 안전하게 보호",
-    "laceras.feature2.title": "TSA 승인 락",
+      "PP의 유연성과 PC의 강성을 결합하여 가볍고 튼튼한 바디 구현",
+    "laceras.feature2.title": "Sinking Ordinary Lock",
     "laceras.feature2.description":
-      "국제공항 보안검색대 통과 시 안전하고 편리한 TSA 승인 보안 시스템",
-    "laceras.feature3.title": "360° 듀얼 휠",
+      "기본 락 구조를 상판과 균형감 있게 낮춰 스크래치 포인트 최소화",
+    "laceras.feature3.title": "무소음 휠 & 안정적 베어링 시스템",
     "laceras.feature3.description":
       "어떤 방향으로든 부드럽고 조용한 이동이 가능한 프리미엄 휠 시스템",
     "laceras.heritage.title": "프랑스 장인 정신의",
@@ -545,14 +551,16 @@ const translations = {
     "laceras.heritage.heading": "세대를 넘나드는 크래프트맨십",
     "laceras.heritage.description":
       "1950년부터 시작된 La Ceras의 여정은 프랑스 전통 장인정신과 현대적 혁신이 만나는 지점에서 계속되고 있습니다. 세심한 디테일과 완벽한 마감으로 럭셔리 트래블의 새로운 기준을 제시합니다.",
-    "laceras.heritage.point1": "프랑스 전통 가죽공예 기법 적용",
-    "laceras.heritage.point2": "유럽 프리미엄 소재 엄선 사용",
-    "laceras.heritage.point3": "수작업 마감과 품질 검수",
+
+    "laceras.heritage.point1": "14인치, 20인치, 24인치, 28인치 올인원 구성",
+    "laceras.heritage.point2": "210D 베어링으로 손목 피로 최소화",
+    "laceras.heritage.point3": "PP & PC 하이브리드 구조",
+
     "laceras.travel.title": "비즈니스부터 럭셔리까지",
     "laceras.travel.subtitle": "완벽한 트래블 솔루션",
     "laceras.travel.heading": "모든 여행의 순간을 특별하게",
     "laceras.travel.description":
-      "La Ceras는 단순한 캐리어가 아닌 여행 �� 파hi�너입니다. 비즈니스 출장부터 로맨틱한 허니문, 가족 여행까지 모든 순간을 더욱 세련되고 편안하게 만들어드립니다.",
+      "La Ceras는 단순한 캐리어가 아닌 여행 파트너입니다. 비즈니스 출장부터 로맨틱한 허니문, 가족 여행까지 모든 순간을 더욱 세련되고 편안하게 만들어드립니다.",
     "laceras.travel.size": "사이즈 옵션",
     "laceras.travel.warranty": "년 보증",
     "laceras.travel.stores": "글로벌 매장",
@@ -631,6 +639,23 @@ const translations = {
     "carvella.cta.subtitle": "프리미엄 쿠킹",
     "carvella.cta.description":
       "이탈리아 장인정신으로 완성된 프리미엄 쿠킹웨어로 당신의 요리를 더욱 특별하게 만들어보세요",
+    "carvella.good1.badge": "GOOD 01",
+    "carvella.good1.title": "스테인리스 도마",
+    "carvella.good1.description":
+      "304 스테인리스 스틸로 제작되어 위생적이고 내구성이 뛰어난 도마입니다. 음식물 착색과 냄새가 남지 않아 언제나 깔끔하게 사용할 수 있습니다.",
+    "carvella.good1.detail1": "위생적인 304 스테인리스 소재",
+    "carvella.good1.detail2": "긁힘·변형에 강한 높은 내구성",
+    "carvella.good1.detail3": "물세척만으로 간편한 관리",
+    "carvella.good1.detail4": "논슬립 구조로 안정감 있는 사용",
+
+    "carvella.good2.badge": "GOOD 02",
+    "carvella.good2.title": "6종 칼 세트",
+    "carvella.good2.description":
+      "가위, 중식도, 감자칼 등 6종 구성으로 다양한 재료를 손쉽게 조리할 수 있습니다.",
+    "carvella.good2.detail1": "6종 올인원",
+    "carvella.good2.detail2": "인체공학적 손잡이로 편안한 그립",
+    "carvella.good2.detail3": "뛰어난 절삭력",
+    "carvella.good2.detail4": "가정용·업소용 모두 적합",
 
     // InYourHeart Brand Page
     "inyourheart.hero.title": "피부에 감성을 입히다",
@@ -1013,12 +1038,13 @@ const translations = {
       "Hoid recently visited the Hoid cordless vacuum cleaner production factory to directly verify product quality and reliability.",
     "news.2.content":
       'Hoid recently visited the Hoid cordless vacuum cleaner production factory to directly verify product quality and reliability. At the production site, the latest automation lines and skilled technical personnel were cooperating to produce products of perfect quality, with strict quality control procedures applied at each stage. In particular, essential verification processes before shipment, such as battery durability testing and motor performance inspection, are conducted to ensure delivery to consumers in the best condition. This factory visit was an important opportunity to reaffirm on-site Hoid\'s "quality first" philosophy.',
-    "news.3.date": "2025.08.14",
-    "news.3.title": "Jewelry & Tableware New Products Coming Soon",
+    "news.3.date": "2025.10.13",
+    "news.3.title":
+      "Feedback Signs Exclusive Distribution Agreement for ASRAN, Carvella, and La Ceras",
     "news.3.summary":
-      "Hoid is preparing to leap forward as a total lifestyle brand that comprehensively encompasses consumers' daily lives beyond home appliances.",
+      "Feedback has secured the exclusive domestic distribution rights for the global premium kitchen and lifestyle brands ASRAN, Carvella, and La Ceras.",
     "news.3.content":
-      "Hoid is preparing to leap forward as a total lifestyle brand that comprehensively encompasses consumers' daily lives beyond home appliances. Future plans include launching a premium jewelry line and luxury tableware collection, each produced based on meticulous design and high-quality materials. The jewelry line features refined design and craftsmanship finishing that will make special days shine even brighter, while the tableware line will be presented as products that enhance table elegance with minimal yet elegant lines. Hoid aims to continue providing innovation and beauty simultaneously in various categories, enhancing consumers' lifestyle values.",
+      "Feedback has officially signed an exclusive distribution agreement with the global premium kitchen and lifestyle brands ASRAN, Carvella, and La Ceras. Under this partnership, Feedback will manage all aspects of domestic distribution, marketing, and customer service for the three brands. ASRAN is a high-end stainless steel cookware brand renowned for its precise heat conduction technology and refined design. Carvella represents the essence of Italian craftsmanship, offering premium kitchenware created through skilled artisan expertise. La Ceras is a luxury luggage brand recognized for its innovative hybrid materials and sophisticated aesthetics. Through this exclusive agreement, Feedback aims to introduce these global premium lifestyle brands to the domestic market, enhancing consumer experiences through continuous quality management and brand value development.",
     "news.4.date": "2025.09.01",
     "news.4.title": "Hoid Air Purifier 2nd Generation Launch",
     "news.4.summary":
@@ -1031,6 +1057,12 @@ const translations = {
       "Hoid's premium cordless vacuum cleaner has been officially launched.",
     "news.5.content":
       "Hoid's premium cordless vacuum cleaner has been officially launched. This product is equipped with a high-performance motor, powerful suction, and a high-efficiency battery that allows long-term use, enabling efficient cleaning from large houses to small spaces. In addition, it reduces wrist strain with an ergonomic design that minimizes weight, and by replacing the brush head, it demonstrates optimal performance in various environments such as floors, carpets, and bedding. The dust bin and filter are water-washable for hygienic management, and all components are designed with user convenience as the top priority. Through this launch, Hoid is presenting new standards in the vacuum cleaner market as well.",
+    "news.6.date": "2025.08.14",
+    "news.6.title": "Jewelry & Tableware New Products Coming Soon",
+    "news.6.summary":
+      "Hoid is preparing to leap forward as a total lifestyle brand that comprehensively encompasses consumers' daily lives beyond home appliances.",
+    "news.6.content":
+      "Hoid is preparing to leap forward as a total lifestyle brand that comprehensively encompasses consumers' daily lives beyond home appliances. Future plans include launching a premium jewelry line and luxury tableware collection, each produced based on meticulous design and high-quality materials. The jewelry line features refined design and craftsmanship finishing that will make special days shine even brighter, while the tableware line will be presented as products that enhance table elegance with minimal yet elegant lines. Hoid aims to continue providing innovation and beauty simultaneously in various categories, enhancing consumers' lifestyle values.",
 
     // Stats Section
     "stats.title": "Growing",
@@ -1295,25 +1327,29 @@ const translations = {
     "laceras.features.title": "French Craftsmanship",
     "laceras.features.subtitle":
       "Premium luxury travel experience completed with sophisticated finish and balanced design",
-    "laceras.feature1.title": "Polycarbonate Hardshell",
+    "laceras.feature1.title": "Hybrid Structure",
     "laceras.feature1.description":
-      "Safely protects your precious belongings with premium materials that are impact-resistant and lightweight",
-    "laceras.feature2.title": "TSA Approved Lock",
+      "Combines the flexibility of PP with the rigidity of PC to create a lightweight yet durable body.",
+
+    "laceras.feature2.title": "Sinking Ordinary Lock",
     "laceras.feature2.description":
-      "Safe and convenient TSA approved security system for international airport security checkpoints",
-    "laceras.feature3.title": "360° Dual Wheel",
+      "The lock is seamlessly integrated into the upper shell, minimizing scratch points and maintaining a sleek balance.",
+
+    "laceras.feature3.title": "Silent Wheels & Stable Bearing System",
     "laceras.feature3.description":
-      "Premium wheel system enabling smooth and quiet movement in any direction",
+      "Premium wheel system designed for smooth and quiet movement in any direction.",
+
     "laceras.heritage.title": "70-Year Tradition of",
     "laceras.heritage.subtitle": "French Craftsmanship",
     "laceras.heritage.heading": "Craftsmanship Across Generations",
     "laceras.heritage.description":
       "La Ceras' journey, which began in 1950, continues at the intersection where French traditional craftsmanship meets modern innovation. We set new standards for luxury travel with meticulous details and perfect finishing.",
+
     "laceras.heritage.point1":
-      "Application of traditional French leathercraft techniques",
-    "laceras.heritage.point2":
-      "Use of carefully selected European premium materials",
-    "laceras.heritage.point3": "Handcrafted finishing and quality inspection",
+      "All-in-one lineup: 14”, 20”, 24”, and 28” sizes",
+    "laceras.heritage.point2": "210D bearing system to minimize wrist fatigue",
+    "laceras.heritage.point3": "PP & PC hybrid body structure",
+
     "laceras.travel.title": "From Business to Luxury",
     "laceras.travel.subtitle": "Perfect Travel Solution",
     "laceras.travel.heading": "Making Every Travel Moment Special",
@@ -1401,6 +1437,24 @@ const translations = {
     "carvella.cta.subtitle": "with Carvella",
     "carvella.cta.description":
       "Make your cooking even more special with premium cookware completed with Italian craftsmanship",
+    "carvella.good1.badge": "GOOD 01",
+    "carvella.good1.title": "Stainless Cutting Board (304)",
+    "carvella.good1.description":
+      "Made from 304 stainless steel, this cutting board offers superior hygiene and durability. It resists stains and odors, keeping your prep surface clean every time.",
+    "carvella.good1.detail1": "Hygienic 304 stainless steel",
+    "carvella.good1.detail2": "Highly resistant to scratches and warping",
+    "carvella.good1.detail3": "Easy to clean with simple rinsing",
+    "carvella.good1.detail4": "Non-slip design for stable use",
+
+    "carvella.good2.badge": "GOOD 02",
+    "carvella.good2.title": "6-Piece Knife Set (Includes Scissors & Peeler)",
+    "carvella.good2.description":
+      "Everything you need in one set! With scissors, a Chinese cleaver, a peeler and more, the 6-piece lineup handles every ingredient with ease.",
+    "carvella.good2.detail1":
+      "All-in-one 6-piece set incl. scissors, cleaver, peeler",
+    "carvella.good2.detail2": "Ergonomic handles for a comfortable grip",
+    "carvella.good2.detail3": "Sharp, durable stainless steel blades",
+    "carvella.good2.detail4": "Great for home or professional kitchens",
 
     // InYourHeart Brand Page
     "inyourheart.hero.title": "Adding Emotion to Your Skin",

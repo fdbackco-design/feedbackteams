@@ -24,10 +24,25 @@ import carvellaLogo from "@/assets/brand/carll.png";
 import carvella from "@/assets/brand/car44.png";
 import carvellaVideo from "@assets/freepik__cinematic-video-starting-from-the-provided-referen__97177_1759116548781.mp4";
 import { useLanguage } from "@/contexts/LanguageContext";
+import ItalyImage from "@/assets/Italy.jpg";
+import cutting from "@/assets/cutting.png";
+import car from "@/assets/car4.png";
 
 export default function Carvella() {
   const [, setLocation] = useLocation();
   const { t } = useLanguage();
+  const productSizes = [
+    {
+      type: t("carvella.good1.title"), 
+      usage: t("carvella.good1.description"), 
+      icon: "🔪",
+    },
+    {
+      type: t("carvella.good2.title"), 
+      usage: t("carvella.good2.description"), 
+      icon: "🍽️",
+    },
+  ];
 
   return (
     <div>
@@ -181,15 +196,12 @@ export default function Carvella() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
               <div className="relative">
-                <div className="w-full h-96 bg-gradient-to-br from-[#6C2F1E] to-[#D4AF37] rounded-3xl flex items-center justify-center shadow-2xl">
-                  <div className="text-center text-white">
-                    <div className="text-6xl font-bold mb-4">🇮🇹</div>
-                    <div className="text-2xl font-bold">ITALY</div>
-                    <div className="text-lg opacity-90">
-                      Artigianato Italiano
-                    </div>
-                  </div>
-                </div>
+                <div
+                  className="w-full h-96 bg-cover bg-center rounded-3xl shadow-2xl"
+                  style={{
+                    backgroundImage: `url(${ItalyImage})`,
+                  }}
+                ></div>
               </div>
             </div>
             <div className="order-1 lg:order-2">
@@ -237,6 +249,99 @@ export default function Carvella() {
         </div>
       </section>
 
+      {/* GOOD 01 — 스테인리스 도마 */}
+      <section className="py-32 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="order-2 lg:order-1">
+              <div className="relative">
+                <img
+                  src={cutting}
+                  alt={productSizes[0].type}
+                  className="w-full rounded-3xl shadow-2xl"
+                />
+              </div>
+            </div>
+            <div className="order-1 lg:order-2">
+              <div className="inline-block px-4 py-2 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-sm font-semibold mb-6">
+                {t("carvella.good1.badge")}
+              </div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#000000] mb-4 leading-tight">
+                {productSizes[0].type}
+              </h2>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                {productSizes[0].usage}
+              </p>
+
+              <div className="space-y-3">
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-4"></div>
+                  <span className="text-gray-700 font-medium">
+                    {t("carvella.good1.detail1")} · {t("carvella.good1.detail2")}
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-4"></div>
+                  <span className="text-gray-700 font-medium">
+                    {t("carvella.good1.detail3")}
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-4"></div>
+                  <span className="text-gray-700 font-medium">
+                    {t("carvella.good1.detail4")}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* GOOD 02 — 6종 칼 세트 */}
+      <section className="py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="inline-block px-4 py-2 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-sm font-semibold mb-6">
+                {t("carvella.good2.badge")}
+              </div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#000000] mb-4 leading-tight">
+                {productSizes[1].type}
+              </h2>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                {productSizes[1].usage}
+              </p>
+
+              <div className="space-y-3">
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-4"></div>
+                  <span className="text-gray-700 font-medium">
+                    {t("carvella.good2.detail1")} · {t("carvella.good2.detail2")}
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-4"></div>
+                  <span className="text-gray-700 font-medium">
+                    {t("carvella.good2.detail3")} · {t("carvella.good2.detail4")}
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div className="relative">
+                <img
+                  src={car}
+                  alt={productSizes[1].type}
+                  className="w-full rounded-3xl shadow-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Professional Cooking Section */}
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -264,7 +369,7 @@ export default function Carvella() {
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center p-6 bg-gray-50 rounded-xl">
                   <div className="text-3xl font-bold text-[#6C2F1E] mb-2">
-                    15+
+                    2+
                   </div>
                   <div className="text-sm text-gray-600">
                     {t("carvella.cooking.lineup")}
@@ -272,7 +377,7 @@ export default function Carvella() {
                 </div>
                 <div className="text-center p-6 bg-gray-50 rounded-xl">
                   <div className="text-3xl font-bold text-[#6C2F1E] mb-2">
-                    25
+                    1
                   </div>
                   <div className="text-sm text-gray-600">
                     {t("carvella.cooking.warranty")}
