@@ -49,7 +49,7 @@ import asranImg from "@assets/image_Pippit_202507291037 1_1754993039700.jpg";
 import sangsaengImg from "@assets/sangsaeng_1_1754636754183.jpg";
 import lacerasImg from "@/assets/brand/laceras.jpg";
 import carvellaImg from "@/assets/brand/carvella.png";
-import brandLineupImg from "@assets/brand_lineup_new.png";
+import brandLineupImg from "@assets/brand_lineup_new_1760340660583.png";
 import newsData from "@/data/news.json";
 import { resolveNewsThumbnail, FALLBACK } from "@/assets/news";
 
