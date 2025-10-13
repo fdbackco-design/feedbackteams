@@ -1180,3 +1180,27 @@ html {
     }
   }
 }
+
+/* 모바일: 로고를 작고 일렬로 배치 */
+@media (max-width: 640px) {
+  .logo-marquee-track {
+    flex-wrap: nowrap;           /* 줄바꿈 금지 */
+    justify-content: flex-start; /* 왼쪽 정렬 */
+    overflow-x: auto;            /* 좌우 스크롤 가능 (선택사항) */
+    gap: 1.5rem;                 /* 간격 축소 */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .logo-item {
+    height: 20px;                /* 작게 (글자 느낌) */
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+  }
+
+  .logo-marquee-wrapper {
+    padding-block: 0.5rem;       /* 로고 높이에 맞게 배경 축소 */
+    background: rgba(0, 0, 0, 0.25);
+  }
+}
