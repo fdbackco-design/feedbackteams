@@ -1008,4 +1008,72 @@ html {
       margin: 0.5rem 0;
     }
   }
+
+  /* Logo Marquee Styles */
+  .logo-marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1.5rem 0;
+  }
+
+  .logo-marquee-track {
+    display: flex;
+    gap: 4rem;
+    animation: marquee 30s linear infinite;
+    will-change: transform;
+  }
+
+  .logo-row {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    flex-shrink: 0;
+  }
+
+  .logo-item {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.9;
+    filter: brightness(0) invert(1);
+    transition: opacity 0.3s ease;
+  }
+
+  @media (min-width: 768px) {
+    .logo-item {
+      height: 50px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .logo-item {
+      height: 60px;
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* Pause animation on hover (desktop only) */
+  @media (hover: hover) {
+    .logo-marquee-wrapper:hover .logo-marquee-track {
+      animation-play-state: paused;
+    }
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    .logo-marquee-track {
+      animation: none;
+    }
+  }
 }
