@@ -64,8 +64,8 @@ html {
 
 /* Touch-friendly tap targets */
 .tap-target {
-  min-height: 44px;
-  min-width: 44px;
+  min-height: 48px;
+  min-width: 48px;
 }
 
 /* Mobile responsive improvements */
@@ -627,6 +627,82 @@ html {
 }
 
 @layer utilities {
+  /* Mobile Typography with clamp() for fluid scaling */
+  .mobile-h1 {
+    font-size: clamp(24px, 5vw, 48px);
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  .mobile-h2 {
+    font-size: clamp(20px, 4vw, 36px);
+    line-height: 1.3;
+    font-weight: 700;
+  }
+
+  .mobile-h3 {
+    font-size: clamp(18px, 3.5vw, 28px);
+    line-height: 1.4;
+    font-weight: 600;
+  }
+
+  .mobile-body {
+    font-size: clamp(16px, 2vw, 18px);
+    line-height: 1.6;
+  }
+
+  /* Touch Action Utilities */
+  .touch-pan-y {
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .touch-pan-x {
+    touch-action: pan-x;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+
+  /* Overscroll Behavior for iOS */
+  .overscroll-none {
+    overscroll-behavior: none;
+    -webkit-overscroll-behavior: none;
+  }
+
+  .overscroll-contain {
+    overscroll-behavior: contain;
+    -webkit-overscroll-behavior: contain;
+  }
+
+  .overscroll-auto {
+    overscroll-behavior: auto;
+    -webkit-overscroll-behavior: auto;
+  }
+
+  /* Background Image Mobile Optimization */
+  .mobile-bg-cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+  }
+
+  /* Card Padding Mobile Optimized */
+  .mobile-card-px {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  @media (min-width: 640px) {
+    .mobile-card-px {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+
   /* Custom animations */
   @keyframes fade-in-up {
     from {
