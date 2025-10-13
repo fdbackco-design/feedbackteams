@@ -1080,7 +1080,7 @@ export default function Home() {
       {/* News Section */}
       <section
         id="news"
-        className="h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white"
+        className="h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white touch-pan-y"
         style={{ scrollSnapAlign: "start" }}
       >
         <div className="relative w-full z-10">
@@ -1168,7 +1168,7 @@ export default function Home() {
 
             <div
               ref={newsScrollRef}
-              className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto pb-6 scrollbar-hide cursor-grab justify-start px-2 sm:px-0"
+              className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto pb-6 scrollbar-hide cursor-grab justify-start px-2 sm:px-0 touch-pan-x overscroll-contain"
               style={{
                 scrollSnapType: "x mandatory",
                 scrollbarWidth: "none",
@@ -1195,6 +1195,7 @@ export default function Home() {
                         src={src}
                         alt={news.title}
                         className="w-full h-full object-cover"
+                        sizes="(max-width: 640px) 280px, (max-width: 768px) 320px, (max-width: 1024px) 380px, (max-width: 1280px) 420px, (max-width: 1536px) 480px, 520px"
                       />
                     </div>
                     <div className="p-4 sm:p-5 md:p-6 lg:p-7 flex flex-col flex-1">
