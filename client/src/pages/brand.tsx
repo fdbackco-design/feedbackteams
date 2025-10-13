@@ -175,11 +175,11 @@ export default function Brand() {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-10 mt-16 sm:mt-20 mobile-padding">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#000000] mb-4 sm:mb-6">
+          <h1 className="text-fluid-title break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-[#000000] maxw-title mx-auto mb-4 sm:mb-6">
             {t("브랜드 소개")}
           </h1>
           <div className="w-16 sm:w-24 h-0.5 bg-[#0F4C82] mx-auto mb-6 sm:mb-8" />
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-600 maxw-body mx-auto">
             {t(
               "혁신적인 기술과 디자인을 바탕으로 한 FeedBack의 자체 브랜드들을 소개합니다.각 브랜드는 고유한 가치와 비전을 가지고 고객에게 최고의 경험을 제공합니다.",
             )}
@@ -226,19 +226,19 @@ export default function Brand() {
                         className="brand-logo object-contain"
                       />
                     ) : (
-                      <h2 className="brand-logo text-center text-3xl sm:text-4xl lg:text-5xl font-bold text-[#000000] leading-tight">
+                      <h2 className="brand-logo text-center text-fluid-sub break-keep text-balance text-pretty leading-tight-mobile font-bold text-[#000000] maxw-title mx-auto">
                         {brand.name}
                       </h2>
                     )}
-                    <p className="text-gray-500 text-sm sm:text-base md:text-lg lg:text-xl">
+                    <p className="text-gray-500 break-keep text-pretty" style={{ fontSize: 'clamp(14px, 3vw, 20px)' }}>
                       {brand.category}
                     </p>
-                    <p className="text-[#0F4C82] font-semibold text-sm sm:text-base md:text-lg leading-relaxed">
+                    <p className="text-[#0F4C82] font-semibold break-keep text-pretty leading-relaxed" style={{ fontSize: 'clamp(14px, 3vw, 18px)' }}>
                       {brand.slogan}
                     </p>
                   </div>
 
-                  <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed max-w-prose">
+                  <p className="text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-700 maxw-body">
                     {brand.description}
                   </p>
 
@@ -292,17 +292,17 @@ export default function Brand() {
           }}
         >
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
+            <h3 className="text-fluid-title break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold maxw-title mx-auto mb-4 sm:mb-6">
               {t("브랜드 파트너십에 관심이 있으신가요?")}
             </h3>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-8 sm:mb-10 md:mb-12 leading-relaxed opacity-90">
+            <p className="text-fluid-sub break-keep text-pretty leading-relaxed-mobile maxw-body mx-auto mb-8 sm:mb-10 md:mb-12 opacity-90">
               {t(
                 "FeedBack과 함께 혁신적인 브랜드를 만들어보세요. 기획부터 유통까지 전 과정을 지원하여 성공적인 브랜드 런칭을 도와드립니다.",
               )}
             </p>
             <Button
               asChild
-              className="bg-[#000000] text-white hover:bg-gray-800 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-4 text-sm sm:text-base md:text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg tap-target w-full sm:w-auto"
+              className="nowrap bg-[#000000] text-white hover:bg-gray-800 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-4 text-fluid-body font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg tap-target w-full sm:w-auto"
               size="lg"
             >
               <Link href="/contact">{t("파트너십 문의하기")}</Link>
