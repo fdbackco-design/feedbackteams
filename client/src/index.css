@@ -347,14 +347,14 @@ html {
   --shadow-2xl: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
-  --logo-size-mobile: 40px;
-  --logo-size-desktop: 50px;
+  --logo-size-mobile: 10px;
+  --logo-size-desktop: 20px;
   /* 숫자가 작을수록 더 빠름 */
-  --marquee-duration-mobile: 30s;
-  --marquee-duration-desktop: 30s;
+  --marquee-duration-mobile: 20s;
+  --marquee-duration-desktop: 20s;
   /* 로고 높이에 맞춰 배경 세로 패딩 (상하) */
-  --marquee-padding-mobile: 1.5rem;
-  --marquee-padding-desktop: 1.5rem;
+  --marquee-padding-mobile: 5px;
+  --marquee-padding-desktop: 10px;
   --marquee-gap-mobile: 4rem;
   --marquee-gap-desktop: 4rem;
 }
@@ -1075,12 +1075,6 @@ html {
     }
   }
 
-  /* 더 큰 화면에서 살짝 키우고 싶다면 */
-  @media (min-width: 1024px) {
-    :root {
-      --logo-size-desktop: 60px;
-    }
-  }
 
   /* 접근성: 모션 줄이기 선호 시 애니메이션 비활성화 */
   @media (prefers-reduced-motion: reduce) {
