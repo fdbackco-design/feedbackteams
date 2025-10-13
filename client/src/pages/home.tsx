@@ -941,13 +941,10 @@ export default function Home() {
       {/* Services Section */}
       <section
         id="services"
-        className="min-h-screen flex items-center justify-center relative overflow-hidden pt-12 sm:pt-16 md:pt-20"
+        className="min-h-screen flex items-center justify-center relative overflow-hidden pt-12 sm:pt-16 md:pt-20 touch-pan-y mobile-bg-cover"
         style={{
           scrollSnapAlign: "start",
           backgroundImage: `url(${services[currentServiceIndex]?.imageUrl || serviceBackgroundImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
         }}
       >
         {/* 블러 오버레이 */}
@@ -1031,7 +1028,7 @@ export default function Home() {
                       : currentServiceIndex - 1;
                   setCurrentServiceIndex(newIndex);
                 }}
-                className="tap-target w-12 h-12 sm:w-14 sm:h-14 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-all duration-300 hover:scale-105"
+                className="tap-target w-12 h-12 sm:w-14 sm:h-14 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-all duration-300 hover:scale-105 touch-manipulation"
               >
                 <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
               </button>
@@ -1049,7 +1046,7 @@ export default function Home() {
                   const newIndex = (currentServiceIndex + 1) % services.length;
                   setCurrentServiceIndex(newIndex);
                 }}
-                className="tap-target w-12 h-12 sm:w-14 sm:h-14 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-all duration-300 hover:scale-105"
+                className="tap-target w-12 h-12 sm:w-14 sm:h-14 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-all duration-300 hover:scale-105 touch-manipulation"
               >
                 <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
               </button>
