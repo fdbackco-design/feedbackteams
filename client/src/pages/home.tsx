@@ -587,7 +587,7 @@ export default function Home() {
 
   return (
     <div
-      className="w-full"
+      className="w-full overscroll-contain"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -1230,7 +1230,7 @@ export default function Home() {
       <section
         id="stats"
         ref={statsRef}
-        className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white relative overflow-hidden pt-12 sm:pt-16 md:pt-20"
+        className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white relative overflow-hidden pt-12 sm:pt-16 md:pt-20 touch-pan-y"
         style={{ scrollSnapAlign: "start", marginTop: "50px" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-70"></div>
@@ -1292,7 +1292,7 @@ export default function Home() {
       {/* CTA Section with Video Background */}
       <section
         id="cta"
-        className="min-h-screen flex items-center justify-center relative overflow-hidden"
+        className="min-h-screen flex items-center justify-center relative overflow-hidden touch-pan-y mobile-bg-cover"
         style={{ scrollSnapAlign: "start" }}
       >
         {/* Video Background - Mobile optimized */}

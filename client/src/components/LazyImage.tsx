@@ -6,9 +6,12 @@ interface LazyImageProps {
   className?: string;
   style?: React.CSSProperties;
   onLoad?: () => void;
+  sizes?: string;
+  width?: number;
+  height?: number;
 }
 
-export default function LazyImage({ src, alt, className, style, onLoad }: LazyImageProps) {
+export default function LazyImage({ src, alt, className, style, onLoad, sizes, width, height }: LazyImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
@@ -49,6 +52,9 @@ export default function LazyImage({ src, alt, className, style, onLoad }: LazyIm
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           onLoad={handleLoad}
+          sizes={sizes}
+          width={width}
+          height={height}
         />
       )}
       {!isLoaded && isInView && (
