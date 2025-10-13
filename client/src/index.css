@@ -589,69 +589,69 @@ html {
 /* About Page Typography - 새 시스템 적용 */
 /* Main Banner Title */
 .about-banner-title {
-  @apply page-title-white drop-shadow-2xl;
+  @apply text-fluid-title break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-white maxw-title mx-auto drop-shadow-2xl;
 }
 
 /* About Section Titles */
 .about-section-title {
-  @apply page-title;
+  @apply text-fluid-title break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-gray-900 maxw-title mx-auto;
 }
 
 /* About Story Text */
 .about-story-main {
-  @apply section-title font-semibold;
+  @apply text-fluid-sub break-keep text-balance text-pretty leading-tight-mobile font-semibold text-gray-900 maxw-title;
 }
 
 .about-story-sub {
-  @apply card-title;
+  @apply break-keep text-pretty leading-snug font-semibold text-gray-900 maxw-title;
 }
 
 .about-story-detail {
-  @apply body-text;
+  @apply text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-700 maxw-body;
 }
 
 /* Philosophy Section Titles */
 .about-philosophy-title {
-  @apply section-title;
+  @apply text-fluid-sub break-keep text-balance text-pretty leading-tight-mobile font-bold text-gray-900 maxw-title;
 }
 
 .about-philosophy-description {
-  @apply body-text;
+  @apply text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-700 maxw-body;
 }
 
 /* Parallax Section Title */
 .about-parallax-title {
-  @apply page-title-white;
+  @apply text-fluid-title break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-white maxw-title mx-auto;
 }
 
 .about-parallax-description {
-  @apply body-text-white;
+  @apply text-fluid-body break-keep text-pretty leading-relaxed-mobile text-white maxw-body mx-auto;
 }
 
 /* Timeline Styles */
 .about-timeline-year {
-  @apply section-title font-bold text-slate-900;
+  @apply text-fluid-sub break-keep text-balance text-pretty leading-tight-mobile font-bold text-slate-900 maxw-title;
 }
 
 .about-timeline-description {
-  @apply body-text;
+  @apply text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-700 maxw-body;
 }
 
 /* CEO Message Styles */
 .about-ceo-quote {
-  @apply section-title font-bold text-primary;
+  @apply text-fluid-sub break-keep text-balance text-pretty leading-tight-mobile font-bold text-primary maxw-title;
 }
 
 .about-ceo-title {
-  @apply page-title;
+  @apply text-fluid-title break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-gray-900 maxw-title mx-auto;
 }
 
 .about-ceo-message {
-  @apply body-text;
+  @apply text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-700 maxw-body;
 }
 
 .about-ceo-highlight {
-  @apply body-text font-semibold text-primary;
+  @apply text-fluid-body break-keep text-pretty leading-relaxed-mobile font-semibold text-primary maxw-body;
 }
 
 /* Organization Chart Title */
