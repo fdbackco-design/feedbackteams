@@ -361,40 +361,40 @@ html {
 
 /* Section Titles - 섹션 제목 */
 .section-title {
-  font-size: clamp(20px, 4vw, 28px);
+  font-size: clamp(24px, 5vw, 32px);
   line-height: 1.2;
   font-weight: 700;
   color: rgb(17, 24, 39);
 }
 
-@media (min-width: 640px) {
-  .section-title {
-    font-size: clamp(24px, 4vw, 32px);
-  }
-}
-
 @media (min-width: 768px) {
   .section-title {
     font-size: clamp(28px, 3vw, 36px);
   }
 }
 
+@media (min-width: 1024px) {
+  .section-title {
+    font-size: clamp(32px, 3vw, 40px);
+  }
+}
+
 .section-title-white {
-  font-size: clamp(20px, 4vw, 28px);
+  font-size: clamp(24px, 5vw, 32px);
   line-height: 1.2;
   font-weight: 700;
   color: white;
 }
 
-@media (min-width: 640px) {
-  .section-title-white {
-    font-size: clamp(24px, 4vw, 32px);
-  }
-}
-
 @media (min-width: 768px) {
   .section-title-white {
     font-size: clamp(28px, 3vw, 36px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-title-white {
+    font-size: clamp(32px, 3vw, 40px);
   }
 }
 
