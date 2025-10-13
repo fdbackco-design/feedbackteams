@@ -12,6 +12,7 @@ import {
 import newsData from "@/data/news.json";
 import { resolveNewsThumbnail, FALLBACK } from "@/assets/news";
 import { useLanguage } from "@/contexts/LanguageContext";
+import allbrandImg from "@/assets/news/allbrand.jpg";
 
 export default function News() {
   const { t } = useLanguage();
@@ -85,7 +86,6 @@ export default function News() {
         {/* News Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12 mobile-padding">
           {filteredNews.slice(0, visibleNews).map((news, index) => {
-            const src = resolveNewsThumbnail(news.thumbnail);
             return (
               <Link
                 key={index}
@@ -99,14 +99,11 @@ export default function News() {
                 <Card className="shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col h-full cursor-pointer">
                   <div className="aspect-[4/3] bg-gray-200 relative overflow-hidden">
                     <img
-                      src={src}
+                      src={allbrandImg}
                       alt={news.title}
                       className="w-full h-full object-cover"
                       loading="lazy"
                       decoding="async"
-                      onError={(e) => {
-                        (e.currentTarget as HTMLImageElement).src = FALLBACK;
-                      }}
                     />
                   </div>
                   <CardHeader className="pb-3">
