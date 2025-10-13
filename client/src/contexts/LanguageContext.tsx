@@ -150,7 +150,6 @@ const translations = {
     "brands.asran.products.2": "인덕션 & 가스 겸용",
     "brands.asran.products.3": "프리미엄 마감",
     "brands.laceras.category": "프랑스 럭셔리 캐리어 브랜드",
-
     "brands.laceras.slogan": "전통과 모던이 만나는 프렌치 럭셔리 트래블",
     "brands.laceras.description":
       "프랑스의 장인정신과 현대적 세련미를 결합한 럭셔리 캐리어 브랜드입니다. 폴리카보네이트 하드셸, 정교한 마감과 균형 잡힌 디자인으로 비즈니스부터 라그주어리 여행까지 완벽한 트래블 솔루션을 제안합니다.",
@@ -257,12 +256,27 @@ const translations = {
       "Hoid의 프리미엄 무선 청소기가 공식적으로 출시되었습니다.",
     "news.5.content":
       "Hoid의 프리미엄 무선 청소기가 공식적으로 출시되었습니다. 이 제품은 고성능 모터와 강력한 흡입력, 장시간 사용이 가능한 고효율 배터리를 갖추어 대형 주택부터 소형 공간까지 효율적으로 청소할 수 있습니다. 또한, 무게를 최소화한 인체공학적 설계로 손목 부담을 줄였으며, 브러시 헤드 교체를 통해 바닥, 카펫, 침구 등 다양한 환경에서 최적의 성능을 발휘합니다. 먼지통과 필터는 물세척이 가능하여 위생적으로 관리할 수 있고, 모든 구성품은 사용 편의성을 최우선으로 설계되었습니다. 이번 출시를 통해 Hoid는 청소기 시장에서도 새로운 기준을 제시하고 있습니다.",
-    "news.6.date": "2025.08.14",
-    "news.6.title": "쥬얼리·그릇 신제품 출시 예정",
+
+    "news.6.date": "2025.10.01",
+    "news.6.title": "ASRAN, 하이엔드 스테인리스 쿡웨어 3종 정식 런칭",
     "news.6.summary":
-      "Hoid는 가전제품을 넘어 소비자의 일상을 전반적으로 아우르는 토탈 라이프스타일 브랜드로 도약을 준비하고 있습니다.",
+      "프리미엄 주방 브랜드 ASRAN이 스테인리스 냄비 3종 압력솥 프라이팬 3종으로 구성된 하이엔드 쿡웨어 라인업을 공식 출시했습니다.",
     "news.6.content":
-      "Hoid는 가전제품을 넘어 소비자의 일상을 전반적으로 아우르는 토탈 라이프스타일 브랜드로 도약을 준비하고 있습니다. 향후 계획에는 프리미엄 쥬얼리 라인과 고급 그릇 컬렉션 출시가 포함되어 있으며, 각각 세심한 디자인과 고품질 소재를 바탕으로 제작됩니다. 쥬얼리 라인은 특별한 날을 더욱 빛나게 해줄 세련된 디자인과 장인정신이 깃든 마감 처리가 특징이며, 그릇 라인은 미니멀하면서도 우아한 라인을 살려, 식탁 위 품격을 높이는 제품으로 선보일 예정입니다. Hoid는 앞으로도 다양한 카테고리에서 혁신과 아름다움을 동시에 제공하며, 소비자의 라이프스타일 가치를 높이는 것을 목표로 하고 있습니다.",
+      "ASRAN, 하이엔드 스테인리스 쿡웨어 3종 정식 런칭\n\n피드백의 프리미엄 주방 브랜드 ASRAN이 2025년 10월 1일 스테인리스 냄비 3종, 압력솥, 프라이팬 3종으로 구성된 하이엔드 쿡웨어 라인업을 공식 출시했습니다.\n\nASRAN은 독일 기술력 기반의 SUS410 스테인리스 스틸과 3중 바닥 구조를 적용하여 열전도율과 내구성을 극대화한 제품으로 어떤 주방 환경에서도 완벽한 조리가 가능한 것이 특징입니다. 이중 압력 조절 시스템과 정밀한 열전도층은 조리 중 온도 균형을 유지하여 식재료 본연의 맛과 영양을 지켜줍니다.\n\n이번 라인업은 가정용부터 전문가용까지 폭넓게 활용 가능하며 프리미엄 미러 마감과 절제된 곡선 디자인으로 주방의 품격을 한층 높여줍니다. 특히 모든 제품은 내식성과 변색 저항성이 뛰어나 세척 후에도 오랜 기간 새 제품 같은 광택을 유지합니다.\n\nASRAN은 디자인팀과 요리 전문가들이 함께 개발에 참여해 실제 조리 환경에서의 사용자 편의성을 극대화했습니다. 손잡이의 인체공학적 설계와 무게 밸런스는 장시간 조리에도 손목 부담을 최소화하며 유리 뚜껑의 증기 배출 밸브는 조리 과정을 직관적으로 제어할 수 있게 해줍니다.\n\n피드백 관계자는 ASRAN은 단순한 조리도구가 아닌 요리의 완성도를 높이는 셰프의 파트너로서 자리매김할 것이라며 앞으로도 기술적 혁신과 감각적 디자인을 결합한 제품을 지속적으로 선보이겠다고 전했습니다. 또한 ASRAN은 매일의 요리를 예술로 바꾸는 브랜드가 될 것이라고 덧붙였습니다.",
+
+    "news.7.date": "2025.10.10",
+    "news.7.title": "La Ceras, 프렌치 럭셔리 캐리어 4종 세트 정식 런칭",
+    "news.7.summary":
+      "프랑스 감성과 현대적 기술력을 결합한 프리미엄 캐리어 브랜드 La Ceras가 14·20·24·28인치로 구성된 럭셔리 4종 세트를 정식 출시했습니다.",
+    "news.7.content":
+      "La Ceras, 프렌치 럭셔리 캐리어 4종 세트 정식 런칭\n\n피드백은 2025년 10월 10일 프리미엄 캐리어 브랜드 La Ceras의 4종 세트 14, 20, 24, 28인치를 공식 출시했습니다.\n\nLa Ceras는 프랑스의 장인정신과 모던한 디자인 철학이 결합된 브랜드로 PP와 PC의 하이브리드 구조를 적용하여 가볍고 견고한 내구성을 제공합니다. 210D 베어링 기반의 무소음 휠 시스템으로 부드럽고 안정적인 이동감을 구현합니다.\n\n14인치는 항공 기내 반입에 적합하고 28인치는 장거리 여행과 대용량 수납에 최적화되어 있습니다. 내부는 이중 분리 수납 구조와 고급 방수 라이닝 YKK 지퍼를 적용해 실용성과 내구성을 모두 확보했습니다.\n\nLa Ceras는 단순한 이동 수단을 넘어 사용자의 여정 전반을 함께하는 트래블 컴패니언을 지향합니다. 제품에는 고유 시리얼 넘버가 각인되며 파리 공방 감성을 살린 라벨링 디자인으로 소장가치를 더합니다.\n\n피드백 관계자는 이번 런칭을 통해 La Ceras는 여행의 품격이라는 가치를 실현하고 고객의 개성과 스타일을 완성하는 프리미엄 트래블 브랜드로 성장하겠다며 향후 글로벌 공항 면세점 입점과 유럽 시장 진출도 추진할 예정이라고 전했습니다.",
+
+    "news.8.date": "2025.10.13",
+    "news.8.title": "Carvella, 이탈리아 감성의 프리미엄 칼·도마 세트 런칭",
+    "news.8.summary":
+      "이탈리아 장인정신을 담은 프리미엄 키친 브랜드 Carvella가 6종 칼 세트와 스테인리스 도마로 구성된 Carvella Signature Set을 공식 출시했습니다.",
+    "news.8.content":
+      "Carvella, 이탈리아 감성의 프리미엄 칼·도마 세트 런칭\n\n피드백의 프리미엄 키친 브랜드 Carvella가 2025년 10월 13일 6종 칼 세트와 스테인리스 도마로 구성된 Carvella Signature Set을 정식 출시했습니다.\n\nCarvella는 이탈리아 북부 장인들의 금속공예 기술을 바탕으로 정밀한 절삭력과 내구성을 갖춘 프리미엄 키친 브랜드입니다. 304 스테인리스 스틸 도마는 위생적이고 변색에 강하며 칼 세트는 인체공학적 손잡이와 탁월한 절삭력을 제공합니다.\n\n칼날은 고탄소강을 사용해 장기간 사용에도 내구성을 유지하고 핸들은 미끄럼 방지 기능을 갖춘 합성 소재로 세밀한 조리에도 안정감을 줍니다. 각 제품은 장인의 수작업 폴리싱으로 Carvella 특유의 광택과 밸런스를 완성했습니다.\n\nCarvella Signature Set은 프로 셰프와 홈 셰프 모두에게 적합하며 프리미엄 포장 구성으로 선물용 가치를 높였습니다. 스테인리스와 블랙톤의 조화는 어떤 주방에서도 세련된 존재감을 드러냅니다.\n\n피드백 관계자는 Carvella는 단순한 조리도구가 아닌 요리 예술의 완성품이라며 장인의 기술과 감성을 이어받아 유럽과 아시아 시장에서도 프리미엄 키친 브랜드로 자리매김할 것이라고 전했습니다. 또한 지속 가능한 생산 공정과 친환경 소재 적용으로 브랜드 철학을 확장할 계획이라고 밝혔습니다.",
 
     // Stats Section
     "stats.title": "성장하는",
@@ -1060,12 +1074,29 @@ const translations = {
       "Hoid's premium cordless vacuum cleaner has been officially launched.",
     "news.5.content":
       "Hoid's premium cordless vacuum cleaner has been officially launched. This product is equipped with a high-performance motor, powerful suction, and a high-efficiency battery that allows long-term use, enabling efficient cleaning from large houses to small spaces. In addition, it reduces wrist strain with an ergonomic design that minimizes weight, and by replacing the brush head, it demonstrates optimal performance in various environments such as floors, carpets, and bedding. The dust bin and filter are water-washable for hygienic management, and all components are designed with user convenience as the top priority. Through this launch, Hoid is presenting new standards in the vacuum cleaner market as well.",
-    "news.6.date": "2025.08.14",
-    "news.6.title": "Jewelry & Tableware New Products Coming Soon",
+    "news.6.date": "2025.10.01",
+    "news.6.title":
+      "ASRAN Officially Launches High-End Stainless Cookware Trio",
     "news.6.summary":
-      "Hoid is preparing to leap forward as a total lifestyle brand that comprehensively encompasses consumers' daily lives beyond home appliances.",
+      "Premium kitchen brand ASRAN has officially launched a high-end cookware lineup consisting of 3 stainless pots, a pressure cooker, and 3 frying pans.",
     "news.6.content":
-      "Hoid is preparing to leap forward as a total lifestyle brand that comprehensively encompasses consumers' daily lives beyond home appliances. Future plans include launching a premium jewelry line and luxury tableware collection, each produced based on meticulous design and high-quality materials. The jewelry line features refined design and craftsmanship finishing that will make special days shine even brighter, while the tableware line will be presented as products that enhance table elegance with minimal yet elegant lines. Hoid aims to continue providing innovation and beauty simultaneously in various categories, enhancing consumers' lifestyle values.",
+      "ASRAN Officially Launches High-End Stainless Cookware Trio\n\nFeed Holdings’ premium kitchen brand ASRAN officially launched its high-end cookware lineup on October 1, 2025, featuring 3 stainless pots, a pressure cooker, and 3 frying pans.\n\nASRAN utilizes German-engineered SUS410 stainless steel and a triple-layer base structure to maximize heat conductivity and durability, ensuring perfect cooking performance in any kitchen. The dual pressure regulation system and precision heat layers maintain temperature balance during cooking, preserving ingredients’ natural flavor and nutrients.\n\nThis collection is suitable for both home and professional use, with a premium mirror finish and refined curved design that elevate kitchen aesthetics. All products feature excellent corrosion and discoloration resistance, maintaining a new-like shine even after repeated cleaning.\n\nASRAN was co-developed by design teams and culinary professionals to maximize user convenience in real cooking environments. Ergonomically designed handles and balanced weight distribution reduce wrist strain during long cooking sessions, while glass lids with steam release valves allow intuitive control.\n\nA Feed Holdings representative stated that ASRAN will establish itself not merely as cookware but as a chef’s partner that enhances the perfection of cooking, continuing to introduce products that combine technological innovation with sophisticated design. They added that ASRAN aims to turn everyday cooking into an art form.",
+
+    "news.7.date": "2025.10.10",
+    "news.7.title":
+      "La Ceras Officially Launches French Luxury 4-Piece Luggage Set",
+    "news.7.summary":
+      "Premium travel brand La Ceras, combining French craftsmanship and modern technology, has officially launched its luxury 4-piece luggage set in 14, 20, 24, and 28 inches.",
+    "news.7.content":
+      "La Ceras Officially Launches French Luxury 4-Piece Luggage Set\n\nFeed Holdings officially launched the premium luggage brand La Ceras and its 4-piece set (14, 20, 24, 28 inches) on October 10, 2025.\n\nLa Ceras merges French artisanal craftsmanship with modern design philosophy, applying a hybrid structure of PP and PC materials for light weight and exceptional durability. The 210D bearing-based silent wheel system provides smooth, stable movement.\n\nThe 14-inch model is optimized for carry-on use, while the 28-inch model is ideal for long-distance travel and large storage capacity. The interior features dual compartments, waterproof lining, and YKK zippers for maximum practicality and strength.\n\nLa Ceras aims to be more than a travel accessory—it’s a true travel companion that accompanies users throughout their journeys. Each product bears a unique serial number, and its Paris-inspired labeling design enhances collectible value.\n\nA Feed Holdings representative noted that through this launch, La Ceras embodies the value of travel sophistication and will grow into a premium travel brand that completes each customer’s individuality and style. They also revealed plans to expand into global airport duty-free stores and the European market.",
+
+    "news.8.date": "2025.10.13",
+    "news.8.title":
+      "Carvella Launches Premium Italian-Inspired Knife and Cutting Board Set",
+    "news.8.summary":
+      "Premium kitchen brand Carvella, inspired by Italian craftsmanship, has officially launched the Carvella Signature Set, consisting of 6 knives and a stainless steel cutting board.",
+    "news.8.content":
+      "Carvella Launches Premium Italian-Inspired Knife and Cutting Board Set\n\nFeed Holdings’ premium kitchen brand Carvella officially launched the Carvella Signature Set on October 13, 2025, featuring a 6-piece knife set and a stainless steel cutting board.\n\nCarvella is a premium kitchen brand built upon northern Italian metalcraft expertise, offering precision cutting power and exceptional durability. The 304 stainless steel cutting board is hygienic and resistant to discoloration, while the knives feature ergonomic handles for a comfortable grip and sharp, long-lasting blades.\n\nEach knife uses high-carbon steel for lasting sharpness, and the anti-slip synthetic handles ensure stability during detailed cooking. Every product is hand-polished by artisans to achieve Carvella’s signature luster and perfect balance.\n\nThe Carvella Signature Set is suitable for both professional chefs and home cooks, presented in premium packaging ideal for gifting. Its stainless and black-tone design brings elegance to any kitchen.\n\nA Feed Holdings representative said that Carvella is not just cookware but a masterpiece of culinary art, inheriting Italian craftsmanship and emotion to grow into a premium kitchen brand across Europe and Asia. The brand also plans to expand its philosophy with sustainable production processes and eco-friendly materials.",
 
     // Stats Section
     "stats.title": "Growing",
@@ -1671,7 +1702,6 @@ const translations = {
     "footer.company.about": "เกี่ยวกับ",
     "footer.company.news": "ข่าว",
     "footer.company.contact": "ติดต่อ",
-
     "footer.bottom.copyright": "© 2024 FeedBack Corp. สงวนลิขสิทธิ์",
     "footer.bottom.bizinfo":
       "เลขทะเบียนธุรกิจ: 296-87-03628 | ซีอีโอ: Hae-min Song, Sung-hyun Jeong",
@@ -1699,7 +1729,7 @@ const translations = {
       "โซลูชันการกระจายสินค้าและการตลาด เพื่อพาแบรนด์เอเชียสู่ตลาดโลก",
     "services.consulting.title": "ที่ปรึกษาการตลาด",
     "services.consulting.description":
-      "สนับสนุนการวางกลยุทธ์การตลาดแบบครบวงจร ตั้งแต่วิเคราะห์ตลาดถึงแบรนด์ดิ้ง",
+      "สนับสนุนการวางลยุทธ์การตลาดแบบครบวงจร ตั้งแต่วิเคราะห์ตลาดถึงแบรนด์ดิ้ง",
 
     // Additional Services
     "services.distribution.title": "กระจายสินค้าและโลจิสติกส์ระดับโลก",
@@ -1874,7 +1904,7 @@ const translations = {
     "news.3.summary":
       "Feedback เปิดตัวแบรนด์ในเครือของตนเอง ได้แก่ ASRAN และ Carvella แบรนด์เครื่องครัวและของใช้ในบ้านระดับพรีเมียม, La Ceras แบรนด์กระเป๋าเดินทางหรู และ Sikgu แบรนด์ช้อนส้อมคุณภาพสูง",
     "news.3.content":
-      "Feedback ได้เปิดตัวแบรนด์ในเครือของตนเอง ได้แก่ ASRAN และ Carvella ซึ่งเป็นแบรนด์เครื่องครัวและของใช้ในบ้านระดับพรีเมียม, La Ceras แบรนด์กระเป๋าเดินทางหรู และ Sikgu แบรนด์ช้อนส้อมที่สะท้อนความงามแบบเกาหลี การเปิดตัวครั้งนี้ทำให้ Feedback รับหน้าที่ดูแลด้านการจัดจำหน่ายภายในประเทศ การตลาด และบริการลูกค้าสำหรับผลิตภัณฑ์ทั้งหมดของทั้งสี่แบรนด์ ASRAN เป็นแบรนด์เครื่องครัวสแตนเลสระดับไฮเอนด์ที่มีชื่อเสียงด้านการนำความร้อนอย่างแม่นยำและการออกแบบที่ประณีต Carvella ถ่ายทอดอารมณ์ความเป็นอิตาเลียนผ่านเครื่องครัวที่ผลิตโดยช่างฝีมือผู้ชำนาญ La Ceras โดดเด่นด้วยวัสดุไฮบริดและดีไซน์ที่หรูหรา ขณะที่ Sikgu นำเสนอเครื่องใช้บนโต๊ะอาหารที่ผสานความเรียบง่ายและความงามแบบเกาหลีได้อย่างลงตัว Feedback มีเป้าหมายที่จะนำเสนอแบรนด์ไลฟ์สไตล์ระดับพรีเมียมสู่ตลาดเกาหลี พร้อมยกระดับประสบการณ์การใช้ชีวิตของผู้บริโภคผ่านการควบคุมคุณภาพและการพัฒนากบรนด์อย่างต่อเนื่อง",
+      "Feedback ได้เปิดตัวแบรนด์ในเครือของตนเอง ได้แก่ ASRAN และ Carvella ซึ่งเป็นแบรนด์เครื่องครัวและของใช้ในบ้านระดับพรีเมียม, La Ceras แบรนด์กระเป๋าเดินทางหรู และ Sikgu แบรนด์ช้อนส้อมที่สะท้อนความงามแบบเกาหลี การเปิดตัวครั้งนี้ทำให้ Feedback รับหน้าที่ดูแลด้านการจัดจำหน่ายภายในประเทศ การตลาด และบริการลูกค้าสำหรับผลิตภัณฑ์ทั้งหมดของทั้งสี่แบรนด์ ASRAN เป็นแบรนด์เครื่องครัวสแตนเลสระดับไฮเอนด์ที่มีชื่อเสียงด้านการนำความร้อนอย่างแม่นยำและการออกแบบที่ประณีต Carvella ถ่ายทอดอารมณ์ความเป็นอิตาเลียนผ่านเครื่องครัวที่ผลิตโดยช่างฝีมือผู้ชำนาญ La Ceras โดดเด่นด้วยวัสดุไฮบริดและดีไซน์ที่หรูหรา ขณะที่ Sikgu นำเสนอเครื่องใช้บนโต๊ะอาหารที่ผสานความเรียบง่ายและความงามแบบเกาหลีได้อย่างลงตัว Feedback มีเป้าหมายที่จะนำเสนอแบรนด์ไลฟ์สไตล์ระดับพรีเมียมสู่ตลาดเกาหลี พร้อมยกระดับประสบการณ์การใช้ชีวิตของผู้บริโภคผ่านการควบคุมคุณภาพและการพัฒนาแบรนด์อย่างต่อเนื่อง",
 
     "news.4.date": "2025.09.01",
     "news.4.title": "เปิดตัวเครื่องฟอกอากาศ Hoid รุ่นที่ 2",
@@ -1890,12 +1920,29 @@ const translations = {
     "news.5.content":
       "ดีไซน์ตามหลักสรีรศาสตร์ น้ำหนักเบา ลดภาระข้อมือ หัวแปรงเปลี่ยนได้สำหรับพื้นพรมและที่นอน กล่องฝุ่นและไส้กรองล้างน้ำได้ สะดวกและถูกสุขอนามัย",
 
-    "news.6.date": "2025.08.14",
-    "news.6.title": "เตรียมเปิดตัวเครื่องประดับ & ชุดภาชนะใหม่",
+    "news.6.date": "2025.10.01",
+    "news.6.title":
+      "ASRAN เปิดตัวชุดเครื่องครัวสแตนเลสไฮเอนด์ 3 ชิ้นอย่างเป็นทางการ",
     "news.6.summary":
-      "Hoid ก้าวสู่แบรนด์ไลฟ์สไตล์ครบวงจร ครอบคลุมวิถีชีวิตประจำวันมากกว่าเดิม",
+      "แบรนด์เครื่องครัวระดับพรีเมียม ASRAN เปิดตัวชุดเครื่องครัวไฮเอนด์อย่างเป็นทางการ ประกอบด้วยหม้อสแตนเลส 3 ใบ หม้อแรงดัน และกระทะ 3 ใบ",
     "news.6.content":
-      "แผนอนาคตประกอบด้วยไลน์เครื่องประดับพรีเมียมและคอลเลกชันภาชนะหรู ด้วยดีไซน์พิถีพิถันและวัสดุคุณภาพสูง เน้นความงามมินิมอลบนโต๊ะอาหาร",
+      "ASRAN เปิดตัวชุดเครื่องครัวสแตนเลสไฮเอนด์ 3 ชิ้นอย่างเป็นทางการ\n\nแบรนด์เครื่องครัวระดับพรีเมียม ASRAN ภายใต้ Feed Holdings ได้เปิดตัวชุดเครื่องครัวไฮเอนด์ในวันที่ 1 ตุลาคม 2025 ซึ่งประกอบด้วยหม้อสแตนเลส 3 ใบ หม้อแรงดัน และกระทะ 3 ใบ\n\nASRAN ใช้เหล็กกล้า SUS410 ที่พัฒนาโดยเทคโนโลยีเยอรมัน พร้อมโครงสร้างฐาน 3 ชั้น เพื่อเพิ่มประสิทธิภาพการนำความร้อนและความทนทานสูงสุด ช่วยให้การทำอาหารสมบูรณ์แบบในทุกสภาพครัว ระบบควบคุมแรงดันคู่และชั้นกระจายความร้อนที่แม่นยำช่วยรักษาอุณหภูมิและรสชาติของวัตถุดิบได้อย่างดีเยี่ยม\n\nผลิตภัณฑ์นี้เหมาะสำหรับทั้งบ้านและเชฟมืออาชีพ มาพร้อมพื้นผิวขัดเงาระดับพรีเมียมและดีไซน์โค้งมนที่ช่วยเพิ่มความหรูหราในครัว ทั้งยังทนต่อการกัดกร่อนและการเปลี่ยนสี ทำให้เงางามเหมือนใหม่แม้ใช้งานเป็นเวลานาน\n\nทีมออกแบบและผู้เชี่ยวชาญด้านอาหารได้ร่วมกันพัฒนา ASRAN เพื่อให้ใช้งานได้จริงในชีวิตประจำวัน ด้ามจับออกแบบตามหลักสรีรศาสตร์เพื่อลดแรงกดข้อมือ และฝาแก้วพร้อมวาล์วระบายไอน้ำช่วยให้ควบคุมการทำอาหารได้ง่าย\n\nตัวแทนจาก Feed Holdings กล่าวว่า ASRAN ไม่ใช่เพียงเครื่องมือทำอาหาร แต่เป็นคู่หูของเชฟที่ช่วยยกระดับความสมบูรณ์แบบของอาหาร และจะยังคงพัฒนาผลิตภัณฑ์ที่ผสานนวัตกรรมกับดีไซน์อันประณีตเพื่อเปลี่ยนการทำอาหารประจำวันให้กลายเป็นศิลปะ",
+
+    "news.7.date": "2025.10.10",
+    "news.7.title":
+      "La Ceras เปิดตัวเซ็ตกระเป๋าเดินทางหรูหราสไตล์ฝรั่งเศส 4 ชิ้นอย่างเป็นทางการ",
+    "news.7.summary":
+      "แบรนด์กระเป๋าเดินทางระดับพรีเมียม La Ceras ผสานความประณีตแบบฝรั่งเศสกับเทคโนโลยีทันสมัย เปิดตัวเซ็ตกระเป๋า 4 ขนาด ได้แก่ 14, 20, 24 และ 28 นิ้ว",
+
+    "news.7.content":
+      "La Ceras เปิดตัวเซ็ตกระเป๋าเดินทางหรูหราสไตล์ฝรั่งเศส 4 ชิ้นอย่างเป็นทางการ\n\nFeed Holdings เปิดตัวแบรนด์กระเป๋าเดินทางระดับพรีเมียม La Ceras อย่างเป็นทางการเมื่อวันที่ 10 ตุลาคม 2025 พร้อมเซ็ตกระเป๋า 4 ชิ้น (14, 20, 24, 28 นิ้ว)\n\nLa Ceras ผสมผสานความงามแบบฝรั่งเศสเข้ากับแนวคิดการออกแบบสมัยใหม่ โดยใช้โครงสร้างวัสดุผสม PP และ PC เพื่อให้มีน้ำหนักเบาแต่ทนทาน พร้อมล้อระบบแบริ่ง 210D ที่หมุนลื่นเงียบและมั่นคง\n\nขนาด 14 นิ้วเหมาะสำหรับถือขึ้นเครื่องบิน ส่วน 28 นิ้วเหมาะกับการเดินทางไกลที่ต้องการพื้นที่เก็บของมาก ภายในออกแบบแบบสองชั้น มีซับกันน้ำและซิป YKK คุณภาพสูง เพิ่มความทนทานและความสะดวกในการใช้งาน\n\nLa Ceras ไม่ได้เป็นเพียงกระเป๋าเดินทาง แต่เป็น “เพื่อนร่วมทาง” ที่อยู่กับผู้ใช้ในทุกการเดินทาง ผลิตภัณฑ์ทุกใบมีหมายเลขประจำรุ่นและป้ายดีไซน์จากแรงบันดาลใจในปารีสเพิ่มคุณค่าความหรูหรา\n\nตัวแทนจาก Feed Holdings กล่าวว่า การเปิดตัวนี้สะท้อนคุณค่าของความสง่างามในการเดินทาง และตั้งเป้าพัฒนา La Ceras ให้เป็นแบรนด์กระเป๋าเดินทางระดับพรีเมียม พร้อมขยายเข้าสู่ร้านปลอดภาษีสนามบินและตลาดยุโรปในอนาคต",
+    "news.8.date": "2025.10.13",
+    "news.8.title":
+      "Carvella เปิดตัวชุดมีดและเขียงสแตนเลสสไตล์อิตาเลียนระดับพรีเมียม",
+    "news.8.summary":
+      "แบรนด์เครื่องครัวระดับพรีเมียม Carvella ที่ได้รับแรงบันดาลใจจากงานฝีมือของอิตาลี เปิดตัวชุด Carvella Signature Set ซึ่งประกอบด้วยมีด 6 เล่มและเขียงสแตนเลส",
+    "news.8.content":
+      "Carvella เปิดตัวชุดมีดและเขียงสแตนเลสสไตล์อิตาเลียนระดับพรีเมียม\n\nแบรนด์เครื่องครัวระดับพรีเมียม Carvella ภายใต้ Feed Holdings เปิดตัว Carvella Signature Set อย่างเป็นทางการเมื่อวันที่ 13 ตุลาคม 2025 ซึ่งประกอบด้วยมีด 6 เล่มและเขียงสแตนเลส\n\nCarvella สืบทอดเทคนิคงานโลหะจากภาคเหนือของอิตาลี ผลิตด้วยความแม่นยำสูง แข็งแรง และมีความคมกริบ เขียงผลิตจากสแตนเลส 304 ที่สะอาด ปลอดภัย ไม่เป็นสนิม ส่วนด้ามจับออกแบบตามหลักสรีรศาสตร์เพื่อให้จับถนัดและตัดได้แม่นยำ\n\nใบมีดทำจากเหล็กคาร์บอนสูงเพื่อความคมคงทน ด้ามจับผลิตจากวัสดุป้องกันลื่นที่ให้ความมั่นคงขณะใช้งาน ผลิตภัณฑ์แต่ละชิ้นผ่านการขัดเงาด้วยมือโดยช่างฝีมือเพื่อสร้างสมดุลและความเงางามในแบบ Carvella\n\nCarvella Signature Set เหมาะสำหรับทั้งเชฟมืออาชีพและผู้ที่ชื่นชอบการทำอาหาร มาพร้อมบรรจุภัณฑ์พรีเมียมที่เหมาะสำหรับของขวัญ ดีไซน์โทนสแตนเลสและสีดำช่วยเพิ่มความหรูหราให้ทุกครัว\n\nตัวแทนจาก Feed Holdings กล่าวว่าชุด Carvella ไม่ใช่แค่เครื่องครัว แต่คือผลงานศิลปะการทำอาหาร ที่สืบทอดความประณีตของช่างฝีมืออิตาเลียน และมุ่งมั่นขยายสู่ตลาดยุโรปและเอเชีย พร้อมคำนึงถึงการผลิตที่ยั่งยืนและวัสดุที่เป็นมิตรต่อสิ่งแวดล้อม",
 
     // Stats Section
     "stats.title": "เติบโตอย่างต่อเนื่อง",
@@ -1974,7 +2021,6 @@ const translations = {
     "contact.toast.unknown": "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุ",
     "contact.toast.send_error_console": "ข้อผิดพลาดในการส่งอีเมล:",
     "contact.toast.fail.title": "ส่งไม่สำเร็จ",
-
     "contact.toast.fail.description":
       "เกิดข้อผิดพลาดระหว่างส่งอีเมล โปรดลองอีกครั้งภายหลัง",
 

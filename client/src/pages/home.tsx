@@ -1177,7 +1177,7 @@ export default function Home() {
                 scrollBehavior: "auto", // Disable smooth scroll for manual dragging
               }}
             >
-              {translatedNewsData.slice(0, 6).map((news, index) => {
+              {translatedNewsData.map((news, index) => {
                 const src = resolveNewsThumbnail(news.thumbnail);
                 return (
                   <Link

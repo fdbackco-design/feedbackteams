@@ -16,7 +16,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 export default function News() {
   const { t } = useLanguage();
   const [activeFilter, setActiveFilter] = useState("all");
-  const [visibleNews, setVisibleNews] = useState(6);
+  const [visibleNews, setVisibleNews] = useState(9);
 
   const filterOptions = [
     { value: "all", label: t("news.filter.all") },
@@ -40,10 +40,14 @@ export default function News() {
     기업소식: "bg-accent text-white",
   };
 
-  const filteredNews = newsData.filter(
-    (news) =>
-      activeFilter === "all" || activeFilter === getCategoryKey(news.category),
-  );
+  // ✅ 원래 인덱스 보존
+  const filteredNews = newsData
+    .map((news, i) => ({ ...news, originalIndex: i }))
+    .filter(
+      (news) =>
+        activeFilter === "all" ||
+        activeFilter === getCategoryKey(news.category),
+    );
 
   const loadMoreNews = () => {
     setVisibleNews((prev) => Math.min(prev + 6, filteredNews.length));
@@ -52,6 +56,7 @@ export default function News() {
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <div className="text-center mb-10 mt-16 sm:mt-20 mobile-padding">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
             {t("news.title")}
@@ -62,7 +67,7 @@ export default function News() {
           </p>
         </div>
 
-        {/* News Filter - Mobile Optimized */}
+        {/* Filter Buttons */}
         <div className="mb-8 sm:mb-12 mobile-padding">
           <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
             {filterOptions.map((option) => (
@@ -84,23 +89,23 @@ export default function News() {
 
         {/* News Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12 mobile-padding">
-          {filteredNews.slice(0, visibleNews).map((news, index) => {
+          {filteredNews.slice(0, visibleNews).map((news) => {
             const src = resolveNewsThumbnail(news.thumbnail);
             return (
               <Link
-                key={index}
+                key={news.originalIndex}
                 href={news.link}
                 className="block transition-transform hover:scale-[1.02]"
                 onClick={() => {
-                  // Scroll to top when navigating to external link
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
                 <Card className="shadow-lg overflow-hidden hover:shadow-xl transition-shadow flex flex-col h-full cursor-pointer">
+                  {/* 썸네일 */}
                   <div className="aspect-[4/3] bg-gray-200 relative overflow-hidden">
                     <img
                       src={src}
-                      alt={news.title}
+                      alt={t(`news.${news.originalIndex}.title`)}
                       className="w-full h-full object-cover"
                       loading="lazy"
                       decoding="async"
@@ -109,6 +114,8 @@ export default function News() {
                       }}
                     />
                   </div>
+
+                  {/* 본문 */}
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between mb-3">
                       <Badge
@@ -122,12 +129,13 @@ export default function News() {
                       <time className="text-gray-500 text-sm">{news.date}</time>
                     </div>
                     <CardTitle className="text-xl font-bold text-gray-900 line-clamp-2 h-[3.5rem] leading-tight">
-                      {t(`news.${index}.title`)}
+                      {t(`news.${news.originalIndex}.title`)}
                     </CardTitle>
                   </CardHeader>
+
                   <CardContent className="flex-1 flex flex-col justify-between pt-0">
                     <CardDescription className="text-gray-600 mb-6 line-clamp-3 h-[4.5rem] leading-relaxed">
-                      {t(`news.${index}.summary`)}
+                      {t(`news.${news.originalIndex}.summary`)}
                     </CardDescription>
                     <div className="text-primary font-semibold self-start">
                       {t("news.readMore")} →
