@@ -681,15 +681,15 @@ export default function Home() {
             opacity: Math.max(0, 1 - scrollY / 500),
           }}
         >
-          <h1 className="hero-title mb-4 sm:mb-6 animate-fade-in-up">
+          <h1 className="hero-title mb-3 sm:mb-4 md:mb-6 animate-fade-in-up">
             {t("hero.title")}
             <br />
-            <span className="hero-subtitle text-[30px] sm:text-[60px]">
+            <span className="hero-subtitle block mt-2 sm:mt-3">
               {t("hero.subtitle")}
             </span>
           </h1>
           <p
-            className="hero-description mb-6 sm:mb-8 animate-fade-in-up"
+            className="hero-description mb-6 sm:mb-8 md:mb-10 animate-fade-in-up px-4 sm:px-6"
             style={{ animationDelay: "0.3s" }}
           >
             {t("hero.description")}
