@@ -350,7 +350,7 @@ html {
   --logo-size-mobile: 40px;
   --logo-size-desktop: 50px;
   /* 숫자가 작을수록 더 빠름 */
-  --marquee-duration-mobile: 10s;
+  --marquee-duration-mobile: 5s;
   --marquee-duration-desktop: 10s;
   /* 로고 높이에 맞춰 배경 세로 패딩 (상하) */
   --marquee-padding-mobile: 1.5rem;

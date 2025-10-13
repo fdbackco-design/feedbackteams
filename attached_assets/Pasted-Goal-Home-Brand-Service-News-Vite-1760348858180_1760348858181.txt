@@ -1,0 +1,114 @@
+Goal  
+모든 페이지(Home, Brand, Service, News 등)의 텍스트를 모바일에서 보기 좋게 줄바꿈·크기·간격이 최적화되도록 통일해주세요.  
+프로젝트는 Vite + React + Tailwind 기반입니다.  
+
+---
+
+### 1️⃣ 전역 타이포그래피 유틸리티 추가  
+src/index.css 또는 global.css 에 다음을 추가해주세요.
+
+```css
+/* === Global Typography Optimization === */
+:root {
+  --hero-title-min: 22px;
+  --hero-title-max: 44px;
+  --hero-desc-min: 14px;
+  --hero-desc-max: 18px;
+}
+
+/* 문장 단위로 깔끔한 줄바꿈 */
+.break-keep { word-break: keep-all; }
+
+@supports (text-wrap: balance) {
+  .text-balance { text-wrap: balance; }
+}
+@supports (text-wrap: pretty) {
+  .text-pretty { text-wrap: pretty; }
+}
+
+/* 유동 폰트 크기 */
+.text-fluid-title { font-size: clamp(var(--hero-title-min), 6vw, var(--hero-title-max)); }
+.text-fluid-sub   { font-size: clamp(16px, 4.5vw, 24px); }
+.text-fluid-body  { font-size: clamp(var(--hero-desc-min), 3.5vw, var(--hero-desc-max)); }
+
+/* 글줄 길이 제한 */
+.maxw-title { max-width: 24ch; }
+.maxw-body  { max-width: 55ch; }
+
+/* 행간과 자간 */
+.leading-tight-mobile { line-height: 1.25; }
+.leading-relaxed-mobile { line-height: 1.6; }
+.tracking-tight-mobile { letter-spacing: -0.01em; }
+
+/* 버튼 텍스트 줄바꿈 방지 */
+.nowrap { white-space: nowrap; }
+```
+
+---
+
+### 2️⃣ 컴포넌트별 적용 규칙
+아래 규칙을 모든 주요 페이지 컴포넌트에 일괄 적용해주세요.
+
+**H1/H2/H3 (섹션 타이틀):**
+```tsx
+<h1 className="
+  text-fluid-title break-keep text-balance text-pretty
+  leading-tight-mobile tracking-tight-mobile font-bold maxw-title mx-auto
+">
+  {t("hero.title")}
+</h1>
+```
+
+**Subheading / Slogan:**
+```tsx
+<p className="text-fluid-sub break-keep text-pretty text-gray-700 leading-relaxed-mobile maxw-title mx-auto">
+  {t("brands.asran.slogan")}
+</p>
+```
+
+**본문(Description, Summary 등):**
+```tsx
+<p className="text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-600 maxw-body mx-auto">
+  {t("news.description")}
+</p>
+```
+
+**버튼(Label, CTA):**
+```tsx
+<Button className="nowrap text-fluid-body font-semibold">
+  {t("hero.cta.consultation")}
+</Button>
+```
+
+**뉴스 카드 타이틀 예시:**
+```tsx
+<h3 className="break-keep text-pretty leading-snug text-[clamp(16px,4vw,20px)] line-clamp-2">
+  {news.title}
+</h3>
+```
+
+---
+
+### 3️⃣ 레이아웃 폭 제한 및 여백 통일
+모든 페이지 섹션 컨테이너에 아래 속성을 기본 적용:
+```tsx
+<div className="max-w-screen-md sm:max-w-4xl mx-auto px-4 sm:px-6">
+  {/* content */}
+</div>
+```
+
+---
+
+### 4️⃣ 테스트 및 조정 포인트
+- iPhone SE/Pro, Galaxy S 시뮬레이터에서 제목·본문이 자연스러운 줄바꿈인지 확인  
+- CTA 버튼이나 긴 문장은 줄바꿈 없이 유지되는지  
+- 타이틀 폭이 너무 넓지 않은지 (maxw-title 24ch 유지)  
+- line-clamp-2, 3이 자연스럽게 동작하는지  
+
+---
+
+### 5️⃣ 추가 요청
+모든 주요 페이지(Home.tsx, Brand.tsx, News.tsx, Service.tsx, Contact.tsx 등)에서  
+타이틀·본문·버튼에 위 클래스 구조를 반영해주세요.  
+
+폰트 크기, 행간, 줄바꿈 규칙이 전역적으로 통일되도록 리팩터링을 진행해주세요.
