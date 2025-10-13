@@ -34,6 +34,7 @@ import B2B2C_Hub from "@/components/B2B2C_Hub";
 import NetworkBackground from "@/components/NetworkBackground";
 import LazyImage from "@/components/LazyImage";
 import LazyVideo from "@/components/LazyVideo";
+import LogoMarquee from "@/components/LogoMarquee";
 import shipVideo from "@assets/ship_section_1754640786186.mp4";
 import mainBannerVideo from "@assets/ship (1)_1_1759110826092.mp4";
 import cargoShipImage from "@assets/bada-leul-hanghae-haneun-hwamulseon_1754648981305.jpg";
@@ -717,9 +718,14 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Logo Marquee */}
+        <div className="absolute bottom-0 left-0 right-0 z-20">
+          <LogoMarquee />
+        </div>
+
         {/* Scroll Indicator */}
         <div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white cursor-pointer animate-bounce"
+          className="absolute bottom-24 sm:bottom-28 left-1/2 transform -translate-x-1/2 text-white cursor-pointer animate-bounce z-30"
           onClick={scrollToNextSection}
         >
           <div className="flex flex-col items-center">
