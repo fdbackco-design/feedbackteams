@@ -377,7 +377,7 @@ const translations = {
       'FeedBack은 브랜드와 시장을 연결하는 실행 중심의 유통 플랫폼으로서<br class="hidden sm:block"/>모든 파트너와 함께 성장하는 상생의 생태계를 구축하고 있습니다.',
     "about.timeline.title": "연혁",
     "about.timeline.2025_10":
-      "아스란, 카르벨라, 라쎄라스, 식구 자사 브랜드 런칭",
+      "Asran, Carvella, La Ceras, 식구 자사 브랜드 런칭",
     "about.timeline.2025_09":
       "Hoid 2세대 공기청정기 국내외 동시 론칭 (홈쇼핑 입점 확장)",
     "about.timeline.2025_08": "Hoid 무선 청소기 출시",
