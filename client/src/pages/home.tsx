@@ -682,15 +682,15 @@ export default function Home() {
             opacity: Math.max(0, 1 - scrollY / 500),
           }}
         >
-          <h1 className="hero-title mb-3 sm:mb-4 md:mb-6 animate-fade-in-up">
+          <h1 className="text-fluid-title break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold maxw-title mx-auto mb-3 sm:mb-4 md:mb-6 animate-fade-in-up text-white">
             {t("hero.title")}
             <br />
-            <span className="hero-subtitle block mt-2 sm:mt-3">
+            <span className="block mt-2 sm:mt-3">
               {t("hero.subtitle")}
             </span>
           </h1>
           <p
-            className="hero-description mb-6 sm:mb-8 md:mb-10 animate-fade-in-up mobile-body"
+            className="text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-200 maxw-body mx-auto mb-6 sm:mb-8 md:mb-10 animate-fade-in-up opacity-90"
             style={{ animationDelay: "0.3s" }}
           >
             {t("hero.description")}
@@ -702,14 +702,14 @@ export default function Home() {
             <Button
               asChild
               size="lg"
-              className="tap-target mobile-button-size text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+              className="nowrap tap-target mobile-button-size text-fluid-body font-semibold px-6 sm:px-8 py-4 sm:py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
             >
               <Link href="/service">{t("hero.cta.consultation")}</Link>
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="tap-target mobile-button-size text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 border-white bg-white text-black hover:bg-gray-100 hover:text-black transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+              className="nowrap tap-target mobile-button-size text-fluid-body font-semibold px-6 sm:px-8 py-4 sm:py-6 border-white bg-white text-black hover:bg-gray-100 hover:text-black transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
               onClick={() => setIsVideoPlaying(true)}
             >
               <Play className="mr-2 w-4 sm:w-5 h-4 sm:h-5" />
@@ -823,15 +823,15 @@ export default function Home() {
                 <div className="text-xs sm:text-sm font-semibold uppercase tracking-wide opacity-90">
                   {brands[currentBrandIndex].category}
                 </div>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 leading-tight">
+                <h2 className="text-fluid-title break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold maxw-title mb-3 sm:mb-4">
                   {brands[currentBrandIndex].name}
                 </h2>
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light mb-4 sm:mb-6 opacity-90 leading-tight">
+                <p className="text-fluid-sub break-keep text-pretty leading-relaxed-mobile maxw-title mb-4 sm:mb-6 opacity-90">
                   {brands[currentBrandIndex].slogan}
                 </p>
               </div>
 
-              <p className="text-sm sm:text-base lg:text-lg leading-relaxed opacity-90 max-w-sm sm:max-w-md lg:max-w-lg">
+              <p className="text-fluid-body break-keep text-pretty leading-relaxed-mobile maxw-body opacity-90">
                 {brands[currentBrandIndex].description}
               </p>
 
@@ -963,7 +963,7 @@ export default function Home() {
             <div className="section-subtitle mb-2 text-[12px] sm:text-[14px]">
               SERVICE
             </div>
-            <h2 className="section-title-primary mb-4 text-[24px] sm:text-[36px] font-bold">
+            <h2 className="text-fluid-title break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold maxw-title mx-auto mb-4 text-gray-900">
               {t("services.title")}
             </h2>
             <p className="section-description">{t("hero.description")}</p>
@@ -991,10 +991,10 @@ export default function Home() {
                       <div className="text-xs sm:text-sm text-primary font-semibold mb-3 sm:mb-4">
                         0{currentServiceIndex + 1}/0{services.length}
                       </div>
-                      <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-[#000000] mb-3 sm:mb-4 md:mb-6 leading-tight">
+                      <h3 className="text-fluid-sub break-keep text-balance text-pretty leading-tight-mobile font-bold text-[#000000] maxw-title mb-3 sm:mb-4 md:mb-6">
                         {services[currentServiceIndex].title}
                       </h3>
-                      <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-4 sm:mb-6 leading-relaxed line-clamp-3">
+                      <p className="text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-700 maxw-body mb-4 sm:mb-6 line-clamp-3">
                         {services[currentServiceIndex].description}
                       </p>
                       <div className="space-y-1 sm:space-y-2 mb-4 sm:mb-6 md:mb-8">
@@ -1092,7 +1092,7 @@ export default function Home() {
         <div className="relative w-full z-10">
           {/* Section Header - Aligned with Navigation */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-12">
-            <h2 className="news-title text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-900">
+            <h2 className="text-fluid-title break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-center text-gray-900 maxw-title mx-auto">
               {t("news.title")}
             </h2>
             {/* Mobile swipe indicator */}
@@ -1205,7 +1205,7 @@ export default function Home() {
                       />
                     </div>
                     <div className="p-4 sm:p-5 md:p-6 lg:p-7 flex flex-col flex-1">
-                      <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 leading-tight line-clamp-2 mb-3 h-[3rem] sm:h-[3.5rem] md:h-[4rem] overflow-hidden">
+                      <h3 className="break-keep text-pretty leading-snug font-semibold text-gray-900 line-clamp-2 mb-3 h-[3rem] sm:h-[3.5rem] md:h-[4rem] overflow-hidden" style={{ fontSize: 'clamp(16px, 4vw, 20px)' }}>
                         {news.title}
                       </h3>
                       <div className="text-sm sm:text-base text-gray-500 mt-auto">
