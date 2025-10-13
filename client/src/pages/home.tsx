@@ -659,10 +659,10 @@ export default function Home() {
       {/* Hero Section */}
       <section
         id="hero"
-        className="relative h-screen flex items-center justify-center overflow-hidden"
+        className="relative h-screen flex items-center justify-center overflow-hidden touch-pan-y"
         style={{ scrollSnapAlign: "start" }}
       >
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 mobile-bg-cover">
           <LazyVideo
             src={mainBannerVideo}
             className="absolute inset-0 w-full h-full object-cover"
@@ -675,7 +675,7 @@ export default function Home() {
         </div>
 
         <div
-          className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 transform transition-all duration-1000"
+          className="relative z-10 text-center text-white max-w-4xl mx-auto mobile-padding transform transition-all duration-1000"
           style={{
             transform: `translateY(${scrollY * 0.3}px)`,
             opacity: Math.max(0, 1 - scrollY / 500),
@@ -689,7 +689,7 @@ export default function Home() {
             </span>
           </h1>
           <p
-            className="hero-description mb-6 sm:mb-8 md:mb-10 animate-fade-in-up px-4 sm:px-6"
+            className="hero-description mb-6 sm:mb-8 md:mb-10 animate-fade-in-up mobile-body"
             style={{ animationDelay: "0.3s" }}
           >
             {t("hero.description")}
@@ -701,14 +701,14 @@ export default function Home() {
             <Button
               asChild
               size="lg"
-              className="mobile-button-size text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+              className="tap-target mobile-button-size text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
             >
               <Link href="/service">{t("hero.cta.consultation")}</Link>
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="mobile-button-size text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 border-white bg-white text-black hover:bg-gray-100 hover:text-black transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+              className="tap-target mobile-button-size text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 border-white bg-white text-black hover:bg-gray-100 hover:text-black transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
               onClick={() => setIsVideoPlaying(true)}
             >
               <Play className="mr-2 w-4 sm:w-5 h-4 sm:h-5" />
