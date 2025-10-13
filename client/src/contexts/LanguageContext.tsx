@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
-type Language = "KR" | "EN";
+type Language = "KR" | "EN" | "TH";
 
 interface LanguageContextType {
   currentLanguage: Language;
@@ -1633,6 +1633,188 @@ const translations = {
     "footer.contact": "Contact",
     "footer.follow": "Follow",
     "footer.copyright": "© 2024 FeedBack. All rights reserved.",
+  },
+  TH: {
+    // Navigation
+    "nav.home": "เกี่ยวกับบริษัท",
+    "nav.services": "บริการ",
+    "nav.brands": "แบรนด์",
+    "nav.news": "ข่าวสาร",
+    "nav.contact": "ติดต่อเรา",
+
+    // Footer
+    "footer.tagline": "เชื่อมต่อคุณค่าของเกาหลีสู่โลกจากการจัดจำหน่ายสู่แบรนด์",
+    "footer.about": "บริษัทบริการครบวงจรที่เข้าสู่ตลาดโลกด้วยคุณค่าแห่งความร่วมมือผ่านการจัดจำหน่าย การผลิตแบรนด์ การตลาด และแพลตฟอร์มการท่องเที่ยวเพื่อสุขภาพ",
+    "footer.sections.services": "บริการ",
+    "footer.sections.brands": "แบรนด์",
+    "footer.sections.company": "บริษัท",
+    
+    "footer.services.distribution": "การจัดจำหน่าย/นำเข้า-ส่งออก",
+    "footer.services.manufacturing": "การผลิตแบรนด์ของตนเอง",
+    "footer.services.marketing": "การตลาดระดับโลก",
+    "footer.services.medical": "แพลตฟอร์มการท่องเที่ยวเพื่อสุขภาพ",
+    "footer.services.app": "การพัฒนาแอพ",
+
+    "footer.brands.hoid": "Hoid",
+    "footer.brands.asran": "อัสราน",
+    "footer.brands.laceras": "ลา เซราส",
+    "footer.brands.carvella": "คาร์เวลลา",
+    "footer.brands.medifeed": "Medifeed",
+    "footer.brands.inyourheart": "InYourHeart",
+    "footer.brands.sangsaeng": "ซังแซง",
+
+    "footer.company.about": "เกี่ยวกับบริษัท",
+    "footer.company.news": "ข่าวสาร",
+    "footer.company.contact": "ติดต่อ",
+
+    "footer.bottom.copyright": "© 2024 FeedBack Corp. สงวนลิขสิทธิ์",
+    "footer.bottom.bizinfo": "เลขที่จดทะเบียนธุรกิจ: 296-87-03628 | ผู้แทน: Song Hae-min, Jung Sung-hyun",
+    "footer.bottom.privacy": "นโยบายความเป็นส่วนตัว",
+    "footer.bottom.terms": "ข้อกำหนดการใช้งาน",
+    "footer.bottom.cookies": "นโยบายคุกกี้",
+
+    // Hero Section
+    "hero.title": "แพลตฟอร์มจัดจำหน่าย",
+    "hero.subtitle": "ที่เชื่อมต่อแบรนด์และตลาด FEEDBACK",
+    "hero.description": "แพลตฟอร์มความร่วมมือที่เชื่อมต่อการจัดจำหน่าย แบรนด์ การตลาด และการผลิตเป็นหนึ่งเดียว",
+    "hero.cta.consultation": "ดูบริการของเรา",
+    "hero.cta.proposal": "ดูวิดีโอแนะนำ",
+
+    // Services Section
+    "services.title": "บริการ",
+    "services.medical.title": "บริการนายหน้าการท่องเที่ยวเพื่อสุขภาพ",
+    "services.medical.description": "บริการนายหน้าเฉพาะทางที่เชื่อมต่อทีมแพทย์ชั้นนำของเกาหลีกับผู้ป่วยต่างชาติ",
+    "services.app.title": "การพัฒนาแอพหลายภาษา",
+    "services.app.description": "บริการพัฒนาและแปลแอพพลิเคชันมือถือสำหรับตลาดโลก",
+    "services.brand.title": "การจัดจำหน่ายแบรนด์",
+    "services.brand.description": "โซลูชันการจัดจำหน่ายและการตลาดสำหรับแบรนด์เอเชียที่ต้องการขยายสู่ตลาดโลก",
+
+    // Brands Section
+    "brands.title": "แบรนด์",
+    "brands.hoid.description": "แบรนด์เครื่องใช้ไฟฟ้าสมาร์ทที่ปฏิวัติคุณภาพอากาศด้วยดีไซน์มินิมอลและเทคโนโลยีล้ำสมัย",
+    "brands.asran.description": "หม้อพรีเมี่ยมที่ผสมผสานเทคโนโลยีเยอรมันและความคุ้มค่า",
+    "brands.laceras.description": "แบรนด์กระเป๋าเดินทางหรูหราที่ผสมผสานงานฝีมือฝรั่งเศสกับความทันสมัย",
+    "brands.carvella.description": "เครื่องครัวพรีเมี่ยมจากงานฝีมือชาวอิตาลี",
+    "brands.medifeed.description": "แบรนด์อาหารเสริมที่มุ่งเน้นสุขภาพเหงือกและดวงตา",
+    "brands.inyourheart.description": "แบรนด์ผลิตภัณฑ์ดูแลผิวพรีเมี่ยมที่นำตลาด K-beauty ระดับโลก",
+    "brands.sangsaeng.description": "แพลตฟอร์มการแพทย์ครบวงจรที่เชื่อมต่อบริการทางการแพทย์ของเกาหลีสู่โลก",
+
+    // News Section
+    "news.title": "ข่าวสารล่าสุด",
+    "news.subtitle": "ความเคลื่อนไหวล่าสุดของ FeedBack",
+    "news.readMore": "อ่านเพิ่มเติม",
+    "news.noNews": "ไม่มีข่าวสาร",
+    "news.loadingError": "ไม่สามารถโหลดข่าวสารได้",
+
+    // Contact Section
+    "contact.title": "ติดต่อเรา",
+    "contact.subtitle": "เราพร้อมช่วยเหลือคุณ ติดต่อเราได้ทุกเมื่อ",
+    "contact.info.title": "ข้อมูลติดต่อ",
+    "contact.info.address": "ที่อยู่",
+    "contact.info.email": "อีเมล",
+    "contact.info.phone": "โทรศัพท์",
+    "contact.form.title": "ส่งข้อความถึงเรา",
+    "contact.form.name": "ชื่อของคุณ",
+    "contact.form.email": "อีเมลของคุณ",
+    "contact.form.phone": "เบอร์โทรศัพท์",
+    "contact.form.message": "ข้อความ",
+    "contact.form.submit": "ส่งข้อความ",
+    "contact.form.submitting": "กำลังส่ง...",
+    "contact.form.success": "ข้อความของคุณถูกส่งเรียบร้อยแล้ว!",
+    "contact.form.error": "ไม่สามารถส่งข้อความได้ กรุณาลองอีกครั้ง",
+
+    // Default translations for brand pages (same as EN for now)
+    "브랜드 목록으로 돌아가기": "กลับไปยังรายการแบรนด์",
+    
+    // Hoid Brand Page
+    "hoid.hero.title": "ดีไซน์ที่เปลี่ยนแม้กระทั่งอากาศ",
+    "hoid.hero.description": "แบรนด์เครื่องใช้ไฟฟ้าสมาร์ทที่ปฏิวัติคุณภาพอากาศในชีวิตประจำวันด้วยดีไซน์มินิมอลและเทคโนโลยีล้ำสมัย",
+    "hoid.hero.cta": "เยี่ยมชมเว็บไซต์ Hoid",
+    "hoid.features.title": "เทคโนโลยีนวัตกรรม",
+    "hoid.features.subtitle": "สัมผัสประสบการณ์การฟอกอากาศแบบใหม่ด้วยเทคโนโลยีล้ำสมัยที่ซ่อนอยู่ในดีไซน์มินิมอล",
+    
+    "hoid.feature1.title": "เทคโนโลยี 3-in-1",
+    "hoid.feature1.description": "โซลูชันแบบครบวงจรที่รวมการฟอกอากาศ ลดความชื้น และฆ่าเชื้อ",
+    "hoid.feature2.title": "ฟิลเตอร์ HEPA14",
+    "hoid.feature2.description": "ระบบฟิลเตอร์ประสิทธิภาพสูงระดับการแพทย์ที่กำจัดฝุ่นละอองได้ถึง 99.995%",
+    "hoid.feature3.title": "ดีไซน์มินิมอล",
+    "hoid.feature3.description": "ปรัชญาการออกแบบที่เรียบหรูและทันสมัยที่เข้ากับทุกพื้นที่อย่างลงตัว",
+    
+    "hoid.partnership.title": "จุดเปลี่ยนใหม่",
+    "hoid.partnership.subtitle": "ในการขยายตลาดโลก",
+    "hoid.partnership.date": "16 สิงหาคม 2025",
+    "hoid.partnership.mou": "ลงนาม MOU กับผู้ผลิตเครื่องฟอกอากาศรายใหญ่ที่สุดในจีน",
+    "hoid.partnership.description": "HOID ได้ลงนามในข้อตกลงความร่วมมือด้านการจัดจำหน่ายและเทคโนโลยีระดับโลกกับผู้ผลิตเครื่องฟอกอากาศรายใหญ่ที่สุดในจีน เราวางแผนที่จะขยายธุรกิจไปยังเอเชียและมอบอากาศสะอาดให้กับลูกค้ามากขึ้น",
+    "hoid.partnership.point1": "ขยายตลาดทั่วเอเชีย",
+    "hoid.partnership.point2": "ความร่วมมือด้านเทคโนโลยีและการพัฒนาร่วม",
+    "hoid.partnership.point3": "ขยายเครือข่ายจัดจำหน่ายระดับโลก",
+    
+    "hoid.homeshopping.title": "ดีไซน์พรีเมี่ยม",
+    "hoid.homeshopping.subtitle": "เข้าสู่จอทีวี",
+    "hoid.homeshopping.date": "เปิดตัวสิงหาคม 2025",
+    "hoid.homeshopping.heading": "เครื่องใช้ไฟฟ้าดีไซน์พรีเมี่ยม ตอนนี้ที่บ้านคุณ",
+    "hoid.homeshopping.description": "แบรนด์เครื่องใช้ไฟฟ้าดีไซน์พรีเมี่ยม HOID จะมาถึงคุณผ่านทางโฮมช้อปปิ้ง สัมผัสดีไซน์ที่หรูหรา ประสิทธิภาพยอดเยี่ยม และเทคโนโลยีนวัตกรรมที่เปลี่ยนชีวิต",
+    
+    "hoid.channels.title": "พบได้ทุกที่ทั่วประเทศ",
+    "hoid.channels.subtitle": "เข้าถึงลูกค้าได้ใกล้ชิดผ่านช่องทางจัดจำหน่ายที่หลากหลาย",
+    "hoid.channel1.title": "โฮมช้อปปิ้ง",
+    "hoid.channel1.description": "จำหน่ายโดยตรงผ่านช่องทางโฮมช้อปปิ้ง",
+    "hoid.channel2.title": "สมาร์ทสโตร์",
+    "hoid.channel2.description": "ดำเนินการร้านค้าออนไลน์อย่างเป็นทางการ",
+    "hoid.channel3.title": "Global Seller",
+    "hoid.channel3.description": "ขยายสู่แพลตฟอร์มออนไลน์ต่างประเทศ",
+    "hoid.channel4.title": "ร้านค้าออฟไลน์",
+    "hoid.channel4.description": "ร้านเครื่องใช้ไฟฟ้าและห้างสรรพสินค้าทั่วประเทศ",
+    
+    "hoid.cta.title": "อากาศสะอาด ชีวิตใหม่",
+    "hoid.cta.description": "สร้างสภาพแวดล้อมภายในที่สุขภาพดีและสบายด้วย HOID",
+    "hoid.cta.button": "ติดต่อเรา",
+
+    // Medifeed Brand Page
+    "medifeed.hero.title": "นิสัยเล็กๆ ที่ปกป้องทุกวัน",
+    "medifeed.hero.description": "แบรนด์อาหารเสริมเพื่อสุขภาพที่มุ่งเน้นสุขภาพเหงือกและดวงตา ให้โซลูชันสุขภาพที่ทุกคนเลือกได้อย่างง่ายดาย",
+    "medifeed.features.title": "โซลูชันสุขภาพเฉพาะทาง",
+    "medifeed.features.subtitle": "รับผิดชอบสุขภาพในชีวิตประจำวันด้วยอาหารเสริมเฉพาะทางที่พัฒนาจากการวิจัยทางวิทยาศาสตร์",
+    
+    "medifeed.category1.title": "ผู้เชี่ยวชาญด้านสุขภาพเหงือก",
+    "medifeed.category1.description": "อาหารเสริมเฉพาะทางสำหรับป้องกันโรคปริทันต์และรักษาสุขภาพเหงือก",
+    "medifeed.category1.ingredient1": "Coenzyme Q10",
+    "medifeed.category1.ingredient2": "วิตามิน C Complex",
+    "medifeed.category1.ingredient3": "สังกะสี & ซีลีเนียม",
+    "medifeed.category1.ingredient4": "ได้รับการรับรอง GMP",
+    
+    "medifeed.category2.title": "ผู้เชี่ยวชาญด้านสุขภาพดวงตา",
+    "medifeed.category2.description": "อาหารเสริมเพื่อดวงตาที่เหนื่อยล้าในยุคดิจิทัลและป้องกันสายตา",
+    "medifeed.category2.ingredient1": "ลูทีน & ซีแซนทิน",
+    "medifeed.category2.ingredient2": "สารสกัดบิลเบอร์รี่",
+    "medifeed.category2.ingredient3": "กรดไขมันโอเมก้า-3",
+    "medifeed.category2.ingredient4": "ป้องกันแสงสีน้ำเงิน",
+    
+    "medifeed.philosophy.title": "สร้างชีวิตประจำวันที่มีสุขภาพดี",
+    "medifeed.philosophy.subtitle": "มอบโซลูชันสุขภาพที่เชื่อถือได้ด้วยความเชื่อมั่นในหลักฐานทางวิทยาศาสตร์และคุณภาพ",
+    
+    "medifeed.value1.title": "ความปลอดภัยเป็นอันดับแรก",
+    "medifeed.value1.description": "เราให้เฉพาะผลิตภัณฑ์ที่ปลอดภัยและเชื่อถือได้ผ่านการควบคุมคุณภาพที่เข้มงวดและการรับรอง GMP",
+    "medifeed.value2.title": "แนวทางที่ใช้งานได้จริง",
+    "medifeed.value2.description": "พัฒนาในรูปแบบที่รับประทานได้สะดวกเหมาะกับไลฟ์สไตล์คนยุคใหม่ที่ยุ่ง",
+    "medifeed.value3.title": "ราคาที่สมเหตุสมผล",
+    "medifeed.value3.description": "สร้างนิสัยที่มีสุขภาพดีด้วยราคาที่สมเหตุสมผลที่ทุกคนซื้อได้โดยไม่มีภาระ",
+    
+    "medifeed.cta.title": "วันที่มีสุขภาพดี",
+    "medifeed.cta.subtitle": "เริ่มจากนิสัยเล็กๆ",
+    "medifeed.cta.description": "สร้างสุขภาพที่ดีขึ้นด้วยการเปลี่ยนแปลงเล็กๆ ในชีวิตประจำวันกับ MEDIFEED",
+    "medifeed.cta.button": "ขอคำปรึกษา",
+
+    // Other common keys - using English as fallback for now
+    "브랜드 소개": "การแนะนำแบรนด์",
+    "파트너십 문의하기": "สอบถามเกี่ยวกับความร่วมมือ",
+    
+    // Footer
+    "footer.company": "ข้อมูลบริษัท",
+    "footer.services": "บริการ",
+    "footer.contact": "ติดต่อ",
+    "footer.follow": "ติดตาม",
+    "footer.copyright": "© 2024 FeedBack สงวนลิขสิทธิ์",
   },
 };
 

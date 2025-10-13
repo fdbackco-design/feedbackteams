@@ -7,6 +7,7 @@ import hoid2 from "./hoid2.jpeg";
 import hoid3 from "./hoid3.jpg";
 import hoid10 from "@assets/hoid10_1754966817151.png";
 import homeshopping from "./homeshopping.png";
+import allbrand from "./allbrand.jpeg";
 
 // 추가 이미지가 생기면 여기 위에 import 하고 아래 객체에 key/value 추가
 export const newsImages: Record<string, string> = {
@@ -18,6 +19,7 @@ export const newsImages: Record<string, string> = {
   "hoid3.jpg": hoid3,
   "hoid10.png": hoid10,
   "homeshopping.png": homeshopping,
+  "allbrand.jpeg": allbrand,
 };
 
 // 안전하게 경로 처리 + 폴백 제공

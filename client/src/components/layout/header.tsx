@@ -201,6 +201,17 @@ export default function Header(_props: HeaderProps) {
                 >
                   English (EN)
                 </button>
+                <button
+                  onClick={() => {
+                    setCurrentLanguage("TH");
+                    setIsLanguageMenuOpen(false);
+                  }}
+                  className={`block w-full px-4 py-2 text-sm text-left hover:bg-gray-100 text-gray-800 ${
+                    currentLanguage === "TH" ? "bg-gray-50 font-medium" : ""
+                  }`}
+                >
+                  ไทย (TH)
+                </button>
               </div>
             )}
           </div>
@@ -264,6 +275,16 @@ export default function Header(_props: HeaderProps) {
                     ${currentLanguage === "EN" ? "text-gray-900 bg-gray-100" : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"}`}
                 >
                   English (EN)
+                </button>
+                <button
+                  onClick={() => {
+                    setCurrentLanguage("TH");
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className={`tap-target block w-full px-4 py-3 text-base font-medium rounded-md transition-colors text-left
+                    ${currentLanguage === "TH" ? "text-gray-900 bg-gray-100" : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"}`}
+                >
+                  ไทย (TH)
                 </button>
               </div>
             </div>
