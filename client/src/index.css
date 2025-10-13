@@ -229,6 +229,35 @@ html {
   }
 }
 
+/* 모바일 로고 마키 튐 방지 */
+@media (max-width: 768px) {
+  .logo-marquee-wrapper {
+    padding-block: 0.75rem; /* 상하 패딩 줄이기 (로고에 딱 맞게) */
+  }
+
+  .logo-marquee-track {
+    animation-duration: 12s; /* 모바일에서 약간 더 빠르게 */
+    gap: 0;
+  }
+
+  .logo-row {
+    gap: 2.5rem;              /* 모바일 간격 축소 */
+    padding-right: 2.5rem;    /* gap과 동일하게 */
+    min-width: 100%;          /* 한 세트가 최소 한 화면 너비를 커버하게 */
+    flex-shrink: 0;           /* 줄어들지 않게 */
+  }
+
+  .logo-item {
+    height: 28px;             /* 너무 커서 짤리는 경우 줄이기 */
+  }
+
+  /* 핵심: 정확히 이어지게 하는 보정용 애니메이션 */
+  @keyframes marquee-x {
+    from { transform: translate3d(0, 0, 0); }
+    to   { transform: translate3d(-100%, 0, 0); } /* 50% → 100% 로 변경 */
+  }
+}
+
 /* Improved mobile touch interactions */
 .mobile-touch-area {
   @apply min-h-11 min-w-11 flex items-center justify-center;
@@ -350,8 +379,8 @@ html {
   --logo-size-mobile: 40px;
   --logo-size-desktop: 50px;
   /* 숫자가 작을수록 더 빠름 */
-  --marquee-duration-mobile: 20s;
-  --marquee-duration-desktop: 20s;
+  --marquee-duration-mobile: 16s;
+  --marquee-duration-desktop: 14s;
   /* 로고 높이에 맞춰 배경 세로 패딩 (상하) */
   --marquee-padding-mobile: 1.5rem;
   --marquee-padding-desktop: 1.5rem;
@@ -1095,23 +1124,26 @@ html {
   /* 트랙: 세트 간 gap = 0 (중요) */
   .logo-marquee-track {
     display: flex;
-    gap: 0; 
-    animation: marquee var(--marquee-duration-mobile) linear infinite;
+    gap: 0;
     will-change: transform;
+    animation: marquee-x var(--marquee-duration-mobile) linear infinite;
+    transform: translate3d(0,0,0);
+    backface-visibility: hidden;
   }
 
   /* Row */
   .logo-row {
     display: flex;
     align-items: center;
-    gap: var(--marquee-gap-mobile);           
-    padding-right: var(--marquee-gap-mobile); 
-    flex-shrink: 0;                          
-    width: max-content;                      
+    gap: var(--marquee-gap-mobile);
+    padding-right: var(--marquee-gap-mobile);
+    flex-shrink: 0;        
+    width: max-content;             
   }
 
   /* 로고 크기 */
   .logo-item {
+    flex: 0 0 auto;
     height: var(--logo-size-mobile);
     width: auto;
     object-fit: contain;
@@ -1126,17 +1158,22 @@ html {
       padding-block: var(--marquee-padding-desktop);
     }
     .logo-marquee-track {
-      /* 트랙 gap은 계속 0 유지 */
       animation-duration: var(--marquee-duration-desktop);
     }
     .logo-row {
       gap: var(--marquee-gap-desktop);
-      padding-right: var(--marquee-gap-desktop); /* 경계 간격도 데스크톱 값으로 */
+      padding-right: var(--marquee-gap-desktop);
     }
     .logo-item {
       height: var(--logo-size-desktop);
     }
   }
+  
+  @keyframes marquee-x {
+    from { transform: translate3d(0, 0, 0); }
+    to   { transform: translate3d(-50%, 0, 0); }
+  }
+
 
   /* 더 큰 화면에서 살짝 키우고 싶다면 */
   @media (min-width: 1024px) {
