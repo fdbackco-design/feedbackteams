@@ -166,11 +166,11 @@ export default function Contact() {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 mt-16 sm:mt-20 mobile-padding">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-fluid-title break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-gray-900 maxw-title mx-auto mb-6">
             {t("contact.title")}
           </h1>
           <div className="w-16 sm:w-24 h-0.5 bg-[#0F4C82] mx-auto mb-8" />
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-600 maxw-body mx-auto">
             {t("contact.subtitle.line1")}
             <br className="sm:hidden" />
             <br className="hidden sm:block" />
@@ -181,7 +181,7 @@ export default function Contact() {
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 mobile-padding">
           {/* Contact Information */}
           <div>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
+            <h2 className="text-fluid-sub break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-gray-900 maxw-title mb-6 sm:mb-8">
               {t("contact.section.contact")}
             </h2>
 
@@ -260,7 +260,7 @@ export default function Contact() {
 
           {/* Contact Form */}
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">
+            <h2 className="text-fluid-sub break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-gray-900 maxw-title mb-8">
               {t("contact.form.title")}
             </h2>
 
