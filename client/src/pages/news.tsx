@@ -58,11 +58,11 @@ export default function News() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-10 mt-16 sm:mt-20 mobile-padding">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+          <h1 className="text-fluid-title break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-gray-900 maxw-title mx-auto mb-4 sm:mb-6">
             {t("news.title")}
           </h1>
           <div className="w-16 sm:w-24 h-0.5 bg-[#0F4C82] mx-auto mb-6 sm:mb-8"></div>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-600 maxw-body mx-auto">
             {t("news.description")}
           </p>
         </div>
@@ -128,13 +128,13 @@ export default function News() {
                       </Badge>
                       <time className="text-gray-500 text-sm">{news.date}</time>
                     </div>
-                    <CardTitle className="text-xl font-bold text-gray-900 line-clamp-2 h-[3.5rem] leading-tight">
+                    <CardTitle className="break-keep text-pretty leading-snug font-bold text-gray-900 line-clamp-2 h-[3.5rem]" style={{ fontSize: 'clamp(18px, 4vw, 24px)' }}>
                       {t(`news.${news.originalIndex}.title`)}
                     </CardTitle>
                   </CardHeader>
 
                   <CardContent className="flex-1 flex flex-col justify-between pt-0">
-                    <CardDescription className="text-gray-600 mb-6 line-clamp-3 h-[4.5rem] leading-relaxed">
+                    <CardDescription className="text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-600 mb-6 line-clamp-3 h-[4.5rem]">
                       {t(`news.${news.originalIndex}.summary`)}
                     </CardDescription>
                     <div className="text-primary font-semibold self-start">
