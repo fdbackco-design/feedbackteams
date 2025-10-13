@@ -200,11 +200,11 @@ export default function Service() {
     <section className="min-h-screen py-20 bg-gray-50">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         <div className="text-center mb-8 mt-16 sm:mt-20 mobile-padding">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+          <h1 className="text-fluid-title break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-gray-900 maxw-title mx-auto mb-4 sm:mb-6">
             {t("서비스 소개")}
           </h1>
           <div className="w-16 sm:w-24 h-0.5 bg-[#0F4C82] mx-auto mb-6 sm:mb-8"></div>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-600 maxw-body mx-auto">
             {t("피드백은 유통부터 마케팅까지, 글로벌 비즈니스를 위한 전문 서비스를 제공합니다.")}
           </p>
         </div>
@@ -290,12 +290,12 @@ export default function Service() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
+                  <h3 className="break-keep text-balance text-pretty leading-tight font-bold text-gray-900 maxw-title mb-4" style={{ fontSize: 'clamp(20px, 4vw, 28px)' }}>
                     {service.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-700 mb-4 leading-relaxed text-sm lg:text-base">
+                  <p className="text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-700 maxw-body mb-4">
                     {service.description}
                   </p>
 
@@ -341,10 +341,10 @@ export default function Service() {
       {/* CTA Section - Separate container with max-width */}
       <div className="max-w-[1400px] mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
         <div className="mt-16 text-center bg-primary rounded-2xl p-8 lg:p-12 text-white">
-          <h3 className="text-3xl font-bold mb-4">
+          <h3 className="text-fluid-sub break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold maxw-title mx-auto mb-4">
             {t("더 자세한 상담이 필요하신가요?")}
           </h3>
-          <p className="text-xl mb-8">
+          <p className="text-fluid-body break-keep text-pretty leading-relaxed-mobile maxw-body mx-auto mb-8">
             {t("전문 컨설턴트가 귀하의 비즈니스에 맞는 최적의 솔루션을 제안해드립니다.")}
           </p>
           <Button asChild variant="secondary" size="lg">
