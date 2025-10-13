@@ -150,6 +150,7 @@ const translations = {
     "brands.asran.products.2": "인덕션 & 가스 겸용",
     "brands.asran.products.3": "프리미엄 마감",
     "brands.laceras.category": "프랑스 럭셔리 캐리어 브랜드",
+
     "brands.laceras.slogan": "전통과 모던이 만나는 프렌치 럭셔리 트래블",
     "brands.laceras.description":
       "프랑스의 장인정신과 현대적 세련미를 결합한 럭셔리 캐리어 브랜드입니다. 폴리카보네이트 하드셸, 정교한 마감과 균형 잡힌 디자인으로 비즈니스부터 라그주어리 여행까지 완벽한 트래블 솔루션을 제안합니다.",
@@ -239,11 +240,11 @@ const translations = {
     "news.2.content":
       "Hoid는 제품의 품질과 신뢰성을 직접 확인하기 위해 최근 Hoid 무선 청소기 생산 공장을 방문했습니다. 생산 현장에서는 최신 자동화 라인과 숙련된 기술 인력이 협력하여 완벽한 품질의 제품을 생산하고 있었으며, 각 단계별로 엄격한 품질 관리 절차가 적용되고 있었습니다. 특히, 배터리 내구성 테스트와 모터 성능 점검 등 출고 전 필수 검증 과정을 거쳐 소비자에게 최상의 상태로 전달되도록 하고 있습니다. 이번 공장 방문은 Hoid가 추구하는 품질 우선 철학을 현장에서 다시 한번 확인하는 중요한 계기가 되었습니다.",
     "news.3.date": "2025.10.13",
-    "news.3.title": "ASRAN·Carvella·La Ceras 브랜드 독점 총판 계약 체결",
+    "news.3.title": "ASRAN·Carvella·La Ceras·식구 자사 브랜드 런칭",
     "news.3.summary":
-      "Feedback은 글로벌 프리미엄 주방·리빙 브랜드 ASRAN, Carvella와 럭셔리 캐리어 브랜드 La Ceras의 국내 독점 총판권을 확보했습니다.",
+      "Feedback은 글로벌 프리미엄 주방·리빙 브랜드 ASRAN, Carvella와 럭셔리 캐리어 브랜드 La Ceras, 프리미엄 수저 브랜드 식구를 자사 브랜드로 런칭했습니다.",
     "news.3.content":
-      "Feedback은 글로벌 프리미엄 주방·리빙 브랜드 ASRAN, Carvella와 럭셔리 캐리어 브랜드 La Ceras와 독점 총판 계약을 체결했습니다. 이번 계약을 통해 Feedback은 세 브랜드의 전 제품에 대한 국내 유통, 마케팅, 고객 서비스 전반을 담당하게 됩니다. ASRAN은 스테인리스 하이엔드 쿡웨어 브랜드로, 정밀한 열전도 기술과 세련된 디자인으로 유명합니다. Carvella는 이탈리아 감성을 담은 프리미엄 키친 브랜드로, 숙련된 장인의 노하우를 바탕으로 제작된 제품군을 선보입니다. La Ceras는 하이브리드 소재와 세련된 디자인으로 주목받는 프리미엄 캐리어 브랜드입니다. Feedback은 이번 독점 계약을 통해 글로벌 프리미엄 리빙 브랜드를 국내 시장에 소개하고, 지속적인 품질 관리와 브랜드 가치 강화를 통해 소비자에게 새로운 라이프스타일 경험을 제공할 계획입니다.",
+      "Feedback은 글로벌 프리미엄 주방·리빙 브랜드 ASRAN, Carvella와 럭셔리 캐리어 브랜드 La Ceras, 프리미엄 커트러리 브랜드 식구를 자사 브랜드로 런칭했습니다. 이번 런칭을 통해 Feedback은 네 브랜드의 전 제품에 대한 국내 유통, 마케팅, 고객 서비스 전반을 담당하게 됩니다. ASRAN은 스테인리스 하이엔드 쿡웨어 브랜드로, 정밀한 열전도 기술과 세련된 디자인으로 유명합니다. Carvella는 이탈리아 감성을 담은 프리미엄 키친 브랜드로, 숙련된 장인의 노하우를 바탕으로 제작된 제품군을 선보입니다. La Ceras는 하이브리드 소재와 세련된 디자인으로 주목받는 프리미엄 캐리어 브랜드입니다. 식구는 한국적인 미를 더한 커트러리를 선보이는 브랜드입니다. Feedback은 이번 독점 계약을 통해 글로벌 프리미엄 리빙 브랜드를 국내 시장에 소개하고, 지속적인 품질 관리와 브랜드 가치 강화를 통해 소비자에게 새로운 라이프스타일 경험을 제공할 계획입니다.",
     "news.4.date": "2025.09.01",
     "news.4.title": "Hoid 공기청정기 2세대 출시",
     "news.4.summary":
@@ -361,7 +362,8 @@ const translations = {
     "about.philosophy.description":
       'FeedBack은 브랜드와 시장을 연결하는 실행 중심의 유통 플랫폼으로서<br class="hidden sm:block"/>모든 파트너와 함께 성장하는 상생의 생태계를 구축하고 있습니다.',
     "about.timeline.title": "연혁",
-    "about.timeline.2025_10": "아스란, 카르벨라, 라쎄라스 독점 총판 진행",
+    "about.timeline.2025_10":
+      "아스란, 카르벨라, 라쎄라스, 식구 자사 브랜드 런칭",
     "about.timeline.2025_09":
       "Hoid 2세대 공기청정기 국내외 동시 론칭 (홈쇼핑 입점 확장)",
     "about.timeline.2025_08": "Hoid 무선 청소기 출시",
@@ -1041,11 +1043,11 @@ const translations = {
       'Hoid recently visited the Hoid cordless vacuum cleaner production factory to directly verify product quality and reliability. At the production site, the latest automation lines and skilled technical personnel were cooperating to produce products of perfect quality, with strict quality control procedures applied at each stage. In particular, essential verification processes before shipment, such as battery durability testing and motor performance inspection, are conducted to ensure delivery to consumers in the best condition. This factory visit was an important opportunity to reaffirm on-site Hoid\'s "quality first" philosophy.',
     "news.3.date": "2025.10.13",
     "news.3.title":
-      "Feedback Signs Exclusive Distribution Agreement for ASRAN, Carvella, and La Ceras",
+      "Launch of ASRAN, Carvella, La Ceras, and Sikgu as In-House Brands",
     "news.3.summary":
-      "Feedback has secured the exclusive domestic distribution rights for the global premium kitchen and lifestyle brands ASRAN, Carvella, and La Ceras.",
+      "Feedback has launched its own premium brands — ASRAN and Carvella for global kitchen and living, La Ceras for luxury luggage, and Sikgu for premium cutlery.",
     "news.3.content":
-      "Feedback has officially signed an exclusive distribution agreement with the global premium kitchen and lifestyle brands ASRAN, Carvella, and La Ceras. Under this partnership, Feedback will manage all aspects of domestic distribution, marketing, and customer service for the three brands. ASRAN is a high-end stainless steel cookware brand renowned for its precise heat conduction technology and refined design. Carvella represents the essence of Italian craftsmanship, offering premium kitchenware created through skilled artisan expertise. La Ceras is a luxury luggage brand recognized for its innovative hybrid materials and sophisticated aesthetics. Through this exclusive agreement, Feedback aims to introduce these global premium lifestyle brands to the domestic market, enhancing consumer experiences through continuous quality management and brand value development.",
+      "Feedback has launched its in-house brands — ASRAN and Carvella, global premium kitchen and living brands; La Ceras, a luxury luggage brand; and Sikgu, a premium cutlery brand that embodies Korean aesthetics. With this launch, Feedback will oversee the domestic distribution, marketing, and customer service for all products under these four brands. ASRAN is a high-end stainless cookware brand known for its precise heat conductivity and refined design. Carvella is a premium Italian-inspired kitchen brand offering products crafted with the expertise of skilled artisans. La Ceras stands out as a luxury carrier brand recognized for its hybrid materials and elegant design. Sikgu showcases sophisticated cutlery that blends practicality with traditional Korean beauty. Through this exclusive partnership, Feedback aims to introduce global premium lifestyle brands to the Korean market, delivering new lifestyle experiences through continuous quality management and brand value enhancement.",
     "news.4.date": "2025.09.01",
     "news.4.title": "Hoid Air Purifier 2nd Generation Launch",
     "news.4.summary":
@@ -1166,7 +1168,7 @@ const translations = {
       'As an execution-focused distribution platform connecting brands and markets,<br class="hidden sm:block"/>FeedBack is building a mutually beneficial ecosystem that grows together with all partners.',
     "about.timeline.title": "History",
     "about.timeline.2025_10":
-      "Exclusive Distributors of Asran, Carvella, and Laceras",
+      "Launch of ASRAN, Carvella, La Ceras, and Sikgu as In-House Brands",
     "about.timeline.2025_09":
       "Hoid 2nd Generation Air Purifier Global Launch (Home Shopping Expansion)",
     "about.timeline.2025_08": "Hoid Cordless Vacuum Cleaner Launch",
@@ -1868,11 +1870,11 @@ const translations = {
 
     "news.3.date": "2025.10.13",
     "news.3.title":
-      "Feedback คว้าสิทธิ์ผู้จัดจำหน่ายแต่เพียงผู้เดียวของ ASRAN, Carvella และ La Ceras ในประเทศ",
+      "การเปิดตัวแบรนด์ในเครือ ASRAN, Carvella, La Ceras และ Sikgu",
     "news.3.summary":
-      "Feedback จะดูแลการกระจายสินค้า การตลาด และบริการลูกค้าของทั้ง 3 แบรนด์ในประเทศอย่างครบวงจร",
+      "Feedback เปิดตัวแบรนด์ในเครือของตนเอง ได้แก่ ASRAN และ Carvella แบรนด์เครื่องครัวและของใช้ในบ้านระดับพรีเมียม, La Ceras แบรนด์กระเป๋าเดินทางหรู และ Sikgu แบรนด์ช้อนส้อมคุณภาพสูง",
     "news.3.content":
-      "ASRAN เป็นแบรนด์เครื่องครัวสแตนเลสไฮเอนด์ที่มีชื่อเสียงเรื่องการนำความร้อนแม่นยำและดีไซน์ประณีต Carvella สะท้อนจิตวิญญาณงานช่างอิตาลี ส่วน La Ceras โดดเด่นด้วยวัสดุลูกผสมและความหรูทันสมัย",
+      "Feedback ได้เปิดตัวแบรนด์ในเครือของตนเอง ได้แก่ ASRAN และ Carvella ซึ่งเป็นแบรนด์เครื่องครัวและของใช้ในบ้านระดับพรีเมียม, La Ceras แบรนด์กระเป๋าเดินทางหรู และ Sikgu แบรนด์ช้อนส้อมที่สะท้อนความงามแบบเกาหลี การเปิดตัวครั้งนี้ทำให้ Feedback รับหน้าที่ดูแลด้านการจัดจำหน่ายภายในประเทศ การตลาด และบริการลูกค้าสำหรับผลิตภัณฑ์ทั้งหมดของทั้งสี่แบรนด์ ASRAN เป็นแบรนด์เครื่องครัวสแตนเลสระดับไฮเอนด์ที่มีชื่อเสียงด้านการนำความร้อนอย่างแม่นยำและการออกแบบที่ประณีต Carvella ถ่ายทอดอารมณ์ความเป็นอิตาเลียนผ่านเครื่องครัวที่ผลิตโดยช่างฝีมือผู้ชำนาญ La Ceras โดดเด่นด้วยวัสดุไฮบริดและดีไซน์ที่หรูหรา ขณะที่ Sikgu นำเสนอเครื่องใช้บนโต๊ะอาหารที่ผสานความเรียบง่ายและความงามแบบเกาหลีได้อย่างลงตัว Feedback มีเป้าหมายที่จะนำเสนอแบรนด์ไลฟ์สไตล์ระดับพรีเมียมสู่ตลาดเกาหลี พร้อมยกระดับประสบการณ์การใช้ชีวิตของผู้บริโภคผ่านการควบคุมคุณภาพและการพัฒนากบรนด์อย่างต่อเนื่อง",
 
     "news.4.date": "2025.09.01",
     "news.4.title": "เปิดตัวเครื่องฟอกอากาศ Hoid รุ่นที่ 2",
@@ -1972,6 +1974,7 @@ const translations = {
     "contact.toast.unknown": "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุ",
     "contact.toast.send_error_console": "ข้อผิดพลาดในการส่งอีเมล:",
     "contact.toast.fail.title": "ส่งไม่สำเร็จ",
+
     "contact.toast.fail.description":
       "เกิดข้อผิดพลาดระหว่างส่งอีเมล โปรดลองอีกครั้งภายหลัง",
 
@@ -1995,7 +1998,7 @@ const translations = {
       'ในฐานะแพลตฟอร์มกระจายสินค้าที่เน้นการลงมือทำ เพื่อเชื่อมแบรนด์กับตลาด<br class="hidden sm:block"/>FeedBack สร้างระบบนิเวศแห่งการเติบโตร่วมกับพาร์ทเนอร์ทุกฝ่าย',
     "about.timeline.title": "ไทม์ไลน์",
     "about.timeline.2025_10":
-      "ตัวแทนจำหน่ายเอกสิทธิ์ ASRAN, Carvella, La Ceras",
+      "การเปิดตัวแบรนด์ในเครือ ASRAN, Carvella, La Ceras และ Sikgu",
     "about.timeline.2025_09":
       "เปิดตัวเครื่องฟอกอากาศ Hoid รุ่นที่ 2 ทั่วโลก (ขยายโฮมช้อปปิ้ง)",
     "about.timeline.2025_08": "ออกเครื่องดูดฝุ่นไร้สาย Hoid",
