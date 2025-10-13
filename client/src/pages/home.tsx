@@ -787,10 +787,10 @@ export default function Home() {
       {/* Brands Section */}
       <section
         id="brands"
-        className="h-screen flex items-center justify-center bg-white relative overflow-hidden"
+        className="h-screen flex items-center justify-center bg-white relative overflow-hidden touch-pan-y"
         style={{ scrollSnapAlign: "start" }}
       >
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 mobile-bg-cover">
           <LazyImage
             src={brands[currentBrandIndex].image}
             alt={brands[currentBrandIndex].name}
@@ -884,7 +884,7 @@ export default function Home() {
             {/* Play/Pause Button */}
             <button
               onClick={() => setIsPaused(!isPaused)}
-              className="p-4 bg-black bg-opacity-40 rounded-full backdrop-blur-sm hover:bg-opacity-60 transition-all"
+              className="tap-target p-4 bg-black bg-opacity-40 rounded-full backdrop-blur-sm hover:bg-opacity-60 transition-all touch-manipulation"
             >
               {isPaused ? (
                 <PlayCircle className="w-6 h-6 text-white" />
@@ -907,7 +907,7 @@ export default function Home() {
                     setTimeout(() => setImageLoaded(true), 50);
                   }, 300);
                 }}
-                className="p-4 bg-black bg-opacity-40 rounded-full backdrop-blur-sm hover:bg-opacity-60 transition-all"
+                className="tap-target p-4 bg-black bg-opacity-40 rounded-full backdrop-blur-sm hover:bg-opacity-60 transition-all touch-manipulation"
               >
                 <ChevronLeft className="w-6 h-6 text-white" />
               </button>
@@ -930,7 +930,7 @@ export default function Home() {
                     setTimeout(() => setImageLoaded(true), 50);
                   }, 300);
                 }}
-                className="p-4 bg-black bg-opacity-40 rounded-full backdrop-blur-sm hover:bg-opacity-60 transition-all"
+                className="tap-target p-4 bg-black bg-opacity-40 rounded-full backdrop-blur-sm hover:bg-opacity-60 transition-all touch-manipulation"
               >
                 <ChevronRight className="w-6 h-6 text-white" />
               </button>
