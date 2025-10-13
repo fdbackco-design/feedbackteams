@@ -347,6 +347,16 @@ html {
   --shadow-2xl: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
+  --logo-size-mobile: 40px;
+  --logo-size-desktop: 50px;
+  /* 숫자가 작을수록 더 빠름 */
+  --marquee-duration-mobile: 30s;
+  --marquee-duration-desktop: 30s;
+  /* 로고 높이에 맞춰 배경 세로 패딩 (상하) */
+  --marquee-padding-mobile: 1.5rem;
+  --marquee-padding-desktop: 1.5rem;
+  --marquee-gap-mobile: 4rem;
+  --marquee-gap-desktop: 4rem;
 }
 
 /* Standardized Typography System */
@@ -1013,28 +1023,33 @@ html {
   .logo-marquee-wrapper {
     width: 100%;
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.30);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    padding: 1.5rem 0;
+    padding-block: var(--marquee-padding-mobile);
   }
 
+  /* 트랙: 세트 간 gap = 0 (중요) */
   .logo-marquee-track {
     display: flex;
-    gap: 4rem;
-    animation: marquee 30s linear infinite;
+    gap: 0; 
+    animation: marquee var(--marquee-duration-mobile) linear infinite;
     will-change: transform;
   }
 
+  /* Row */
   .logo-row {
     display: flex;
     align-items: center;
-    gap: 4rem;
-    flex-shrink: 0;
+    gap: var(--marquee-gap-mobile);           
+    padding-right: var(--marquee-gap-mobile); 
+    flex-shrink: 0;                          
+    width: max-content;                      
   }
 
+  /* 로고 크기 */
   .logo-item {
-    height: 30px;
+    height: var(--logo-size-mobile);
     width: auto;
     object-fit: contain;
     opacity: 0.9;
@@ -1042,25 +1057,42 @@ html {
     transition: opacity 0.3s ease;
   }
 
+  /* 데스크톱 이상 */
   @media (min-width: 768px) {
+    .logo-marquee-wrapper {
+      padding-block: var(--marquee-padding-desktop);
+    }
+    .logo-marquee-track {
+      /* 트랙 gap은 계속 0 유지 */
+      animation-duration: var(--marquee-duration-desktop);
+    }
+    .logo-row {
+      gap: var(--marquee-gap-desktop);
+      padding-right: var(--marquee-gap-desktop); /* 경계 간격도 데스크톱 값으로 */
+    }
     .logo-item {
-      height: 40px;
+      height: var(--logo-size-desktop);
     }
   }
 
+  /* 더 큰 화면에서 살짝 키우고 싶다면 */
   @media (min-width: 1024px) {
-    .logo-item {
-      height: 40px;
+    :root {
+      --logo-size-desktop: 60px;
     }
   }
 
+  /* 접근성: 모션 줄이기 선호 시 애니메이션 비활성화 */
+  @media (prefers-reduced-motion: reduce) {
+    .logo-marquee-track {
+      animation: none;
+    }
+  }
+
+  /* 기본 키프레임(변경 없음) */
   @keyframes marquee {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
   }
 
   /* Pause animation on hover (desktop only) */
