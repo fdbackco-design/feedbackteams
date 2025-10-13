@@ -350,13 +350,19 @@ html {
   --logo-size-mobile: 40px;
   --logo-size-desktop: 50px;
   /* 숫자가 작을수록 더 빠름 */
-  --marquee-duration-mobile: 5s;
-  --marquee-duration-desktop: 10s;
+  --marquee-duration-mobile: 30s;
+  --marquee-duration-desktop: 30s;
   /* 로고 높이에 맞춰 배경 세로 패딩 (상하) */
   --marquee-padding-mobile: 1.5rem;
   --marquee-padding-desktop: 1.5rem;
   --marquee-gap-mobile: 4rem;
   --marquee-gap-desktop: 4rem;
+  
+  /* Global Typography Optimization */
+  --hero-title-min: 22px;
+  --hero-title-max: 44px;
+  --hero-desc-min: 14px;
+  --hero-desc-max: 18px;
 }
 
 /* Standardized Typography System */
@@ -739,6 +745,63 @@ html {
   .mobile-body {
     font-size: clamp(16px, 2vw, 18px);
     line-height: 1.6;
+  }
+
+  /* Global Typography Optimization */
+  .break-keep { 
+    word-break: keep-all; 
+  }
+
+  @supports (text-wrap: balance) {
+    .text-balance { 
+      text-wrap: balance; 
+    }
+  }
+
+  @supports (text-wrap: pretty) {
+    .text-pretty { 
+      text-wrap: pretty; 
+    }
+  }
+
+  /* Fluid Font Sizes */
+  .text-fluid-title { 
+    font-size: clamp(var(--hero-title-min), 6vw, var(--hero-title-max)); 
+  }
+
+  .text-fluid-sub { 
+    font-size: clamp(16px, 4.5vw, 24px); 
+  }
+
+  .text-fluid-body { 
+    font-size: clamp(var(--hero-desc-min), 3.5vw, var(--hero-desc-max)); 
+  }
+
+  /* Text Width Limits */
+  .maxw-title { 
+    max-width: 24ch; 
+  }
+
+  .maxw-body { 
+    max-width: 55ch; 
+  }
+
+  /* Line Height and Letter Spacing */
+  .leading-tight-mobile { 
+    line-height: 1.25; 
+  }
+
+  .leading-relaxed-mobile { 
+    line-height: 1.6; 
+  }
+
+  .tracking-tight-mobile { 
+    letter-spacing: -0.01em; 
+  }
+
+  /* No Wrap for Buttons */
+  .nowrap { 
+    white-space: nowrap; 
   }
 
   /* Touch Action Utilities */
