@@ -66,10 +66,10 @@ export default function Hoid() {
               <div className="mb-8">
                 <HoidLogo className="h-20 md:h-24" fill="white" />
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="text-fluid-title break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold maxw-title mb-6">
                 {t("hoid.hero.title")}
               </h1>
-              <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
+              <p className="text-fluid-sub break-keep text-pretty leading-relaxed-mobile maxw-body mb-8 opacity-90">
                 {t("hoid.hero.description")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -111,11 +111,11 @@ export default function Hoid() {
             <div className="inline-block px-4 py-2 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-sm font-semibold mb-6">
               PRODUCT FEATURES
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-6">
+            <h2 className="text-fluid-title break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-[#000000] maxw-title mx-auto mb-6">
               {t("hoid.features.title")}
             </h2>
             <div className="w-32 h-1 bg-[#0F4C82] mx-auto mb-8"></div>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-600 maxw-body mx-auto">
               {t("hoid.features.subtitle")}
             </p>
           </div>
@@ -126,10 +126,10 @@ export default function Hoid() {
                 <div className="w-20 h-20 bg-gradient-to-br from-[#0F4C82] to-[#1a5c94] rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
                   <Zap className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-[#000000] mb-4">
+                <h3 className="break-keep text-balance text-pretty leading-tight font-bold text-[#000000] maxw-title mb-4" style={{ fontSize: 'clamp(20px, 4vw, 28px)' }}>
                   {t("hoid.feature1.title")}
                 </h3>
-                <p className="text-gray-600 leading-relaxed text-lg mb-6">
+                <p className="text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-600 maxw-body mb-6">
                   {t("hoid.feature1.description")}
                 </p>
                 
@@ -141,10 +141,10 @@ export default function Hoid() {
                 <div className="w-20 h-20 bg-gradient-to-br from-[#0F4C82] to-[#1a5c94] rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
                   <CheckCircle className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-[#000000] mb-4">
+                <h3 className="break-keep text-balance text-pretty leading-tight font-bold text-[#000000] maxw-title mb-4" style={{ fontSize: 'clamp(20px, 4vw, 28px)' }}>
                   {t("hoid.feature2.title")}
                 </h3>
-                <p className="text-gray-600 leading-relaxed text-lg mb-6">
+                <p className="text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-600 maxw-body mb-6">
                   {t("hoid.feature2.description")}
                 </p>
                 
@@ -156,10 +156,10 @@ export default function Hoid() {
                 <div className="w-20 h-20 bg-gradient-to-br from-[#0F4C82] to-[#1a5c94] rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
                   <Globe className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-[#000000] mb-4">
+                <h3 className="break-keep text-balance text-pretty leading-tight font-bold text-[#000000] maxw-title mb-4" style={{ fontSize: 'clamp(20px, 4vw, 28px)' }}>
                   {t("hoid.feature3.title")}
                 </h3>
-                <p className="text-gray-600 leading-relaxed text-lg mb-6">
+                <p className="text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-600 maxw-body mb-6">
                   {t("hoid.feature3.description")}
                 </p>
                 
@@ -185,7 +185,7 @@ export default function Hoid() {
               <div className="inline-block px-4 py-2 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-sm font-semibold mb-6">
                 GLOBAL PARTNERSHIP
               </div>
-              <h2 className="text-5xl font-bold text-[#000000] mb-8 leading-tight">
+              <h2 className="text-fluid-title break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-[#000000] maxw-title mb-8">
                 {t("hoid.partnership.title")}
                 <span className="block text-[#0F4C82]">{t("hoid.partnership.subtitle")}</span>
               </h2>
@@ -195,10 +195,10 @@ export default function Hoid() {
                   <Calendar className="w-4 h-4 mr-2" />
                   {t("hoid.partnership.date")}
                 </div>
-                <h3 className="text-2xl font-bold text-[#000000] mb-4">
+                <h3 className="break-keep text-balance text-pretty leading-tight font-bold text-[#000000] maxw-title mb-4" style={{ fontSize: 'clamp(20px, 4vw, 28px)' }}>
                   {t("hoid.partnership.mou")}
                 </h3>
-                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                <p className="text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-600 maxw-body mb-6">
                   {t("hoid.partnership.description")}
                 </p>
               </div>
@@ -235,7 +235,7 @@ export default function Hoid() {
               <div className="inline-block px-4 py-2 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-sm font-semibold mb-6">
                 HOME SHOPPING LAUNCH
               </div>
-              <h2 className="text-4xl font-bold text-[#000000] mb-6 leading-tight">
+              <h2 className="text-fluid-title break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-[#000000] maxw-title mb-6">
                 {t("hoid.homeshopping.title")}
                 <span className="block text-[#0F4C82]">{t("hoid.homeshopping.subtitle")}</span>
               </h2>
@@ -245,10 +245,10 @@ export default function Hoid() {
                   <Calendar className="w-4 h-4 mr-2" />
                   {t("hoid.homeshopping.date")}
                 </div>
-                <h3 className="text-2xl font-bold text-[#000000] mb-4">
+                <h3 className="break-keep text-balance text-pretty leading-tight font-bold text-[#000000] maxw-title mb-4" style={{ fontSize: 'clamp(20px, 4vw, 28px)' }}>
                   {t("hoid.homeshopping.heading")}
                 </h3>
-                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                <p className="text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-600 maxw-body mb-6">
                   {t("hoid.homeshopping.description")}
                 </p>
               </div>
@@ -274,11 +274,11 @@ export default function Hoid() {
             <div className="inline-block px-4 py-2 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-sm font-semibold mb-6">
               DISTRIBUTION CHANNELS
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-6">
+            <h2 className="text-fluid-title break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-[#000000] maxw-title mx-auto mb-6">
               {t("hoid.channels.title")}
             </h2>
             <div className="w-32 h-1 bg-[#0F4C82] mx-auto mb-8"></div>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-600 maxw-body mx-auto">
               {t("hoid.channels.subtitle")}
             </p>
           </div>
@@ -346,10 +346,10 @@ export default function Hoid() {
       <section className="py-20 bg-[#0F4C82] text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+            <h2 className="text-fluid-title break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold maxw-title mx-auto mb-6">
               {t("hoid.cta.title")}
             </h2>
-            <p className="text-lg lg:text-xl mb-12 opacity-90 leading-relaxed">
+            <p className="text-fluid-sub break-keep text-pretty leading-relaxed-mobile maxw-body mx-auto mb-12 opacity-90">
               {t("hoid.cta.description")}
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
