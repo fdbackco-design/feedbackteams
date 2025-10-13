@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Facebook, Twitter, Linkedin, Youtube } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const FeedBackLogo = ({ className }: { className?: string }) => (
   <svg
@@ -25,6 +26,8 @@ const FeedBackLogo = ({ className }: { className?: string }) => (
 );
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-primary text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,14 +37,14 @@ export default function Footer() {
             <div className="mb-6">
               <FeedBackLogo className="h-12 mb-4 fill-white" />
               <p className="text-white/80 mt-2 text-lg">
-                유통에서 브랜드까지 한국의 가치를 세계로 연결합니다
+                {t("footer.tagline")}
               </p>
             </div>
             <p className="text-white/60 mb-6 leading-relaxed">
-              유통, 브랜드 제조, 마케팅, 의료관광 플랫폼을 통해 상생의 가치로
-              글로벌 시장에 진출하는 종합 서비스 기업입니다.
+              {t("footer.about")}
             </p>
             <div className="flex space-x-4">
+              {/* SNS 아이콘들 그대로 */}
               <a
                 href="#"
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white/60 hover:bg-accent hover:text-white transition-colors"
@@ -71,7 +74,9 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">서비스</h4>
+            <h4 className="text-lg font-semibold mb-4">
+              {t("footer.sections.services")}
+            </h4>
             <ul className="space-y-2 text-white/60">
               <li>
                 <Link
@@ -81,7 +86,7 @@ export default function Footer() {
                     window.scrollTo({ top: 0, behavior: "smooth" })
                   }
                 >
-                  유통/수출입 중개
+                  {t("footer.services.distribution")}
                 </Link>
               </li>
               <li>
@@ -92,7 +97,7 @@ export default function Footer() {
                     window.scrollTo({ top: 0, behavior: "smooth" })
                   }
                 >
-                  자체 브랜드 제조
+                  {t("footer.services.manufacturing")}
                 </Link>
               </li>
               <li>
@@ -103,7 +108,7 @@ export default function Footer() {
                     window.scrollTo({ top: 0, behavior: "smooth" })
                   }
                 >
-                  글로벌 마케팅
+                  {t("footer.services.marketing")}
                 </Link>
               </li>
               <li>
@@ -114,7 +119,7 @@ export default function Footer() {
                     window.scrollTo({ top: 0, behavior: "smooth" })
                   }
                 >
-                  의료관광 플랫폼
+                  {t("footer.services.medical")}
                 </Link>
               </li>
               <li>
@@ -125,7 +130,7 @@ export default function Footer() {
                     window.scrollTo({ top: 0, behavior: "smooth" })
                   }
                 >
-                  앱 개발
+                  {t("footer.services.app")}
                 </Link>
               </li>
             </ul>
@@ -133,7 +138,9 @@ export default function Footer() {
 
           {/* Brands & Company */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">브랜드</h4>
+            <h4 className="text-lg font-semibold mb-4">
+              {t("footer.sections.brands")}
+            </h4>
             <ul className="space-y-2 text-white/60 mb-6">
               <li>
                 <Link
@@ -143,7 +150,7 @@ export default function Footer() {
                     window.scrollTo({ top: 0, behavior: "smooth" })
                   }
                 >
-                  Hoid
+                  {t("footer.brands.hoid")}
                 </Link>
               </li>
               <li>
@@ -154,7 +161,7 @@ export default function Footer() {
                     window.scrollTo({ top: 0, behavior: "smooth" })
                   }
                 >
-                  아슬란
+                  {t("footer.brands.asran")}
                 </Link>
               </li>
               <li>
@@ -165,7 +172,7 @@ export default function Footer() {
                     window.scrollTo({ top: 0, behavior: "smooth" })
                   }
                 >
-                  라세라스
+                  {t("footer.brands.laceras")}
                 </Link>
               </li>
               <li>
@@ -176,7 +183,7 @@ export default function Footer() {
                     window.scrollTo({ top: 0, behavior: "smooth" })
                   }
                 >
-                  카르벨라
+                  {t("footer.brands.carvella")}
                 </Link>
               </li>
               <li>
@@ -187,7 +194,7 @@ export default function Footer() {
                     window.scrollTo({ top: 0, behavior: "smooth" })
                   }
                 >
-                  Medifeed
+                  {t("footer.brands.medifeed")}
                 </Link>
               </li>
               <li>
@@ -198,7 +205,7 @@ export default function Footer() {
                     window.scrollTo({ top: 0, behavior: "smooth" })
                   }
                 >
-                  InYourHeart
+                  {t("footer.brands.inyourheart")}
                 </Link>
               </li>
               <li>
@@ -209,12 +216,14 @@ export default function Footer() {
                     window.scrollTo({ top: 0, behavior: "smooth" })
                   }
                 >
-                  상생
+                  {t("footer.brands.sangsaeng")}
                 </Link>
               </li>
             </ul>
 
-            <h4 className="text-lg font-semibold mb-4">회사</h4>
+            <h4 className="text-lg font-semibold mb-4">
+              {t("footer.sections.company")}
+            </h4>
             <ul className="space-y-2 text-white/60">
               <li>
                 <Link
@@ -224,7 +233,7 @@ export default function Footer() {
                     window.scrollTo({ top: 0, behavior: "smooth" })
                   }
                 >
-                  회사소개
+                  {t("footer.company.about")}
                 </Link>
               </li>
               <li>
@@ -235,7 +244,7 @@ export default function Footer() {
                     window.scrollTo({ top: 0, behavior: "smooth" })
                   }
                 >
-                  뉴스
+                  {t("footer.company.news")}
                 </Link>
               </li>
               <li>
@@ -246,7 +255,7 @@ export default function Footer() {
                     window.scrollTo({ top: 0, behavior: "smooth" })
                   }
                 >
-                  연락처
+                  {t("footer.company.contact")}
                 </Link>
               </li>
             </ul>
@@ -257,18 +266,18 @@ export default function Footer() {
         <div className="border-t border-white/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-white/60 text-sm mb-4 md:mb-0">
-              <p>&copy; 2024 FeedBack Corp. All rights reserved.</p>
-              <p>사업자등록번호: 296-87-03628 | 대표이사: 송해민, 정성현</p>
+              <p>{t("footer.bottom.copyright")}</p>
+              <p>{t("footer.bottom.bizinfo")}</p>
             </div>
             <div className="flex space-x-6 text-sm text-gray-400">
               <a href="#" className="hover:text-white transition-colors">
-                개인정보처리방침
+                {t("footer.bottom.privacy")}
               </a>
               <a href="#" className="hover:text-white transition-colors">
-                이용약관
+                {t("footer.bottom.terms")}
               </a>
               <a href="#" className="hover:text-white transition-colors">
-                쿠키정책
+                {t("footer.bottom.cookies")}
               </a>
             </div>
           </div>

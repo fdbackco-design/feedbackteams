@@ -1,12 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -60,11 +54,11 @@ export default function Contact() {
       return;
     }
 
-    // 필수 필드 검증
+    // required fields
     if (!formData.name || !formData.email || !formData.message) {
       toast({
-        title: "입력 오류",
-        description: "이름, 이메일, 문의내용은 필수 항목입니다.",
+        title: t("contact.errors.required.title"),
+        description: t("contact.errors.required.description"),
         variant: "destructive",
       });
       return;
@@ -75,9 +69,7 @@ export default function Contact() {
     try {
       const response = await fetch("/api/send-email", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: formData.name,
           company: formData.company,
@@ -92,12 +84,9 @@ export default function Contact() {
 
       if (result.ok) {
         toast({
-          title: t("메일 발송 성공"),
-          description:
-            "문의가 성공적으로 전송되었습니다. 빠른 시일 내에 답변드리겠습니다.",
+          title: t("contact.toast.success.title"),
+          description: t("contact.toast.success.description"),
         });
-
-        // Reset form
         setFormData({
           name: "",
           company: "",
@@ -110,33 +99,31 @@ export default function Contact() {
       } else {
         if (result.needAuth) {
           toast({
-            title: "Gmail 인증 필요",
+            title: t("contact.toast.gmail.title"),
             description: (
               <div>
-                <p>Gmail API 인증이 필요합니다.</p>
+                <p>{t("contact.toast.gmail.description")}</p>
                 <a
                   href="/api/auth/gmail"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 underline"
                 >
-                  여기를 클릭하여 Gmail 인증 진행
+                  {t("contact.toast.gmail.link")}
                 </a>
               </div>
             ),
             variant: "destructive",
           });
         } else {
-          throw new Error(result.error || "알 수 없는 오류가 발생했습니다.");
+          throw new Error(result.error || t("contact.toast.unknown"));
         }
       }
     } catch (error: any) {
-      console.error("이메일 발송 오류:", error);
+      console.error(t("contact.toast.send_error_console"), error);
       toast({
-        title: "발송 실패",
-        description:
-          error.message ||
-          "이메일 발송 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.",
+        title: t("contact.toast.fail.title"),
+        description: error.message || t("contact.toast.fail.description"),
         variant: "destructive",
       });
     } finally {
@@ -147,32 +134,32 @@ export default function Contact() {
   const contactInfo = [
     {
       icon: MapPin,
-      title: t("본사 주소"),
-      content: t("인천 연수구 송도과학로 80, 송도 AIT센터 1301호, 1302호"),
+      title: t("contact.info.address.title"),
+      content: t("contact.info.address.content"),
       color: "bg-primary",
     },
     {
       icon: Phone,
-      title: t("대표전화"),
+      title: t("contact.info.phone.title"),
       content: "070-8211-1761",
       color: "bg-secondary",
     },
     {
       icon: Mail,
-      title: t("이메일"),
+      title: t("contact.info.email.title"),
       content: "fdbackteams@gmail.com",
       color: "bg-accent",
     },
     {
       icon: Clock,
-      title: t("운영시간"),
-      content: t("평일 10:00 - 19:00, 주말 및 공휴일 휴무"),
+      title: t("contact.info.hours.title"),
+      content: t("contact.info.hours.content"),
       color: "bg-gray-600",
     },
   ];
 
   const departments = [
-    { dept: t("경영지원부"), email: "fdbackteams@gmail.com" },
+    { dept: t("contact.dept.management"), email: "fdbackteams@gmail.com" },
   ];
 
   return (
@@ -182,12 +169,12 @@ export default function Contact() {
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             {t("contact.title")}
           </h1>
-          <div className="w-16 sm:w-24 h-0.5 bg-[#0F4C82] mx-auto mb-8"></div>
+          <div className="w-16 sm:w-24 h-0.5 bg-[#0F4C82] mx-auto mb-8" />
           <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            FeedBack과 함께 새로운 비즈니스 기회를
+            {t("contact.subtitle.line1")}
             <br className="sm:hidden" />
             <br className="hidden sm:block" />
-            만들어보세요.
+            {t("contact.subtitle.line2")}
           </p>
         </div>
 
@@ -195,10 +182,9 @@ export default function Contact() {
           {/* Contact Information */}
           <div>
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
-              {t("연락처")}
+              {t("contact.section.contact")}
             </h2>
 
-            {/* Company Info Cards */}
             <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-12">
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex items-start">
@@ -222,7 +208,9 @@ export default function Contact() {
             {/* Department Contacts */}
             <Card className="bg-gray-50 mb-8">
               <CardHeader>
-                <CardTitle className="text-xl">{t("관련부서")}</CardTitle>
+                <CardTitle className="text-xl">
+                  {t("contact.section.departments")}
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -239,7 +227,7 @@ export default function Contact() {
             {/* Social Media */}
             <div>
               <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">
-                {t("소셜미디어")}
+                {t("contact.section.social")}
               </h3>
               <div className="flex space-x-3 sm:space-x-4">
                 <a
@@ -273,11 +261,10 @@ export default function Contact() {
           {/* Contact Form */}
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">
-              {t("문의 남기기")}
+              {t("contact.form.title")}
             </h2>
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Name */}
               <div>
                 <Label htmlFor="name">{t("contact.form.name")} *</Label>
                 <Input
@@ -292,7 +279,6 @@ export default function Contact() {
                 />
               </div>
 
-              {/* Company */}
               <div>
                 <Label htmlFor="company">{t("contact.form.company")}</Label>
                 <Input
@@ -306,7 +292,6 @@ export default function Contact() {
                 />
               </div>
 
-              {/* Email */}
               <div>
                 <Label htmlFor="email">{t("contact.form.email")} *</Label>
                 <Input
@@ -321,7 +306,6 @@ export default function Contact() {
                 />
               </div>
 
-              {/* Phone */}
               <div>
                 <Label htmlFor="phone">{t("contact.form.phone")}</Label>
                 <Input
@@ -335,30 +319,36 @@ export default function Contact() {
                 />
               </div>
 
-              {/* Inquiry Type */}
               <div>
-                <Label htmlFor="inquiry-type">문의 유형 *</Label>
+                <Label htmlFor="inquiry-type">
+                  {t("contact.form.inquiry_type")} *
+                </Label>
                 <Select
-                  // 선택된 라벨 그대로 상태에 저장: "사업 문의" | "브랜드 문의" | "파트너 제안"
                   value={formData.inquiryType}
                   onValueChange={(value) =>
                     setFormData((prev) => ({ ...prev, inquiryType: value }))
                   }
                   required
                 >
-                  <SelectTrigger aria-label="문의 유형">
-                    <SelectValue placeholder="문의 유형" />
+                  <SelectTrigger aria-label={t("contact.form.inquiry_type")}>
+                    <SelectValue
+                      placeholder={t("contact.form.inquiry_type.placeholder")}
+                    />
                   </SelectTrigger>
                   <SelectContent>
-                    {/* value를 라벨과 동일하게 두면 그대로 전송/표시됩니다 */}
-                    <SelectItem value="사업 문의">사업 문의</SelectItem>
-                    <SelectItem value="브랜드 문의">브랜드 문의</SelectItem>
-                    <SelectItem value="파트너 제안">파트너 제안</SelectItem>
+                    <SelectItem value="business">
+                      {t("contact.form.inquiry_type.business")}
+                    </SelectItem>
+                    <SelectItem value="brand">
+                      {t("contact.form.inquiry_type.brand")}
+                    </SelectItem>
+                    <SelectItem value="partner">
+                      {t("contact.form.inquiry_type.partner")}
+                    </SelectItem>
                   </SelectContent>
                 </Select>
               </div>
 
-              {/* Message */}
               <div>
                 <Label htmlFor="message">{t("contact.form.message")} *</Label>
                 <Textarea
@@ -373,7 +363,6 @@ export default function Contact() {
                 />
               </div>
 
-              {/* Privacy Agreement */}
               <div className="flex items-start space-x-3">
                 <Checkbox
                   id="privacy-agree"
@@ -389,20 +378,21 @@ export default function Contact() {
                   htmlFor="privacy-agree"
                   className="text-sm text-gray-600"
                 >
-                  {t("contact.form.privacy")}
+                  {t("contact.form.privacy")}{" "}
                   <a href="#" className="text-primary hover:underline ml-1">
                     {t("contact.form.privacy.link")}
                   </a>
                 </Label>
               </div>
 
-              {/* Submit Button */}
               <Button
                 type="submit"
                 disabled={isSubmitting}
                 className="w-full py-4 text-lg font-semibold"
               >
-                {isSubmitting ? "발송 중..." : t("contact.form.submit")}
+                {isSubmitting
+                  ? t("contact.form.sending")
+                  : t("contact.form.submit")}
               </Button>
             </form>
           </div>

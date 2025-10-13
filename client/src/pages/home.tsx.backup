@@ -117,7 +117,7 @@ const brands = [
   },
   {
     id: "sangsaeng",
-    name: "상생 (Sangsaeng)",
+    name: "Sangsaeng",
     category: "의료관광 플랫폼",
     slogan: "WE CONNECT KOREAN MEDICAL SERVICES TO THE WORLD",
     description:

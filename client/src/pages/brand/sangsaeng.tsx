@@ -7,17 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Link, useLocation } from "wouter";
-import {
-  ArrowLeft,
-  Heart,
-  Globe,
-  Smartphone,
-  Building2,
-  Users,
-  MapPin,
-  ArrowRight,
-  Calendar,
-} from "lucide-react";
+import { ArrowLeft, Heart, Globe, Smartphone } from "lucide-react";
 import SangsaengLogo from "@/components/SangsaengLogo";
 import medicalVideo from "@assets/medical_1754647118451.mp4";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -29,7 +19,6 @@ export default function Sangsaeng() {
     <div>
       {/* Hero Section with Video Background */}
       <section className="relative h-screen w-full overflow-hidden">
-        {/* Background Video */}
         <video
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
@@ -40,7 +29,7 @@ export default function Sangsaeng() {
         />
         <div className="absolute inset-0 bg-black/40"></div>
 
-        {/* Back Navigation - Positioned over video */}
+        {/* Back Navigation */}
         <div className="absolute top-6 left-6 z-20">
           <Link href="/brand">
             <Button
@@ -104,7 +93,7 @@ export default function Sangsaeng() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <div className="inline-block px-4 py-2 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-sm font-semibold mb-6">
-              SERVICE PORTFOLIO
+              {t("sangsaeng.services.badge")}
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-6">
               {t("sangsaeng.services.title")}
@@ -116,137 +105,79 @@ export default function Sangsaeng() {
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
+            {/* Medical */}
             <div className="group">
               <div className="bg-white rounded-2xl p-10 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
                 <div className="w-20 h-20 bg-gradient-to-br from-[#0F4C82] to-[#1a5c94] rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                   <Heart className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-[#000000] mb-4 text-center">
-                  상생 메디컬
+                <h3 className="text-2xl font-bold text-[#000000] mb-2 text-center">
+                  {t("sangsaeng.medical.title")}
                 </h3>
                 <p className="text-gray-600 mb-6 text-center text-base">
-                  Sangsaeng Medical
+                  {t("sangsaeng.medical.subtitle")}
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6 text-center">
-                  실생활 기반 건강 솔루션과 의료 서비스를 제공하는 헬스케어
-                  브랜드
+                  {t("sangsaeng.medical.description")}
                 </p>
                 <div className="bg-gray-50 rounded-xl p-6">
                   <div className="space-y-3">
-                    <div className="flex items-center">
-                      <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-3"></div>
-                      <span className="text-gray-700 font-medium">
-                        맞춤형 건강 검진 패키지
-                      </span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-3"></div>
-                      <span className="text-gray-700 font-medium">
-                        전문의 상담 서비스
-                      </span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-3"></div>
-                      <span className="text-gray-700 font-medium">
-                        만성질환 관리 프로그램
-                      </span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-3"></div>
-                      <span className="text-gray-700 font-medium">
-                        예방 의학 솔루션
-                      </span>
-                    </div>
+                    <ItemDot text={t("sangsaeng.medical.benefit1")} />
+                    <ItemDot text={t("sangsaeng.medical.benefit2")} />
+                    <ItemDot text={t("sangsaeng.medical.benefit3")} />
+                    <ItemDot text={t("sangsaeng.medical.benefit4")} />
                   </div>
                 </div>
               </div>
             </div>
 
+            {/* Platform */}
             <div className="group">
               <div className="bg-white rounded-2xl p-10 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
                 <div className="w-20 h-20 bg-gradient-to-br from-[#0F4C82] to-[#1a5c94] rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                   <Smartphone className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-[#000000] mb-4 text-center">
-                  상생 플랫폼
+                <h3 className="text-2xl font-bold text-[#000000] mb-2 text-center">
+                  {t("sangsaeng.platform.title")}
                 </h3>
                 <p className="text-gray-600 mb-6 text-center text-base">
-                  Sangsaeng Platform
+                  {t("sangsaeng.platform.subtitle")}
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6 text-center">
-                  의료부터 관광까지 손안의 다국어 의료 플랫폼 앱
+                  {t("sangsaeng.platform.description")}
                 </p>
                 <div className="bg-gray-50 rounded-xl p-6">
                   <div className="space-y-3">
-                    <div className="flex items-center">
-                      <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-3"></div>
-                      <span className="text-gray-700 font-medium">
-                        다국어 의료 통역 서비스
-                      </span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-3"></div>
-                      <span className="text-gray-700 font-medium">
-                        병원 예약 및 관리
-                      </span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-3"></div>
-                      <span className="text-gray-700 font-medium">
-                        의료 관광 패키지
-                      </span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-3"></div>
-                      <span className="text-gray-700 font-medium">
-                        24시간 응급 서포트
-                      </span>
-                    </div>
+                    <ItemDot text={t("sangsaeng.platform.benefit1")} />
+                    <ItemDot text={t("sangsaeng.platform.benefit2")} />
+                    <ItemDot text={t("sangsaeng.platform.benefit3")} />
+                    <ItemDot text={t("sangsaeng.platform.benefit4")} />
                   </div>
                 </div>
               </div>
             </div>
 
+            {/* Branding */}
             <div className="group">
               <div className="bg-white rounded-2xl p-10 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
                 <div className="w-20 h-20 bg-gradient-to-br from-[#0F4C82] to-[#1a5c94] rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                   <Globe className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-[#000000] mb-4 text-center">
-                  상생 브랜딩
+                <h3 className="text-2xl font-bold text-[#000000] mb-2 text-center">
+                  {t("sangsaeng.branding.title")}
                 </h3>
                 <p className="text-gray-600 mb-6 text-center text-base">
-                  Sangsaeng Branding
+                  {t("sangsaeng.branding.subtitle")}
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6 text-center">
-                  콘텐츠, 메타광고, 글로벌 인플루언서 연계 브랜딩 조직
+                  {t("sangsaeng.branding.description")}
                 </p>
                 <div className="bg-gray-50 rounded-xl p-6">
                   <div className="space-y-3">
-                    <div className="flex items-center">
-                      <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-3"></div>
-                      <span className="text-gray-700 font-medium">
-                        의료 콘텐츠 마케팅
-                      </span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-3"></div>
-                      <span className="text-gray-700 font-medium">
-                        다국어 브랜드 캠페인
-                      </span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-3"></div>
-                      <span className="text-gray-700 font-medium">
-                        글로벌 인플루언서 협업
-                      </span>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-3"></div>
-                      <span className="text-gray-700 font-medium">
-                        디지털 마케팅 솔루션
-                      </span>
-                    </div>
+                    <ItemDot text={t("sangsaeng.branding.benefit1")} />
+                    <ItemDot text={t("sangsaeng.branding.benefit2")} />
+                    <ItemDot text={t("sangsaeng.branding.benefit3")} />
+                    <ItemDot text={t("sangsaeng.branding.benefit4")} />
                   </div>
                 </div>
               </div>
@@ -260,11 +191,11 @@ export default function Sangsaeng() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-              세계와 연결되는
-              <span className="block">한국 의료의 미래</span>
+              {t("sangsaeng.cta.title1")}
+              <span className="block">{t("sangsaeng.cta.title2")}</span>
             </h2>
             <p className="text-lg lg:text-xl mb-12 opacity-90 leading-relaxed">
-              상생과 함께 안전하고 신뢰할 수 있는 의료 서비스를 경험해보세요
+              {t("sangsaeng.cta.description")}
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button
@@ -273,12 +204,22 @@ export default function Sangsaeng() {
                 className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#0F4C82] transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-semibold"
                 onClick={() => setLocation("/contact")}
               >
-                문의하기
+                {t("sangsaeng.cta.button")}
               </Button>
             </div>
           </div>
         </div>
       </section>
+    </div>
+  );
+}
+
+/* 작은 점 아이템 컴포넌트 */
+function ItemDot({ text }: { text: string }) {
+  return (
+    <div className="flex items-center">
+      <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-3"></div>
+      <span className="text-gray-700 font-medium">{text}</span>
     </div>
   );
 }

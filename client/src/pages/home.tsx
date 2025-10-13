@@ -53,7 +53,7 @@ import brandLineupImg from "@assets/brand_lineup_1760074500166.jpg";
 import newsData from "@/data/news.json";
 import { resolveNewsThumbnail, FALLBACK } from "@/assets/news";
 
-const getNewsData = (t: (key: string) => string) => 
+const getNewsData = (t: (key: string) => string) =>
   newsData.map((news, index) => ({
     ...news,
     title: t(`news.${index}.title`),
@@ -191,7 +191,7 @@ const getBrands = (t: (key: string) => string) => [
   },
   {
     id: "sangsaeng",
-    name: "상생 (Sangsaeng)",
+    name: "Sangsaeng",
     category: t("brands.sangsaeng.category"),
     slogan: t("brands.sangsaeng.slogan"),
     description: t("brands.sangsaeng.description"),
@@ -847,7 +847,11 @@ export default function Home() {
                   className="bg-white text-gray-900 hover:bg-gray-100 px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base tap-target"
                 >
                   <Link
-                    href={brands[currentBrandIndex].id === "lineup" ? "/brand" : `/brand/${brands[currentBrandIndex].id}`}
+                    href={
+                      brands[currentBrandIndex].id === "lineup"
+                        ? "/brand"
+                        : `/brand/${brands[currentBrandIndex].id}`
+                    }
                     onClick={() =>
                       window.scrollTo({ top: 0, behavior: "smooth" })
                     }
@@ -1007,7 +1011,7 @@ export default function Home() {
                     <div className="mt-auto">
                       <Link href="/service">
                         <Button className="bg-primary hover:bg-primary/90 text-white px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-3 text-sm sm:text-base rounded-lg font-semibold inline-flex items-center group w-full sm:w-auto justify-center tap-target">
-                          자세히 보기
+                          {t("ui.learn_more")}
                           <ArrowRight className="ml-1 sm:ml-2 w-3 h-3 sm:w-4 sm:h-4 transform group-hover:translate-x-1 transition-transform" />
                         </Button>
                       </Link>

@@ -1,20 +1,6 @@
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Link, useLocation } from "wouter";
-import {
-  ArrowLeft,
-  Heart,
-  Leaf,
-  Sparkles,
-  Globe2,
-  ArrowRight,
-} from "lucide-react";
+import { ArrowLeft, Heart, Leaf, Globe2 } from "lucide-react";
 import inyourHeartVideo from "@assets/imyour_banner_1754643247969.mp4";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -26,7 +12,6 @@ export default function InYourHeart() {
     <div>
       {/* Hero Section with Video Background */}
       <section className="relative h-screen w-full overflow-hidden">
-        {/* Background Video */}
         <video
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
@@ -37,7 +22,7 @@ export default function InYourHeart() {
         />
         <div className="absolute inset-0 bg-black/40"></div>
 
-        {/* Back Navigation - Positioned over video */}
+        {/* Back Navigation */}
         <div className="absolute top-6 left-6 z-20">
           <Link href="/brand">
             <Button
@@ -50,7 +35,7 @@ export default function InYourHeart() {
           </Link>
         </div>
 
-        {/* Content over video */}
+        {/* Hero copy */}
         <div className="relative z-10 h-full flex items-center">
           <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
             <div className="max-w-4xl text-white">
@@ -63,7 +48,6 @@ export default function InYourHeart() {
               <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
                 {t("inyourheart.hero.description")}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4"></div>
             </div>
           </div>
         </div>
@@ -71,7 +55,6 @@ export default function InYourHeart() {
 
       {/* Brand Values Section */}
       <section className="py-32 bg-white relative overflow-hidden">
-        {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <svg className="w-full h-full" viewBox="0 0 1200 600" fill="none">
             <circle cx="200" cy="100" r="100" fill="#0F4C82" />
@@ -87,7 +70,11 @@ export default function InYourHeart() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <div className="inline-block px-4 py-2 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-sm font-semibold mb-6">
-              BRAND VALUES
+              {
+                t(
+                  "inyourheart.values.badge",
+                ) /* 원하면 고정 텍스트로 'BRAND VALUES' 유지 가능 */
+              }
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-[#000000] mb-6">
               {t("inyourheart.values.title")}
@@ -99,47 +86,47 @@ export default function InYourHeart() {
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
+            {/* Card 1 */}
             <div className="group">
               <div className="bg-white rounded-2xl p-10 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
                 <div className="w-20 h-20 bg-gradient-to-br from-[#0F4C82] to-[#1a5c94] rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                   <Leaf className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4 text-center">
-                  클린 포뮬러
+                  {t("inyourheart.category1.title")}
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6 text-center">
-                  피부에 순하고 환경에 친화적인 성분만을 사용하여 안전하고
-                  지속가능한 뷰티를 추구합니다.
+                  {t("inyourheart.category1.description")}
                 </p>
               </div>
             </div>
 
+            {/* Card 2 */}
             <div className="group">
               <div className="bg-white rounded-2xl p-10 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
                 <div className="w-20 h-20 bg-gradient-to-br from-[#0F4C82] to-[#1a5c94] rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                   <Heart className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4 text-center">
-                  감성 디자인
+                  {t("inyourheart.category2.title")}
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6 text-center">
-                  제품 사용 순간부터 특별한 경험이 될 수 있도록 감성적이고
-                  아름다운 패키지를 디자인합니다.
+                  {t("inyourheart.category2.description")}
                 </p>
               </div>
             </div>
 
+            {/* Card 3 */}
             <div className="group">
               <div className="bg-white rounded-2xl p-10 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100">
                 <div className="w-20 h-20 bg-gradient-to-br from-[#0F4C82] to-[#1a5c94] rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                   <Globe2 className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#000000] mb-4 text-center">
-                  글로벌 K-뷰티
+                  {t("inyourheart.category3.title")}
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6 text-center">
-                  한국의 우수한 뷰티 기술과 혁신을 전 세계에 알리며 K-뷰티의
-                  가치를 높여갑니다.
+                  {t("inyourheart.category3.description")}
                 </p>
               </div>
             </div>
@@ -152,11 +139,11 @@ export default function InYourHeart() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-              당신의 마음에 닿는
-              <span className="block">아름다운 감성</span>
+              {t("inyourheart.cta.title")}
+              <span className="block">{t("inyourheart.cta.subtitle")}</span>
             </h2>
             <p className="text-lg lg:text-xl mb-12 opacity-90 leading-relaxed">
-              IN YOUR HEART와 함께 특별한 뷰티 여정을 시작해보세요
+              {t("inyourheart.cta.description")}
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Button
@@ -165,7 +152,7 @@ export default function InYourHeart() {
                 className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#0F4C82] transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-semibold"
                 onClick={() => setLocation("/contact")}
               >
-                문의하기
+                {t("inyourheart.cta.button")}
               </Button>
             </div>
           </div>

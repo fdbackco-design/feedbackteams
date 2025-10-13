@@ -1,3 +1,4 @@
+// src/pages/Brand.tsx
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "wouter";
@@ -30,7 +31,12 @@ export default function Brand() {
       slogan: t("brands.hoid.slogan"),
       logo: "svg",
       description: t("brands.hoid.description"),
-      products: [t("brands.hoid.products.0"), t("brands.hoid.products.1"), t("brands.hoid.products.2"), t("brands.hoid.products.3")],
+      products: [
+        t("brands.hoid.products.0"),
+        t("brands.hoid.products.1"),
+        t("brands.hoid.products.2"),
+        t("brands.hoid.products.3"),
+      ],
       bgColor: "bg-white",
       buttonColor: "bg-[#0F4C82] hover:bg-[#0d4070]",
       badgeColor: "bg-[#0F4C82]",
@@ -43,7 +49,12 @@ export default function Brand() {
       slogan: t("brands.asran.slogan"),
       logo: "svg",
       description: t("brands.asran.description"),
-      products: [t("brands.asran.products.0"), t("brands.asran.products.1"), t("brands.asran.products.2"), t("brands.asran.products.3")],
+      products: [
+        t("brands.asran.products.0"),
+        t("brands.asran.products.1"),
+        t("brands.asran.products.2"),
+        t("brands.asran.products.3"),
+      ],
       bgColor: "bg-gray-50",
       buttonColor: "bg-[#0F4C82] hover:bg-[#0d4070]",
       badgeColor: "bg-[#0F4C82]",
@@ -56,7 +67,12 @@ export default function Brand() {
       slogan: t("brands.laceras.slogan"),
       logo: "img",
       description: t("brands.laceras.description"),
-      products: [t("brands.laceras.products.0"), t("brands.laceras.products.1"), t("brands.laceras.products.2"), t("brands.laceras.products.3")],
+      products: [
+        t("brands.laceras.products.0"),
+        t("brands.laceras.products.1"),
+        t("brands.laceras.products.2"),
+        t("brands.laceras.products.3"),
+      ],
       bgColor: "bg-white",
       buttonColor: "bg-[#233A73] hover:bg-[#1c2f5c]",
       badgeColor: "bg-[#233A73]",
@@ -69,7 +85,12 @@ export default function Brand() {
       slogan: t("brands.carvella.slogan"),
       logo: "img",
       description: t("brands.carvella.description"),
-      products: [t("brands.carvella.products.0"), t("brands.carvella.products.1"), t("brands.carvella.products.2"), t("brands.carvella.products.3")],
+      products: [
+        t("brands.carvella.products.0"),
+        t("brands.carvella.products.1"),
+        t("brands.carvella.products.2"),
+        t("brands.carvella.products.3"),
+      ],
       bgColor: "bg-gray-50",
       buttonColor: "bg-[#6C2F1E] hover:bg-[#5a2719]",
       badgeColor: "bg-[#6C2F1E]",
@@ -82,7 +103,12 @@ export default function Brand() {
       slogan: t("brands.medifeed.slogan"),
       logo: "MF",
       description: t("brands.medifeed.description"),
-      products: [t("brands.medifeed.products.0"), t("brands.medifeed.products.1"), t("brands.medifeed.products.2"), t("brands.medifeed.products.3")],
+      products: [
+        t("brands.medifeed.products.0"),
+        t("brands.medifeed.products.1"),
+        t("brands.medifeed.products.2"),
+        t("brands.medifeed.products.3"),
+      ],
       bgColor: "bg-gray-50",
       buttonColor: "bg-[#0F4C82] hover:bg-[#0d4070]",
       badgeColor: "bg-[#0F4C82]",
@@ -95,7 +121,12 @@ export default function Brand() {
       slogan: t("brands.inyourheart.slogan"),
       logo: "♥",
       description: t("brands.inyourheart.description"),
-      products: [t("brands.inyourheart.products.0"), t("brands.inyourheart.products.1"), t("brands.inyourheart.products.2"), t("brands.inyourheart.products.3")],
+      products: [
+        t("brands.inyourheart.products.0"),
+        t("brands.inyourheart.products.1"),
+        t("brands.inyourheart.products.2"),
+        t("brands.inyourheart.products.3"),
+      ],
       bgColor: "bg-white",
       buttonColor: "bg-[#0F4C82] hover:bg-[#0d4070]",
       badgeColor: "bg-[#0F4C82]",
@@ -103,12 +134,17 @@ export default function Brand() {
     },
     {
       id: "sangsaeng",
-      name: "상생 (Sangsaeng)",
+      name: "Sangsaeng",
       category: t("brands.sangsaeng.category"),
       slogan: t("brands.sangsaeng.slogan"),
       logo: "상생",
       description: t("brands.sangsaeng.description"),
-      products: [t("brands.sangsaeng.products.0"), t("brands.sangsaeng.products.1"), t("brands.sangsaeng.products.2"), t("brands.sangsaeng.products.3")],
+      products: [
+        t("brands.sangsaeng.products.0"),
+        t("brands.sangsaeng.products.1"),
+        t("brands.sangsaeng.products.2"),
+        t("brands.sangsaeng.products.3"),
+      ],
       bgColor: "bg-gray-50",
       buttonColor: "bg-[#0F4C82] hover:bg-[#0d4070]",
       badgeColor: "bg-[#0F4C82]",
@@ -127,22 +163,11 @@ export default function Brand() {
           }
         });
       },
-      {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      },
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" },
     );
 
-    // 브랜드 카드들 관찰
-    cardRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
-
-    // CTA 섹션 관찰
-    if (ctaRef.current) {
-      observer.observe(ctaRef.current);
-    }
-
+    cardRefs.current.forEach((ref) => ref && observer.observe(ref));
+    if (ctaRef.current) observer.observe(ctaRef.current);
     return () => observer.disconnect();
   }, []);
 
@@ -153,9 +178,11 @@ export default function Brand() {
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#000000] mb-4 sm:mb-6">
             {t("브랜드 소개")}
           </h1>
-          <div className="w-16 sm:w-24 h-0.5 bg-[#0F4C82] mx-auto mb-6 sm:mb-8"></div>
+          <div className="w-16 sm:w-24 h-0.5 bg-[#0F4C82] mx-auto mb-6 sm:mb-8" />
           <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            {t("혁신적인 기술과 디자인을 바탕으로 한 FeedBack의 자체 브랜드들을 소개합니다.각 브랜드는 고유한 가치와 비전을 가지고 고객에게 최고의 경험을 제공합니다.")}
+            {t(
+              "혁신적인 기술과 디자인을 바탕으로 한 FeedBack의 자체 브랜드들을 소개합니다.각 브랜드는 고유한 가치와 비전을 가지고 고객에게 최고의 경험을 제공합니다.",
+            )}
           </p>
         </div>
 
@@ -172,34 +199,34 @@ export default function Brand() {
               }}
             >
               <div
-                className={`grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 lg:gap-16 items-start lg:items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}
+                className={`grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 lg:gap-16 items-start lg:items-center ${
+                  index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
+                }`}
               >
                 <div
-                  className={`space-y-4 sm:space-y-6 ${index % 2 === 1 ? "lg:col-start-2" : ""}`}
+                  className={`space-y-4 sm:space-y-6 ${
+                    index % 2 === 1 ? "lg:col-start-2" : ""
+                  }`}
                 >
                   <div className="space-y-3 sm:space-y-4">
                     {brand.logo === "svg" && brand.id === "hoid" ? (
-                      <HoidLogo className="w-40 sm:w-48 md:w-64 lg:w-72 h-auto" />
+                      <HoidLogo className="brand-logo" />
                     ) : brand.logo === "svg" && brand.id === "asran" ? (
-                      <AsranLogo
-                        className="[&_.cls-1]:fill-black"
-                        width="180"
-                        height="auto"
-                      />
+                      <AsranLogo className="brand-logo [&_.cls-1]:fill-black" />
                     ) : brand.logo === "img" && brand.id === "laceras" ? (
                       <LazyImage
                         src={lacerasLogo}
                         alt="La Ceras 로고"
-                        className="w-16 sm:w-18 md:w-20 lg:w-22 h-auto"
+                        className="brand-logo object-contain"
                       />
                     ) : brand.logo === "img" && brand.id === "carvella" ? (
                       <LazyImage
                         src={carvellaLogo}
                         alt="Carvella 로고"
-                        className="w-48 sm:w-56 md:w-64 lg:w-72 h-auto"
+                        className="brand-logo object-contain"
                       />
                     ) : (
-                      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-[#000000] leading-tight">
+                      <h2 className="brand-logo text-center text-3xl sm:text-4xl lg:text-5xl font-bold text-[#000000] leading-tight">
                         {brand.name}
                       </h2>
                     )}
@@ -210,9 +237,11 @@ export default function Brand() {
                       {brand.slogan}
                     </p>
                   </div>
+
                   <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed max-w-prose">
                     {brand.description}
                   </p>
+
                   <div className="flex flex-wrap gap-2 sm:gap-3">
                     {brand.products.map((product, productIndex) => (
                       <Badge
@@ -223,6 +252,7 @@ export default function Brand() {
                       </Badge>
                     ))}
                   </div>
+
                   <Link href={`/brand/${brand.id}`} className="block">
                     <Button
                       className={`${brand.buttonColor} text-white px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 text-xs sm:text-sm md:text-base lg:text-lg font-semibold transition-all duration-300 transform hover:scale-105 rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl tap-target w-full sm:w-auto`}
@@ -234,6 +264,7 @@ export default function Brand() {
                     </Button>
                   </Link>
                 </div>
+
                 <div
                   className={`mt-4 sm:mt-6 lg:mt-0 ${
                     index % 2 === 1 ? "lg:col-start-1" : "lg:order-last"
@@ -265,7 +296,9 @@ export default function Brand() {
               {t("브랜드 파트너십에 관심이 있으신가요?")}
             </h3>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-8 sm:mb-10 md:mb-12 leading-relaxed opacity-90">
-              {t("FeedBack과 함께 혁신적인 브랜드를 만들어보세요. 기획부터 유통까지 전 과정을 지원하여 성공적인 브랜드 런칭을 도와드립니다.")}
+              {t(
+                "FeedBack과 함께 혁신적인 브랜드를 만들어보세요. 기획부터 유통까지 전 과정을 지원하여 성공적인 브랜드 런칭을 도와드립니다.",
+              )}
             </p>
             <Button
               asChild

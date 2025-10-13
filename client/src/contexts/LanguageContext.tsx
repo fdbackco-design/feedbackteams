@@ -22,6 +22,39 @@ const translations = {
     "nav.news": "뉴스",
     "nav.contact": "문의하기",
 
+    // Footer
+    "footer.tagline": "유통에서 브랜드까지 한국의 가치를 세계로 연결합니다",
+    "footer.about":
+      "유통, 브랜드 제조, 마케팅, 의료관광 플랫폼을 통해 상생의 가치로 글로벌 시장에 진출하는 종합 서비스 기업입니다.",
+    "footer.sections.services": "서비스",
+    "footer.sections.brands": "브랜드",
+    "footer.sections.company": "회사",
+
+    "footer.services.distribution": "유통/수출입 중개",
+    "footer.services.manufacturing": "자체 브랜드 제조",
+    "footer.services.marketing": "글로벌 마케팅",
+    "footer.services.medical": "의료관광 플랫폼",
+    "footer.services.app": "앱 개발",
+
+    "footer.brands.hoid": "Hoid",
+    "footer.brands.asran": "아슬란",
+    "footer.brands.laceras": "라세라스",
+    "footer.brands.carvella": "카르벨라",
+    "footer.brands.medifeed": "Medifeed",
+    "footer.brands.inyourheart": "InYourHeart",
+    "footer.brands.sangsaeng": "상생",
+
+    "footer.company.about": "회사소개",
+    "footer.company.news": "뉴스",
+    "footer.company.contact": "연락처",
+
+    "footer.bottom.copyright": "© 2024 FeedBack Corp. All rights reserved.",
+    "footer.bottom.bizinfo":
+      "사업자등록번호: 296-87-03628 | 대표이사: 송해민, 정성현",
+    "footer.bottom.privacy": "개인정보처리방침",
+    "footer.bottom.terms": "이용약관",
+    "footer.bottom.cookies": "쿠키정책",
+
     // Hero Section
     "hero.title": "브랜드와 시장을 연결하는",
     "hero.subtitle": "유통 플랫폼, FEEDBACK",
@@ -136,10 +169,11 @@ const translations = {
     // Common UI
     "ui.view_brand_detail": "브랜드 자세히 보기",
     "ui.visit_website": "브랜드 홈페이지 가기",
+    "ui.learn_more": "자세히 보기",
 
     // B2B2C Section
-    "b2b2c.header.title": "제조사부터 소비자까지",
-    "b2b2c.header.subtitle": "완���한 유통 생태계를 구축합니다.",
+    "b2b2c.header.title": "제조사부터 소비자음지",
+    "b2b2c.header.subtitle": "완 ����한 유통 생태계를 구축합니다.",
     "b2b2c.b2b.title": "B2B 제조사",
     "b2b2c.b2b.description":
       "품질 높은 제품을 생산하는 제조사와 전략적 파트너십을 구축합니다",
@@ -209,7 +243,7 @@ const translations = {
     "news.3.summary":
       "Hoid는 가전제품을 넘어 소비자의 일상을 전반적으로 아우르는 토탈 라이프스타일 브랜드로 도약을 준비하고 있습니다.",
     "news.3.content":
-      "Hoid는 가전제품을 넘어 소비자의 일상을 전반적으로 아우르는 토탈 라이프스타일 브랜드로 도약을 준비하고 있습니다. 향후 계획에는 프리미엄 쥬얼리 라인과 고급 그릇 컬렉션 출시가 포함되어 있으며, 각각 세심한 디자인과 고품질 소재를 바탕으로 제작됩니다. 쥬얼리 라인은 특별한 날을 더욱 빛나게 해줄 세련된 디자인과 장인정신이 깃든 마감 처리가 특징이며, 그릇 라인은 미니멀하면서도 우아한 라인을 살려, 식탁 위 품격을 높이는 제품으로 선보일 예정입니다. Hoid는 앞으로도 다양한 카테고리에서 혁신과 아름다움을 동시에 제공하며, 소비자의 라이프스타일 가치를 높이는 것을 목표로 하고 있습니다.",
+      "Hoid는 가전제품을 넘어 소비자의 일상을 전반적으로 아우르는 토탈 라이프스타일 브랜드로 도약을 준비하고 있습니다. 향후 계획에는 프리미엄 쥬얼리 라인과 고급 그릇 컬렉션 출시가 포함되어 있으며, 각각 세심한 디자인과 고품질 소재를 바탕으로 제작됩니다. 쥬얼리 라인은 특별한 날을 더욱 빛나게 해줄 세련된 디자id�과 장인정신이 깃든 마감 처리가 특징이며, 그릇 라인은 미니멀하면서도 우아한 라인을 살려, 식탁 위 품격을 높이는 제품으로 선보일 예정입니다. Hoid는 앞으로도 다양한 카테고리에서 혁신과 아름다움을 동시에 제공하며, 소비자의 라이프스타일 가치를 높이는 것을 목표로 하고 있습니다.",
     "news.4.date": "2025.09.01",
     "news.4.title": "Hoid 공기청정기 2세대 출시",
     "news.4.summary":
@@ -245,55 +279,64 @@ const translations = {
     "cta.proposal": "사업 제안서 보기",
 
     // Contact Page
-    "contact.title": "문의하기",
-    "contact.subtitle": "궁금한 점이 있으시면 언제든지 연락주세요.",
-    "본사 주소": "본사 주소",
-    "인천 연수구 송도과학로 80, 송도 AIT센터 1301호, 1302호":
+    "contact.title": "Contact Us",
+    "contact.subtitle.line1": "FeedBack과 함께 새로운 비즈니스 기회를",
+    "contact.subtitle.line2": "만들어보세요.",
+    "contact.section.contact": "연락처",
+    "contact.section.departments": "관련부서",
+    "contact.section.social": "소셜미디어",
+
+    "contact.info.address.title": "본사 주소",
+    "contact.info.address.content":
       "인천 연수구 송도과학로 80, 송도 AIT센터 1301호, 1302호",
-    대표전화: "대표전화",
-    이메일: "이메일",
-    운영시간: "운영시간",
-    "평일 10:00 - 19:00, 주말 및 공휴일 휴무":
-      "평일 10:00 - 19:00, 주말 및 공휴일 휴무",
-    경영지원부: "경영지원부",
-    연락처: "연락처",
-    관련부서: "관련부서",
-    소셜미디어: "소셜미디어",
-    "문의 남기기": "문의 남기기",
+    "contact.info.phone.title": "대표전화",
+    "contact.info.email.title": "이메일",
+    "contact.info.hours.title": "운영시간",
+    "contact.info.hours.content": "평일 10:00 - 19:00, 주말 및 공휴일 휴무",
+
+    "contact.dept.management": "경영지원부",
+
+    "contact.form.title": "문의 남기기",
     "contact.form.name": "이름",
-    "contact.form.name.placeholder": "이름을 입력해주세요",
+    "contact.form.name.placeholder": "이름을 입력하세요",
+    "contact.form.company": "회사명",
+    "contact.form.company.placeholder": "회사명을 입력하세요",
     "contact.form.email": "이메일",
     "contact.form.email.placeholder": "your@email.com",
     "contact.form.phone": "연락처",
-    "contact.form.phone.placeholder": "010-0000-0000",
-    "contact.form.company": "회사명",
-    "contact.form.company.placeholder": "회사명을 입력해주세요",
-    "contact.form.service": "관심 서비스",
-    "contact.form.service.placeholder": "서비스를 선택해주세요",
-    "contact.form.service.medical": "의료관광 중개업",
-    "contact.form.service.app": "다국어 앱 개발",
-    "contact.form.service.brand": "브랜드 유통",
-    "contact.form.service.consulting": "마케팅 컨설팅",
+    "contact.form.phone.placeholder": "+82-10-0000-0000",
+    "contact.form.inquiry_type": "문의 유형",
+    "contact.form.inquiry_type.placeholder": "문의 유형을 선택하세요",
+    "contact.form.inquiry_type.business": "사업 문의",
+    "contact.form.inquiry_type.brand": "브랜드 문의",
+    "contact.form.inquiry_type.partner": "파트너 제안",
     "contact.form.message": "문의 내용",
-    "contact.form.message.placeholder": "문의하실 내용을 자세히 적어주세요...",
+    "contact.form.message.placeholder": "문의 내용을 입력하세요",
     "contact.form.privacy": "개인정보 수집 및 이용에 동의합니다.",
     "contact.form.privacy.link": "자세히 보기",
-    "contact.form.privacy.error.title": "동의 필요",
+    "contact.form.privacy.error.title": "개인정보 동의 필요",
     "contact.form.privacy.error.description":
-      "개인정보 수집 및 이용에 동의해주세요.",
+      "진행을 위해 개인정보 처리방침에 동의해주세요.",
     "contact.form.submit": "문의 보내기",
-    "발송 중...": "발송 중...",
-    "메일 발송 성공": "메일 발송 성공",
-    "문의 유형": "문의 유형",
-    "사업 문의": "사업 문의",
-    "브랜드 문의": "브랜드 문의",
-    "파트너 제안": "파트너 제안",
+    "contact.form.sending": "발송 중...",
+
+    "contact.errors.required.title": "입력 오류",
+    "contact.errors.required.description":
+      "이름, 이메일, 문의내용은 필수 항목입니다.",
+
+    "contact.toast.success.title": "메일 발송 성공",
+    "contact.toast.success.description":
+      "문의가 성공적으로 전송되었습니다. 빠른 시일 내에 답변드리겠습니다.",
+    "contact.toast.gmail.title": "Gmail 인증 필요",
+    "contact.toast.gmail.description": "Gmail API 인증이 필요합니다.",
+    "contact.toast.gmail.link": "여기를 클릭하여 Gmail 인증 진행",
+    "contact.toast.unknown": "알 수 없는 오류가 발생했습니다.",
+    "contact.toast.send_error_console": "이메일 발송 오류:",
+    "contact.toast.fail.title": "발송 실패",
+    "contact.toast.fail.description":
+      "이메일 발송 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.",
+
     "contact.map.title": "오시는 길",
-    "contact.info.address": "주소",
-    "contact.info.phone": "전화",
-    "contact.info.email": "이메일",
-    "contact.info.hours": "운영시간",
-    "contact.info.hours.value": "월-금 09:00-18:00",
 
     // About Page
     "about.story.main":
@@ -370,10 +413,10 @@ const translations = {
     "Hoid, Medifeed, InYourHeart, 상생 등 4개 자체 브랜드의 제조 및 OEM 생산을 통해 브랜드 성장을 지원합니다. 품질 관리부터 제품 개발까지 전 과정을 책임집니다.":
       "Hoid, Medifeed, InYourHeart, 상생 등 4개 자체 브랜드의 제조 및 OEM 생산을 통해 브랜드 성장을 지원합니다. 품질 관리부터 제품 개발까지 전 과정을 책임집니다.",
     "글로벌 마케팅/브랜딩": "글로벌 마케팅/브랜딩",
-    "홈쇼핑 연계와 디지털 마케팅을 통한 글로벌 브랜딩 솔루션을 제공합니다. 브랜드 아이덴티티 개발부터 글로벌 시장 진출 전략까지 종합적인 마케팅 서비스를 지원합니다.":
+    "홈쇼핑 연계와 디지털 마케팅을 통한 글로벌 브랜딩 솔루션을 제공합니다. 브랜드 아이덴티티 개발부터 글로벌 시장 진출 전략까지 종합적인 마케팅 서비L��를 지원합니다.":
       "홈쇼핑 연계와 디지털 마케팅을 통한 글로벌 브랜딩 솔루션을 제공합니다. 브랜드 아이덴티티 개발부터 글로벌 시장 진출 전략까지 종합적인 마케팅 서비스를 지원합니다.",
     "의료관광 플랫폼": "의료관광 플랫폼",
-    "상생 브랜드를 통한 의료관광 플랫폼 운영으로 한국의 우수한 의료 서비스를 전 세계에 연결합니다. 태국, 베트남을 시작으로 아시아 전역으로 서비스를 확장하고 있습니다.":
+    "상생 브랜드를 통한 의료관광 플랫폼 운영으로 한국의 우수한 의료 서비스를 전 세계에 연결합니다. 태국, 베트남을 시작으로 아시아 전역으로 서비스를 확장하고 있s �니다.":
       "상생 브랜드를 통한 의료관광 플랫폼 운영으로 한국의 우수한 의료 서비스를 전 세계에 연결합니다. 태국, 베트남을 시작으로 아시아 전역으로 서비스를 확장하고 있습니다.",
     "앱 개발": "앱 개발",
     "의료/케어 통합 앱 개발로 디지털 헬스케어 솔루션을 제공합니다. 다국어 지원과 실시간 상담 기능을 통해 글로벌 사용자들에게 편리한 서비스를 제공합니다.":
@@ -391,7 +434,7 @@ const translations = {
 
     // Brand Page
     "브랜드 소개": "브랜드 소개",
-    "혁신적인 기술과 디자인을 바탕으로 한 FeedBack의 자체 브���드들을 소개합니다.각 브랜드는 고유한 가치와 비전을 가지고 고객에게 최고의 경험을 제공합니다.":
+    "혁신적인 기술과 디자인을 바탕으로 한 FeedBack의 자체 n��n ���드들을 소개합니다.각 브랜드는 고유한 가치와 비전을 가지고 고객에게 최고의 경험을 제공합니다.":
       "혁신적인 기술과 디자인을 바탕으로 한 FeedBack의 자체 브랜드들을 소개합니다.각 브랜드는 고유한 가치와 비전을 가지고 고객에게 최고의 경험을 제공합니다.",
     "브랜드 파트너십에 관심이 있으신가요?":
       "브랜드 파트너십에 관심이 있으신가요?",
@@ -404,15 +447,19 @@ const translations = {
 
     // Hoid Brand Page
     "hoid.hero.title": "공기 속까지 바꾸는 디자인",
-    "hoid.hero.description": "미니멀한 디자인과 첨단 기술이 만나 일상의 공기질을 혁신하는 스마트 가전 브랜드입니다.",
+    "hoid.hero.description":
+      "미니멀한 디자인과 첨단 기술이 만나 일상의 공기질을 혁신하는 스마트 가전 브랜드입니다.",
     "hoid.hero.cta": "Hoid 홈페이지 가기",
     "hoid.features.title": "혁신적인 기술력",
-    "hoid.features.subtitle": "미니멀한 디자인 속에 숨어있는 첨단 기술로 완전히 새로운 공기청정 경험을 제공합니다",
+    "hoid.features.subtitle":
+      "미니멀한 디자인 속에 숨어있는 첨단 기술로 완전히 새로운 공기청정 경험을 제공합니다",
     "hoid.homeshopping.date": "2025년 8월 런칭",
     "hoid.homeshopping.heading": "프리미엄 디자인 가전, 이제 집에서 만나보세요",
-    "hoid.homeshopping.description": "프리미엄 디자인 가전 브랜드 호이드가 드디어 홈쇼핑을 통해 여러분을 찾아갑니다. 세련된 디자인과 뛰어난 성능, 그리고 생활을 바꾸는 혁신적인 기술을 이제 TV 속에서 직접 확인하세요.",
+    "hoid.homeshopping.description":
+      "프리미엄 디자인 가전 브랜드 호이드가 드디어 홈쇼핑을 통해 여러분을 찾아갑니다. 세련된 디자인과 뛰어난 성능, 그리고 생활을 바꾸는 혁신적인 기술을 이제 TV 속에서 직접 확인하세요.",
     "hoid.channels.title": "전국 어디서나 만날 수 있는",
-    "hoid.channels.subtitle": "다양한 유통 채널을 통해 고객 여러분께 더 가깝게 다가갑니다",
+    "hoid.channels.subtitle":
+      "다양한 유통 채널을 통해 고객 여러분께 더 가깝게 다가갑니다",
     "hoid.channel1.title": "홈쇼핑",
     "hoid.channel1.description": "홈쇼핑 채널을 통한 직접 판매",
     "hoid.channel2.title": "스마트스토어",
@@ -422,76 +469,96 @@ const translations = {
     "hoid.channel4.title": "오프라인 매장",
     "hoid.channel4.description": "전국 가전 매장 및 백화점",
     "hoid.cta.title": "깨끗한 공기, 새로운 일상",
-    "hoid.cta.description": "HOID와 함께 건강하고 쾌적한 실내 환경을 만들어보세요",
+    "hoid.cta.description":
+      "HOID와 함께 건강하고 쾌적한 실내 환경을 만들어보세요",
     "hoid.cta.button": "문의하기",
 
     // Asran Brand Page
     "asran.hero.tagline": "독일 기술과 합리적 가격을 모두 갖춘 냄비",
-    "asran.hero.description": "SUS410 스테인리스 스틸과 3중 바닥구조로 뛰어난 열전도율과 내구성을 자랑합니다. 인덕션과 가스 겸용으로 어떤 주방환경에서도 완벽하게 사용 가능한 프리미엄 냄비입니다.",
+    "asran.hero.description":
+      "SUS410 스테인리스 스틸과 3중 바닥구조로 뛰어난 열전도율과 내구성을 자랑합니다. 인덕션과 가스 겸용으로 어떤 주방환경에서도 완벽하게 사용 가능한 프리미엄 냄비입니다.",
     "asran.hero.cta": "ASRAN 홈페이지 가기",
     "asran.features.title": "ASRAN만의 특별한 기술",
-    "asran.features.subtitle": "독일의 정밀한 기술력과 한국의 실용성이 만나 탄생한 프리미엄 주방용품",
+    "asran.features.subtitle":
+      "독일의 정밀한 기술력과 한국의 실용성이 만나 탄생한 프리미엄 주방용품",
 
     // Medifeed Brand Page
     "medifeed.hero.title": "매일을 지키는 작은 습관",
-    "medifeed.hero.description": "잇몸과 눈 건강을 중심으로 한 기능성 영양제 브랜드로, 실용성과 안전성을 바탕으로 누구나 쉽게 선택할 수 있는 건강 솔루션을 제공합니다.",
+    "medifeed.hero.description":
+      "잇몸과 눈 건강을 중심으로 한 기능성 영양제 브랜드로, 실용성과 안전성을 바탕으로 누구나 쉽게 선택할 수 있는 건강 솔루션을 제공합니다.",
     "medifeed.features.title": "전문화된 건강 솔루션",
-    "medifeed.features.subtitle": "과학적 연구를 바탕으로 개발된 특화 영양제로 일상의 건강을 책임집니다",
+    "medifeed.features.subtitle":
+      "과학적 연구를 바탕으로 개발된 특화 영양제로 일상의 건강을 책임집니다",
     "medifeed.category1.title": "잇몸 건강 전문",
-    "medifeed.category1.description": "치주질환 예방과 잇몸 건강 유지를 위한 전문 영양제",
+    "medifeed.category1.description":
+      "치주질환 예방과 잇몸 건강 유지를 위한 전문 영양제",
     "medifeed.category1.ingredient1": "코엔자임 Q10",
     "medifeed.category1.ingredient2": "비타민 C 복합체",
     "medifeed.category1.ingredient3": "아연 & 셀레늄",
     "medifeed.category1.ingredient4": "GMP 인증",
     "medifeed.category2.title": "눈 건강 전문",
-    "medifeed.category2.description": "디지털 시대 눈의 피로와 시력 보호를 위한 기능성 영양제",
+    "medifeed.category2.description":
+      "디지털 시대 눈의 피로와 시력 보호를 위한 기능성 영양제",
     "medifeed.category2.ingredient1": "루테인 & 지아잔틴",
     "medifeed.category2.ingredient2": "빌베리 추출물",
     "medifeed.category2.ingredient3": "오메가-3 지방산",
     "medifeed.category2.ingredient4": "블루라이트 차단",
     "medifeed.philosophy.title": "건강한 일상을 만드는",
-    "medifeed.philosophy.subtitle": "과학적 근거와 품질에 대한 확고한 신념으로 믿을 수 있는 건강 솔루션을 제공합니다",
+    "medifeed.philosophy.subtitle":
+      "과학적 근거와 품질에 대한 확고한 신념으로 믿을 수 있는 건강 솔루션을 제공합니다",
     "medifeed.value1.title": "안전성 우선",
-    "medifeed.value1.description": "엄격한 품질 관리와 GMP 인증을 통해 안전하고 신뢰할 수 있는 제품만을 제공합니다.",
+    "medifeed.value1.description":
+      "엄격한 품질 관리와 GMP 인증을 통해 안전하고 신뢰할 수 있는 제품만을 제공합니다.",
     "medifeed.value2.title": "실용적 접근",
-    "medifeed.value2.description": "바쁜 현대인의 라이프스타일에 맞춰 간편하게 섭취할 수 있는 형태로 개발합니다.",
+    "medifeed.value2.description":
+      "바쁜 현대인의 라이프스타일에 맞춰 간편하게 섭취할 수 있는 형태로 개발합니다.",
     "medifeed.value3.title": "합리적 가격",
-    "medifeed.value3.description": "누구나 부담 없이 구매할 수 있는 합리적인 가격으로 건강한 습관을 만들어갑니다.",
+    "medifeed.value3.description":
+      "누구나 부담 없이 구매할 수 있는 합리적인 가격으로 건강한 습관을 만들어갑니다.",
     "medifeed.cta.title": "건강한 하루,",
     "medifeed.cta.subtitle": "작은 습관에서 시작",
-    "medifeed.cta.description": "MEDIFEED와 함께 일상 속 작은 변화로 더 나은 건강을 만들어보세요",
+    "medifeed.cta.description":
+      "MEDIFEED와 함께 일상 속 작은 변화로 더 나은 건강을 만들어보세요",
     "medifeed.cta.button": "상담 신청하기",
 
     // LaCeras Brand Page
     "laceras.hero.title": "전통과 모던이 만나는",
     "laceras.hero.subtitle": "프렌치 럭셔리",
-    "laceras.hero.description": "프랑스의 장인정신과 현대적 세련미를 결합한 럭셔리 캐리어 브랜드입니다. 비즈니스부터 럭셔리 여행까지 완벽한 트래블 솔루션을 제안합니다.",
+    "laceras.hero.description":
+      "프랑스의 장인정신과 현대적 세련미를 결합한 럭셔리 캐리어 브랜드입니다. 비즈니스부터 럭셔리 여행까지 완벽한 트래블 솔루션을 제안합니다.",
     "laceras.hero.cta": "La Ceras 홈페이지 가기",
     "laceras.features.title": "프렌치 크래프트맨십",
-    "laceras.features.subtitle": "정교한 마감과 균형 잡힌 디자인으로 완성된 프리미엄 럭셔리 트래블 경험",
+    "laceras.features.subtitle":
+      "정교한 마감과 균형 잡힌 디자인으로 완성된 프리미엄 럭셔리 트래블 경험",
     "laceras.feature1.title": "폴리카보네이트 하드셸",
-    "laceras.feature1.description": "충격에 강하고 가벼운 프리미엄 소재로 소중한 짐을 안전하게 보호",
+    "laceras.feature1.description":
+      "충격에 강하고 가벼운 프리미엄 소재로 소중한 짐을 안전하게 보호",
     "laceras.feature2.title": "TSA 승인 락",
-    "laceras.feature2.description": "국제공항 보안검색대 통과 시 안전하고 편리한 TSA 승인 보안 시스템",
+    "laceras.feature2.description":
+      "국제공항 보안검색대 통과 시 안전하고 편리한 TSA 승인 보안 시스템",
     "laceras.feature3.title": "360° 듀얼 휠",
-    "laceras.feature3.description": "어떤 방향으로든 부드럽고 조용한 이동이 가능한 프리미엄 휠 시스템",
+    "laceras.feature3.description":
+      "어떤 방향으로든 부드럽고 조용한 이동이 가능한 프리미엄 휠 시스템",
     "laceras.heritage.title": "프랑스 장인 정신의",
     "laceras.heritage.subtitle": "70년 전통",
     "laceras.heritage.heading": "세대를 넘나드는 크래프트맨십",
-    "laceras.heritage.description": "1950년부터 시작된 La Ceras의 여정은 프랑스 전통 장인정신과 현대적 혁신이 만나는 지점에서 계속되고 있습니다. 세심한 디테일과 완벽한 마감으로 럭셔리 트래블의 새로운 기준을 제시합니다.",
+    "laceras.heritage.description":
+      "1950년부터 시작된 La Ceras의 여정은 프랑스 전통 장인정신과 현대적 혁신이 만나는 지점에서 계속되고 있습니다. 세심한 디테일과 완벽한 마감으로 럭셔리 트래블의 새로운 기준을 제시합니다.",
     "laceras.heritage.point1": "프랑스 전통 가죽공예 기법 적용",
     "laceras.heritage.point2": "유럽 프리미엄 소재 엄선 사용",
     "laceras.heritage.point3": "수작업 마감과 품질 검수",
     "laceras.travel.title": "비즈니스부터 럭셔리까지",
     "laceras.travel.subtitle": "완벽한 트래블 솔루션",
     "laceras.travel.heading": "모든 여행의 순간을 특별하게",
-    "laceras.travel.description": "La Ceras는 단순한 캐리어가 아닌 여행의 파트너입니다. 비즈니스 출장부터 로맨틱한 허니문, 가족 여행까지 모든 순간을 더욱 세련되고 편안하게 만들어드립니다.",
+    "laceras.travel.description":
+      "La Ceras는 단순한 캐리어가 아닌 여행 �� 파hi�너입니다. 비즈니스 출장부터 로맨틱한 허니문, 가족 여행까지 모든 순간을 더욱 세련되고 편안하게 만들어드립니다.",
     "laceras.travel.size": "사이즈 옵션",
     "laceras.travel.warranty": "년 보증",
     "laceras.travel.stores": "글로벌 매장",
     "laceras.travel.rating": "고객 만족도",
     "laceras.collection.title": "모든 여행 스타일에 맞는",
-    "laceras.collection.subtitle": "다양한 컬렉션으로 여행자의 취향과 필요에 완벽하게 부응합니다",
+    "laceras.collection.subtitle":
+      "다양한 컬렉션으로 여행자의 취향과 필요에 완벽하게 부응합니다",
     "laceras.collection1.title": "캐리온",
     "laceras.collection1.description": "기내 반입 가능한 컴팩트 사이즈",
     "laceras.collection2.title": "하드셸 캐리어",
@@ -500,38 +567,47 @@ const translations = {
     "laceras.collection3.description": "장기간 여행을 위한 라지 사이즈",
     "laceras.cta.title": "La Ceras와 함께하는",
     "laceras.cta.subtitle": "럭셔리 트래블",
-    "laceras.cta.description": "프랑스 장인정신으로 완성된 프리미엄 캐리어로 당신의 여행을 더욱 특별하게 만들어보세요",
+    "laceras.cta.description":
+      "프랑스 장인정신으로 완성된 프리미엄 캐리어로 당신의 여행을 더욱 특별하게 만들어보세요",
 
     // Carvella Brand Page
     "carvella.hero.title": "이탈리아 장인의 정밀함",
     "carvella.hero.subtitle": "당신의 주방으로",
-    "carvella.hero.description": "이탈리아 전통 장인정신으로 완성한 프리미엄 쿠킹웨어 브랜드입니다. 고급 스테인리스와 다층 구조로 뛰어난 열전도와 내구성을 자랑합니다.",
+    "carvella.hero.description":
+      "이탈리아 전통 장인정신으로 완성한 프리미엄 쿠킹웨어 브랜드입니다. 고급 스테인리스와 다층 구조로 뛰어난 열전도와 내구성을 자랑합니다.",
     "carvella.hero.cta": "Carvella 홈페이지 가기",
     "carvella.features.title": "이탈리아 장인정신",
-    "carvella.features.subtitle": "정밀한 기술과 전통 크래프트맨십이 만나 완성된 프리미엄 쿠킹웨어",
+    "carvella.features.subtitle":
+      "정밀한 기술과 전통 크래프트맨십이 만나 완성된 프리미엄 쿠킹웨어",
     "carvella.feature1.title": "프리미엄 스테인리스",
-    "carvella.feature1.description": "최고급 스테인리스 스틸 소재로 내구성과 위생성을 동시에 보장",
+    "carvella.feature1.description":
+      "최고급 스테인리스 스틸 소재로 내구성과 위생성을 동시에 보장",
     "carvella.feature2.title": "다층 바닥구조",
-    "carvella.feature2.description": "균등한 열전도와 열보존을 위한 특수 다층 바닥 설계 시스템",
+    "carvella.feature2.description":
+      "균등한 열전도와 열보존을 위한 특수 다층 바닥 설계 시스템",
     "carvella.feature3.title": "멀티 호환 열원",
-    "carvella.feature3.description": "인덕션부터 가스레인지까지 모든 열원에서 완벽한 성능 발휘",
+    "carvella.feature3.description":
+      "인덕션부터 가스레인지까지 모든 열원에서 완벽한 성능 발휘",
     "carvella.heritage.title": "이탈리아 전통의",
     "carvella.heritage.subtitle": "아르티지아나토",
     "carvella.heritage.heading": "정밀함과 열정이 만나는 곳",
-    "carvella.heritage.description": "이탈리아 북부 롬바르디아 지역의 전통 금속공예 기술을 바탕으로 탄생한 Carvella는 장인들의 정밀함과 요리에 대한 열정을 그대로 담아냅니다. 매 제품마다 이탈리아 장인의 손길이 닿아 완성되는 진정한 아르티지아나토입니다.",
+    "carvella.heritage.description":
+      "이탈리아 북부 롬바르디아 지역의 전통 금속공예 기술을 바탕으로 탄생한 Carvella는 장인들의 정밀함과 요리에 대한 열정을 그대로 담아냅니다. 매 제품마다 이탈리아 장인의 손길이 닿아 완성되는 진정한 아르티지아나토입니다.",
     "carvella.heritage.point1": "이탈리아 전통 금속공예 기법",
     "carvella.heritage.point2": "장인 수작업 마감 처리",
     "carvella.heritage.point3": "유럽 인증 프리미엄 소재",
     "carvella.cooking.title": "프로 셰프부터 요리 애호가까지",
     "carvella.cooking.subtitle": "모든 주방의 파트너",
     "carvella.cooking.heading": "완벽한 요리를 위한 완벽한 도구",
-    "carvella.cooking.description": "Carvella는 단순한 조리도구가 아닌 요리의 예술을 완성하는 파트너입니다. 프로 셰프의 엄격한 기준을 충족하면서도 가정에서 쉽게 사용할 수 있도록 설계되어 모든 요리 애호가들의 꿈을 현실로 만들어드립니다.",
+    "carvella.cooking.description":
+      "Carvella는 단순한 조리도구가 아닌 요리의 예술을 완성하는 파트너입니다. 프로 셰프의 엄격한 기준을 충족하면서도 가정에서 쉽게 사용할 수 있도록 설계되어 모든 요리 애호가들의 꿈을 현실로 만들어드립니다.",
     "carvella.cooking.lineup": "제품 라인업",
     "carvella.cooking.warranty": "년 품질보증",
     "carvella.cooking.recommendation": "셰프 추천율",
     "carvella.cooking.satisfaction": "고객 만족도",
     "carvella.collection.title": "모든 요리를 위한",
-    "carvella.collection.subtitle": "다양한 제품 라인으로 모든 요리 스타일과 필요에 완벽하게 부응합니다",
+    "carvella.collection.subtitle":
+      "다양한 제품 라인으로 모든 요리 스타일과 필요에 완벽하게 부응합니다",
     "carvella.collection1.title": "프리미엄 냄비",
     "carvella.collection1.description": "다양한 사이즈와 용도별 냄비 컬렉션",
     "carvella.collection2.title": "프라이팬",
@@ -541,41 +617,99 @@ const translations = {
     "carvella.collection4.title": "세트 상품",
     "carvella.collection4.description": "완벽한 주방을 위한 종합 세트",
     "carvella.testimonial.title": "전문가들의 선택",
-    "carvella.testimonial1": "Carvella의 냄비는 열전도가 완벽해서 요리가 훨씬 쉬워졌습니다. 프로 주방에서도 손색없는 품질입니다.",
+    "carvella.testimonial1":
+      "Carvella의 냄비는 열전도가 완벽해서 요리가 훨씬 쉬워졌습니다. 프로 주방에서도 손색없는 품질입니다.",
     "carvella.testimonial1.author": "이탈리안 레스토랑 셰프",
-    "carvella.testimonial2": "15년 넘게 사용해도 변함없는 품질과 성능. 진정한 장인정신을 느낄 수 있는 제품입니다.",
+    "carvella.testimonial2":
+      "15년 넘게 사용해도 변함없는 품질과 성능. 진정한 장인정신을 느낄 수 있는 제품입니다.",
     "carvella.testimonial2.author": "요리 강사",
-    "carvella.testimonial3": "인덕션에서 가스레인지까지 어떤 열원에서도 완벽한 성능을 보여줍니다. 가정용으로도 최고의 선택이에요.",
+    "carvella.testimonial3":
+      "인덕션에서 가스레인지까지 어떤 열원에서도 완벽한 성능을 보여줍니다. 가정용으로도 최고의 선택이에요.",
     "carvella.testimonial3.author": "요리 블로거",
     "carvella.cta.title": "Carvella와 함께하는",
     "carvella.cta.subtitle": "프리미엄 쿠킹",
-    "carvella.cta.description": "이탈리아 장인정신으로 완성된 프리미엄 쿠킹웨어로 당신의 요리를 더욱 특별하게 만들어보세요",
+    "carvella.cta.description":
+      "이탈리아 장인정신으로 완성된 프리미엄 쿠킹웨어로 당신의 요리를 더욱 특별하게 만들어보세요",
 
     // InYourHeart Brand Page
     "inyourheart.hero.title": "피부에 감성을 입히다",
-    "inyourheart.hero.description": "클린뷰티 철학과 감성적인 패키지 디자인으로 글로벌 K-뷰티 시장을 선도하는 프리미엄 스킨케어 브랜드입니다.",
+    "inyourheart.hero.description":
+      "클린뷰티 철학과 감성적인 패키지 디자인으로 글로벌 K-뷰티 시장을 선도하는 프리미엄 스킨케어 브랜드입니다.",
     "inyourheart.values.title": "감성이 담긴 뷰티 철학",
-    "inyourheart.values.subtitle": "피부에 순하고 마음까지 따뜻하게 만드는 감성 스킨케어",
+    "inyourheart.values.subtitle":
+      "피부에 순하고 마음까지 따뜻하게 만드는 감성 스킨케어",
+    "inyourheart.category1.title": "클린 포뮬러",
+    "inyourheart.category1.description":
+      "피부에 순하고 환경에 친화적인 성분만을 사용하여 안전하고 지속가능한 뷰티를 추구합니다.",
+    "inyourheart.category2.title": "감성 디자인",
+    "inyourheart.category2.description":
+      "제품 사용 순간부터 특별한 경험이 될 수 있도록 감성적이고 아름다운 패키지를 디자인합니다.",
+    "inyourheart.category3.title": "글로벌 K-뷰티",
+    "inyourheart.category3.description":
+      "한국의 우수한 뷰티 기술과 혁신을 전 세계에 알리며 K-뷰티의 가치를 높여갑니다.",
+    "inyourheart.cta.title": "당신의 마음에 닿는",
+    "inyourheart.cta.subtitle": "아름다운 감성",
+    "inyourheart.cta.description":
+      "IN YOUR HEART와 함께 특별한 뷰티 여정을 시작해보세요",
+    "inyourheart.cta.button": "문의하기",
 
     // Sangsaeng Brand Page
     "sangsaeng.hero.title": "한국 의료를 세계로 연결하다",
-    "sangsaeng.hero.description": "메디컬 투어리즘부터 글로벌 헬스케어 플랫폼까지, 한국의 우수한 의료 서비스를 전 세계에 연결하는 종합 의료 플랫폼입니다.",
+    "sangsaeng.hero.description":
+      "메디컬 투어리즘부터 글로벌 헬스케어 플랫폼까지, 한국의 우수한 의료 서비스를 전 세계에 연결하는 종합 의료 플랫폼입니다.",
     "sangsaeng.hero.cta": "상생 홈페이지 가기",
     "sangsaeng.services.title": "글로벌 헬스케어 생태계",
-    "sangsaeng.services.subtitle": "의료 서비스부터 브랜딩까지, 통합된 헬스케어 솔루션을 제공합니다",
+    "sangsaeng.services.subtitle":
+      "의료 서비스부터 브랜딩까지, 통합된 헬스케어 솔루션을 제공합니다",
+    "sangsaeng.medical.title": "상생 메디컬",
+    "sangsaeng.medical.subtitle": "Sangsaeng Medical",
+    "sangsaeng.medical.description":
+      "실생활 기반 건강 솔루션과 의료 서비스를 제공하는 헬스케어 브랜드",
+    "sangsaeng.medical.benefit1": "맞춤형 건강 검진 패키지",
+    "sangsaeng.medical.benefit2": "전문의 상담 서비스",
+    "sangsaeng.medical.benefit3": "만성질환 관리 프로그램",
+    "sangsaeng.medical.benefit4": "예방 의학 솔루션",
+
+    "sangsaeng.platform.title": "상생 플랫폼",
+    "sangsaeng.platform.subtitle": "Sangsaeng Platform",
+    "sangsaeng.platform.description":
+      "의료부터 관광까지 손안의 다국어 의료 플랫폼 앱",
+    "sangsaeng.platform.benefit1": "다국어 의료 통역 서비스",
+    "sangsaeng.platform.benefit2": "병원 예약 및 관리",
+    "sangsaeng.platform.benefit3": "의료 관광 패키지",
+    "sangsaeng.platform.benefit4": "24시간 응급 서포트",
+
+    "sangsaeng.branding.title": "상생 브랜딩",
+    "sangsaeng.branding.subtitle": "Sangsaeng Branding",
+    "sangsaeng.branding.description":
+      "콘텐츠, 메타광고, 글로벌 인플루언서 연계 브랜딩 조직",
+    "sangsaeng.branding.benefit1": "의료 콘텐츠 마케팅",
+    "sangsaeng.branding.benefit2": "다국어 브랜드 캠페인",
+    "sangsaeng.branding.benefit3": "글로벌 인플루언서 협업",
+    "sangsaeng.branding.benefit4": "디지털 마케팅 솔루션",
+
+    "sangsaeng.cta.title1": "세계와 연결되는",
+    "sangsaeng.cta.title2": "한국 의료의 미래",
+    "sangsaeng.cta.description":
+      "상생과 함께 안전하고 신뢰할 수 있는 의료 서비스를 경험해보세요",
+    "sangsaeng.cta.button": "문의하기",
 
     // Hoid Details
     "hoid.feature1.title": "3-in-1 기술",
-    "hoid.feature1.description": "공기청정, 제습, 살균 기능을 하나로 통합한 혁신적인 올인원 솔루션",
+    "hoid.feature1.description":
+      "공기청정, 제습, 살균 기능을 하나로 통합한 혁신적인 올인원 솔루션",
     "hoid.feature2.title": "HEPA14 필터",
-    "hoid.feature2.description": "99.995% 초미세먼지 제거 효율을 자랑하는 의료급 고성능 필터 시스템",
+    "hoid.feature2.description":
+      "99.995% 초미세먼지 제거 효율을 자랑하는 의료급 고성능 필터 시스템",
     "hoid.feature3.title": "미니멀 디자인",
-    "hoid.feature3.description": "어떤 공간에도 자연스럽게 어울리는 세련되고 모던한 디자인 철학",
+    "hoid.feature3.description":
+      "어떤 공간에도 자연스럽게 어울리는 세련되고 모던한 디자인 철학",
     "hoid.partnership.title": "글로벌 확장의",
     "hoid.partnership.subtitle": "새로운 전환점",
     "hoid.partnership.date": "2025년 8월 16일",
     "hoid.partnership.mou": "중국 초대형 공기청정기 제조사와 MOU 체결",
-    "hoid.partnership.description": "HOID는 중국 최대 공기청정기 제조업체와 글로벌 유통 및 기술 협력 MOU를 체결했습니다. 이를 통해 아시아 전역으로 사업 영역을 확장하고, 더 많은 고객에게 깨끗한 공기를 제공할 예정입니다.",
+    "hoid.partnership.description":
+      "HOID는 중국 최대 공기청정기 제조업체와 글로벌 유통 및 기술 협력 MOU를 체결했습니다. 이를 통해 아시아 전역으로 사업 영역을 확장하고, 더 많은 고객에게 깨끗한 공기를 제공할 예정입니다.",
     "hoid.partnership.point1": "아시아 전역 시장 진출",
     "hoid.partnership.point2": "기술 협력 및 공동 개발",
     "hoid.partnership.point3": "글로벌 유통망 확대",
@@ -614,18 +748,24 @@ const translations = {
     "asran.cooking3.title": "건강한 조리",
     "asran.cooking3.description": "영양소 보존하는 조리법",
     "asran.reviews.title": "실제 구매고객들의 생생한 후기",
-    "asran.review1": "가성비 너무 혜자네요! 이 가격에 이런 품질의 냄비를 만날 수 있다니 정말 만족스럽습니다.",
+    "asran.review1":
+      "가성비 너무 혜자네요! 이 가격에 이런 품질의 냄비를 만날 수 있다니 정말 만족스럽습니다.",
     "asran.review1.author": "김○○님",
-    "asran.review2": "냄비의 무게에 놀랐다. 엄청 가볍다! 가벼운 무게 덕분에 손목이 아프지 않고 편하게 요리할 수 있어요.",
+    "asran.review2":
+      "냄비의 무게에 놀랐다. 엄청 가볍다! 가벼운 무게 덕분에 손목이 아프지 않고 편하게 요리할 수 있어요.",
     "asran.review2.author": "박○○님",
-    "asran.review3": "이유식 만들 때 편수냄비가 너무 유용하게 사용되고 있어요. 열 전도도 빠르고 청소도 쉬워서 좋습니다.",
+    "asran.review3":
+      "이유식 만들 때 편수냄비가 너무 유용하게 사용되고 있어요. 열 전도도 빠르고 청소도 쉬워서 좋습니다.",
     "asran.review3.author": "이○○님",
     "asran.benefit1.title": "요리가 즐거워집니다",
-    "asran.benefit1.description": "균등한 열 전도로 실패 없는 요리가 가능하여 요리에 대한 자신감이 생깁니다.",
+    "asran.benefit1.description":
+      "균등한 열 전도로 실패 없는 요리가 가능하여 요리에 대한 자신감이 생깁니다.",
     "asran.benefit2.title": "요리 시간이 단축됩니다",
-    "asran.benefit2.description": "빠른 가열 시간과 효율적인 열 분산으로 요리 시간을 대폭 줄일 수 있습니다.",
+    "asran.benefit2.description":
+      "빠른 가열 시간과 효율적인 열 분산으로 요리 시간을 대폭 줄일 수 있습니다.",
     "asran.benefit3.title": "주방이 더 아름다워집니다",
-    "asran.benefit3.description": "고급스러운 미러 마감과 세련된 디자인으로 주방 인테리어가 한층 업그레이드됩니다.",
+    "asran.benefit3.description":
+      "고급스러운 미러 마감과 세련된 디자인으로 주방 인테리어가 한층 업그레이드됩니다.",
     "asran.cta.title": "독일 기술력과 만나는",
     "asran.cta.subtitle": "프리미엄 요리 경험",
     "asran.cta.description": "ASRAN과 함께 새로운 요리의 세계를 경험해보세요",
@@ -645,6 +785,40 @@ const translations = {
     "nav.brands": "Brands",
     "nav.news": "News",
     "nav.contact": "Contact",
+
+    // Footer
+    "footer.tagline":
+      "Connecting the value of Korea to the world — from distribution to branding",
+    "footer.about":
+      "A full-service company entering the global market through distribution, private-label manufacturing, marketing, and a medical tourism platform.",
+    "footer.sections.services": "Services",
+    "footer.sections.brands": "Brands",
+    "footer.sections.company": "Company",
+
+    "footer.services.distribution": "Distribution / Import–Export Brokerage",
+    "footer.services.manufacturing": "Private Label Manufacturing",
+    "footer.services.marketing": "Global Marketing",
+    "footer.services.medical": "Medical Tourism Platform",
+    "footer.services.app": "App Development",
+
+    "footer.brands.hoid": "Hoid",
+    "footer.brands.asran": "ASRAN",
+    "footer.brands.laceras": "La Ceras",
+    "footer.brands.carvella": "Carvella",
+    "footer.brands.medifeed": "Medifeed",
+    "footer.brands.inyourheart": "InYourHeart",
+    "footer.brands.sangsaeng": "Sangsaeng",
+
+    "footer.company.about": "About",
+    "footer.company.news": "News",
+    "footer.company.contact": "Contact",
+
+    "footer.bottom.copyright": "© 2024 FeedBack Corp. All rights reserved.",
+    "footer.bottom.bizinfo":
+      "Business Reg. No.: 296-87-03628 | CEOs: Hae-min Song, Sung-hyun Jeong",
+    "footer.bottom.privacy": "Privacy Policy",
+    "footer.bottom.terms": "Terms of Use",
+    "footer.bottom.cookies": "Cookie Policy",
 
     // Hero Section
     "hero.title": "Distribution Platform Connecting",
@@ -763,6 +937,7 @@ const translations = {
     // Common UI
     "ui.view_brand_detail": "View Brand Details",
     "ui.visit_website": "Visit Brand Website",
+    "ui.learn_more": "Learn more",
 
     // B2B2C Section
     "b2b2c.header.title": "From Manufacturers to Consumers",
@@ -873,57 +1048,65 @@ const translations = {
 
     // Contact Page
     "contact.title": "Contact Us",
-    "contact.subtitle":
-      "If you have any questions, please feel free to contact us anytime.",
-    "본사 주소": "Head Office",
-    "인천 연수구 송도과학로 80, 송도 AIT센터 1301호, 1302호":
+    "contact.subtitle.line1": "Create new business opportunities",
+    "contact.subtitle.line2": "together with FeedBack.",
+    "contact.section.contact": "Contact",
+    "contact.section.departments": "Departments",
+    "contact.section.social": "Social Media",
+
+    "contact.info.address.title": "Head Office",
+    "contact.info.address.content":
       "80 Songdogwahak-ro, Yeonsu-gu, Incheon, Songdo AIT Center 1301, 1302",
-    대표전화: "Main Phone",
-    이메일: "Email",
-    운영시간: "Business Hours",
-    "평일 10:00 - 19:00, 주말 및 공휴일 휴무":
+    "contact.info.phone.title": "Main Phone",
+    "contact.info.email.title": "Email",
+    "contact.info.hours.title": "Business Hours",
+    "contact.info.hours.content":
       "Weekdays 10:00 - 19:00, Weekends and Holidays Closed",
-    경영지원부: "Management Support",
-    연락처: "Contact",
-    관련부서: "Departments",
-    소셜미디어: "Social Media",
-    "문의 남기기": "Leave an Inquiry",
+
+    "contact.dept.management": "Management Support",
+
+    "contact.form.title": "Leave an Inquiry",
     "contact.form.name": "Name",
     "contact.form.name.placeholder": "Please enter your name",
+    "contact.form.company": "Company",
+    "contact.form.company.placeholder": "Please enter your company name",
     "contact.form.email": "Email",
     "contact.form.email.placeholder": "your@email.com",
     "contact.form.phone": "Phone",
     "contact.form.phone.placeholder": "+82-10-0000-0000",
-    "contact.form.company": "Company",
-    "contact.form.company.placeholder": "Please enter your company name",
-    "contact.form.service": "Service of Interest",
-    "contact.form.service.placeholder": "Please select a service",
-    "contact.form.service.medical": "Medical Tourism Brokerage",
-    "contact.form.service.app": "Multilingual App Development",
-    "contact.form.service.brand": "Brand Distribution",
-    "contact.form.service.consulting": "Marketing Consulting",
+    "contact.form.inquiry_type": "Inquiry Type",
+    "contact.form.inquiry_type.placeholder": "Select inquiry type",
+    "contact.form.inquiry_type.business": "Business Inquiry",
+    "contact.form.inquiry_type.brand": "Brand Inquiry",
+    "contact.form.inquiry_type.partner": "Partnership Proposal",
     "contact.form.message": "Message",
-    "contact.form.message.placeholder":
-      "Please write your inquiry in detail...",
+    "contact.form.message.placeholder": "Please enter your message",
     "contact.form.privacy":
       "I agree to the collection and use of personal information.",
-    "contact.form.privacy.link": "View Details",
-    "contact.form.privacy.error.title": "Consent Required",
+    "contact.form.privacy.link": "View policy",
+    "contact.form.privacy.error.title": "Privacy Consent Required",
     "contact.form.privacy.error.description":
-      "Please agree to the collection and use of personal information.",
-    "contact.form.submit": "Send Inquiry",
-    "발송 중...": "Sending...",
-    "메일 발송 성공": "Email Sent Successfully",
-    "문의 유형": "Inquiry Type",
-    "사업 문의": "Business Inquiry",
-    "브랜드 문의": "Brand Inquiry",
-    "파트너 제안": "Partnership Proposal",
-    "contact.map.title": "Directions",
-    "contact.info.address": "Address",
-    "contact.info.phone": "Phone",
-    "contact.info.email": "Email",
-    "contact.info.hours": "Business Hours",
-    "contact.info.hours.value": "Mon-Fri 09:00-18:00",
+      "Please agree to the privacy policy to proceed.",
+    "contact.form.submit": "Send Message",
+    "contact.form.sending": "Sending...",
+
+    "contact.errors.required.title": "Input Error",
+    "contact.errors.required.description":
+      "Name, Email, and Message are required.",
+
+    "contact.toast.success.title": "Email Sent",
+    "contact.toast.success.description":
+      "Your inquiry has been sent successfully. We will get back to you soon.",
+    "contact.toast.gmail.title": "Gmail Authorization Required",
+    "contact.toast.gmail.description": "Gmail API authorization is required.",
+    "contact.toast.gmail.link": "Click here to authorize Gmail",
+    "contact.toast.unknown": "An unknown error occurred.",
+    "contact.toast.send_error_console": "Email send error:",
+    "contact.toast.fail.title": "Send Failed",
+    "contact.toast.fail.description":
+      "An error occurred while sending email. Please try again later.",
+
+    "contact.map.title": "Location",
 
     // About Page
     "about.story.main":
@@ -1038,162 +1221,258 @@ const translations = {
 
     // Hoid Brand Page
     "hoid.hero.title": "Design that Changes Even the Air",
-    "hoid.hero.description": "A smart home appliance brand that revolutionizes everyday air quality by combining minimalist design with cutting-edge technology.",
+    "hoid.hero.description":
+      "A smart home appliance brand that revolutionizes everyday air quality by combining minimalist design with cutting-edge technology.",
     "hoid.hero.cta": "Visit Hoid Website",
     "hoid.features.title": "Innovative Technology",
-    "hoid.features.subtitle": "Experience a completely new air purification with cutting-edge technology hidden within minimalist design",
+    "hoid.features.subtitle":
+      "Experience a completely new air purification with cutting-edge technology hidden within minimalist design",
 
     // Asran Brand Page
-    "asran.hero.tagline": "Pots with Both German Technology and Reasonable Price",
-    "asran.hero.description": "Boasting excellent heat conductivity and durability with SUS410 stainless steel and triple-layer bottom structure. A premium pot that can be used perfectly in any kitchen environment, compatible with both induction and gas.",
+    "asran.hero.tagline":
+      "Pots with Both German Technology and Reasonable Price",
+    "asran.hero.description":
+      "Boasting excellent heat conductivity and durability with SUS410 stainless steel and triple-layer bottom structure. A premium pot that can be used perfectly in any kitchen environment, compatible with both induction and gas.",
     "asran.hero.cta": "Visit ASRAN Website",
     "asran.features.title": "ASRAN's Special Technology",
-    "asran.features.subtitle": "Premium kitchenware born from the meeting of Germany's precision technology and Korea's practicality",
+    "asran.features.subtitle":
+      "Premium kitchenware born from the meeting of Germany's precision technology and Korea's practicality",
 
     // Medifeed Brand Page
     "medifeed.hero.title": "Small Habits that Protect Every Day",
-    "medifeed.hero.description": "A functional nutritional supplement brand focused on gum and eye health, providing health solutions that anyone can easily choose based on practicality and safety.",
+    "medifeed.hero.description":
+      "A functional nutritional supplement brand focused on gum and eye health, providing health solutions that anyone can easily choose based on practicality and safety.",
     "medifeed.features.title": "Specialized Health Solutions",
-    "medifeed.features.subtitle": "Taking responsibility for everyday health with specialized supplements developed based on scientific research",
+    "medifeed.features.subtitle":
+      "Taking responsibility for everyday health with specialized supplements developed based on scientific research",
     "medifeed.category1.title": "Gum Health Specialist",
-    "medifeed.category1.description": "Professional supplements for preventing periodontal disease and maintaining gum health",
+    "medifeed.category1.description":
+      "Professional supplements for preventing periodontal disease and maintaining gum health",
     "medifeed.category1.ingredient1": "Coenzyme Q10",
     "medifeed.category1.ingredient2": "Vitamin C Complex",
     "medifeed.category1.ingredient3": "Zinc & Selenium",
     "medifeed.category1.ingredient4": "GMP Certified",
     "medifeed.category2.title": "Eye Health Specialist",
-    "medifeed.category2.description": "Functional supplements for digital age eye fatigue and vision protection",
+    "medifeed.category2.description":
+      "Functional supplements for digital age eye fatigue and vision protection",
     "medifeed.category2.ingredient1": "Lutein & Zeaxanthin",
     "medifeed.category2.ingredient2": "Bilberry Extract",
     "medifeed.category2.ingredient3": "Omega-3 Fatty Acids",
     "medifeed.category2.ingredient4": "Blue Light Protection",
     "medifeed.philosophy.title": "Creating a Healthy Daily Life",
-    "medifeed.philosophy.subtitle": "Providing reliable health solutions with firm beliefs in scientific evidence and quality",
+    "medifeed.philosophy.subtitle":
+      "Providing reliable health solutions with firm beliefs in scientific evidence and quality",
     "medifeed.value1.title": "Safety First",
-    "medifeed.value1.description": "We provide only safe and reliable products through strict quality control and GMP certification.",
+    "medifeed.value1.description":
+      "We provide only safe and reliable products through strict quality control and GMP certification.",
     "medifeed.value2.title": "Practical Approach",
-    "medifeed.value2.description": "Developed in a form that can be easily consumed to suit the busy modern lifestyle.",
+    "medifeed.value2.description":
+      "Developed in a form that can be easily consumed to suit the busy modern lifestyle.",
     "medifeed.value3.title": "Reasonable Price",
-    "medifeed.value3.description": "Creating healthy habits with reasonable prices that anyone can afford without burden.",
+    "medifeed.value3.description":
+      "Creating healthy habits with reasonable prices that anyone can afford without burden.",
     "medifeed.cta.title": "Healthy Day,",
     "medifeed.cta.subtitle": "Starts with Small Habits",
-    "medifeed.cta.description": "Create better health with small changes in daily life together with MEDIFEED",
+    "medifeed.cta.description":
+      "Create better health with small changes in daily life together with MEDIFEED",
     "medifeed.cta.button": "Request Consultation",
 
     // LaCeras Brand Page
     "laceras.hero.title": "Where Tradition Meets Modern",
     "laceras.hero.subtitle": "French Luxury",
-    "laceras.hero.description": "A luxury carrier brand combining French craftsmanship with modern sophistication. Proposing perfect travel solutions from business to luxury travel.",
+    "laceras.hero.description":
+      "A luxury carrier brand combining French craftsmanship with modern sophistication. Proposing perfect travel solutions from business to luxury travel.",
     "laceras.hero.cta": "Visit La Ceras Website",
     "laceras.features.title": "French Craftsmanship",
-    "laceras.features.subtitle": "Premium luxury travel experience completed with sophisticated finish and balanced design",
+    "laceras.features.subtitle":
+      "Premium luxury travel experience completed with sophisticated finish and balanced design",
     "laceras.feature1.title": "Polycarbonate Hardshell",
-    "laceras.feature1.description": "Safely protects your precious belongings with premium materials that are impact-resistant and lightweight",
+    "laceras.feature1.description":
+      "Safely protects your precious belongings with premium materials that are impact-resistant and lightweight",
     "laceras.feature2.title": "TSA Approved Lock",
-    "laceras.feature2.description": "Safe and convenient TSA approved security system for international airport security checkpoints",
+    "laceras.feature2.description":
+      "Safe and convenient TSA approved security system for international airport security checkpoints",
     "laceras.feature3.title": "360° Dual Wheel",
-    "laceras.feature3.description": "Premium wheel system enabling smooth and quiet movement in any direction",
+    "laceras.feature3.description":
+      "Premium wheel system enabling smooth and quiet movement in any direction",
     "laceras.heritage.title": "70-Year Tradition of",
     "laceras.heritage.subtitle": "French Craftsmanship",
     "laceras.heritage.heading": "Craftsmanship Across Generations",
-    "laceras.heritage.description": "La Ceras' journey, which began in 1950, continues at the intersection where French traditional craftsmanship meets modern innovation. We set new standards for luxury travel with meticulous details and perfect finishing.",
-    "laceras.heritage.point1": "Application of traditional French leathercraft techniques",
-    "laceras.heritage.point2": "Use of carefully selected European premium materials",
+    "laceras.heritage.description":
+      "La Ceras' journey, which began in 1950, continues at the intersection where French traditional craftsmanship meets modern innovation. We set new standards for luxury travel with meticulous details and perfect finishing.",
+    "laceras.heritage.point1":
+      "Application of traditional French leathercraft techniques",
+    "laceras.heritage.point2":
+      "Use of carefully selected European premium materials",
     "laceras.heritage.point3": "Handcrafted finishing and quality inspection",
     "laceras.travel.title": "From Business to Luxury",
     "laceras.travel.subtitle": "Perfect Travel Solution",
     "laceras.travel.heading": "Making Every Travel Moment Special",
-    "laceras.travel.description": "La Ceras is not just a carrier, but a travel partner. We make every moment more elegant and comfortable, from business trips to romantic honeymoons and family vacations.",
+    "laceras.travel.description":
+      "La Ceras is not just a carrier, but a travel partner. We make every moment more elegant and comfortable, from business trips to romantic honeymoons and family vacations.",
     "laceras.travel.size": "Size Options",
     "laceras.travel.warranty": "Year Warranty",
     "laceras.travel.stores": "Global Stores",
     "laceras.travel.rating": "Customer Satisfaction",
     "laceras.collection.title": "For Every Travel Style",
-    "laceras.collection.subtitle": "Various collections perfectly respond to travelers' tastes and needs",
+    "laceras.collection.subtitle":
+      "Various collections perfectly respond to travelers' tastes and needs",
     "laceras.collection1.title": "Carry-on",
-    "laceras.collection1.description": "Compact size suitable for cabin luggage",
+    "laceras.collection1.description":
+      "Compact size suitable for cabin luggage",
     "laceras.collection2.title": "Hardshell Carrier",
     "laceras.collection2.description": "Medium size for mid-range travel",
     "laceras.collection3.title": "Trunk",
     "laceras.collection3.description": "Large size for long-term travel",
     "laceras.cta.title": "Luxury Travel",
     "laceras.cta.subtitle": "with La Ceras",
-    "laceras.cta.description": "Make your journey even more special with premium carriers completed with French craftsmanship",
+    "laceras.cta.description":
+      "Make your journey even more special with premium carriers completed with French craftsmanship",
 
     // Carvella Brand Page
     "carvella.hero.title": "Italian Artisan Precision",
     "carvella.hero.subtitle": "To Your Kitchen",
-    "carvella.hero.description": "A premium cookware brand completed with traditional Italian craftsmanship. Boasting excellent heat conduction and durability with premium stainless steel and multi-layer structure.",
+    "carvella.hero.description":
+      "A premium cookware brand completed with traditional Italian craftsmanship. Boasting excellent heat conduction and durability with premium stainless steel and multi-layer structure.",
     "carvella.hero.cta": "Visit Carvella Website",
     "carvella.features.title": "Italian Craftsmanship",
-    "carvella.features.subtitle": "Premium cookware completed where precision technology meets traditional craftsmanship",
+    "carvella.features.subtitle":
+      "Premium cookware completed where precision technology meets traditional craftsmanship",
     "carvella.feature1.title": "Premium Stainless Steel",
-    "carvella.feature1.description": "Guarantees both durability and hygiene with the finest stainless steel material",
+    "carvella.feature1.description":
+      "Guarantees both durability and hygiene with the finest stainless steel material",
     "carvella.feature2.title": "Multi-Layer Bottom",
-    "carvella.feature2.description": "Special multi-layer bottom design system for even heat distribution and retention",
+    "carvella.feature2.description":
+      "Special multi-layer bottom design system for even heat distribution and retention",
     "carvella.feature3.title": "Multi-Compatible Heat Source",
-    "carvella.feature3.description": "Perfect performance on all heat sources from induction to gas range",
+    "carvella.feature3.description":
+      "Perfect performance on all heat sources from induction to gas range",
     "carvella.heritage.title": "Italian Traditional",
     "carvella.heritage.subtitle": "Artigianato",
     "carvella.heritage.heading": "Where Precision Meets Passion",
-    "carvella.heritage.description": "Born from the traditional metalworking techniques of the Lombardy region in northern Italy, Carvella captures the precision of artisans and their passion for cooking. Each product is completed with the touch of Italian artisans, embodying true artigianato.",
+    "carvella.heritage.description":
+      "Born from the traditional metalworking techniques of the Lombardy region in northern Italy, Carvella captures the precision of artisans and their passion for cooking. Each product is completed with the touch of Italian artisans, embodying true artigianato.",
     "carvella.heritage.point1": "Traditional Italian metalworking techniques",
     "carvella.heritage.point2": "Artisan handcrafted finishing",
     "carvella.heritage.point3": "European certified premium materials",
     "carvella.cooking.title": "From Professional Chefs to Cooking Enthusiasts",
     "carvella.cooking.subtitle": "Partner for Every Kitchen",
     "carvella.cooking.heading": "Perfect Tools for Perfect Cooking",
-    "carvella.cooking.description": "Carvella is not just cookware, but a partner that completes the art of cooking. Designed to meet the strict standards of professional chefs while being easy to use at home, we make every cooking enthusiast's dream a reality.",
+    "carvella.cooking.description":
+      "Carvella is not just cookware, but a partner that completes the art of cooking. Designed to meet the strict standards of professional chefs while being easy to use at home, we make every cooking enthusiast's dream a reality.",
     "carvella.cooking.lineup": "Product Lineup",
     "carvella.cooking.warranty": "Year Quality Warranty",
     "carvella.cooking.recommendation": "Chef Recommendation Rate",
     "carvella.cooking.satisfaction": "Customer Satisfaction",
     "carvella.collection.title": "For Every Dish",
-    "carvella.collection.subtitle": "Various product lines perfectly respond to all cooking styles and needs",
+    "carvella.collection.subtitle":
+      "Various product lines perfectly respond to all cooking styles and needs",
     "carvella.collection1.title": "Premium Pots",
-    "carvella.collection1.description": "Pot collection in various sizes and purposes",
+    "carvella.collection1.description":
+      "Pot collection in various sizes and purposes",
     "carvella.collection2.title": "Frying Pans",
-    "carvella.collection2.description": "Frying pan series for perfect heat conduction",
+    "carvella.collection2.description":
+      "Frying pan series for perfect heat conduction",
     "carvella.collection3.title": "Pressure Lids",
     "carvella.collection3.description": "Multi-purpose pressure lid system",
     "carvella.collection4.title": "Set Products",
-    "carvella.collection4.description": "Comprehensive set for the perfect kitchen",
+    "carvella.collection4.description":
+      "Comprehensive set for the perfect kitchen",
     "carvella.testimonial.title": "Chef's Choice",
-    "carvella.testimonial1": "Carvella's pots have perfect heat conduction, making cooking much easier. Quality that doesn't fall short even in professional kitchens.",
+    "carvella.testimonial1":
+      "Carvella's pots have perfect heat conduction, making cooking much easier. Quality that doesn't fall short even in professional kitchens.",
     "carvella.testimonial1.author": "Italian Restaurant Chef",
-    "carvella.testimonial2": "Unchanged quality and performance even after 15 years of use. A product where you can feel true craftsmanship.",
+    "carvella.testimonial2":
+      "Unchanged quality and performance even after 15 years of use. A product where you can feel true craftsmanship.",
     "carvella.testimonial2.author": "Cooking Instructor",
-    "carvella.testimonial3": "Shows perfect performance on any heat source from induction to gas range. The best choice for home use too.",
+    "carvella.testimonial3":
+      "Shows perfect performance on any heat source from induction to gas range. The best choice for home use too.",
     "carvella.testimonial3.author": "Food Blogger",
     "carvella.cta.title": "Premium Cooking",
     "carvella.cta.subtitle": "with Carvella",
-    "carvella.cta.description": "Make your cooking even more special with premium cookware completed with Italian craftsmanship",
+    "carvella.cta.description":
+      "Make your cooking even more special with premium cookware completed with Italian craftsmanship",
 
     // InYourHeart Brand Page
     "inyourheart.hero.title": "Adding Emotion to Your Skin",
-    "inyourheart.hero.description": "A premium skincare brand leading the global K-beauty market with clean beauty philosophy and emotional package design.",
+    "inyourheart.hero.description":
+      "A premium skincare brand leading the global K-beauty market with clean beauty philosophy and emotional package design.",
     "inyourheart.values.title": "Beauty Philosophy with Emotion",
-    "inyourheart.values.subtitle": "Emotional skincare that is gentle on the skin and warms the heart",
+    "inyourheart.values.subtitle":
+      "Emotional skincare that is gentle on the skin and warms the heart",
+    "inyourheart.category1.title": "Clean Formula",
+    "inyourheart.category1.description":
+      "We pursue safe and sustainable beauty using only gentle and eco-friendly ingredients.",
+    "inyourheart.category2.title": "Emotional Design",
+    "inyourheart.category2.description":
+      "We design emotional and beautiful packaging to make every moment of use a special experience.",
+    "inyourheart.category3.title": "Global K-Beauty",
+    "inyourheart.category3.description":
+      "We promote Korea’s outstanding beauty technology and innovation worldwide to enhance the value of K-beauty.",
+    "inyourheart.cta.title": "Reaching Your Heart with",
+    "inyourheart.cta.subtitle": "Beautiful Emotions",
+    "inyourheart.cta.description":
+      "Start a special beauty journey with IN YOUR HEART.",
+    "inyourheart.cta.button": "Contact Us",
 
     // Sangsaeng Brand Page
     "sangsaeng.hero.title": "Connecting Korean Healthcare to the World",
-    "sangsaeng.hero.description": "A comprehensive medical platform connecting Korea's excellent medical services to the world, from medical tourism to global healthcare platforms.",
+    "sangsaeng.hero.description":
+      "A comprehensive medical platform connecting Korea's excellent medical services to the world, from medical tourism to global healthcare platforms.",
     "sangsaeng.hero.cta": "Visit Sangsaeng Website",
     "sangsaeng.services.title": "Global Healthcare Ecosystem",
-    "sangsaeng.services.subtitle": "Providing integrated healthcare solutions from medical services to branding",
+    "sangsaeng.services.subtitle":
+      "Providing integrated healthcare solutions from medical services to branding",
+    "sangsaeng.medical.title": "Sangsaeng Medical",
+    "sangsaeng.medical.subtitle": "Sangsaeng Medical",
+    "sangsaeng.medical.description":
+      "A healthcare brand that provides everyday health solutions and medical services.",
+    "sangsaeng.medical.benefit1": "Personalized health check-up packages",
+    "sangsaeng.medical.benefit2": "Specialist consultation services",
+    "sangsaeng.medical.benefit3": "Chronic disease management programs",
+    "sangsaeng.medical.benefit4": "Preventive medicine solutions",
+
+    "sangsaeng.platform.title": "Sangsaeng Platform",
+    "sangsaeng.platform.subtitle": "Sangsaeng Platform",
+    "sangsaeng.platform.description":
+      "A multilingual healthcare platform app—from medical services to tourism—in your hand.",
+    "sangsaeng.platform.benefit1": "Multilingual medical interpretation",
+    "sangsaeng.platform.benefit2": "Hospital booking & management",
+    "sangsaeng.platform.benefit3": "Medical tourism packages",
+    "sangsaeng.platform.benefit4": "24/7 emergency support",
+
+    "sangsaeng.branding.title": "Sangsaeng Branding",
+    "sangsaeng.branding.subtitle": "Sangsaeng Branding",
+    "sangsaeng.branding.description":
+      "Branding organization connecting content, Meta ads, and global influencers.",
+    "sangsaeng.branding.benefit1": "Medical content marketing",
+    "sangsaeng.branding.benefit2": "Multilingual brand campaigns",
+    "sangsaeng.branding.benefit3": "Global influencer collaborations",
+    "sangsaeng.branding.benefit4": "Digital marketing solutions",
+
+    "sangsaeng.cta.title1": "Connecting with the World,",
+    "sangsaeng.cta.title2": "The Future of Korean Healthcare",
+    "sangsaeng.cta.description":
+      "Experience safe and trustworthy medical services with Sangsaeng.",
+    "sangsaeng.cta.button": "Contact Us",
 
     // Hoid Details
     "hoid.feature1.title": "3-in-1 Technology",
-    "hoid.feature1.description": "Innovative all-in-one solution integrating air purification, dehumidification, and sterilization",
+    "hoid.feature1.description":
+      "Innovative all-in-one solution integrating air purification, dehumidification, and sterilization",
     "hoid.feature2.title": "HEPA14 Filter",
-    "hoid.feature2.description": "Medical-grade high-performance filter system boasting 99.995% ultra-fine dust removal efficiency",
+    "hoid.feature2.description":
+      "Medical-grade high-performance filter system boasting 99.995% ultra-fine dust removal efficiency",
     "hoid.feature3.title": "Minimalist Design",
-    "hoid.feature3.description": "Refined and modern design philosophy that naturally complements any space",
+    "hoid.feature3.description":
+      "Refined and modern design philosophy that naturally complements any space",
     "hoid.partnership.title": "New Turning Point",
     "hoid.partnership.subtitle": "in Global Expansion",
     "hoid.partnership.date": "August 16, 2025",
-    "hoid.partnership.mou": "MOU Signed with China's Largest Air Purifier Manufacturer",
-    "hoid.partnership.description": "HOID has signed a global distribution and technology cooperation MOU with China's largest air purifier manufacturer. Through this, we plan to expand our business to Asia and provide clean air to more customers.",
+    "hoid.partnership.mou":
+      "MOU Signed with China's Largest Air Purifier Manufacturer",
+    "hoid.partnership.description":
+      "HOID has signed a global distribution and technology cooperation MOU with China's largest air purifier manufacturer. Through this, we plan to expand our business to Asia and provide clean air to more customers.",
     "hoid.partnership.point1": "Market Expansion Across Asia",
     "hoid.partnership.point2": "Technology Cooperation and Joint Development",
     "hoid.partnership.point3": "Global Distribution Network Expansion",
@@ -1201,9 +1480,11 @@ const translations = {
     "hoid.homeshopping.subtitle": "Enters TV Screens",
     "hoid.homeshopping.date": "Launching August 2025",
     "hoid.homeshopping.heading": "Premium Design Appliances, Now in Your Home",
-    "hoid.homeshopping.description": "The premium design appliance brand HOID is finally coming to you through home shopping. Experience sophisticated design, outstanding performance, and life-changing innovative technology directly on your TV.",
+    "hoid.homeshopping.description":
+      "The premium design appliance brand HOID is finally coming to you through home shopping. Experience sophisticated design, outstanding performance, and life-changing innovative technology directly on your TV.",
     "hoid.channels.title": "Available Everywhere Nationwide",
-    "hoid.channels.subtitle": "Getting closer to our customers through various distribution channels",
+    "hoid.channels.subtitle":
+      "Getting closer to our customers through various distribution channels",
     "hoid.channel1.title": "Home Shopping",
     "hoid.channel1.description": "Direct sales through home shopping channels",
     "hoid.channel2.title": "Smart Store",
@@ -1211,20 +1492,24 @@ const translations = {
     "hoid.channel3.title": "Global Seller",
     "hoid.channel3.description": "Expansion to overseas online platforms",
     "hoid.channel4.title": "Offline Stores",
-    "hoid.channel4.description": "Nationwide appliance stores and department stores",
+    "hoid.channel4.description":
+      "Nationwide appliance stores and department stores",
     "hoid.cta.title": "Clean Air, New Daily Life",
-    "hoid.cta.description": "Create a healthy and comfortable indoor environment with HOID",
+    "hoid.cta.description":
+      "Create a healthy and comfortable indoor environment with HOID",
     "hoid.cta.button": "Contact Us",
 
     // Asran Details
     "asran.feature1.title": "SUS410 Stainless Steel",
-    "asran.feature1.description": "Guaranteed durability and safety with premium materials",
+    "asran.feature1.description":
+      "Guaranteed durability and safety with premium materials",
     "asran.feature1.detail1": "Corrosion & Discoloration Resistant",
     "asran.feature1.detail2": "Hygienic and Safe Cooking",
     "asran.feature1.detail3": "Semi-Permanent Use",
     "asran.feature1.detail4": "Luxurious Mirror Finish",
     "asran.feature2.title": "Triple-Layer Bottom Structure",
-    "asran.feature2.description": "Maximizing energy efficiency with excellent heat conductivity",
+    "asran.feature2.description":
+      "Maximizing energy efficiency with excellent heat conductivity",
     "asran.feature2.detail1": "Uniform Heat Distribution",
     "asran.feature2.detail2": "Maximized Energy Efficiency",
     "asran.feature2.detail3": "Fast Heating Time",
@@ -1236,7 +1521,8 @@ const translations = {
     "asran.feature3.detail3": "Highlight",
     "asran.feature3.detail4": "Electric Range",
     "asran.size1.title": "18cm Single Handle Pot",
-    "asran.size1.usage": "Perfect for small-portion cooking and baby food preparation",
+    "asran.size1.usage":
+      "Perfect for small-portion cooking and baby food preparation",
     "asran.size2.title": "22cm Double Handle Pot",
     "asran.size2.usage": "Suitable for cooking for 2-3 people",
     "asran.size3.title": "28cm Double Handle Pot",
@@ -1248,18 +1534,24 @@ const translations = {
     "asran.cooking3.title": "Healthy Cooking",
     "asran.cooking3.description": "Cooking method that preserves nutrients",
     "asran.reviews.title": "Authentic Reviews from Real Customers",
-    "asran.review1": "Amazing value for money! So satisfied to find a pot of this quality at this price.",
+    "asran.review1":
+      "Amazing value for money! So satisfied to find a pot of this quality at this price.",
     "asran.review1.author": "Kim ○○",
-    "asran.review2": "Surprised by the weight of the pot. It's incredibly light! The light weight makes it comfortable to cook without hurting my wrist.",
+    "asran.review2":
+      "Surprised by the weight of the pot. It's incredibly light! The light weight makes it comfortable to cook without hurting my wrist.",
     "asran.review2.author": "Park ○○",
-    "asran.review3": "The single handle pot is very useful for making baby food. It heats quickly and is easy to clean.",
+    "asran.review3":
+      "The single handle pot is very useful for making baby food. It heats quickly and is easy to clean.",
     "asran.review3.author": "Lee ○○",
     "asran.benefit1.title": "Cooking Becomes Enjoyable",
-    "asran.benefit1.description": "Uniform heat conduction enables fail-proof cooking, giving you confidence in your cooking skills.",
+    "asran.benefit1.description":
+      "Uniform heat conduction enables fail-proof cooking, giving you confidence in your cooking skills.",
     "asran.benefit2.title": "Cooking Time Reduced",
-    "asran.benefit2.description": "Fast heating time and efficient heat distribution significantly reduce cooking time.",
+    "asran.benefit2.description":
+      "Fast heating time and efficient heat distribution significantly reduce cooking time.",
     "asran.benefit3.title": "Your Kitchen Becomes More Beautiful",
-    "asran.benefit3.description": "Luxurious mirror finish and sophisticated design elevate your kitchen interior.",
+    "asran.benefit3.description":
+      "Luxurious mirror finish and sophisticated design elevate your kitchen interior.",
     "asran.cta.title": "Premium Cooking Experience",
     "asran.cta.subtitle": "Meets German Technology",
     "asran.cta.description": "Experience a new world of cooking with ASRAN",

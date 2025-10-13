@@ -7,6 +7,13 @@ html {
   scroll-behavior: smooth;
 }
 
+/* .brand-logo {
+  @apply inline-block h-16 sm:h-20 md:h-24 lg:h-28 w-auto;
+} */
+.brand-logo {
+  @apply w-40 sm:w-48 md:w-64 lg:w-72 h-auto;
+}
+
 /* Smooth scrolling for fullpage sections */
 .fullpage-container {
   scroll-snap-type: y proximity;
