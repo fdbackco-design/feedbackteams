@@ -150,7 +150,7 @@ const translations = {
     "brands.asran.products.2": "인덕션 & 가스 겸용",
     "brands.asran.products.3": "프리미엄 마감",
     "brands.laceras.category": "프랑스 럭셔리 캐리어 브랜드",
-    "brands.laceras.slogan": "전통과 모던이 만나는 프렌치 럭셔리 트래블",
+    "brands.laceras.slogan": "전통과 모던이 만나는 프렌�.� 럭셔리 트래블",
     "brands.laceras.description":
       "프랑스의 장인정신과 현대적 세련미를 결합한 럭셔리 캐리어 브랜드입니다. 폴리카보네이트 하드셸, 정교한 마감과 균형 잡힌 디자인으로 비즈니스부터 라그주어리 여행까지 완벽한 트래블 솔루션을 제안합니다.",
     "brands.laceras.products.0": "하드셸 캐리어",
@@ -342,7 +342,7 @@ const translations = {
     "about.story.main":
       '<span class="text-white">피드백은 브랜드의 성장을 <br>유통으로 설계합니다.</span>',
     "about.story.sub":
-      'Hoid, Medifeed, InYourHeart, 상생 등 자체 브랜드와 글로벌 파트너십을 기반으로,<br class="hidden sm:block"/>기획부터 제조·유통·브랜딩까지 전 과정을 함께합니다.',
+      'Hoid, Medifeed, InYourHeart, 상생 등 자체 브랜드와 글로벌 파트너십을 기반으로,<br class="hidden sm:block"/>기획부터 제조·유통·브랜딩까지 전 과정�L� 함께합니다.',
     "about.story.detail":
       '고객의 삶 속에 스며든 FeedBack의 브랜드 하나하나가 고객 여러분의 하루를<br class="hidden sm:block"/>더욱 편리하고 행복하게 만들 수 있도록 언제나 노력하는 FeedBack이 되겠습니다.',
     "about.banner.title":
@@ -355,6 +355,7 @@ const translations = {
     "about.philosophy.description":
       'FeedBack은 브랜드와 시장을 연결하는 실행 중심의 유통 플랫폼으로서<br class="hidden sm:block"/>모든 파트너와 함께 성장하는 상생의 생태계를 구축하고 있습니다.',
     "about.timeline.title": "연혁",
+    "about.timeline.2025_10": "아스란, 카르벨라, 라쎄라스 독점 총판 진행",
     "about.timeline.2025_09":
       "Hoid 2세대 공기청정기 국내외 동시 론칭 (홈쇼핑 입점 확장)",
     "about.timeline.2025_08": "Hoid 무선 청소기 출시",
@@ -723,24 +724,30 @@ const translations = {
     "asran.feature1.detail2": "위생적이고 안전한 조리",
     "asran.feature1.detail3": "반영구적 사용 가능",
     "asran.feature1.detail4": "고급스러운 미러 마감",
+
     "asran.feature2.title": "3중 바닥구조",
     "asran.feature2.description": "뛰어난 열전도율로 에너지 효율성 극대화",
     "asran.feature2.detail1": "균등한 열 분산",
-    "asran.feature2.detail2": "에너지 효율성 극대화",
-    "asran.feature2.detail3": "빠른 가열 시간",
+    "asran.feature2.detail2": "빠른 가열 시간",
+    "asran.feature2.detail3": "한 손으로 뚜껑 쉽게 개폐 가능",
     "asran.feature2.detail4": "열 손실 최소화",
+
     "asran.feature3.title": "모든 열원 완벽 호환",
     "asran.feature3.description": "어떤 주방환경에서도 완벽하게 사용 가능",
-    "asran.feature3.detail1": "인덕션 레인지",
-    "asran.feature3.detail2": "가스 레인지",
-    "asran.feature3.detail3": "하이라이트",
+    "asran.feature3.detail1": "모든 열원 완벽 호환",
+    "asran.feature3.detail2": "가스 레인지, 인덕션",
+    "asran.feature3.detail3": "논스틱 외부 코팅으로 쉬운 세척",
     "asran.feature3.detail4": "전기 레인지",
-    "asran.size1.title": "18cm 편수냄비",
-    "asran.size1.usage": "소용량 요리, 이유식 제조에 최적",
-    "asran.size2.title": "22cm 양수냄비",
-    "asran.size2.usage": "2-3인 가족 요리에 적합",
-    "asran.size3.title": "28cm 양수냄비",
-    "asran.size3.usage": "대용량 요리, 대가족 요리에 완벽",
+
+    "asran.size1.title": "냄비 3종 세트",
+    "asran.size1.usage": "소용량부터 대용량까지, 혼자서도 가족과도 완벽하게",
+
+    "asran.size2.title": "압력솥",
+    "asran.size2.usage": "고압의 빠른 조리로 신선하고 풍미있는 요리 가능",
+
+    "asran.size3.title": "프라이팬 3종 세트",
+    "asran.size3.usage": "강력한 코팅으로 오래쓰는 프라이팬",
+
     "asran.cooking1.title": "국물요리",
     "asran.cooking1.description": "깊고 진한 국물 맛 구현",
     "asran.cooking2.title": "찜 & 조림",
@@ -1125,6 +1132,8 @@ const translations = {
     "about.philosophy.description":
       'As an execution-focused distribution platform connecting brands and markets,<br class="hidden sm:block"/>FeedBack is building a mutually beneficial ecosystem that grows together with all partners.',
     "about.timeline.title": "History",
+    "about.timeline.2025_10":
+      "Exclusive Distributors of Asran, Carvella, and Laceras",
     "about.timeline.2025_09":
       "Hoid 2nd Generation Air Purifier Global Launch (Home Shopping Expansion)",
     "about.timeline.2025_08": "Hoid Cordless Vacuum Cleaner Launch",
@@ -1502,31 +1511,38 @@ const translations = {
     // Asran Details
     "asran.feature1.title": "SUS410 Stainless Steel",
     "asran.feature1.description":
-      "Guaranteed durability and safety with premium materials",
+      "Premium material ensuring durability and safety",
     "asran.feature1.detail1": "Corrosion & Discoloration Resistant",
     "asran.feature1.detail2": "Hygienic and Safe Cooking",
     "asran.feature1.detail3": "Semi-Permanent Use",
     "asran.feature1.detail4": "Luxurious Mirror Finish",
+
     "asran.feature2.title": "Triple-Layer Bottom Structure",
     "asran.feature2.description":
-      "Maximizing energy efficiency with excellent heat conductivity",
-    "asran.feature2.detail1": "Uniform Heat Distribution",
-    "asran.feature2.detail2": "Maximized Energy Efficiency",
-    "asran.feature2.detail3": "Fast Heating Time",
+      "Maximized energy efficiency with excellent heat conductivity",
+    "asran.feature2.detail1": "Even Heat Distribution",
+    "asran.feature2.detail2": "Fast Heating Time",
+    "asran.feature2.detail3": "Easy One-Handed Lid Opening",
     "asran.feature2.detail4": "Minimized Heat Loss",
+
     "asran.feature3.title": "Perfect Compatibility with All Heat Sources",
-    "asran.feature3.description": "Perfect for use in any kitchen environment",
-    "asran.feature3.detail1": "Induction Range",
-    "asran.feature3.detail2": "Gas Range",
-    "asran.feature3.detail3": "Highlight",
+    "asran.feature3.description": "Usable in any kitchen environment",
+    "asran.feature3.detail1": "Fully Compatible with All Heat Sources",
+    "asran.feature3.detail2": "Gas Range, Induction",
+    "asran.feature3.detail3": "Non-Stick Exterior for Easy Cleaning",
     "asran.feature3.detail4": "Electric Range",
-    "asran.size1.title": "18cm Single Handle Pot",
+
+    "asran.size1.title": "3-Piece Pot Set",
     "asran.size1.usage":
-      "Perfect for small-portion cooking and baby food preparation",
-    "asran.size2.title": "22cm Double Handle Pot",
-    "asran.size2.usage": "Suitable for cooking for 2-3 people",
-    "asran.size3.title": "28cm Double Handle Pot",
-    "asran.size3.usage": "Perfect for large-portion cooking and family meals",
+      "Perfect for everything from small to large portions—ideal for solo or family cooking",
+
+    "asran.size2.title": "Pressure Cooker",
+    "asran.size2.usage":
+      "High-pressure cooking for fresh, flavorful meals in less time",
+
+    "asran.size3.title": "3-Piece Frying Pan Set",
+    "asran.size3.usage": "Durable non-stick coating for long-lasting use",
+
     "asran.cooking1.title": "Soup Dishes",
     "asran.cooking1.description": "Deep and rich soup flavor",
     "asran.cooking2.title": "Steaming & Braising",

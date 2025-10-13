@@ -379,6 +379,11 @@ export default function About() {
 
   const timelineData = [
     {
+      year: "2025.10",
+      description: t("about.timeline.2025_10"),
+      type: t("about.timeline.type.expansion"),
+    },
+    {
       year: "2025.09",
       description: t("about.timeline.2025_09"),
       type: t("about.timeline.type.expansion"),

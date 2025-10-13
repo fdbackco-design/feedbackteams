@@ -2,6 +2,8 @@ import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import pot from "@assets/pot.jpeg";
+import homeshoppingImage from "@assets/s1.jpeg";
 import {
   ChefHat,
   Shield,
@@ -13,6 +15,7 @@ import {
   Clock,
   Users,
   Award,
+  Calendar,
 } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import asranMainImg from "@assets/Mask group_1754982638844.jpg";
@@ -55,7 +58,12 @@ export default function AsranPage() {
       icon: Zap,
       title: t("asran.feature3.title"),
       description: t("asran.feature3.description"),
-      details: [t("asran.feature3.detail1"), t("asran.feature3.detail2"), t("asran.feature3.detail3"), t("asran.feature3.detail4")],
+      details: [
+        t("asran.feature3.detail1"),
+        t("asran.feature3.detail2"),
+        t("asran.feature3.detail3"),
+        t("asran.feature3.detail4"),
+      ],
     },
   ];
 
@@ -183,7 +191,6 @@ export default function AsranPage() {
           </div>
         </div>
       </section>
-
       {/* Key Features Section */}
       <section
         ref={featuresRef}
@@ -240,6 +247,135 @@ export default function AsranPage() {
         </div>
       </section>
 
+      {/* 냄비3종, 압력솥, 프라이팬3종 */}
+      <section className="py-32 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="order-2 lg:order-1">
+              <div className="relative">
+                <img
+                  src={pot}
+                  alt={productSizes[0].type}
+                  className="w-full rounded-3xl shadow-2xl"
+                />
+              </div>
+            </div>
+            <div className="order-1 lg:order-2">
+              <div className="inline-block px-4 py-2 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-sm font-semibold mb-6">
+                GOOD 01
+              </div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#000000] mb-4 leading-tight">
+                {productSizes[0].type}
+              </h2>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                {productSizes[0].usage}
+              </p>
+
+              <div className="space-y-3">
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-4"></div>
+                  <span className="text-gray-700 font-medium">
+                    {t("asran.feature1.title")} · {t("asran.feature2.title")}
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-4"></div>
+                  <span className="text-gray-700 font-medium">
+                    {t("asran.feature3.title")}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="inline-block px-4 py-2 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-sm font-semibold mb-6">
+                GOOD 02
+              </div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#000000] mb-4 leading-tight">
+                {productSizes[1].type}
+              </h2>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                {productSizes[1].usage}
+              </p>
+
+              <div className="space-y-3">
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-4"></div>
+                  <span className="text-gray-700 font-medium">
+                    {t("asran.feature2.detail1")} ·{" "}
+                    {t("asran.feature2.detail2")}
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-4"></div>
+                  <span className="text-gray-700 font-medium">
+                    {t("asran.feature2.detail3")}
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div className="relative">
+                <img
+                  src={homeshoppingImage}
+                  alt={productSizes[1].type}
+                  className="w-full rounded-3xl shadow-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-32 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="order-2 lg:order-1">
+              <div className="relative">
+                <img
+                  src={pot}
+                  alt={productSizes[2].type}
+                  className="w-full rounded-3xl shadow-2xl"
+                />
+              </div>
+            </div>
+            <div className="order-1 lg:order-2">
+              <div className="inline-block px-4 py-2 bg-[#0F4C82]/10 text-[#0F4C82] rounded-full text-sm font-semibold mb-6">
+                GOOD 03
+              </div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#000000] mb-4 leading-tight">
+                {productSizes[2].type}
+              </h2>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                {productSizes[2].usage}
+              </p>
+
+              <div className="space-y-3">
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-4"></div>
+                  <span className="text-gray-700 font-medium">
+                    {t("asran.feature3.detail1")} ·{" "}
+                    {t("asran.feature3.detail2")}
+                  </span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-[#0F4C82] rounded-full mr-4"></div>
+                  <span className="text-gray-700 font-medium">
+                    {t("asran.feature3.detail3")}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Customer Reviews */}
       <section
         ref={testimonialsRef}
@@ -296,7 +432,6 @@ export default function AsranPage() {
           </div>
         </div>
       </section>
-
       {/* Success Stories */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -344,7 +479,6 @@ export default function AsranPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-[#0F4C82] text-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
