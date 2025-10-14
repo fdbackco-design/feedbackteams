@@ -244,7 +244,7 @@ const translations = {
       "Feedback은 글로벌 프리미엄 주방·리빙 브랜드 ASRAN, Carvella와 럭셔리 캐리어 브랜드 La Ceras, 프리미엄 수저 브랜드 식구를 자사 브랜드로 런칭했습니다.",
     "news.3.content":
       "Feedback은 글로벌 프리미엄 주방·리빙 브랜드 ASRAN, Carvella와 럭셔리 캐리어 브랜드 La Ceras, 프리미엄 커트러리 브랜드 식구를 자사 브랜드로 런칭했습니다. 이번 런칭을 통해 Feedback은 네 브랜드의 전 제품에 대한 국내 유통, 마케팅, 고객 서비스 전반을 담당하게 됩니다. ASRAN은 스테인리스 하이엔드 쿡웨어 브랜드로, 정밀한 열전도 기술과 세련된 디자인으로 유명합니다. Carvella는 이탈리아 감성을 담은 프리미엄 키친 브랜드로, 숙련된 장인의 노하우를 바탕으로 제작된 제품군을 선보입니다. La Ceras는 하이브리드 소재와 세련된 디자인으로 주목받는 프리미엄 캐리어 브랜드입니다. 식구는 한국적인 미를 더한 커트러리를 선보이는 브랜드입니다. Feedback은 이번 독점 계약을 통해 글로벌 프리미엄 리빙 브랜드를 국내 시장에 소개하고, 지속적인 품질 관리와 브랜드 가치 강화를 통해 소비자에게 새로운 라이프스타일 경험을 제공할 계획입니다.",
-    "news.4.date": "2025.09.01",
+    "news.4.date": "2025.10.14",
     "news.4.title":
       "Hoid 공기청정기 2세대 출시, 하나의 제품으로 사계절 공기질 관리 완성",
     "news.4.summary":
@@ -274,9 +274,6 @@ const translations = {
     "news.8.title": "Carvella, 이탈리아 감성의 프리미엄 칼·도마 세트 런칭",
     "news.8.summary":
       "이탈리아 장인정신을 담은 프리미엄 키친 브랜드 Carvella가 6종 칼 세트와 스테인리스 도마로 구성된 Carvella Signature Set을 공식 출시했습니다.",
-    
-    
-    
     "news.8.content":
       '이탈리아 북부 금속공예 기술 기반, 고탄소강 칼날과 304 스테인리스 도마로 정밀 절삭력 구현\n\n피드백(대표 정성현)의 프리미엄 키친 브랜드 Carvella(카르벨라)가 2025년 10월 13일 6종 칼 세트와 스테인리스 도마로 구성된 \'Carvella Signature Set\'을 정식 출시했다고 밝혔다.\n\nCarvella는 이탈리아 북부 장인들의 금속공예 기술을 바탕으로 정밀한 절삭력과 내구성을 갖춘 프리미엄 키친 브랜드로, 이번 시그니처 세트는 프로 셰프와 홈 셰프 모두를 위한 프리미엄 조리 솔루션으로 개발됐다.\n\n(사진: Carvella Signature Set 구성품 전체 이미지)\n\n<strong>이탈리아 장인 기술로 완성한 정밀 절삭 시스템</strong>\n\nCarvella Signature Set의 칼 세트는 고탄소강을 사용해 장기간 사용에도 날카로움과 내구성을 유지할 수 있도록 설계됐다. 고탄소강은 일반 스테인리스 스틸 대비 경도가 높아 정밀한 절삭이 가능하며, 변형에 강해 전문가용 주방 도구로 널리 사용되는 소재다.\n\n핸들은 미끄럼 방지 기능을 갖춘 합성 소재를 적용해 세밀한 조리 작업에도 안정감을 제공한다. 인체공학적 설계로 손목 부담을 최소화했으며, 장시간 사용에도 피로도를 줄일 수 있도록 무게 밸런스를 최적화했다.\n\n세트에 포함된 304 스테인리스 스틸 도마는 위생적이고 변색에 강해 장기간 사용에도 깨끗한 상태를 유지할 수 있다. 일반 나무 도마와 달리 세균 번식 위험이 적고, 식기세척기 사용이 가능해 관리가 편리하다는 장점이 있다.\n\n<strong>장인의 손길로 완성한 프리미엄 디테일</strong>\n\nCarvella의 모든 제품은 장인의 수작업 폴리싱 공정을 거쳐 브랜드 고유의 광택과 밸런스를 완성했다. 스테인리스와 블랙톤의 조화는 어떤 주방 환경에서도 세련된 존재감을 드러내며, 프리미엄 포장 구성으로 선물용 가치도 높였다.\n\n6종 칼 세트는 셰프 나이프, 빵 나이프, 유틸리티 나이프, 페어링 나이프, 칼갈이, 주방 가위로 구성되어 다양한 조리 상황에 대응할 수 있도록 설계됐다. 각 제품에는 Carvella 로고가 각인되어 있어 브랜드 아이덴티티를 명확히 했다.\n\n<strong>지속 가능한 브랜드 철학으로 글로벌 시장 공략</strong>\n\n피드백 관계자는 "Carvella는 단순한 조리도구가 아닌 요리 예술의 완성품"이라며 "이탈리아 장인의 기술과 감성을 이어받아 유럽과 아시아 시장에서도 프리미엄 키친 브랜드로 자리매김할 것"이라고 밝혔다.\n\n또한 "지속 가능한 생산 공정과 친환경으로 브랜드 철학을 확장해 나갈 계획"이라며 "장기적으로는 환경과 품질을 모두 고려한 프리미엄 키친 브랜드로 성장하겠다"고 덧붙였다.\n\nCarvella Signature Set은 공식 온라인몰과 주요 유통 채널을 통해 만나볼 수 있다.',
 
@@ -1065,7 +1062,7 @@ const translations = {
       "Feedback has launched its own premium brands — ASRAN and Carvella for global kitchen and living, La Ceras for luxury luggage, and Sikgu for premium cutlery.",
     "news.3.content":
       "Feedback has launched its in-house brands — ASRAN and Carvella, global premium kitchen and living brands; La Ceras, a luxury luggage brand; and Sikgu, a premium cutlery brand that embodies Korean aesthetics. With this launch, Feedback will oversee the domestic distribution, marketing, and customer service for all products under these four brands. ASRAN is a high-end stainless cookware brand known for its precise heat conductivity and refined design. Carvella is a premium Italian-inspired kitchen brand offering products crafted with the expertise of skilled artisans. La Ceras stands out as a luxury carrier brand recognized for its hybrid materials and elegant design. Sikgu showcases sophisticated cutlery that blends practicality with traditional Korean beauty. Through this exclusive partnership, Feedback aims to introduce global premium lifestyle brands to the Korean market, delivering new lifestyle experiences through continuous quality management and brand value enhancement.",
-    "news.4.date": "2025.09.01",
+    "news.4.date": "2025.10.14",
     "news.4.title":
       "Hoid Air Purifier 2nd Generation Launch: All-Season Air Quality in One Device",
     "news.4.summary":
@@ -1905,7 +1902,7 @@ const translations = {
     "news.3.content":
       "Feedback ได้เปิดตัวแบรนด์ในเครือของตนเอง ได้แก่ ASRAN และ Carvella ซึ่งเป็นแบรนด์เครื่องครัวและของใช้ในบ้านระดับพรีเมียม, La Ceras แบรนด์กระเป๋าเดินทางหรู และ Sikgu แบรนด์ช้อนส้อมที่สะท้อนความงามแบบเกาหลี การเปิดตัวครั้งนี้ทำให้ Feedback รับหน้าที่ดูแลด้านการจัดจำหน่ายภายในประเทศ การตลาด และบริการลูกค้าสำหรับผลิตภัณฑ์ทั้งหมดของทั้งสี่แบรนด์ ASRAN เป็นแบรนด์เครื่องครัวสแตนเลสระดับไฮเอนด์ที่มีชื่อเสียงด้านการนำความร้อนอย่างแม่นยำและการออกแบบที่ประณีต Carvella ถ่ายทอดอารมณ์ความเป็นอิตาเลียนผ่านเครื่องครัวที่ผลิตโดยช่างฝีมือผู้ชำนาญ La Ceras โดดเด่นด้วยวัสดุไฮบริดและดีไซน์ที่หรูหรา ขณะที่ Sikgu นำเสนอเครื่องใช้บนโต๊ะอาหารที่ผสานความเรียบง่ายและความงามแบบเกาหลีได้อย่างลงตัว Feedback มีเป้าหมายที่จะนำเสนอแบรนด์ไลฟ์สไตล์ระดับพรีเมียมสู่ตลาดเกาหลี พร้อมยกระดับประสบการณ์การใช้ชีวิตของผู้บริโภคผ่านการควบคุมคุณภาพและการพัฒนาแบรนด์อย่างต่อเนื่อง",
 
-    "news.4.date": "2025.09.01",
+    "news.4.date": "2025.10.14",
     "news.4.title":
       "เปิดตัวเครื่องฟอกอากาศ Hoid รุ่นที่ 2: ครบจบการดูแลอากาศตลอดทั้งปีในเครื่องเดียว",
     "news.4.summary":
