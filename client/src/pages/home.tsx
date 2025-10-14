@@ -228,7 +228,12 @@ export default function Home() {
   const { t } = useLanguage();
   const services = getServices(t);
   const brands = getBrands(t);
-  const translatedNewsData = getNewsData(t);
+  const translatedNewsData = getNewsData(t).sort((a, b) => {
+    // 날짜를 비교 가능한 형식으로 변환 (YYYY.MM.DD -> YYYYMMDD)
+    const dateA = a.date.replace(/\./g, '');
+    const dateB = b.date.replace(/\./g, '');
+    return dateB.localeCompare(dateA); // 내림차순 (최신순)
+  });
   const [scrollY, setScrollY] = useState(0);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [currentSection, setCurrentSection] = useState(0);
