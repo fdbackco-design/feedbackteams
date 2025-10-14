@@ -952,7 +952,7 @@ export default function Home() {
       {/* Services Section */}
       <section
         id="services"
-        className="min-h-screen flex items-center justify-center relative overflow-hidden pt-12 sm:pt-16 md:pt-20 touch-pan-y mobile-bg-cover"
+        className="h-screen flex items-center justify-center relative overflow-hidden touch-pan-y mobile-bg-cover"
         style={{
           scrollSnapAlign: "start",
           backgroundImage: `url(${services[currentServiceIndex]?.imageUrl || serviceBackgroundImage})`,
@@ -960,120 +960,122 @@ export default function Home() {
       >
         {/* 블러 오버레이 */}
         <div className="absolute inset-0 bg-white/65 backdrop-blur"></div>
-        <div className="relative max-w-7xl mx-auto mobile-padding z-10">
-          <div
-            className="text-center mb-8 sm:mb-12 opacity-0 animate-fade-in-up"
-            style={{ animationDelay: "0.1s" }}
-          >
-            <div className="section-subtitle mb-2 text-[12px] sm:text-[14px]">
-              SERVICE
-            </div>
-            <h2 className="text-fluid-title break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold maxw-title mx-auto mb-4 text-gray-900">
-              {t("services.title")}
-            </h2>
-            <p className="section-description">{t("hero.description")}</p>
-          </div>
-
-          {/* Service Carousel */}
-          <div className="relative max-w-6xl mx-auto">
-            {/* Service Card */}
-            <div className="bg-white/90 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-xl overflow-hidden max-w-4xl mx-auto mb-6 sm:mb-8">
-              {services[currentServiceIndex] && (
-                <div className="grid lg:grid-cols-2 gap-0 h-[500px] sm:h-[550px] md:h-[600px] lg:h-[500px]">
-                  {/* Image Section */}
-                  <div className="relative h-48 sm:h-64 lg:h-full">
-                    <LazyImage
-                      src={services[currentServiceIndex].imageUrl}
-                      alt={services[currentServiceIndex].title}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-                  </div>
-
-                  {/* Content Section */}
-                  <div className="p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-between flex-1">
-                    <div className="flex-1">
-                      <div className="text-xs sm:text-sm text-primary font-semibold mb-3 sm:mb-4">
-                        0{currentServiceIndex + 1}/0{services.length}
-                      </div>
-                      <h3 className="text-fluid-sub break-keep text-balance text-pretty leading-tight-mobile font-bold text-[#000000] maxw-title mb-3 sm:mb-4 md:mb-6">
-                        {services[currentServiceIndex].title}
-                      </h3>
-                      <p className="text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-700 maxw-body mb-4 sm:mb-6 line-clamp-3">
-                        {services[currentServiceIndex].description}
-                      </p>
-                      <div className="space-y-1 sm:space-y-2 mb-4 sm:mb-6 md:mb-8">
-                        {services[currentServiceIndex].features
-                          .slice(0, 3)
-                          .map((feature, index) => (
-                            <div
-                              key={index}
-                              className="flex items-start text-xs sm:text-sm text-gray-600"
-                            >
-                              <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-primary rounded-full mr-2 sm:mr-3 mt-1.5 sm:mt-2 flex-shrink-0"></div>
-                              <span className="leading-relaxed">{feature}</span>
-                            </div>
-                          ))}
-                      </div>
-                    </div>
-                    <div className="mt-auto">
-                      <Link href="/service">
-                        <Button className="bg-primary hover:bg-primary/90 text-white px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-3 text-sm sm:text-base rounded-lg font-semibold inline-flex items-center group w-full sm:w-auto justify-center tap-target">
-                          {t("ui.learn_more")}
-                          <ArrowRight className="ml-1 sm:ml-2 w-3 h-3 sm:w-4 sm:h-4 transform group-hover:translate-x-1 transition-transform" />
-                        </Button>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              )}
+        <div className="relative w-full h-full flex flex-col justify-center py-8 sm:py-12 md:py-16 mobile-padding z-10">
+          <div className="max-w-7xl mx-auto w-full flex flex-col justify-center flex-1">
+            <div
+              className="text-center mb-4 sm:mb-6 md:mb-8 opacity-0 animate-fade-in-up"
+              style={{ animationDelay: "0.1s" }}
+            >
+              <div className="section-subtitle mb-2 text-[10px] sm:text-[12px] md:text-[14px]">
+                SERVICE
+              </div>
+              <h2 className="text-fluid-title break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold maxw-title mx-auto mb-2 sm:mb-3 md:mb-4 text-gray-900">
+                {t("services.title")}
+              </h2>
+              <p className="section-description text-xs sm:text-sm md:text-base">{t("hero.description")}</p>
             </div>
 
-            {/* Navigation Arrows - Below the card on mobile */}
-            <div className="flex justify-center items-center gap-4 sm:gap-6 mt-2 sm:mt-4">
-              <button
-                onClick={() => {
-                  const newIndex =
-                    currentServiceIndex === 0
-                      ? services.length - 1
-                      : currentServiceIndex - 1;
-                  setCurrentServiceIndex(newIndex);
-                }}
-                className="tap-target w-12 h-12 sm:w-14 sm:h-14 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-all duration-300 hover:scale-105 touch-manipulation"
-              >
-                <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
-              </button>
+            {/* Service Carousel */}
+            <div className="relative max-w-6xl mx-auto w-full flex-1 flex flex-col justify-center">
+              {/* Service Card */}
+              <div className="bg-white/90 backdrop-blur-sm rounded-lg sm:rounded-xl md:rounded-2xl shadow-xl overflow-hidden max-w-4xl mx-auto mb-3 sm:mb-4 md:mb-6 w-full">
+                {services[currentServiceIndex] && (
+                  <div className="grid lg:grid-cols-2 gap-0 h-[380px] xs:h-[420px] sm:h-[460px] md:h-[500px] lg:h-[450px] xl:h-[500px]">
+                    {/* Image Section */}
+                    <div className="relative h-32 xs:h-40 sm:h-48 md:h-56 lg:h-full">
+                      <LazyImage
+                        src={services[currentServiceIndex].imageUrl}
+                        alt={services[currentServiceIndex].title}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+                    </div>
 
-              {/* Service Counter */}
-              <div className="px-4 py-2 sm:px-6 sm:py-3 bg-white/90 backdrop-blur-sm rounded-full shadow-lg">
-                <div className="text-sm sm:text-base font-semibold text-gray-700">
-                  {String(currentServiceIndex + 1).padStart(2, "0")} /{" "}
-                  {String(services.length).padStart(2, "0")}
-                </div>
+                    {/* Content Section */}
+                    <div className="p-3 xs:p-4 sm:p-5 md:p-6 lg:p-10 xl:p-12 flex flex-col justify-between flex-1">
+                      <div className="flex-1">
+                        <div className="text-[10px] xs:text-xs sm:text-sm text-primary font-semibold mb-2 sm:mb-3">
+                          0{currentServiceIndex + 1}/0{services.length}
+                        </div>
+                        <h3 className="text-fluid-sub break-keep text-balance text-pretty leading-tight-mobile font-bold text-[#000000] maxw-title mb-2 sm:mb-3 md:mb-4">
+                          {services[currentServiceIndex].title}
+                        </h3>
+                        <p className="text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-700 maxw-body mb-3 sm:mb-4 md:mb-5 line-clamp-2 sm:line-clamp-3">
+                          {services[currentServiceIndex].description}
+                        </p>
+                        <div className="space-y-1 sm:space-y-1.5 md:space-y-2 mb-3 sm:mb-4 md:mb-6">
+                          {services[currentServiceIndex].features
+                            .slice(0, 3)
+                            .map((feature, index) => (
+                              <div
+                                key={index}
+                                className="flex items-start text-[10px] xs:text-xs sm:text-sm text-gray-600"
+                              >
+                                <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-primary rounded-full mr-2 sm:mr-3 mt-1 sm:mt-1.5 flex-shrink-0"></div>
+                                <span className="leading-relaxed">{feature}</span>
+                              </div>
+                            ))}
+                        </div>
+                      </div>
+                      <div className="mt-auto">
+                        <Link href="/service">
+                          <Button className="bg-primary hover:bg-primary/90 text-white px-3 py-1.5 xs:px-4 xs:py-2 sm:px-6 sm:py-2.5 md:px-8 md:py-3 text-xs xs:text-sm sm:text-base rounded-md sm:rounded-lg font-semibold inline-flex items-center group w-full sm:w-auto justify-center tap-target">
+                            {t("ui.learn_more")}
+                            <ArrowRight className="ml-1 sm:ml-2 w-3 h-3 sm:w-4 sm:h-4 transform group-hover:translate-x-1 transition-transform" />
+                          </Button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
 
-              <button
-                onClick={() => {
-                  const newIndex = (currentServiceIndex + 1) % services.length;
-                  setCurrentServiceIndex(newIndex);
-                }}
-                className="tap-target w-12 h-12 sm:w-14 sm:h-14 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-all duration-300 hover:scale-105 touch-manipulation"
-              >
-                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
-              </button>
-            </div>
+              {/* Navigation Arrows - Below the card */}
+              <div className="flex justify-center items-center gap-3 sm:gap-4 md:gap-6 mt-0">
+                <button
+                  onClick={() => {
+                    const newIndex =
+                      currentServiceIndex === 0
+                        ? services.length - 1
+                        : currentServiceIndex - 1;
+                    setCurrentServiceIndex(newIndex);
+                  }}
+                  className="tap-target w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-all duration-300 hover:scale-105 touch-manipulation"
+                >
+                  <ChevronLeft className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 md:w-6 md:h-6 text-gray-600" />
+                </button>
 
-            {/* Progress Bar Pager - Hidden on mobile */}
-            <div className="hidden sm:block mt-3 sm:mt-5">
-              <div className="max-w-lg mx-auto">
-                <div className="h-1 bg-gray-300 rounded-full relative overflow-hidden">
-                  <div
-                    className="h-full bg-black rounded-full transition-all duration-300 ease-out"
-                    style={{
-                      width: `${((currentServiceIndex + 1) / services.length) * 100}%`,
-                      transform: `translateX(0%)`,
-                    }}
-                  />
+                {/* Service Counter */}
+                <div className="px-3 py-1.5 xs:px-4 xs:py-2 sm:px-6 sm:py-3 bg-white/90 backdrop-blur-sm rounded-full shadow-lg">
+                  <div className="text-xs xs:text-sm sm:text-base font-semibold text-gray-700">
+                    {String(currentServiceIndex + 1).padStart(2, "0")} /{" "}
+                    {String(services.length).padStart(2, "0")}
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => {
+                    const newIndex = (currentServiceIndex + 1) % services.length;
+                    setCurrentServiceIndex(newIndex);
+                  }}
+                  className="tap-target w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-white shadow-lg rounded-full flex items-center justify-center hover:bg-gray-50 transition-all duration-300 hover:scale-105 touch-manipulation"
+                >
+                  <ChevronRight className="w-4 h-4 xs:w-5 xs:h-5 sm:w-5 sm:h-5 md:w-6 md:h-6 text-gray-600" />
+                </button>
+              </div>
+
+              {/* Progress Bar Pager */}
+              <div className="mt-3 sm:mt-4 md:mt-5">
+                <div className="max-w-lg mx-auto">
+                  <div className="h-0.5 sm:h-1 bg-gray-300 rounded-full relative overflow-hidden">
+                    <div
+                      className="h-full bg-black rounded-full transition-all duration-300 ease-out"
+                      style={{
+                        width: `${((currentServiceIndex + 1) / services.length) * 100}%`,
+                        transform: `translateX(0%)`,
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
