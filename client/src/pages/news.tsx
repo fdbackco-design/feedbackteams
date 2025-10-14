@@ -40,14 +40,20 @@ export default function News() {
     기업소식: "bg-accent text-white",
   };
 
-  // ✅ 원래 인덱스 보존
+  // ✅ 원래 인덱스 보존 및 날짜순 정렬 (최신순)
   const filteredNews = newsData
     .map((news, i) => ({ ...news, originalIndex: i }))
     .filter(
       (news) =>
         activeFilter === "all" ||
         activeFilter === getCategoryKey(news.category),
-    );
+    )
+    .sort((a, b) => {
+      // 날짜를 비교 가능한 형식으로 변환 (YYYY.MM.DD -> YYYYMMDD)
+      const dateA = a.date.replace(/\./g, '');
+      const dateB = b.date.replace(/\./g, '');
+      return dateB.localeCompare(dateA); // 내림차순 (최신순)
+    });
 
   const loadMoreNews = () => {
     setVisibleNews((prev) => Math.min(prev + 6, filteredNews.length));
