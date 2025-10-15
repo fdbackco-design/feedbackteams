@@ -22,7 +22,7 @@ const translations = {
     "nav.news": "뉴스",
     "nav.contact": "문의하기",
     // Footer
-    "footer.tagline": "유통부터 브랜드까지 한국의 가치를 세계로 연결합니다",
+    "footer.tagline": "유통부터 자체브랜드까지 한국의 가치를 세계로 연결합니다",
     "footer.about":
       "유통, 브랜드 제조, 마케팅, 의료관광 플랫폼을 통해 상생의 가치로 글로벌 시장에 진출하는 종합 서비스 기업입니다.",
     "footer.sections.services": "서비스",
