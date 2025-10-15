@@ -6,7 +6,6 @@ import { ArrowRight } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import HoidLogo from "@/components/HoidLogo";
-import AsranLogo from "@/components/AsranLogo";
 import hoidImg from "@/assets/brand/hoidintro.jpg";
 import medifeedImg from "@assets/medifeed_1_1754636614100.jpg";
 import inyourheartImg from "@assets/in_your_1754636664888.jpg";
@@ -16,6 +15,7 @@ import lacerasImg from "@/assets/brand/laceras.jpg";
 import carvellaImg from "@/assets/brand/carvella.png";
 import lacerasLogo from "@/assets/brand/laceras_logo.png";
 import carvellaLogo from "@/assets/brand/carvella_logo.png";
+import asranLogo from "@assets/asran_1760493202794.png";
 import LazyImage from "@/components/LazyImage";
 
 export default function Brand() {
@@ -47,7 +47,7 @@ export default function Brand() {
       name: "ASRAN",
       category: t("brands.asran.category"),
       slogan: t("brands.asran.slogan"),
-      logo: "svg",
+      logo: "img",
       description: t("brands.asran.description"),
       products: [
         t("brands.asran.products.0"),
@@ -211,8 +211,12 @@ export default function Brand() {
                   <div className="space-y-3 sm:space-y-4">
                     {brand.logo === "svg" && brand.id === "hoid" ? (
                       <HoidLogo className="brand-logo" />
-                    ) : brand.logo === "svg" && brand.id === "asran" ? (
-                      <AsranLogo className="brand-logo [&_.cls-1]:fill-black" />
+                    ) : brand.logo === "img" && brand.id === "asran" ? (
+                      <LazyImage
+                        src={asranLogo}
+                        alt="ASRAN 로고"
+                        className="brand-logo object-contain"
+                      />
                     ) : brand.logo === "img" && brand.id === "laceras" ? (
                       <LazyImage
                         src={lacerasLogo}
