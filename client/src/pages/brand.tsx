@@ -230,7 +230,7 @@ export default function Brand() {
                         className="brand-logo object-contain"
                       />
                     ) : (
-                      <h2 className="brand-logo text-center text-fluid-sub break-keep text-balance text-pretty leading-tight-mobile font-bold text-[#000000] maxw-title mx-auto">
+                      <h2 className="brand-logo text-center break-keep text-balance text-pretty leading-tight font-bold text-[#000000] mx-auto" style={{ fontSize: 'clamp(32px, 6vw, 64px)' }}>
                         {brand.name}
                       </h2>
                     )}
