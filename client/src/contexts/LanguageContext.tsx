@@ -164,6 +164,12 @@ const translations = {
     "brands.carvella.products.1": "프라이팬",
     "brands.carvella.products.2": "멀티 압력뚜껑",
     "brands.carvella.products.3": "멀티 호환 열원",
+    "brands.moz.category": "프리미엄 온열 라이프 브랜드",
+    "brands.moz.slogan": "따뜻하고 안전한 수면 환경 연구",
+    "brands.moz.description":
+      "첨단 카본 히팅 기술과 안전 인증 설계로 건강한 숙면을 제공합니다. 몸과 마음이 회복되는 따뜻한 휴식, 그것이 모즈의 시작입니다.",
+    "brands.moz.products.0": "카본 탄소매트 싱글",
+    "brands.moz.products.1": "카본 탄소매트 더블",
 
     // Common UI
     "ui.view_brand_detail": "브랜드 자세히 보기",
@@ -671,6 +677,68 @@ const translations = {
     "carvella.good2.detail2": "인체공학적 손잡이로 편안한 그립",
     "carvella.good2.detail3": "뛰어난 절삭력",
     "carvella.good2.detail4": "가정용·업소용 모두 적합",
+
+    // MOZ Brand Page
+    "moz.hero.tagline": "따뜻하고 안전한 수면 환경",
+    "moz.hero.description":
+      "첨단 카본 히팅 기술과 안전 인증 설계로 건강한 숙면을 제공합니다. 몸과 마음이 회복되는 따뜻한 휴식, 그것이 모즈의 시작입니다.",
+    "moz.hero.cta": "제품 문의하기",
+    "moz.features.title": "모즈의 핵심 기술",
+    "moz.features.subtitle":
+      "첨단 카본 히팅과 안전 인증으로 완성한 프리미엄 수면 솔루션",
+    "moz.feature1.title": "카본 히팅 기술",
+    "moz.feature1.description":
+      "전자파 걱정 없는 안전한 카본 열선으로 균일한 온기를 제공합니다",
+    "moz.feature1.detail1": "전자파 차단 카본 소재",
+    "moz.feature1.detail2": "균일한 온도 분포",
+    "moz.feature1.detail3": "빠른 온도 상승",
+    "moz.feature1.detail4": "에너지 효율 설계",
+    "moz.feature2.title": "안전 인증 설계",
+    "moz.feature2.description":
+      "엄격한 안전 인증과 과열 방지 시스템으로 안심하고 사용할 수 있습니다",
+    "moz.feature2.detail1": "KC 안전 인증",
+    "moz.feature2.detail2": "과열 방지 시스템",
+    "moz.feature2.detail3": "이중 안전 장치",
+    "moz.feature2.detail4": "화재 예방 설계",
+    "moz.feature3.title": "건강한 숙면",
+    "moz.feature3.description":
+      "몸과 마음이 회복되는 따뜻한 온기로 깊고 편안한 잠을 선사합니다",
+    "moz.feature3.detail1": "최적 수면 온도 유지",
+    "moz.feature3.detail2": "혈액순환 개선",
+    "moz.feature3.detail3": "근육 이완 효과",
+    "moz.feature3.detail4": "쾌적한 수면 환경",
+    "moz.product1.title": "모즈 카본 탄소매트 싱글",
+    "moz.product1.description":
+      "혼자 써도 포근한 온기, 하루 피로를 녹입니다. 안전한 카본 열선으로 전자파 걱정 없어요.",
+    "moz.product1.size": "사이즈",
+    "moz.product2.title": "모즈 카본 탄소매트 더블",
+    "moz.product2.description":
+      "두 사람이 함께하는 따뜻한 온기. 균일한 열로 깊고 편안한 잠을 선사합니다.",
+    "moz.product2.size": "사이즈",
+    "moz.reviews.title": "고객 후기",
+    "moz.review1":
+      "전자파 걱정 없이 따뜻하게 잘 수 있어서 너무 좋아요. 겨울철 필수템입니다!",
+    "moz.review1.author": "김○○",
+    "moz.review2":
+      "온도가 균일해서 발끝까지 포근해요. 아침에 일어나면 몸이 한결 가벼워진 느낌입니다.",
+    "moz.review2.author": "이○○",
+    "moz.review3":
+      "안전 인증 받은 제품이라 안심하고 사용할 수 있어요. 품질도 만족스럽습니다.",
+    "moz.review3.author": "박○○",
+    "moz.benefits.title": "모즈와 함께하는 따뜻한 밤",
+    "moz.benefit1.title": "깊은 숙면",
+    "moz.benefit1.description":
+      "최적의 온도 유지로 편안하고 깊은 잠을 경험하세요",
+    "moz.benefit2.title": "빠른 온열",
+    "moz.benefit2.description":
+      "카본 히팅 기술로 빠르게 따뜻한 온기를 느낄 수 있습니다",
+    "moz.benefit3.title": "안전한 설계",
+    "moz.benefit3.description":
+      "KC 인증과 이중 안전 장치로 걱정 없이 사용하세요",
+    "moz.cta.title": "모즈와 함께하는 따뜻한 휴식",
+    "moz.cta.description":
+      "첨단 카본 히팅 기술로 건강한 숙면을 경험해보세요",
+    "moz.cta.button": "제품 문의하기",
 
     // InYourHeart Brand Page
     "inyourheart.hero.title": "피부에 감성을 입히다",

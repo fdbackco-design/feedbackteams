@@ -16,6 +16,7 @@ import carvellaImg from "@/assets/brand/carvella.png";
 import lacerasLogo from "@/assets/brand/laceras_logo.png";
 import carvellaLogo from "@/assets/brand/carvella_logo.png";
 import asranLogo from "@assets/asran_1760493202794.png";
+import mozImg from "@/assets/brand/moz.png";
 import LazyImage from "@/components/LazyImage";
 
 export default function Brand() {
@@ -95,6 +96,22 @@ export default function Brand() {
       buttonColor: "bg-[#6C2F1E] hover:bg-[#5a2719]",
       badgeColor: "bg-[#6C2F1E]",
       image: carvellaImg,
+    },
+    {
+      id: "moz",
+      name: "MOZ",
+      category: t("brands.moz.category"),
+      slogan: t("brands.moz.slogan"),
+      logo: "text",
+      description: t("brands.moz.description"),
+      products: [
+        t("brands.moz.products.0"),
+        t("brands.moz.products.1"),
+      ],
+      bgColor: "bg-white",
+      buttonColor: "bg-[#8B7355] hover:bg-[#6d5940]",
+      badgeColor: "bg-[#8B7355]",
+      image: mozImg,
     },
     {
       id: "medifeed",
