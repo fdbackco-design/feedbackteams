@@ -1556,6 +1556,68 @@ const translations = {
     "carvella.good2.detail3": "Sharp, durable stainless steel blades",
     "carvella.good2.detail4": "Great for home or professional kitchens",
 
+    // MOZ Brand Page
+    "moz.hero.tagline": "Warm and Safe Sleep Environment",
+    "moz.hero.description":
+      "Providing healthy sleep with advanced carbon heating technology and safety-certified design. Warm rest where body and mind recover - that's where MOZ begins.",
+    "moz.hero.cta": "Product Inquiry",
+    "moz.features.title": "MOZ Core Technology",
+    "moz.features.subtitle":
+      "Premium sleep solution completed with advanced carbon heating and safety certification",
+    "moz.feature1.title": "Carbon Heating Technology",
+    "moz.feature1.description":
+      "Provides uniform warmth with safe carbon heating wires without electromagnetic wave concerns",
+    "moz.feature1.detail1": "Electromagnetic wave blocking carbon material",
+    "moz.feature1.detail2": "Uniform temperature distribution",
+    "moz.feature1.detail3": "Fast temperature rise",
+    "moz.feature1.detail4": "Energy efficient design",
+    "moz.feature2.title": "Safety Certified Design",
+    "moz.feature2.description":
+      "Use with confidence through strict safety certification and overheat prevention system",
+    "moz.feature2.detail1": "KC safety certification",
+    "moz.feature2.detail2": "Overheat prevention system",
+    "moz.feature2.detail3": "Dual safety device",
+    "moz.feature2.detail4": "Fire prevention design",
+    "moz.feature3.title": "Healthy Sleep",
+    "moz.feature3.description":
+      "Provides deep and comfortable sleep with warm warmth where body and mind recover",
+    "moz.feature3.detail1": "Optimal sleep temperature maintenance",
+    "moz.feature3.detail2": "Improved blood circulation",
+    "moz.feature3.detail3": "Muscle relaxation effect",
+    "moz.feature3.detail4": "Pleasant sleep environment",
+    "moz.product1.title": "MOZ Carbon Mat Single",
+    "moz.product1.description":
+      "Cozy warmth even when used alone, melts away daily fatigue. No electromagnetic wave concerns with safe carbon heating wire.",
+    "moz.product1.size": "Size",
+    "moz.product2.title": "MOZ Carbon Mat Double",
+    "moz.product2.description":
+      "Warm warmth for two. Provides deep and comfortable sleep with uniform heat.",
+    "moz.product2.size": "Size",
+    "moz.reviews.title": "Customer Reviews",
+    "moz.review1":
+      "I love being able to sleep warm without worrying about electromagnetic waves. It's a must-have for winter!",
+    "moz.review1.author": "Kim○○",
+    "moz.review2":
+      "The temperature is uniform so my feet feel cozy. I feel lighter when I wake up in the morning.",
+    "moz.review2.author": "Lee○○",
+    "moz.review3":
+      "It's a safety-certified product so I can use it with confidence. The quality is satisfactory too.",
+    "moz.review3.author": "Park○○",
+    "moz.benefits.title": "Warm Nights with MOZ",
+    "moz.benefit1.title": "Deep Sleep",
+    "moz.benefit1.description":
+      "Experience comfortable and deep sleep with optimal temperature maintenance",
+    "moz.benefit2.title": "Fast Heating",
+    "moz.benefit2.description":
+      "Feel warm warmth quickly with carbon heating technology",
+    "moz.benefit3.title": "Safe Design",
+    "moz.benefit3.description":
+      "Use without worry with KC certification and dual safety device",
+    "moz.cta.title": "Warm Rest with MOZ",
+    "moz.cta.description":
+      "Experience healthy sleep with advanced carbon heating technology",
+    "moz.cta.button": "Product Inquiry",
+
     // InYourHeart Brand Page
     "inyourheart.hero.title": "Adding Emotion to Your Skin",
     "inyourheart.hero.description":
@@ -2518,6 +2580,68 @@ const translations = {
     "carvella.good2.detail2": "ด้ามจับตามหลักสรีรศาสตร์ จับถนัดมือ",
     "carvella.good2.detail3": "คมกริบและตัดได้แม่นยำ",
     "carvella.good2.detail4": "เหมาะสำหรับทั้งบ้านและร้านอาหาร",
+
+    // MOZ Brand Page
+    "moz.hero.tagline": "สภาพแวดล้อมการนอนที่อบอุ่นและปลอดภัย",
+    "moz.hero.description":
+      "มอบการนอนหลับที่มีคุณภาพด้วยเทคโนโลยีความร้อนคาร์บอนขั้นสูงและการออกแบบที่ได้รับการรับรองความปลอดภัย การพักผ่อนที่อบอุ่นซึ่งร่างกายและจิตใจได้รับการฟื้นฟู นั่นคือจุดเริ่มต้นของ MOZ",
+    "moz.hero.cta": "สอบถามผลิตภัณฑ์",
+    "moz.features.title": "เทคโนโลยีหลักของ MOZ",
+    "moz.features.subtitle":
+      "โซลูชันการนอนหลับระดับพรีเมียมที่สมบูรณ์แบบด้วยความร้อนคาร์บอนขั้นสูงและการรับรองความปลอดภัย",
+    "moz.feature1.title": "เทคโนโลยีความร้อนคาร์บอน",
+    "moz.feature1.description":
+      "ให้ความอบอุ่นที่สม่ำเสมอด้วยสายความร้อนคาร์บอนที่ปลอดภัย ไม่ต้องกังวลเรื่องคลื่นแม่เหล็กไฟฟ้า",
+    "moz.feature1.detail1": "วัสดุคาร์บอนป้องกันคลื่นแม่เหล็กไฟฟ้า",
+    "moz.feature1.detail2": "การกระจายอุณหภูมิที่สม่ำเสมอ",
+    "moz.feature1.detail3": "อุณหภูมิเพิ่มขึ้นอย่างรวดเร็ว",
+    "moz.feature1.detail4": "การออกแบบที่ประหยัดพลังงาน",
+    "moz.feature2.title": "การออกแบบที่ได้รับการรับรองความปลอดภัย",
+    "moz.feature2.description":
+      "ใช้งานได้อย่างมั่นใจด้วยการรับรองความปลอดภัยที่เข้มงวดและระบบป้องกันความร้อนสูงเกินไป",
+    "moz.feature2.detail1": "การรับรอง KC ด้านความปลอดภัย",
+    "moz.feature2.detail2": "ระบบป้องกันความร้อนสูงเกินไป",
+    "moz.feature2.detail3": "อุปกรณ์ความปลอดภัยคู่",
+    "moz.feature2.detail4": "การออกแบบป้องกันไฟไหม้",
+    "moz.feature3.title": "การนอนหลับที่มีสุขภาพดี",
+    "moz.feature3.description":
+      "มอบการนอนหลับที่ลึกและสบายด้วยความอบอุ่นที่ร่างกายและจิตใจได้รับการฟื้นฟู",
+    "moz.feature3.detail1": "รักษาอุณหภูมิการนอนหลับที่เหมาะสม",
+    "moz.feature3.detail2": "ปรับปรุงการไหลเวียนเลือด",
+    "moz.feature3.detail3": "ผลการคลายกล้ามเนื้อ",
+    "moz.feature3.detail4": "สภาพแวดล้อมการนอนหลับที่สบาย",
+    "moz.product1.title": "แผ่นรองนอนคาร์บอน MOZ เดี่ยว",
+    "moz.product1.description":
+      "ความอบอุ่นที่สบายแม้ใช้คนเดียว ละลายความเหนื่อยล้าประจำวัน ไม่ต้องกังวลเรื่องคลื่นแม่เหล็กไฟฟ้าด้วยสายความร้อนคาร์บอนที่ปลอดภัย",
+    "moz.product1.size": "ขนาด",
+    "moz.product2.title": "แผ่นรองนอนคาร์บอน MOZ คู่",
+    "moz.product2.description":
+      "ความอบอุ่นสำหรับสองคน มอบการนอนหลับที่ลึกและสบายด้วยความร้อนที่สม่ำเสมอ",
+    "moz.product2.size": "ขนาด",
+    "moz.reviews.title": "รีวิวจากลูกค้า",
+    "moz.review1":
+      "ชอบที่สามารถนอนอุ่นโดยไม่ต้องกังวลเรื่องคลื่นแม่เหล็กไฟฟ้า เป็นสินค้าที่ต้องมีในฤดูหนาว!",
+    "moz.review1.author": "คิม○○",
+    "moz.review2":
+      "อุณหภูมิสม่ำเสมอจึงรู้สึกอบอุ่นจนถึงปลายเท้า รู้สึกเบาขึ้นเมื่อตื่นนอนตอนเช้า",
+    "moz.review2.author": "ลี○○",
+    "moz.review3":
+      "เป็นผลิตภัณฑ์ที่ได้รับการรับรองความปลอดภัยจึงใช้งานได้อย่างมั่นใจ คุณภาพน่าพอใจมาก",
+    "moz.review3.author": "พาร์ค○○",
+    "moz.benefits.title": "ค่ำคืนที่อบอุ่นกับ MOZ",
+    "moz.benefit1.title": "การนอนหลับลึก",
+    "moz.benefit1.description":
+      "สัมผัสการนอนหลับที่สบายและลึกด้วยการรักษาอุณหภูมิที่เหมาะสม",
+    "moz.benefit2.title": "ความร้อนเร็ว",
+    "moz.benefit2.description":
+      "รู้สึกถึงความอบอุ่นอย่างรวดเร็วด้วยเทคโนโลยีความร้อนคาร์บอน",
+    "moz.benefit3.title": "การออกแบบที่ปลอดภัย",
+    "moz.benefit3.description":
+      "ใช้งานโดยไม่ต้องกังวลด้วยการรับรอง KC และอุปกรณ์ความปลอดภัยคู่",
+    "moz.cta.title": "การพักผ่อนที่อบอุ่นกับ MOZ",
+    "moz.cta.description":
+      "สัมผัสการนอนหลับที่มีสุขภาพดีด้วยเทคโนโลยีความร้อนคาร์บอนขั้นสูง",
+    "moz.cta.button": "สอบถามผลิตภัณฑ์",
 
     // InYourHeart Brand Page
     "inyourheart.hero.title": "ใส่ความรู้สึกลงบนผิวของคุณ",
