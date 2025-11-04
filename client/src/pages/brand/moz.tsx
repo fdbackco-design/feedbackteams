@@ -3,7 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import mozImage from "@/assets/brand/moz.png";
-import mozVideo from "@/assets/moz_video.mp4";
+import mozImageS from "@/assets/brand/moz_simgle.png";
+import mozImageD from "@/assets/brand/moz_double.jpg";
+import mozVideo from "@/assets/moz.mp4";
 import LazyVideo from "@/components/LazyVideo";
 import {
   Thermometer,
@@ -144,7 +146,7 @@ export default function MozPage() {
         {/* Content over video */}
         <div className="relative z-10 h-full flex items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="max-w-3xl text-white">
+            <div className="max-w-3xl text-white">
               <div className="space-y-8">
                 <div className="space-y-4">
                   <h1 className="text-6xl lg:text-7xl font-bold text-white">
@@ -174,7 +176,7 @@ export default function MozPage() {
           </div>
         </div>
       </section>
-      
+
       {/* Key Features Section */}
       <section
         ref={featuresRef}
@@ -238,7 +240,7 @@ export default function MozPage() {
             <div className="order-2 lg:order-1">
               <div className="relative">
                 <img
-                  src={mozImage}
+                  src={mozImageS}
                   alt={productSizes[0].type}
                   className="w-full rounded-3xl shadow-2xl"
                 />
@@ -314,7 +316,7 @@ export default function MozPage() {
             <div>
               <div className="relative">
                 <img
-                  src={mozImage}
+                  src={mozImageD}
                   alt={productSizes[1].type}
                   className="w-full rounded-3xl shadow-2xl"
                 />
