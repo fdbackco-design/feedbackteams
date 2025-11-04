@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import mozImage from "@/assets/brand/moz.png";
+import mozVideo from "@/assets/moz_video.mp4";
+import LazyVideo from "@/components/LazyVideo";
 import {
   Thermometer,
   Shield,
@@ -12,6 +14,7 @@ import {
   Moon,
   Zap,
   Award,
+  ArrowLeft,
 } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -104,39 +107,68 @@ export default function MozPage() {
       {/* Hero Section */}
       <section
         ref={heroRef}
-        className="relative overflow-hidden bg-gradient-to-br from-[#8B7355] to-[#6d5940] pt-48 pb-48"
+        className="relative h-screen w-full overflow-hidden"
         style={{
           opacity: 0,
           transform: "translateY(30px)",
           transition: "opacity 0.8s ease-out, transform 0.8s ease-out",
         }}
       >
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <h1 className="text-6xl lg:text-7xl font-bold text-white">
-                  MOZ
-                </h1>
-                <p className="text-2xl text-white font-semibold">
-                  {t("moz.hero.tagline")}
+        {/* Background Video */}
+        <div className="absolute inset-0 w-full h-full">
+          <LazyVideo
+            src={mozVideo}
+            className="w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+          />
+        </div>
+
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/40"></div>
+
+        {/* Back Navigation - Positioned over video */}
+        <div className="absolute top-6 left-6 z-20">
+          <Link href="/brand">
+            <Button
+              variant="outline"
+              className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              {t("브랜드 목록으로 돌아가기")}
+            </Button>
+          </Link>
+        </div>
+
+        {/* Content over video */}
+        <div className="relative z-10 h-full flex items-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="max-w-3xl text-white">
+              <div className="space-y-8">
+                <div className="space-y-4">
+                  <h1 className="text-6xl lg:text-7xl font-bold text-white">
+                    MOZ
+                  </h1>
+                  <p className="text-2xl text-white font-semibold">
+                    {t("moz.hero.tagline")}
+                  </p>
+                </div>
+
+                <p className="text-xl text-white/90 leading-relaxed">
+                  {t("moz.hero.description")}
                 </p>
-              </div>
 
-              <p className="text-xl text-white/90 leading-relaxed">
-                {t("moz.hero.description")}
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#8B7355] px-8 py-4 text-lg font-semibold"
-                  onClick={() => setLocation("/contact")}
-                >
-                  {t("moz.hero.cta")}
-                </Button>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#8B7355] px-8 py-4 text-lg font-semibold"
+                    onClick={() => setLocation("/contact")}
+                  >
+                    {t("moz.hero.cta")}
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
