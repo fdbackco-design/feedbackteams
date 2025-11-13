@@ -134,7 +134,7 @@ export default function News() {
                       </Badge>
                       <time className="text-gray-500 text-sm">{news.date}</time>
                     </div>
-                    <CardTitle className="break-keep text-pretty leading-snug font-bold text-gray-900 line-clamp-2 h-[3.5rem]" style={{ fontSize: 'clamp(18px, 4vw, 24px)' }}>
+                    <CardTitle className="break-keep text-pretty leading-snug font-bold text-gray-900 line-clamp-2 h-[4.5rem]" style={{ fontSize: 'clamp(18px, 4vw, 24px)' }}>
                       {t(`news.${news.originalIndex}.title`)}
                     </CardTitle>
                   </CardHeader>
