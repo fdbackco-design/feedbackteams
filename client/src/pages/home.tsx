@@ -48,7 +48,7 @@ import hoidImg from "@assets/brand2_1754881083408.jpg";
 import medifeedImg from "@assets/medifeed_1_1754636614100.jpg";
 import asranImg from "@assets/asran_product_set.jpg";
 import sangsaengImg from "@assets/sangsaeng_1_1754636754183.jpg";
-import lacerasImg from "@/assets/brand/laceras.jpg";
+import lacerasImg from "@/assets/laceras_carrier.jpg";
 import carvellaImg from "@/assets/brand/carvella.png";
 import brandLineupImg from "@assets/brand_lineup_new_1760340660583.png";
 import newsData from "@/data/news.json";
