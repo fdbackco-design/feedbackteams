@@ -478,7 +478,7 @@ export default function About() {
               />
 
               <p
-                className="about-story-sub"
+                className="about-story-sub w-full text-center"
                 dangerouslySetInnerHTML={{ __html: t("about.story.sub") }}
               />
 
