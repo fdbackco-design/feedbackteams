@@ -46,7 +46,7 @@ import newsBackgroundImage from "@assets/representation-user-experience-interfac
 import serviceBackgroundImage from "@assets/futuristic-warehouse-with-blue-neon-lights-connected-data_1754566796044.jpg";
 import hoidImg from "@assets/brand2_1754881083408.jpg";
 import medifeedImg from "@assets/medifeed_1_1754636614100.jpg";
-import asranImg from "@/assets/asran_product_set.jpg";
+import asranImg from "@assets/asran_product_set.jpg";
 import sangsaengImg from "@assets/sangsaeng_1_1754636754183.jpg";
 import lacerasImg from "@/assets/brand/laceras.jpg";
 import carvellaImg from "@/assets/brand/carvella.png";
