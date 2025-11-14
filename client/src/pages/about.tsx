@@ -815,9 +815,9 @@ export default function About() {
             </div>
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-12 w-full flex justify-center">
             <p
-              className="about-org-description text-[20px]"
+              className="about-org-description text-[20px] w-full text-center"
               dangerouslySetInnerHTML={{ __html: t("about.org.description") }}
             />
           </div>
