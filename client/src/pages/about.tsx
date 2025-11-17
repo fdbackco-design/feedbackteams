@@ -473,7 +473,7 @@ export default function About() {
           <div className="text-center mb-16">
             <div className="text-lg text-foreground leading-relaxed space-y-8 max-w-4xl mx-auto">
               <p
-                className="about-story-main text-[30px]"
+                className="about-story-main text-[30px] text-center"
                 dangerouslySetInnerHTML={{ __html: t("about.story.main") }}
               />
 
