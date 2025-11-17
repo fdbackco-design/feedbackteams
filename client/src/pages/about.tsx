@@ -549,6 +549,7 @@ export default function About() {
               <div className="lg:w-1/2 text-center lg:text-left">
                 <h3
                   className="about-philosophy-title mb-6"
+                  style={{ whiteSpace: 'nowrap' }}
                   dangerouslySetInnerHTML={{
                     __html: t("about.philosophy.value1.title"),
                   }}
