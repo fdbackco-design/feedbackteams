@@ -641,7 +641,8 @@ html {
 
 /* Philosophy Section Titles */
 .about-philosophy-title {
-  @apply text-fluid-sub break-keep text-balance text-pretty leading-tight-mobile font-bold text-gray-900 maxw-title;
+  @apply text-fluid-sub break-keep text-balance text-pretty leading-tight-mobile font-bold text-gray-900;
+  max-width: 100%;
 }
 
 .about-philosophy-description {
