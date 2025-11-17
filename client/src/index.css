@@ -630,7 +630,8 @@ html {
 }
 
 .about-story-sub {
-  @apply break-keep text-pretty leading-snug font-semibold text-gray-900 maxw-title;
+  @apply break-keep text-pretty leading-snug font-semibold text-gray-900;
+  max-width: 100%;
 }
 
 .about-story-detail {
