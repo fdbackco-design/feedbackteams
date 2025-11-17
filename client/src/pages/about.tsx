@@ -815,16 +815,13 @@ export default function About() {
             </div>
           </div>
 
-          <div className="w-full mt-12 px-4">
-            <p
-              className="about-org-description text-[20px]"
-              style={{ 
-                textAlign: 'center',
-                width: '100%',
-                margin: '0 auto'
-              }}
-              dangerouslySetInnerHTML={{ __html: t("about.org.description") }}
-            />
+          <div className="w-full flex justify-center mt-12 px-4">
+            <div className="max-w-4xl w-full">
+              <p
+                className="about-org-description text-[20px] text-center"
+                dangerouslySetInnerHTML={{ __html: t("about.org.description") }}
+              />
+            </div>
           </div>
         </div>
       </section>
