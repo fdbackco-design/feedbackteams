@@ -472,10 +472,10 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="text-lg text-foreground leading-relaxed space-y-8 max-w-4xl mx-auto">
-              <p
+              {/* <p
                 className="about-story-main text-[30px] text-center"
                 dangerouslySetInnerHTML={{ __html: t("about.story.main") }}
-              />
+              /> */}
 
               <p
                 className="about-story-sub w-full text-center"
@@ -483,7 +483,7 @@ export default function About() {
               />
 
               <p
-                className="about-story-detail text-[20px]"
+                className="about-story-detail text-[20px] text-center"
                 dangerouslySetInnerHTML={{ __html: t("about.story.detail") }}
               />
             </div>
@@ -755,7 +755,10 @@ export default function About() {
       <section className="py-20 bg-gradient-to-br from-muted to-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <blockquote className="about-ceo-quote mb-8 text-center" style={{ maxWidth: '100%' }}>
+            <blockquote
+              className="about-ceo-quote mb-8 text-center"
+              style={{ maxWidth: "100%" }}
+            >
               {t("about.ceo.quote")}
             </blockquote>
             <h2 className="about-ceo-title mb-8">{t("about.ceo.title")}</h2>
@@ -817,7 +820,7 @@ export default function About() {
           <div className="w-full flex justify-center mt-12">
             <p
               className="about-org-description text-[20px] w-full text-center"
-              style={{ maxWidth: '100%' }}
+              style={{ maxWidth: "100%" }}
               dangerouslySetInnerHTML={{ __html: t("about.org.description") }}
             />
           </div>
