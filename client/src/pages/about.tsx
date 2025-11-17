@@ -755,7 +755,7 @@ export default function About() {
       <section className="py-20 bg-gradient-to-br from-muted to-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <blockquote className="about-ceo-quote mb-8 text-center">
+            <blockquote className="about-ceo-quote mb-8 text-center" style={{ maxWidth: '100%' }}>
               {t("about.ceo.quote")}
             </blockquote>
             <h2 className="about-ceo-title mb-8">{t("about.ceo.title")}</h2>
