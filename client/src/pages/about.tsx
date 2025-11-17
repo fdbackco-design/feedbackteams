@@ -310,6 +310,68 @@ const TechnologySVG = () => (
   </svg>
 );
 
+// 새로운 브랜드 메시지 배너 - 미래형 창고 배경
+const BrandMessageBannerSVG = ({ title }: { title: string }) => (
+  <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+    {/* 배경 이미지 */}
+    <div className="absolute inset-0">
+      <img
+        src={warehouseImage}
+        alt="미래형 유통 창고"
+        className="w-full h-full object-cover"
+      />
+      {/* 어둡게 하는 오버레이 */}
+      <div className="absolute inset-0 bg-black/40"></div>
+      {/* 블루 그라디언트 오버레이 */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/30 via-transparent to-blue-900/30"></div>
+    </div>
+
+    {/* 메인 텍스트 */}
+    <div className="relative z-10 flex items-center justify-center h-96 px-8">
+      <div className="text-center">
+        <h2
+          className="about-banner-title mb-4"
+          style={{ textShadow: "2px 2px 8px rgba(0,0,0,0.8)" }}
+          dangerouslySetInnerHTML={{ __html: title }}
+        />
+      </div>
+    </div>
+
+    {/* 네온 스타일 장식 요소들 */}
+    <div className="absolute top-4 left-4 opacity-60">
+      <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+    </div>
+    <div className="absolute top-8 right-8 opacity-60">
+      <div
+        className="w-2 h-2 bg-cyan-300 rounded-full animate-pulse"
+        style={{ animationDelay: "0.5s" }}
+      ></div>
+    </div>
+    <div className="absolute bottom-6 left-6 opacity-60">
+      <div
+        className="w-2 h-2 bg-blue-300 rounded-full animate-pulse"
+        style={{ animationDelay: "1s" }}
+      ></div>
+    </div>
+
+    {/* 연결선 그래픽 요소 */}
+    <div className="absolute bottom-4 right-4 opacity-40">
+      <svg width="80" height="60" viewBox="0 0 80 60" className="text-blue-300">
+        <path
+          d="M 10 30 Q 25 10 40 30 Q 55 50 70 30"
+          stroke="currentColor"
+          strokeWidth="2"
+          fill="none"
+          className="drop-shadow-lg"
+        />
+        <circle cx="10" cy="30" r="2" fill="currentColor" />
+        <circle cx="40" cy="30" r="2" fill="currentColor" />
+        <circle cx="70" cy="30" r="2" fill="currentColor" />
+      </svg>
+    </div>
+  </div>
+);
+
 export default function About() {
   const { t } = useLanguage();
   const [timelineVisible, setTimelineVisible] = useState<boolean[]>([]);
@@ -399,11 +461,22 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* 브랜드 메시지 배너 */}
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <BrandMessageBannerSVG title={t("about.story.main")} />
+        </div>
+      </section>
       {/* Company Story Section - 쿠쿠 스타일 스토리텔링 */}
       <section className="py-20 bg-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="text-lg text-foreground leading-relaxed space-y-8 max-w-4xl mx-auto">
+              <p
+                className="about-story-main text-[30px] text-center"
+                dangerouslySetInnerHTML={{ __html: t("about.story.main") }}
+              />
+
               <p
                 className="about-story-sub w-full text-center"
                 dangerouslySetInnerHTML={{ __html: t("about.story.sub") }}
