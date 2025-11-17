@@ -782,7 +782,7 @@ export default function About() {
               </div>
 
               {/* 메시지 영역 */}
-              <div className="lg:w-2/3 p-12">
+              <div className="lg:w-2/3 p-6 sm:p-8 lg:p-12">
                 <div className="space-y-6 text-foreground leading-relaxed">
                   <p className="about-ceo-message">{t("about.ceo.message1")}</p>
 
@@ -790,7 +790,7 @@ export default function About() {
 
                   <p className="about-ceo-message">{t("about.ceo.message3")}</p>
 
-                  <div className="bg-primary/5 p-6 rounded-xl border-l-4 border-primary">
+                  <div className="bg-primary/5 p-4 sm:p-6 rounded-xl border-l-4 border-primary">
                     <p className="about-ceo-highlight">
                       {t("about.ceo.highlight")}
                     </p>
