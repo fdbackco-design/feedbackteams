@@ -578,7 +578,7 @@ export default function About() {
               </div>
               <div className="lg:w-1/2 text-center lg:text-right">
                 <h3
-                  className="about-philosophy-title mb-6"
+                  className="about-philosophy-title mb-6 lg:text-right"
                   dangerouslySetInnerHTML={{
                     __html: t("about.philosophy.value2.title"),
                   }}
