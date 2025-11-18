@@ -663,6 +663,10 @@ html {
   .about-philosophy-section h3 {
     font-size: 30px;
   }
+
+  .about-philosophy-section p {
+    font-size: 24px;
+  }
 }
 
 .about-story-detail {
