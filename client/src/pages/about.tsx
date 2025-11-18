@@ -174,13 +174,14 @@ export default function About() {
 
       {/* Parallax Section */}
       <section
-        className="relative min-h-[80vh] flex items-center justify-center overflow-hidden"
+        className="relative flex items-center justify-center overflow-hidden"
         style={{
           backgroundImage: `url(${peopleImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
           backgroundRepeat: "no-repeat",
+          height: "450px",
         }}
       >
         <div className="absolute inset-0 bg-black/40"></div>
