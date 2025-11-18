@@ -178,40 +178,40 @@ html {
   .service-card-title {
     @apply card-title;
   }
-  
+
   .service-card-description {
     @apply body-text;
   }
-  
+
   /* Stats section mobile optimizations */
   .section-title-primary-white {
     @apply text-xl sm:text-2xl md:text-3xl;
   }
-  
+
   .section-subtitle-light {
     @apply text-xs sm:text-sm;
   }
-  
+
   .section-description-white {
     @apply text-sm leading-relaxed;
   }
-  
+
   /* Mobile navigation improvements */
   .mobile-nav-indicator {
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.1);
   }
-  
+
   /* Ensure navigation doesn't interfere with content */
   @media (max-width: 768px) {
     .section-navigation {
       z-index: 30;
     }
-    
+
     .main-content {
       padding-bottom: 80px;
     }
-    
+
     /* CTA section video mobile optimization */
     .cta-video-mobile {
       width: 100vw !important;
@@ -221,7 +221,7 @@ html {
   }
 }
 
-/* Better mobile viewport handling */
+/* Better mobile viewport heights */
 @media (max-width: 639px) {
   .mobile-full-height {
     height: 100vh;
@@ -384,7 +384,7 @@ html {
   --marquee-padding-desktop: 1.5rem;
   --marquee-gap-mobile: 4rem;
   --marquee-gap-desktop: 4rem;
-  
+
   /* Global Typography Optimization */
   --hero-title-min: 22px;
   --hero-title-max: 44px;
@@ -639,6 +639,18 @@ html {
   .about-section-title br,
   h2 br {
     display: none;
+  }
+
+  h2 {
+    line-height: 18px;
+  }
+
+  .about-brand-description br {
+    display: none;
+  }
+
+  .about-brand-description {
+    line-height: 18px;
   }
 }
 
@@ -1109,7 +1121,7 @@ html {
     .nav-dots {
       right: 1rem;
     }
-    
+
     .nav-arrows {
       left: 1rem;
     }
