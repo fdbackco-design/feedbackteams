@@ -367,8 +367,7 @@ const translations = {
     // About Page
     "about.story.main":
       '<span class="text-white">피드백은 브랜드의 성장을 <br>유통으로 설계합니다.</span>',
-    "about.story.sub":
-      'Hoid, Medifeed, InYourHeart, 상생 등 자체 브랜드와 글로벌 파트너십을 기반으로,<br class="hidden sm:block"/>기획부터 제조·유통·브랜딩까지 전 과정을 함께합니다.',
+    "about.story.sub": "피드백은 브랜드의 성장을 유통으로 설계합니다.",
     "about.story.detail":
       "피드백은 브랜드의 성장을 유통으로 설계합니다.",
     "about.banner.title":
