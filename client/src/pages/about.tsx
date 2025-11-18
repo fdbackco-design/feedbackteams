@@ -26,7 +26,7 @@ import mapImage from "@assets/map_1754832577677.png";
 import newOrganizationChart from "@assets/company.png";
 import heroBackground from "@assets/company_banner_1763445755615.jpg";
 import puzzleImage from "@assets/company_1_1763452920681.jpg";
-import company2Image from "@assets/company_2_1754983649735.png";
+import company2Image from "@assets/company_2_1763453336679.jpg";
 
 export default function About() {
   const { t } = useLanguage();
