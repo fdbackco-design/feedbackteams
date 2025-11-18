@@ -234,7 +234,7 @@ export default function About() {
           <div className="space-y-16">
             {/* 첫 번째 가치 */}
             <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div className="order-2 lg:order-1">
+              <div className="order-1">
                 <img
                   src={puzzleImage}
                   alt="고객·파트너 중심"
@@ -259,7 +259,14 @@ export default function About() {
 
             {/* 두 번째 가치 */}
             <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div className="order-1 text-left">
+              <div className="order-1">
+                <img
+                  src={company2Image}
+                  alt="통합 실행력"
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="order-2 lg:order-2 text-left">
                 <h3
                   className="text-2xl font-bold mb-4"
                   dangerouslySetInnerHTML={{
@@ -273,25 +280,18 @@ export default function About() {
                   }}
                 />
               </div>
-              <div className="order-2">
-                <img
-                  src={company2Image}
-                  alt="통합 실행력"
-                  className="w-full h-auto"
-                />
-              </div>
             </div>
 
             {/* 세 번째 가치 */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="order-2 lg:order-1">
+              <div className="order-1">
                 <img
                   src={company3Image}
                   alt="글로벌 시장"
                   className="w-full h-auto"
                 />
               </div>
-              <div className="text-left order-1 lg:order-2">
+              <div className="text-left order-2">
                 <h3
                   className="text-2xl font-bold mb-4"
                   dangerouslySetInnerHTML={{
@@ -309,7 +309,14 @@ export default function About() {
 
             {/* 네 번째 가치 */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="text-left order-1">
+              <div className="order-1">
+                <img
+                  src={company4Image}
+                  alt="신뢰와 파트너십"
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="text-left order-2">
                 <h3
                   className="text-2xl font-bold mb-4"
                   dangerouslySetInnerHTML={{
@@ -321,13 +328,6 @@ export default function About() {
                   dangerouslySetInnerHTML={{
                     __html: t("about.philosophy.value4.description"),
                   }}
-                />
-              </div>
-              <div className="order-2">
-                <img
-                  src={company4Image}
-                  alt="신뢰와 파트너십"
-                  className="w-full h-auto"
                 />
               </div>
             </div>
