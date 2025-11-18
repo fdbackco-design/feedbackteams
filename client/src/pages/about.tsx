@@ -118,17 +118,6 @@ export default function About() {
           background: 'linear-gradient(135deg, #4A90E2 0%, #87CEEB 50%, #E8F4F8 100%)',
         }}
       >
-        {/* 구름 효과 SVG */}
-        <div className="absolute inset-0 opacity-30">
-          <svg className="w-full h-full" viewBox="0 0 1200 600" fill="none">
-            <path d="M0 300 Q 300 250 600 300 T 1200 300" stroke="white" strokeWidth="2" fill="none" opacity="0.3"/>
-            <path d="M0 350 Q 400 320 800 350 T 1200 350" stroke="white" strokeWidth="2" fill="none" opacity="0.2"/>
-            <ellipse cx="200" cy="150" rx="80" ry="40" fill="white" opacity="0.4"/>
-            <ellipse cx="500" cy="100" rx="120" ry="50" fill="white" opacity="0.3"/>
-            <ellipse cx="900" cy="180" rx="100" ry="45" fill="white" opacity="0.35"/>
-          </svg>
-        </div>
-
         {/* 메인 콘텐츠 */}
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-black mb-6 tracking-tight">
