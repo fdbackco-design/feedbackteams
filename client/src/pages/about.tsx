@@ -149,7 +149,7 @@ export default function About() {
               기획부터 제조·유통·브랜딩까지 전 과정을 함께합니다.
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
-              고객의 성 속에 스며든 FeedBack의 브랜드 하나하나가 고객 여러분의
+              고객의 삶 속에 스며든 FeedBack의 브랜드 하나하나가 고객 여러분의
               하루를 더욱 편리하고 행복하게 만들 수 있도록
               <br />
               언제나 노력하는 FeedBack이 되겠습니다.
