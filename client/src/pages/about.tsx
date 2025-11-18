@@ -28,6 +28,7 @@ import heroBackground from "@assets/company_banner_1763445755615.jpg";
 import puzzleImage from "@assets/company_1_1763452920681.jpg";
 import company2Image from "@assets/company_2_1763453336679.jpg";
 import company3Image from "@assets/company_3_1763453490728.jpg";
+import company4Image from "@assets/company_4_1763453574772.jpg";
 
 export default function About() {
   const { t } = useLanguage();
@@ -301,19 +302,28 @@ export default function About() {
             </div>
 
             {/* 네 번째 가치 */}
-            <div className="text-left">
-              <h3
-                className="text-2xl font-bold mb-4"
-                dangerouslySetInnerHTML={{
-                  __html: t("about.philosophy.value4.title"),
-                }}
-              />
-              <p
-                className="text-lg text-gray-700 leading-relaxed"
-                dangerouslySetInnerHTML={{
-                  __html: t("about.philosophy.value4.description"),
-                }}
-              />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="order-1">
+                <img
+                  src={company4Image}
+                  alt="신뢰와 파트너십"
+                  className="w-full h-auto rounded-xl shadow-lg"
+                />
+              </div>
+              <div className="text-left order-2">
+                <h3
+                  className="text-2xl font-bold mb-4"
+                  dangerouslySetInnerHTML={{
+                    __html: t("about.philosophy.value4.title"),
+                  }}
+                />
+                <p
+                  className="text-lg text-gray-700 leading-relaxed"
+                  dangerouslySetInnerHTML={{
+                    __html: t("about.philosophy.value4.description"),
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>
