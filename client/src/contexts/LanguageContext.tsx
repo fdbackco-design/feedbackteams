@@ -236,7 +236,7 @@ const translations = {
     "news.1.summary":
       "Hoid의 프리미엄 라이프스타일 가전 브랜드로서 첫 번째 대표 제품인 Hoid 공기청정기 1세대를 공식 출시했습니다.",
     "news.1.content":
-      "Hoid는 프리미엄 라이프스타일 가전 브랜드로서 첫 번째 대표 제품인 Hoid 공기청정기 1세대를 공식 출시했습니다. 이 제품은 강력한 3중 필터 시스템과 360도 전방위 공기 순환 구조를 적용하여, 실내 공기를 빠르게 정화하고 최상의 청정도를 유지합니다. 또한, 세련되고 미니멀한 디자인은 어떤 인테리어 공간에도 자연스럽게 어우러지며, 저소음 모터와 에너지 절약 기능까지 갖추어 사용자의 생활 품질을 높여줍니다. 이번 출시를 통해 Hoid는 공기청정기 시장에 본격 진입하며, 향후 지속적인 기술 혁신과 제품 라인업 확장을 예고했습니다.",
+      "Hoid는 프리미엄 라이프스타일 가전 브랜드로서 첫 번째 대표 제품인 Hoid 공기청정기 1세대를 공식 출시했습니다. 이 제품은 강력한 3중 필터 시스템과 360도 전방위 공기 순환 구조를 적용하여, 실내 공기를 빠르게 정화하고 최상의 청정도를 유지합니다. 또한, 세련되고 미니멀한 디자인은 어떤 인테리어 공간에도 자연스럽게 어우러지며, 저소음 모터와 에너지 절약 기n��까지 갖추어 사용자의 생활 품질을 높여줍니다. 이번 출시를 통해 Hoid는 공기청정기 시장에 본격 진입하며, 향후 지속적인 기술 혁신과 제품 라인업 확장을 예고했습니다.",
     "news.2.date": "2025.08.08",
     "news.2.title": "Hoid 청소기 공장 방문",
     "news.2.summary":
@@ -368,12 +368,11 @@ const translations = {
     "about.story.main":
       '<span class="text-white">피드백은 브랜드의 성장을 <br>유통으로 설계합니다.</span>',
     "about.story.sub": "피드백은 브랜드의 성장을 유통으로 설계합니다.",
-    "about.story.detail":
-      "피드백은 브랜드의 성장을 유통으로 설계합니다.",
+    "about.story.detail": "피드백은 브랜드의 성장을 유통으로 설계합니다.",
     "about.banner.title":
       '피드백은 브랜드의 성장을<br class="block" /><span class="text-[#ffffff]"> 유통으로 설계합니다</span>',
     "about.parallax.title":
-      '고객의 삶 속에 스며든 FeedBack의 브랜드 하나하나가 고객 여러분의 하루를<br class="hidden sm:block"/>더욱 편리하고 행복하게 만들 수 있도록 언제나 노력하는 FeedBack이 되겠습니다.',
+      "고객님의 생활 속 행복을 목표로 열정 넘치는 이들이 모인 FeedBack은",
     "about.parallax.description":
       '최고의 제품을 안겨드리기 위해 기술혁신에 끊임없이 노력을 기울이고 있으며,<br class="hidden sm:block"/>이를 위한 연구개발투자 또한 지속적으로 이루어지고 있습니다.',
     "about.philosophy.title": "경영철학",
@@ -401,7 +400,7 @@ const translations = {
     "about.philosophy.value2.description":
       '단순 유통을 넘어 상품 기획, 브랜딩, 마케팅, 유통 채널을<br class="hidden lg:block"/>유기적으로 연결합니다.<br class="hidden sm:block lg:hidden"/>고유한 OEM 역량과 자체 브랜드 경험을 결합하여,<br class="hidden lg:block"/>브랜드가 시장에서 자리 잡도록 실행 가능한 솔루션을 제공합니다.<br/><br/><span class="font-semibold text-primary">제품력에 브랜딩을 입히고, 브랜딩에 유통을 결합하며,<br class="hidden lg:block"/>유통에 경험과 콘텐츠를 심는 방식이 FeedBack의 방식</span>입니다.',
     "about.philosophy.value3.title":
-      '글로벌 시장에서 경쟁력을 만드는<br class="hidden lg:block"/> 실행 중심 기업',
+      '글로벌 시장에서 경쟁력을 늌드는<br class="hidden lg:block"/> 실행 중심 기업',
     "about.philosophy.value3.description":
       '아시아를 기반으로 성장해 온 브랜드에게<br class="hidden lg:block"/>글로벌 시장 진출 기회를 제공합니다.<br/><br/><span class="font-semibold text-primary">전략적 진출 설계 + 제휴 기반 실행력</span>을 통해<br class="hidden lg:block"/>브랜드의 세계화를 지원하고,<br class="hidden lg:block"/>국내외 파트너와의 협업을 통해<br class="hidden lg:block"/>더 크고 넓은 시장에서 기회를 <br class="block lg:hidden"/>창출합니다.',
     "about.philosophy.value4.title": "신뢰를 통한 장기 파트너십 구축",
@@ -480,7 +479,7 @@ const translations = {
     "hoid.hero.cta": "Hoid 홈페이지 가기",
     "hoid.features.title": "혁신적인 기술력",
     "hoid.features.subtitle":
-      "미니멀한 디자인 속에 숨어있는 첨단 기술로 완전히 새로운 공기청정 경험을 제공합니다",
+      "미니멀한 디자인 속에 숨어있��� 첨단 기술로 완전히 새로운 공기청정 경험을 제공합니다",
     "hoid.homeshopping.date": "2025년 8월 런칭",
     "hoid.homeshopping.heading": "프리미엄 디자인 가전, 이제 집에서 만나보세요",
     "hoid.homeshopping.description":
@@ -827,8 +826,7 @@ const translations = {
 
     // Asran Details
     "asran.feature1.title": "SUS410 스테인리스 스틸",
-    "asran.feature1.description":
-      "최고급 소재로 내구성과 안전성을 보장합니다",
+    "asran.feature1.description": "최고급 소재로 내구성과 안전성을 보장합니다",
     "asran.feature1.detail1": "부식 방지 & 변색 방지",
     "asran.feature1.detail2": "위생적이고 안전한 조리",
     "asran.feature1.detail3": "반영구적 사용 가능",
@@ -1840,7 +1838,7 @@ const translations = {
     "footer.bottom.copyright": "© 2024 FeedBack Corp. สงวนลิขสิทธิ์",
     "footer.bottom.bizinfo":
       "เลขทะเบียนธุรกิจ: 296-87-03628 | ซีอีโอ: Hae-min Song, Sung-hyun Jeong",
-    "footer.bottom.privacy": "นโยบายความเป็นส่วนตัว",
+    "footer.bottom.privacy": "นโยบายความเป็นสจวนตัว",
     "footer.bottom.terms": "ข้อกำหนดการใช้งาน",
     "footer.bottom.cookies": "นโยบายคุกกี้",
 
@@ -1921,7 +1919,7 @@ const translations = {
     "brands.sangsaeng.slogan":
       "WE CONNECT KOREAN MEDICAL SERVICES TO THE WORLD",
     "brands.sangsaeng.description":
-      "แพลตฟอร์มการแพทย์ครบวงจร เชื่อมบริการการแพทย์ชั้นเยี่ยมของเกาหลีสู่ทั่วโลก ตั้งแต่เมดิคัลทัวริซึมถึงเฮลธ์แคร์แพลตฟอร์ม",
+      "แพลตฟอร์มการแพทย์ครบวงจร เชื่อมบริการการแพทย์ชั้นเยี่ยมของเกาหลีสู่ทั่วโลก ตั้งแต่เมดิคัลทัวร���ซึมถึงเฮลธ์แคร์แพลตฟอร์ม",
     "brands.sangsaeng.products.0": "ท่องเที่ยวเชิงการแพทย์",
     "brands.sangsaeng.products.1": "แพลตฟอร์มเฮลธ์แคร์",
     "brands.sangsaeng.products.2": "แอปหลายภาษา",
@@ -1995,7 +1993,7 @@ const translations = {
     "b2b2c.b2c.feature3": "ขยายสู่ระดับโลก",
     "b2b2c.summary.title": "ระบบนิเวศการกระจายสินค้าที่สมบูรณ์ — FeedBack",
     "b2b2c.summary.description":
-      "FeedBack ออกแบบและเพิ่มประสิทธิภาพกระบวนการกระจายสินค้าทั้งหมด เพื่อให้สินค้าคุณภาพจากผู้ผลิตไปถึงผู้บริโภคได้สำเร็จ",
+      "FeedBack ออกแบบและเพิ่มประสิทธิภาพกระบวนก���รกระจายสินค้าทั้งหมด เพื่อให้สินค้าคุณภาพจากผู้ผลิตไปถึงผู้บริโภคได้สำเร็จ",
 
     // News Section
     "news.title": "ข่าว & ข่าวประชาสัมพันธ์",
@@ -2129,7 +2127,7 @@ const translations = {
     // Hoid Brand Page
     "hoid.hero.title": "공기 속까지 바꾸는 디자인",
     "hoid.hero.description":
-      "미니멀한 디자인과 첨단 기술이 만나 일상의 공기질을 혁신하는 스마트 가전 브랜드입니다.",
+      "���니멀한 디자인과 첨단 기술이 만나 일상의 공기질을 혁신하는 스마트 가전 브랜드입니다.",
     "hoid.hero.cta": "Hoid 홈페이지 가기",
     "hoid.features.title": "혁신적인 기술력",
     "hoid.features.subtitle":
@@ -2373,7 +2371,7 @@ const translations = {
       "전자파 걱정 없이 따뜻하게 잘 수 있어서 너무 좋아요. 겨울철 필수템입니다!",
     "moz.review1.author": "김○○",
     "moz.review2":
-      "온도가 균일해서 발끝까지 포근해요. 아침에 일어나면 몸이 한결 가벼워진 느낌입니다.",
+      "온도가 균cr�해서 발끝까지 포근해요. 아침에 일어나면 몸이 한결 가벼워진 느낌입니다.",
     "moz.review2.author": "이○○",
     "moz.review3":
       "안전 인증 받은 제품이라 안심하고 사용할 수 있어요. 품질도 만족스럽습니다.",
@@ -2480,8 +2478,7 @@ const translations = {
 
     // Asran Details
     "asran.feature1.title": "SUS410 스테인리스 스틸",
-    "asran.feature1.description":
-      "최고급 소재로 내구성과 안전성을 보장합니다",
+    "asran.feature1.description": "최고급 소재로 내구성과 안전성을 보장합니다",
     "asran.feature1.detail1": "부식 방지 & 변색 방지",
     "asran.feature1.detail2": "위생적이고 안전한 조리",
     "asran.feature1.detail3": "반영구적 사용 가능",
