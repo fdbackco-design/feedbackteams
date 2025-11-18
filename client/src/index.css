@@ -660,15 +660,14 @@ html {
   .about-brand-description {
     line-height: 30px;
   }
-}
 
-/* Philosophy section typography */
-.about-philosophy-section h3 {
-  font-size: 30px;
-}
+  .about-philosophy-section h3 {
+    font-size: 30px;
+  }
 
-.about-philosophy-section p {
-  font-size: 24px;
+  .about-philosophy-section p {
+    font-size: 24px;
+  }
 }
 
 .about-story-detail {
