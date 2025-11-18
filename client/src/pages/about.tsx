@@ -25,7 +25,6 @@ import peopleImage from "@assets/people_1754639134434.jpg";
 import mapImage from "@assets/map_1754832577677.png";
 import newOrganizationChart from "@assets/company.png";
 import heroBackground from "@assets/company_banner_1763445755615.jpg";
-import puzzleImage from "@assets/company_1.jpg";
 
 export default function About() {
   const { t } = useLanguage();
@@ -140,7 +139,10 @@ export default function About() {
       </section>
 
       {/* Brand Partnership Section */}
-      <section className="bg-white" style={{ paddingTop: "150px", paddingBottom: "150px" }}>
+      <section
+        className="bg-white"
+        style={{ paddingTop: "150px", paddingBottom: "150px" }}
+      >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-full">
             <h2
