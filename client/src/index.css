@@ -654,6 +654,13 @@ html {
   }
 }
 
+/* Desktop styles for about-brand-description */
+@media (min-width: 769px) {
+  .about-brand-description {
+    line-height: 30px;
+  }
+}
+
 .about-story-detail {
   @apply text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-700;
   max-width: 100%;
