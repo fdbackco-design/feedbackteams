@@ -249,7 +249,7 @@ export default function About() {
                   }}
                 />
                 <p
-                  className="text-lg text-gray-700 leading-relaxed"
+                  className="text-gray-700 leading-relaxed"
                   dangerouslySetInnerHTML={{
                     __html: t("about.philosophy.value1.description"),
                   }}
@@ -274,7 +274,7 @@ export default function About() {
                   }}
                 />
                 <p
-                  className="text-lg text-gray-700 leading-relaxed"
+                  className="text-gray-700 leading-relaxed"
                   dangerouslySetInnerHTML={{
                     __html: t("about.philosophy.value2.description"),
                   }}
@@ -299,7 +299,7 @@ export default function About() {
                   }}
                 />
                 <p
-                  className="text-lg text-gray-700 leading-relaxed"
+                  className="text-gray-700 leading-relaxed"
                   dangerouslySetInnerHTML={{
                     __html: t("about.philosophy.value3.description"),
                   }}
@@ -324,7 +324,7 @@ export default function About() {
                   }}
                 />
                 <p
-                  className="text-lg text-gray-700 leading-relaxed"
+                  className="text-gray-700 leading-relaxed"
                   dangerouslySetInnerHTML={{
                     __html: t("about.philosophy.value4.description"),
                   }}
