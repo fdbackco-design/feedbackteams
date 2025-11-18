@@ -135,22 +135,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Brand Partnership Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6" style={{ lineHeight: '69px' }}>
-              Hoid, Medifeed, InYourHeart, 상생 등<br />
-              자체 브랜드와 글로벌 파트너십을 기반으로 기획부터 제조·유통·브랜딩까지 전 과정을 함께합니다.
-            </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              고객의 성 속에 스며든 FeedBack의 브랜드 하나하나가 고객 여러분의 하루를 더욱 편리하고 행복하게 만들 수 있도록<br />
-              언제나 노력하는 FeedBack이 되겠습니다.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Company Story Section */}
       <section className="py-20 bg-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
