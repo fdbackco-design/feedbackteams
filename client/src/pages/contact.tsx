@@ -259,8 +259,8 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-            <h2 className="text-fluid-sub break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-gray-900 maxw-title mb-8">
+          <div className="bg-black rounded-2xl p-8 shadow-lg border border-gray-100">
+            <h2 className="text-fluid-sub break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-white maxw-title mb-8">
               {t("contact.form.title")}
             </h2>
 
