@@ -190,16 +190,10 @@ export default function About() {
         <div className="absolute inset-0 bg-black/40"></div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3
-            className="about-parallax-title mb-8 font-light"
-            dangerouslySetInnerHTML={{ __html: t("about.parallax.title") }}
-          />
-          <p
-            className="about-parallax-description max-w-3xl mx-auto"
-            dangerouslySetInnerHTML={{
-              __html: t("about.parallax.description"),
-            }}
-          />
+          <h3 className="about-parallax-title mb-8 font-light">
+            고객님의 생활 속 행복을 목표로<br />
+            열정 넘치는 이들이 모인 FeedBack은
+          </h3>
         </div>
       </section>
 
