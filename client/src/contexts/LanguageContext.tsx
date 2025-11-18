@@ -479,7 +479,7 @@ const translations = {
     "hoid.hero.cta": "Hoid 홈페이지 가기",
     "hoid.features.title": "혁신적인 기술력",
     "hoid.features.subtitle":
-      "미니멀한 디자인 속에 숨어있��� 첨단 기술로 완전히 새로운 공기청정 경험을 제공합니다",
+      "미니멀한 디자인 속에 숨어있는 첨단 기술로 완전히 새로운 공기청정 경험을 제공합니다",
     "hoid.homeshopping.date": "2025년 8월 런칭",
     "hoid.homeshopping.heading": "프리미엄 디자인 가전, 이제 집에서 만나보세요",
     "hoid.homeshopping.description":
