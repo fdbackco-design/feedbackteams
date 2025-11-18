@@ -135,13 +135,6 @@ export default function About() {
             {t("about.story.sub")}
           </p>
         </div>
-
-        {/* 하단 곡선 */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg className="w-full h-32" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M0,80 Q300,120 600,80 T1200,80 L1200,120 L0,120 Z" fill="white"/>
-          </svg>
-        </div>
       </section>
 
       {/* Company Story Section */}
