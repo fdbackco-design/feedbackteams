@@ -151,9 +151,9 @@ export default function About() {
           <div className="max-w-full">
             <h2
               className="font-bold text-black mb-6"
-              style={{ 
-                lineHeight: "69px", 
-                fontSize: "clamp(30px, 5vw, 50px)" 
+              style={{
+                lineHeight: "69px",
+                fontSize: "clamp(30px, 5vw, 50px)",
               }}
             >
               Hoid, Medifeed, InYourHeart, 상생 등<br />
@@ -161,11 +161,14 @@ export default function About() {
               <br />
               기획부터 제조·유통·브랜딩까지 전 과정을 함께합니다.
             </h2>
-            <p className="text-gray-600 leading-relaxed" style={{ fontSize: 'clamp(16px, 2vw, 24px)' }}>
-              고객의 삶 속에 스며든 FeedBack의 브랜드 하나하나가 고객 여러분의
+            <p
+              className="text-gray-600 leading-relaxed"
+              style={{ fontSize: "clamp(16px, 2vw, 23px)" }}
+            >
+              고객의 삶 속에 스며든 FEEDBACK의 브랜드 하나하나가 고객 여러분의
               하루를 더욱 편리하고 행복하게 만들 수 있도록
               <br />
-              언제나 노력하는 FeedBack이 되겠습니다.
+              언제나 노력하는 FEEDBACK이 되겠습니다.
             </p>
           </div>
         </div>
