@@ -163,7 +163,7 @@ export default function About() {
             </h2>
             <p
               className="text-gray-600 leading-relaxed about-brand-description"
-              style={{ fontSize: "clamp(16px, 2vw, 23px)" }}
+              style={{ fontSize: "clamp(18px, 2vw, 23px)" }}
             >
               고객의 삶 속에 스며든 FEEDBACK의 브랜드 하나하나가 고객 여러분의
               하루를 더욱 편리하고 행복하게 만들 수 있도록
