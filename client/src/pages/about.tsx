@@ -129,7 +129,7 @@ export default function About() {
           <h1 className="font-bold text-white mb-6 tracking-tight" style={{ fontSize: '60px' }}>
             FEEDBACK
           </h1>
-          <p className="text-xl md:text-2xl text-white font-regular">
+          <p className="text-white font-regular" style={{ fontSize: '20px' }}>
             {t("about.story.sub")}
           </p>
         </div>
