@@ -24,6 +24,7 @@ import trustImage from "@assets/hands_1754568922347.png";
 import peopleImage from "@assets/people_1754639134434.jpg";
 import mapImage from "@assets/map_1754832577677.png";
 import newOrganizationChart from "@assets/company.png";
+import heroBackground from "@assets/company_banner_1763445755615.jpg";
 
 export default function About() {
   const { t } = useLanguage();
@@ -111,19 +112,26 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section - 하늘 배경 */}
+      {/* Hero Section */}
       <section 
         className="relative min-h-[70vh] flex items-center justify-center overflow-hidden"
-        style={{
-          background: 'linear-gradient(135deg, #4A90E2 0%, #87CEEB 50%, #E8F4F8 100%)',
-        }}
       >
+        {/* 배경 이미지 */}
+        <div className="absolute inset-0">
+          <img
+            src={heroBackground}
+            alt="Company Background"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40"></div>
+        </div>
+
         {/* 메인 콘텐츠 */}
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-black mb-6 tracking-tight">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight">
             FEEDBACK
           </h1>
-          <p className="text-xl md:text-2xl text-gray-800 font-medium">
+          <p className="text-xl md:text-2xl text-white font-medium">
             {t("about.story.sub")}
           </p>
         </div>
