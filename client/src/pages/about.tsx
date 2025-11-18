@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -112,15 +113,14 @@ export default function About() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section - 하늘 배경 */}
-      <section
+      <section 
         className="relative min-h-[70vh] flex items-center justify-center overflow-hidden"
         style={{
-          background:
-            "linear-gradient(135deg, #4A90E2 0%, #87CEEB 50%, #E8F4F8 100%)",
+          background: 'linear-gradient(135deg, #4A90E2 0%, #87CEEB 50%, #E8F4F8 100%)',
         }}
       >
         {/* 구름 효과 SVG */}
-        {/* <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0 opacity-30">
           <svg className="w-full h-full" viewBox="0 0 1200 600" fill="none">
             <path d="M0 300 Q 300 250 600 300 T 1200 300" stroke="white" strokeWidth="2" fill="none" opacity="0.3"/>
             <path d="M0 350 Q 400 320 800 350 T 1200 350" stroke="white" strokeWidth="2" fill="none" opacity="0.2"/>
@@ -128,7 +128,7 @@ export default function About() {
             <ellipse cx="500" cy="100" rx="120" ry="50" fill="white" opacity="0.3"/>
             <ellipse cx="900" cy="180" rx="100" ry="45" fill="white" opacity="0.35"/>
           </svg>
-        </div> */}
+        </div>
 
         {/* 메인 콘텐츠 */}
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
@@ -142,15 +142,8 @@ export default function About() {
 
         {/* 하단 곡선 */}
         <div className="absolute bottom-0 left-0 right-0">
-          <svg
-            className="w-full h-32"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M0,80 Q300,120 600,80 T1200,80 L1200,120 L0,120 Z"
-              fill="white"
-            />
+          <svg className="w-full h-32" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,80 Q300,120 600,80 T1200,80 L1200,120 L0,120 Z" fill="white"/>
           </svg>
         </div>
       </section>
@@ -160,9 +153,10 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="text-lg text-foreground leading-relaxed space-y-8 max-w-4xl mx-auto">
-              <p className="about-story-detail text-[20px] text-center">
-                피드백은 브랜드의 성장을 유통으로 설계합니다.
-              </p>
+              <p
+                className="about-story-detail text-[20px] text-center"
+                dangerouslySetInnerHTML={{ __html: t("about.story.detail") }}
+              />
             </div>
           </div>
         </div>
