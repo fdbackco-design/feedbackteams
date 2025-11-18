@@ -217,10 +217,19 @@ export default function About() {
       </section>
 
       {/* 경영철학 */}
-      <section className="bg-white about-philosophy-section" style={{ paddingTop: "150px", paddingBottom: "150px" }}>
+      <section
+        className="bg-white about-philosophy-section"
+        style={{ paddingTop: "150px", paddingBottom: "150px" }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row lg:items-center mb-16 gap-8" style={{ justifyContent: "left" }}>
-            <h2 className="about-section-title" style={{ marginLeft: 0, marginRight: "50px" }}>
+          <div
+            className="flex flex-col lg:flex-row lg:items-center mb-16 gap-8"
+            style={{ justifyContent: "left" }}
+          >
+            <h2
+              className="about-section-title"
+              style={{ marginLeft: 0, marginRight: "50px" }}
+            >
               {t("about.philosophy.title")}
             </h2>
             <p
@@ -232,7 +241,7 @@ export default function About() {
           </div>
 
           <div className="space-y-16">
-            {/* 첫 번째 가치 */}
+            {/* 첫 번째 ce�치 */}
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div className="order-1">
                 <img
@@ -351,6 +360,10 @@ export default function About() {
             <h2 className="about-section-title text-slate-900">
               {t("about.timeline.title")}
             </h2>
+            <p
+              className="about-story-detail leading-relaxed font-medium text-[#000000]"
+              dangerouslySetInnerHTML={{ __html: t("about.timeline.bottom") }}
+            />
           </div>
 
           <div className="relative ml-2">
@@ -418,13 +431,6 @@ export default function About() {
               </div>
             ))}
           </div>
-
-          <div className="mt-16 bg-white/75 border border-slate-200 p-8 rounded-2xl text-center shadow-lg backdrop-blur-sm">
-            <p
-              className="about-story-detail leading-relaxed font-medium text-[#000000]"
-              dangerouslySetInnerHTML={{ __html: t("about.timeline.bottom") }}
-            />
-          </div>
         </div>
       </section>
 
@@ -480,23 +486,19 @@ export default function About() {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="about-org-title mb-16">{t("about.org.title")}</h2>
-
+          <p
+            className="about-org-description text-[20px] w-full text-center"
+            style={{ maxWidth: "100%" }}
+            dangerouslySetInnerHTML={{ __html: t("about.org.description") }}
+          />
           <div className="flex justify-center">
-            <div className="bg-white p-4 sm:p-8 rounded-2xl shadow-xl w-full border border-border">
+            <div className="bg-white p-4 sm:p-8 w-full ">
               <img
                 src={newOrganizationChart}
                 alt={t("about.org.title")}
                 className="w-full h-auto rounded-lg"
               />
             </div>
-          </div>
-
-          <div className="w-full flex justify-center mt-12">
-            <p
-              className="about-org-description text-[20px] w-full text-center"
-              style={{ maxWidth: "100%" }}
-              dangerouslySetInnerHTML={{ __html: t("about.org.description") }}
-            />
           </div>
         </div>
       </section>
