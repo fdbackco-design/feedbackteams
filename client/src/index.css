@@ -659,6 +659,10 @@ html {
   .about-brand-description {
     line-height: 30px;
   }
+
+  .about-philosophy-section h3 {
+    font-size: 30px;
+  }
 }
 
 .about-story-detail {
