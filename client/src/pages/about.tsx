@@ -228,7 +228,7 @@ export default function About() {
           <div className="space-y-16">
             {/* 첫 번째 가치 */}
             <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div className="order-1 lg:order-1">
+              <div className="order-1">
                 <img
                   src={puzzleImage}
                   alt="고객·파트너 중심"
@@ -253,7 +253,7 @@ export default function About() {
 
             {/* 두 번째 가치 */}
             <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div className="order-1 lg:order-1">
+              <div className="order-1">
                 <img
                   src={company2Image}
                   alt="통합 실행력"
@@ -282,7 +282,7 @@ export default function About() {
                 <img
                   src={company3Image}
                   alt="글로벌 시장"
-                  className="w-full h-auto rounded-xl shadow-lg"
+                  className="w-full h-auto"
                 />
               </div>
               <div className="text-left order-2">
@@ -307,7 +307,7 @@ export default function About() {
                 <img
                   src={company4Image}
                   alt="신뢰와 파트너십"
-                  className="w-full h-auto rounded-xl shadow-lg"
+                  className="w-full h-auto"
                 />
               </div>
               <div className="text-left order-2">
