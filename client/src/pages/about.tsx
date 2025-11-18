@@ -142,7 +142,10 @@ export default function About() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-full">
-            <h2 className="font-bold text-black mb-6" style={{ lineHeight: '69px', fontSize: '50px' }}>
+            <h2
+              className="font-bold text-black mb-6"
+              style={{ lineHeight: "69px", fontSize: "50px" }}
+            >
               Hoid, Medifeed, InYourHeart, 상생 등<br />
               자체 브랜드와 글로벌 파트너십을 기반으로
               <br />
@@ -159,7 +162,7 @@ export default function About() {
       </section>
 
       {/* Company Story Section */}
-      <section className="py-20 bg-background">
+      {/* <section className="py-20 bg-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="text-lg text-foreground leading-relaxed space-y-8 max-w-4xl mx-auto">
@@ -170,7 +173,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Parallax Section */}
       <section
@@ -190,6 +193,12 @@ export default function About() {
           <h3
             className="about-parallax-title mb-8 font-light"
             dangerouslySetInnerHTML={{ __html: t("about.parallax.title") }}
+          />
+          <p
+            className="about-parallax-description max-w-3xl mx-auto"
+            dangerouslySetInnerHTML={{
+              __html: t("about.parallax.description"),
+            }}
           />
         </div>
       </section>
