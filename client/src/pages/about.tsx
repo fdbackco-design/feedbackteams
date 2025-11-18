@@ -357,7 +357,7 @@ export default function About() {
         <div className="absolute inset-0 bg-white/40"></div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="flex items-center mb-16 bg-white/70 p-4 rounded-xl backdrop-blur-sm">
-            <h2 className="about-section-title text-slate-900">
+            <h2 className="about-section-title text-slate-900" style={{ marginLeft: 0 }}>
               {t("about.timeline.title")}
             </h2>
             <p
