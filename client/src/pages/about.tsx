@@ -151,7 +151,10 @@ export default function About() {
           <div className="max-w-full">
             <h2
               className="font-bold text-black mb-6"
-              style={{ lineHeight: "69px", fontSize: "50px" }}
+              style={{ 
+                lineHeight: "69px", 
+                fontSize: "clamp(30px, 5vw, 50px)" 
+              }}
             >
               Hoid, Medifeed, InYourHeart, 상생 등<br />
               자체 브랜드와 글로벌 파트너십을 기반으로
