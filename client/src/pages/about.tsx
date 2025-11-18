@@ -204,137 +204,83 @@ export default function About() {
       </section>
 
       {/* 경영철학 */}
-      <section className="py-20 bg-muted">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="about-section-title mb-8">
               {t("about.philosophy.title")}
             </h2>
             <p
-              className="about-story-sub text-foreground leading-relaxed max-w-4xl mx-auto"
+              className="about-story-sub text-foreground leading-relaxed"
               dangerouslySetInnerHTML={{
                 __html: t("about.philosophy.description"),
               }}
             />
           </div>
 
-          {/* 첫 번째 가치 */}
-          <div className="mb-20">
-            <div className="flex flex-col lg:flex-row items-center gap-12">
-              <div className="lg:w-1/2">
-                <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                  <img
-                    src={partnershipImage}
-                    alt="파트너십과 협력"
-                    className="w-full h-80 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-                </div>
-              </div>
-              <div className="lg:w-1/2 text-center lg:text-left">
-                <h3
-                  className="about-philosophy-title mb-6"
-                  dangerouslySetInnerHTML={{
-                    __html: t("about.philosophy.value1.title"),
-                  }}
-                />
-                <p
-                  className="about-philosophy-description text-[20px]"
-                  dangerouslySetInnerHTML={{
-                    __html: t("about.philosophy.value1.description"),
-                  }}
-                />
-              </div>
+          <div className="space-y-16">
+            {/* 첫 번째 가치 */}
+            <div className="text-left">
+              <h3
+                className="text-2xl font-bold mb-4"
+                dangerouslySetInnerHTML={{
+                  __html: t("about.philosophy.value1.title"),
+                }}
+              />
+              <p
+                className="text-lg text-gray-700 leading-relaxed"
+                dangerouslySetInnerHTML={{
+                  __html: t("about.philosophy.value1.description"),
+                }}
+              />
             </div>
-          </div>
 
-          {/* 두 번째 가치 */}
-          <div className="mb-20">
-            <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
-              <div className="lg:w-1/2">
-                <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                  <img
-                    src={networkImage}
-                    alt="네트워크와 연결"
-                    className="w-full h-80 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-                </div>
-              </div>
-              <div className="lg:w-1/2 text-center lg:text-right">
-                <h3
-                  className="about-philosophy-title mb-6 lg:text-right"
-                  dangerouslySetInnerHTML={{
-                    __html: t("about.philosophy.value2.title"),
-                  }}
-                />
-                <p
-                  className="about-philosophy-description text-[20px]"
-                  dangerouslySetInnerHTML={{
-                    __html: t("about.philosophy.value2.description"),
-                  }}
-                />
-              </div>
+            {/* 두 번째 가치 */}
+            <div className="text-left">
+              <h3
+                className="text-2xl font-bold mb-4"
+                dangerouslySetInnerHTML={{
+                  __html: t("about.philosophy.value2.title"),
+                }}
+              />
+              <p
+                className="text-lg text-gray-700 leading-relaxed"
+                dangerouslySetInnerHTML={{
+                  __html: t("about.philosophy.value2.description"),
+                }}
+              />
             </div>
-          </div>
 
-          {/* 세 번째 가치 */}
-          <div className="mb-20">
-            <div className="flex flex-col lg:flex-row items-center gap-12">
-              <div className="lg:w-1/2">
-                <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                  <img
-                    src={globalImage}
-                    alt="글로벌 네트워크"
-                    className="w-full h-80 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-                </div>
-              </div>
-              <div className="lg:w-1/2 text-center lg:text-left">
-                <h3
-                  className="about-philosophy-title mb-6"
-                  dangerouslySetInnerHTML={{
-                    __html: t("about.philosophy.value3.title"),
-                  }}
-                />
-                <p
-                  className="about-philosophy-description text-[20px]"
-                  dangerouslySetInnerHTML={{
-                    __html: t("about.philosophy.value3.description"),
-                  }}
-                />
-              </div>
+            {/* 세 번째 가치 */}
+            <div className="text-left">
+              <h3
+                className="text-2xl font-bold mb-4"
+                dangerouslySetInnerHTML={{
+                  __html: t("about.philosophy.value3.title"),
+                }}
+              />
+              <p
+                className="text-lg text-gray-700 leading-relaxed"
+                dangerouslySetInnerHTML={{
+                  __html: t("about.philosophy.value3.description"),
+                }}
+              />
             </div>
-          </div>
 
-          {/* 네 번째 가치 */}
-          <div className="mb-20">
-            <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
-              <div className="lg:w-1/2">
-                <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                  <img
-                    src={trustImage}
-                    alt="신뢰와 파트너십"
-                    className="w-full h-80 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-                </div>
-              </div>
-              <div className="lg:w-1/2 text-center lg:text-right">
-                <h3
-                  className="about-philosophy-title mb-6"
-                  dangerouslySetInnerHTML={{
-                    __html: t("about.philosophy.value4.title"),
-                  }}
-                />
-                <p
-                  className="about-philosophy-description text-[20px]"
-                  dangerouslySetInnerHTML={{
-                    __html: t("about.philosophy.value4.description"),
-                  }}
-                />
-              </div>
+            {/* 네 번째 가치 */}
+            <div className="text-left">
+              <h3
+                className="text-2xl font-bold mb-4"
+                dangerouslySetInnerHTML={{
+                  __html: t("about.philosophy.value4.title"),
+                }}
+              />
+              <p
+                className="text-lg text-gray-700 leading-relaxed"
+                dangerouslySetInnerHTML={{
+                  __html: t("about.philosophy.value4.description"),
+                }}
+              />
             </div>
           </div>
         </div>
