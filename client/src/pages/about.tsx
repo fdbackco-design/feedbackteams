@@ -25,6 +25,7 @@ import peopleImage from "@assets/people_1754639134434.jpg";
 import mapImage from "@assets/map_1754832577677.png";
 import newOrganizationChart from "@assets/company.png";
 import heroBackground from "@assets/company_banner_1763445755615.jpg";
+import puzzleImage from "@assets/puzzle_image.jpg";
 
 export default function About() {
   const { t } = useLanguage();
@@ -220,19 +221,28 @@ export default function About() {
 
           <div className="space-y-16">
             {/* 첫 번째 가치 */}
-            <div className="text-left">
-              <h3
-                className="text-2xl font-bold mb-4"
-                dangerouslySetInnerHTML={{
-                  __html: t("about.philosophy.value1.title"),
-                }}
-              />
-              <p
-                className="text-lg text-gray-700 leading-relaxed"
-                dangerouslySetInnerHTML={{
-                  __html: t("about.philosophy.value1.description"),
-                }}
-              />
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
+              <div className="order-2 lg:order-1">
+                <img
+                  src={puzzleImage}
+                  alt="퍼즐 이미지"
+                  className="w-full h-auto rounded-2xl shadow-lg"
+                />
+              </div>
+              <div className="order-1 lg:order-2 text-left">
+                <h3
+                  className="text-2xl font-bold mb-4"
+                  dangerouslySetInnerHTML={{
+                    __html: t("about.philosophy.value1.title"),
+                  }}
+                />
+                <p
+                  className="text-lg text-gray-700 leading-relaxed"
+                  dangerouslySetInnerHTML={{
+                    __html: t("about.philosophy.value1.description"),
+                  }}
+                />
+              </div>
             </div>
 
             {/* 두 번째 가치 */}
