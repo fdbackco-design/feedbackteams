@@ -142,7 +142,7 @@ export default function About() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-full">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6 leading-tight">
+            <h2 className="font-bold text-black mb-6" style={{ lineHeight: '69px', fontSize: '50px' }}>
               Hoid, Medifeed, InYourHeart, 상생 등<br />
               자체 브랜드와 글로벌 파트너십을 기반으로
               <br />
