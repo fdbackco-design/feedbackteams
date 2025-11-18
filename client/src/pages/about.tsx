@@ -26,6 +26,7 @@ import mapImage from "@assets/map_1754832577677.png";
 import newOrganizationChart from "@assets/company.png";
 import heroBackground from "@assets/company_banner_1763445755615.jpg";
 import puzzleImage from "@assets/company_1_1763452920681.jpg";
+import company2Image from "@assets/company_2_1754983649735.png";
 
 export default function About() {
   const { t } = useLanguage();
@@ -209,7 +210,7 @@ export default function About() {
 
       {/* 경영철학 */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="about-section-title mb-8">
               {t("about.philosophy.title")}
@@ -249,19 +250,28 @@ export default function About() {
             </div>
 
             {/* 두 번째 가치 */}
-            <div className="text-left">
-              <h3
-                className="text-2xl font-bold mb-4"
-                dangerouslySetInnerHTML={{
-                  __html: t("about.philosophy.value2.title"),
-                }}
-              />
-              <p
-                className="text-lg text-gray-700 leading-relaxed"
-                dangerouslySetInnerHTML={{
-                  __html: t("about.philosophy.value2.description"),
-                }}
-              />
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
+              <div className="order-1 lg:order-1">
+                <img
+                  src={company2Image}
+                  alt="통합 실행력"
+                  className="w-full h-auto rounded-2xl shadow-lg"
+                />
+              </div>
+              <div className="order-2 lg:order-2 text-left">
+                <h3
+                  className="text-2xl font-bold mb-4"
+                  dangerouslySetInnerHTML={{
+                    __html: t("about.philosophy.value2.title"),
+                  }}
+                />
+                <p
+                  className="text-lg text-gray-700 leading-relaxed"
+                  dangerouslySetInnerHTML={{
+                    __html: t("about.philosophy.value2.description"),
+                  }}
+                />
+              </div>
             </div>
 
             {/* 세 번째 가치 */}
