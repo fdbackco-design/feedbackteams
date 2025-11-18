@@ -152,7 +152,7 @@ export default function About() {
             <h2
               className="font-bold text-black mb-6"
               style={{
-                lineHeight: window.innerWidth <= 768 ? "40px" : "69px",
+                lineHeight: window.innerWidth <= 768 ? "46px" : "69px",
                 fontSize: "clamp(30px, 5vw, 50px)",
               }}
             >
