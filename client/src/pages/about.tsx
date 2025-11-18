@@ -191,12 +191,6 @@ export default function About() {
             className="about-parallax-title mb-8 font-light"
             dangerouslySetInnerHTML={{ __html: t("about.parallax.title") }}
           />
-          <p
-            className="about-parallax-description max-w-3xl mx-auto"
-            dangerouslySetInnerHTML={{
-              __html: t("about.parallax.description"),
-            }}
-          />
         </div>
       </section>
 
