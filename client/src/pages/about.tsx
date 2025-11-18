@@ -223,7 +223,7 @@ export default function About() {
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div className="order-2 lg:order-1">
                 <img
-                  src={puzzleImage}
+                  src={partnershipImage}
                   alt="고객·파트너 중심"
                   className="w-full h-auto rounded-2xl shadow-lg"
                 />
