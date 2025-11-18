@@ -27,6 +27,7 @@ import newOrganizationChart from "@assets/company.png";
 import heroBackground from "@assets/company_banner_1763445755615.jpg";
 import puzzleImage from "@assets/company_1_1763452920681.jpg";
 import company2Image from "@assets/company_2_1763453336679.jpg";
+import company3Image from "@assets/company_3_1763453490728.jpg";
 
 export default function About() {
   const { t } = useLanguage();
@@ -226,11 +227,11 @@ export default function About() {
           <div className="space-y-16">
             {/* 첫 번째 가치 */}
             <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div className="order-2 lg:order-1">
+              <div className="order-1 lg:order-1">
                 <img
                   src={puzzleImage}
                   alt="고객·파트너 중심"
-                  className="w-full h-auto rounded-2xl shadow-lg"
+                  className="w-full h-auto"
                 />
               </div>
               <div className="order-1 lg:order-2 text-left">
@@ -255,7 +256,7 @@ export default function About() {
                 <img
                   src={company2Image}
                   alt="통합 실행력"
-                  className="w-full h-auto rounded-2xl shadow-lg"
+                  className="w-full h-auto"
                 />
               </div>
               <div className="order-2 lg:order-2 text-left">
@@ -275,19 +276,28 @@ export default function About() {
             </div>
 
             {/* 세 번째 가치 */}
-            <div className="text-left">
-              <h3
-                className="text-2xl font-bold mb-4"
-                dangerouslySetInnerHTML={{
-                  __html: t("about.philosophy.value3.title"),
-                }}
-              />
-              <p
-                className="text-lg text-gray-700 leading-relaxed"
-                dangerouslySetInnerHTML={{
-                  __html: t("about.philosophy.value3.description"),
-                }}
-              />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="order-1">
+                <img
+                  src={company3Image}
+                  alt="글로벌 시장"
+                  className="w-full h-auto rounded-xl shadow-lg"
+                />
+              </div>
+              <div className="text-left order-2">
+                <h3
+                  className="text-2xl font-bold mb-4"
+                  dangerouslySetInnerHTML={{
+                    __html: t("about.philosophy.value3.title"),
+                  }}
+                />
+                <p
+                  className="text-lg text-gray-700 leading-relaxed"
+                  dangerouslySetInnerHTML={{
+                    __html: t("about.philosophy.value3.description"),
+                  }}
+                />
+              </div>
             </div>
 
             {/* 네 번째 가치 */}
