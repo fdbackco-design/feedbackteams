@@ -160,10 +160,9 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="text-lg text-foreground leading-relaxed space-y-8 max-w-4xl mx-auto">
-              <p
-                className="about-story-detail text-[20px] text-center"
-                dangerouslySetInnerHTML={{ __html: t("about.story.detail") }}
-              />
+              <p className="about-story-detail text-[20px] text-center">
+                피드백은 브랜드의 성장을 유통으로 설계합니다.
+              </p>
             </div>
           </div>
         </div>
