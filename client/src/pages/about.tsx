@@ -25,6 +25,7 @@ import peopleImage from "@assets/people_1754639134434.jpg";
 import mapImage from "@assets/map_1754832577677.png";
 import newOrganizationChart from "@assets/company.png";
 import heroBackground from "@assets/company_banner_1763445755615.jpg";
+import puzzleImage from "@assets/company_1_1763452920681.jpg";
 
 export default function About() {
   const { t } = useLanguage();
@@ -226,7 +227,7 @@ export default function About() {
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div className="order-2 lg:order-1">
                 <img
-                  src={partnershipImage}
+                  src={puzzleImage}
                   alt="고객·파트너 중심"
                   className="w-full h-auto rounded-2xl shadow-lg"
                 />
