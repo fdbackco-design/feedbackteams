@@ -139,7 +139,7 @@ export default function About() {
       </section>
 
       {/* Brand Partnership Section */}
-      <section className="py-20 bg-white">
+      <section className="bg-white" style={{ paddingTop: "150px", paddingBottom: "150px" }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-full">
             <h2
