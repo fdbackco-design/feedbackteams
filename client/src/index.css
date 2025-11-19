@@ -785,6 +785,13 @@ html {
   @apply body-text text-muted-foreground;
 }
 
+/* Mobile styles for organization section */
+@media (max-width: 768px) {
+  .about-org-description {
+    font-size: 18px !important;
+  }
+}
+
 .dark {
   --background: hsl(0 0% 0%);
   --foreground: hsl(0 0% 100%);
