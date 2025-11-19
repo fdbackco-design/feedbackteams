@@ -202,7 +202,7 @@ export default function Contact() {
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start">
                     <div
-                      className={`w-10 h-10 sm:w-12 sm:h-12 ${info.color} rounded-full flex items-center justify-center flex-shrink-0 tap-target`}
+                      className={`w-10 h-10 sm:w-12 sm:h-12 bg-black rounded-full flex items-center justify-center flex-shrink-0 tap-target`}
                     >
                       <info.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
