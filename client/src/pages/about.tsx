@@ -548,7 +548,7 @@ export default function About() {
           >
             <h2
               className="about-org-title text-center lg:text-left"
-              style={{ fontSize: "30px", marginLeft: 0, marginRight: "50px" }}
+              style={{ fontSize: "30px", marginLeft: 0, marginRight: 0 }}
             >
               {t("about.org.title")}
             </h2>
