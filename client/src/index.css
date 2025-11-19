@@ -692,11 +692,15 @@ html {
 /* Mobile styles for philosophy section */
 @media (max-width: 768px) {
   .about-philosophy-section h3 {
-    font-size: 18px;
+    font-size: 18px !important;
   }
 
   .about-philosophy-section p {
-    font-size: 18px;
+    font-size: 18px !important;
+  }
+  
+  .about-story-sub {
+    font-size: 18px !important;
   }
 }
 
