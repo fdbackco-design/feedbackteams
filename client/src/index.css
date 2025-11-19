@@ -727,7 +727,8 @@ html {
 }
 
 .about-ceo-highlight {
-  @apply text-fluid-body break-keep text-pretty leading-relaxed-mobile font-semibold text-primary maxw-body;
+  @apply text-fluid-body break-keep text-pretty leading-relaxed-mobile font-semibold text-primary;
+  max-width: 100%;
 }
 
 /* Organization Chart Title */
