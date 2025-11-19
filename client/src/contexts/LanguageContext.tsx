@@ -1381,6 +1381,75 @@ const translations = {
     "footer.bottom.terms": "ข้อกำหนดการใช้งาน",
     "footer.bottom.cookies": "นโยบายคุกกี้",
 
+    // About Page
+    "about.story.main":
+      '<span class="text-white">FeedBack ออกแบบการเติบโตของแบรนด์ผ่านการกระจายสินค้า</span>',
+    "about.story.sub": "FeedBack ออกแบบการเติบโตของแบรนด์ผ่านการกระจายสินค้า",
+    "about.story.detail": "FeedBack ออกแบบการเติบโตของแบรนด์ผ่านการกระจายสินค้า",
+    "about.partnership.title":
+      "Hoid, Medifeed, InYourHeart, Sangsaeng และอื่น ๆ<br />อิงบนแบรนด์ของเราเองและพันธมิตรทั่วโลก<br />เราร่วมมือกันทุกขั้นตอน ตั้งแต่การวางแผนไปจนถึงการผลิต การกระจายสินค้า และการสร้างแบรนด์",
+    "about.partnership.description":
+      "แต่ละแบรนด์ของ FeedBack ที่แทรกซึมเข้าไปในชีวิตประจำวันของคุณ จะทำให้แต่ละวันของคุณสะดวกและมีความสุขมากขึ้น<br />เราจะเป็น FeedBack ที่พยายามทำเช่นนี้เสมอ",
+    "about.banner.title":
+      'FeedBack ออกแบบการเติบโตของแบรนด์<br class="block" /><span class="text-[#ffffff]">ผ่านการกระจายสินค้า</span>',
+    "about.parallax.title":
+      'โดยมีเป้าหมาย<span class="text-[#ffffff] font-bold">\'ความสุขในชีวิตประจำวันของคุณ\'</span>,<br class="hidden sm:block"/>FeedBack รวมคนที่มีแรงบันดาลใจ',
+    "about.parallax.description":
+      'เราพยายามอย่างต่อเนื่องเพื่อนวัตกรรมทางเทคโนโลยี เพื่อมอบผลิตภัณฑ์ที่ดีที่สุด<br class="hidden sm:block"/>และการลงทุนด้าน R&D ก็ดำเนินไปอย่างต่อเนื่องเช่นกัน',
+    "about.philosophy.title": "ปรัชญาการจัดการ",
+    "about.philosophy.description":
+      'ในฐานะแพลตฟอร์มกระจายสินค้าที่เน้นการปฏิบัติเชื่อมโยงแบรนด์และตลาด<br class="hidden sm:block"/>FeedBack กำลังสร้างระบบนิเวศที่เติบโตร่วมกับพันธมิตรทั้งหมด',
+    "about.timeline.title": "ประวัติ",
+    "about.timeline.2025_10":
+      "เปิดตัวแบรนด์ในเครือ ASRAN, Carvella, La Ceras และ Sikgu",
+    "about.timeline.2025_09":
+      "เปิดตัวเครื่องฟอกอากาศ Hoid รุ่นที่ 2 พร้อมกันทั้งในและต่างประเทศ (ขยายการเข้าร่วมโฮมช้อปปิ้ง)",
+    "about.timeline.2025_08": "เปิดตัวเครื่องดูดฝุ่นไร้สาย Hoid",
+    "about.timeline.2025_04":
+      "เปิดตัวเครื่องฟอกอากาศ Hoid รุ่นที่ 1 (มีเทคโนโลยีฆ่าเชื้อแบบ 3-in-1)",
+    "about.timeline.2025_01":
+      "ก่อตั้งบริษัทลูก Sangsaeng Medical และเริ่มพัฒนาแพลตฟอร์มแบบบูรณาการ",
+    "about.timeline.2024":
+      "เปิดตัวแบรนด์ของตนเอง Hoid, Medifeed, InYourHeart พร้อมกัน",
+    "about.timeline.type.expansion": "ขยาย",
+    "about.timeline.type.product": "เปิดตัวผลิตภัณฑ์",
+    "about.timeline.type.founding": "ก่อตั้ง",
+    "about.philosophy.value1.title":
+      'เน้นลูกค้าและพันธมิตร:<br class="block lg:hidden"/><br class="hidden lg:block"/>สร้างรูปแบบการกระจายสินค้าแบบพึ่งพากัน',
+    "about.philosophy.value1.description":
+      'FeedBack ไม่ใช่แค่สถานที่ซื้อขาย<br class="hidden lg:block"/>แต่สร้างระบบนิเวศการกระจายสินค้าที่ผู้ผลิต แบรนด์ และผู้ค้าปลีกสามารถเติบโตร่วมกันได้<br/><br/>โดยยึดมั่นในความไว้วางใจกับลูกค้าและพันธมิตร เราออกแบบโครงสร้างสำหรับความร่วมมือระยะยาวและการพัฒนาร่วมกัน<br class="hidden lg:block"/><br class="hidden sm:block lg:hidden"/><span class="font-semibold text-[#0F4C82]">มุ่งสู่แพลตฟอร์มแบบ win-win ที่ทุกคนแบ่งปันผลประโยชน์ที่ยั่งยืน</span>',
+    "about.philosophy.value2.title":
+      'เชื่อมโยงแบรนด์และตลาด<br class="hidden lg:block"/>ด้วยการปฏิบัติที่บูรณาการ',
+    "about.philosophy.value2.description":
+      'นอกเหนือจากการกระจายสินค้าธรรมดา เราเชื่อมโยงการวางแผนผลิตภัณฑ์ การสร้างแบรนด์ การตลาด และช่องทางกระจายสินค้าอย่างเป็นระบบ<br class="hidden lg:block"/><br class="hidden sm:block lg:hidden"/>โดยรวมความสามารถ OEM ที่เป็นเอกลักษณ์กับประสบการณ์แบรนด์ของเราเอง<br class="hidden lg:block"/>เราให้โซลูชันที่สามารถปฏิบัติได้เพื่อช่วยให้แบรนด์ตั้งอยู่ในตลาด<br/><br/><span class="font-semibold text-primary">เพิ่มการสร้างแบรนด์ให้กับความแข็งแกร่งของผลิตภัณฑ์ รวมการกระจายสินค้ากับการสร้างแบรนด์<br class="hidden lg:block"/>และฝังประสบการณ์และเนื้อหาเข้าไปในการกระจายสินค้า - นี่คือวิธีของ FeedBack</span>',
+    "about.philosophy.value3.title":
+      'บริษัทที่เน้นการปฏิบัติ<br class="hidden lg:block"/>สร้างความสามารถในการแข่งขันในตลาดโลก',
+    "about.philosophy.value3.description":
+      'เราให้โอกาสในการเข้าสู่ตลาดโลก<br class="hidden lg:block"/>แก่แบรนด์ที่เติบโตบนพื้นฐานเอเชีย<br/><br/>ผ่าน <span class="font-semibold text-primary">การออกแบบการเข้าสู่ตลาดเชิงกลยุทธ์ + การปฏิบัติบนพื้นฐานพันธมิตร</span><br class="hidden lg:block"/>เราสนับสนุนการทำให้แบรนด์เป็นสากล<br class="hidden lg:block"/>และผ่านความร่วมมือกับพันธมิตรในและต่างประเทศ<br class="hidden lg:block"/>สร้างโอกาสใน<br class="block lg:hidden"/>ตลาดที่ใหญ่ขึ้นและกว้างขวางขึ้น',
+    "about.philosophy.value4.title": "สร้างพันธมิตรระยะยาวผ่านความไว้วางใจ",
+    "about.philosophy.value4.description":
+      'เหตุผลที่ FeedBack มีอยู่คือความไว้วางใจของพันธมิตรและลูกค้าของเรา<br/><br/>ผ่าน <span class="font-semibold text-primary">คุณภาพที่ได้รับการพิสูจน์และการจัดหาที่มั่นคง กระบวนการกระจายสินค้าที่โปร่งใส<br class="block lg:hidden"/><br class="hidden lg:block"/>และระบบบริการหลังการขายที่ซื่อสัตย์</span><br class="hidden lg:block"/>เราสร้างรากฐานความไว้วางใจที่พันธมิตร<br class="block lg:hidden"/>สามารถอยู่ร่วมกันได้ในระยะยาว',
+    "about.timeline.bottom":
+      'FeedBack ขยายตลาดอย่างรวดเร็วผ่านการเชื่อมต่อกับโฮมช้อปปิ้ง<br class="hidden sm:block"/>อีคอมเมิร์ซ และช่องทางขายส่งทั้งในและต่างประเทศพร้อมกับการเปิดตัวผลิตภัณฑ์',
+    "about.ceo.quote":
+      '"เราให้ความสำคัญกับความสุขของลูกค้าและพันธมิตรระดับโลกเป็นอันดับแรก"',
+    "about.ceo.title": "ข้อความจากซีอีโอ",
+    "about.ceo.name": "Song Haemin, Jeong Seonghyeon",
+    "about.ceo.position": "ซีอีโอร่วมของ FeedBack Inc.",
+    "about.ceo.motto":
+      '"เติบโตเป็นบริษัทแพลตฟอร์ม<br/>ที่เชื่อมโยงแบรนด์และตลาด"',
+    "about.ceo.message1":
+      "สวัสดี เราคือ Song Haemin และ Jeong Seonghyeon ซีอีโอร่วมของ FeedBack Inc.",
+    "about.ceo.message2":
+      "ในตลาดการกระจายสินค้าโลกที่เปลี่ยนแปลงอย่างรวดเร็ว FeedBack กำลังนำเสนอโครงสร้างการกระจายสินค้าใหม่ในฐานะผู้เชื่อมต่อและผู้ปฏิบัติระหว่างแบรนด์และตลาด เราไม่ได้เป็นเพียง 'บริษัทที่ขายผลิตภัณฑ์' แต่เรากำลังทำงานเพื่อสร้างโครงสร้างที่ทำให้ผู้ผลิต ผู้จัดจำหน่าย และผู้บริโภคพอใจในฐานะพันธมิตรที่เติบโตแบรนด์ร่วมกันและสถาปนาในตลาด",
+    "about.ceo.highlight":
+      "เพิ่มการสร้างแบรนด์ให้กับความแข็งแกร่งของผลิตภัณฑ์ เชื่อมโยงเครือข่ายการกระจายสินค้ากับการสร้างแบรนด์ และฝังประสบการณ์และเนื้อหาเข้าไปในการกระจายสินค้า นี่คือวิธีของ FeedBack",
+    "about.ceo.message4":
+      "เราจะยังคงเป็นบริษัทที่สร้างโอกาสในตลาดที่ใหญ่ขึ้นและกว้างขวางขึ้นร่วมกับพันธมิตรในและต่างประเทศของเรา ขอบคุณครับ",
+    "about.org.title": "แผนผังองค์กร",
+    "about.org.description":
+      'ผ่านโครงสร้างองค์กรที่เป็นระบบและความเชี่ยวชาญในแต่ละสาขา<br class="hidden sm:block"/>เราให้บริการที่ดีที่สุดแก่ลูกค้าของเรา',
+
     // Hero Section
     "hero.title": "แพลตฟอร์มกระจายสินค้าที่เชื่อม",
     "hero.subtitle": "แบรนด์และตลาด — FEEDBACK",
