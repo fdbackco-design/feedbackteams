@@ -29,6 +29,7 @@ import puzzleImage from "@assets/company_1_1763452920681.jpg";
 import company2Image from "@assets/company_2_1763453336679.jpg";
 import company3Image from "@assets/company_3_1763453490728.jpg";
 import company4Image from "@assets/company_4_1763453574772.jpg";
+import messageBanner from "@assets/Message_banner_1763519178812.jpg";
 
 export default function About() {
   const { t } = useLanguage();
@@ -441,22 +442,30 @@ export default function About() {
       <section className="py-20 bg-gradient-to-br from-muted to-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <blockquote
+            {/* <blockquote
               className="about-ceo-quote mb-8 text-center"
               style={{ maxWidth: "100%" }}
             >
               {t("about.ceo.quote")}
-            </blockquote>
+            </blockquote> */}
             <h2 className="about-ceo-title mb-8">{t("about.ceo.title")}</h2>
           </div>
 
           <div className="overflow-hidden">
             <div className="flex flex-col">
-              <div className="bg-gradient-to-br from-primary to-accent p-12 text-white text-center flex flex-col justify-center">
-                <div className="mt-8 pt-8">
+              <div 
+                className="relative p-12 text-white text-center flex flex-col justify-center h-64"
+                style={{
+                  backgroundImage: `url(${messageBanner})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              >
+                <div className="absolute inset-0 bg-black/30"></div>
+                <div className="relative z-10 mt-8 pt-8">
                   <p
-                    className="opacity-80 text-[18px]"
-                    dangerouslySetInnerHTML={{ __html: t("about.ceo.motto") }}
+                    className="opacity-90 text-[18px] text-white font-medium"
+                    dangerouslySetInnerHTML={{ __html: t("about.ceo.quote") }}
                   />
                 </div>
               </div>
@@ -481,7 +490,8 @@ export default function About() {
                   </div>
 
                   <p className="about-ceo-message" style={{ width: "100%" }}>
-                    {t("about.ceo.message4")}</p>
+                    {t("about.ceo.message4")}
+                  </p>
                 </div>
               </div>
               <div className="to-accent p-12 text-black text-center flex flex-col justify-center">
