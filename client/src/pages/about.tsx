@@ -439,7 +439,7 @@ export default function About() {
       </section>
 
       {/* CEO Message */}
-      <section className="py-20 bg-gradient-to-br from-muted to-background">
+      <section className="py-20 bg-gradient-to-br from-muted to-background about-ceo-section">
         <div className="max-w-7xl mx-auto ">
           <div className="text-center mb-16">
             {/* <blockquote

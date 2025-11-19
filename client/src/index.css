@@ -710,6 +710,14 @@ html {
   .about-philosophy-section p {
     font-size: 24px;
   }
+
+  .about-ceo-section h3 {
+    font-size: 30px;
+  }
+
+  .about-ceo-section p {
+    font-size: 24px;
+  }
 }
 
 /* CEO Message Styles */
