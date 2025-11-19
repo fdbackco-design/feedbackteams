@@ -530,7 +530,7 @@ export default function About() {
       {/* Organization Chart */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="about-org-title mb-16">{t("about.org.title")}</h2>
+          <h2 className="about-org-title mb-16" style={{ fontSize: "30px" }}>{t("about.org.title")}</h2>
           <p
             className="about-org-description text-[20px] w-full text-center"
             style={{ maxWidth: "100%" }}
