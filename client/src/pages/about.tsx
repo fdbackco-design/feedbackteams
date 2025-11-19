@@ -453,7 +453,7 @@ export default function About() {
           <div className="overflow-hidden">
             <div className="flex flex-col lg:flex-row">
               <div className="lg:w-1/3 bg-gradient-to-br from-primary to-accent p-12 text-white text-center flex flex-col justify-center">
-                <div className="mt-8 pt-8 border-t border-white/20">
+                <div className="mt-8 pt-8">
                   <p
                     className="opacity-80 text-[18px]"
                     dangerouslySetInnerHTML={{ __html: t("about.ceo.motto") }}
