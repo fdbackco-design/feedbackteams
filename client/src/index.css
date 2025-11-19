@@ -718,6 +718,7 @@ html {
 /* Desktop styles for about-brand-description */
 @media (min-width: 769px) {
   .about-brand-description {
+    font-size: 23px !important;
     line-height: 30px;
   }
 
