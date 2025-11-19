@@ -369,6 +369,8 @@ const translations = {
       '<span class="text-white">피드백은 브랜드의 성장을 <br>유통으로 설계합니다.</span>',
     "about.story.sub": "피드백은 브랜드의 성장을 유통으로 설계합니다.",
     "about.story.detail": "피드백은 브랜드의 성장을 유통으로 설계합니다.",
+    "about.partnership.title": "Hoid, Medifeed, InYourHeart, 상생 등<br />자체 브랜드와 글로벌 파트너십을 기반으로<br />기획부터 제조·유통·브랜딩까지 전 과정을 함께합니다.",
+    "about.partnership.description": "고객의 삶 속에 스며든 FEEDBACK의 브랜드 하나하나가 고객 여러분의 하루를 더욱 편리하고 행복하게 만들 수 있도록<br />언제나 노력하는 FEEDBACK이 되겠습니다.",
     "about.banner.title":
       '피드백은 브랜드의 성장을<br class="block" /><span class="text-[#ffffff]"> 유통으로 설계합니다</span>',
     "about.parallax.title":
@@ -1258,6 +1260,8 @@ const translations = {
       'Based on our own brands such as Hoid, Medifeed, InYourHeart, and Sangsaeng,<br class="hidden sm:block"/>and global partnerships, we support the entire process from planning to manufacturing, distribution, and branding.',
     "about.story.detail":
       'FeedBack will always strive to make every day<br class="hidden sm:block"/>more convenient and happier for you through each of our brands that permeate your daily life.',
+    "about.partnership.title": "Hoid, Medifeed, InYourHeart, Sangsaeng, and more<br />Based on our own brands and global partnerships,<br />we work together through the entire process from planning to manufacturing, distribution, and branding.",
+    "about.partnership.description": "Each of FeedBack's brands embedded in your daily life will make your day more convenient and happier.<br />We will always be the FeedBack that strives for this.",
     "about.banner.title":
       'FeedBack designs<br class="block" /><span class="text-[#ffffff]"> brand growth through distribution</span>',
     "about.parallax.title":
