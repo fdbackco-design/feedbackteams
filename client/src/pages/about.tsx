@@ -245,7 +245,10 @@ export default function About() {
           <div className="space-y-16">
             {/* 첫 번째 ce치 */}
             <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div className="order-1" style={{ maxWidth: "536px", maxHeight: "405px" }}>
+              <div
+                className="order-1"
+                style={{ maxWidth: "536px", maxHeight: "405px" }}
+              >
                 <img
                   src={puzzleImage}
                   alt="고객·파트너 중심"
@@ -270,7 +273,10 @@ export default function About() {
 
             {/* 두 번째 가치 */}
             <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div className="order-1" style={{ maxWidth: "536px", maxHeight: "405px" }}>
+              <div
+                className="order-1"
+                style={{ maxWidth: "536px", maxHeight: "405px" }}
+              >
                 <img
                   src={company2Image}
                   alt="통합 실행력"
@@ -295,7 +301,10 @@ export default function About() {
 
             {/* 세 번째 가치 */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="order-1" style={{ maxWidth: "536px", maxHeight: "405px" }}>
+              <div
+                className="order-1"
+                style={{ maxWidth: "536px", maxHeight: "405px" }}
+              >
                 <img
                   src={company3Image}
                   alt="글로벌 시장"
@@ -320,7 +329,10 @@ export default function About() {
 
             {/* 네 번째 가치 */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="order-1" style={{ maxWidth: "536px", maxHeight: "405px" }}>
+              <div
+                className="order-1"
+                style={{ maxWidth: "536px", maxHeight: "405px" }}
+              >
                 <img
                   src={company4Image}
                   alt="신뢰와 파트너십"
@@ -548,7 +560,7 @@ export default function About() {
             />
           </div>
           <div className="flex justify-center">
-            <div className="bg-white p-4 sm:p-8 w-full ">
+            <div className="bg-white sm:p-8 w-full ">
               <img
                 src={newOrganizationChart}
                 alt={t("about.org.title")}
