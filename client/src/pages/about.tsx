@@ -235,7 +235,6 @@ export default function About() {
             </h2>
             <p
               className="about-story-sub text-foreground leading-relaxed lg:max-w-2xl text-left"
-              style={{ fontSize: "18px" }}
               dangerouslySetInnerHTML={{
                 __html: t("about.philosophy.description"),
               }}

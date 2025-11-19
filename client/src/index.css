@@ -706,12 +706,13 @@ html {
     font-size: 20px !important;
   }
 
-  .about-philosophy-section p {
+  .about-philosophy-section p:not(.about-story-sub) {
     font-size: 16px !important;
   }
   
   .about-story-sub {
     font-size: 18px !important;
+    line-height: 1.6 !important;
   }
 }
 
