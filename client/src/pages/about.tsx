@@ -443,7 +443,6 @@ export default function About() {
           <h2 className="about-ceo-title mb-12 text-center">{t("about.ceo.title")}</h2>
 
           <div className="bg-white rounded-xl shadow-xl overflow-hidden">
-            {/* 지구 배경 배너 */}
             <div 
               className="relative h-48 flex items-center justify-center overflow-hidden"
               style={{
@@ -459,7 +458,6 @@ export default function About() {
               />
             </div>
 
-            {/* CEO 메시지 */}
             <div className="p-8 sm:p-12 lg:p-16">
               <div className="space-y-6 text-center max-w-4xl mx-auto">
                 <p className="about-ceo-message">{t("about.ceo.message1")}</p>
@@ -474,7 +472,6 @@ export default function About() {
 
                 <p className="about-ceo-message">{t("about.ceo.message4")}</p>
 
-                {/* CEO 이름 및 직책 */}
                 <div className="mt-12 pt-8 border-t border-gray-200">
                   <p className="text-lg font-semibold text-gray-900">
                     {t("about.ceo.position")}
