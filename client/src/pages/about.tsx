@@ -461,7 +461,7 @@ export default function About() {
                 </div>
               </div>
 
-              <div className="p-6 sm:p-8 lg:p-12">
+              <div>
                 <div className="space-y-6 text-foreground leading-relaxed text-center">
                   <p className="about-ceo-message" style={{ width: "100%" }}>
                     {t("about.ceo.message1")}
@@ -471,7 +471,7 @@ export default function About() {
                   </p>
                   {/* <p className="about-ceo-message" style={{ width: '100%' }}>{t("about.ceo.message3")}</p> */}
 
-                  <div className="p-4 sm:p-6">
+                  <div>
                     <p
                       className="about-ceo-highlight font-bold"
                       style={{ width: "100%" }}
