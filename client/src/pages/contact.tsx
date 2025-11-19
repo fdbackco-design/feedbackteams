@@ -25,6 +25,7 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import GoogleMap from "@/components/GoogleMap";
 import { useLanguage } from "@/contexts/LanguageContext";
+import contactBannerImg from "@assets/contact_banner_1763544876573.jpg";
 
 const CENTER = { lat: 37.380236, lng: 126.665423 };
 
@@ -163,20 +164,33 @@ export default function Contact() {
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 mt-16 sm:mt-20 mobile-padding">
-          <h1 className="text-fluid-title break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-gray-900 maxw-title mx-auto mb-6">
-            {t("contact.title")}
-          </h1>
-          <div className="w-16 sm:w-24 h-0.5 bg-[#0F4C82] mx-auto mb-8" />
-          <p className="text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-600 maxw-body mx-auto">
-            {t("contact.subtitle.line1")}
-            <br className="sm:hidden" />
-            <br className="hidden sm:block" />
-            {t("contact.subtitle.line2")}
-          </p>
+    <>
+      {/* Contact Banner */}
+      <section className="relative h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={contactBannerImg}
+            alt="Contact Banner"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
+        <div className="relative h-full flex items-center justify-center">
+          <div className="text-center px-4 sm:px-6 lg:px-8">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
+              {t("contact.title")}
+            </h1>
+            <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto break-keep">
+              {t("contact.subtitle.line1")}
+              <br className="hidden sm:block" />
+              {t("contact.subtitle.line2")}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 mobile-padding">
           {/* Contact Information */}
@@ -409,5 +423,6 @@ export default function Contact() {
         </div>
       </div>
     </section>
+    </>
   );
 }
