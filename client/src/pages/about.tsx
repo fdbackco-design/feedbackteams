@@ -234,7 +234,7 @@ export default function About() {
               {t("about.philosophy.title")}
             </h2>
             <p
-              className="about-story-sub text-foreground leading-relaxed lg:max-w-2xl text-left"
+              className="about-story-sub text-foreground leading-relaxed lg:max-w-2xl text-left text-[18px] md:text-[24px]"
               dangerouslySetInnerHTML={{
                 __html: t("about.philosophy.description"),
               }}
