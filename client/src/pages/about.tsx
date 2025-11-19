@@ -228,13 +228,14 @@ export default function About() {
             style={{ justifyContent: "left" }}
           >
             <h2
-              className="about-section-title"
-              style={{ marginLeft: 0, marginRight: "50px" }}
+              className="about-section-title text-center lg:text-left"
+              style={{ marginLeft: 0, marginRight: "50px", fontSize: "30px" }}
             >
               {t("about.philosophy.title")}
             </h2>
             <p
-              className="about-story-sub text-foreground leading-relaxed lg:max-w-2xl"
+              className="about-story-sub text-foreground leading-relaxed lg:max-w-2xl text-center lg:text-left"
+              style={{ fontSize: "24px" }}
               dangerouslySetInnerHTML={{
                 __html: t("about.philosophy.description"),
               }}
