@@ -661,6 +661,14 @@ html {
     line-height: 30px;
   }
 
+  .about-timeline-year {
+    font-size: 30px;
+  }
+
+  .about-timeline-description {
+    font-size: 24px;
+  }
+
   .about-philosophy-section h3 {
     font-size: 30px;
   }
