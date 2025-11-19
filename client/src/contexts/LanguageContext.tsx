@@ -306,8 +306,8 @@ const translations = {
 
     // Contact Page
     "contact.title": "Contact Us",
-    "contact.subtitle.line1": "FeedBack과 함께 새로운 비즈니스 기회를",
-    "contact.subtitle.line2": "만들어보세요.",
+    "contact.subtitle.line1": "FeedBack과 함께 새로운 비즈니스 기회를 만들어보세요.",
+    // "contact.subtitle.line2": "",
     "contact.section.contact": "연락처",
     "contact.section.departments": "관련부서",
     "contact.section.social": "소셜미디어",
