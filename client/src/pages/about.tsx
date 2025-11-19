@@ -450,13 +450,9 @@ export default function About() {
             <h2 className="about-ceo-title mb-8">{t("about.ceo.title")}</h2>
           </div>
 
-          <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
+          <div className="overflow-hidden">
             <div className="flex flex-col lg:flex-row">
               <div className="lg:w-1/3 bg-gradient-to-br from-primary to-accent p-12 text-white text-center flex flex-col justify-center">
-                <h3 className="text-2xl font-bold mb-2">
-                  {t("about.ceo.name")}
-                </h3>
-                <p className="text-lg opacity-90">{t("about.ceo.position")}</p>
                 <div className="mt-8 pt-8 border-t border-white/20">
                   <p
                     className="opacity-80 text-[18px]"
@@ -479,6 +475,12 @@ export default function About() {
 
                   <p className="about-ceo-message">{t("about.ceo.message4")}</p>
                 </div>
+              </div>
+              <div className="lg:w-1/3 to-accent p-12 text-black text-center flex flex-col justify-center">
+                <h3 className="text-2xl font-bold mb-2">
+                  {t("about.ceo.name")}
+                </h3>
+                <p className="text-lg opacity-90">{t("about.ceo.position")}</p>
               </div>
             </div>
           </div>
