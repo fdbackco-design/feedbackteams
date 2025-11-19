@@ -462,10 +462,10 @@ export default function About() {
                 }}
               >
                 <div className="absolute inset-0 bg-black/30"></div>
-                <div className="relative z-10 mt-8 pt-8">
+                <div className="relative z-10">
                   <p
                     className="opacity-90 text-white"
-                    style={{ fontSize: "30px", fontWeight: "bold" }}
+                    style={{ fontSize: "30px", fontWeight: "bold", margin: "0", padding: "0" }}
                     dangerouslySetInnerHTML={{ __html: t("about.ceo.quote") }}
                   />
                 </div>
