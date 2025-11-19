@@ -472,7 +472,7 @@ export default function About() {
               </div>
 
               <div className="p-6 sm:p-8 lg:p-12">
-                <div className="space-y-6 text-foreground leading-relaxed text-center">
+                <div className="space-y-6 text-foreground leading-relaxed text-center" style={{ fontSize: "24px" }}>
                   <p className="about-ceo-message" style={{ width: "100%" }}>
                     {t("about.ceo.message1")}
                   </p>
