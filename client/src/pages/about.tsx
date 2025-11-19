@@ -472,11 +472,11 @@ export default function About() {
               </div>
 
               <div className="p-6 sm:p-8 lg:p-12">
-                <div className="space-y-6 text-foreground leading-relaxed text-center" style={{ fontSize: "24px" }}>
-                  <p className="about-ceo-message" style={{ width: "100%" }}>
+                <div className="text-foreground leading-relaxed text-center" style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+                  <p className="about-ceo-message" style={{ width: "100%", fontSize: "24px" }}>
                     {t("about.ceo.message1")}
                   </p>
-                  <p className="about-ceo-message" style={{ width: "100%" }}>
+                  <p className="about-ceo-message" style={{ width: "100%", fontSize: "24px" }}>
                     {t("about.ceo.message2")}
                   </p>
                   {/* <p className="about-ceo-message" style={{ width: '100%' }}>{t("about.ceo.message3")}</p> */}
@@ -484,13 +484,13 @@ export default function About() {
                   <div>
                     <p
                       className="about-ceo-highlight font-bold"
-                      style={{ width: "100%" }}
+                      style={{ width: "100%", fontSize: "24px" }}
                     >
                       {t("about.ceo.highlight")}
                     </p>
                   </div>
 
-                  <p className="about-ceo-message" style={{ width: "100%" }}>
+                  <p className="about-ceo-message" style={{ width: "100%", fontSize: "24px" }}>
                     {t("about.ceo.message4")}
                   </p>
                 </div>
