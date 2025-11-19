@@ -722,7 +722,8 @@ html {
 }
 
 .about-ceo-message {
-  @apply text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-700 maxw-body;
+  @apply text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-700;
+  max-width: 100%;
 }
 
 .about-ceo-highlight {
