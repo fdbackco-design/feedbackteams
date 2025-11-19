@@ -532,8 +532,8 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="about-org-title mb-16" style={{ fontSize: "30px" }}>{t("about.org.title")}</h2>
           <p
-            className="about-org-description text-[20px] w-full text-center"
-            style={{ maxWidth: "100%" }}
+            className="about-org-description w-full text-center"
+            style={{ maxWidth: "100%", fontSize: "24px" }}
             dangerouslySetInnerHTML={{ __html: t("about.org.description") }}
           />
           <div className="flex justify-center">
