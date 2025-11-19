@@ -530,12 +530,14 @@ export default function About() {
       {/* Organization Chart */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="about-org-title mb-16" style={{ fontSize: "30px" }}>{t("about.org.title")}</h2>
-          <p
-            className="about-org-description w-full text-center"
-            style={{ maxWidth: "100%", fontSize: "24px" }}
-            dangerouslySetInnerHTML={{ __html: t("about.org.description") }}
-          />
+          <div className="flex flex-col lg:flex-row lg:items-center mb-16 gap-8" style={{ justifyContent: "left" }}>
+            <h2 className="about-org-title" style={{ fontSize: "30px", marginLeft: 0, marginRight: "50px" }}>{t("about.org.title")}</h2>
+            <p
+              className="about-org-description"
+              style={{ fontSize: "24px" }}
+              dangerouslySetInnerHTML={{ __html: t("about.org.description") }}
+            />
+          </div>
           <div className="flex justify-center">
             <div className="bg-white p-4 sm:p-8 w-full ">
               <img
