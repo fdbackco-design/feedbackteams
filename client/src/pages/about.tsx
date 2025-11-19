@@ -355,7 +355,7 @@ export default function About() {
         }}
       >
         <div className="absolute inset-0 bg-white/40"></div>
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="flex flex-col lg:flex-row lg:items-center mb-16 bg-white/70 p-4 rounded-xl backdrop-blur-sm gap-4">
             <h2
               className="about-timeline-year text-slate-900"
@@ -440,44 +440,48 @@ export default function About() {
       {/* CEO Message */}
       <section className="py-20 bg-gradient-to-br from-muted to-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <blockquote
-              className="about-ceo-quote mb-8 text-center"
-              style={{ maxWidth: "100%" }}
+          <h2 className="about-ceo-title mb-12 text-center">{t("about.ceo.title")}</h2>
+
+          <div className="bg-white rounded-xl shadow-xl overflow-hidden">
+            {/* 지구 배경 배너 */}
+            <div 
+              className="relative h-48 flex items-center justify-center overflow-hidden"
+              style={{
+                backgroundImage: `url(${company3Image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
             >
-              {t("about.ceo.quote")}
-            </blockquote>
-            <h2 className="about-ceo-title mb-8">{t("about.ceo.title")}</h2>
-          </div>
+              <div className="absolute inset-0 bg-black/40"></div>
+              <blockquote
+                className="relative z-10 text-white text-xl sm:text-2xl font-medium text-center px-8"
+                dangerouslySetInnerHTML={{ __html: t("about.ceo.quote") }}
+              />
+            </div>
 
-          <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
-            <div className="flex flex-col lg:flex-row">
-              <div className="lg:w-1/3 bg-gradient-to-br from-primary to-accent p-12 text-white text-center flex flex-col justify-center">
-                <h3 className="text-2xl font-bold mb-2">
-                  {t("about.ceo.name")}
-                </h3>
-                <p className="text-lg opacity-90">{t("about.ceo.position")}</p>
-                <div className="mt-8 pt-8 border-t border-white/20">
-                  <p
-                    className="opacity-80 text-[18px]"
-                    dangerouslySetInnerHTML={{ __html: t("about.ceo.motto") }}
-                  />
+            {/* CEO 메시지 */}
+            <div className="p-8 sm:p-12 lg:p-16">
+              <div className="space-y-6 text-center max-w-4xl mx-auto">
+                <p className="about-ceo-message">{t("about.ceo.message1")}</p>
+                <p className="about-ceo-message">{t("about.ceo.message2")}</p>
+                <p className="about-ceo-message">{t("about.ceo.message3")}</p>
+
+                <div className="my-8">
+                  <p className="about-ceo-highlight font-bold">
+                    {t("about.ceo.highlight")}
+                  </p>
                 </div>
-              </div>
 
-              <div className="lg:w-2/3 p-6 sm:p-8 lg:p-12">
-                <div className="space-y-6 text-foreground leading-relaxed">
-                  <p className="about-ceo-message">{t("about.ceo.message1")}</p>
-                  <p className="about-ceo-message">{t("about.ceo.message2")}</p>
-                  <p className="about-ceo-message">{t("about.ceo.message3")}</p>
+                <p className="about-ceo-message">{t("about.ceo.message4")}</p>
 
-                  <div className="bg-primary/5 p-4 sm:p-6 rounded-xl border-l-4 border-primary">
-                    <p className="about-ceo-highlight">
-                      {t("about.ceo.highlight")}
-                    </p>
-                  </div>
-
-                  <p className="about-ceo-message">{t("about.ceo.message4")}</p>
+                {/* CEO 이름 및 직책 */}
+                <div className="mt-12 pt-8 border-t border-gray-200">
+                  <p className="text-lg font-semibold text-gray-900">
+                    {t("about.ceo.position")}
+                  </p>
+                  <p className="text-xl font-bold text-gray-900 mt-2">
+                    {t("about.ceo.name")}
+                  </p>
                 </div>
               </div>
             </div>
