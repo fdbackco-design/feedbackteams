@@ -531,9 +531,9 @@ export default function About() {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row lg:items-center mb-16 gap-8" style={{ justifyContent: "left" }}>
-            <h2 className="about-org-title" style={{ fontSize: "30px", marginLeft: 0, marginRight: "50px" }}>{t("about.org.title")}</h2>
+            <h2 className="about-org-title text-center lg:text-left" style={{ fontSize: "30px", marginLeft: 0, marginRight: "50px" }}>{t("about.org.title")}</h2>
             <p
-              className="about-org-description"
+              className="about-org-description text-center lg:text-left"
               style={{ fontSize: "24px" }}
               dangerouslySetInnerHTML={{ __html: t("about.org.description") }}
             />
