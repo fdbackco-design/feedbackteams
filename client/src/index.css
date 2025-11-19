@@ -735,6 +735,13 @@ html {
   }
 }
 
+/* Mobile styles for CEO section */
+@media (max-width: 768px) {
+  .about-ceo-message {
+    font-size: 18px !important;
+  }
+}
+
 /* CEO Message Styles */
 .about-ceo-quote {
   @apply text-fluid-sub break-keep text-balance text-pretty leading-tight-mobile font-bold text-primary maxw-title;
