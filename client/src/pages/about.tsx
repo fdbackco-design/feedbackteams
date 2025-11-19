@@ -355,7 +355,7 @@ export default function About() {
         }}
       >
         <div className="absolute inset-0 bg-white/40"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="flex flex-col lg:flex-row lg:items-center mb-16 bg-white/70 p-4 rounded-xl backdrop-blur-sm gap-4">
             <h2
               className="about-timeline-year text-slate-900"
