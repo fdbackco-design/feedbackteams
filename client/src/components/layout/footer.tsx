@@ -35,7 +35,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="mb-6">
-              <FeedBackLogo className="h-12 mb-4 fill-white" />
+              <FeedBackLogo className="h-10 md:h-12 mb-4 fill-white" />
               <p className="text-white/80 mt-2 text-lg">
                 {t("footer.tagline")}
               </p>
