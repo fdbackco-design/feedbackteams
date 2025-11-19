@@ -357,11 +357,11 @@ export default function About() {
         <div className="absolute inset-0 bg-white/40"></div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="flex flex-col lg:flex-row lg:items-center mb-16 bg-white/70 p-4 rounded-xl backdrop-blur-sm gap-4">
-            <h2 className="about-section-title text-slate-900" style={{ marginLeft: 0, marginRight: "50px" }}>
+            <h2 className="about-timeline-year text-slate-900" style={{ marginLeft: 0, marginRight: "50px" }}>
               {t("about.timeline.title")}
             </h2>
             <p
-              className="about-story-detail leading-relaxed font-medium text-[#000000]"
+              className="about-timeline-description leading-relaxed font-medium text-[#000000]"
               dangerouslySetInnerHTML={{ __html: t("about.timeline.bottom") }}
             />
           </div>
