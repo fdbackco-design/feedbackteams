@@ -448,35 +448,55 @@ export default function About() {
             >
               {t("about.ceo.quote")}
             </blockquote> */}
-            <h2 className="about-ceo-title mb-8" style={{ fontSize: "30px" }}>{t("about.ceo.title")}</h2>
+            <h2 className="about-ceo-title mb-8" style={{ fontSize: "30px" }}>
+              {t("about.ceo.title")}
+            </h2>
           </div>
 
           <div className="overflow-hidden">
             <div className="flex flex-col">
-              <div 
+              <div
                 className="relative p-12 text-white text-center flex flex-col justify-center h-64"
                 style={{
                   backgroundImage: `url(${messageBanner})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
                 }}
               >
                 <div className="absolute inset-0 bg-black/30"></div>
                 <div className="relative z-10">
                   <p
                     className="opacity-90 text-white"
-                    style={{ fontSize: "30px", fontWeight: "bold", margin: "0", padding: "0" }}
+                    style={{
+                      fontSize: "30px",
+                      fontWeight: "bold",
+                      margin: "0",
+                      padding: "0",
+                    }}
                     dangerouslySetInnerHTML={{ __html: t("about.ceo.quote") }}
                   />
                 </div>
               </div>
 
               <div className="p-6 sm:p-8 lg:p-12">
-                <div className="text-foreground leading-relaxed text-center" style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
-                  <p className="about-ceo-message" style={{ width: "100%", fontSize: "24px" }}>
+                <div
+                  className="text-foreground leading-relaxed text-center"
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "24px",
+                  }}
+                >
+                  <p
+                    className="about-ceo-message"
+                    style={{ width: "100%", fontSize: "24px" }}
+                  >
                     {t("about.ceo.message1")}
                   </p>
-                  <p className="about-ceo-message" style={{ width: "100%", fontSize: "24px" }}>
+                  <p
+                    className="about-ceo-message"
+                    style={{ width: "100%", fontSize: "24px" }}
+                  >
                     {t("about.ceo.message2")}
                   </p>
                   {/* <p className="about-ceo-message" style={{ width: '100%' }}>{t("about.ceo.message3")}</p> */}
@@ -490,18 +510,18 @@ export default function About() {
                     </p>
                   </div>
 
-                  <p className="about-ceo-message" style={{ width: "100%", fontSize: "24px" }}>
+                  <p
+                    className="about-ceo-message"
+                    style={{ width: "100%", fontSize: "24px" }}
+                  >
                     {t("about.ceo.message4")}
                   </p>
                 </div>
               </div>
               <div className="to-accent p-12 text-black text-center flex flex-row justify-center items-center gap-4">
-                 <p className="text-lg opacity-90">{t("about.ceo.position")}</p>
-                <h3 className="text-2xl font-bold">
-                  {t("about.ceo.name")}
-                </h3>
-               
-          </div>
+                <p className="text-lg opacity-90">{t("about.ceo.position")}</p>
+                <h3 className="text-2xl font-bold">{t("about.ceo.name")}</h3>
+              </div>
             </div>
           </div>
         </div>
