@@ -448,7 +448,7 @@ export default function About() {
             >
               {t("about.ceo.quote")}
             </blockquote> */}
-            <h2 className="about-ceo-title mb-8">{t("about.ceo.title")}</h2>
+            <h2 className="about-ceo-title mb-8" style={{ fontSize: "30px" }}>{t("about.ceo.title")}</h2>
           </div>
 
           <div className="overflow-hidden">
