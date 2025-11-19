@@ -689,6 +689,17 @@ html {
   @apply text-fluid-body break-keep text-pretty leading-relaxed-mobile text-white maxw-body mx-auto;
 }
 
+/* Mobile styles for philosophy section */
+@media (max-width: 768px) {
+  .about-philosophy-section h3 {
+    font-size: 18px;
+  }
+
+  .about-philosophy-section p {
+    font-size: 18px;
+  }
+}
+
 /* Desktop styles for about-brand-description */
 @media (min-width: 769px) {
   .about-brand-description {
