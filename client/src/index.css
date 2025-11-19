@@ -751,6 +751,10 @@ html {
   .about-ceo-message {
     font-size: 18px !important;
   }
+  
+  .about-ceo-highlight {
+    font-size: 18px !important;
+  }
 }
 
 /* CEO Message Styles */
