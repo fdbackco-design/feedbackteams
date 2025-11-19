@@ -178,12 +178,12 @@ export default function Contact() {
         <div className="relative h-full flex items-center justify-center">
           <div className="text-center px-4 sm:px-6 lg:px-8">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-              문의하기
+              {t("contact.title")}
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto break-keep">
               {t("contact.subtitle.line1")}
-              {/* <br className="hidden sm:block" />
-              {t("contact.subtitle.line2")} */}
+              <br className="hidden sm:block" />
+              {t("contact.subtitle.line2")}
             </p>
           </div>
         </div>
