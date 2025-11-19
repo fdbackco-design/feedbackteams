@@ -268,7 +268,7 @@ const translations = {
     "news.6.summary":
       "프리미엄 주방 브랜드 ASRAN이 스테인리스 냄비 3종, 압력솥, 프라이팬 3종으로 구성된 하이엔드 쿡웨어 라인업을 공식 출시했습니다.",
     "news.6.content":
-      "독일 기술력 기반 SUS410 스틸과 3중 바닥 구조로 프리미엄 조리 경험 제공\n\n피드백(대표 정성현)이 선보이는 프리미엄 주방 브랜드 ASRAN이 하이엔드 스테인리스 쿡웨어 라인업을 2025년 10월 1일 공식 출시했다고 밝혔��� ���.\n\n이번에 출시된 제품군은 스테인리스 냄비 3종, 압력솥, 프라이팬 3종으로 구성되어 있으며, 독일 기술력을 기반으로 한 SUS410 스테인리스 스틸과 3중 바닥 구조를 적용해 열전도율과 내구성을 극대화한 것이 특징이다.\n\n(사진: ASRAN 쿡웨어 제품 라인업)\n\n<strong>독일 기술력과 만난 프리미엄 조리 솔루션</strong>\n\nASRAN 쿡웨어는 가정용부터 전문가용까지 폭넓게 활용 가능한 설계로 개발됐다. 특히 이중 압력 조절 시스템과 정밀한 열전도층을 적용해 조리 중 온도 균형을 유지함으로써 식재료 본연의 맛과 영양을 보존할 수 있도록 설계됐다.\n\nSUS410 스테인리스 스틸은 뛰어난 내식성과 변색 저항성을 자랑하며, 세척 후에도 장기간 광택을 유지할 수 있어 위생적인 주방 환경 조성에 최적화되어 있다. 또한 3중 바닥 구조는 인덕션을 포함한 모든 열원에서 고른 열 분포를 구현해 어떤 주방 환경에서도 완벽한 조리가 가능하다.\n\n<strong>기능성과 심미성을 동시에 구현한 디자인</strong>\n\nASRAN은 제품 개발 과정에서 디자인팀과 요리 전문가가 협업하여 실제 조리 환경에서의 사용자 편의성을 극대화했다. 프리미엄 미러 마감과 절제된 곡선 디자인은 주방의 품격을 높이는 동시에 실용성도 갖췄다.\n\n손잡이는 인체공학적 설계를 적용해 장시간 조리에도 손목 부담을 최소화했으며, 제품의 무게 밸런스 또한 최적화했다. 유리 뚜껑에 적용된 증기 배출 밸브는 조리 과정을 직관적으로 제어할 수 있게 해 편의성을 한층 강화했다.\n\n피드백 관계자는 ASRAN은 단순한 조리도구를 넘어 요리의 완성도를 높이는 셰프의 파트너로 자리매김할 것이라며 앞으로도 기술적 혁신과 감각적 디자인을 결합한 제품을 지속적으로 선보이며, 매일의 요리를 예술로 바꾸는 브랜드로 성장해 나가겠다고 밝혔다.\n\nASRAN 하이엔드 쿠웨어는 공식 온라인몰과 주요 유통 채널을 통해 만나볼 수 있다.",
+      "독일 기술력 기반 SUS410 스틸과 3중 바닥 구조로 프리미엄 조리 경험 제공\n\n피드백(대표 정성현)이 선보이는 프리미엄 주방 브랜드 ASRAN이 하이엔드 스테인리스 쿡웨어 라인업을 2025년 10월 1일 공식 출시했다고 밝혔���.\n\n이번에 출시된 제품군은 스테인리스 냄비 3종, 압력솥, 프라이팬 3종으로 구성되어 있으며, 독일 기술력을 기반으로 한 SUS410 스테인리스 스틸과 3중 바닥 구조를 적용해 열전도율과 내구성을 극대화한 것이 특징이다.\n\n(사진: ASRAN 쿡웨어 제품 라인업)\n\n<strong>독일 기술력과 만난 프리미엄 조리 솔루션</strong>\n\nASRAN 쿡웨어는 가정용부터 전문가용까지 폭넓게 활용 가능한 설계로 개발됐다. 특히 이중 압력 조절 시스템과 정밀한 열전도층을 적용해 조리 중 온도 균형을 유지함으로써 식재료 본연의 맛과 영양을 보존할 수 있도록 설계됐다.\n\nSUS410 스테인리스 스틸은 뛰어난 내식성과 변색 저항성을 자랑하며, 세척 후에도 장기간 광택을 유지할 수 있어 위생적인 주방 환경 조성에 최적화되어 있다. 또한 3중 바닥 구조는 인덕션을 포함한 모든 열원에서 고른 열 분포를 구현해 어떤 주방 환경에서도 완벽한 조리가 가능하다.\n\n<strong>기능성과 심미성을 동시에 구현한 디자인</strong>\n\nASRAN은 제품 개발 과정에서 디자인팀과 요리 전문가가 협업하여 실제 조리 환경에서의 사용자 편의성을 극대화했다. 프리미엄 미러 마감과 절제된 곡선 디자인은 주방의 품격을 높이는 동시에 실용성도 갖췄다.\n\n손잡이는 인체공학적 설계를 적용해 장시간 조리에도 손목 부담을 최소화했으며, 제품의 무게 밸런스 또한 최적화했다. 유리 뚜껑에 적용된 증기 배출 밸브는 조리 과정을 직관적으로 제어할 수 있게 해 편의성을 한층 강화했다.\n\n피드백 관계자는 ASRAN은 단순한 조리도구를 넘어 요리의 완성도를 높이는 셰프의 파트너로 자리매김할 것이라며 앞으로도 기술적 혁신과 감각적 디자인을 결합한 제품을 지속적으로 선보이며, 매일의 요리를 예술로 바꾸는 브랜드로 성장해 나가겠다고 밝혔다.\n\nASRAN 하이엔드 쿠웨어는 공식 온라인몰과 주요 유통 채널을 통해 만나볼 수 있다.",
 
     "news.7.date": "2025.10.10",
     "news.7.title": "La Ceras, 프렌치 럭셔리 캐리어 4종 세트 정식 런칭",
@@ -416,9 +416,9 @@ const translations = {
     "about.ceo.motto": '"브랜드와 시장을 연결하는<br/>플랫폼 기업으로 성장"',
     "about.ceo.message1": "안녕하세요. (주)피드백 대표 송해민, 정성현입니다.",
     "about.ceo.message2":
-      "저희 피드백은 빠르게 변화하는 글로벌 유통 시장 속에서, 브랜드와 시장의 연결자이자 실행자로서 새로운 유통 구조를 제시하고 있습니다. 단순히 '물건을 파는 회사'가 아닌, 브랜드를 함께 키우고 시장에 안착시키는 파트너로서 제조사, 유통사, 소비자 모두가 만족하는 구조를 만들기 위해 노력하고 있습니다.",
-    // "about.ceo.message3":
-    //   "단순히 '물건을 파는 회사'가 아닌, 브랜드를 함께 키우고 시장에 안착시키는 파트너로서 제조사, 유통사, 소비자 모두가 만족하는 구조를 만들기 위해 노력하고 있습니다.",
+      "저희 피드백은 빠르게 변화하는 글로벌 유통 시장 속에서, 브랜드와 시장의 연결자이자 실행자로서 새로운 유통 구조를 제시하고 있습니다.",
+    "about.ceo.message3":
+      "단순히 '물건을 파는 회사'가 아닌, 브랜드를 함께 키우고 시장에 안착시키는 파트너로서 제조사, 유통사, 소비자 모두가 만족하는 구조를 만들기 위해 노력하고 있습니다.",
     "about.ceo.highlight":
       "제품력에 브랜딩을 더하고, 브랜딩에 유통망을 연결하며, 유통에 콘텐츠와 경험을 심는 것. 이것이 피드백의 방식입니다.",
     "about.ceo.message4":
@@ -720,7 +720,7 @@ const translations = {
     "moz.review1.author": "김○○",
     "moz.review2":
       "온도가 균일해서 발끝까지 포근해요. 아침에 일어나면 몸이 한결 가벼워진 느낌입니다.",
-    "moz.review2.author": "이w1�○",
+    "moz.review2.author": "이○○",
     "moz.review3":
       "안전 인증 받은 제품이라 안심하고 사용할 수 있어요. 품질도 만족스럽습니다.",
     "moz.review3.author": "박○○",
@@ -1310,9 +1310,9 @@ const translations = {
     "about.ceo.message1":
       "Hello, we are Song Haemin and Jeong Seonghyeon, Co-CEOs of FeedBack Inc.",
     "about.ceo.message2":
-      "In the rapidly changing global distribution market, FeedBack is presenting a new distribution structure as a connector and executor between brands and markets.We are not simply a 'company that sells products', but are working to create a structure that satisfies manufacturers, distributors, and consumers as a partner that grows brands together and establishes them in the market.",
-    // "about.ceo.message3":
-    //   "We are not simply a 'company that sells products', but are working to create a structure that satisfies manufacturers, distributors, and consumers as a partner that grows brands together and establishes them in the market.",
+      "In the rapidly changing global distribution market, FeedBack is presenting a new distribution structure as a connector and executor between brands and markets.",
+    "about.ceo.message3":
+      "We are not simply a 'company that sells products', but are working to create a structure that satisfies manufacturers, distributors, and consumers as a partner that grows brands together and establishes them in the market.",
     "about.ceo.highlight":
       "Adding branding to product strength, connecting distribution networks to branding, and embedding experience and content into distribution. This is FeedBack's way.",
     "about.ceo.message4":
@@ -1837,7 +1837,7 @@ const translations = {
     "footer.company.contact": "ติดต่อ",
     "footer.bottom.copyright": "© 2024 FeedBack Corp. สงวนลิขสิทธิ์",
     "footer.bottom.bizinfo":
-      "เลขทะเบียน���ุรกิจ: 296-87-03628 | ซีอีโอ: Hae-min Song, Sung-hyun Jeong",
+      "เลขทะเบียนธุรกิจ: 296-87-03628 | ซีอีโอ: Hae-min Song, Sung-hyun Jeong",
     "footer.bottom.privacy": "นโยบายความเป็นสจวนตัว",
     "footer.bottom.terms": "ข้อกำหนดการใช้งาน",
     "footer.bottom.cookies": "นโยบายคุกกี้",
@@ -1989,9 +1989,9 @@ const translations = {
     "b2b2c.b2c.description":
       "มอบสินค้าและบริการที่ดีที่สุด ผ่านหลากหลายช่องทาง",
     "b2b2c.b2c.feature1": "ออนไลน์ & ออฟไลน์",
-    "b2b2c.b2c.feature2": "เชื่อ60�ต่อโฮมช้อปปิ้ง",
+    "b2b2c.b2c.feature2": "เชื่อมต่อโฮมช้อปปิ้ง",
     "b2b2c.b2c.feature3": "ขยายสู่ระดับโลก",
-    "b2b2c.summary.title": "ระบบนิเวศการกระจายสินค้าที่สม���ูรณ์ — FeedBack",
+    "b2b2c.summary.title": "ระบบนิเวศการกระจายสินค้าที่สมบูรณ์ — FeedBack",
     "b2b2c.summary.description":
       "FeedBack ออกแบบและเพิ่มประสิทธิภาพกระบวนก���รกระจายสินค้าทั้งหมด ฀พื่อให้สินค้าคุณภาพจากผู้ผลิตไปถึงผู้บริโภคได้สำเร็จ",
 
@@ -2050,7 +2050,7 @@ const translations = {
     "news.4.content":
       "แผ่นกรอง HEPA14 ระดับการแพทย์ + UV Sterilization ครอบคลุมกว้าง 78 ม² เจาะตลาดเครื่องใช้ไฟฟ้าพรีเมียม\n\nตลาดเครื่องใช้ไฟฟ้าในบ้านของเกาหลีต้อนรับพัดลมฟอกอากาศร้อน-เย็นแบบมัลติฟังก์ชันที่ออกแบบมาเพื่อใช้งานได้ทุกฤดูกาล\n\nรุ่นใหม่นี้รวม 5 ฟังก์ชัน—ลมเย็น ลมร้อน ฟอกอากาศ สร้างประจุลบ และฆ่าเชื้อด้วยรังสี UV—ไว้ในโซลูชันแบบ ‘5-in-1’ เครื่องเดียว มอบระบบจัดการคุณภาพอากาศแบบองค์รวม แตกต่างจากเครื่องทั่วไปที่ทำได้อย่างใดอย่างหนึ่ง\n\n(ภาพ: พัดลมฟอกอากาศไร้ใบพัด 5-in-1 ร้อน-เย็น)\n\n<strong>กรองระดับการแพทย์: กำจัดฝุ่นละเอียดได้ 99.99%</strong>\n\nจุดเด่นคือแผ่นกรอง HEPA14 ระดับห้องผ่าตัด/คลีนรูม สามารถดักจับอนุภาคขนาด 0.3 ไมโครเมตรได้ไม่น้อยกว่า 99.99% สูงกว่าเกรด HEPA13 ที่ใช้กันทั่วไปในบ้าน จึงอุ่นใจได้สำหรับครอบครัวที่มีอาการภูมิแพ้หรือปัญหาระบบทางเดินหายใจ\n\nด้วยระบบกรองอากาศแบบ 360 องศา เครื่องสามารถดูดและฟอกอากาศได้รอบทิศ ครอบคลุมพื้นที่ได้สูงสุด 78 ม² (ประมาณ 24 พย็อง/840 ตร.ฟุต) เหมาะกับพื้นที่ขนาดใหญ่ เช่น ห้องนั่งเล่นหรือสำนักงาน\n\n<strong>UV Sterilization และประจุลบ เพื่อสภาพแวดล้อมภายในที่ถูกสุขอนามัย</strong>\n\nนอกจากดักจับฝุ่น เครื่องยังติดตั้งระบบฆ่าเชื้อด้วยรังสี UV เพื่อลดแบคทีเรียและไวรัสในอากาศ วิธีนี้ไม่ใช้สารเคมีจึงปลอดภัย โดยเฉพาะอย่างยิ่งในช่วงเปลี่ยนฤดู",
     "about.philosophy.value2.description":
-      '단순 유통을 넘어 상품 기획, 브랜딩, 마케팅, 유통 채널을<br class="hidden lg:block"/>유기적으로 연결합니다.<br class="hidden sm:block lg:hidden"/>고유한 OEM 역량쳼 자체 브랜드 경험을 결합하여,<br class="hidden lg:block"/>브랜드가 시장에서 자리 잡도록 실행 가능한 솔루션을 제공합니다.<br/><br/><span class="font-semibold text-primary">제품력에 브랜딩을 입히 ��, 브랜딩에 유통을 결합하며,<br class="hidden lg:block"/>유통에 경험과 콘텐츠를 심는 방식이 FeedBack의 방식</span>입니다.',
+      '단순 유통을 넘어 상품 기획, 브랜딩, 마케팅, 유통 채널을<br class="hidden lg:block"/>유기적으로 연결합니다.<br class="hidden sm:block lg:hidden"/>고유한 OEM 역량과 자체 브랜드 경험을 결합하여,<br class="hidden lg:block"/>브랜드가 시장에서 자리 잡도록 실행 가능한 솔루션을 제공합니다.<br/><br/><span class="font-semibold text-primary">제품력에 브랜딩을 입히 ��, 브랜딩에 유통을 결합하며,<br class="hidden lg:block"/>유통에 경험과 콘텐츠를 심는 방식이 FeedBack의 방식</span>입니다.',
     "about.philosophy.value3.title":
       '글로벌 시장에서 경쟁력을 만드는<br class="hidden lg:block"/> 실행 중심 기업',
     "about.philosophy.value3.description":
@@ -2068,9 +2068,9 @@ const translations = {
     "about.ceo.motto": '"브랜드와 시장을 연결하는<br/>플랫폼 기업으로 성장"',
     "about.ceo.message1": "안녕하세요. (주)피드백 대표 송해민, 정성현입니다.",
     "about.ceo.message2":
-      "저희 피드백은 빠르게 변화하는 글로벌 유통 시장 속에서, 브랜드와 시장의 연결자이자 실행자로서 새로운 유통 구조를 제시하고 있습니다.단순히 '물건을 파는 회사'가 아닌, 브랜드를 함께 키우고 시장에 안착시키는 파트너로서 제조사, 유통사, 소비자 모두가 만족하는 구조를 만들기 위해 노력하고 있습니다.",
-    // "about.ceo.message3":
-    //   "단순히 '물건을 파는 회사'가 아닌, 브랜드를 함께 키우고 시장에 안착시키는 파트너로서 제조사, 유통사, 소비자 모두가 만족하는 구조를 만들기 위해 노력하고 있습니다.",
+      "저희 피드백은 빠르게 변화하는 글로벌 유통 시장 속에서, 브랜드와 시장의 연결자이자 실행자로서 새로운 유통 구조를 제시하고 있습니다.",
+    "about.ceo.message3":
+      "단순히 '물건을 파는 회사'가 아닌, 브랜드를 함께 키우고 시장에 안착시키는 파트너로서 제조사, 유통사, 소비자 모두가 만족하는 구조를 만들기 위해 노력하고 있습니다.",
     "about.ceo.highlight":
       "제품력에 브랜딩을 더하고, 브랜딩에 유통망을 연결하며, 유통에 콘텐츠와 경험을 심는 것. 이것이 피드백의 방식입니다.",
     "about.ceo.message4":
@@ -2122,7 +2122,7 @@ const translations = {
     "파트너십 문의하기": "파트너십 문의하기",
 
     // Brand Detail Pages - Common
-    "브랜드 목록 ��로 돌아가기": "브랜드 목록으로 돌아가기",
+    "브랜드 목록으로 돌아가기": "브랜드 목록으로 돌아가기",
 
     // Hoid Brand Page
     "hoid.hero.title": "공기 속까지 바꾸는 디자인",
