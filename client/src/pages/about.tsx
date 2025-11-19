@@ -463,17 +463,26 @@ export default function About() {
 
               <div className="p-6 sm:p-8 lg:p-12">
                 <div className="space-y-6 text-foreground leading-relaxed text-center">
-                  <p className="about-ceo-message" style={{ width: '100%' }}>{t("about.ceo.message1")}</p>
-                  <p className="about-ceo-message" style={{ width: '100%' }}>{t("about.ceo.message2")}</p>
-                  <p className="about-ceo-message" style={{ width: '100%' }}>{t("about.ceo.message3")}</p>
+                  <p className="about-ceo-message" style={{ width: "100%" }}>
+                    {t("about.ceo.message1")}
+                  </p>
+                  <p className="about-ceo-message" style={{ width: "100%" }}>
+                    {t("about.ceo.message2")}
+                  </p>
+                  {/* <p className="about-ceo-message" style={{ width: '100%' }}>{t("about.ceo.message3")}</p> */}
 
                   <div className="p-4 sm:p-6">
-                    <p className="about-ceo-highlight font-bold" style={{ width: '100%' }}>
+                    <p
+                      className="about-ceo-highlight font-bold"
+                      style={{ width: "100%" }}
+                    >
                       {t("about.ceo.highlight")}
                     </p>
                   </div>
 
-                  <p className="about-ceo-message" style={{ width: '100%' }}>{t("about.ceo.message4")}</p>
+                  <p className="about-ceo-message" style={{ width: "100%" }}>
+                    {t("about.ceo.message4")}
+                  </p>
                 </div>
               </div>
               <div className="to-accent p-12 text-black text-center flex flex-col justify-center">
