@@ -530,7 +530,7 @@ export default function About() {
                   </p>
                 </div>
               </div>
-              <div className="to-accent p-12 text-black text-center flex flex-row justify-center items-center gap-4">
+              <div className="to-accent p-12 text-black text-center flex flex-col justify-center items-center gap-2">
                 <p className="text-lg opacity-90">{t("about.ceo.position")}</p>
                 <h3 className="text-2xl font-bold">{t("about.ceo.name")}</h3>
               </div>
