@@ -182,8 +182,8 @@ export default function Contact() {
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto break-keep">
               {t("contact.subtitle.line1")}
-              <br className="hidden sm:block" />
-              {t("contact.subtitle.line2")}
+              {/* <br className="hidden sm:block" />
+              {t("contact.subtitle.line2")} */}
             </p>
           </div>
         </div>
