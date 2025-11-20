@@ -182,8 +182,8 @@ export default function Contact() {
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto break-keep">
               {t("contact.subtitle.line1")}
-              <br className="hidden sm:block" />
-              {t("contact.subtitle.line2")}
+              {/* <br className="hidden sm:block" />
+              {t("contact.subtitle.line2")} */}
             </p>
           </div>
         </div>
@@ -236,39 +236,6 @@ export default function Contact() {
                   </div>
                 </CardContent>
               </Card>
-
-              {/* Social Media */}
-              <div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">
-                  {t("contact.section.social")}
-                </h3>
-                <div className="flex space-x-3 sm:space-x-4">
-                  <a
-                    href="#"
-                    className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors tap-target"
-                  >
-                    <Facebook className="w-5 h-5 sm:w-6 sm:h-6" />
-                  </a>
-                  <a
-                    href="#"
-                    className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-400 rounded-full flex items-center justify-center text-white hover:bg-blue-500 transition-colors tap-target"
-                  >
-                    <Twitter className="w-5 h-5 sm:w-6 sm:h-6" />
-                  </a>
-                  <a
-                    href="#"
-                    className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-700 rounded-full flex items-center justify-center text-white hover:bg-blue-800 transition-colors tap-target"
-                  >
-                    <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" />
-                  </a>
-                  <a
-                    href="#"
-                    className="w-10 h-10 sm:w-12 sm:h-12 bg-red-600 rounded-full flex items-center justify-center text-white hover:bg-red-700 transition-colors tap-target"
-                  >
-                    <Youtube className="w-5 h-5 sm:w-6 sm:h-6" />
-                  </a>
-                </div>
-              </div>
             </div>
 
             {/* Contact Form */}
