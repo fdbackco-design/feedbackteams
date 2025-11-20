@@ -305,7 +305,7 @@ const translations = {
     "cta.proposal": "사업 제안서 보기",
 
     // Contact Page
-    "contact.title": "Contact Us",
+    "contact.title": "문의하기",
     "contact.subtitle.line1": "FeedBack과 함께 새로운 비즈니스 기회를 만들어보세요.",
     // "contact.subtitle.line2": "",
     "contact.section.contact": "연락처",
