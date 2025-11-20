@@ -4,6 +4,13 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import GoogleMap from "@/components/GoogleMap";
@@ -22,7 +29,7 @@ export default function Contact() {
     company: "",
     email: "",
     phone: "",
-    subject: "",
+    inquiryType: "",
     message: "",
     privacyAgree: false,
   });
@@ -68,7 +75,7 @@ export default function Contact() {
         company: "",
         email: "",
         phone: "",
-        subject: "",
+        inquiryType: "",
         message: "",
         privacyAgree: false,
       });
@@ -174,18 +181,36 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <Label htmlFor="subject">{t("contact.form.subject")} *</Label>
-                  <Input
-                    id="subject"
-                    type="text"
-                    required
-                    value={formData.subject}
-                    onChange={(e) =>
-                      setFormData({ ...formData, subject: e.target.value })
+                  <Label htmlFor="inquiry-type">
+                    {t("contact.form.inquiry_type")} *
+                  </Label>
+                  <Select
+                    value={formData.inquiryType}
+                    onValueChange={(value) =>
+                      setFormData((prev) => ({ ...prev, inquiryType: value }))
                     }
-                    placeholder={t("contact.form.subject.placeholder")}
-                    data-testid="input-subject"
-                  />
+                    required
+                  >
+                    <SelectTrigger 
+                      aria-label={t("contact.form.inquiry_type")}
+                      data-testid="select-inquiry-type"
+                    >
+                      <SelectValue
+                        placeholder={t("contact.form.inquiry_type.placeholder")}
+                      />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="business">
+                        {t("contact.form.inquiry_type.business")}
+                      </SelectItem>
+                      <SelectItem value="brand">
+                        {t("contact.form.inquiry_type.brand")}
+                      </SelectItem>
+                      <SelectItem value="partner">
+                        {t("contact.form.inquiry_type.partner")}
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
 
                 <div>
