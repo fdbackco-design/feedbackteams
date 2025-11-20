@@ -357,25 +357,6 @@ export default function Contact() {
                 </div>
               ))}
             </div>
-
-            {/* Department Contacts */}
-            <Card className="bg-gray-50 mb-8">
-              <CardHeader>
-                <CardTitle className="text-xl">
-                  {t("contact.section.departments")}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {departments.map((dept, index) => (
-                    <div key={index} className="flex justify-between">
-                      <span className="text-gray-600">{dept.dept}</span>
-                      <span className="font-medium">{dept.email}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
           </div>
 
           {/* Map Section */}
@@ -383,7 +364,7 @@ export default function Contact() {
             <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
               {t("contact.map.title")}
             </h3>
-            <div className="rounded-xl h-96 overflow-hidden shadow-lg">
+            <div className="rounded-xl h-96 overflow-hidden">
               <GoogleMap center={CENTER} className="rounded-xl" />
             </div>
           </div>
