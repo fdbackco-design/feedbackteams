@@ -352,7 +352,7 @@ export default function Contact() {
               {t("contact.section.contact")}
             </h2>
 
-            <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex items-start">
                   <div
