@@ -193,7 +193,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 mobile-padding">
             {/* Contact Form */}
-            <div className="p-8 w-full" style={{ backgroundColor: '#F5F5F5' }}>
+            <div className="p-8 w-full" style={{ backgroundColor: "#F5F5F5" }}>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <Label htmlFor="name">{t("contact.form.name")} *</Label>
