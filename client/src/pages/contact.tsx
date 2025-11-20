@@ -30,23 +30,23 @@ export default function Contact() {
   const contactInfo = [
     {
       icon: Phone,
-      title: t("contact.info.phone"),
-      content: "+82-2-1234-5678",
+      title: t("contact.info.phone.title"),
+      content: t("contact.info.phone.content"),
     },
     {
       icon: Mail,
-      title: t("contact.info.email"),
-      content: "info@feedback.com",
+      title: t("contact.info.email.title"),
+      content: t("contact.info.email.content"),
     },
     {
       icon: MapPin,
-      title: t("contact.info.address"),
-      content: t("contact.info.address.detail"),
+      title: t("contact.info.address.title"),
+      content: t("contact.info.address.content"),
     },
     {
       icon: Clock,
-      title: t("contact.info.hours"),
-      content: t("contact.info.hours.detail"),
+      title: t("contact.info.hours.title"),
+      content: t("contact.info.hours.content"),
     },
   ];
 

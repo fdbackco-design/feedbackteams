@@ -316,7 +316,9 @@ const translations = {
     "contact.info.address.content":
       "인천 연수구 송도과학로 80, 송도 AIT센터 1301호, 1302호",
     "contact.info.phone.title": "대표전화",
+    "contact.info.phone.content": "+82-2-1234-5678",
     "contact.info.email.title": "이메일",
+    "contact.info.email.content": "info@feedback.com",
     "contact.info.hours.title": "운영시간",
     "contact.info.hours.content": "평일 10:00 - 19:00, 주말 및 공휴일 휴무",
 
@@ -738,7 +740,9 @@ const translations = {
     "contact.info.address.content":
       "80 Songdogwahak-ro, Yeonsu-gu, Incheon, Songdo AIT Center 1301, 1302",
     "contact.info.phone.title": "Main Phone",
+    "contact.info.phone.content": "+82-2-1234-5678",
     "contact.info.email.title": "Email",
+    "contact.info.email.content": "info@feedback.com",
     "contact.info.hours.title": "Business Hours",
     "contact.info.hours.content":
       "Weekdays 10:00 - 19:00, Weekends and Holidays Closed",
@@ -1602,6 +1606,71 @@ const translations = {
     "b2b2c.summary.title": "ระบบนิเวศการกระจายสินค้าที่สม���ูรณ์ — FeedBack",
     "b2b2c.summary.description":
       "FeedBack ออกแบบและเพิ่มประสิทธิภาพกระบวนก���รกระจายสินค้าทั้งหมด ฀พื่อให้สินค้าคุณภาพจากผู้ผลิตไปถึงผู้บริโภคได้สำเร็จ",
+
+    // Contact Page
+    "contact.title": "ติดต่อเรา",
+    "contact.subtitle.line1": "สร้างโอกาสทางธุรกิจใหม่",
+    "contact.subtitle.line2": "ร่วมกับ FeedBack",
+    "contact.section.contact": "ข้อมูลการติดต่อ",
+    "contact.section.departments": "แผนก",
+    "contact.section.social": "โซเชียลมีเดีย",
+
+    "contact.info.address.title": "สำนักงานใหญ่",
+    "contact.info.address.content":
+      "80 Songdogwahak-ro, Yeonsu-gu, Incheon, Songdo AIT Center 1301, 1302",
+    "contact.info.phone.title": "โทรศัพท์",
+    "contact.info.phone.content": "+82-2-1234-5678",
+    "contact.info.email.title": "อีเมล",
+    "contact.info.email.content": "info@feedback.com",
+    "contact.info.hours.title": "เวลาทำการ",
+    "contact.info.hours.content":
+      "วันธรรมดา 10:00 - 19:00, วันหยุดสุดสัปดาห์และวันหยุดนักขัตฤกษ์ปิดทำการ",
+
+    "contact.dept.management": "ฝ่ายสนับสนุนการจัดการ",
+
+    "contact.form.title": "ฝากข้อความ",
+    "contact.form.name": "ชื่อ",
+    "contact.form.name.placeholder": "กรุณากรอกชื่อของคุณ",
+    "contact.form.company": "บริษัท",
+    "contact.form.company.placeholder": "กรุณากรอกชื่อบริษัท",
+    "contact.form.email": "อีเมล",
+    "contact.form.email.placeholder": "your@email.com",
+    "contact.form.phone": "โทรศัพท์",
+    "contact.form.phone.placeholder": "+82-10-0000-0000",
+    "contact.form.subject": "หัวข้อ",
+    "contact.form.subject.placeholder": "กรุณากรอกหัวข้อ",
+    "contact.form.inquiry_type": "ประเภทการสอบถาม",
+    "contact.form.inquiry_type.placeholder": "เลือกประเภทการสอบถาม",
+    "contact.form.inquiry_type.business": "สอบถามธุรกิจ",
+    "contact.form.inquiry_type.brand": "สอบถามแบรนด์",
+    "contact.form.inquiry_type.partner": "ข้อเสนอพาร์ทเนอร์",
+    "contact.form.message": "ข้อความ",
+    "contact.form.message.placeholder": "กรุณากรอกข้อความของคุณ",
+    "contact.form.privacy": "ฉันยอมรับการเก็บรวบรวมและใช้ข้อมูลส่วนบุคคล",
+    "contact.form.privacy.link": "ดูนโยบาย",
+    "contact.form.privacy.required": "กรุณายอมรับนโยบายความเป็นส่วนตัวเพื่อดำเนินการต่อ",
+    "contact.form.submit": "ส่งข้อความ",
+    "contact.form.sending": "กำลังส่ง...",
+    "contact.form.success": "ข้อความของคุณถูกส่งเรียบร้อยแล้ว เราจะติดต่อกลับเร็วๆ นี้",
+    "contact.form.error": "เกิดข้อผิดพลาดในการส่งข้อความ กรุณาลองใหม่อีกครั้ง",
+
+    "contact.errors.required.title": "ข้อผิดพลาดในการกรอก",
+    "contact.errors.required.description":
+      "ชื่อ อีเมล และข้อความเป็นข้อมูลที่จำเป็น",
+
+    "contact.toast.success.title": "ส่งอีเมลสำเร็จ",
+    "contact.toast.success.description":
+      "ข้อความของคุณถูกส่งเรียบร้อยแล้ว เราจะติดต่อกลับเร็วๆ นี้",
+    "contact.toast.gmail.title": "ต้องการการอนุญาต Gmail",
+    "contact.toast.gmail.description": "ต้องการการอนุญาต Gmail API",
+    "contact.toast.gmail.link": "คลิกที่นี่เพื่ออนุญาต Gmail",
+    "contact.toast.unknown": "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุ",
+    "contact.toast.send_error_console": "ข้อผิดพลาดในการส่งอีเมล:",
+    "contact.toast.fail.title": "ส่งล้มเหลว",
+    "contact.toast.fail.description":
+      "เกิดข้อผิดพลาดในการส่งอีเมล กรุณาลองใหม่ภายหลัง",
+
+    "contact.map.title": "วิธีเดินทาง",
 
     // News Section
     "news.title": "ข่าว & ข่าวประชาสัมพันธ์",
