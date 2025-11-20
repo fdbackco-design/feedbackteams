@@ -105,8 +105,8 @@ export default function Contact() {
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto break-keep">
               {t("contact.subtitle.line1")}
-              <br className="hidden sm:block" />
-              {t("contact.subtitle.line2")}
+              {/* <br className="hidden sm:block" />
+              {t("contact.subtitle.line2")} */}
             </p>
           </div>
         </div>
@@ -116,7 +116,10 @@ export default function Contact() {
         <div className="w-full">
           <div className="flex justify-center">
             {/* Contact Form */}
-            <div className="p-8 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ backgroundColor: "#F5F5F5" }}>
+            <div
+              className="p-8 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+              style={{ backgroundColor: "#F5F5F5" }}
+            >
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -191,7 +194,7 @@ export default function Contact() {
                     }
                     required
                   >
-                    <SelectTrigger 
+                    <SelectTrigger
                       aria-label={t("contact.form.inquiry_type")}
                       data-testid="select-inquiry-type"
                     >
