@@ -323,6 +323,20 @@ export default function Contact() {
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full py-4 text-lg font-semibold"
+                  style={{
+                    backgroundColor: isSubmitting ? '#93C5FD' : '#3B82F6',
+                    color: 'white'
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!isSubmitting) {
+                      e.currentTarget.style.backgroundColor = '#2563EB';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!isSubmitting) {
+                      e.currentTarget.style.backgroundColor = '#3B82F6';
+                    }
+                  }}
                 >
                   {isSubmitting
                     ? t("contact.form.sending")
