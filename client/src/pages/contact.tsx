@@ -189,11 +189,11 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-20" style={{ backgroundColor: "#f5f5f5" }}>
         <div className="w-full">
           <div className="flex justify-center">
             {/* Contact Form */}
-            <div className="p-8 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ backgroundColor: "#f5f5f5" }}>
+            <div className="p-8 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <Label htmlFor="name">{t("contact.form.name")} *</Label>
