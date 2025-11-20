@@ -345,7 +345,7 @@ export default function Contact() {
           </div>
 
           {/* Contact Information */}
-          <div>
+          <div className="mt-16 sm:mt-20 lg:mt-24">
             <h2 className="text-fluid-sub break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-gray-900 maxw-title mb-6 sm:mb-8">
               {t("contact.section.contact")}
             </h2>
