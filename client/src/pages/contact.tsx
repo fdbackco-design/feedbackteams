@@ -178,22 +178,22 @@ export default function Contact() {
         <div className="relative h-full flex items-center justify-center">
           <div className="text-center px-4 sm:px-6 lg:px-8">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-              문의하기
+              {t("contact.title")}
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-white/90 max-w-3xl mx-auto break-keep">
               {t("contact.subtitle.line1")}
-              {/* <br className="hidden sm:block" />
-              {t("contact.subtitle.line2")} */}
+              <br className="hidden sm:block" />
+              {t("contact.subtitle.line2")}
             </p>
           </div>
         </div>
       </section>
 
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mobile-padding">
+        <div className="w-full">
+          <div className="flex justify-center">
             {/* Contact Form */}
-            <div className="p-8 w-full" style={{ backgroundColor: "#F5F5F5" }}>
+            <div className="p-8 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ backgroundColor: "#F5F5F5" }}>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <Label htmlFor="name">{t("contact.form.name")} *</Label>
@@ -343,7 +343,9 @@ export default function Contact() {
               </form>
             </div>
           </div>
+        </div>
 
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Contact Information */}
           <div className="mt-16 sm:mt-20 lg:mt-24">
             <h2 className="text-fluid-sub break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-gray-900 maxw-title mb-6 sm:mb-8">
