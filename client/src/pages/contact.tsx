@@ -193,7 +193,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 mobile-padding">
             {/* Contact Form */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+            <div className="p-8 ">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <Label htmlFor="name">{t("contact.form.name")} *</Label>
@@ -320,19 +320,19 @@ export default function Contact() {
                   disabled={isSubmitting}
                   className="w-full text-lg font-semibold"
                   style={{
-                    backgroundColor: isSubmitting ? '#93C5FD' : '#3B82F6',
-                    color: 'white',
-                    padding: '15px 60px',
-                    borderRadius: '5px'
+                    backgroundColor: isSubmitting ? "#93C5FD" : "#3B82F6",
+                    color: "white",
+                    padding: "15px 60px",
+                    borderRadius: "5px",
                   }}
                   onMouseEnter={(e) => {
                     if (!isSubmitting) {
-                      e.currentTarget.style.backgroundColor = '#2563EB';
+                      e.currentTarget.style.backgroundColor = "#2563EB";
                     }
                   }}
                   onMouseLeave={(e) => {
                     if (!isSubmitting) {
-                      e.currentTarget.style.backgroundColor = '#3B82F6';
+                      e.currentTarget.style.backgroundColor = "#3B82F6";
                     }
                   }}
                 >
