@@ -322,10 +322,12 @@ export default function Contact() {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 text-lg font-semibold"
+                  className="w-full text-lg font-semibold"
                   style={{
                     backgroundColor: isSubmitting ? '#93C5FD' : '#3B82F6',
-                    color: 'white'
+                    color: 'white',
+                    padding: '15px 60px',
+                    borderRadius: '5px'
                   }}
                   onMouseEnter={(e) => {
                     if (!isSubmitting) {
