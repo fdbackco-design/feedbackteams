@@ -118,7 +118,7 @@ export default function Contact() {
             {/* Contact Form */}
             <div
               className="p-8 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-              style={{ backgroundColor: "#F5F5F5", paddingTop: "5rem" }}
+              style={{ backgroundColor: "#f5f5f5", paddingTop: "5rem" }}
             >
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
