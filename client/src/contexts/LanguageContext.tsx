@@ -316,9 +316,9 @@ const translations = {
     "contact.info.address.content":
       "인천 연수구 송도과학로 80, 송도 AIT센터 1301호, 1302호",
     "contact.info.phone.title": "대표전화",
-    "contact.info.phone.content": "+82-2-1234-5678",
+    "contact.info.phone.content": "070-8211-1761",
     "contact.info.email.title": "이메일",
-    "contact.info.email.content": "info@feedback.com",
+    "contact.info.email.content": "fdbackteams@gmail.com",
     "contact.info.hours.title": "운영시간",
     "contact.info.hours.content": "평일 10:00 - 19:00, 주말 및 공휴일 휴무",
 
@@ -740,9 +740,9 @@ const translations = {
     "contact.info.address.content":
       "80 Songdogwahak-ro, Yeonsu-gu, Incheon, Songdo AIT Center 1301, 1302",
     "contact.info.phone.title": "Main Phone",
-    "contact.info.phone.content": "+82-2-1234-5678",
+    "contact.info.phone.content": "070-8211-1761",
     "contact.info.email.title": "Email",
-    "contact.info.email.content": "info@feedback.com",
+    "contact.info.email.content": "fdbackteams@gmail.com",
     "contact.info.hours.title": "Business Hours",
     "contact.info.hours.content":
       "Weekdays 10:00 - 19:00, Weekends and Holidays Closed",
@@ -1619,9 +1619,9 @@ const translations = {
     "contact.info.address.content":
       "80 Songdogwahak-ro, Yeonsu-gu, Incheon, Songdo AIT Center 1301, 1302",
     "contact.info.phone.title": "โทรศัพท์",
-    "contact.info.phone.content": "+82-2-1234-5678",
+    "contact.info.phone.content": "070-8211-1761",
     "contact.info.email.title": "อีเมล",
-    "contact.info.email.content": "info@feedback.com",
+    "contact.info.email.content": "fdbackteams@gmail.com",
     "contact.info.hours.title": "เวลาทำการ",
     "contact.info.hours.content":
       "วันธรรมดา 10:00 - 19:00, วันหยุดสุดสัปดาห์และวันหยุดนักขัตฤกษ์ปิดทำการ",
