@@ -194,10 +194,6 @@ export default function Contact() {
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 mobile-padding">
             {/* Contact Form */}
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-              <h2 className="text-fluid-sub break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-gray-900 maxw-title mb-8">
-                {t("contact.form.title")}
-              </h2>
-
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <Label htmlFor="name">{t("contact.form.name")} *</Label>
