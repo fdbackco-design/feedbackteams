@@ -192,52 +192,6 @@ export default function Contact() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 mobile-padding">
-            {/* Contact Information */}
-            <div>
-              <h2 className="text-fluid-sub break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-gray-900 maxw-title mb-6 sm:mb-8">
-                {t("contact.section.contact")}
-              </h2>
-
-              <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-12">
-                {contactInfo.map((info, index) => (
-                  <div key={index} className="flex items-start">
-                    <div
-                      className={`w-10 h-10 sm:w-12 sm:h-12 bg-black rounded-full flex items-center justify-center flex-shrink-0 tap-target`}
-                    >
-                      <info.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-                    </div>
-                    <div className="ml-3 sm:ml-4">
-                      <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-1">
-                        {info.title}
-                      </h3>
-                      <p className="text-sm sm:text-base text-gray-600 whitespace-pre-line">
-                        {info.content}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Department Contacts */}
-              <Card className="bg-gray-50 mb-8">
-                <CardHeader>
-                  <CardTitle className="text-xl">
-                    {t("contact.section.departments")}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    {departments.map((dept, index) => (
-                      <div key={index} className="flex justify-between">
-                        <span className="text-gray-600">{dept.dept}</span>
-                        <span className="font-medium">{dept.email}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
             {/* Contact Form */}
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
               <h2 className="text-fluid-sub break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-gray-900 maxw-title mb-8">
@@ -376,6 +330,52 @@ export default function Contact() {
                 </Button>
               </form>
             </div>
+          </div>
+
+          {/* Contact Information */}
+          <div>
+            <h2 className="text-fluid-sub break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-gray-900 maxw-title mb-6 sm:mb-8">
+              {t("contact.section.contact")}
+            </h2>
+
+            <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-12">
+              {contactInfo.map((info, index) => (
+                <div key={index} className="flex items-start">
+                  <div
+                    className={`w-10 h-10 sm:w-12 sm:h-12 bg-black rounded-full flex items-center justify-center flex-shrink-0 tap-target`}
+                  >
+                    <info.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                  </div>
+                  <div className="ml-3 sm:ml-4">
+                    <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-1">
+                      {info.title}
+                    </h3>
+                    <p className="text-sm sm:text-base text-gray-600 whitespace-pre-line">
+                      {info.content}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Department Contacts */}
+            <Card className="bg-gray-50 mb-8">
+              <CardHeader>
+                <CardTitle className="text-xl">
+                  {t("contact.section.departments")}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  {departments.map((dept, index) => (
+                    <div key={index} className="flex justify-between">
+                      <span className="text-gray-600">{dept.dept}</span>
+                      <span className="font-medium">{dept.email}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Map Section */}
