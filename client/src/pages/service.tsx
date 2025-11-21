@@ -26,50 +26,70 @@ import appDevImage from "@assets/representation-user-experience-interface-design
 
 export default function Service() {
   const { t } = useLanguage();
-  
+
   const services = [
     {
       icon: ShoppingCart,
-      title: t("유통 / 수출입 중개"),
-      description: t("아시아 전역의 유통망을 통해 효율적인 수출입 및 중개 서비스를 제공합니다. 다양한 제품군에 대한 전문적인 수출입 컨설팅과 물류 솔루션을 함께 제공하여 글로벌 비즈니스를 지원합니다."),
-      features: [t("services.distribution.features.0"), t("services.distribution.features.1"), t("services.distribution.features.2")],
-      buttonText: t("서비스 문의"),
+      title: t("services.distribution.title"),
+      description: t("services.distribution.description"),
+      features: [
+        t("services.distribution.features.0"),
+        t("services.distribution.features.1"),
+        t("services.distribution.features.2"),
+      ],
+      buttonText: t("services.distribution.button"),
       buttonColor: "bg-blue-600 hover:bg-blue-700",
       imageUrl: cargoShipImage,
     },
     {
       icon: TrendingUp,
-      title: t("자체 브랜드 제조 (OEM)"),
-      description: t("Hoid, Medifeed, InYourHeart, 상생 등 4개 자체 브랜드의 제조 및 OEM 생산을 통해 브랜드 성장을 지원합니다. 품질 관리부터 제품 개발까지 전 과정을 책임집니다."),
-      features: [t("services.manufacturing.features.0"), t("services.manufacturing.features.1"), t("services.manufacturing.features.2")],
-      buttonText: t("브랜드 보기"),
+      title: t("services.manufacturing.title"),
+      description: t("services.manufacturing.description"),
+      features: [
+        t("services.manufacturing.features.0"),
+        t("services.manufacturing.features.1"),
+        t("services.manufacturing.features.2"),
+      ],
+      buttonText: t("services.manufacturing.button"),
       buttonColor: "bg-green-600 hover:bg-green-700",
       imageUrl: factoryImage,
     },
     {
       icon: TrendingUp,
-      title: t("글로벌 마케팅/브랜딩"),
-      description: t("홈쇼핑 연계와 디지털 마케팅을 통한 글로벌 브랜딩 솔루션을 제공합니다. 브랜드 아이덴티티 개발부터 글로벌 시장 진출 전략까지 종합적인 마케팅 서비스를 지원합니다."),
-      features: [t("services.marketing.features.0"), t("services.marketing.features.1"), t("services.marketing.features.2")],
-      buttonText: t("상담 신청"),
+      title: t("services.marketing.title"),
+      description: t("services.marketing.description"),
+      features: [
+        t("services.marketing.features.0"),
+        t("services.marketing.features.1"),
+        t("services.marketing.features.2"),
+      ],
+      buttonText: t("services.marketing.button"),
       buttonColor: "bg-purple-600 hover:bg-purple-700",
       imageUrl: homeshoppingImage,
     },
     {
       icon: Hospital,
-      title: t("의료관광 플랫폼"),
-      description: t("상생 브랜드를 통한 의료관광 플랫폼 운영으로 한국의 우수한 의료 서비스를 전 세계에 연결합니다. 태국, 베트남을 시작으로 아시아 전역으로 서비스를 확장하고 있습니다."),
-      features: [t("services.medical.features.0"), t("services.medical.features.1"), t("services.medical.features.2")],
-      buttonText: t("상생 브랜드 보기"),
+      title: t("services.medical.title"),
+      description: t("services.medical.description"),
+      features: [
+        t("services.medical.features.0"),
+        t("services.medical.features.1"),
+        t("services.medical.features.2"),
+      ],
+      buttonText: t("services.medical.button"),
       buttonColor: "bg-red-600 hover:bg-red-700",
       imageUrl: hospitalImage,
     },
     {
       icon: Smartphone,
-      title: t("앱 개발"),
-      description: t("의료/케어 통합 앱 개발로 디지털 헬스케어 솔루션을 제공합니다. 다국어 지원과 실시간 상담 기능을 통해 글로벌 사용자들에게 편리한 서비스를 제공합니다."),
-      features: [t("services.app.features.0"), t("services.app.features.1"), t("services.app.features.2")],
-      buttonText: t("앱 정보 보기"),
+      title: t("services.app.title"),
+      description: t("services.app.description"),
+      features: [
+        t("services.app.features.0"),
+        t("services.app.features.1"),
+        t("services.app.features.2"),
+      ],
+      buttonText: t("services.app.button"),
       buttonColor: "bg-indigo-600 hover:bg-indigo-700",
       imageUrl: appDevImage,
     },
@@ -90,7 +110,8 @@ export default function Service() {
   };
 
   const prevSlide = () => {
-    const newIndex = currentIndex === 0 ? services.length - 1 : currentIndex - 1;
+    const newIndex =
+      currentIndex === 0 ? services.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
     goToSlide(newIndex + services.length); // 중간 세트의 인덱스로 이동
   };
@@ -104,7 +125,7 @@ export default function Service() {
 
       // 카드를 정확히 화면 중앙에 위치시키기 위한 계산
       const slideWidth = cardWidth + gap;
-      
+
       // 선택된 카드의 왼쪽 위치
       const cardLeft = actualIndex * slideWidth;
 
@@ -138,18 +159,23 @@ export default function Service() {
     // 디바운싱을 위한 timeout
     setTimeout(() => {
       if (!carouselRef.current) return;
-      
+
       // 첫 번째 세트의 시작 부분에 도달했을 때
       if (carouselRef.current.scrollLeft <= slideWidth / 2) {
-        carouselRef.current.style.scrollBehavior = 'auto';
-        carouselRef.current.scrollLeft = totalOriginalWidth + carouselRef.current.scrollLeft;
-        carouselRef.current.style.scrollBehavior = 'smooth';
+        carouselRef.current.style.scrollBehavior = "auto";
+        carouselRef.current.scrollLeft =
+          totalOriginalWidth + carouselRef.current.scrollLeft;
+        carouselRef.current.style.scrollBehavior = "smooth";
       }
       // 세 번째 세트의 끝 부분에 도달했을 때
-      else if (carouselRef.current.scrollLeft >= totalOriginalWidth * 2 - slideWidth / 2) {
-        carouselRef.current.style.scrollBehavior = 'auto';
-        carouselRef.current.scrollLeft = carouselRef.current.scrollLeft - totalOriginalWidth;
-        carouselRef.current.style.scrollBehavior = 'smooth';
+      else if (
+        carouselRef.current.scrollLeft >=
+        totalOriginalWidth * 2 - slideWidth / 2
+      ) {
+        carouselRef.current.style.scrollBehavior = "auto";
+        carouselRef.current.scrollLeft =
+          carouselRef.current.scrollLeft - totalOriginalWidth;
+        carouselRef.current.style.scrollBehavior = "smooth";
       }
     }, 100);
   };
@@ -205,7 +231,9 @@ export default function Service() {
           </h1>
           <div className="w-16 sm:w-24 h-0.5 bg-[#0F4C82] mx-auto mb-6 sm:mb-8"></div>
           <p className="text-fluid-body break-keep text-pretty leading-relaxed-mobile text-gray-600 maxw-body mx-auto">
-            {t("피드백은 유통부터 마케팅까지, 글로벌 비즈니스를 위한 전문 서비스를 제공합니다.")}
+            {t(
+              "피드백은 유통부터 마케팅까지, 글로벌 비즈니스를 위한 전문 서비스를 제공합니다.",
+            )}
           </p>
         </div>
 
@@ -230,10 +258,10 @@ export default function Service() {
           <div
             ref={carouselRef}
             className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth cursor-grab select-none w-full"
-            style={{ 
-              scrollbarWidth: "none", 
+            style={{
+              scrollbarWidth: "none",
               msOverflowStyle: "none",
-              scrollSnapType: "x mandatory"
+              scrollSnapType: "x mandatory",
             }}
             onMouseDown={handleMouseDown}
             onMouseLeave={handleMouseLeave}
@@ -254,9 +282,10 @@ export default function Service() {
                       src={service.imageUrl}
                       alt={service.title}
                       className={`w-full h-full object-cover rounded-2xl ${
-                        (index % services.length) === 1 || (index % services.length) === 3
+                        index % services.length === 1 ||
+                        index % services.length === 3
                           ? "object-center"
-                          : (index % services.length) === 4
+                          : index % services.length === 4
                             ? "object-[30%_20%]"
                             : "object-top"
                       }`}
@@ -280,9 +309,11 @@ export default function Service() {
                       size="sm"
                       className="bg-gray-100 text-gray-800 hover:bg-gray-200 rounded-full px-4 py-2 text-xs"
                     >
-                      <Link 
+                      <Link
                         href="/contact"
-                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                        onClick={() =>
+                          window.scrollTo({ top: 0, behavior: "smooth" })
+                        }
                       >
                         {t("프로젝트 문의")}
                       </Link>
@@ -290,7 +321,10 @@ export default function Service() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="break-keep text-balance text-pretty leading-tight font-bold text-gray-900 maxw-title mb-4" style={{ fontSize: 'clamp(20px, 4vw, 28px)' }}>
+                  <h3
+                    className="break-keep text-balance text-pretty leading-tight font-bold text-gray-900 maxw-title mb-4"
+                    style={{ fontSize: "clamp(20px, 4vw, 28px)" }}
+                  >
                     {service.title}
                   </h3>
 
@@ -345,7 +379,9 @@ export default function Service() {
             {t("더 자세한 상담이 필요하신가요?")}
           </h3>
           <p className="text-fluid-body break-keep text-pretty leading-relaxed-mobile maxw-body mx-auto mb-8">
-            {t("전문 컨설턴트가 귀하의 비즈니스에 맞는 최적의 솔루션을 제안해드립니다.")}
+            {t(
+              "전문 컨설턴트가 귀하의 비즈니스에 맞는 최적의 솔루션을 제안해드립니다.",
+            )}
           </p>
           <Button asChild variant="secondary" size="lg">
             <Link href="/contact">{t("무료 상담 신청")}</Link>

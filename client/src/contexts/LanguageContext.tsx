@@ -236,7 +236,7 @@ const translations = {
     "news.1.summary":
       "Hoid의 프리미엄 라이프스타일 가전 브랜드로서 첫 번째 대표 제품인 Hoid 공기청정기 1세대를 공식 출시했습니다.",
     "news.1.content":
-      "Hoid는 프리미엄 라이프스타일 가전 브랜드로서 첫 번째 대표 제품인 Hoid 공기청정기 1세대를 공식 출시했습니다. 이 제품은 강력한 3중 필터 시스템과 360도 전방위 공기 순환 구조를 적용하여, 실내 공기를 빠르게 정화하고 최상의 청정도를 유지합니다. 또한, 세련되고 미니멀한 디자인은 어떤 인테리어 공간에도 자연스럽게 어우러지며, 저소음 모터와 에너지 절약 기n��까지 갖추어 사용자의 생활 품질을 높여줍니다. 이번 출시를 통해 Hoid는 공기청정기 시장에 본격 진입하며, 향후 지속적인 기술 혁신과 제품 라인업 확장을 예고했습니다.",
+      "Hoid는 프리미엄 라이프스타일 가전 브랜드로서 첫 번째 대표 제품인 Hoid 공기청정기 1세대를 공식 출시했습니다. 이 제품은 강력한 3중 필터 시스템과 360도 전방위 공기 순환 구조를 적용하여, 실내 공기를 빠르게 정화하고 최상의 청정도를 유지합니다. 또한, 세련되고 미니멀한 디자인은 어떤 인테리어 공간에도 자연스럽게 어우러지며, 저소음 모터와 에너지 절약 기능까지 갖추어 사용자의 생활 품질을 높여줍니다. 이번 출시를 통해 Hoid는 공기청정기 시장에 본격 진입하며, 향후 지속적인 기술 혁신과 제품 라인업 확장을 예고했습니다.",
     "news.2.date": "2025.08.08",
     "news.2.title": "Hoid 청소기 공장 방문",
     "news.2.summary":
@@ -268,7 +268,7 @@ const translations = {
     "news.6.summary":
       "프리미엄 주방 브랜드 ASRAN이 스테인리스 냄비 3종, 압력솥, 프라이팬 3종으로 구성된 하이엔드 쿡웨어 라인업을 공식 출시했습니다.",
     "news.6.content":
-      "독일 기술력 기반 SUS410 스틸과 3중 바닥 구조로 프리미엄 조리 경험 제공\n\n피드백(대표 정성현)이 선보이는 프리미엄 주방 브랜드 ASRAN이 하이엔드 스테인리스 쿡웨어 라인업을 2025년 10월 1일 공식 출시했다고 밝혔��� ��� ���.\n\n이번에 출시된 제품군은 스테인리스 냄비 3종, 압력솥, 프라이팬 3종으로 구성되어 있으며, 독일 기술력을 기반으로 한 SUS410 스테인리스 스틸과 3중 바닥 구조를 적용해 열전도율과 내구성을 극대화한 것이 특징이다.\n\n(사진: ASRAN 쿡웨어 제품 라인업)\n\n<strong>독일 기술력과 만난 프리미엄 조리 솔루션</strong>\n\nASRAN 쿡웨어는 가정용부터 전문가용까지 폭넓게 활용 가능한 설계로 개발됐다. 특히 이중 압력 조절 시스템과 정밀한 열전도층을 적용해 조리 중 온도 균형을 유지함으로써 식재료 본연의 맛과 영양을 보존할 수 있도록 설계됐다.\n\nSUS410 스테인리스 스틸은 뛰어난 내식성과 변색 저항성을 자랑하며, 세척 후에도 장기간 광택을 유지할 수 있어 위생적인 주방 환경 조성에 최적화되어 있다. 또한 3중 바닥 구조는 인덕션을 포함한 모든 열원에서 고른 열 분포를 구현해 어떤 주방 환경에서도 완벽한 조리가 가능하다.\n\n<strong>기능성과 심미성을 동시에 구현한 디자인</strong>\n\nASRAN은 제품 개발 과정에서 디자인팀과 요리 전문가가 협업하여 실제 조리 환경에서의 사용자 편의성을 극대화했다. 프리미엄 미러 마감과 절제된 곡선 디자인은 주방의 품격을 높이는 동시에 실용성도 갖췄다.\n\n손잡이는 인체공학적 설계를 적용해 장시간 조리에도 손목 부담을 최소화했으며, 제품의 무게 밸런스 또한 최적화했다. 유리 뚜껑에 적용된 증기 배출 밸브는 조리 과정을 직관적으로 제어할 수 있게 해 편의성을 한층 강화했다.\n\n피드백 관계자는 ASRAN은 단순한 조리도구를 넘어 요리의 완성도를 높이는 셰프의 파트너로 자리매김할 것이라며 앞으로도 기술적 혁신과 감각적 디자인을 결합한 제품을 지속적으로 선보이며, 매일의 요리를 예술로 바꾸는 브랜드로 성장해 나가겠다고 밝혔다.\n\nASRAN 하이엔드 쿠웨어는 공식 온라인몰과 주요 유통 채널을 통해 만나볼 수 있다.",
+      "독일 기술력 기반 SUS410 스틸과 3중 바닥 구조로 프리미엄 조리 경험 제공\n\n피드백(대표 정성현)이 선보이는 프리미엄 주방 브랜드 ASRAN이 하이엔드 스테인리스 쿡웨어 라인업을 2025년 10월 1일 공식 출시했다고 밝혔습니다.\n\n이번에 출시된 제품군은 스테인리스 냄비 3종, 압력솥, 프라이팬 3종으로 구성되어 있으며, 독일 기술력을 기반으로 한 SUS410 스테인리스 스틸과 3중 바닥 구조를 적용해 열전도율과 내구성을 극대화한 것이 특징이다.\n\n(사진: ASRAN 쿡웨어 제품 라인업)\n\n<strong>독일 기술력과 만난 프리미엄 조리 솔루션</strong>\n\nASRAN 쿡웨어는 가정용부터 전문가용까지 폭넓게 활용 가능한 설계로 개발됐다. 특히 이중 압력 조절 시스템과 정밀한 열전도층을 적용해 조리 중 온도 균형을 유지함으로써 식재료 본연의 맛과 영양을 보존할 수 있도록 설계됐다.\n\nSUS410 스테인리스 스틸은 뛰어난 내식성과 변색 저항성을 자랑하며, 세척 후에도 장기간 광택을 유지할 수 있어 위생적인 주방 환경 조성에 최적화되어 있다. 또한 3중 바닥 구조는 인덕션을 포함한 모든 열원에서 고른 열 분포를 구현해 어떤 주방 환경에서도 완벽한 조리가 가능하다.\n\n<strong>기능성과 심미성을 동시에 구현한 디자인</strong>\n\nASRAN은 제품 개발 과정에서 디자인팀과 요리 전문가가 협업하여 실제 조리 환경에서의 사용자 편의성을 극대화했다. 프리미엄 미러 마감과 절제된 곡선 디자인은 주방의 품격을 높이는 동시에 실용성도 갖췄다.\n\n손잡이는 인체공학적 설계를 적용해 장시간 조리에도 손목 부담을 최소화했으며, 제품의 무게 밸런스 또한 최적화했다. 유리 뚜껑에 적용된 증기 배출 밸브는 조리 과정을 직관적으로 제어할 수 있게 해 편의성을 한층 강화했다.\n\n피드백 관계자는 ASRAN은 단순한 조리도구를 넘어 요리의 완성도를 높이는 셰프의 파트너로 자리매김할 것이라며 앞으로도 기술적 혁신과 감각적 디자인을 결합한 제품을 지속적으로 선보이며, 매일의 요리를 예술로 바꾸는 브랜드로 성장해 나가겠다고 밝혔다.\n\nASRAN 하이엔드 쿠웨어는 공식 온라인몰과 주요 유통 채널을 통해 만나볼 수 있다.",
 
     "news.7.date": "2025.10.10",
     "news.7.title": "La Ceras, 프렌치 럭셔리 캐리어 4종 세트 정식 런칭",
@@ -306,7 +306,8 @@ const translations = {
 
     // Contact Page
     "contact.title": "문의하기",
-    "contact.subtitle.line1": "FeedBack과 함께 새로운 비즈니스 기회를 만들어보세요.",
+    "contact.subtitle.line1":
+      "FeedBack과 함께 새로운 비즈니스 기회를 만들어보세요.",
     // "contact.subtitle.line2": "",
     "contact.section.contact": "연락처",
     "contact.section.departments": "관련부서",
@@ -371,8 +372,10 @@ const translations = {
       '<span class="text-white">피드백은 브랜드의 성장을 <br>유통으로 설계합니다.</span>',
     "about.story.sub": "피드백은 브랜드의 성장을 유통으로 설계합니다.",
     "about.story.detail": "피드백은 브랜드의 성장을 유통으로 설계합니다.",
-    "about.partnership.title": "Hoid, Medifeed, InYourHeart, 상생 등<br />자체 브랜드와 글로벌 파트너십을 기반으로<br />기획부터 제조·유통·브랜딩까지 전 과정을 함께합니다.",
-    "about.partnership.description": "고객의 삶 속에 스며든 FEEDBACK의 브랜드 하나하나가 고객 여러분의 하루를 더욱 편리하고 행복하게 만들 수 있도록<br />언제나 노력하는 FEEDBACK이 되겠습니다.",
+    "about.partnership.title":
+      "Hoid, Medifeed, InYourHeart, 상생 등<br />자체 브랜드와 글로벌 파트너십을 기반으로<br />기획부터 제조·유통·브랜딩까지 전 과정을 함께합니다.",
+    "about.partnership.description":
+      "고객의 삶 속에 스며든 FEEDBACK의 브랜드 하나하나가 고객 여러분의 하루를 더욱 편리하고 행복하게 만들 수 있도록<br />언제나 노력하는 FEEDBACK이 되겠습니다.",
     "about.banner.title":
       '피드백은 브랜드의 성장을<br class="block" /><span class="text-[#ffffff]"> 유통으로 설계합니다</span>',
     "about.parallax.title":
@@ -428,6 +431,470 @@ const translations = {
     "about.org.title": "조직도",
     "about.org.description":
       "체계적인 조직 구성을 통해 각 분야의 전문성을 바탕으로 고객에게 최고의 서비스를 제공하고 있습니다.",
+    // Service Page
+    "서비스 소개": "서비스 소개",
+    "EXPERTISE & SOLUTION": "EXPERTISE & SOLUTION",
+
+    "피드백은 유통부터 마케팅까지, 글로벌 비즈니스를 위한 전문 서비스를 제공합니다.":
+      "피드백은 유통부터 마케팅까지, 글로벌 비즈니스를 위한 전문 서비스를 제공합니다.",
+    "유통 / 수출입 중개": "유통 / 수출입 중개",
+    "아시아 전역의 유통망을 통해 효율적인 수출입 및 중개 서비스를 제공합니다. 다양한 제품군에 대한 전문적인 수출입 컨설팅과 물류 솔루션을 함께 제공하여 글로벌 비즈니스를 지원합니다.":
+      "아시아 전역의 유통망을 통해 효율적인 수출입 및 중개 서비스를 제공합니다. 다양한 제품군에 대한 전문적인 수출입 컨설팅과 물류 솔루션을 함께 제공하여 글로벌 비즈니스를 지원합니다.",
+    "자체 브랜드 제조 (OEM)": "자체 브랜드 제조 (OEM)",
+    "Hoid, Medifeed, InYourHeart, 상생 등 4개 자체 브랜드의 제조 및 OEM 생산을 통해 브랜드 성장을 지원합니다. 품질 관리부터 제품 개발까지 전 과정을 책임집니다.":
+      "Hoid, Medifeed, InYourHeart, 상생 등 4개 자체 브랜드의 제조 및 OEM 생산을 통해 브랜드 성장을 지원합니다. 품질 관리부터 제품 개발까지 전 과정을 책임집니다.",
+    "글로벌 마케팅/브랜딩": "글로벌 마케팅/브랜딩",
+    "홈쇼핑 연계와 디지털 마케팅을 통한 글로벌 브랜딩 솔루션을 제공합니다. 브랜드 아이덴티티 개발부터 글로벌 시장 진출 전략까지 종합적인 마케팅 서비스를 지원합니다.":
+      "홈쇼핑 연계와 디지털 마케팅을 통한 글로벌 브랜딩 솔루션을 제공합니다. 브랜드 아이덴티티 개발부터 글로벌 시장 진출 전략까지 종합적인 마케팅 서비스를 지원합니다.",
+    "의료관광 플랫폼": "의료관광 플랫폼",
+    "상생 브랜드를 통한 의료관광 플랫폼 운영으로 한국의 우수한 의료 서비스를 전 세계에 연결합니다. 태국, 베트남을 시작으로 아시아 전역으로 서비스를 확장하고 있습니다.":
+      "상생 브랜드를 통한 의료관광 플랫폼 운영으로 한국의 우수한 의료 서비스를 전 세계에 연결합니다. 태국, 베트남을 시작으로 아시아 전역으로 서비스를 확장하고 있습니다.",
+    "앱 개발": "앱 개발",
+    "의료/케어 통합 앱 개발로 디지털 헬스케어 솔루션을 제공합니다. 다국어 지원과 실시간 상담 기능을 통해 글로벌 사용자들에게 편리한 서비스를 제공합니다.":
+      "의료/케어 통합 앱 개발로 디지털 헬스케어 솔루션을 제공합니다. 다국어 지원과 실시간 상담 기능을 통해 글로벌 사용자들에게 편리한 서비스를 제공합니다.",
+    "서비스 문의": "서비스 문의",
+    "브랜드 보기": "브랜드 보기",
+    "상담 신청": "상담 신청",
+    "상생 브랜드 보기": "상생 브랜드 보기",
+    "앱 정보 보기": "앱 정보 보기",
+    "프로젝트 문의": "프로젝트 문의",
+    "더 자세한 상담이 필요하신가요?": "더 자세한 상담이 필요하신가요?",
+    "전문 컨설턴트가 귀하의 비즈니스에 맞는 최적의 솔루션을 제안해드립니다.":
+      "전문 컨설턴트가 귀하의 비즈니스에 맞는 최적의 솔루션을 제안해드립니다.",
+    "무료 상담 신청": "무료 상담 신청",
+
+    // Brand Page
+    "브랜드 소개": "브랜드 소개",
+    "혁신적인 기술과 디자인을 바탕으로 한 FeedBack의 자체 브랜드들을 소개합니다.각 브랜드는 고유한 가치와 비전을 가지고 고객에게 최고의 경험을 제공합니다.":
+      "혁신적인 기술과 디자인을 바탕으로 한 FeedBack의 자체 브랜드들을 소개합니다.각 브랜드는 고유한 가치와 비전을 가지고 고객에게 최고의 경험을 제공합니다.",
+    "브랜드 파트너십에 관심이 있으신가요?":
+      "브랜드 파트너십에 관심이 있으신가요?",
+    "FeedBack과 함께 혁신적인 브랜드를 만들어보세요. 기획부터 유통까지 전 과정을 지원하여 성공적인 브랜드 런칭을 도와드립니다.":
+      "FeedBack과 함께 혁신적인 브랜드를 만들어보세요. 기획부터 유통까지 전 과정을 지원하여 성공적인 브랜드 런칭을 도와드립니다.",
+    "파트너십 문의하기": "파트너십 문의하기",
+
+    // Brand Detail Pages - Common
+    "브랜드 목록으로 돌아가기": "브랜드 목록으로 돌아가기",
+
+    // Hoid Brand Page
+    "hoid.hero.title": "공기 속까지 바꾸는 디자인",
+    "hoid.hero.description":
+      "미니멀한 디자인과 첨단 기술이 만나 일상의 공기질을 혁신하는 스마트 가전 브랜드입니다.",
+    "hoid.hero.cta": "Hoid 홈페이지 가기",
+    "hoid.features.title": "혁신적인 기술력",
+    "hoid.features.subtitle":
+      "미니멀한 디자인 속에 숨어있는 첨단 기술로 완전히 새로운 공기청정 경험을 제공합니다",
+    "hoid.homeshopping.date": "2025년 8월 런칭",
+    "hoid.homeshopping.heading": "프리미엄 디자인 가전, 이제 집에서 만나보세요",
+    "hoid.homeshopping.description":
+      "프리미엄 디자인 가전 브랜드 호이드가 드디어 홈쇼핑을 통해 여러분을 찾아갑니다. 세련된 디자인과 뛰어난 성능, 그리고 생활을 바꾸는 혁신적인 기술을 이제 TV 속에서 직접 확인하세요.",
+    "hoid.channels.title": "전국 어디서나 만날 수 있는",
+    "hoid.channels.subtitle":
+      "다양한 유통 채널을 통해 고객 여러분께 더 가깝게 다가갑니다",
+    "hoid.channel1.title": "홈쇼핑",
+    "hoid.channel1.description": "홈쇼핑 채널을 통한 직접 판매",
+    "hoid.channel2.title": "스마트스토어",
+    "hoid.channel2.description": "온라인 공식 스토어 운영",
+    "hoid.channel3.title": "글로벌 셀러",
+    "hoid.channel3.description": "해외 온라인 플랫폼 진출",
+    "hoid.channel4.title": "오프라인 매장",
+    "hoid.channel4.description": "전국 가전 매장 및 백화점",
+    "hoid.cta.title": "깨끗한 공기, 새로운 일상",
+    "hoid.cta.description":
+      "HOID와 함께 건강하고 쾌적한 실내 환경을 만들어보세요",
+    "hoid.cta.button": "문의하기",
+
+    // Asran Brand Page
+    "asran.hero.tagline": "독일 기술과 합리적 가격을 모두 갖춘 냄비",
+    "asran.hero.description":
+      "SUS410 스테인리스 스틸과 3중 바닥구조로 뛰어난 열전도율과 내구성을 자랑합니다. 인덕션과 가스 겸용으로 어떤 주방환경에서도 완벽하게 사용 가능한 프리미엄 냄비입니다.",
+    "asran.hero.cta": "ASRAN 홈페이지 가기",
+    "asran.features.title": "ASRAN만의 특별한 기술",
+    "asran.features.subtitle":
+      "독일의 정밀한 기술력과 한국의 실용성이 만나 탄생한 프리미엄 주방용품",
+
+    // Medifeed Brand Page
+    "medifeed.hero.title": "매일을 지키는 작은 습관",
+    "medifeed.hero.description":
+      "잇몸과 눈 건강을 중심으로 한 기능성 영양제 브랜드로, 실용성과 안전성을 바탕으로 누구나 쉽게 선택할 수 있는 건강 솔루션을 제공합니다.",
+    "medifeed.features.title": "전문화된 건강 솔루션",
+    "medifeed.features.subtitle":
+      "과학적 연구를 바탕으로 개발된 특화 영양제로 일상의 건강을 책임집니다",
+    "medifeed.category1.title": "잇몸 건강 전문",
+    "medifeed.category1.description":
+      "치주질환 예방과 잇몸 건강 유지를 위한 전문 영양제",
+    "medifeed.category1.ingredient1": "코엔자임 Q10",
+    "medifeed.category1.ingredient2": "비타민 C 복합체",
+    "medifeed.category1.ingredient3": "아연 & 셀레늄",
+    "medifeed.category1.ingredient4": "GMP 인증",
+    "medifeed.category2.title": "눈 건강 전문",
+    "medifeed.category2.description":
+      "디지털 시대 눈의 피로와 시력 보호를 위한 기능성 영양제",
+    "medifeed.category2.ingredient1": "루테인 & 지아잔틴",
+    "medifeed.category2.ingredient2": "빌베리 추출물",
+    "medifeed.category2.ingredient3": "오메가-3 지방산",
+    "medifeed.category2.ingredient4": "블루라이트 차단",
+    "medifeed.philosophy.title": "건강한 일상을 만드는",
+    "medifeed.philosophy.subtitle":
+      "과학적 근거와 품질에 대한 확고한 신념으로 믿을 수 있는 건강 솔루션을 제공합니다",
+    "medifeed.value1.title": "안전성 우선",
+    "medifeed.value1.description":
+      "엄격한 품질 관리와 GMP 인증을 통해 안전하고 신뢰할 수 있는 제품만을 제공합니다.",
+    "medifeed.value2.title": "실용적 접근",
+    "medifeed.value2.description":
+      "바쁜 현대인의 라이프스타일에 맞춰 간편하게 섭취할 수 있는 형태로 개발합니다.",
+    "medifeed.value3.title": "합리적 가격",
+    "medifeed.value3.description":
+      "누구나 부담 없이 구매할 수 있는 합리적인 가격으로 건강한 습관을 만들어갑니다.",
+    "medifeed.cta.title": "건강한 하루,",
+    "medifeed.cta.subtitle": "작은 습관에서 시작",
+    "medifeed.cta.description":
+      "MEDIFEED와 함께 일상 속 작은 변화로 더 나은 건강을 만들어보세요",
+    "medifeed.cta.button": "상담 신청하기",
+
+    // LaCeras Brand Page
+    "laceras.hero.title": "전통과 모던이 만나는",
+    "laceras.hero.subtitle": "프렌치 럭셔리",
+    "laceras.hero.description":
+      "프랑스의 장인정신과 현대적 세련미를 결합한 럭셔리 캐리어 브랜드입니다. 비즈니스부터 럭셔리 여행까지 완벽한 트래블 솔루션을 제안합니다.",
+    "laceras.hero.cta": "La Ceras 홈페이지 가기",
+    "laceras.features.title": "프렌치 크래프트맨십",
+    "laceras.features.subtitle":
+      "정교한 마감과 균형 잡힌 디자인으로 완성된 프리미엄 럭셔리 트래블 경험",
+    "laceras.feature1.title": "하이브리드 구조",
+    "laceras.feature1.description":
+      "PP의 유연성과 PC의 강성을 결합하여 가볍고 튼튼한 바디 구현",
+    "laceras.feature2.title": "Sinking Ordinary Lock",
+    "laceras.feature2.description":
+      "기본 락 구조를 상판과 균형감 있게 낮춰 스크래치 포인트 최소화",
+    "laceras.feature3.title": "무소음 휠 & 안정적 베어링 시스템",
+    "laceras.feature3.description":
+      "어떤 방향으로든 부드럽고 조용한 이동이 가능한 프리미엄 휠 시스템",
+    "laceras.heritage.title": "프랑스 장인 정신의",
+    "laceras.heritage.subtitle": "70년 전통",
+    "laceras.heritage.heading": "세대를 넘나드는 크래프트맨십",
+    "laceras.heritage.description":
+      "1950년부터 시작된 La Ceras의 여정은 프랑스 전통 장인정신과 현대적 혁신이 만나는 지점에서 계속되고 있습니다. 세심한 디테일과 완벽한 마감으로 럭셔리 트래블의 새로운 기준을 제시합니다.",
+
+    "laceras.heritage.point1": "14인치, 20인치, 24인치, 28인치 올인원 구성",
+    "laceras.heritage.point2": "210D 베어링으로 손목 피로 최소화",
+    "laceras.heritage.point3": "PP & PC 하이브리드 구조",
+
+    "laceras.travel.title": "비즈니스부터 럭셔리까지",
+    "laceras.travel.subtitle": "완벽한 트래블 솔루션",
+    "laceras.travel.heading": "모든 여행의 순간을 특별하게",
+    "laceras.travel.description":
+      "La Ceras는 단순한 캐리어가 아닌 여행 파트너입니다. 비즈니스 출장부터 로맨틱한 허니문, 가족 여행까지 모든 순간을 더욱 세련되고 편안하게 만들어드립니다.",
+    "laceras.travel.size": "사이즈 옵션",
+    "laceras.travel.warranty": "년 보증",
+    "laceras.travel.stores": "글로벌 매장",
+    "laceras.travel.rating": "고객 만족도",
+    "laceras.collection.title": "모든 여행 스타일에 맞는",
+    "laceras.collection.subtitle":
+      "다양한 컬렉션으로 여행자의 취향과 필요에 완벽하게 부응합니다",
+    "laceras.collection1.title": "캐리온",
+    "laceras.collection1.description": "기내 반입 가능한 컴팩트 사이즈",
+    "laceras.collection2.title": "하드셸 캐리어",
+    "laceras.collection2.description": "중거리 여행을 위한 미디움 사이즈",
+    "laceras.collection3.title": "트렁크",
+    "laceras.collection3.description": "장기간 여행을 위한 라지 사이즈",
+    "laceras.cta.title": "La Ceras와 함께하는",
+    "laceras.cta.subtitle": "럭셔리 트래블",
+    "laceras.cta.description":
+      "프랑스 장인정신으로 완성된 프리미엄 캐리어로 당신의 여행을 더욱 특별하게 만들어보세요",
+
+    // Carvella Brand Page
+    "carvella.hero.title": "이탈리아 장인의 정밀함",
+    "carvella.hero.subtitle": "당신의 주방으로",
+    "carvella.hero.description":
+      "이탈리아 전통 장인정신으로 완성한 프리미엄 쿠킹웨어 브랜드입니다. 고급 스테인리스와 다층 구조로 뛰어난 열전도와 내구성을 자랑합니다.",
+    "carvella.hero.cta": "Carvella 홈페이지 가기",
+    "carvella.features.title": "이탈리아 장인정신",
+    "carvella.features.subtitle":
+      "정밀한 기술과 전통 크래프트맨십이 만나 완성된 프리미엄 쿠킹웨어",
+    "carvella.feature1.title": "프리미엄 스테인리스",
+    "carvella.feature1.description":
+      "최고급 스테인리스 스틸 소재로 내구성과 위생성을 동시에 보장",
+    "carvella.feature2.title": "다층 바닥구조",
+    "carvella.feature2.description":
+      "균등한 열전도와 열보존을 위한 특수 다층 바닥 설계 시스템",
+    "carvella.feature3.title": "멀티 호환 열원",
+    "carvella.feature3.description":
+      "인덕션부터 가스레인지까지 모든 열원에서 완벽한 성능 발휘",
+    "carvella.heritage.title": "이탈리아 전통의",
+    "carvella.heritage.subtitle": "아르티지아나토",
+    "carvella.heritage.heading": "정밀함과 열정이 만나는 곳",
+    "carvella.heritage.description":
+      "이탈리아 북부 롬바르디아 지역의 전통 금속공예 기술을 바탕으로 탄생한 Carvella는 장인들의 정밀함과 요리에 대한 열정을 그대로 담아냅니다. 매 제품마다 이탈리아 장인의 손길이 닿아 완성되는 진정한 아르티지아나토입니다.",
+    "carvella.heritage.point1": "이탈리아 전통 금속공예 기법",
+    "carvella.heritage.point2": "장인 수작업 마감 처리",
+    "carvella.heritage.point3": "유럽 인증 프리미엄 소재",
+    "carvella.cooking.title": "프로 셰프부터 요리 애호가까지",
+    "carvella.cooking.subtitle": "모든 주방의 파트너",
+    "carvella.cooking.heading": "완벽한 요리를 위한 완벽한 도구",
+    "carvella.cooking.description":
+      "Carvella는 단순한 조리도구가 아닌 요리의 예술을 완성하는 파트너입니다. 프로 셰프의 엄격한 기준을 충족하면서도 가정에서 쉽게 사용할 수 있도록 설계되어 모든 요리 애호가들의 꿈을 현실로 만들어드립니다.",
+    "carvella.cooking.lineup": "제품 라인업",
+    "carvella.cooking.warranty": "년 품질보증",
+    "carvella.cooking.recommendation": "셰프 추천율",
+    "carvella.cooking.satisfaction": "고객 만족도",
+    "carvella.collection.title": "모든 요리를 위한",
+    "carvella.collection.subtitle":
+      "다양한 제품 라인으로 모든 요리 스타일과 필요에 완벽하게 부응합니다",
+    "carvella.collection1.title": "프리미엄 냄비",
+    "carvella.collection1.description": "다양한 사이즈와 용도별 냄비 컬렉션",
+    "carvella.collection2.title": "프라이팬",
+    "carvella.collection2.description": "완벽한 열전도를 위한 프라이팬 시리즈",
+    "carvella.collection3.title": "압력뚜껑",
+    "carvella.collection3.description": "다목적 멀티 압력뚜껑 시스템",
+    "carvella.collection4.title": "세트 상품",
+    "carvella.collection4.description": "완벽한 주방을 위한 종합 세트",
+    "carvella.testimonial.title": "전문가들의 선택",
+    "carvella.testimonial1":
+      "Carvella의 냄비는 열전도가 완벽해서 요리가 훨씬 쉬워졌습니다. 프로 주방에서도 손색없는 품질입니다.",
+    "carvella.testimonial1.author": "이탈리안 레스토랑 셰프",
+    "carvella.testimonial2":
+      "15년 넘게 사용해도 변함없는 품질과 성능. 진정한 장인정신을 느낄 수 있는 제품입니다.",
+    "carvella.testimonial2.author": "요리 강사",
+    "carvella.testimonial3":
+      "인덕션에서 가스레인지까지 어떤 열원에서도 완벽한 성능을 보여줍니다. 가정용으로도 최고의 선택이에요.",
+    "carvella.testimonial3.author": "요리 블로거",
+    "carvella.cta.title": "Carvella와 함께하는",
+    "carvella.cta.subtitle": "프리미엄 쿠킹",
+    "carvella.cta.description":
+      "이탈리아 장인정신으로 완성된 프리미엄 쿠킹웨어로 당신의 요리를 더욱 특별하게 만들어보세요",
+    "carvella.good1.badge": "GOOD 01",
+    "carvella.good1.title": "스테인리스 도마",
+    "carvella.good1.description":
+      "304 스테인리스 스틸로 제작되어 위생적이고 내구성이 뛰어난 도마입니다. 음식물 착색과 냄새가 남지 않아 언제나 깔끔하게 사용할 수 있습니다.",
+    "carvella.good1.detail1": "위생적인 304 스테인리스 소재",
+    "carvella.good1.detail2": "긁힘·변형에 강한 높은 내구성",
+    "carvella.good1.detail3": "물세척만으로 간편한 관리",
+    "carvella.good1.detail4": "논슬립 구조로 안정감 있는 사용",
+
+    "carvella.good2.badge": "GOOD 02",
+    "carvella.good2.title": "6종 칼 세트",
+    "carvella.good2.description":
+      "가위, 중식도, 감자칼 등 6종 구성으로 다양한 재료를 손쉽게 조리할 수 있습니다.",
+    "carvella.good2.detail1": "6종 올인원",
+    "carvella.good2.detail2": "인체공학적 손잡이로 편안한 그립",
+    "carvella.good2.detail3": "뛰어난 절삭력",
+    "carvella.good2.detail4": "가정용·업소용 모두 적합",
+
+    // MOZ Brand Page
+    "moz.hero.tagline": "따뜻하고 안전한 수면 환경",
+    "moz.hero.description":
+      "첨단 카본 히팅 기술과 안전 인증 설계로 건강한 숙면을 제공합니다. 몸과 마음이 회복되는 따뜻한 휴식, 그것이 모즈의 시작입니다.",
+    "moz.hero.cta": "제품 문의하기",
+    "moz.features.title": "모즈의 핵심 기술",
+    "moz.features.subtitle":
+      "첨단 카본 히팅과 안전 인증으로 완성한 프리미엄 수면 솔루션",
+    "moz.feature1.title": "카본 히팅 기술",
+    "moz.feature1.description":
+      "전자파 걱정 없는 안전한 카본 열선으로 균일한 온기를 제공합니다",
+    "moz.feature1.detail1": "전자파 차단 카본 소재",
+    "moz.feature1.detail2": "균일한 온도 분포",
+    "moz.feature1.detail3": "빠른 온도 상승",
+    "moz.feature1.detail4": "에너지 효율 설계",
+    "moz.feature2.title": "안전 인증 설계",
+    "moz.feature2.description":
+      "엄격한 안전 인증과 과열 방지 시스템으로 안심하고 사용할 수 있습니다",
+    "moz.feature2.detail1": "KC 안전 인증",
+    "moz.feature2.detail2": "과열 방지 시스템",
+    "moz.feature2.detail3": "이중 안전 장치",
+    "moz.feature2.detail4": "화재 예방 설계",
+    "moz.feature3.title": "건강한 숙면",
+    "moz.feature3.description":
+      "몸과 마음이 회복되는 따뜻한 온기로 깊고 편안한 잠을 선사합니다",
+    "moz.feature3.detail1": "최적 수면 온도 유지",
+    "moz.feature3.detail2": "혈액순환 개선",
+    "moz.feature3.detail3": "근육 이완 효과",
+    "moz.feature3.detail4": "쾌적한 수면 환경",
+    "moz.product1.title": "모즈 카본 탄소매트 싱글",
+    "moz.product1.description":
+      "혼자 써도 포근한 온기, 하루 피로를 녹입니다. 안전한 카본 열선으로 전자파 걱정 없어요.",
+    "moz.product1.size": "사이즈",
+    "moz.product2.title": "모즈 카본 탄소매트 더블",
+    "moz.product2.description":
+      "두 사람이 함께하는 따뜻한 온기. 균일한 열로 깊고 편안한 잠을 선사합니다.",
+    "moz.product2.size": "사이즈",
+    "moz.reviews.title": "고객 후기",
+    "moz.review1":
+      "전자파 걱정 없이 따뜻하게 잘 수 있어서 너무 좋아요. 겨울철 필수템입니다!",
+    "moz.review1.author": "김○○",
+    "moz.review2":
+      "온도가 균일해서 발끝까지 포근해요. 아침에 일어나면 몸이 한결 가벼워진 느낌입니다.",
+    "moz.review2.author": "이○○",
+    "moz.review3":
+      "안전 인증 받은 제품이라 안심하고 사용할 수 있어요. 품질도 만족스럽습니다.",
+    "moz.review3.author": "박○○",
+    "moz.benefits.title": "모즈와 함께하는 따뜻한 밤",
+    "moz.benefit1.title": "깊은 숙면",
+    "moz.benefit1.description":
+      "최적의 온도 유지로 편안하고 깊은 잠을 경험하세요",
+    "moz.benefit2.title": "빠른 온열",
+    "moz.benefit2.description":
+      "카본 히팅 기술로 빠르게 따뜻한 온기를 느낄 수 있습니다",
+    "moz.benefit3.title": "안전한 설계",
+    "moz.benefit3.description":
+      "KC 인증과 이중 안전 장치로 걱정 없이 사용하세요",
+    "moz.cta.title": "모즈와 함께하는 따뜻한 휴식",
+    "moz.cta.description": "첨단 카본 히팅 기술로 건강한 숙면을 경험해보세요",
+    "moz.cta.button": "제품 문의하기",
+
+    // InYourHeart Brand Page
+    "inyourheart.hero.title": "피부에 감성을 입히다",
+    "inyourheart.hero.description":
+      "클린뷰티 철학과 감성적인 패키지 디자인으로 글로벌 K-뷰티 시장을 선도하는 프리미엄 스킨케어 브랜드입니다.",
+    "inyourheart.values.title": "감성이 담긴 뷰티 철학",
+    "inyourheart.values.subtitle":
+      "피부에 순하고 마음까지 따뜻하게 만드는 감성 스킨케어",
+    "inyourheart.category1.title": "클린 포뮬러",
+    "inyourheart.category1.description":
+      "피부에 순하고 환경에 친화적인 성분만을 사용하여 안전하고 지속가능한 뷰티를 추구합니다.",
+    "inyourheart.category2.title": "감성 디자인",
+    "inyourheart.category2.description":
+      "제품 사용 순간부터 특별한 경험이 될 수 있도록 감성적이고 아름다운 패키지를 디자인합니다.",
+    "inyourheart.category3.title": "글로벌 K-뷰티",
+    "inyourheart.category3.description":
+      "한국의 우수한 뷰티 기술과 혁신을 전 세계에 알리며 K-뷰티의 가치를 높여갑니다.",
+    "inyourheart.cta.title": "당신의 마음에 닿는",
+    "inyourheart.cta.subtitle": "아름다운 감성",
+    "inyourheart.cta.description":
+      "IN YOUR HEART와 함께 특별한 뷰티 여정을 시작해보세요",
+    "inyourheart.cta.button": "문의하기",
+
+    // Sangsaeng Brand Page
+    "sangsaeng.hero.title": "한국 의료를 세계로 연결하다",
+    "sangsaeng.hero.description":
+      "메디컬 투어리즘부터 글로벌 헬스케어 플랫폼까지, 한국의 우수한 의료 서비스를 전 세계에 연결하는 종합 의료 플랫폼입니다.",
+    "sangsaeng.hero.cta": "상생 홈페이지 가기",
+    "sangsaeng.services.title": "글로벌 헬스케어 생태계",
+    "sangsaeng.services.subtitle":
+      "의료 서비스부터 브랜딩까지, 통합된 헬스케어 솔루션을 제공합니다",
+    "sangsaeng.medical.title": "상생 메디컬",
+    "sangsaeng.medical.subtitle": "Sangsaeng Medical",
+    "sangsaeng.medical.description":
+      "실생활 기반 건강 솔루션과 의료 서비스를 제공하는 헬스케어 브랜드",
+    "sangsaeng.medical.benefit1": "맞춤형 건강 검진 패키지",
+    "sangsaeng.medical.benefit2": "전문의 상담 서비스",
+    "sangsaeng.medical.benefit3": "만성질환 관리 프로그램",
+    "sangsaeng.medical.benefit4": "예방 의학 솔루션",
+
+    "sangsaeng.platform.title": "상생 플랫폼",
+    "sangsaeng.platform.subtitle": "Sangsaeng Platform",
+    "sangsaeng.platform.description":
+      "의료부터 관광까지 손안의 다국어 의료 플랫폼 앱",
+
+    "sangsaeng.platform.benefit1": "다국어 의료 통역 서비스",
+    "sangsaeng.platform.benefit2": "병원 예약 및 관리",
+    "sangsaeng.platform.benefit3": "의료 관광 패키지",
+    "sangsaeng.platform.benefit4": "24시간 응급 서포트",
+
+    "sangsaeng.branding.title": "상생 브랜딩",
+    "sangsaeng.branding.subtitle": "Sangsaeng Branding",
+    "sangsaeng.branding.description":
+      "콘텐츠, 메타광고, 글로벌 인플루언서 연계 브랜딩 조직",
+    "sangsaeng.branding.benefit1": "의료 콘텐츠 마케팅",
+    "sangsaeng.branding.benefit2": "다국어 브랜드 캠페인",
+    "sangsaeng.branding.benefit3": "글로벌 인플루언서 협업",
+    "sangsaeng.branding.benefit4": "디지털 마케팅 솔루션",
+
+    "sangsaeng.cta.title1": "세계와 연결되는",
+    "sangsaeng.cta.title2": "한국 의료의 미래",
+    "sangsaeng.cta.description":
+      "상생과 함께 안전하고 신뢰할 수 있는 의료 서비스를 경험해보세요",
+    "sangsaeng.cta.button": "문의하기",
+
+    // Hoid Details
+    "hoid.feature1.title": "3-in-1 기술",
+    "hoid.feature1.description":
+      "공기청정, 제습, 살균 기능을 하나로 통합한 혁신적인 올인원 솔루션",
+    "hoid.feature2.title": "HEPA14 필터",
+    "hoid.feature2.description":
+      "99.995% 초미세먼지 제거 효율을 자랑하는 의료급 고성능 필터 시스템",
+    "hoid.feature3.title": "미니멀 디자인",
+    "hoid.feature3.description":
+      "어떤 공간에도 자연스럽게 어울리는 세련되고 모던한 디자인 철학",
+    "hoid.partnership.title": "글로벌 확장의",
+    "hoid.partnership.subtitle": "새로운 전환점",
+    "hoid.partnership.date": "2025년 8월 16일",
+    "hoid.partnership.mou": "중국 초대형 공기청정기 제조사와 MOU 체결",
+    "hoid.partnership.description":
+      "HOID는 중국 최대 공기청정기 제조업체와 글로벌 유통 및 기술 협력 MOU를 체결했습니다. 이를 통해 아시아 전역으로 사업 영역을 확장하고, 더 많은 고객에게 깨끗한 공기를 제공할 예정입니다.",
+    "hoid.partnership.point1": "아시아 전역 시장 진출",
+    "hoid.partnership.point2": "기술 협력 및 공동 개발",
+    "hoid.partnership.point3": "글로벌 유통망 확대",
+    "hoid.homeshopping.title": "TV 속으로 들어간",
+    "hoid.homeshopping.subtitle": "프리미엄 디자인",
+
+    // Asran Details
+    "asran.feature1.title": "SUS410 스테인리스 스틸",
+    "asran.feature1.description": "최고급 소재로 내구성과 안전성을 보장합니다",
+    "asran.feature1.detail1": "부식 방지 & 변색 방지",
+    "asran.feature1.detail2": "위생적이고 안전한 조리",
+    "asran.feature1.detail3": "반영구적 사용 가능",
+    "asran.feature1.detail4": "고급스러운 미러 마감",
+
+    "asran.feature2.title": "3중 바닥구조",
+    "asran.feature2.description": "뛰어난 열전도율로 에너지 효율성 극대화",
+    "asran.feature2.detail1": "균등한 열 분산",
+    "asran.feature2.detail2": "빠른 가열 시간",
+    "asran.feature2.detail3": "한 손으로 뚜껑 쉽게 개폐 가능",
+    "asran.feature2.detail4": "열 손실 최소화",
+
+    "asran.feature3.title": "모든 열원 완벽 호환",
+    "asran.feature3.description": "어떤 주방환경에서도 완벽하게 사용 가능",
+    "asran.feature3.detail1": "모든 열원 완벽 호환",
+    "asran.feature3.detail2": "가스 레인지, 인덕션",
+    "asran.feature3.detail3": "논스틱 외부 코팅으로 쉬운 세척",
+    "asran.feature3.detail4": "전기 레인지",
+
+    "asran.size1.title": "냄비 3종 세트",
+    "asran.size1.usage": "소용량부터 대용량까지, 혼자서도 가족과도 완벽하게",
+
+    "asran.size2.title": "압력솥",
+    "asran.size2.usage": "고압의 빠른 조리로 신선하고 풍미있는 요리 가능",
+
+    "asran.size3.title": "프라이팬 3종 세트",
+    "asran.size3.usage": "강력한 코팅으로 오래쓰는 프라이팬",
+
+    "asran.cooking1.title": "국물요리",
+    "asran.cooking1.description": "깊고 진한 국물 맛 구현",
+    "asran.cooking2.title": "찜 & 조림",
+    "asran.cooking2.description": "촉촉하고 부드러운 식감",
+    "asran.cooking3.title": "건강한 조리",
+    "asran.cooking3.description": "영양소 보존하는 조리법",
+    "asran.reviews.title": "실제 구매고객들의 생생한 후기",
+    "asran.review1":
+      "가성비 너무 혜자네요! 이 가격에 이런 품질의 냄비를 만날 수 있다니 정말 만족스럽습니다.",
+    "asran.review1.author": "김○○님",
+    "asran.review2":
+      "냄비의 무게에 놀랐다. 엄청 가볍다! 가벼운 무게 덕분에 손목이 아프지 않고 편하게 요리할 수 있어요.",
+    "asran.review2.author": "박○○님",
+    "asran.review3":
+      "이유식 만들 때 편수냄비가 너무 유용하게 사용되고 있어요. 열 전도도 빠르고 청소도 쉬워서 좋습니다.",
+    "asran.review3.author": "이○○님",
+    "asran.benefit1.title": "요리가 즐거워집니다",
+    "asran.benefit1.description":
+      "균등한 열 전도로 실패 없는 요리가 가능하여 요리에 대한 자신감이 생깁니다.",
+    "asran.benefit2.title": "요리 시간이 단축됩니다",
+    "asran.benefit2.description":
+      "빠른 가열 시간과 효율적인 열 분산으로 요리 시간을 대폭 줄일 수 있습니다.",
+    "asran.benefit3.title": "주방이 더 아름다워집니다",
+    "asran.benefit3.description":
+      "고급스러운 미러 마감과 세련된 디자인으로 주방 인테리어가 한층 업그레이드됩니다.",
+    "asran.cta.title": "독일 기술력과 만나는",
+    "asran.cta.subtitle": "프리미엄 요리 경험",
+    "asran.cta.description": "ASRAN과 함께 새로운 요리의 세계를 경험해보세요",
+    "asran.cta.button": "문의하기",
+
+    // Footer
+    "footer.company": "회사 정보",
+    "footer.services": "서비스",
+    "footer.contact": "연락처",
+    "footer.follow": "팔로우",
+    "footer.copyright": "© 2024 FeedBack. All rights reserved.",
   },
 
   // EN:
@@ -799,8 +1266,10 @@ const translations = {
       'Based on our own brands such as Hoid, Medifeed, InYourHeart, and Sangsaeng,<br class="hidden sm:block"/>and global partnerships, we support the entire process from planning to manufacturing, distribution, and branding.',
     "about.story.detail":
       'FeedBack will always strive to make every day<br class="hidden sm:block"/>more convenient and happier for you through each of our brands that permeate your daily life.',
-    "about.partnership.title": "Hoid, Medifeed, InYourHeart, Sangsaeng, and more<br />Based on our own brands and global partnerships,<br />we work together through the entire process from planning to manufacturing, distribution, and branding.",
-    "about.partnership.description": "Each of FeedBack's brands embedded in your daily life will make your day more convenient and happier.<br />We will always be the FeedBack that strives for this.",
+    "about.partnership.title":
+      "Hoid, Medifeed, InYourHeart, Sangsaeng, and more<br />Based on our own brands and global partnerships,<br />we work together through the entire process from planning to manufacturing, distribution, and branding.",
+    "about.partnership.description":
+      "Each of FeedBack's brands embedded in your daily life will make your day more convenient and happier.<br />We will always be the FeedBack that strives for this.",
     "about.banner.title":
       'FeedBack designs<br class="block" /><span class="text-[#ffffff]"> brand growth through distribution</span>',
     "about.parallax.title":
@@ -1380,7 +1849,7 @@ const translations = {
     "footer.company.contact": "ติดต่อ",
     "footer.bottom.copyright": "© 2024 FeedBack Corp. สงวนลิขสิทธิ์",
     "footer.bottom.bizinfo":
-      "เลขทะเบียน���ุรกิจ: 296-87-03628 | ซีอีโอ: Hae-min Song, Sung-hyun Jeong",
+      "เลขทะเบียนธุรกิจ: 296-87-03628 | ซีอีโอ: Hae-min Song, Sung-hyun Jeong",
     "footer.bottom.privacy": "นโยบายความเป็นสจวนตัว",
     "footer.bottom.terms": "ข้อกำหนดการใช้งาน",
     "footer.bottom.cookies": "นโยบายคุกกี้",
@@ -1389,7 +1858,8 @@ const translations = {
     "about.story.main":
       '<span class="text-white">FeedBack ออกแบบการเติบโตของแบรนด์ผ่านการกระจายสินค้า</span>',
     "about.story.sub": "FeedBack ออกแบบการเติบโตของแบรนด์ผ่านการกระจายสินค้า",
-    "about.story.detail": "FeedBack ออกแบบการเติบโตของแบรนด์ผ่านการกระจายสินค้า",
+    "about.story.detail":
+      "FeedBack ออกแบบการเติบโตของแบรนด์ผ่านการกระจายสินค้า",
     "about.partnership.title":
       "Hoid, Medifeed, InYourHeart, Sangsaeng และอื่น ๆ<br />อิงบนแบรนด์ของเราเองและพันธมิตรทั่วโลก<br />เราร่วมมือกันทุกขั้นตอน ตั้งแต่การวางแผนไปจนถึงการผลิต การกระจายสินค้า และการสร้างแบรนด์",
     "about.partnership.description":
@@ -1531,7 +2001,7 @@ const translations = {
     "brands.sangsaeng.slogan":
       "WE CONNECT KOREAN MEDICAL SERVICES TO THE WORLD",
     "brands.sangsaeng.description":
-      "แพลตฟอร์มการแพทย์ครบวงจร เชื่อมบริการการแพทย์ชั้นเยี่ยมของเกาหลีสู่ทั่วโลก ตั้งแต่เมดิคัลทัวร���ซึมถึงเฮลธ์แคร์แพลตฟอร์���",
+    "แพลตฟอร์มการแพทย์ครบวงจร เชื่อมบริการการแพทย์ชั้นเยี่ยมของเกาหลีสู่ทั่วโลก ตั้งแต่เมดิคัลทัวร์ไปจนถึงเฮลธ์แคร์แพลตฟอร์ม",
     "brands.sangsaeng.products.0": "ท่องเที่ยวเชิงการแพทย์",
     "brands.sangsaeng.products.1": "แพลตฟอร์มเฮลธ์แคร์",
     "brands.sangsaeng.products.2": "แอปหลายภาษา",
@@ -1601,11 +2071,11 @@ const translations = {
     "b2b2c.b2c.description":
       "มอบสินค้าและบริการที่ดีที่สุด ผ่านหลากหลายช่องทาง",
     "b2b2c.b2c.feature1": "ออนไลน์ & ออฟไลน์",
-    "b2b2c.b2c.feature2": "เชื่อ60�ต่อโฮ���ช้อป���ิ้ง",
+    "b2b2c.b2c.feature2": "เชื่อมต่อโฮมช้อปปิ้ง",
     "b2b2c.b2c.feature3": "ขยายสู่ระดับโลก",
-    "b2b2c.summary.title": "ระบบนิเวศการกระจายสินค้าที่สม���ูรณ์ — FeedBack",
+    "b2b2c.summary.title": "ระบบนิเวศการกระจายสินค้าที่สมบูรณ์ — FeedBack"",
     "b2b2c.summary.description":
-      "FeedBack ออกแบบและเพิ่มประสิทธิภาพกระบวนก���รกระจายสินค้าทั้งหมด ฀พื่อให้สินค้าคุณภาพจากผู้ผลิตไปถึงผู้บริโภคได้สำเร็จ",
+      "FeedBack ออกแบบและเพิ่มประสิทธิภาพกระบวนการกระจายสินค้าทั้งหมด เพื่อให้สินค้าคุณภาพจากผู้ผลิตไปถึงผู้บริโภคได้สำเร็จ",
 
     // Contact Page
     "contact.title": "ติดต่อเรา",
@@ -1648,10 +2118,12 @@ const translations = {
     "contact.form.message.placeholder": "กรุณากรอกข้อความของคุณ",
     "contact.form.privacy": "ฉันยอมรับการเก็บรวบรวมและใช้ข้อมูลส่วนบุคคล",
     "contact.form.privacy.link": "ดูนโยบาย",
-    "contact.form.privacy.required": "กรุณายอมรับนโยบายความเป็นส่วนตัวเพื่อดำเนินการต่อ",
+    "contact.form.privacy.required":
+      "กรุณายอมรับนโยบายความเป็นส่วนตัวเพื่อดำเนินการต่อ",
     "contact.form.submit": "ส่งข้อความ",
     "contact.form.sending": "กำลังส่ง...",
-    "contact.form.success": "ข้อความของคุณถูกส่งเรียบร้อยแล้ว เราจะติดต่อกลับเร็วๆ นี้",
+    "contact.form.success":
+      "ข้อความของคุณถูกส่งเรียบร้อยแล้ว เราจะติดต่อกลับเร็วๆ นี้",
     "contact.form.error": "เกิดข้อผิดพลาดในการส่งข้อความ กรุณาลองใหม่อีกครั้ง",
 
     "contact.errors.required.title": "ข้อผิดพลาดในการกรอก",
@@ -1704,9 +2176,9 @@ const translations = {
     "news.1.summary":
       "Hoid แบรนด์เครื่องใช้ไฟฟ้าไลฟ์สไตล์พรีเมียม เปิดตัวผลิตภัณฑ์เรือธงรุ่นแรกอย่างเป็นทางการ",
     "news.1.content":
-      "Hoid เปิดตัวเครื่องฟอกอากาศรุ่นที่ 1 อย่างเป็นทางการ มาพร้อมระบบกรอง 3 ชั้นกำลังสูงและโครงสร้างหมุนเวียนอากาศรอบทิศ 360° ช่วยฟอกอาip�าศได้รวดเร็วและรักษาความสะอาดในระดับสูงสุด ดีไซน์มินิมอลเข้ากับทุกสไตล์ตกแต่ง พร้อมมอเตอร์เงียบและประหยัดพลังงาน",
+    "Hoid เปิดตัวเครื่องฟอกอากาศรุ่นที่ 1 อย่างเป็นทางการ มาพร้อมระบบกรอง 3 ชั้นกำลังสูงและโครงสร้างหมุนเวียนอากาศรอบทิศ 360° ช่วยฟอกอากาศได้รวดเร็วและรักษาความสะอาดในระดับสูงสุด ดีไซน์มินิมอลเข้ากับทุกสไตล์ตกแต่ง พร้อมมอเตอร์เงียบและประหยัดพลังงาน",
     "news.2.date": "2025.08.08",
-    "news.2.title": "เยี่ยมชมโรงงานเครื่องด곹ดฝุ่น Hoid",
+    "news.2.title": "เยี่ยมชมโรงงานเครื่องดูดฝุ่น Hoid",
     "news.2.summary":
       "Hoid เข้าเยี่ยมชมโรงงานผลิตเครื่องดูดฝุ่นไร้สาย เพื่อตรวจสอบคุณภาพและความน่าเชื่อถือ",
     "news.2.content":
@@ -1717,7 +2189,7 @@ const translations = {
     "news.3.summary":
       "Feedback เปิดตัวแบรนด์ในเครือของตนเอง ได้แก่ ASRAN และ Carvella แบรนด์เครื่องครัวและของใช้ในบ้านระดับพรีเมียม, La Ceras แบรนด์กระเป๋าเดินทางหรู และ Sikgu แบรนด์ช้อนส้อมคุณภาพสูง",
     "news.3.content":
-      "Feedback ได้เปิดตัวแบรนด์ในเครือของตนเอง ได้แก่ ASRAN และ Carvella ซึ่งเป็นแบรนด์เครื่องครัวและของใช้ในบ้านระดับพรีเมียม, La Ceras แบรนด์กระเป๋าเดินทางหรู และ Sikgu แบรนด์ช้อนส้อมที่สะท้อนความงามแบบเกาหลี การเปิดตัวครั้งนี้ทำให้ Feedback รับหน้าที่ดูแลด้านการจัดจำหน่ายภายในประเทศ การตลาด และบริการลูกค้าสำหรับผลิตภัณฑ์ทั้งหมดของทั้งสี่แบรนด์ ASRAN เป็นแบรนด์เครื่องครัวสแตนเลสระดับไฮเอนด์ที่มีชื่อเสียงด้านการนำความร้อนอย่างแม่นยำและการออกแบบที่ประณีต Carvella ถ่ายทอดอารมณ์ความเป็นอิตาเลียนผ่านเครื่องครัวที่ผลิตโดยช่างฝีมือผู้ชำนาญ La Ceras โดดเด่นด้วยวัสดุไฮบริดและดีไซน์ที่หรูหรา ขณะที่ Sikgu นำเสนอเครื่องใช้บนโต๊ะอาหารที่ผสานความเรียบง่ายและความงามแบบเกาหลีได้อย่างลงตัว Feedback มีเป้าหมายที่จะนำเสนอแบรนด์ไลฟ์สไตล์ระดับพรีเมียมสู่ตลาดเกาหลี พร้อมยกระดับประสบการณ์การใช้ชีวิตของผู้บริโภคผ่านการควบคุมคุณภาพและการพัฒนาแบรนด์อย่างต่อเนื่อง",
+    "Feedback ได้เปิดตัวแบรนด์ในเครือของตนเอง ได้แก่ ASRAN และ Carvella ซึ่งเป็นแบรนด์เครื่องครัวและของใช้ในบ้านระดับพรีเมียม, La Ceras แบรนด์กระเป๋าเดินทางหรู และ Sikgu แบรนด์ช้อนส้อมที่สะท้อนความงามแบบเกาหลี การเปิดตัวครั้งนี้ทำให้ Feedback รับหน้าที่ดูแลด้านการจัดจำหน่ายภายในประเทศ การตลาด และบริการลูกค้าสำหรับผลิตภัณฑ์ทั้งหมดของทั้งสี่แบรนด์ ASRAN เป็นแบรนด์เครื่องครัวสแตนเลสระดับไฮเอนด์ที่มีชื่อเสียงด้านการนำความร้อนอย่างแม่นยำและการออกแบบที่ประณีต Carvella ถ่ายทอดอารมณ์ความเป็นอิตาเลียนผ่านเครื่องครัวที่ผลิตโดยช่างฝีมือผู้ชำนาญ La Ceras โดดเด่นด้วยวัสดุไฮบริดและดีไซน์ที่หรูหรา ขณะที่ Sikgu นำเสนอเครื่องใช้บนโต๊ะอาหารที่ผสานความเรียบง่ายและความงามแบบเกาหลีได้อย่างลงตัว Feedback มีเป้าหมายที่จะนำเสนอแบรนด์ไลฟ์สไตล์ระดับพรีเมียมสู่ตลาดเกาหลี พร้อมยกระดับประสบการณ์การใช้ชีวิตของผู้บริโภคผ่านการควบคุมคุณภาพและการพัฒนาแบรนด์อย่างต่อเนื่อง",
 
     "news.4.date": "2025.10.14",
     "news.4.title":
@@ -1725,471 +2197,530 @@ const translations = {
     "news.4.summary":
       "พัดลมฟอกอากาศแบบไร้ใบพัด 5-in-1 พร้อมแผ่นกรอง HEPA14 ระดับการแพทย์และระบบฆ่าเชื้อด้วยรังสี UV ครอบคลุมพื้นที่ 78 ม² รุกตลาดพรีเมียม",
     "news.4.content":
-      "แผ่นกรอง HEPA14 ระดับการแพทย์ + UV Sterilization ครอบคลุมกว้าง 78 ม² เจาะตลาดเครื่องใช้ไฟฟ้าพรีเมียม\n\nตลาดเครื่องใช้ไฟฟ้าในบ้านของเกาหลีต้อนรับพัดลมฟอกอากาศร้อน-เย็นแบบมัลติฟังก์ชันที่ออกแบบมาเพื่อใช้งานได้ทุกฤดูกาล\n\nรุ่นใหม่นี้รวม 5 ฟังก์ชัน—ลมเย็น ลมร้อน ฟอกอากาศ สร้างประจุลบ และฆ่าเชื้อด้วยรังสี UV—ไว้ในโซลูชันแบบ ‘5-in-1’ เครื่องเดียว มอบระบบจัดการคุณภาพอากาศแบบองค์รวม แตกต่างจากเครื่องทั่วไปที่ทำได้อย่างใดอย่างหนึ่ง\n\n(ภาพ: พัดลมฟอกอากาศไร้ใบพัด 5-in-1 ร้อน-เย็น)\n\n<strong>กรองระดับการแพทย์: กำจัดฝุ่นละเอียดได้ 99.99%</strong>\n\nจุดเด่นคือแผ่นกรอง HEPA14 ระดับห้องผ่าตัด/คลีนรูม สามารถดักจับอนุภาคขนาด 0.3 ไมโครเมตรได้ไม่น้อยกว่า 99.99% สูงกว่าเกรด HEPA13 ที่ใช้กันทั่วไปในบ้าน จึงอุ่นใจได้สำหรับครอบครัวที่มีอาการภูมิแพ้หรือปัญหาระบบทางเดินหายใจ\n\nด้วยระบบกรองอากาศแบบ 360 องศา เครื่องสามารถดูดและฟอกอากาศได้รอบทิศ ครอบคลุมพื้นที่ได้สูงสุด 78 ม² (ประมาณ 24 พย็อง/840 ตร.ฟุต) เหมาะกับพื้นที่ขนาดใหญ่ เช่น ห้องนั่งเล่นหรือสำนักงาน\n\n<strong>UV Sterilization และประจุลบ เพื่อสภาพแวดล้อมภายในที่ถูกสุขอนามัย</strong>\n\nนอกจากดักจับฝุ่น เครื่องยังติดตั้งระบบฆ่าเชื้อด้วยรังสี UV เพื่อลดแบคทีเรียและไวรัสในอากาศ วิธีนี้ไม่ใช้สารเคมีจึงปลอดภัย โดยเฉพาะอย่างยิ่งในช่วงเปลี่ยนฤดู",
+    "แผ่นกรอง HEPA14 ระดับการแพทย์ + UV Sterilization ครอบคลุมกว้าง 78 ม² เจาะตลาดเครื่องใช้ไฟฟ้าพรีเมียม\n\nตลาดเครื่องใช้ไฟฟ้าในบ้านของเกาหลีต้อนรับพัดลมฟอกอากาศร้อน-เย็นแบบมัลติฟังก์ชันที่ออกแบบมาเพื่อใช้งานได้ทุกฤดูกาล\n\nรุ่นใหม่นี้รวม 5 ฟังก์ชัน—ลมเย็น ลมร้อน ฟอกอากาศ สร้างประจุลบ และฆ่าเชื้อด้วยรังสี UV—ไว้ในโซลูชันแบบ ‘5-in-1’ เครื่องเดียว มอบระบบจัดการคุณภาพอากาศแบบองค์รวม แตกต่างจากเครื่องทั่วไปที่ทำได้อย่างใดอย่างหนึ่ง\n\n(ภาพ: พัดลมฟอกอากาศไร้ใบพัด 5-in-1 ร้อน-เย็น)\n\n<strong>กรองระดับการแพทย์: กำจัดฝุ่นละเอียดได้ 99.99%</strong>\n\nจุดเด่นคือแผ่นกรอง HEPA14 ระดับห้องผ่าตัด/คลีนรูม สามารถดักจับอนุภาคขนาด 0.3 ไมโครเมตรได้ไม่น้อยกว่า 99.99% สูงกว่าเกรด HEPA13 ที่ใช้กันทั่วไปในบ้าน จึงอุ่นใจได้สำหรับครอบครัวที่มีอาการภูมิแพ้หรือปัญหาระบบทางเดินหายใจ\n\nด้วยระบบกรองอากาศแบบ 360 องศา เครื่องสามารถดูดและฟอกอากาศได้รอบทิศ ครอบคลุมพื้นที่ได้สูงสุด 78 ม² (ประมาณ 24 พย็อง/840 ตร.ฟุต) เหมาะกับพื้นที่ขนาดใหญ่ เช่น ห้องนั่งเล่นหรือสำนักงาน\n\n<strong>UV Sterilization และประจุลบ เพื่อสภาพแวดล้อมภายในที่ถูกสุขอนามัย</strong>\n\nนอกจากดักจับฝุ่น เครื่องยังติดตั้งระบบฆ่าเชื้อด้วยรังสี UV เพื่อลดแบคทีเรียและไวรัสในอากาศ วิธีนี้ไม่ใช้สารเคมีจึงปลอดภัย โดยเฉพาะอย่างยิ่งในช่วงเปลี่ยนฤดู",
+
+    "news.5.date": "2025.08.20",
+    "news.5.title": "เปิดตัวเครื่องดูดฝุ่น Hoid",
+    "news.5.summary":
+      "เครื่องดูดฝุ่นไร้สายพรีเมียมจาก Hoid เปิดตัวอย่างเป็นทางการแล้ว",
+    "news.5.content":
+      "เครื่องดูดฝุ่นไร้สายพรีเมียมจาก Hoid ได้เปิดตัวอย่างเป็นทางการแล้ว ผลิตภัณฑ์รุ่นนี้มาพร้อมมอเตอร์สมรรถนะสูงและพลังดูดแรง สามารถทำความสะอาดได้อย่างมีประสิทธิภาพทั้งบ้านขนาดใหญ่และพื้นที่ขนาดเล็ก แบตเตอรี่ประสิทธิภาพสูงช่วยยืดระยะเวลาการใช้งานให้ยาวนานขึ้น เหมาะสำหรับการทำความสะอาดต่อเนื่องในครั้งเดียว\n\nนอกจากนี้ยังออกแบบตามหลักสรีรศาสตร์เพื่อลดน้ำหนักและลดภาระที่ข้อมือ สามารถเปลี่ยนหัวแปรงได้หลากหลาย รองรับทั้งพื้นแข็ง พรม และที่นอน เพื่อมอบประสิทธิภาพการทำความสะอาดที่เหมาะสมกับแต่ละพื้นผิว กล่องเก็บฝุ่นและไส้กรองสามารถถอดล้างน้ำได้ ทำให้ดูแลรักษาได้อย่างถูกสุขลักษณะ และทุกชิ้นส่วนถูกออกแบบโดยคำนึงถึงความสะดวกในการใช้งานเป็นหลัก\n\nด้วยการเปิดตัวครั้งนี้ Hoid ตั้งเป้าวางมาตรฐานใหม่ให้กับตลาดเครื่องดูดฝุ่นไร้สาย ทั้งด้านดีไซน์ ประสิทธิภาพ และประสบการณ์การใช้งานของผู้ใช้.",
+
+    "news.6.date": "2025.10.01",
+    "news.6.title": "ASRAN เปิดตัวชุดเครื่องครัวสเตนเลสไฮเอนด์ 3 ซีรีส์",
+    "news.6.summary":
+      "แบรนด์เครื่องครัวพรีเมียม ASRAN เปิดตัวไลน์อัพเครื่องครัวไฮเอนด์อย่างเป็นทางการ ประกอบด้วยหม้อสเตนเลส 3 ใบ หม้อแรงดัน และกระทะ 3 รุ่น",
+    "news.6.content":
+      "เทคโนโลยีเยอรมันและโครงสร้างก้นหม้อ 3 ชั้น มอบประสบการณ์การทำอาหารระดับพรีเมียม\n\nFeedBack (ซีอีโอ จองซองฮยอน) ประกาศว่า แบรนด์เครื่องครัวระดับพรีเมียม ASRAN ได้เปิดตัวไลน์อัพเครื่องครัวสเตนเลสไฮเอนด์อย่างเป็นทางการในวันที่ 1 ตุลาคม 2025\n\nผลิตภัณฑ์ที่เปิดตัวในครั้งนี้ประกอบด้วยหม้อสเตนเลส 3 ใบ หม้อแรงดัน และกระทะ 3 รุ่น โดยใช้สเตนเลส SUS410 ที่พัฒนาบนพื้นฐานเทคโนโลยีเยอรมัน ร่วมกับโครงสร้างก้นหม้อ 3 ชั้น ช่วยเพิ่มประสิทธิภาพการนำความร้อนและความทนทานได้สูงสุด\n\n(ภาพ: ไลน์อัพผลิตภัณฑ์เครื่องครัว ASRAN)\n\n<strong>โซลูชันการทำอาหารระดับพรีเมียมจากเทคโนโลยีเยอรมัน</strong>\n\nASRAN พัฒนาเครื่องครัวให้ตอบโจทย์ทั้งการใช้งานในบ้านและในครัวมืออาชีพ โดยใช้ระบบควบคุมแรงดันสองชั้นและชั้นนำความร้อนที่ออกแบบอย่างแม่นยำ ช่วยควบคุมสมดุลอุณหภูมิระหว่างการทำอาหาร ทำให้สามารถคงรสชาติและคุณค่าสารอาหารของวัตถุดิบได้อย่างดีที่สุด\n\nสเตนเลส SUS410 มีความทนทานต่อการกัดกร่อนและการเปลี่ยนสีสูง อีกทั้งยังรักษาความเงางามได้ยาวนานหลังการล้าง ช่วยสร้างสภาพแวดล้อมในครัวที่สะอาดและถูกสุขลักษณะ โครงสร้างก้นหม้อ 3 ชั้นยังช่วยกระจายความร้อนได้อย่างสม่ำเสมอบนทุกแหล่งความร้อน รวมถึงเตาแม่เหล็กไฟฟ้า ทำให้สามารถใช้งานได้ดีในครัวทุกรูปแบบ\n\n<strong>ดีไซน์ที่ผสานความสวยงามและฟังก์ชันการใช้งาน</strong>\n\nในกระบวนการพัฒนาผลิตภัณฑ์ ASRAN ให้ทีมออกแบบและเชฟมืออาชีพทำงานร่วมกัน เพื่อออกแบบเครื่องครัวที่ตอบโจทย์การใช้งานจริงในครัวมากที่สุด พื้นผิวสเตนเลสแบบมิร์เรอร์ฟินิชและเส้นโค้งที่เรียบง่ายช่วยยกระดับภาพลักษณ์ของครัวให้ดูพรีเมียม ขณะเดียวกันก็ยังคงความสะดวกในการใช้งาน\n\nด้ามจับถูกออกแบบตามหลักสรีรศาสตร์เพื่อลดภาระที่ข้อมือแม้ใช้งานต่อเนื่องเป็นเวลานาน พร้อมทั้งปรับบาลานซ์น้ำหนักของตัวหม้อให้สมดุล วาล์วระบายไอน้ำที่ฝาแก้วช่วยให้ผู้ใช้สามารถมองเห็นและควบคุมกระบวนการทำอาหารได้อย่างชัดเจน เพิ่มทั้งความปลอดภัยและความสะดวกสบาย\n\nตัวแทนจาก FeedBack กล่าวว่า ASRAN จะไม่ใช่เพียงเครื่องครัวธรรมดา แต่จะกลายเป็น ‘พาร์ทเนอร์ของเชฟ’ ที่ช่วยยกระดับความสมบูรณ์ของเมนูอาหาร พร้อมยืนยันว่าจะเดินหน้าพัฒนาผลิตภัณฑ์ที่ผสานนวัตกรรมทางเทคนิคเข้ากับดีไซน์ที่มีเซนส์อย่างต่อเนื่อง เพื่อให้ทุกมื้ออาหารกลายเป็นงานศิลปะในชีวิตประจำวัน\n\nชุดเครื่องครัวไฮเอนด์ ASRAN สามารถหาซื้อได้ผ่านทางร้านค้าออนไลน์อย่างเป็นทางการและช่องทางจัดจำหน่ายหลักต่าง ๆ.",
+
+    "news.7.date": "2025.10.10",
+    "news.7.title":
+      "La Ceras เปิดตัวเซ็ตกระเป๋าเดินทางหรูฝรั่งเศส 4 ขนาดอย่างเป็นทางการ",
+    "news.7.summary":
+      "แบรนด์กระเป๋าเดินทางพรีเมียม La Ceras เปิดตัวเซ็ตกระเป๋าหรู 4 ขนาด (14·20·24·28 นิ้ว) ที่ผสานอารมณ์แบบฝรั่งเศสกับเทคโนโลยีสมัยใหม่",
+    "news.7.content":
+      "จิตวิญญาณงานฝีมือฝรั่งเศสผสานกับดีไซน์โมเดิร์น โครงสร้างไฮบริด PP·PC เพื่อความเบาและความทนทานในเวลาเดียวกัน\n\nFeedBack (ซีอีโอ จองซองฮยอน) ประกาศว่าเมื่อวันที่ 10 ตุลาคม 2025 ได้เปิดตัวอย่างเป็นทางการเซ็ตกระเป๋าเดินทาง 4 ขนาด (14·20·24·28 นิ้ว) ของแบรนด์พรีเมียม La Ceras (ลา เซรัส)\n\nLa Ceras เป็นแบรนด์ที่สะท้อนทั้งจิตวิญญาณงานฝีมือของฝรั่งเศสและปรัชญาดีไซน์แบบโมเดิร์น โดยใช้โครงสร้างไฮบริดจาก PP (โพลีโพรพิลีน) และ PC (โพลีคาร์บอเนต) ทำให้ตัวกระเป๋ามีน้ำหนักเบาแต่ยังคงความแข็งแรงทนทานสูง\n\n(ภาพ: ภาพการใช้งานกระเป๋าเดินทาง La Ceras ระหว่างการเดินทาง)\n\n<strong>โซลูชันการเดินทางระดับพรีเมียมที่ถ่ายทอดบรรยากาศเวิร์กช็อปฝรั่งเศส</strong>\n\nเซ็ตกระเป๋า La Ceras ที่เปิดตัวครั้งนี้ประกอบด้วยขนาดตั้งแต่ 14 นิ้วจนถึง 28 นิ้ว รองรับทั้งทริประยะสั้นและระยะยาว กระเป๋าขนาด 14 นิ้วถูกออกแบบให้ตรงตามมาตรฐานการถือขึ้นเครื่อง เหมาะสำหรับเดินทางสั้นหรือทริปธุรกิจ ในขณะที่ขนาด 28 นิ้วรองรับการเก็บสัมภาระปริมาณมาก เหมาะกับการเดินทางระยะไกล\n\nโดยเฉพาะอย่างยิ่ง ระบบล้อเงียบที่ใช้แบริ่ง 210D ช่วยให้เคลื่อนที่ได้อย่างนุ่มนวลและมั่นคง สามารถใช้งานได้อย่างเงียบเชียบแม้อยู่ในสนามบินหรือโรงแรมที่มีผู้คนพลุกพล่าน\n\nภายในกระเป๋าใช้โครงสร้างแบ่งช่องสองด้านและซับในวัสดุกันน้ำคุณภาพสูง พร้อมติดตั้งซิปจากแบรนด์ระดับโลกอย่าง YKK เพื่อเพิ่มทั้งความทนทานและความสะดวกในการใช้งาน ผู้ใช้จึงสามารถจัดเก็บเสื้อผ้าและสัมภาระต่าง ๆ ได้อย่างเป็นระบบ และยังช่วยปกป้องของใช้จากสภาพอากาศที่เปลี่ยนแปลงอย่างไม่คาดคิด\n\n<strong>ดีเทลระดับคอลเลกชัน เพื่อให้มีคุณค่าแก่การสะสม</strong>\n\nLa Ceras ไม่ได้มองกระเป๋าเดินทางเป็นเพียงอุปกรณ์เคลื่อนย้ายสัมภาระ แต่เป็น ‘เพื่อนร่วมทาง’ ที่อยู่กับผู้ใช้ตลอดการเดินทางแต่ละทริป กระเป๋าแต่ละใบมีการสลักหมายเลขซีเรียลเฉพาะ ช่วยยืนยันความเป็นของแท้และเพิ่มคุณค่าด้านการสะสม ดีไซน์ฉลากและโลโก้ที่ได้แรงบันดาลใจจากเวิร์กช็อปในปารีส ช่วยสื่อสารอัตลักษณ์ของแบรนด์ได้อย่างชัดเจน\n\nสีดำสุดคลาสสิกและเส้นสายโค้งที่เรียบหรู ทำให้กระเป๋าเข้ากันได้ดีกับทั้งลุคทางการและลุคสบาย ๆ ในวันพักผ่อน วัสดุพรีเมียมและการเก็บงานที่ประณีตช่วยเสริมให้ภาพลักษณ์โดยรวมดูหรูหราและมีระดับ\n\n<strong>เตรียมรุกตลาดโลกในระยะถัดไป</strong>\n\nตัวแทนจาก FeedBack ระบุว่า La Ceras จะเติบโตเป็นแบรนด์กระเป๋าเดินทางพรีเมียมที่สะท้อนทั้ง ‘คุณภาพของการเดินทาง’ และ ‘สไตล์ของผู้ใช้’ พร้อมทั้งวางแผนรุกเข้าสู่ดิวตี้ฟรีในสนามบินนานาชาติและขยายตลาดสู่ยุโรปในอนาคต\n\nปัจจุบัน La Ceras เซ็ตกระเป๋าเดินทางหรูสไตล์ฝรั่งเศส สามารถหาซื้อได้ผ่านทางร้านค้าออนไลน์อย่างเป็นทางการและช่องทางจัดจำหน่ายหลักต่าง ๆ.",
+
+    "news.8.date": "2025.10.13",
+    "news.8.title": "Carvella เปิดตัวเซ็ตมีดและเขียงพรีเมียมสไตล์อิตาลี",
+    "news.8.summary":
+      "แบรนด์เครื่องครัวพรีเมียม Carvella เปิดตัว Carvella Signature Set อย่างเป็นทางการ ประกอบด้วยชุดมีด 6 ชิ้น และเขียงสเตนเลส",
+    "news.8.content":
+      "เทคโนโลยีงานโลหะจากอิตาลีตอนเหนือ ใบมีดเหล็กคาร์บอนสูงผสานกับเขียงสเตนเลส 304 มอบประสบการณ์การหั่นที่แม่นยำ\n\nแบรนด์เครื่องครัวพรีเมียม Carvella (คาร์เวลลา) ในเครือ FeedBack (ซีอีโอ จองซองฮยอน) ประกาศเปิดตัว Carvella Signature Set อย่างเป็นทางการในวันที่ 13 ตุลาคม 2025 เซ็ตนี้ประกอบด้วยชุดมีด 6 ชิ้นและเขียงสเตนเลส 304 ที่ออกแบบมาเป็นโซลูชันการทำอาหารระดับพรีเมียมสำหรับทั้งเชฟมืออาชีพและโฮมเชฟ\n\nCarvella เป็นแบรนด์เครื่องครัวที่พัฒนาบนพื้นฐานเทคนิคงานโลหะจากช่างฝีมือในแคว้นทางตอนเหนือของอิตาลี มุ่งเน้นทั้งความแม่นยำในการหั่นและความทนทานของอุปกรณ์ ครอบคลุมตั้งแต่การใช้งานในครัวเรือนจนถึงครัวระดับมืออาชีพ\n\n(ภาพ: ภาพรวมชุด Carvella Signature Set)\n\n<strong>ระบบการหั่นอันแม่นยำจากงานฝีมืออิตาลี</strong>\n\nชุดมีดใน Carvella Signature Set ใช้เหล็กคาร์บอนสูงเป็นวัสดุหลัก ช่วยให้คมและทนทานต่อการใช้งานยาวนาน โดยเหล็กคาร์บอนสูงมีค่าความแข็งมากกว่าสเตนเลสทั่วไป ทำให้สามารถหั่นได้อย่างแม่นยำและลดการเสียรูปของใบมีด เหมาะอย่างยิ่งสำหรับครัวมืออาชีพที่ต้องการมาตรฐานสูง\n\nด้ามจับทำจากวัสดุสังเคราะห์กันลื่น ช่วยให้ควบคุมทิศทางการหั่นได้มั่นคงแม้มีน้ำหรือคราบมันติดบนมือ การออกแบบตามหลักสรีรศาสตร์ลดแรงกดและความล้าบริเวณข้อมือ พร้อมทั้งจัดบาลานซ์น้ำหนักของตัวมีดให้พอดีสำหรับการใช้งานต่อเนื่อง\n\nเขียงสเตนเลส 304 ที่มาพร้อมในเซ็ตมีคุณสมบัติทนต่อการเปลี่ยนสีและป้องกันการสะสมของแบคทีเรีย ใช้งานได้นานโดยคงสภาพสะอาดและเงางาม แตกต่างจากเขียงไม้ทั่วไปที่มีโอกาสเกิดการอับชื้นและสะสมเชื้อโรค อีกทั้งยังสามารถใช้ร่วมกับเครื่องล้างจานได้ ทำให้ดูแลรักษาได้สะดวก\n\n<strong>ดีเทลระดับงานคราฟต์จากช่างฝีมือ</strong>\n\nผลิตภัณฑ์ทุกชิ้นของ Carvella ผ่านกระบวนการขัดเงาด้วยมือโดยช่างผู้ชำนาญ เพื่อให้ได้สัมผัสและสมดุลที่เป็นเอกลักษณ์ พื้นผิวสเตนเลสที่จับคู่กับโทนสีดำช่วยให้เข้ากับทุกสไตล์ของห้องครัว และยังเสริมภาพลักษณ์ให้ดูหรูหรา เหมาะอย่างยิ่งสำหรับเป็นของขวัญระดับพรีเมียม\n\nชุดมีด 6 ชิ้นประกอบด้วยเชฟไนฟ์ มีดหั่นขนมปัง มีดเอนกประสงค์ มีดปอกผัก–ผลไม้ ที่ลับมีด และกรรไกรครัว ครอบคลุมทุกสถานการณ์การเตรียมวัตถุดิบในครัว ใบมีดแต่ละเล่มมีการสลักโลโก้ Carvella เพื่อย้ำอัตลักษณ์ของแบรนด์และรับรองความเป็นของแท้\n\n<strong>เจาะตลาดโลกด้วยปรัชญาแบรนด์ที่ยั่งยืน</strong>\n\nตัวแทนจาก FeedBack กล่าวว่าความตั้งใจของ Carvella คือการสร้างสรรค์เครื่องครัวที่เป็นมากกว่าอุปกรณ์ทำอาหาร แต่เป็นส่วนหนึ่งของ ‘ศิลปะการทำอาหาร’ โดยจะต่อยอดเทคโนโลยีและอารมณ์ของงานฝีมือแบบอิตาลีสู่ตลาดยุโรปและเอเชียในฐานะแบรนด์เครื่องครัวพรีเมียม\n\nนอกจากนี้ ยังมีแผนขยายปรัชญาแบรนด์ไปสู่กระบวนการผลิตที่ยั่งยืนและเป็นมิตรต่อสิ่งแวดล้อม เพื่อเติบโตเป็นแบรนด์เครื่องครัวระดับพรีเมียมที่คำนึงถึงทั้งคุณภาพและผลกระทบต่อสิ่งแวดล้อมในระยะยาว\n\nCarvella Signature Set สามารถหาซื้อได้ผ่านทางร้านค้าออนไลน์อย่างเป็นทางการและช่องทางจัดจำหน่ายหลักต่าง ๆ.",
+
+    // Stats Section
+    "stats.title": "เติบโตอย่างต่อเนื่อง",
+    "stats.subtitle": "OUR ACHIEVEMENTS",
+    "stats.description":
+      "ค้นพบความสำเร็จสำคัญของ FeedBack ที่เติบโตสู่ระดับโลกในฐานะพันธมิตรทางธุรกิจระดับสากล",
+    "stats.since": "ปีที่ก่อตั้ง",
+    "stats.since.sub": "Since",
+    "stats.brands": "แบรนด์ในเครือ",
+    "stats.brands.sub": "Own Brands",
+    "stats.countries": "ประเทศคู่ค้า",
+    "stats.countries.sub": "Countries",
+    "stats.hospitals": "โรงพยาบาลที่เป็นพันธมิตร",
+    "stats.hospitals.sub": "Hospitals",
+
+    // CTA Section
+    "cta.title": "ต้องการขยายธุรกิจสู่ตลาดโลกหรือไม่?",
+    "cta.description":
+      "ร่วมก้าวไปพร้อมกับ FeedBack จากเอเชียสู่เวทีระดับโลก\nที่ปรึกษาผู้เชี่ยวชาญของเราจะเสนอโซลูชันที่เหมาะสมที่สุดสำหรับคุณ",
+    "cta.consultation": "ขอรับคำปรึกษาฟรี",
+    "cta.proposal": "ดูเอกสารข้อเสนอธุรกิจ",
 
     // Service Page
-    "서비스 소개": "서비스 소개",
+    "서비스 소개": "แนะนำบริการ",
     "EXPERTISE & SOLUTION": "EXPERTISE & SOLUTION",
 
     "피드백은 유통부터 마케팅까지, 글로벌 비즈니스를 위한 전문 서비스를 제공합니다.":
-      "피드백은 유통부터 마케팅까지, 글로벌 비즈니스를 위한 전문 서비스를 제공합니다.",
-    "유통 / 수출입 중개": "유통 / 수출입 중개",
+      "FeedBack ให้บริการแบบครบวงจรตั้งแต่การจัดจำหน่ายไปจนถึงการทำการตลาด เพื่อสนับสนุนธุรกิจระดับโลกของคุณอย่างมืออาชีพ",
+    "유통 / 수출입 중개": "การจัดจำหน่าย / นายหน้าส่งออก–นำเข้า",
     "아시아 전역의 유통망을 통해 효율적인 수출입 및 중개 서비스를 제공합니다. 다양한 제품군에 대한 전문적인 수출입 컨설팅과 물류 솔루션을 함께 제공하여 글로벌 비즈니스를 지원합니다.":
-      "아시아 전역의 유통망을 통해 효율적인 수출입 및 중개 서비스를 제공합니다. 다양한 제품군에 대한 전문적인 수출입 컨설팅과 물류 솔루션을 함께 제공하여 글로벌 비즈니스를 지원합니다.",
-    "자체 브랜드 제조 (OEM)": "자체 브랜드 제조 (OEM)",
+      "เรามีเครือข่ายการจัดจำหน่ายครอบคลุมทั่วเอเชีย ให้บริการส่งออก–นำเข้าและนายหน้าอย่างมีประสิทธิภาพ พร้อมที่ปรึกษาด้านการค้าระหว่างประเทศและโซลูชันด้านโลจิสติกส์สำหรับสินค้าหลากหลายประเภท เพื่อสนับสนุนการเติบโตของธุรกิจระดับสากล",
+    "자체 브랜드 제조 (OEM)": "การผลิตแบรนด์ของตนเอง (OEM)",
     "Hoid, Medifeed, InYourHeart, 상생 등 4개 자체 브랜드의 제조 및 OEM 생산을 통해 브랜드 성장을 지원합니다. 품질 관리부터 제품 개발까지 전 과정을 책임집니다.":
-      "Hoid, Medifeed, InYourHeart, 상생 등 4개 자체 브랜드의 제조 및 OEM 생산을 통해 브랜드 성장을 지원합니다. 품질 관리부터 제품 개발까지 전 과정을 책임집니다.",
-    "글로벌 마케팅/브랜딩": "글로벌 마케팅/브랜딩",
+      "เราสนับสนุนการเติบโตของแบรนด์ผ่านการผลิต OEM และการดูแลแบรนด์ของเราเอง 4 แบรนด์ ได้แก่ Hoid, Medifeed, InYourHeart และ Sangsaeng โดยดูแลครบทุกขั้นตอนตั้งแต่การพัฒนาผลิตภัณฑ์ไปจนถึงการควบคุมคุณภาพ",
+    "글로벌 마케팅/브랜딩": "การตลาดและการสร้างแบรนด์ระดับโลก",
     "홈쇼핑 연계와 디지털 마케팅을 통한 글로벌 브랜딩 솔루션을 제공합니다. 브랜드 아이덴티티 개발부터 글로벌 시장 진출 전략까지 종합적인 마케팅 서비스를 지원합니다.":
-      "홈쇼핑 연계와 디지털 마케팅을 통한 글로벌 브랜딩 솔루션을 제공합니다. 브랜드 아이덴티티 개발부터 글로벌 시장 진출 전략까지 종합적인 마케팅 서비스를 지원합니다.",
-    "의료관광 플랫폼": "의료관광 플랫폼",
+      "เรามอบโซลูชันการสร้างแบรนด์ระดับโลกผ่านการทำโฮมช็อปปิ้งและดิจิทัลมาร์เก็ตติ้ง ตั้งแต่การพัฒนาเอกลักษณ์ของแบรนด์ไปจนถึงกลยุทธ์การรุกตลาดต่างประเทศอย่างครบวงจร",
+    "의료관광 플랫폼": "แพลตฟอร์มท่องเที่ยวเชิงการแพทย์",
     "상생 브랜드를 통한 의료관광 플랫폼 운영으로 한국의 우수한 의료 서비스를 전 세계에 연결합니다. 태국, 베트남을 시작으로 아시아 전역으로 서비스를 확장하고 있습니다.":
-      "상생 브랜드를 통한 의료관광 플랫폼 운영으로 한국의 우수한 의료 서비스를 전 세계에 연결합니다. 태국, 베트남을 시작으로 아시아 전역으로 서비스를 확장하고 있습니다.",
-    "앱 개발": "앱 개발",
+      "เราดำเนินแพลตฟอร์มการท่องเที่ยวเชิงการแพทย์ภายใต้แบรนด์ Sangsaeng เชื่อมต่อบริการแพทย์คุณภาพสูงของเกาหลีสู่ผู้คนทั่วโลก โดยเริ่มจากประเทศไทยและเวียดนาม และขยายสู่ประเทศต่าง ๆ ทั่วเอเชีย",
+    "앱 개발": "การพัฒนาแอปพลิเคชัน",
     "의료/케어 통합 앱 개발로 디지털 헬스케어 솔루션을 제공합니다. 다국어 지원과 실시간 상담 기능을 통해 글로벌 사용자들에게 편리한 서비스를 제공합니다.":
-      "의료/케어 통합 앱 개발로 디지털 헬스케어 솔루션을 제공합니다. 다국어 지원과 실시간 상담 기능을 통해 글로벌 사용자들에게 편리한 서비스를 제공합니다.",
-    "서비스 문의": "서비스 문의",
-    "브랜드 보기": "브랜드 보기",
-    "상담 신청": "상담 신청",
-    "상생 브랜드 보기": "상생 브랜드 보기",
-    "앱 정보 보기": "앱 정보 보기",
-    "프로젝트 문의": "프로젝트 문의",
-    "더 자세한 상담이 필요하신가요?": "더 자세한 상담이 필요하신가요?",
+    "เราพัฒนาแอปพลิเคชันด้านการแพทย์และการดูแลสุขภาพแบบครบวงจร เพื่อมอบโซลูชันดิจิทัลเฮลธ์แคร์ รองรับหลายภาษาและมีระบบปรึกษาแบบเรียลไทม์ อำนวยความสะดวกให้ผู้ใช้ทั่วโลก",
+    "서비스 문의": "สอบถามบริการ",
+    "브랜드 보기": "ดูแบรนด์",
+    "상담 신청": "ขอรับคำปรึกษา",
+    "상생 브랜드 보기": "ดูแบรนด์ Sangsaeng",
+    "앱 정보 보기": "ดูข้อมูลแอป",
+    "프로젝트 문의": "ติดต่อโปรเจกต์",
+    "더 자세한 상담이 필요하신가요?":
+      "ต้องการคำปรึกษาเชิงลึกมากกว่านี้หรือไม่?",
     "전문 컨설턴트가 귀하의 비즈니스에 맞는 최적의 솔루션을 제안해드립니다.":
-      "전문 컨설턴트가 귀하의 비즈니스에 맞는 최적의 솔루션을 제안해드립니다.",
-    "무료 상담 신청": "무료 상담 신청",
+      "ที่ปรึกษามืออาชีพของเราพร้อมเสนอทางออกที่เหมาะสมที่สุดสำหรับธุรกิจของคุณ",
+    "무료 상담 신청": "ขอรับคำปรึกษาฟรี",
 
     // Brand Page
-    "브랜드 소개": "브랜드 소개",
+    "브랜드 소개": "แนะนำแบรนด์",
     "혁신적인 기술과 디자인을 바탕으로 한 FeedBack의 자체 브랜드들을 소개합니다.각 브랜드는 고유한 가치와 비전을 가지고 고객에게 최고의 경험을 제공합니다.":
-      "혁신적인 기술과 디자인을 바탕으로 한 FeedBack의 자체 브랜드들을 소개합니다.각 브랜드는 고유한 가치와 비전을 가지고 고객에게 최고의 경험을 제공합니다.",
+      "เราขอแนะนำแบรนด์ในเครือ FeedBack ที่พัฒนาจากเทคโนโลยีและดีไซน์อันล้ำสมัย แต่ละแบรนด์มีเอกลักษณ์ คุณค่า และวิสัยทัศน์ของตัวเอง เพื่อมอบประสบการณ์ที่ดีที่สุดให้กับลูกค้า",
     "브랜드 파트너십에 관심이 있으신가요?":
-      "브랜드 파트너십에 관심이 있으신가요?",
-    "FeedBack과 함께 혁신적인 브랜드��� 만들어보세요. 기획부터 유통까지 전 과정을 지원하여 성공적인 브랜드 런칭을 도와드립니다.":
-      "FeedBack과 함께 혁신적인 브랜드를 만들어보세요. 기획부터 유통까지 전 과정을 지원하여 성공적인 브랜드 런칭을 도와드립니다.",
-    "파트너십 문의하기": "파트너십 문의하기",
+      "สนใจเป็นพาร์ทเนอร์ด้านแบรนด์หรือไม่?",
+    "FeedBack과 함께 혁신적인 브랜드를 만들어보세요. 기획부터 유통까지 전 과정을 지원하여 성공적인 브랜드 런칭을 도와드립니다.":
+      "มาร่วมสร้างแบรนด์ที่โดดเด่นไปกับ FeedBack เราให้การสนับสนุนครบทุกขั้นตอนตั้งแต่การวางคอนเซ็ปต์ไปจนถึงการจัดจำหน่าย เพื่อช่วยให้การเปิดตัวแบรนด์ของคุณประสบความสำเร็จ",
+    "파트너십 문의하기": "สอบถามเรื่องพาร์ทเนอร์ชิป",
 
     // Brand Detail Pages - Common
-    "브랜드 목록 ��로 돌아가기": "브랜드 목록으로 돌아가기",
+    "브랜드 목록으로 돌아가기": "กลับไปยังรายชื่อแบรนด์",
 
     // Hoid Brand Page
-    "hoid.hero.title": "공기 속까지 바꾸는 디자인",
+    "hoid.hero.title": "ดีไซน์ที่เปลี่ยนอากาศรอบตัวคุณ",
     "hoid.hero.description":
-      "���니멀한 디자인과 첨단 기술이 만나 일상의 ���기질을 혁신하는 스마트 가전 브랜드입니다.",
-    "hoid.hero.cta": "Hoid 홈페이지 가기",
-    "hoid.features.title": "혁신적인 기술력",
+      "แบรนด์เครื่องใช้ไฟฟ้าอัจฉริยะสำหรับบ้าน ที่ผสานดีไซน์มินิมอลเข้ากับเทคโนโลยีล้ำสมัย เพื่อยกระดับคุณภาพอากาศในชีวิตประจำวัน",
+    "hoid.hero.cta": "ไปยังเว็บไซต์ Hoid",
+    "hoid.features.title": "เทคโนโลยีที่ล้ำสมัย",
     "hoid.features.subtitle":
-      "미니멀한 디자인 속에 숨어있는 첨단 기술로 완전히 새로운 공기청정 경험을 제공합니다",
-    "hoid.homeshopping.date": "2025년 8월 런칭",
-    "hoid.homeshopping.heading": "프리미엄 디자인 가전, 이제 집에서 만나보세요",
+      "มอบประสบการณ์ฟอกอากาศรูปแบบใหม่ ผ่านเทคโนโลยีขั้นสูงที่ซ่อนอยู่ในดีไซน์มินิมอล",
+    "hoid.homeshopping.date": "เปิดตัวผ่านโฮมช็อปปิ้งในปี 2025",
+    "hoid.homeshopping.heading": "เครื่องใช้ไฟฟ้าดีไซน์พรีเมียม ในบ้านของคุณ",
     "hoid.homeshopping.description":
-      "프리미엄 디자인 가전 브랜드 호이드가 드디어 홈쇼핑을 통해 여러분을 찾아갑니다. 세련된 디자인과 뛰어난 성능, 그리고 생활을 바꾸는 혁신적인 기술을 이제 TV 속에서 직접 확인하세요.",
-    "hoid.channels.title": "전국 어디서나 만날 수 있는",
+      "แบรนด์เครื่องใช้ไฟฟ้าดีไซน์พรีเมียม Hoid พร้อมพบคุณผ่านช่องทางโฮมช็อปปิ้ง ดีไซน์ที่หรูหรา ฟังก์ชันที่ทรงพลัง และเทคโนโลยีที่เปลี่ยนชีวิตประจำวันของคุณให้สะดวกสบายยิ่งขึ้น",
+    "hoid.channels.title": "พบกับเราได้ทั่วประเทศ",
     "hoid.channels.subtitle":
-      "다양한 유통 채널을 통해 고객 여러분께 더 가깝게 다가갑니다",
-    "hoid.channel1.title": "홈쇼핑",
-    "hoid.channel1.description": "홈쇼핑 채널을 통한 직접 판매",
-    "hoid.channel2.title": "스마트스토어",
-    "hoid.channel2.description": "온라인 공식 스토어 운영",
-    "hoid.channel3.title": "글로벌 셀러",
-    "hoid.channel3.description": "해외 온라인 플랫폼 진출",
-    "hoid.channel4.title": "오프라인 매장",
-    "hoid.channel4.description": "전국 가전 매장 및 백화점",
-    "hoid.cta.title": "깨끗한 공기, 새로운 일상",
+      "เราเข้าใกล้ลูกค้ามากขึ้น ผ่านช่องทางการจัดจำหน่ายที่หลากหลาย",
+    "hoid.channel1.title": "โฮมช็อปปิ้ง",
+    "hoid.channel1.description": "จำหน่ายโดยตรงผ่านช่องโฮมช็อปปิ้ง",
+    "hoid.channel2.title": "สมาร์ตสโตร์",
+    "hoid.channel2.description": "ดำเนินการร้านค้าออนไลน์อย่างเป็นทางการ",
+    "hoid.channel3.title": "ผู้ขายระดับโลก",
+    "hoid.channel3.description": "ขยายสู่แพลตฟอร์มออนไลน์ในต่างประเทศ",
+    "hoid.channel4.title": "หน้าร้านออฟไลน์",
+    "hoid.channel4.description":
+      "มีจำหน่ายในร้านเครื่องใช้ไฟฟ้าและห้างสรรพสินค้าทั่วประเทศ",
+    "hoid.cta.title": "อากาศที่สะอาด เปลี่ยนชีวิตประจำวัน",
     "hoid.cta.description":
-      "HOID와 함께 건강하고 쾌적한 실내 환경을 만들어보세요",
-    "hoid.cta.button": "문의하기",
+      "สร้างสภาพแวดล้อมในบ้านที่สะอาดและสบายยิ่งขึ้นไปกับ HOID",
+    "hoid.cta.button": "ติดต่อเรา",
 
     // Asran Brand Page
-    "asran.hero.tagline": "독일 기술과 합리적 가격을 모두 갖춘 냄비",
+    "asran.hero.tagline": "หม้อที่รวมเทคโนโลยีเยอรมันกับราคาที่คุ้มค่า",
     "asran.hero.description":
-      "SUS410 스테인리스 스틸과 3중 바닥구조로 뛰어난 열전도율과 내구성을 자랑합니다. 인덕션과 가스 겸용으로 어떤 주방환경에서도 완벽하게 사용 가능한 프리미엄 냄비입니다.",
-    "asran.hero.cta": "ASRAN 홈페이지 가기",
-    "asran.features.title": "ASRAN만의 특별한 기술",
+      "ผลิตจากสเตนเลส SUS410 และโครงสร้างก้นหม้อ 3 ชั้น ให้การกระจายความร้อนและความทนทานยอดเยี่ยม ใช้งานได้ทั้งเตาแก๊สและเตาแม่เหล็กไฟฟ้า เหมาะกับทุกครัว",
+    "asran.hero.cta": "ไปยังเว็บไซต์ ASRAN",
+    "asran.features.title": "เทคโนโลยีพิเศษเฉพาะของ ASRAN",
     "asran.features.subtitle":
-      "독일의 정밀한 기술력과 한국의 실용성이 만나 탄생한 프리미엄 주방용품",
+      "เทคโนโลยีแม่นยำแบบเยอรมัน ผสานกับความใช้งานจริงในครัวแบบเกาหลี กลายเป็นเครื่องครัวพรีเมียม",
 
     // Medifeed Brand Page
-    "medifeed.hero.title": "매일을 지키는 작은 습관",
+    "medifeed.hero.title": "สุขภาพที่ดีจากนิสัยเล็ก ๆ ในทุกวัน",
     "medifeed.hero.description":
-      "잇몸과 눈 건강을 중심으로 한 기능성 영양제 브랜드로, 실용성과 안전성을 바탕으로 누구나 쉽게 선택할 수 있는 건강 솔루션을 제공합니다.",
-    "medifeed.features.title": "전문화된 건강 솔루션",
+      "แบรนด์อาหารเสริมเพื่อสุขภาพช่องปากและดวงตา เน้นทั้งความปลอดภัยและความคุ้มค่า เพื่อให้ทุกคนเลือกดูแลสุขภาพได้ง่ายในชีวิตประจำวัน",
+    "medifeed.features.title": "โซลูชันสุขภาพเฉพาะทาง",
     "medifeed.features.subtitle":
-      "과학적 연구를 바탕으로 개발된 특화 영양제로 일상의 건강을 책임집니다",
-    "medifeed.category1.title": "잇몸 건강 전문",
+      "ผลิตภัณฑ์เสริมอาหารสูตรเฉพาะที่พัฒนาจากงานวิจัยทางวิทยาศาสตร์ เพื่อดูแลสุขภาพในแต่ละด้าน",
+    "medifeed.category1.title": "ผู้เชี่ยวชาญด้านเหงือกและช่องปาก",
     "medifeed.category1.description":
-      "치주질환 예방과 잇몸 건강 유지를 위한 전문 영양제",
-    "medifeed.category1.ingredient1": "코엔자임 Q10",
-    "medifeed.category1.ingredient2": "비타민 C 복합체",
-    "medifeed.category1.ingredient3": "아연 & 셀레늄",
-    "medifeed.category1.ingredient4": "GMP 인증",
-    "medifeed.category2.title": "눈 건강 전문",
+      "ผลิตภัณฑ์เสริมอาหารเพื่อช่วยป้องกันโรคเหงือกและดูแลสุขภาพช่องปากโดยเฉพาะ",
+    "medifeed.category1.ingredient1": "โคเอนไซม์ Q10",
+    "medifeed.category1.ingredient2": "วิตามินซีรวม",
+    "medifeed.category1.ingredient3": "สังกะสี & ซีลีเนียม",
+    "medifeed.category1.ingredient4": "มาตรฐาน GMP",
+    "medifeed.category2.title": "ผู้เชี่ยวชาญด้านสุขภาพดวงตา",
     "medifeed.category2.description":
-      "디지털 시대 눈의 피로와 시력 보호를 위한 기능성 영양제",
-    "medifeed.category2.ingredient1": "루테인 & 지아잔틴",
-    "medifeed.category2.ingredient2": "빌베리 추출물",
-    "medifeed.category2.ingredient3": "오메가-3 지방산",
-    "medifeed.category2.ingredient4": "블루라이트 차단",
-    "medifeed.philosophy.title": "건강한 일상을 만드는",
+      "อาหารเสริมดูแลดวงตาสำหรับคนยุคดิจิทัล ช่วยลดอาการล้าจากแสงหน้าจอและดูแลสายตา",
+    "medifeed.category2.ingredient1": "ลูทีน & ซีแซนทีน",
+    "medifeed.category2.ingredient2": "สารสกัดบิลเบอร์รี",
+    "medifeed.category2.ingredient3": "กรดไขมันโอเมก้า-3",
+    "medifeed.category2.ingredient4": "ช่วยลดผลกระทบจากแสงสีฟ้า",
+    "medifeed.philosophy.title": "เพื่อทุกวันสุขภาพดี",
     "medifeed.philosophy.subtitle":
-      "과학적 근거와 품질에 대한 확고한 신념으로 믿을 수 있는 건강 솔루션을 제공합니다",
-    "medifeed.value1.title": "안전성 우선",
+      "เรามุ่งมั่นพัฒนาโซลูชันสุขภาพที่เชื่อถือได้ จากหลักฐานทางวิทยาศาสตร์และมาตรฐานคุณภาพที่เข้มงวด",
+    "medifeed.value1.title": "ความปลอดภัยมาก่อน",
     "medifeed.value1.description":
-      "엄격한 품질 관리와 GMP 인증을 통해 안전하고 신뢰할 수 있는 제품만을 제공합니다.",
-    "medifeed.value2.title": "실용적 접근",
+      "ผ่านการควบคุมคุณภาพอย่างเข้มงวดและได้รับการรับรอง GMP เพื่อให้มั่นใจว่าปลอดภัยและเชื่อถือได้",
+    "medifeed.value2.title": "เหมาะกับการใช้จริง",
     "medifeed.value2.description":
-      "바쁜 현대인의 라이프스타일에 맞춰 간편하게 섭취할 수 있는 형태로 개발합니다.",
-    "medifeed.value3.title": "합리적 가격",
+      "ออกแบบรูปแบบการรับประทานให้สะดวก เหมาะกับไลฟ์สไตล์ที่เร่งรีบของคนยุคใหม่",
+    "medifeed.value3.title": "ราคาที่เข้าถึงได้",
     "medifeed.value3.description":
-      "누구나 부담 없이 구매할 수 있는 합리적인 가격으로 건강한 습관을 만들어갑니다.",
-    "medifeed.cta.title": "건강한 하루,",
-    "medifeed.cta.subtitle": "작은 습관에서 시작",
+      "ตั้งราคาอย่างเหมาะสม เพื่อให้ทุกคนสามารถสร้างนิสัยที่ดีต่อสุขภาพได้อย่างต่อเนื่อง",
+    "medifeed.cta.title": "วันหนึ่งที่สุขภาพดีขึ้น",
+    "medifeed.cta.subtitle": "เริ่มจากนิสัยเล็ก ๆ",
     "medifeed.cta.description":
-      "MEDIFEED와 함께 일상 속 작은 변화로 더 나은 건강을 만들어보세요",
-    "medifeed.cta.button": "상담 신청하기",
+      "เริ่มเปลี่ยนแปลงสุขภาพของคุณทีละน้อยไปกับ MEDIFEED",
+    "medifeed.cta.button": "ขอรับคำปรึกษา",
 
     // LaCeras Brand Page
-    "laceras.hero.title": "전통과 모던이 만나는",
-    "laceras.hero.subtitle": "프렌치 럭셔리",
+    "laceras.hero.title": "เมื่อคลาสสิกและโมเดิร์นมาพบกัน",
+    "laceras.hero.subtitle": "แฟชั่นหรูสไตล์ฝรั่งเศส",
     "laceras.hero.description":
-      "프랑스의 장인정신과 현대적 세련미를 결합한 럭셔리 캐리어 브랜드입니다. 비즈니스부터 럭셔리 여행까지 완벽한 트래블 솔루션을 제안합니다.",
-    "laceras.hero.cta": "La Ceras 홈페이지 가기",
-    "laceras.features.title": "프렌치 크래프트맨십",
+      "แบรนด์กระเป๋าเดินทางลักชัวรีที่ผสมผสานงานฝีมือแบบฝรั่งเศสกับดีไซน์โมเดิร์น มอบโซลูชันการเดินทางที่สมบูรณ์แบบทั้งเพื่อธุรกิจและท่องเที่ยว",
+    "laceras.hero.cta": "ไปยังเว็บไซต์ La Ceras",
+    "laceras.features.title": "งานฝีมือแบบฝรั่งเศส",
     "laceras.features.subtitle":
-      "정교한 마감과 균형 잡힌 디자인으로 완성된 프리미엄 럭셔리 트래블 경험",
-    "laceras.feature1.title": "하이브리드 구조",
+      "ประสบการณ์การเดินทางระดับพรีเมียม จากดีไซน์ที่สมดุลและงานเก็บรายละเอียดอันประณีต",
+    "laceras.feature1.title": "โครงสร้างไฮบริด",
     "laceras.feature1.description":
-      "PP의 유연성과 PC의 강성을 결합하여 가볍고 튼튼한 바디 구현",
+      "ผสานความยืดหยุ่นของ PP กับความแข็งแรงของ PC ให้ตัวกระเป๋าที่ทั้งเบาและทนทาน",
     "laceras.feature2.title": "Sinking Ordinary Lock",
     "laceras.feature2.description":
-      "기본 락 구조를 상판과 균형감 있게 낮춰 스크래치 포인트 최소화",
-    "laceras.feature3.title": "무소음 휠 & 안정적 베어링 시스템",
+      "ออกแบบจุดล็อกให้ต่ำลงอย่างสมดุลกับฝาบน เพื่อลดโอกาสเกิดรอยขีดข่วน",
+    "laceras.feature3.title": "ล้อเงียบ & ระบบแบริ่งนิ่ง",
     "laceras.feature3.description":
-      "어떤 방향으로든 부드럽고 조용한 이동이 가능한 프리미엄 휠 시스템",
-    "laceras.heritage.title": "프랑스 장인 정신의",
-    "laceras.heritage.subtitle": "70년 전통",
-    "laceras.heritage.heading": "세대를 넘나드는 크래프트맨십",
+      "ระบบล้อคุณภาพสูง หมุนได้ลื่นไหลทุกทิศทางและเงียบแม้ขณะเคลื่อนที่",
+    "laceras.heritage.title": "จิตวิญญาณช่างฝรั่งเศส",
+    "laceras.heritage.subtitle": "สืบสานมากว่า 70 ปี",
+    "laceras.heritage.heading": "งานฝีมือที่ส่งต่อข้ามรุ่น",
     "laceras.heritage.description":
-      "1950년부터 시작된 La Ceras의 여정은 프랑스 전통 장인정신과 현대적 혁신이 만나는 지점에서 계속되고 있습니다. 세심한 디테일과 완벽한 마감으로 럭셔리 트래블의 새로운 기준을 제시합니다.",
+      "ตั้งแต่ปี 1950 เป็นต้นมา La Ceras เดินหน้าต่อเนื่องบนเส้นทางที่ผสานงานฝีมือแบบดั้งเดิมของฝรั่งเศสเข้ากับนวัตกรรมสมัยใหม่ ทุกดีเทลและงานเก็บขอบ ถูกออกแบบเพื่อยกระดับมาตรฐานของการเดินทางแบบลักชัวรี",
+    "laceras.heritage.point1": "มีครบ 14, 20, 24, 28 นิ้ว ในเซ็ตเดียว",
+    "laceras.heritage.point2": "แบริ่ง 210D ลดแรงกระแทกและอาการล้าข้อมือ",
+    "laceras.heritage.point3": "โครงสร้างไฮบริด PP & PC",
 
-    "laceras.heritage.point1": "14인치, 20인치, 24인치, 28인치 올인원 구성",
-    "laceras.heritage.point2": "210D 베어링으로 손목 피로 최소화",
-    "laceras.heritage.point3": "PP & PC 하이브리드 구조",
-
-    "laceras.travel.title": "비즈니스부터 럭셔리까지",
-    "laceras.travel.subtitle": "완벽한 트래블 솔루션",
-    "laceras.travel.heading": "모든 여행의 순간을 특별하게",
+    "laceras.travel.title": "ตั้งแต่ทริปธุรกิจถึงทริปหรู",
+    "laceras.travel.subtitle": "โซลูชันการเดินทางที่สมบูรณ์แบบ",
+    "laceras.travel.heading": "ทำให้ทุกการเดินทางพิเศษยิ่งขึ้น",
     "laceras.travel.description":
-      "La Ceras는 단순한 캐리어가 아닌 여행 파트너입니다. 비즈니스 출장부터 로맨틱한 허니문, 가족 여행까지 모든 순간을 더욱 세련되고 편안하게 만들어드립니다.",
-    "laceras.travel.size": "사이즈 옵션",
-    "laceras.travel.warranty": "년 보증",
-    "laceras.travel.stores": "글로벌 매장",
-    "laceras.travel.rating": "고객 만족도",
-    "laceras.collection.title": "모든 여행 스타일에 맞는",
+      "La Ceras ไม่ใช่แค่กระเป๋าเดินทาง แต่เป็นคู่หูสำหรับทุกทริป ไม่ว่าจะเป็นทริปทำงาน ฮันนีมูนสุดพิเศษ หรือทริปครอบครัว เราช่วยให้ทุกการเดินทางสะดวกสบายและมีสไตล์มากกว่าเดิม",
+    "laceras.travel.size": "ขนาดสินค้า",
+    "laceras.travel.warranty": "ปี การรับประกัน",
+    "laceras.travel.stores": "สาขาทั่วโลก",
+    "laceras.travel.rating": "คะแนนความพึงพอใจ",
+    "laceras.collection.title": "ตอบโจทย์ทุกสไตล์การเดินทาง",
     "laceras.collection.subtitle":
-      "다양한 컬렉션으로 ���행자의 취향과 필요에 완벽하게 부응합니다",
-    "laceras.collection1.title": "캐리온",
-    "laceras.collection1.description": "기내 반입 가능한 컴팩트 사이즈",
-    "laceras.collection2.title": "하드셸 캐리어",
-    "laceras.collection2.description": "중거리 여행을 위한 미디움 사이즈",
-    "laceras.collection3.title": "트렁크",
-    "laceras.collection3.description": "장기간 여행을 위한 라지 사이즈",
-    "laceras.cta.title": "La Ceras와 함께하는",
-    "laceras.cta.subtitle": "럭셔리 트래블",
+      "คอลเลกชันหลากหลาย ที่ออกแบบมาให้ตรงกับรสนิยมและความต้องการของนักเดินทาง",
+    "laceras.collection1.title": "Carry-on",
+    "laceras.collection1.description": "ขนาดกะทัดรัดสำหรับถือขึ้นเครื่อง",
+    "laceras.collection2.title": "กระเป๋าแข็ง",
+    "laceras.collection2.description": "ขนาดกลางสำหรับทริประยะสั้นถึงกลาง",
+    "laceras.collection3.title": "Trunk",
+    "laceras.collection3.description": "ไซซ์ใหญ่สำหรับการเดินทางระยะยาว",
+    "laceras.cta.title": "การเดินทางลักชัวรีไปกับ",
+    "laceras.cta.subtitle": "La Ceras",
     "laceras.cta.description":
-      "프랑스 장인정신으로 완성된 프리미엄 캐리어로 당신의 여행을 더욱 특별하게 만들어보세요",
+      "ยกระดับประสบการณ์การเดินทางของคุณด้วยกระเป๋าเดินทางพรีเมียมจากงานฝีมือฝรั่งเศส",
 
     // Carvella Brand Page
-    "carvella.hero.title": "이탈리아 장인의 정밀함",
-    "carvella.hero.subtitle": "당신의 주방으로",
+    "carvella.hero.title": "ความประณีตแบบช่างอิตาลี",
+    "carvella.hero.subtitle": "ส่งตรงถึงครัวของคุณ",
     "carvella.hero.description":
-      "이탈리아 전통 장인정신으로 완성한 프리미엄 쿠킹웨어 브랜드입니다. 고급 스테인리스와 다층 구조로 뛰어난 열전도와 내구성을 자랑합니다.",
-    "carvella.hero.cta": "Carvella 홈페이지 가기",
-    "carvella.features.title": "이탈리아 장인정신",
+      "แบรนด์เครื่องครัวระดับพรีเมียมที่ถ่ายทอดงานฝีมือดั้งเดิมของอิตาลี ใช้สเตนเลสคุณภาพสูงและโครงสร้างก้นหลายชั้น เพื่อการกระจายความร้อนและความทนทานที่ยอดเยี่ยม",
+    "carvella.hero.cta": "ไปยังเว็บไซต์ Carvella",
+    "carvella.features.title": "จิตวิญญาณช่างอิตาลี",
     "carvella.features.subtitle":
-      "정밀한 기술과 전통 크래프트맨십이 만나 완성된 프리미엄 쿠킹웨어",
-    "carvella.feature1.title": "프리미엄 스테인리스",
+      "เทคโนโลยีการผลิตที่ประณีต ผสานกับงานคราฟต์ดั้งเดิม สู่เครื่องครัวระดับพรีเมียม",
+    "carvella.feature1.title": "สเตนเลสพรีเมียม",
     "carvella.feature1.description":
-      "최고급 스테인리스 스틸 소재로 내구성과 위생성을 동시에 보장",
-    "carvella.feature2.title": "다층 바닥구조",
+      "ผลิตจากสเตนเลสสตีลเกรดสูง มั่นใจได้ทั้งด้านความทนทานและความปลอดภัยต่อสุขภาพ",
+    "carvella.feature2.title": "ก้นหม้อหลายชั้น",
     "carvella.feature2.description":
-      "균등한 열전도와 열보존을 위한 특수 다층 바닥 설계 시스템",
-    "carvella.feature3.title": "멀티 호환 열원",
+      "โครงสร้างก้นหลายชั้นออกแบบมาเพื่อการกระจายและเก็บความร้อนอย่างสม่ำเสมอ",
+    "carvella.feature3.title": "ใช้ได้กับทุกแหล่งความร้อน",
     "carvella.feature3.description":
-      "인덕션부터 가스레인지까지 모든 열원에서 완벽한 성능 발휘",
-    "carvella.heritage.title": "이탈리아 전통의",
-    "carvella.heritage.subtitle": "아르티지아나토",
-    "carvella.heritage.heading": "정밀함과 열정이 만나는 곳",
+      "รองรับทั้งเตาแม่เหล็กไฟฟ้า เตาแก๊ส และแหล่งความร้อนอื่น ๆ ได้อย่างมีประสิทธิภาพ",
+    "carvella.heritage.title": "รากฐานจากประเพณีอิตาลี",
+    "carvella.heritage.subtitle": "Artigianato",
+    "carvella.heritage.heading": "เมื่อความแม่นยำและแพสชันมาบรรจบกัน",
     "carvella.heritage.description":
-      "이탈리아 북부 롬바르디아 지역의 전통 금속공예 기술을 바탕으로 탄생한 Carvella는 장인들의 정밀함과 요리에 대한 열정을 그대로 담아냅니다. 매 제품마다 이탈리아 장인의 손길이 닿아 완성되는 진정한 아르티지아나토입니다.",
-    "carvella.heritage.point1": "이탈리아 전통 금속공예 기법",
-    "carvella.heritage.point2": "장인 수작업 마감 처리",
-    "carvella.heritage.point3": "유럽 인증 프리미엄 소재",
-    "carvella.cooking.title": "프로 셰프부터 요리 애호가까지",
-    "carvella.cooking.subtitle": "모든 주방의 파트너",
-    "carvella.cooking.heading": "완벽한 요리를 위한 완벽한 도구",
+      "Carvella ถือกำเนิดจากเทคนิคงานโลหะดั้งเดิมของแคว้นลอมบาร์เดียทางตอนเหนือของอิตาลี ถ่ายทอดความประณีตของช่างและแพสชันด้านการทำอาหารลงในทุกชิ้นงาน เครื่องครัวแต่ละชิ้นจึงเปี่ยมไปด้วยจิตวิญญาณแห่งงานฝีมือแท้จริง",
+    "carvella.heritage.point1": "ใช้เทคนิคโลหะดั้งเดิมของอิตาลี",
+    "carvella.heritage.point2": "เก็บงานและขัดเงาด้วยมือโดยช่างผู้ชำนาญ",
+    "carvella.heritage.point3": "ใช้วัสดุพรีเมียมที่ผ่านการรับรองในยุโรป",
+    "carvella.cooking.title": "จากเชฟมืออาชีพถึงคนรักการทำอาหาร",
+    "carvella.cooking.subtitle": "คู่หูสำหรับทุกครัว",
+    "carvella.cooking.heading": "เครื่องมือที่ใช่สำหรับอาหารที่สมบูรณ์แบบ",
     "carvella.cooking.description":
-      "Carvella는 단순한 조리도구가 아닌 요리의 예술을 완성하는 파트너입니다. 프로 셰프의 엄격한 기준을 충족하면서도 가정에서 쉽게 사용할 수 있도록 설계되어 모든 요리 애호가들의 꿈을 현실로 만들어드립니다.",
-    "carvella.cooking.lineup": "제품 라인업",
-    "carvella.cooking.warranty": "년 품질보증",
-    "carvella.cooking.recommendation": "셰프 추천율",
-    "carvella.cooking.satisfaction": "고객 만족도",
-    "carvella.collection.title": "모든 요리를 위한",
+      "Carvella ไม่ใช่แค่เครื่องครัว แต่เป็นพาร์ทเนอร์ในการสร้างสรรค์ศิลปะแห่งการทำอาหาร ผ่านดีไซน์ที่ตอบโจทย์การใช้งานจริงในครัวมืออาชีพ แต่ก็ใช้ง่ายสำหรับทุกบ้าน",
+    "carvella.cooking.lineup": "ไลน์อัพสินค้า",
+    "carvella.cooking.warranty": "ปี การรับประกันคุณภาพ",
+    "carvella.cooking.recommendation": "อัตราการแนะนำจากเชฟ",
+    "carvella.cooking.satisfaction": "ความพึงพอใจของลูกค้า",
+    "carvella.collection.title": "พร้อมสำหรับทุกเมนู",
     "carvella.collection.subtitle":
-      "다양한 제품 라인으로 모든 요리 스타일과 필요에 완벽하게 부응합니다",
-    "carvella.collection1.title": "프리미엄 냄비",
-    "carvella.collection1.description": "다양한 사이즈와 용도별 냄비 컬렉션",
-    "carvella.collection2.title": "프라이팬",
-    "carvella.collection2.description": "완벽한 열전도를 위한 프라이팬 시리즈",
-    "carvella.collection3.title": "압력뚜껑",
-    "carvella.collection3.description": "다목적 멀티 압력뚜껑 시스템",
-    "carvella.collection4.title": "세트 상품",
-    "carvella.collection4.description": "완벽한 주방을 위한 종합 세트",
-    "carvella.testimonial.title": "전문가들의 선택",
+      "ไลน์สินค้าอเนกประสงค์ รองรับทุกสไตล์และความต้องการในการทำอาหาร",
+    "carvella.collection1.title": "หม้อพรีเมียม",
+    "carvella.collection1.description":
+      "เซ็ตหม้อหลากขนาดสำหรับการใช้งานหลายรูปแบบ",
+    "carvella.collection2.title": "กระทะทอด",
+    "carvella.collection2.description":
+      "ซีรีส์กระทะทอดที่ออกแบบมาเพื่อการนำความร้อนอย่างสมบูรณ์แบบ",
+    "carvella.collection3.title": "ฝาหม้อแรงดัน",
+    "carvella.collection3.description":
+      "ระบบฝาแรงดันอเนกประสงค์สำหรับการปรุงแบบหลากหลาย",
+    "carvella.collection4.title": "ชุดเซ็ตครบครัว",
+    "carvella.collection4.description":
+      "เซ็ตเครื่องครัวครบชุดสำหรับครัวที่สมบูรณ์แบบ",
+    "carvella.testimonial.title": "เหตุผลที่มืออาชีพเลือกใช้",
     "carvella.testimonial1":
-      "Carvella의 냄비는 열전도가 완벽해서 요리가 훨씬 쉬워졌습니다. 프로 주방에서도 손색없는 품질입니다.",
-    "carvella.testimonial1.author": "이탈리안 레스토랑 셰프",
+      "หม้อของ Carvella ให้การนำความร้อนที่ยอดเยี่ยม ทำให้การทำอาหารง่ายขึ้นมาก คุณภาพระดับครัวมืออาชีพอย่างแท้จริง",
+    "carvella.testimonial1.author": "เชฟร้านอาหารอิตาเลียน",
     "carvella.testimonial2":
-      "15년 넘게 사용해도 변함없는 품질과 성능. 진정한 장인정신을 느낄 수 있는 제품입니다.",
-    "carvella.testimonial2.author": "요리 강사",
+      "ใช้มากว่า 15 ปีก็ยังให้คุณภาพที่คงที่ รู้สึกได้ถึงงานฝีมือที่ใส่ใจในทุกขั้นตอน",
+    "carvella.testimonial2.author": "ครูสอนทำอาหาร",
     "carvella.testimonial3":
-      "인덕션에서 가스레인지까지 어떤 열원에서도 완벽한 성능을 보여줍니다. 가정용으로도 최고의 선택이에요.",
-    "carvella.testimonial3.author": "요리 블로거",
-    "carvella.cta.title": "Carvella와 함께하는",
-    "carvella.cta.subtitle": "프리미엄 쿠킹",
+      "ไม่ว่าจะใช้กับเตาแก๊สหรือเตาแม่เหล็กไฟฟ้าก็ทำงานได้ดีมาก เป็นตัวเลือกที่ยอดเยี่ยมสำหรับการใช้งานในบ้าน",
+    "carvella.testimonial3.author": "บล็อกเกอร์สายอาหาร",
+    "carvella.cta.title": "สัมผัสประสบการณ์",
+    "carvella.cta.subtitle": "การทำอาหารแบบพรีเมียมไปกับ Carvella",
     "carvella.cta.description":
-      "이탈리아 장인정신으로 완성된 프리미엄 쿠킹웨어로 당신의 요리를 더욱 특별하게 만들어보세요",
+      "ยกระดับทุกเมนูของคุณด้วยเครื่องครัวพรีเมียมที่สะท้อนงานฝีมือแบบอิตาลีอย่างแท้จริง",
     "carvella.good1.badge": "GOOD 01",
-    "carvella.good1.title": "스테인리스 도마",
+    "carvella.good1.title": "เขียงสเตนเลส",
     "carvella.good1.description":
-      "304 스테인리스 스틸로 제작되어 위생적이고 내구성이 뛰어난 도마입니다. 음식물 착색과 냄새가 남지 않아 언제나 깔끔하게 사용할 수 있습니다.",
-    "carvella.good1.detail1": "위생적인 304 스테인리스 소재",
-    "carvella.good1.detail2": "긁힘·변형에 강한 높은 내구성",
-    "carvella.good1.detail3": "물세척만으로 간편한 관리",
-    "carvella.good1.detail4": "논슬립 구조로 안정감 있는 사용",
+      "เขียงสเตนเลส 304 ที่ทั้ง衛อนามัยและทนทาน ไม่อมสี ไม่อมกลิ่น ใช้งานได้สะอาดอยู่เสมอ",
+    "carvella.good1.detail1": "ผลิตจากสเตนเลส 304 ที่ปลอดภัยและถูกสุขลักษณะ",
+    "carvella.good1.detail2": "ทนต่อรอยขีดข่วนและการบิดงอ",
+    "carvella.good1.detail3": "ล้างทำความสะอาดง่าย เพียงล้างน้ำก็เพียงพอ",
+    "carvella.good1.detail4": "โครงสร้างกันลื่น ใช้งานได้อย่างมั่นคง",
 
     "carvella.good2.badge": "GOOD 02",
-    "carvella.good2.title": "6종 칼 세트",
+    "carvella.good2.title": "เซ็ตมีด 6 ชิ้น",
     "carvella.good2.description":
-      "가위, 중식도, 감자칼 등 6종 구성으로 다양한 재료를 손쉽게 조리할 수 있습니다.",
-    "carvella.good2.detail1": "6종 올인원",
-    "carvella.good2.detail2": "인체공학적 손잡이로 편안한 그립",
-    "carvella.good2.detail3": "뛰어난 절삭력",
-    "carvella.good2.detail4": "가정용·업소용 모두 적합",
+      "ครบชุดทั้งกรรไกร มีดสำหรับผัก มีดสำหรับเนื้อ ที่ปอก และอื่น ๆ รวม 6 ชิ้น รองรับการเตรียมวัตถุดิบทุกประเภท",
+    "carvella.good2.detail1": "ชุดเดียวจบ 6 ฟังก์ชัน",
+    "carvella.good2.detail2": "ด้ามจับตามหลักสรีรศาสตร์ จับถนัดมือ",
+    "carvella.good2.detail3": "คมทน ตัดได้แม่นยำ",
+    "carvella.good2.detail4": "เหมาะทั้งสำหรับบ้านและร้านอาหาร",
 
     // MOZ Brand Page
-    "moz.hero.tagline": "따뜻하고 안전한 수면 환경",
+    "moz.hero.tagline": "คืนสู่การพักผ่อนที่อบอุ่นและปลอดภัย",
     "moz.hero.description":
-      "첨단 카본 히팅 기술과 안전 인증 설계로 건강한 숙면을 제공합니다. 몸과 마음이 회복되는 따뜻한 휴식, 그것이 모즈의 시작입니다.",
-    "moz.hero.cta": "제품 문의하기",
-    "moz.features.title": "모즈의 핵심 기술",
+      "เทคโนโลยีทำความร้อนด้วยคาร์บอนขั้นสูง ผสานกับดีไซน์ที่ได้มาตรฐานความปลอดภัย ช่วยให้คุณนอนหลับสบายและมั่นใจได้ในทุกคืน",
+    "moz.hero.cta": "สอบถามสินค้า",
+    "moz.features.title": "เทคโนโลยีหลักของ MOZ",
     "moz.features.subtitle":
-      "첨단 카본 히팅과 안전 인증으로 완성한 프리미엄 수면 솔루션",
-    "moz.feature1.title": "카본 히팅 기술",
+      "โซลูชันการนอนระดับพรีเมียมจากเทคโนโลยีทำความร้อนด้วยคาร์บอนและมาตรฐานความปลอดภัยที่เชื่อถือได้",
+    "moz.feature1.title": "เทคโนโลยีคาร์บอนฮีตติ้ง",
     "moz.feature1.description":
-      "전자파 걱정 없는 안전한 카본 열선으로 균일한 온기를 제공합니다",
-    "moz.feature1.detail1": "전자파 차단 카본 소재",
-    "moz.feature1.detail2": "균일한 온도 분포",
-    "moz.feature1.detail3": "빠른 온도 상승",
-    "moz.feature1.detail4": "에너지 효율 설계",
-    "moz.feature2.title": "안전 인증 설계",
+      "ใช้เส้นใยคาร์บอนที่ปลอดภัยจากคลื่นแม่เหล็กไฟฟ้า ให้ความร้อนสม่ำเสมอและอ่อนโยนต่อร่างกาย",
+    "moz.feature1.detail1": "ใช้คาร์บอนลดความเสี่ยงจากคลื่นไฟฟ้า",
+    "moz.feature1.detail2": "กระจายอุณหภูมิได้สม่ำเสมอทั้งแผ่น",
+    "moz.feature1.detail3": "อุ่นขึ้นอย่างรวดเร็ว",
+    "moz.feature1.detail4": "ออกแบบเพื่อประหยัดพลังงาน",
+    "moz.feature2.title": "ดีไซน์ที่ผ่านมาตรฐานความปลอดภัย",
     "moz.feature2.description":
-      "엄격한 안전 인증과 과열 방지 시스템으로 안심하고 사용할 수 있습니다",
-    "moz.feature2.detail1": "KC 안전 인증",
-    "moz.feature2.detail2": "과열 방지 시스템",
-    "moz.feature2.detail3": "이중 안전 장치",
-    "moz.feature2.detail4": "화재 예방 설계",
-    "moz.feature3.title": "건강한 숙면",
+      "ผ่านการรับรองความปลอดภัยและติดตั้งระบบป้องกันความร้อนสูงเกิน ช่วยให้ใช้งานได้อย่างอุ่นใจ",
+    "moz.feature2.detail1": "ผ่านมาตรฐานความปลอดภัย KC",
+    "moz.feature2.detail2": "ระบบตัดการทำงานเมื่อร้อนเกิน",
+    "moz.feature2.detail3": "โครงสร้างป้องกันสองชั้น",
+    "moz.feature2.detail4": "ออกแบบเพื่อลดความเสี่ยงจากเพลิงไหม้",
+    "moz.feature3.title": "การนอนหลับที่มีคุณภาพ",
     "moz.feature3.description":
-      "몸과 마음이 회복되는 따뜻한 온기로 깊고 편안한 잠을 선사합니다",
-    "moz.feature3.detail1": "최적 수면 온도 유지",
-    "moz.feature3.detail2": "혈액순환 개선",
-    "moz.feature3.detail3": "근육 이완 효과",
-    "moz.feature3.detail4": "쾌적한 수면 환경",
-    "moz.product1.title": "모즈 카본 탄소매트 싱글",
+      "ความอบอุ่นที่เหมาะสมช่วยให้กล้ามเนื้อผ่อนคลาย เลือดไหลเวียนดี และหลับลึกสบายยิ่งขึ้น",
+    "moz.feature3.detail1": "รักษาอุณหภูมิที่เหมาะสำหรับการนอน",
+    "moz.feature3.detail2": "ช่วยส่งเสริมการไหลเวียนโลหิต",
+    "moz.feature3.detail3": "ช่วยให้กล้ามเนื้อผ่อนคลาย",
+    "moz.feature3.detail4": "สร้างสภาพแวดล้อมการนอนที่สบาย",
+    "moz.product1.title": "MOZ คาร์บอนฮีตติ้งแมตต์ ขนาดเดี่ยว",
     "moz.product1.description":
-      "혼자 써도 포근한 온기, 하루 피로를 녹입���다. 안전한 카본 열선으로 전자파 걱정 없어요.",
-    "moz.product1.size": "사이즈",
-    "moz.product2.title": "모즈 카본 탄소매트 더블",
+      "ความอบอุ่นพอดีตัวสำหรับการนอนคนเดียว ช่วยคลายความเมื่อยล้าตลอดทั้งวัน ด้วยเส้นใยคาร์บอนที่ปลอดภัยจากคลื่นแม่เหล็กไฟฟ้า",
+    "moz.product1.size": "ขนาด",
+    "moz.product2.title": "MOZ คาร์บอนฮีตติ้งแมตต์ ขนาดคู่",
     "moz.product2.description":
-      "두 사람이 함께하는 따뜻한 온기. 균일한 열로 깊고 편안한 잠을 선사합니다.",
-    "moz.product2.size": "사이즈",
-    "moz.reviews.title": "고객 후기",
+      "แบ่งปันความอบอุ่นให้สองคน นอนหลับสบายด้วยความร้อนที่กระจายทั่วถึงทั้งเตียง",
+    "moz.product2.size": "ขนาด",
+    "moz.reviews.title": "เสียงจากผู้ใช้จริง",
     "moz.review1":
-      "전자파 걱정 없이 따뜻하게 잘 수 있어서 너무 좋아요. 겨울철 필수템입니다!",
-    "moz.review1.author": "김○○",
+      "นอนอุ่นสบายโดยไม่ต้องกังวลเรื่องคลื่นไฟฟ้า เป็นไอเทมน่ามีติดบ้านในหน้าหนาวเลยค่ะ!",
+    "moz.review1.author": "คุณ Kim",
     "moz.review2":
-      "온도가 균cr�해서 발끝까지 포근해요. 아침에 일어나면 몸이 한결 가벼워진 느낌입니다.",
-    "moz.review2.author": "이○○",
+      "ความร้อนกระจายทั่วแผ่น รู้สึกอบอุ่นตั้งแต่ปลายเท้าจนถึงลำตัว ตื่นเช้ามารู้สึกว่าร่างกายเบาสบายขึ้นมาก",
+    "moz.review2.author": "คุณ Lee",
     "moz.review3":
-      "안전 인증 받은 제품이라 안심하고 사용할 수 있어요. 품질도 만족스럽습니다.",
-    "moz.review3.author": "박○○",
-    "moz.benefits.title": "모즈와 함께하는 따뜻한 밤",
-    "moz.benefit1.title": "깊은 숙면",
+      "เป็นสินค้าที่ผ่านมาตรฐานด้านความปลอดภัย ใช้แล้วรู้สึกมั่นใจ คุณภาพโดยรวมถือว่าดีมาก",
+    "moz.review3.author": "คุณ Park",
+    "moz.benefits.title": "คืนที่อบอุ่นไปกับ MOZ",
+    "moz.benefit1.title": "หลับสนิทมากขึ้น",
     "moz.benefit1.description":
-      "최적의 온도 유지로 편안하고 깊은 잠을 경험하세요",
-    "moz.benefit2.title": "빠른 온열",
+      "รักษาอุณหภูมิที่เหมาะสม ช่วยให้หลับลึกและไม่ตื่นกลางดึกบ่อย",
+    "moz.benefit2.title": "อุ่นเร็ว",
     "moz.benefit2.description":
-      "카본 히팅 기술로 빠르게 따뜻한 온기를 느낄 수 있습니다",
-    "moz.benefit3.title": "안전한 설계",
+      "เทคโนโลยีคาร์บอนฮีตติ้งช่วยให้รู้สึกถึงความอบอุ่นได้อย่างรวดเร็ว",
+    "moz.benefit3.title": "ดีไซน์ที่ปลอดภัย",
     "moz.benefit3.description":
-      "KC 인증과 이중 안전 장치로 걱정 없이 사용하세요",
-    "moz.cta.title": "모즈와 함께하는 따뜻한 휴식",
-    "moz.cta.description": "첨단 카본 히팅 기술로 건강한 숙면을 경험해보세요",
-    "moz.cta.button": "제품 문의하기",
+      "ผ่านการรับรอง KC และติดตั้งระบบความปลอดภัยสองชั้น ใช้งานได้อย่างสบายใจ",
+    "moz.cta.title": "พักผ่อนอย่างอบอุ่นไปกับ MOZ",
+    "moz.cta.description":
+      "สัมผัสประสบการณ์การนอนที่ดีขึ้นด้วยเทคโนโลยีคาร์บอนฮีตติ้ง",
+    "moz.cta.button": "สอบถามสินค้า",
 
     // InYourHeart Brand Page
-    "inyourheart.hero.title": "피부에 감성을 입히다",
+    "inyourheart.hero.title": "เติมอารมณ์ความรู้สึกให้กับผิว",
     "inyourheart.hero.description":
-      "클린뷰티 철학과 감성적인 패키지 디자인으로 글로벌 K-뷰티 시장을 선도하는 프리미엄 스킨케어 브랜드입니다.",
-    "inyourheart.values.title": "감성이 담긴 뷰티 철학",
+      "แบรนด์สกินแคร์พรีเมียมที่ยึดแนวคิดคลีนบิวตี้ ผสานกับแพ็กเกจดีไซน์ที่มีเสน่ห์ ตอบโจทย์ตลาด K-Beauty ระดับโลก",
+    "inyourheart.values.title": "ปรัชญาความงามที่ใส่หัวใจลงไป",
     "inyourheart.values.subtitle":
-      "피부에 순하고 마음까지 따뜻하게 만드는 감성 스킨케어",
-    "inyourheart.category1.title": "클린 포뮬러",
+      "สกินแคร์ที่อ่อนโยนต่อผิว และอบอุ่นต่อความรู้สึก",
+    "inyourheart.category1.title": "สูตรคลีนและอ่อนโยน",
     "inyourheart.category1.description":
-      "피부에 순하고 환경에 친화적인 성분만을 사용하여 안전하고 지속가능한 뷰티를 추구합니다.",
-    "inyourheart.category2.title": "감성 디자인",
+      "เลือกใช้ส่วนผสมที่อ่อนโยนต่อผิวและเป็นมิตรต่อสิ่งแวดล้อม มุ่งสู่ความงามที่ปลอดภัยและยั่งยืน",
+    "inyourheart.category2.title": "ดีไซน์ที่มีอารมณ์",
     "inyourheart.category2.description":
-      "제품 사용 순간부터 특별한 경험이 될 수 있도록 감성적이고 아름다운 패키지를 디자인합니다.",
-    "inyourheart.category3.title": "글로벌 K-뷰티",
+      "ออกแบบแพ็กเกจให้ทุกครั้งที่หยิบใช้รู้สึกถึงความพิเศษ เติมความรู้สึกดีให้กับรูทีนการดูแลผิว",
+    "inyourheart.category3.title": "K-Beauty ระดับโลก",
     "inyourheart.category3.description":
-      "한국의 우수한 뷰티 기술과 혁신을 전 세계에 알리며 K-뷰티의 가치를 높여갑니다.",
-    "inyourheart.cta.title": "당신의 마음에 닿는",
-    "inyourheart.cta.subtitle": "아름다운 감성",
+      "ส่งต่อเทคโนโลยีและนวัตกรรมบิวตี้จากเกาหลีสู่ผู้ใช้ทั่วโลก ยกระดับภาพลักษณ์ของ K-Beauty ในตลาดสากล",
+    "inyourheart.cta.title": "ความงามที่สัมผัสหัวใจคุณ",
+    "inyourheart.cta.subtitle": "งดงามจากภายในสู่ภายนอก",
     "inyourheart.cta.description":
-      "IN YOUR HEART와 함께 특별한 뷰티 여정을 시작해보세요",
-    "inyourheart.cta.button": "문의하기",
+      "เริ่มต้นการเดินทางด้านความงามรูปแบบใหม่ไปกับ IN YOUR HEART",
+    "inyourheart.cta.button": "ติดต่อเรา",
 
     // Sangsaeng Brand Page
-    "sangsaeng.hero.title": "한국 의료를 세계로 연결하다",
+    "sangsaeng.hero.title": "เชื่อมต่อการแพทย์เกาหลีสู่ผู้คนทั่วโลก",
     "sangsaeng.hero.description":
-      "메디컬 투어리즘부터 글로벌 헬스케어 플랫폼까지, 한국의 우수한 의료 서비스를 전 세계에 연결하는 종합 의료 플랫폼입니다.",
-    "sangsaeng.hero.cta": "상생 홈페이지 가기",
-    "sangsaeng.services.title": "글로벌 헬스케어 생태계",
+      "จากการท่องเที่ยวเชิงการแพทย์สู่แพลตฟอร์มเฮลท์แคร์ระดับโลก Sangsaeng เป็นแพลตฟอร์มการแพทย์ครบวงจรที่เชื่อมบริการทางการแพทย์ชั้นนำของเกาหลีไปยังต่างประเทศ",
+    "sangsaeng.hero.cta": "ไปยังเว็บไซต์ Sangsaeng",
+    "sangsaeng.services.title": "ระบบนิเวศด้านเฮลท์แคร์ระดับโลก",
     "sangsaeng.services.subtitle":
-      "의료 서비스부터 브랜딩까지, 통합된 헬스케어 솔루션을 제공합니다",
-    "sangsaeng.medical.title": "상생 메디컬",
-    "sangsaeng.medical.subtitle": "Sangsaeng Medical",
+      "ตั้งแต่บริการทางการแพทย์ไปจนถึงการสร้างแบรนด์ เรามอบโซลูชันเฮลท์แคร์แบบครบวงจร",
+    "sangsaeng.medical.title": "Sangsaeng Medical",
+    "sangsaeng.medical.subtitle": "แบรนด์ด้านการแพทย์",
     "sangsaeng.medical.description":
-      "실생활 기반 건강 솔루션과 의료 서비스를 제공하는 헬스케어 브랜드",
-    "sangsaeng.medical.benefit1": "맞춤형 건강 검진 패키지",
-    "sangsaeng.medical.benefit2": "전문의 상담 서비스",
-    "sangsaeng.medical.benefit3": "만성질환 관리 프로그램",
-    "sangsaeng.medical.benefit4": "예방 의학 솔루션",
+      "แบรนด์เฮลท์แคร์ที่นำเสนอทางออกด้านสุขภาพที่ผูกกับชีวิตประจำวัน พร้อมบริการทางการแพทย์ที่เชื่อถือได้",
+    "sangsaeng.medical.benefit1": "แพ็กเกจตรวจสุขภาพแบบปรับตามบุคคล",
+    "sangsaeng.medical.benefit2": "บริการให้คำปรึกษาโดยแพทย์ผู้เชี่ยวชาญ",
+    "sangsaeng.medical.benefit3": "โปรแกรมดูแลโรคเรื้อรัง",
+    "sangsaeng.medical.benefit4": "โซลูชันเวชศาสตร์ป้องกัน",
 
-    "sangsaeng.platform.title": "상생 플랫폼",
-    "sangsaeng.platform.subtitle": "Sangsaeng Platform",
+    "sangsaeng.platform.title": "Sangsaeng Platform",
+    "sangsaeng.platform.subtitle": "แพลตฟอร์ม",
     "sangsaeng.platform.description":
-      "의료부터 관광까지 손안의 다국어 의료 플랫폼 앱",
+      "แอปแพลตฟอร์มด้านการแพทย์หลายภาษา ที่ครอบคลุมตั้งแต่บริการทางการแพทย์ไปจนถึงการท่องเที่ยว",
 
-    "sangsaeng.platform.benefit1": "다국어 의료 통역 서비스",
-    "sangsaeng.platform.benefit2": "병원 예약 및 관리",
-    "sangsaeng.platform.benefit3": "의료 관광 패키지",
-    "sangsaeng.platform.benefit4": "24시간 응급 서포트",
+    "sangsaeng.platform.benefit1": "บริการล่ามทางการแพทย์หลายภาษา",
+    "sangsaeng.platform.benefit2": "ระบบจองและจัดการตารางโรงพยาบาล",
+    "sangsaeng.platform.benefit3": "แพ็กเกจท่องเที่ยวเชิงการแพทย์",
+    "sangsaeng.platform.benefit4": "การสนับสนุนฉุกเฉินตลอด 24 ชั่วโมง",
 
-    "sangsaeng.branding.title": "상생 브랜딩",
-    "sangsaeng.branding.subtitle": "Sangsaeng Branding",
+    "sangsaeng.branding.title": "Sangsaeng Branding",
+    "sangsaeng.branding.subtitle": "ทีมสร้างแบรนด์",
     "sangsaeng.branding.description":
-      "콘텐츠, 메타광고, 글로벌 인플루언서 연계 브랜딩 조직",
-    "sangsaeng.branding.benefit1": "의료 콘텐츠 마케팅",
-    "sangsaeng.branding.benefit2": "다국어 브랜드 캠페인",
-    "sangsaeng.branding.benefit3": "글로벌 인플루언서 협업",
-    "sangsaeng.branding.benefit4": "디지털 마케팅 솔루션",
+      "ทีมสร้างแบรนด์ที่เชื่อมต่อคอนเทนต์ เมต้าแอด และอินฟลูเอนเซอร์ระดับโลก เพื่อโปรโมตบริการด้านการแพทย์",
+    "sangsaeng.branding.benefit1": "คอนเทนต์มาร์เก็ตติ้งด้านการแพทย์",
+    "sangsaeng.branding.benefit2": "แคมเปญแบรนด์หลายภาษา",
+    "sangsaeng.branding.benefit3": "ความร่วมมือกับอินฟลูเอนเซอร์ระดับโลก",
+    "sangsaeng.branding.benefit4": "โซลูชันดิจิทัลมาร์เก็ตติ้งครบวงจร",
 
-    "sangsaeng.cta.title1": "세계와 연결되는",
-    "sangsaeng.cta.title2": "한국 의료의 미래",
+    "sangsaeng.cta.title1": "อนาคตของการแพทย์เกาหลี",
+    "sangsaeng.cta.title2": "ที่เชื่อมต่อกับทั้งโลก",
     "sangsaeng.cta.description":
-      "상생과 함께 안전하고 신뢰할 수 있는 의료 서비스를 경험해보세요",
-    "sangsaeng.cta.button": "문의하기",
+      "สัมผัสบริการทางการแพทย์ที่ปลอดภัยและเชื่อถือได้ไปกับ Sangsaeng",
+    "sangsaeng.cta.button": "ติดต่อเรา",
 
     // Hoid Details
-    "hoid.feature1.title": "3-in-1 기술",
+    "hoid.feature1.title": "เทคโนโลยี 3-in-1",
     "hoid.feature1.description":
-      "공기청정, 제습, 살균 기능을 하나로 통합한 혁신적인 올인원 솔루션",
-    "hoid.feature2.title": "HEPA14 필터",
+      "โซลูชันแบบออลอินวันที่รวมการฟอกอากาศ ดูดความชื้น และฆ่าเชื้อไว้ในเครื่องเดียว",
+    "hoid.feature2.title": "ฟิลเตอร์ HEPA14",
     "hoid.feature2.description":
-      "99.995% 초미세먼지 제거 효율을 자랑하는 의료급 고성능 필터 시스템",
-    "hoid.feature3.title": "미니멀 디자인",
+      "ระบบฟิลเตอร์เกรดการแพทย์ที่สามารถกำจัดฝุ่นขนาดเล็กได้ถึง 99.995%",
+    "hoid.feature3.title": "ดีไซน์มินิมอล",
     "hoid.feature3.description":
-      "어떤 공간에도 자연스럽게 어울리는 세련되고 모던한 디자인 철학",
-    "hoid.partnership.title": "글로벌 확장의",
-    "hoid.partnership.subtitle": "새로운 전환점",
-    "hoid.partnership.date": "2025년 8월 16일",
-    "hoid.partnership.mou": "중국 초대형 공기청정기 제조사와 MOU 체결",
+      "ดีไซน์เรียบหรูที่เข้ากับทุกสไตล์การตกแต่งภายในบ้าน",
+    "hoid.partnership.title": "จุดเปลี่ยนใหม่ของ",
+    "hoid.partnership.subtitle": "การขยายสู่ตลาดโลก",
+    "hoid.partnership.date": "16 สิงหาคม 2025",
+    "hoid.partnership.mou": "ลงนาม MOU กับผู้ผลิตเครื่องฟอกอากาศรายใหญ่ในจีน",
     "hoid.partnership.description":
-      "HOID는 중국 최대 공기청정기 제조업체와 글로벌 유통 및 기술 협력 MOU를 체결했습니다. 이를 통해 아시아 전역으로 사업 영역을 확장하고, 더 많은 고객에게 깨끗한 공기를 제공할 예정입니다.",
-    "hoid.partnership.point1": "아시아 전역 시장 진출",
-    "hoid.partnership.point2": "기술 협력 및 공동 개발",
-    "hoid.partnership.point3": "글로벌 유통망 확대",
-    "hoid.homeshopping.title": "TV 속으로 들어간",
-    "hoid.homeshopping.subtitle": "프리미엄 디자인",
+      "HOID ได้ลงนามในบันทึกข้อตกลงความร่วมมือกับผู้ผลิตเครื่องฟอกอากาศรายใหญ่ที่สุดในจีน เพื่อขยายธุรกิจครอบคลุมทั่วเอเชีย และมอบอากาศที่สะอาดให้กับลูกค้ามากยิ่งขึ้น",
+    "hoid.partnership.point1": "รุกตลาดทั่วเอเชีย",
+    "hoid.partnership.point2": "ความร่วมมือด้านเทคโนโลยีและการพัฒนาร่วมกัน",
+    "hoid.partnership.point3": "ขยายเครือข่ายการจัดจำหน่ายระดับโลก",
+    "hoid.homeshopping.title": "เมื่อดีไซน์พรีเมียม",
+    "hoid.homeshopping.subtitle": "ก้าวสู่หน้าจอทีวี",
 
     // Asran Details
-    "asran.feature1.title": "SUS410 스테인리스 스틸",
-    "asran.feature1.description": "최고급 소재로 내구성과 안전성을 보장합니다",
-    "asran.feature1.detail1": "부식 방지 & 변색 방지",
-    "asran.feature1.detail2": "위생적이고 안전한 조리",
-    "asran.feature1.detail3": "반영구적 사용 가능",
-    "asran.feature1.detail4": "고급스러운 미러 마감",
+    "asran.feature1.title": "สเตนเลส SUS410",
+    "asran.feature1.description":
+      "วัสดุเกรดสูงที่รับประกันความทนทานและความปลอดภัย",
+    "asran.feature1.detail1": "ป้องกันสนิมและการเปลี่ยนสี",
+    "asran.feature1.detail2": "สุขอนามัยดี เหมาะกับการประกอบอาหาร",
+    "asran.feature1.detail3": "ใช้งานได้นานกึ่งถาวร",
+    "asran.feature1.detail4": "ผิวมันวาวดูหรูหรา",
 
-    "asran.feature2.title": "3중 바닥구조",
-    "asran.feature2.description": "뛰어난 열전도율로 에너지 효율성 극대화",
-    "asran.feature2.detail1": "균등한 열 분산",
-    "asran.feature2.detail2": "빠른 가열 시간",
-    "asran.feature2.detail3": "한 손으로 뚜껑 쉽게 개폐 가능",
-    "asran.feature2.detail4": "열 손실 최소화",
+    "asran.feature2.title": "ก้นหม้อ 3 ชั้น",
+    "asran.feature2.description": "กระจายความร้อนได้ดีเยี่ยม ประหยัดพลังงาน",
+    "asran.feature2.detail1": "กระจายความร้อนอย่างทั่วถึง",
+    "asran.feature2.detail2": "ใช้เวลาอุ่นสั้นลง",
+    "asran.feature2.detail3": "เปิด–ปิดฝาได้ง่ายด้วยมือเดียว",
+    "asran.feature2.detail4": "ลดการสูญเสียความร้อน",
 
-    "asran.feature3.title": "모든 열원 완벽 호환",
-    "asran.feature3.description": "어떤 주방환경에서도 완벽하게 사용 가능",
-    "asran.feature3.detail1": "모든 열원 완벽 호환",
-    "asran.feature3.detail2": "가스 레인지, 인덕션",
-    "asran.feature3.detail3": "논스틱 외부 코팅으로 쉬운 세척",
-    "asran.feature3.detail4": "전기 레인지",
+    "asran.feature3.title": "รองรับทุกแหล่งความร้อน",
+    "asran.feature3.description": "ใช้งานได้ยอดเยี่ยมในทุกสภาพแวดล้อมในครัว",
+    "asran.feature3.detail1": "เข้ากันได้กับทุกประเภทเตา",
+    "asran.feature3.detail2": "ใช้ได้ทั้งเตาแก๊สและเตาแม่เหล็กไฟฟ้า",
+    "asran.feature3.detail3": "เคลือบผิวภายนอกแบบไม่ติด ทำความสะอาดง่าย",
+    "asran.feature3.detail4": "รองรับเตาไฟฟ้า",
 
-    "asran.size1.title": "냄비 3종 세트",
-    "asran.size1.usage": "소용량부터 대용량까지, 혼자서도 가족과도 완벽하게",
+    "asran.size1.title": "ชุดหม้อ 3 ใบ",
+    "asran.size1.usage":
+      "ตั้งแต่ปริมาณน้อยไปจนถึงมื้อใหญ่ ใช้ได้ทั้งสำหรับคนเดียวและครอบครัว",
 
-    "asran.size2.title": "압력솥",
-    "asran.size2.usage": "고압의 빠른 조리로 신선하고 풍미있는 요리 가능",
+    "asran.size2.title": "หม้อแรงดัน",
+    "asran.size2.usage":
+      "ปรุงอาหารด้วยแรงดันสูงได้อย่างรวดเร็วและคงรสชาติสดใหม่",
 
-    "asran.size3.title": "프라이팬 3종 세트",
-    "asran.size3.usage": "강력한 코팅으로 오래쓰는 프라이팬",
+    "asran.size3.title": "ชุดกระทะ 3 ใบ",
+    "asran.size3.usage": "เคลือบแข็งแรงทนทาน ใช้ได้นาน",
 
-    "asran.cooking1.title": "국물요리",
-    "asran.cooking1.description": "깊고 진한 국물 맛 구현",
-    "asran.cooking2.title": "찜 & 조림",
-    "asran.cooking2.description": "촉촉하고 부드러운 식감",
-    "asran.cooking3.title": "건강한 조리",
-    "asran.cooking3.description": "영양소 보존하는 조리법",
-    "asran.reviews.title": "실제 구매고객들의 생생한 후기",
+    "asran.cooking1.title": "เมนูน้ำซุป",
+    "asran.cooking1.description": "ดึงรสชาติซุปให้กลมกล่อมลึกซึ้ง",
+    "asran.cooking2.title": "เมนูนึ่ง & ตุ๋น",
+    "asran.cooking2.description": "ได้สัมผัสเนื้อนุ่มชุ่มฉ่ำ",
+    "asran.cooking3.title": "การปรุงอย่างใส่ใจสุขภาพ",
+    "asran.cooking3.description": "ช่วยคงคุณค่าสารอาหารในวัตถุดิบได้ดียิ่งขึ้น",
+    "asran.reviews.title": "รีวิวจริงจากผู้ซื้อ",
     "asran.review1":
-      "가성비 너무 혜자네요! 이 가격에 이런 품질의 냄비를 만날 수 있다니 정말 만족스럽습니다.",
-    "asran.review1.author": "김○○님",
+      "คุ้มค่ามากกับราคานี้ ไม่คิดว่าจะได้หม้อคุณภาพระดับนี้ในงบเท่านี้ ประทับใจมากค่ะ",
+    "asran.review1.author": "คุณ Kim",
     "asran.review2":
-      "냄비의 무게에 놀랐다. 엄청 가볍다! 가벼운 무게 덕분에 손목이 아프지 않고 편하게 요리할 수 있어요.",
-    "asran.review2.author": "박○○님",
+      "น้ำหนักหม้อเบากว่าที่คิดเยอะเลย ใช้แล้วข้อมือไม่ล้า ทำอาหารได้นานขึ้นแบบสบาย ๆ",
+    "asran.review2.author": "คุณ Park",
     "asran.review3":
-      "이유식 만들 때 편수냄비가 너무 유용하게 사용되고 있어요. 열 전도도 빠르고 청소도 쉬워서 좋습니다.",
-    "asran.review3.author": "이○○님",
-    "asran.benefit1.title": "요리가 즐거워집니다",
+      "ตอนทำอาหารเด็กเล็ก หม้อด้ามจับช่วยได้เยอะ ร้อนไว ล้างง่าย ใช้งานสะดวกมากค่ะ",
+    "asran.review3.author": "คุณ Lee",
+    "asran.benefit1.title": "ทำให้การทำอาหารสนุกขึ้น",
     "asran.benefit1.description":
-      "균등한 열 전도로 실패 없는 요리가 가능하여 요리에 대한 자신감이 생깁니다.",
-    "asran.benefit2.title": "요리 시간이 단축됩니다",
+      "เพราะกระจายความร้อนได้ดี ทำให้ทำอาหารได้อย่างมั่นใจและลดโอกาสทำพลาด",
+    "asran.benefit2.title": "ประหยัดเวลาในครัว",
     "asran.benefit2.description":
-      "빠른 가열 시간과 효율적인 열 분산으로 요리 시간을 대폭 줄일 수 있습니다.",
-    "asran.benefit3.title": "주방이 더 아름다워집니다",
+      "ร้อนเร็วและกระจายความร้อนดี ช่วยลดเวลาการทำอาหารลงได้มาก",
+    "asran.benefit3.title": "ทำให้ครัวสวยขึ้น",
     "asran.benefit3.description":
-      "고급스러운 미러 마감과 세련된 디자인으로 주방 인테리어가 한층 업그레이드됩니다.",
-    "asran.cta.title": "독일 기술력과 만나는",
-    "asran.cta.subtitle": "프리미엄 요리 경험",
-    "asran.cta.description": "ASRAN과 함께 새로운 요리의 세계를 경험해보세요",
-    "asran.cta.button": "문의하기",
+      "ผิวมันวาวและดีไซน์หรูหรา ช่วยยกระดับบรรยากาศในครัวให้ดูพรีเมียม",
+    "asran.cta.title": "สัมผัสเทคโนโลยีเยอรมัน",
+    "asran.cta.subtitle": "สู่ประสบการณ์การทำอาหารระดับพรีเมียม",
+    "asran.cta.description": "ลองเปิดโลกการทำอาหารใหม่ไปกับ ASRAN",
+    "asran.cta.button": "ติดต่อเรา",
 
     // Footer
-    "footer.company": "회사 정보",
-    "footer.services": "서비스",
-    "footer.contact": "연락처",
-    "footer.follow": "팔로우",
+    "footer.company": "ข้อมูลบริษัท",
+    "footer.services": "บริการ",
+    "footer.contact": "ติดต่อเรา",
+    "footer.follow": "ติดตามเรา",
     "footer.copyright": "© 2024 FeedBack. All rights reserved.",
   },
 };
