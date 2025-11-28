@@ -113,7 +113,7 @@ export default function Contact() {
       </section>
 
       <section className="py-20" style={{ paddingTop: 0 }}>
-        <div className="w-full">
+        <div className="w-full" style={{ backgroundColor: "#f5f5f5" }}>
           <div className="flex justify-center">
             {/* Contact Form */}
             <div
