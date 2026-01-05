@@ -36,45 +36,138 @@ export default function Header(_props: HeaderProps) {
 
     const sectionIds = [
       "hero",
-      "services",
-      "b2b2c",
       "brands",
+      "services",
+      "achievements",
       "news",
       "stats",
       "cta",
     ];
-    const elements = sectionIds
-      .map((id) => document.getElementById(id))
-      .filter((el): el is HTMLElement => !!el);
 
-    // 스크롤 루트: fullpage-container가 있으면 그걸로, 없으면 뷰포트
-    const rootEl = document.querySelector(".fullpage-container");
+    let rafId: number | null = null;
+    let ticking = false;
 
-    let mostVisibleId = "hero";
+    const updateActiveSection = () => {
+      const elements = sectionIds
+        .map((id) => document.getElementById(id))
+        .filter((el): el is HTMLElement => !!el);
+
+      if (elements.length === 0) return;
+
+      const viewportCenter = window.innerHeight / 2;
+      let closestId = "hero";
+      let closestDistance = Infinity;
+
+      elements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        
+        // 섹션이 뷰포트에 보이는지 확인
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        
+        if (isVisible) {
+          // 섹션의 중앙점과 뷰포트 중앙점의 거리 계산
+          const elementCenter = rect.top + rect.height / 2;
+          const distance = Math.abs(viewportCenter - elementCenter);
+          
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestId = el.id;
+          }
+        }
+      });
+
+      setActiveSectionId((prev) => {
+        if (prev !== closestId) {
+          return closestId;
+        }
+        return prev;
+      });
+
+      ticking = false;
+    };
+
+    const handleScroll = () => {
+      if (!ticking) {
+        rafId = requestAnimationFrame(() => {
+          updateActiveSection();
+        });
+        ticking = true;
+      }
+    };
+
+    // 초기 실행 (약간의 지연을 두어 DOM이 완전히 로드된 후 실행)
+    const initTimer = setTimeout(() => {
+      updateActiveSection();
+    }, 100);
+
+    // 스크롤 및 리사이즈 이벤트 리스너
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll, { passive: true });
+
+    // IntersectionObserver를 주 감지 방법으로 사용
+    // 각 섹션의 intersectionRatio를 추적
+    const sectionRatios = new Map<string, number>();
 
     const io = new IntersectionObserver(
       (entries) => {
-        let maxRatio = -1;
-        let winner = "hero";
-        for (const entry of entries) {
+        entries.forEach((entry) => {
           const id = (entry.target as HTMLElement).id;
-          if (entry.intersectionRatio > maxRatio) {
-            maxRatio = entry.intersectionRatio;
+          sectionRatios.set(id, entry.intersectionRatio);
+        });
+
+        // 가장 많이 보이는 섹션 찾기
+        let maxRatio = 0;
+        let winner = "hero";
+
+        sectionRatios.forEach((ratio, id) => {
+          if (ratio > maxRatio) {
+            maxRatio = ratio;
             winner = id;
           }
+        });
+
+        // 최소 20% 이상 보여야 활성화
+        if (maxRatio >= 0.2 && winner) {
+          setActiveSectionId((prev) => {
+            if (prev !== winner) {
+              return winner;
+            }
+            return prev;
+          });
         }
-        setActiveSectionId((prev) => (prev === winner ? prev : winner));
       },
       {
-        root: null, // ✅ 뷰포트 기준(= window 스크롤 따라감)
-        threshold: [0, 0.25, 0.5, 0.75, 1],
-        // 선택: 중앙 근처에서 전환되게 하고 싶으면 ↓ 같이 사용
-        // rootMargin: "-40% 0px -40% 0px",
+        root: null,
+        threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+        rootMargin: "0px",
       },
     );
 
-    elements.forEach((el) => io.observe(el));
-    return () => io.disconnect();
+    // 모든 섹션 관찰 시작
+    const observeSections = () => {
+      sectionIds.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) {
+          io.observe(el);
+        }
+      });
+    };
+
+    // 약간의 지연을 두고 섹션 관찰 시작 (DOM이 완전히 렌더링된 후)
+    const observeTimer = setTimeout(() => {
+      observeSections();
+    }, 200);
+
+    return () => {
+      clearTimeout(initTimer);
+      clearTimeout(observeTimer);
+      if (rafId !== null) {
+        cancelAnimationFrame(rafId);
+      }
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+      io.disconnect();
+    };
   }, [isHomePage]);
 
   // 🔑 요구사항: services(2번), news(5번) 섹션에서만 검정 글씨
