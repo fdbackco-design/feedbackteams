@@ -315,7 +315,7 @@ const translations = {
 
     "contact.info.address.title": "본사 주소",
     "contact.info.address.content":
-      "인천 연수구 송도과학로 80, 송도 AIT센터 1301호, 1302호",
+      "인천광역시 연수구 송도동 172-1 송도테크노파크IT센터, S동 3003-3호",
     "contact.info.phone.title": "대표전화",
     "contact.info.phone.content": "070-8211-1761",
     "contact.info.email.title": "이메일",
@@ -1205,7 +1205,7 @@ const translations = {
 
     "contact.info.address.title": "Head Office",
     "contact.info.address.content":
-      "80 Songdogwahak-ro, Yeonsu-gu, Incheon, Songdo AIT Center 1301, 1302",
+      "Room 3003-3, Building S, Songdo Technopark IT Center, 172-1, Songdo-dong, Yeonsu-gu, Incheon, Republic of Korea",
     "contact.info.phone.title": "Main Phone",
     "contact.info.phone.content": "070-8211-1761",
     "contact.info.email.title": "Email",
@@ -2087,7 +2087,7 @@ const translations = {
 
     "contact.info.address.title": "สำนักงานใหญ่",
     "contact.info.address.content":
-      "80 Songdogwahak-ro, Yeonsu-gu, Incheon, Songdo AIT Center 1301, 1302",
+      "ห้อง 3003-3 อาคาร S ศูนย์ไอที ซงโด เทคโนพาร์ค 172-1 ซงโดดง เขตยอนซูกู เมืองอินชอน ประเทศเกาหลีใต้",
     "contact.info.phone.title": "โทรศัพท์",
     "contact.info.phone.content": "070-8211-1761",
     "contact.info.email.title": "อีเมล",
