@@ -68,7 +68,27 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          company: formData.company,
+          email: formData.email,
+          phone: formData.phone,
+          inquiryType: formData.inquiryType,
+          message: formData.message,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.ok) {
+        throw new Error(result.error || "메일 발송에 실패했습니다.");
+      }
+
       alert(t("contact.form.success"));
       setFormData({
         name: "",
@@ -80,6 +100,7 @@ export default function Contact() {
         privacyAgree: false,
       });
     } catch (error) {
+      console.error("Email send error:", error);
       alert(t("contact.form.error"));
     } finally {
       setIsSubmitting(false);

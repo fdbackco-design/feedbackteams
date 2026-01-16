@@ -348,7 +348,7 @@ const translations = {
       "진행을 위해 개인정보 처리방침에 동의해주세요.",
     "contact.form.submit": "문의 보내기",
     "contact.form.sending": "전송하기...",
-
+    "contact.form.success": "문의가 성공적으로 전송되었습니다. 빠른 시일 내에 답변드리겠습니다.",
     "contact.errors.required.title": "입력 오류",
     "contact.errors.required.description":
       "이름, 이메일, 문의내용은 필수 항목입니다.",

@@ -138,8 +138,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
       const gmail = google.gmail({ version: "v1", auth: oAuth2Client });
 
-      const to = "fdbackteams@gmail.com";
-      const from = "fdbackco@gmail.com";
+      const to = process.env.GMAIL_TO || "fdbackteams@gmail.com";
+      const from = process.env.GMAIL_FROM || "fdbackco@gmail.com";
       const subject = `[FeedBack 문의] ${data.inquiryType || "일반"} - ${data.name}`;
 
       const safeMsg = data.message.replace(/</g, "&lt;");
