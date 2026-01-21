@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useLocation } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -15,6 +16,7 @@ import {
   Shield,
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEO from "@/components/SEO";
 import organizationChart from "@assets/organizationChart_1754563135776.png";
 import warehouseImage from "@assets/futuristic-warehouse-with-blue-neon-lights-connected-data_1754566796044.jpg";
 import partnershipImage from "@assets/5f76e132-877a-4d9e-8c9c-de9ff84cb5dd_1754568024377.jpg";
@@ -33,6 +35,7 @@ import messageBanner from "@assets/Message_banner_1763519178812.jpg";
 
 export default function About() {
   const { t } = useLanguage();
+  const [location] = useLocation();
   const [timelineVisible, setTimelineVisible] = useState<boolean[]>([]);
   const timelineRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -116,9 +119,15 @@ export default function About() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+    <>
+      <SEO
+        title={t("nav.home")}
+        description={t("about.story.detail")}
+        path={location}
+      />
+      <div className="min-h-screen bg-background">
+        {/* Hero Section */}
+        <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
         {/* 배경 이미지 */}
         <div className="absolute inset-0">
           <img
@@ -566,5 +575,6 @@ export default function About() {
         </div>
       </section>
     </div>
+    </>
   );
 }

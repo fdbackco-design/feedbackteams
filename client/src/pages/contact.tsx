@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -14,6 +15,7 @@ import {
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import GoogleMap from "@/components/GoogleMap";
+import SEO from "@/components/SEO";
 import contactBannerImg from "@assets/contact_banner_1763544876573.jpg";
 
 const CENTER = {
@@ -23,6 +25,7 @@ const CENTER = {
 
 export default function Contact() {
   const { t } = useLanguage();
+  const [location] = useLocation();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -109,6 +112,39 @@ export default function Contact() {
 
   return (
     <>
+      <SEO
+        title={t("nav.contact")}
+        description={t("contact.subtitle.line1")}
+        path={location}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://www.feedbackteams.com/#organization",
+          name: "FeedBack Corp.",
+          image: "https://www.feedbackteams.com/og/feedback_logo.png",
+          url: "https://www.feedbackteams.com",
+          telephone: "+82-10-0000-0000",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "송도과학로 32, 에스동 3003-3호",
+            addressLocality: "송도동",
+            addressRegion: "인천광역시 연수구",
+            postalCode: "21984",
+            addressCountry: "KR"
+          },
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: 37.3818133,
+            longitude: 126.6623116
+          },
+          openingHoursSpecification: {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            opens: "09:00",
+            closes: "18:00"
+          }
+        }}
+      />
       {/* Contact Banner */}
       <section className="relative h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden">
         <div className="absolute inset-0">

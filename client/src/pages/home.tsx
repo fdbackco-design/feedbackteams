@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEO from "@/components/SEO";
 import {
   Card,
   CardContent,
@@ -226,6 +227,7 @@ const getBrands = (t: (key: string) => string) => [
 
 export default function Home() {
   const { t } = useLanguage();
+  const [location] = useLocation();
   const services = getServices(t);
   const brands = getBrands(t);
   const translatedNewsData = getNewsData(t).sort((a, b) => {
@@ -592,11 +594,17 @@ export default function Home() {
   };
 
   return (
-    <div
-      className="w-full overscroll-contain"
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
+    <>
+      <SEO
+        title={t("hero.title") + " " + t("hero.subtitle")}
+        description={t("hero.description")}
+        path={location}
+      />
+      <div
+        className="w-full overscroll-contain"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
     >
       {/* Section Navigation Line - Desktop: right side middle, Mobile: bottom right */}
       <div className="fixed right-4 bottom-16 md:right-8 md:bottom-auto md:top-1/2 transform md:-translate-y-1/2 z-40">
@@ -1362,5 +1370,6 @@ export default function Home() {
         </div>
       </section>
     </div>
+    </>
   );
 }

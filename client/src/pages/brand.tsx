@@ -1,10 +1,11 @@
 // src/pages/Brand.tsx
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEO from "@/components/SEO";
 import HoidLogo from "@/components/HoidLogo";
 import hoidImg from "@/assets/brand/hoidintro.jpg";
 import medifeedImg from "@assets/medifeed_1_1754636614100.jpg";
@@ -21,6 +22,7 @@ import LazyImage from "@/components/LazyImage";
 
 export default function Brand() {
   const { t } = useLanguage();
+  const [location] = useLocation();
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const ctaRef = useRef<HTMLDivElement>(null);
 
@@ -189,9 +191,15 @@ export default function Brand() {
   }, []);
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-10 mt-16 sm:mt-20 mobile-padding">
+    <>
+      <SEO
+        title={t("nav.brands")}
+        description={t("brands.lineup.description")}
+        path={location}
+      />
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-10 mt-16 sm:mt-20 mobile-padding">
           <h1 className="text-fluid-title break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-[#000000] maxw-title mx-auto mb-4 sm:mb-6">
             {t("브랜드 소개")}
           </h1>
@@ -332,5 +340,6 @@ export default function Brand() {
         </div>
       </div>
     </section>
+    </>
   );
 }

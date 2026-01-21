@@ -16,8 +16,9 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEO from "@/components/SEO";
 import cargoShipImage from "@assets/bada-leul-hanghae-haneun-hwamulseon_1754648981305.jpg";
 import factoryImage from "@assets/factory_1754649106831.png";
 import homeshoppingImage from "@assets/homeshopping_1754649174036.png";
@@ -26,6 +27,7 @@ import appDevImage from "@assets/representation-user-experience-interface-design
 
 export default function Service() {
   const { t } = useLanguage();
+  const [location] = useLocation();
 
   const services = [
     {
@@ -223,9 +225,15 @@ export default function Service() {
   }, []);
 
   return (
-    <section className="min-h-screen py-20 bg-gray-50">
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-        <div className="text-center mb-8 mt-16 sm:mt-20 mobile-padding">
+    <>
+      <SEO
+        title={t("nav.services")}
+        description={t("services.title")}
+        path={location}
+      />
+      <section className="min-h-screen py-20 bg-gray-50">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+          <div className="text-center mb-8 mt-16 sm:mt-20 mobile-padding">
           <h1 className="text-fluid-title break-keep text-balance text-pretty leading-tight-mobile tracking-tight-mobile font-bold text-gray-900 maxw-title mx-auto mb-4 sm:mb-6">
             {t("서비스 소개")}
           </h1>
@@ -389,5 +397,6 @@ export default function Service() {
         </div>
       </div>
     </section>
+    </>
   );
 }

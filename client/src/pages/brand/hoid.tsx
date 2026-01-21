@@ -19,17 +19,24 @@ import {
 import HoidLogo from "@/components/HoidLogo";
 import LazyVideo from "@/components/LazyVideo";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEO from "@/components/SEO";
 
 import flow_2025_04_17_193718625_1754623144595 from "@assets/flow_2025-04-17_193718625_1754623144595.png";
 import homeshoppingImage from "@assets/homeshopping_1754639787939.png";
 import hoidVideo from "@assets/공기청정기_pc_visual_1760075331444.mp4";
 
 export default function Hoid() {
-  const [, setLocation] = useLocation();
+  const [location, setLocation] = useLocation();
   const { t } = useLanguage();
 
   return (
-    <div>
+    <>
+      <SEO
+        title={t("hoid.hero.title")}
+        description={t("brands.hoid.description")}
+        path={location}
+      />
+      <div>
       {/* Hero Section with Video Background - Full Screen */}
       <section className="relative h-screen w-full overflow-hidden">
         {/* Video Background */}
@@ -365,6 +372,7 @@ export default function Hoid() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

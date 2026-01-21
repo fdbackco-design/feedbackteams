@@ -19,13 +19,20 @@ import {
 import MedifeedLogo from "@/components/MedifeedLogo";
 import medifeedVideo from "@assets/medifeed_1754647409969.mp4";
 import { useLanguage } from "@/contexts/LanguageContext";
+import SEO from "@/components/SEO";
 
 export default function Medifeed() {
-  const [, setLocation] = useLocation();
+  const [location, setLocation] = useLocation();
   const { t } = useLanguage();
 
   return (
-    <div>
+    <>
+      <SEO
+        title={t("medifeed.hero.title")}
+        description={t("brands.medifeed.description")}
+        path={location}
+      />
+      <div>
       {/* Hero Section with Video Background */}
       <section className="relative h-screen w-full overflow-hidden">
         {/* Background Video */}
@@ -271,6 +278,7 @@ export default function Medifeed() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
