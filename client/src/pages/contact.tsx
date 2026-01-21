@@ -17,8 +17,8 @@ import GoogleMap from "@/components/GoogleMap";
 import contactBannerImg from "@assets/contact_banner_1763544876573.jpg";
 
 const CENTER = {
-  lat: 37.380236,
-  lng: 126.665423,
+  lat: 37.4015,
+  lng: 126.9428,
 };
 
 export default function Contact() {
