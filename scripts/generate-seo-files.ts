@@ -31,9 +31,8 @@ const __dirname = dirname(__filename);
 const rootDir = join(__dirname, "..");
 
 // 환경 변수 확인
-const env = process.env.NODE_ENV || "development";
-const isProduction = env === "production";
-const isStaging = process.env.VITE_ENV === "staging" || process.env.NODE_ENV === "staging";
+// 원칙: staging에서만 크롤링 차단, 그 외(prod 포함)는 허용
+const isStaging = process.env.VITE_ENV === "staging";
 const siteUrl = process.env.VITE_SITE_URL || "https://www.feedbackteams.com";
 
 // robots.txt 생성
@@ -43,13 +42,13 @@ function generateRobotsTxt() {
   
   let robotsContent = "";
   
-  if (isStaging || !isProduction) {
-    // Staging/Development: 크롤링 차단
+  if (isStaging) {
+    // Staging: 크롤링 차단
     robotsContent = `User-agent: *
 Disallow: /
 `;
   } else {
-    // Production: Allow + Sitemap
+    // Production/Dev: Allow + Sitemap
     robotsContent = `User-agent: *
 Allow: /
 
