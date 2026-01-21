@@ -50,6 +50,8 @@ const translations = {
     "footer.bottom.copyright": "© 2024 FeedBack Corp. All rights reserved.",
     "footer.bottom.bizinfo":
       "사업자등록번호: 296-87-03628 | 대표이사: 송해민, 정성현",
+    "footer.bottom.address":
+      "사업장 소재지: 인천광역시 연수구 송도과학로 32, 에스동 3003-3호(송도동, 송도테크노파크IT센터)",
     "footer.bottom.privacy": "개인정보처리방침",
     "footer.bottom.terms": "이용약관",
     "footer.bottom.cookies": "쿠키정책",
@@ -936,6 +938,8 @@ const translations = {
     "footer.bottom.copyright": "© 2024 FeedBack Corp. All rights reserved.",
     "footer.bottom.bizinfo":
       "Business Reg. No.: 296-87-03628 | CEOs: Hae-min Song, Sung-hyun Jeong",
+    "footer.bottom.address":
+      "Business Address: Suite 3003-3, S Building, 32 Songdogwahak-ro, Yeonsu-gu, Incheon, Republic of Korea (Songdo Technopark IT Center)",
     "footer.bottom.privacy": "Privacy Policy",
     "footer.bottom.terms": "Terms of Use",
     "footer.bottom.cookies": "Cookie Policy",
@@ -1850,6 +1854,8 @@ const translations = {
     "footer.bottom.copyright": "© 2024 FeedBack Corp. สงวนลิขสิทธิ์",
     "footer.bottom.bizinfo":
       "เลขทะเบียนธุรกิจ: 296-87-03628 | ซีอีโอ: Hae-min Song, Sung-hyun Jeong",
+    "footer.bottom.address":
+      "ที่ตั้งสถานประกอบการ: ห้อง 3003-3 อาคาร S เลขที่ 32 ถนนซงโดกวาฮักโร เขตยอนซู อินชอน สาธารณรัฐเกาหลี (ศูนย์ IT ซงโดเทคโนพาร์ค)",
     "footer.bottom.privacy": "นโยบายความเป็นสจวนตัว",
     "footer.bottom.terms": "ข้อกำหนดการใช้งาน",
     "footer.bottom.cookies": "นโยบายคุกกี้",

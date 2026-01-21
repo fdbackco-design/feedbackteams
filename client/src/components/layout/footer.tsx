@@ -268,6 +268,7 @@ export default function Footer() {
             <div className="text-white/60 text-sm mb-4 md:mb-0">
               <p>{t("footer.bottom.copyright")}</p>
               <p>{t("footer.bottom.bizinfo")}</p>
+              <p>{t("footer.bottom.address")}</p>
             </div>
             <div className="flex space-x-6 text-sm text-gray-400">
               <a href="#" className="hover:text-white transition-colors">
