@@ -4,9 +4,9 @@
 
 export const SEO_CONFIG = {
   // 기본 사이트 정보
-  siteName: "FeedBack",
-  siteNameFull: "FeedBack — 브랜드와 시장을 연결하는 유통 플랫폼",
-  defaultDescription: "유통, 브랜드, 마케팅, 제조가 하나로 연결되는 상생 플랫폼. FEEDBACK 공식 사이트",
+  siteName: "주식회사 피드백",
+  siteNameFull: "주식회사 피드백 - 유통부터 마케팅까지 글로벌 비즈니스 전문 서비스",
+  defaultDescription: "주식회사 피드백은 유통부터 마케팅까지, 글로벌 비즈니스를 위한 전문 서비스를 제공합니다. 브랜드와 시장을 연결하는 유통 플랫폼으로 전 세계 고객에게 최고의 솔루션을 제공합니다.",
   
   // Base URL (환경변수로 오버라이드 가능)
   baseUrl: import.meta.env.VITE_SITE_URL || "https://www.feedbackteams.com",
@@ -25,7 +25,7 @@ export const SEO_CONFIG = {
   // 사업자 정보 (JSON-LD용)
   organization: {
     "@type": "Organization",
-    name: "FeedBack Corp.",
+    name: "주식회사 피드백",
     url: "https://www.feedbackteams.com",
     logo: "https://www.feedbackteams.com/og/feedback_logo.png",
     address: {
@@ -47,7 +47,7 @@ export const SEO_CONFIG = {
   localBusiness: {
     "@type": "LocalBusiness",
     "@id": "https://www.feedbackteams.com/#organization",
-    name: "FeedBack Corp.",
+    name: "주식회사 피드백",
     image: "https://www.feedbackteams.com/og/feedback_logo.png",
     url: "https://www.feedbackteams.com",
     telephone: "+82-10-0000-0000",

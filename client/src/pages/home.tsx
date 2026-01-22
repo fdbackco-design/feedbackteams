@@ -596,8 +596,8 @@ export default function Home() {
   return (
     <>
       <SEO
-        title={t("hero.title") + " " + t("hero.subtitle")}
-        description={t("hero.description")}
+        title="주식회사 피드백 - 유통부터 마케팅까지 글로벌 비즈니스 전문 서비스"
+        description="주식회사 피드백은 유통부터 마케팅까지, 글로벌 비즈니스를 위한 전문 서비스를 제공합니다. 브랜드와 시장을 연결하는 유통 플랫폼으로 전 세계 고객에게 최고의 솔루션을 제공합니다."
         path={location}
       />
       <div

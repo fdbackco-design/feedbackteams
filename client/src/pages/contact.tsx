@@ -120,7 +120,7 @@ export default function Contact() {
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           "@id": "https://www.feedbackteams.com/#organization",
-          name: "FeedBack Corp.",
+          name: "주식회사 피드백",
           image: "https://www.feedbackteams.com/og/feedback_logo.png",
           url: "https://www.feedbackteams.com",
           telephone: "+82-10-0000-0000",
