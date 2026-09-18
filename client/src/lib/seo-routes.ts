@@ -25,6 +25,9 @@ export const SEO_ROUTES: RouteConfig[] = [
   { path: "/brand/moz", priority: 0.8, changefreq: "monthly" },
   { path: "/news", priority: 0.8, changefreq: "daily" },
   { path: "/contact", priority: 0.7, changefreq: "monthly" },
+  { path: "/forfeedmall/", priority: 0.5, changefreq: "yearly" },
+  { path: "/forfeedmall/privacy/", priority: 0.5, changefreq: "yearly" },
+  { path: "/forfeedmall/terms/", priority: 0.5, changefreq: "yearly" },
 ];
 
 // Prerender 대상 (핵심 라우트만)
@@ -35,4 +38,7 @@ export const PRERENDER_ROUTES = [
   "/brand",
   "/contact",
   "/news",
+  "/forfeedmall/",
+  "/forfeedmall/privacy/",
+  "/forfeedmall/terms/",
 ];

@@ -24,6 +24,9 @@ const SEO_ROUTES = [
   { path: "/brand/moz", priority: 0.8, changefreq: "monthly" as const },
   { path: "/news", priority: 0.8, changefreq: "daily" as const },
   { path: "/contact", priority: 0.7, changefreq: "monthly" as const },
+  { path: "/forfeedmall/", priority: 0.5, changefreq: "yearly" as const },
+  { path: "/forfeedmall/privacy/", priority: 0.5, changefreq: "yearly" as const },
+  { path: "/forfeedmall/terms/", priority: 0.5, changefreq: "yearly" as const },
 ];
 
 const __filename = fileURLToPath(import.meta.url);
