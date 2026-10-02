@@ -49,7 +49,7 @@ const translations = {
 
     "footer.bottom.copyright": "© 2024 FeedBack Corp. All rights reserved.",
     "footer.bottom.bizinfo":
-      "사업자등록번호: 296-87-03628 | 대표이사: 송해민, 정성현",
+      "사업자등록번호: 296-87-03628 | 대표이사: 송해민",
     "footer.bottom.address":
       "사업장 소재지: 인천광역시 연수구 송도과학로 32, 에스동 3003-3호(송도동, 송도테크노파크IT센터)",
     "footer.bottom.privacy": "개인정보처리방침",
@@ -420,10 +420,10 @@ const translations = {
     "about.ceo.quote":
       '"고객의 행복과 글로벌 파트너십을 최우선으로 생각합니다."',
     "about.ceo.title": "CEO 인사말",
-    "about.ceo.name": "송해민, 정성현",
+    "about.ceo.name": "송해민",
     "about.ceo.position": "(주)피드백 대표",
     "about.ceo.motto": '"브랜드와 시장을 연결하는<br/>플랫폼 기업으로 성장"',
-    "about.ceo.message1": "안녕하세요. (주)피드백 대표 송해민, 정성현입니다.",
+    "about.ceo.message1": "안녕하세요. (주)피드백 대표 송해민입니다.",
     "about.ceo.message2":
       "저희 피드백은 빠르게 변화하는 글로벌 유통 시장 속에서, 브랜드와 시장의 연결자이자 실행자로서 새로운 유통 구조를 제시하고 있습니다.단순히 '물건을 파는 회사'가 아닌, 브랜드를 함께 키우고 시장에 안착시키는 파트너로서 제조사, 유통사, 소비자 모두가 만족하는 구조를 만들기 위해 노력하고 있습니다.",
     "about.ceo.highlight":
